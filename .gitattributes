@@ -1,0 +1,8 @@
+# Source and experimental records are bound by byte-level SHA-256 receipts.
+# Preserve those bytes on checkout, including CSV writer CRLF records.
+* -text
+*.csv whitespace=cr-at-eol
+# Matplotlib's generated SVG paths intentionally end with spaces.
+*.svg whitespace=-blank-at-eol
+# Preserve historical pytest traces verbatim, including blank assertion lines.
+artifacts/*.txt whitespace=-blank-at-eol

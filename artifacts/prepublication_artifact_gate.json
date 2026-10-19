@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-19T15:08:45.735030+00:00",
+  "unique_series": 350,
+  "score_vectors": 1050,
+  "metric_evaluations": 2100,
+  "main_method_comparisons": 8400,
+  "crop_checks": 4200,
+  "crop_skipped": 0,
+  "external_comparisons": 216,
+  "exclusions": 0,
+  "maximum_main_error": 3.6914915568786455e-13,
+  "maximum_crop_error": 6.661338147750939e-16,
+  "maximum_external_error": 3.3306690738754696e-16,
+  "source_hash_checks": 8,
+  "checks": [
+    "finite values",
+    "all expected rows",
+    "no duplicates",
+    "last-output parity",
+    "external comparator parity",
+    "timing repetitions and medians",
+    "recomputed speed ratios",
+    "source and record hashes"
+  ],
+  "input_sha256": {
+    "public_benchmark.jsonl": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+    "public_benchmark_receipt.json": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+    "benchmark_environment.json": "880b9ad6841ab2db2b090f36c64f0b74156924905404b8f40b92f886385ba862",
+    "public_external_baselines.json": "64e8b71a4aea00726c265211d0d4c53e0caf277e3f86488bdb18493fce638481",
+    "crop_parity.json": "7968bd93b2227137086bf1cb66cbd752fb9ff691be0f3f709b37cfdfd6d437f6",
+    "public_exclusions.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+    "dtaianomaly_source.json": "01bec0e8ff498b99753eda4d4d6df0b315799b28324b93fcd4da495e6cd814cc"
+  },
+  "gate_source_sha256": "906d8504c7a52f42415395f949744ff20bbdec7433666a43fc5312dff019b373"
+}

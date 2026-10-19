@@ -1,0 +1,41 @@
+{
+  "started_utc": "2026-10-19T14:30:18.401342+00:00",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "executable": "/opt/anaconda3/bin/python",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "numpy": "1.26.4",
+  "numba": "0.59.1",
+  "numba_threads": 1,
+  "threadpool_info": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    }
+  ],
+  "first_call_seconds_excluded_from_timings": {
+    "sparse_numpy": 0.0007114579930203035,
+    "sparse_numba": 0.9255267080006888,
+    "dense_numpy": 0.0006557919987244532,
+    "dense_numba": 0.3659591250034282,
+    "dense_direct_numba": 0.2982403750065714,
+    "dtaianomaly": 0.7272669579979265
+  },
+  "numba_cache_dir": "/Users/gosmain/Documents/GitHub/sparse-vus/cache/numba-public-benchmark",
+  "cpu": "Apple M1 Pro",
+  "memory_bytes": 17179869184,
+  "source_sha256": {
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "experiments/benchmark_public.py": "938b4bdf633b1ce52116e7d88da960470195975cae5e5555324a183f255e2b9f",
+    "experiments/protocol.json": "b3ce071bc93c251b73121d6c5b3c7348bca3c4f50eee1d1cb0acede87cdcee79",
+    "experiments/protocol_addendum.json": "bc573781bcee176792076f1e7c5522c6f0995cfe75b18c81a0bce7358434046e",
+    "experiments/data_manifest.json": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e"
+  }
+}

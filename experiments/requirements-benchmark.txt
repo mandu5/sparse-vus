@@ -1,0 +1,12 @@
+# Recorded research environment: CPython 3.12.4, macOS arm64.
+# Kernel timings were measured on Apple M1 Pro with one thread.
+numpy==1.26.4
+numba==0.59.1
+llvmlite==0.42.0
+scipy==1.17.1
+scikit-learn==1.8.0
+pandas==3.0.1
+matplotlib==3.8.4
+pytest==8.3.3
+threadpoolctl==3.6.0
+tqdm==4.66.4

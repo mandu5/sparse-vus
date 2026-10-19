@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "reviewer": "independent automated review agent, same session",
+  "completed_utc": "2026-10-19T15:07:11.234340+00:00",
+  "external": {
+    "rows": 42,
+    "families": 23,
+    "comparisons": {
+      "sparse_numba": {
+        "complete": 42,
+        "timeout": 0,
+        "paired_complete": 42,
+        "median_ratio_on_complete_pairs": 1.0,
+        "min_ratio_on_complete_pairs": 1.0,
+        "max_ratio_on_complete_pairs": 1.0
+      },
+      "dtaianomaly250": {
+        "complete": 42,
+        "timeout": 0,
+        "paired_complete": 42,
+        "median_ratio_on_complete_pairs": 8.166511551669867,
+        "min_ratio_on_complete_pairs": 3.023820237330573,
+        "max_ratio_on_complete_pairs": 61.73961099384862
+      },
+      "dtaianomaly_exact": {
+        "complete": 35,
+        "timeout": 7,
+        "paired_complete": 35,
+        "median_ratio_on_complete_pairs": 143.8498104971144,
+        "min_ratio_on_complete_pairs": 10.287496247541574,
+        "max_ratio_on_complete_pairs": 1066.2942988049417
+      }
+    },
+    "max_error_recomputed": 9.547918011776346e-15,
+    "timeout_details": [
+      {
+        "series": "286_CATSv2_id_1_Sensor_tr_17792_1st_17892",
+        "family": "CATSv2",
+        "method": "dtaianomaly_exact",
+        "completed_calls": 0
+      },
+      {
+        "series": "216_LTDB_id_1_Medical_tr_500_1st_266",
+        "family": "LTDB",
+        "method": "dtaianomaly_exact",
+        "completed_calls": 0
+      },
+      {
+        "series": "221_LTDB_id_6_Medical_tr_500_1st_26",
+        "family": "LTDB",
+        "method": "dtaianomaly_exact",
+        "completed_calls": 0
+      },
+      {
+        "series": "170_MITDB_id_1_Medical_tr_17675_1st_17775",
+        "family": "MITDB",
+        "method": "dtaianomaly_exact",
+        "completed_calls": 0
+      },
+      {
+        "series": "173_MITDB_id_4_Medical_tr_13620_1st_13720",
+        "family": "MITDB",
+        "method": "dtaianomaly_exact",
+        "completed_calls": 0
+      },
+      {
+        "series": "243_SVDB_id_7_Medical_tr_11393_1st_11493",
+        "family": "SVDB",
+        "method": "dtaianomaly_exact",
+        "completed_calls": 0
+      },
+      {
+        "series": "550_SWaT_id_1_Sensor_tr_43700_1st_43800",
+        "family": "SWaT",
+        "method": "dtaianomaly_exact",
+        "completed_calls": 0
+      }
+    ],
+    "source_and_input_hashes_match": true,
+    "selection_recomputed": true
+  },
+  "mechanism": {
+    "rows": 112,
+    "timed_calls": 1680,
+    "max_error_recomputed": 6.80566714095221e-14,
+    "ratios": {
+      "speedup_current_vs_fullsort": {
+        "count": 112,
+        "geometric_mean": 1.1122562727500853,
+        "median": 1.097633258760756,
+        "minimum": 0.9395288109248364,
+        "maximum": 1.8044262380088152,
+        "material_wins": 56,
+        "material_losses": 0
+      },
+      "speedup_current_vs_fastest_dense": {
+        "count": 112,
+        "geometric_mean": 1.3701338822986526,
+        "median": 1.2524095095011902,
+        "minimum": 0.2628763082491329,
+        "maximum": 7.526594637403342,
+        "material_wins": 69,
+        "material_losses": 34
+      },
+      "speedup_fullsort_vs_fastest_dense": {
+        "count": 112,
+        "geometric_mean": 1.2318508925204419,
+        "median": 1.1482281028696613,
+        "minimum": 0.22599149683288555,
+        "maximum": 6.233171195053003,
+        "material_wins": 62,
+        "material_losses": 39
+      }
+    },
+    "full_grid_coverage": true,
+    "source_hashes_match": true,
+    "raw_rows_equal_summary_rows": true
+  },
+  "scope": "Stdlib-only record recomputation, data identity and hash audit; no kernels rerun, no timed experiments repeated."
+}

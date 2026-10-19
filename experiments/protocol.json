@@ -1,0 +1,33 @@
+{
+  "status": "frozen before expanded parity and public-score evaluation",
+  "date": "2026-10-19",
+  "claim": "Exact pinned scalar VUS in O(n log(Q+1) + (L+1) Q) time; novelty remains subject to prior art",
+  "tolerance": 1e-11,
+  "parity": {
+    "random_cases": 1000,
+    "seeds": "20261019000 + index, 0 <= index < 1000",
+    "n": [8, 16, 24, 48, 80, 128],
+    "label_density": [0.03, 0.1, 0.3, 0.6, 0.9],
+    "score_modes": ["continuous", "quantized5", "binary", "constant", "ordered"],
+    "max_buffer": [0, 1, 2, 5, 11, 24, 48],
+    "structured_cases": 6
+  },
+  "public_data": {
+    "primary_score_archive": "doi:10.48804/MCVI4N, KU Leuven RDR, V1, CC-BY-4.0",
+    "selection": "Use all common valid TSB-AD-U evaluation series in three model families: Chronos, TimesFM, Time-MoE. In each family choose lexicographically first archive among the smallest context length; if inaccessible, record failure, no score-based replacement. Freeze exact file IDs and names in data_manifest.json before evaluation.",
+    "max_buffer": [10, 30],
+    "timing_repetitions": 3,
+    "timing_order_seed": 20261019,
+    "baselines": ["NumPy dense full-threshold", "Numba dense full-threshold", "official 250-threshold on first 12 valid names only"],
+    "parity": "Compare sparse full-threshold against both dense implementations on every selected score. Compare official full-threshold on fixed 256-point first-anomaly crops. Compare independently implemented sampled250 against official250 on those crops and timing subset.",
+    "rank_reversal": "All unordered model pairs per series and width; report strict sign reversal with absolute difference > 1e-10 in both exact and sampled results. Report ties separately. Report dataset-family clustered counts and top-model changes. No model performance claims."
+  },
+  "synthetic_scaling": {
+    "seed": 8675309,
+    "n": [10000, 100000, 1000000],
+    "intervals_inclusive": [[100, 120], [500, 520]],
+    "max_buffer": 30,
+    "repetitions": 5
+  },
+  "reporting": "Include negative results, all exclusions, dense-support slowdowns, timings excluding download and warm-up, and hardware/software. Do not call sampled and exact computations identical. No SOTA or publication claim without external evidence."
+}

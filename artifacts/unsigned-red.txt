@@ -1,0 +1,40 @@
+/opt/anaconda3/lib/python3.12/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_______________________ test_unsigned_score_order[uint8] _______________________
+
+dtype = <class 'numpy.uint8'>
+
+    @pytest.mark.parametrize("dtype", [np.uint8, np.uint64])
+    def test_unsigned_score_order(dtype):
+        y = np.array([0, 1])
+        s = np.array([0, 1], dtype=dtype)
+>       assert dense_vus(y, s, 0) == (1.0, 1.0)
+E       assert (0.0, 0.5) == (1.0, 1.0)
+E         
+E         At index 0 diff: 0.0 != 1.0
+E         Use -v to get more diff
+
+tests/test_parity.py:77: AssertionError
+______________________ test_unsigned_score_order[uint64] _______________________
+
+dtype = <class 'numpy.uint64'>
+
+    @pytest.mark.parametrize("dtype", [np.uint8, np.uint64])
+    def test_unsigned_score_order(dtype):
+        y = np.array([0, 1])
+        s = np.array([0, 1], dtype=dtype)
+>       assert dense_vus(y, s, 0) == (1.0, 1.0)
+E       assert (0.0, 0.5) == (1.0, 1.0)
+E         
+E         At index 0 diff: 0.0 != 1.0
+E         Use -v to get more diff
+
+tests/test_parity.py:77: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_parity.py::test_unsigned_score_order[uint8] - assert (0.0, ...
+FAILED tests/test_parity.py::test_unsigned_score_order[uint64] - assert (0.0,...
+2 failed, 1015 deselected in 0.13s

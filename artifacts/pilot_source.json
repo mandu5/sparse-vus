@@ -1,0 +1,35 @@
+{
+  "repo": "https://github.com/thedatumorg/VUS",
+  "commit": "467bace0c103f5c2bdb4900306d82939bcac8ff9",
+  "fetched_at_utc": "2026-10-19T14:10:50.597331+00:00",
+  "artifacts": {
+    "metrics.py": {
+      "bytes": 17664,
+      "sha256": "bd547c9746fc1b9bbce2895e20cb156f97d23365d5dce8c2a3fab90622ccdced"
+    },
+    "basic_metrics.py": {
+      "bytes": 13290,
+      "sha256": "278043176ce8b68b36f9153db1cb15c38e7b94caa3541edb02036f08352537c4"
+    },
+    "MBA_ECG805_data.out": {
+      "bytes": 1756263,
+      "sha256": "b920416d9627f1a1f2bbbe6ea7c5dd9388c14a96a9511836df46f83cb204495e"
+    },
+    "MBA_ECG806_data.out": {
+      "bytes": 2050961,
+      "sha256": "d7abcaa9553acb3c081afabc6a205cd40e86cb3c36d8b36faaa41257cb3e3099"
+    },
+    "MBA_ECG820_data.out": {
+      "bytes": 2030331,
+      "sha256": "6e87dc0b5c620e9559adff54cac2c1f508ed21a95c48dd11ea8520daec337ed0"
+    },
+    "SED.out": {
+      "bytes": 1129100,
+      "sha256": "475ac323aceeb578bd9f2801b795b908ad9326ee39235410f1ba29d6415486fa"
+    }
+  },
+  "go_prior": {
+    "url": "https://raw.githubusercontent.com/stergiotis/boxer/v0.0.23/public/analytics/timeseries/adscore/adscore.go",
+    "sha256": "5cdd65831878e0f52095cb2fd4b7dd26e1ed2618a388e3c7159b39c12d0b1294"
+  }
+}

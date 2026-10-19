@@ -1,0 +1,17 @@
+{
+  "written_utc": "2026-10-19T14:37:00.819675+00:00",
+  "status": "retrospective documentation written after main benchmark start; not a pre-execution frozen artifact",
+  "decision_timing": "Parent identified the current compiled dtaianomaly source and requested inclusion before benchmark_public.py was created and executed. Chat records establish this ordering; this file was written later.",
+  "comparator": "ML-KULeuven/dtaianomaly commit557b435790bebc57307d8e7f22047273ac923f36",
+  "selection": "First 12 common series in sorted source evaluation names; three models and both widths. All 12 are NAB. No metric or runtime based choice.",
+  "resolutions": [
+    250,
+    "n (all score thresholds)"
+  ],
+  "repetitions": 3,
+  "threads": 1,
+  "order": "official250, dtaianomaly250, dtaianomaly exact; fixed order rather than randomized",
+  "jit": "First call excluded and recorded in benchmark_environment.json",
+  "source_adapter": "Original AST method bodies and decorated Numba kernel unchanged; metadata and unrelated framework dependencies omitted.",
+  "numerical_validation": "24 seeded cases were passed before benchmark start. Final artifact gate must independently enforce finite outputs and all external parity errors."
+}

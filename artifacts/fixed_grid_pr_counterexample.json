@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "purpose": "Deterministic verification of a motivating proposition, not a standalone novelty claim or performance experiment",
+    "thresholds": 250,
+    "lengths": [
+      10000,
+      100000
+    ],
+    "positive_counts": [
+      1,
+      10
+    ],
+    "max_buffers": [
+      0,
+      6
+    ],
+    "absolute_tolerance": 1e-11
+  },
+  "rows": [
+    {
+      "n": 10000,
+      "positives": 1,
+      "max_buffer": 0,
+      "second_grid_rank": 41,
+      "exact_pr": 0.5,
+      "sampled_pr": 0.024390243902439025,
+      "expected_exact_pr": 0.5,
+      "expected_sampled_pr": 0.024390243902439025,
+      "absolute_sampling_error": 0.47560975609756095,
+      "formula_error": 0.0
+    },
+    {
+      "n": 100000,
+      "positives": 1,
+      "max_buffer": 0,
+      "second_grid_rank": 402,
+      "exact_pr": 0.5,
+      "sampled_pr": 0.0024875621890547263,
+      "expected_exact_pr": 0.5,
+      "expected_sampled_pr": 0.0024875621890547263,
+      "absolute_sampling_error": 0.4975124378109453,
+      "formula_error": 0.0
+    },
+    {
+      "n": 10000,
+      "positives": 1,
+      "max_buffer": 6,
+      "second_grid_rank": 41,
+      "exact_pr": 0.5,
+      "sampled_pr": 0.07458002577432898,
+      "expected_exact_pr": 0.5,
+      "expected_sampled_pr": 0.07458002577432897,
+      "absolute_sampling_error": 0.425419974225671,
+      "formula_error": 1.3877787807814457e-17
+    },
+    {
+      "n": 100000,
+      "positives": 1,
+      "max_buffer": 6,
+      "second_grid_rank": 402,
+      "exact_pr": 0.5,
+      "sampled_pr": 0.007606420539172857,
+      "expected_exact_pr": 0.5,
+      "expected_sampled_pr": 0.007606420539172856,
+      "absolute_sampling_error": 0.4923935794608271,
+      "formula_error": 1.734723475976807e-18
+    },
+    {
+      "n": 10000,
+      "positives": 10,
+      "max_buffer": 0,
+      "second_grid_rank": 41,
+      "exact_pr": 0.7980122655122656,
+      "sampled_pr": 0.24390243902439024,
+      "expected_exact_pr": 0.7980122655122656,
+      "expected_sampled_pr": 0.24390243902439024,
+      "absolute_sampling_error": 0.5541098264878753,
+      "formula_error": 0.0
+    },
+    {
+      "n": 100000,
+      "positives": 10,
+      "max_buffer": 0,
+      "second_grid_rank": 402,
+      "exact_pr": 0.7980122655122656,
+      "sampled_pr": 0.024875621890547265,
+      "expected_exact_pr": 0.7980122655122656,
+      "expected_sampled_pr": 0.024875621890547265,
+      "absolute_sampling_error": 0.7731366436217183,
+      "formula_error": 0.0
+    },
+    {
+      "n": 10000,
+      "positives": 10,
+      "max_buffer": 6,
+      "second_grid_rank": 41,
+      "exact_pr": 0.7980122655122655,
+      "sampled_pr": 0.29409222089628023,
+      "expected_exact_pr": 0.7980122655122656,
+      "expected_sampled_pr": 0.2940922208962802,
+      "absolute_sampling_error": 0.5039200446159853,
+      "formula_error": 1.1102230246251565e-16
+    },
+    {
+      "n": 100000,
+      "positives": 10,
+      "max_buffer": 6,
+      "second_grid_rank": 402,
+      "exact_pr": 0.7980122655122655,
+      "sampled_pr": 0.029994480240665398,
+      "expected_exact_pr": 0.7980122655122656,
+      "expected_sampled_pr": 0.02999448024066539,
+      "absolute_sampling_error": 0.7680177852716,
+      "formula_error": 1.1102230246251565e-16
+    }
+  ],
+  "source_sha256": "7214766d928d7d0a01fd539ff714d1c5cfa036927c0a7ddaa5071c9020469762"
+}

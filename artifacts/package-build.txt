@@ -1,0 +1,149 @@
+Building source distribution...
+/Users/gosmain/.cache/uv/builds-v0/.tmpC0ASy8/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  corresp(dist, value, root_dir)
+running egg_info
+creating src/sparse_vus.egg-info
+writing src/sparse_vus.egg-info/PKG-INFO
+writing dependency_links to src/sparse_vus.egg-info/dependency_links.txt
+writing requirements to src/sparse_vus.egg-info/requires.txt
+writing top-level names to src/sparse_vus.egg-info/top_level.txt
+writing manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+reading manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+/Users/gosmain/.cache/uv/builds-v0/.tmpC0ASy8/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  corresp(dist, value, root_dir)
+running sdist
+running egg_info
+writing src/sparse_vus.egg-info/PKG-INFO
+writing dependency_links to src/sparse_vus.egg-info/dependency_links.txt
+writing requirements to src/sparse_vus.egg-info/requires.txt
+writing top-level names to src/sparse_vus.egg-info/top_level.txt
+reading manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+running check
+creating sparse_vus-0.1.0
+creating sparse_vus-0.1.0/src/sparse_vus
+creating sparse_vus-0.1.0/src/sparse_vus.egg-info
+creating sparse_vus-0.1.0/tests
+copying files to sparse_vus-0.1.0...
+copying LICENSE -> sparse_vus-0.1.0
+copying README.md -> sparse_vus-0.1.0
+copying pyproject.toml -> sparse_vus-0.1.0
+copying src/sparse_vus/__init__.py -> sparse_vus-0.1.0/src/sparse_vus
+copying src/sparse_vus/compiled.py -> sparse_vus-0.1.0/src/sparse_vus
+copying src/sparse_vus/core.py -> sparse_vus-0.1.0/src/sparse_vus
+copying src/sparse_vus.egg-info/PKG-INFO -> sparse_vus-0.1.0/src/sparse_vus.egg-info
+copying src/sparse_vus.egg-info/SOURCES.txt -> sparse_vus-0.1.0/src/sparse_vus.egg-info
+copying src/sparse_vus.egg-info/dependency_links.txt -> sparse_vus-0.1.0/src/sparse_vus.egg-info
+copying src/sparse_vus.egg-info/requires.txt -> sparse_vus-0.1.0/src/sparse_vus.egg-info
+copying src/sparse_vus.egg-info/top_level.txt -> sparse_vus-0.1.0/src/sparse_vus.egg-info
+copying tests/test_artifact_gate.py -> sparse_vus-0.1.0/tests
+copying tests/test_compiled.py -> sparse_vus-0.1.0/tests
+copying tests/test_dtaianomaly_adapter.py -> sparse_vus-0.1.0/tests
+copying tests/test_external_supplement.py -> sparse_vus-0.1.0/tests
+copying tests/test_parity.py -> sparse_vus-0.1.0/tests
+Writing sparse_vus-0.1.0/setup.cfg
+Creating tar archive
+removing 'sparse_vus-0.1.0' (and everything under it)
+Building wheel from source distribution...
+/Users/gosmain/.cache/uv/builds-v0/.tmpGYAS14/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  corresp(dist, value, root_dir)
+running egg_info
+writing src/sparse_vus.egg-info/PKG-INFO
+writing dependency_links to src/sparse_vus.egg-info/dependency_links.txt
+writing requirements to src/sparse_vus.egg-info/requires.txt
+writing top-level names to src/sparse_vus.egg-info/top_level.txt
+reading manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+/Users/gosmain/.cache/uv/builds-v0/.tmpGYAS14/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+!!
+
+        ********************************************************************************
+        Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+        By 2027-Feb-18, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  corresp(dist, value, root_dir)
+running bdist_wheel
+running build
+running build_py
+creating build/lib/sparse_vus
+copying src/sparse_vus/__init__.py -> build/lib/sparse_vus
+copying src/sparse_vus/core.py -> build/lib/sparse_vus
+copying src/sparse_vus/compiled.py -> build/lib/sparse_vus
+running egg_info
+writing src/sparse_vus.egg-info/PKG-INFO
+writing dependency_links to src/sparse_vus.egg-info/dependency_links.txt
+writing requirements to src/sparse_vus.egg-info/requires.txt
+writing top-level names to src/sparse_vus.egg-info/top_level.txt
+reading manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'src/sparse_vus.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-10.9-universal2/wheel
+running install
+running install_lib
+creating build/bdist.macosx-10.9-universal2/wheel
+creating build/bdist.macosx-10.9-universal2/wheel/sparse_vus
+copying build/lib/sparse_vus/__init__.py -> build/bdist.macosx-10.9-universal2/wheel/./sparse_vus
+copying build/lib/sparse_vus/core.py -> build/bdist.macosx-10.9-universal2/wheel/./sparse_vus
+copying build/lib/sparse_vus/compiled.py -> build/bdist.macosx-10.9-universal2/wheel/./sparse_vus
+running install_egg_info
+Copying src/sparse_vus.egg-info to build/bdist.macosx-10.9-universal2/wheel/./sparse_vus-0.1.0-py3.11.egg-info
+running install_scripts
+creating build/bdist.macosx-10.9-universal2/wheel/sparse_vus-0.1.0.dist-info/WHEEL
+creating '/Users/gosmain/Documents/GitHub/sparse-vus/dist/.tmp-rtkdtk9l/sparse_vus-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-10.9-universal2/wheel' to it
+adding 'sparse_vus/__init__.py'
+adding 'sparse_vus/compiled.py'
+adding 'sparse_vus/core.py'
+adding 'sparse_vus-0.1.0.dist-info/licenses/LICENSE'
+adding 'sparse_vus-0.1.0.dist-info/METADATA'
+adding 'sparse_vus-0.1.0.dist-info/WHEEL'
+adding 'sparse_vus-0.1.0.dist-info/top_level.txt'
+adding 'sparse_vus-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-10.9-universal2/wheel
+Successfully built dist/sparse_vus-0.1.0.tar.gz
+Successfully built dist/sparse_vus-0.1.0-py3-none-any.whl

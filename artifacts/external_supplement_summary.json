@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "Post-review length-stratified cross-family supplement",
+  "series": 42,
+  "families": 23,
+  "model": "bolt_base_64",
+  "max_buffer": 30,
+  "source_sha256": {
+    "experiments/external_supplement.py": "0ae26f6b17864ecfdfec3175c91fb2dfff5a02604ce34693378f43d45b26f36f",
+    "experiments/dtaianomaly_adapter.py": "7b53d095aa505567d11a9db33068977dd26697b799c1dc2ee28e2a9d14024a64",
+    "experiments/verify_artifact.py": "906d8504c7a52f42415395f949744ff20bbdec7433666a43fc5312dff019b373",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    ".cache/dtaianomaly/_volume_under_surface_metrics.py": "728045cd8ddf0caa6aab10a9ab66f5f876ee77e5d0ae80dfbce5029eab9ed5b7"
+  },
+  "input_sha256": {
+    "artifacts/external_supplement_protocol.json": "b3019f01500ceabfcba88c789a1a8c25b6c60c656fc8e6e3be0a1d16e67451bc",
+    "artifacts/public_benchmark.jsonl": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+    "artifacts/final_artifact_gate.json": "b56099b20dca3b18fe3b93d752837b820ac4c0fcbac50e0b9b879c8c8cb80edd",
+    "artifacts/bolt_base_64-download.json": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+    "artifacts/external_supplement_selection.json": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee"
+  },
+  "completed_utc": "2026-10-19T15:04:46.347218+00:00",
+  "environment_sha256": "ac0d0b8d64bcd21596a76bfd8111ab621166a7e033293ce1e2323fe2c8822813",
+  "protocol_sha256": "b3019f01500ceabfcba88c789a1a8c25b6c60c656fc8e6e3be0a1d16e67451bc",
+  "records_sha256": "104e3e55abb6696ef0411d6ce7faba9bd97ada50c52cb34493136bca2c4cd941",
+  "comparisons": {
+    "sparse_numba": {
+      "complete": 42,
+      "timeout": 0,
+      "paired_complete": 42,
+      "median_ratio_on_complete_pairs": 1.0,
+      "min_ratio_on_complete_pairs": 1.0,
+      "max_ratio_on_complete_pairs": 1.0
+    },
+    "dtaianomaly250": {
+      "complete": 42,
+      "timeout": 0,
+      "paired_complete": 42,
+      "median_ratio_on_complete_pairs": 8.166511551669867,
+      "min_ratio_on_complete_pairs": 3.023820237330573,
+      "max_ratio_on_complete_pairs": 61.73961099384862
+    },
+    "dtaianomaly_exact": {
+      "complete": 35,
+      "timeout": 7,
+      "paired_complete": 35,
+      "median_ratio_on_complete_pairs": 143.8498104971144,
+      "min_ratio_on_complete_pairs": 10.287496247541574,
+      "max_ratio_on_complete_pairs": 1066.2942988049417
+    }
+  },
+  "max_error": 9.547918011776346e-15
+}

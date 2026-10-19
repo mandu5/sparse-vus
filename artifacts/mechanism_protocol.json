@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-10-19 14:47:19 UTC",
+  "status": "frozen before adapter validation and all mechanism timing outcomes",
+  "purpose": "Isolate full-score sorting from support-restricted event integration using the identical immutable compiled sparse kernel.",
+  "primary_hypothesis": "Replacing global score sorting with support-score binning can reduce preprocessing time when support is sparse; the finite grid is allowed to show ties or reversals.",
+  "seed": 8675310,
+  "n": [
+    10000,
+    100000
+  ],
+  "positive_label_densities": [
+    0.001,
+    0.01,
+    0.1,
+    0.5
+  ],
+  "positive_interval_counts": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "max_buffer": [
+    0,
+    10,
+    30,
+    100
+  ],
+  "repetitions": 3,
+  "methods": [
+    "sparse_numba",
+    "fullsort_sparse_numba",
+    "dense_numpy",
+    "dense_numba",
+    "dense_direct_numba"
+  ],
+  "dense_comparator": "Per-case minimum median elapsed time among the three dense methods; all raw timings and identities retained.",
+  "tolerance": {
+    "absolute": 1e-11,
+    "relative": 0,
+    "require_finite": true
+  },
+  "labels": "For P=round(n*density) and K intervals, split P into K lengths differing by at most one. Center one interval in each deterministic equal-width cell [floor(j*n/K),floor((j+1)*n/K)).",
+  "exclusions": "Only cells with K>P are infeasible. Exclude those before any outcomes; no outcome-based removal or replacement.",
+  "scores": "Independent standard normal float64 vector from numpy.default_rng(SeedSequence([seed,n,density_index,K])). Reuse the same vector for all four widths of each layout.",
+  "case_order_seed": 8675311,
+  "method_order_seed": 8675312,
+  "randomization": "Shuffle all feasible cases once; independently shuffle the five method calls inside each case and repetition.",
+  "adapter": "Copy identical non-score preprocessing from _prepare. Keep support np.unique and group inversion. Replace support-bin search/bincount with np.sort(scores), followed by searchsorted(sorted_scores,support_values,right/left) to obtain exact before/after counts. Do not invoke _prepare inside the adapter.",
+  "immutable_kernel": "src/sparse_vus/compiled.py::_sparse_kernel",
+  "timed_scope": "End-to-end method call, including input validation, interval/support construction, score preprocessing and integration. Excludes data generation, first-call warmup, parity checks and plotting.",
+  "warmup": "Call all five methods on the same fixed small input before timing; record each warmup duration separately.",
+  "threads": 1,
+  "validation": {
+    "before_timing": true,
+    "preprocessing": "All 12 returned arrays must equal original _prepare exactly, including tie counts and support_index.",
+    "structured_cases": 5,
+    "random_cases": 96,
+    "seed": 8675411,
+    "n": [
+      2,
+      3,
+      8,
+      17,
+      64,
+      127
+    ],
+    "score_modes": [
+      "continuous",
+      "quantized3",
+      "binary",
+      "constant",
+      "ordered",
+      "reverse"
+    ],
+    "widths": [
+      0,
+      1,
+      2,
+      5,
+      10,
+      30,
+      100
+    ],
+    "integration": "All five methods must agree to absolute 1e-11 with finite outputs on all validation and timed cases.",
+    "failure_policy": "Preserve failure receipt and abort; no exclusion or retuning."
+  },
+  "reporting": {
+    "support_density": "Measure realized maximum-support Q/n and unique support-score count separately from requested positive-label density. Expansion can make support dense.",
+    "ratios": [
+      "fullsort_sparse_numba / sparse_numba",
+      "fastest_dense / sparse_numba",
+      "fastest_dense / fullsort_sparse_numba"
+    ],
+    "material_win_ratio": 1.1,
+    "material_loss_ratio": 0.9090909090909091,
+    "support_fraction_bins": [
+      0,
+      0.005,
+      0.02,
+      0.1,
+      0.3,
+      0.6,
+      1.0000001
+    ],
+    "include_all_cells": true,
+    "interpretation": "Finite deterministic synthetic mechanism study; no population confidence interval, universal speedup, or new SOTA claim."
+  },
+  "core_sha256": {
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32"
+  },
+  "excluded_cells": [
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 100,
+      "max_buffer": 0,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 100,
+      "max_buffer": 10,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 100,
+      "max_buffer": 30,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 100,
+      "max_buffer": 100,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 0,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 10,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 30,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 100,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.01,
+      "intervals": 1000,
+      "max_buffer": 0,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.01,
+      "intervals": 1000,
+      "max_buffer": 10,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.01,
+      "intervals": 1000,
+      "max_buffer": 30,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 10000,
+      "positive_label_density": 0.01,
+      "intervals": 1000,
+      "max_buffer": 100,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 100000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 0,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 100000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 10,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 100000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 30,
+      "reason": "interval count exceeds positive points"
+    },
+    {
+      "n": 100000,
+      "positive_label_density": 0.001,
+      "intervals": 1000,
+      "max_buffer": 100,
+      "reason": "interval count exceeds positive points"
+    }
+  ],
+  "full_grid_cells": 128,
+  "feasible_cells": 112
+}

@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-19T14:45:18.045111+00:00",
+  "status": "Post-review supplemental protocol; written before this experiment, after inspecting main interim outcomes.",
+  "selection": "For each family, sort complete common-series metadata by (n,series); choose index 0 and floor(count/2), dropping duplicates. No score or runtime criterion.",
+  "model": "bolt_base_64",
+  "maximum_buffer": 30,
+  "methods": [
+    "sparse_numba",
+    "dtaianomaly250",
+    "dtaianomaly_exact"
+  ],
+  "repetitions": 3,
+  "method_order": "seeded random order per case, then three calls per method",
+  "seed": 713810,
+  "per_call_budget_seconds": 10.0,
+  "timeout": "Each worker loads data and warms kernels before a ready message. Parent stops the call after its announced timer reaches the budget. A timeout is right-censored; no numeric speed ratio is assigned.",
+  "warmup": "Excluded; actual upstream fastmath/parallel kernel preserved, one thread. Both ROC and PR obtained from one shared call.",
+  "parity_tolerance": 1e-11,
+  "reporting": "All selected cases, completion counts, errors, three raw durations or censorship, family scope. Ratios only for completed cases, with their denominator."
+}

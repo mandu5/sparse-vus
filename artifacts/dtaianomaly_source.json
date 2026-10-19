@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/ML-KULeuven/dtaianomaly",
+  "revision": "557b435790bebc57307d8e7f22047273ac923f36",
+  "upstream_commit_date": "2026-10-13T14:42:21Z",
+  "source_url": "https://raw.githubusercontent.com/ML-KULeuven/dtaianomaly/557b435790bebc57307d8e7f22047273ac923f36/dtaianomaly/evaluation/_volume_under_surface_metrics.py",
+  "source_sha256": "728045cd8ddf0caa6aab10a9ab66f5f876ee77e5d0ae80dfbce5029eab9ed5b7",
+  "license": "MIT",
+  "license_sha256": "ac80681ee5240fb2b22fa282733dd0576fc4eaf28c66bcf50b21798b37fa2ce6",
+  "adapter": "Unchanged method and compiled kernel AST; metric-only dependency isolation.",
+  "thread_control": "Set NUMBA_NUM_THREADS=1 before import for single-thread comparisons.",
+  "timing_contract": "Includes threshold sort, label expansion, and all buffer curves; both ROC and PR returned from one curve call.",
+  "jit": "Upstream fastmath=True, parallel=True preserved; compile warm-up excluded from warm timing."
+}

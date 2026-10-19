@@ -1,0 +1,44 @@
+{
+  "package": "github.com/stergiotis/boxer/public/analytics/timeseries/adscore",
+  "version": "v0.0.23",
+  "toolchain": "go version go1.27.2 darwin/arm64",
+  "native_unmodified_package_executed": true,
+  "input": {
+    "labels": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "scores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "buffer": 4,
+    "repeats": 3
+  },
+  "native_output": {
+    "result": {
+      "AUCROC": 0.5,
+      "AUCPR": 0.2875,
+      "VUSROC": 0.6359836027625188,
+      "VUSPR": 0.6385867694029569
+    },
+    "seconds": [
+      2.666e-06,
+      1.125e-06,
+      8.34e-07
+    ]
+  },
+  "official_parity_output": [
+    0.6892652251673258,
+    0.6834092121537311
+  ],
+  "comparison": "Different semantics: not an exact-target speed baseline."
+}

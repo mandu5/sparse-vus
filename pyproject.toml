@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sparse-vus"
+version = "0.1.0"
+description = "Exact scalar VUS integration by sparse-support event elimination"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+accelerate = ["numba>=0.59"]
+research = ["pytest>=8", "scipy>=1.11", "scikit-learn>=1.3", "pandas>=2", "matplotlib>=3.7", "reportlab>=4", "tqdm>=4.66", "threadpoolctl>=3.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

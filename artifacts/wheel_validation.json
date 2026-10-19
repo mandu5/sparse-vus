@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-19T15:11:22.375890+00:00",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "module_path": "/tmp/sparse-vus-wheel-smoke-20261020/lib/python3.12/site-packages/sparse_vus/__init__.py",
+  "version": "0.1.0",
+  "numpy": "2.5.4",
+  "numba_installed": false,
+  "isolated_python": true,
+  "example_result": [
+    0.6892652251673258,
+    0.6834092121537311
+  ],
+  "wheel_sha256": "5523b3fe5dbb1c46ede1582a509162e51ccfa7bf54c4aaedfa08fabfb4a23f86"
+}

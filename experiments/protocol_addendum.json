@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-19",
+  "stage": "before public score evaluation, after archive metadata and README inspection",
+  "score_padding": "Use the downloaded scores unchanged for metric evaluator testing. The source README says Chronos-Bolt and TimeMoE have leading zero padding, unlike the manuscript. We are evaluating metric computations on fixed released score vectors, not reproducing the source paper's model leaderboard. Preserve all positions and report this fact; no label-informed score editing.",
+  "strong_baseline": "Add independently implemented Numba dense direct-ramp construction. Report speed against the fastest median among NumPy dense, Numba nearest-two dense, and Numba direct-ramp dense, per score vector and buffer width. This favors dense baselines and avoids cherry-picking a weak implementation.",
+  "score_download": "Use HTTP byte ranges for all 350 score members per selected archive, verify each ZIP CRC and SHA-256, and do not download unused forecast/pickle payloads. Do not claim whole archive MD5 verification.",
+  "source_readme_sha256": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+}

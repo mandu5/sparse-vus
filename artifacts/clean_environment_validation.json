@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-19T15:09:46.663992+00:00",
+  "workspace": "Fresh separate virtual environment with latest resolved dependencies; test/source bytes matched to release tree",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "executable": "/tmp/sparse-vus-reproduction-smoke-20261020/.venv/bin/python",
+  "packages": {
+    "numpy": "2.5.4",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "pytest": "9.1.1"
+  },
+  "tests": 2120,
+  "result": "2120 passed in 79.54s (0:01:19)",
+  "source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "tests/test_dtaianomaly_adapter.py": "004c08bfa0ebda4d0df8c8429f8c20f9bdead13d77b07cb6881b6d86338c2876",
+    "tests/test_compiled.py": "9c9f27c1a97cbf877d148401d75e358dddfb88b863a07178492c8b2703bd446c",
+    "tests/test_external_supplement.py": "d7da986b6a1c86fcbc39fd484b2c1ff98e92b60abe90c754d2897cbeb666d390",
+    "tests/test_parity.py": "680f59e09620dbe4189f91c2bc2ccde25a2356c08ec50b3ad4f63d09d6dee06c",
+    "tests/test_artifact_gate.py": "a02170404a5c6b886952c571782055647247c94e398a13a714de950c57b96c9b"
+  },
+  "test_log_sha256": "cdbf1c4bc52364396b7e025feb2d277c181adef4b2d082f8de6f0382340e75cf"
+}

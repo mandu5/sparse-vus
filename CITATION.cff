@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this implementation or its research artifact, please cite this repository and the original VUS papers listed in THIRD_PARTY.md."
+type: software
+title: "Sparse VUS: Sparse-Support Event Elimination for Exact VUS Evaluation"
+authors:
+  - name: "Sparse VUS contributors"
+version: 0.1.0
+date-released: 2026-10-20
+url: "https://github.com/mandu5/sparse-vus"
+repository-code: "https://github.com/mandu5/sparse-vus"
+license: MIT
+abstract: "Exact scalar VUS-ROC and VUS-PR evaluation by sparse-support event elimination, with a proof, pinned-reference parity checks, and public-score experiments."
+keywords:
+  - time-series
+  - anomaly-detection
+  - evaluation
+  - exact-algorithms
+  - reproducible-research

@@ -1,0 +1,6 @@
+{"model": "bolt_base_64", "score_members": 350, "downloaded_bytes": 126018332}
+{"model": "TimeMoE-200M_64", "score_members": 350, "downloaded_bytes": 126197982}
+{"model": "timesfm-1.0-200m_64", "score_members": 350, "downloaded_bytes": 126156407}
+{"file": "TSB-AD-U.zip", "url": "https://www.thedatum.org/datasets/TSB-AD-U.zip", "bytes": 72900868, "md5": "df863947c975567ad2b96f0603adb0ad", "sha256": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961"}
+{"file": "TSB-AD-U-Eva.csv", "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/Datasets/File_List/TSB-AD-U-Eva.csv", "bytes": 16205, "md5": "af4cdb76ed8006e4cf689d892d9c1f1e", "sha256": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a"}
+{"file": "score-archive-README.txt", "url": "https://rdr.kuleuven.be/api/access/datafile/337896", "bytes": 2421, "md5": "a7cc285e002a8dccfde7b89cf45475ad", "sha256": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"}

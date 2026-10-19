@@ -1,0 +1,96 @@
+{"completed": 1, "selected": 42, "series": "286_CATSv2_id_1_Sensor_tr_17792_1st_17892", "status": {"dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly_exact": "TIMEOUT"}}
+{"completed": 2, "selected": 42, "series": "169_Daphnet_id_1_HumanActivity_tr_9693_1st_20732", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 3, "selected": 42, "series": "810_Exathlon_id_1_Facility_tr_10766_1st_12590", "status": {"sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 4, "selected": 42, "series": "833_Exathlon_id_24_Facility_tr_10766_1st_12590", "status": {"sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 5, "selected": 42, "series": "269_IOPS_id_10_WebService_tr_1216_1st_1728", "status": {"sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 6, "selected": 42, "series": "264_IOPS_id_5_WebService_tr_11665_1st_11765", "status": {"sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 7, "selected": 42, "series": "216_LTDB_id_1_Medical_tr_500_1st_266", "status": {"dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly_exact": "TIMEOUT"}}
+{"completed": 8, "selected": 42, "series": "221_LTDB_id_6_Medical_tr_500_1st_26", "status": {"dtaianomaly_exact": "TIMEOUT", "dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 9, "selected": 42, "series": "226_MGAB_id_2_Synthetic_tr_20000_1st_45134", "status": {"dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 10, "selected": 42, "series": "229_MGAB_id_5_Synthetic_tr_25000_1st_33098", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 11, "selected": 42, "series": "170_MITDB_id_1_Medical_tr_17675_1st_17775", "status": {"sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "TIMEOUT"}}
+{"completed": 12, "selected": 42, "series": "173_MITDB_id_4_Medical_tr_13620_1st_13720", "status": {"dtaianomaly_exact": "TIMEOUT", "sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 13, "selected": 42, "series": "141_MSL_id_2_Sensor_tr_500_1st_550", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 14, "selected": 42, "series": "147_MSL_id_8_Sensor_tr_590_1st_690", "status": {"dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 15, "selected": 42, "series": "010_NAB_id_10_WebService_tr_500_1st_271", "status": {"sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 16, "selected": 42, "series": "015_NAB_id_15_Synthetic_tr_1007_1st_2787", "status": {"dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 17, "selected": 42, "series": "277_NEK_id_1_WebService_tr_500_1st_17", "status": {"sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 18, "selected": 42, "series": "282_NEK_id_6_WebService_tr_500_1st_64", "status": {"sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 19, "selected": 42, "series": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908", "status": {"dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 20, "selected": 42, "series": "862_OPPORTUNITY_id_21_HumanActivity_tr_500_1st_566", "status": {"sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 21, "selected": 42, "series": "302_Power_id_1_Facility_tr_7685_1st_7785", "status": {"dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 22, "selected": 42, "series": "234_SED_id_1_Medical_tr_3740_1st_3840", "status": {"dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 23, "selected": 42, "series": "236_SED_id_3_Medical_tr_3740_1st_3840", "status": {"dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 24, "selected": 42, "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750", "status": {"dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 25, "selected": 42, "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 26, "selected": 42, "series": "181_SMD_id_4_Facility_tr_5000_1st_15144", "status": {"sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 27, "selected": 42, "series": "199_SMD_id_22_Facility_tr_5925_1st_17580", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 28, "selected": 42, "series": "246_SVDB_id_10_Medical_tr_20100_1st_68460", "status": {"dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 29, "selected": 42, "series": "243_SVDB_id_7_Medical_tr_11393_1st_11493", "status": {"sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "TIMEOUT"}}
+{"completed": 30, "selected": 42, "series": "550_SWaT_id_1_Sensor_tr_43700_1st_43800", "status": {"dtaianomaly_exact": "TIMEOUT", "dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 31, "selected": 42, "series": "151_Stock_id_3_Finance_tr_500_1st_62", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 32, "selected": 42, "series": "155_Stock_id_7_Finance_tr_500_1st_18", "status": {"sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 33, "selected": 42, "series": "257_TAO_id_1_Environment_tr_500_1st_3", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 34, "selected": 42, "series": "258_TAO_id_2_Environment_tr_500_1st_4", "status": {"dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 35, "selected": 42, "series": "287_TODS_id_1_Synthetic_tr_500_1st_11", "status": {"sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 36, "selected": 42, "series": "294_TODS_id_8_Synthetic_tr_500_1st_200", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 37, "selected": 42, "series": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764", "status": {"dtaianomaly250": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{"completed": 38, "selected": 42, "series": "493_UCR_id_191_Sensor_tr_2847_1st_9330", "status": {"dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 39, "selected": 42, "series": "032_WSD_id_4_WebService_tr_4559_1st_11822", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 40, "selected": 42, "series": "074_WSD_id_46_WebService_tr_990_1st_1090", "status": {"dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE"}}
+{"completed": 41, "selected": 42, "series": "723_YAHOO_id_173_WebService_tr_500_1st_1214", "status": {"dtaianomaly_exact": "COMPLETE", "sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE"}}
+{"completed": 42, "selected": 42, "series": "807_YAHOO_id_257_WebService_tr_500_1st_1210", "status": {"sparse_numba": "COMPLETE", "dtaianomaly250": "COMPLETE", "dtaianomaly_exact": "COMPLETE"}}
+{
+  "status": "PASS",
+  "scope": "Post-review length-stratified cross-family supplement",
+  "series": 42,
+  "families": 23,
+  "model": "bolt_base_64",
+  "max_buffer": 30,
+  "source_sha256": {
+    "experiments/external_supplement.py": "0ae26f6b17864ecfdfec3175c91fb2dfff5a02604ce34693378f43d45b26f36f",
+    "experiments/dtaianomaly_adapter.py": "7b53d095aa505567d11a9db33068977dd26697b799c1dc2ee28e2a9d14024a64",
+    "experiments/verify_artifact.py": "906d8504c7a52f42415395f949744ff20bbdec7433666a43fc5312dff019b373",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    ".cache/dtaianomaly/_volume_under_surface_metrics.py": "728045cd8ddf0caa6aab10a9ab66f5f876ee77e5d0ae80dfbce5029eab9ed5b7"
+  },
+  "input_sha256": {
+    "artifacts/external_supplement_protocol.json": "b3019f01500ceabfcba88c789a1a8c25b6c60c656fc8e6e3be0a1d16e67451bc",
+    "artifacts/public_benchmark.jsonl": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+    "artifacts/final_artifact_gate.json": "b56099b20dca3b18fe3b93d752837b820ac4c0fcbac50e0b9b879c8c8cb80edd",
+    "artifacts/bolt_base_64-download.json": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+    "artifacts/external_supplement_selection.json": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee"
+  },
+  "completed_utc": "2026-10-19T15:04:46.347218+00:00",
+  "environment_sha256": "ac0d0b8d64bcd21596a76bfd8111ab621166a7e033293ce1e2323fe2c8822813",
+  "protocol_sha256": "b3019f01500ceabfcba88c789a1a8c25b6c60c656fc8e6e3be0a1d16e67451bc",
+  "records_sha256": "104e3e55abb6696ef0411d6ce7faba9bd97ada50c52cb34493136bca2c4cd941",
+  "comparisons": {
+    "sparse_numba": {
+      "complete": 42,
+      "timeout": 0,
+      "paired_complete": 42,
+      "median_ratio_on_complete_pairs": 1.0,
+      "min_ratio_on_complete_pairs": 1.0,
+      "max_ratio_on_complete_pairs": 1.0
+    },
+    "dtaianomaly250": {
+      "complete": 42,
+      "timeout": 0,
+      "paired_complete": 42,
+      "median_ratio_on_complete_pairs": 8.166511551669867,
+      "min_ratio_on_complete_pairs": 3.023820237330573,
+      "max_ratio_on_complete_pairs": 61.73961099384862
+    },
+    "dtaianomaly_exact": {
+      "complete": 35,
+      "timeout": 7,
+      "paired_complete": 35,
+      "median_ratio_on_complete_pairs": 143.8498104971144,
+      "min_ratio_on_complete_pairs": 10.287496247541574,
+      "max_ratio_on_complete_pairs": 1066.2942988049417
+    }
+  },
+  "max_error": 9.547918011776346e-15
+}

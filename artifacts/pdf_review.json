@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-10-19T15:10:45.754301+00:00",
+  "pages": 8,
+  "render_dpi": 120,
+  "render_tool": "pdftoppm",
+  "visual_review": "All eight pages inspected as rendered images; final changed pages 5 and 7 reinspected. Other page images are byte-identical to the initial full review. No clipping, overlaps, missing symbols, or unreadable tables found.",
+  "review_scope": "In-session AI-assisted artifact review, not external scientific peer review.",
+  "remaining_tex_warnings": [
+    "One underfull bibliography paragraph; its rendered text is readable and unclipped."
+  ],
+  "source_and_artifact_sha256": {
+    "paper/main.pdf": "d362f667d4eb37e47c00653f0bb61bf343f48d80a71dbbee5998a463696e5a90",
+    "paper/main.tex": "492a3d74868c453e38bae6be9c567fcd5c84a273663e2760dc62f548e0a661e0",
+    "paper/results.tex": "2fb29250c2ca2a3d066f3d511e11943234952221a8f4413f3a4403777db7c998",
+    "paper/result_body.tex": "d35899c506d75ee0097bb8b9d6136d3e45e2cd7c4ed783eb92a4448f55c203d4",
+    "paper/public-results.png": "886765bac3cc62cd4d53edb66f308a0132e16d192cfdc18e3d9c323b32b23dbe",
+    "paper/figures/event-elimination.png": "1b760d8adcc725c9320d58bdbf54cfb961e9fbf2df4f6c042cc7b6edda2fa146",
+    "paper/figures/mechanism.readable.png": "b92822b40fb353487c5066bd50e25fafd1c21775bf9c986f2b7146fa2d8e887a",
+    "artifacts/analysis_summary.json": "d6f9ac05930d37aee2717553c44925f5e5f3f749f4e03e2704cca804ef3afdc2",
+    "artifacts/final_artifact_gate.json": "b56099b20dca3b18fe3b93d752837b820ac4c0fcbac50e0b9b879c8c8cb80edd",
+    "artifacts/external_supplement_summary.json": "a99a129b4e375dca25d6861a13f1409440ad106e32cf6d4b5fa69c20856d1d29"
+  },
+  "render_sha256": {
+    "page-1.png": "0823074cf7a09ba4ed6a34a6b67ca6d67e90c2f7774de2834a2f48cb8578f8dd",
+    "page-2.png": "9b495bd260ad25bc032a8e74f794e2dc421b98db5b5e640f0a5f0c2e9828a598",
+    "page-3.png": "4d57d80441fb2dcb4c09081f918fdd530cc6bcf3ac8603f02e87dbbdff6bfc30",
+    "page-4.png": "d3218ff212d75f8adbe1f667e0321654d1a7f9213668d36783933ba9f9325a59",
+    "page-5.png": "2e1cfffc90f238e54aa884d195a3f1c3fabfe7c8eb126f143c7ff4fdc8425204",
+    "page-6.png": "4ffe92b7b35002c05126f35c9a10324339e8ade200ccecdf21374d9f017d5d73",
+    "page-7.png": "b3dfb9a5710b1b69bd87ec5396fe1f5fce7bbb8b8196084f73a21248ba00eb1b",
+    "page-8.png": "160e7830e54e3486377faabb3103eb47b52ebed5d98b948e11db202a7ee7a6b6"
+  },
+  "unchanged_after_final_pass": [
+    "page-1.png",
+    "page-2.png",
+    "page-3.png",
+    "page-4.png",
+    "page-6.png",
+    "page-8.png"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-19T15:05:58.438030+00:00",
+  "cpu_clearance": "Root confirmed external supplement complete: 42 cases, 23 families, PASS; CPU released and no further timed experiments planned.",
+  "helper_path": "artifacts/mechanism_results/figure_readability.py",
+  "helper_sha256": "4b04f6e1d6591409431d615a113538fac0b0542a8a0438fb60ae978ceaad4a0d",
+  "input_results_sha256": "5fe7660a4b6f3544127b6aea0ac33df0f9c2bbe2bce5166bea5ef7307cc0e0d6",
+  "input_run_receipt_sha256": "a7dde77dfec8d1db7fe341a305775552223ed29c82ec6fb4e9c842e7968bc367",
+  "input_raw_cases_sha256": "32b5fe4ac3831facc32e92e54964757c9e13f6a94a836f6f7d42995235025fe6",
+  "protocol_sha256": "370335a570b4f9317e257774317ceec2ecc1593cdf552057add5af8367371de8",
+  "timings_and_benchmark_source_unchanged": true,
+  "unchanged_initial_figures": [
+    {
+      "path": "paper/figures/mechanism.png",
+      "sha256": "6799ef3e3c74b49417a89b78b5daa2d0f28a5612e3a9c6ae7bfe031748447c7a"
+    },
+    {
+      "path": "paper/figures/mechanism.svg",
+      "sha256": "67498666a1daf1e8fbe1205853e306e33a09807233f3306ded31e2f60059fcc7"
+    }
+  ],
+  "readable_figures": [
+    {
+      "path": "paper/figures/mechanism.readable.png",
+      "sha256": "b92822b40fb353487c5066bd50e25fafd1c21775bf9c986f2b7146fa2d8e887a"
+    },
+    {
+      "path": "paper/figures/mechanism.readable.svg",
+      "sha256": "f90fdaaeb809f589733b9893525c7726242bbbc5dfac3808de56e28379db9bed"
+    }
+  ],
+  "changes": "Explicit ratio tick labels, shared linear 0.5\u20132 scale for sort ablation, shared logarithmic 0.2\u201310 scale for dense comparison, percentage Q/n ticks. Data points unchanged; ratios >1 favor the current sparse implementation.",
+  "pdf_generated": false
+}
