@@ -1,0 +1,1330 @@
+{
+  "status": "PASS",
+  "baseline": {
+    "macOS-arm64": {
+      "fast_vus": {
+        "cases": 2100,
+        "median": 8.377221034330454,
+        "geomean": 8.688394683168804,
+        "min": 1.7479886827674176,
+        "max": 46.44943220455061,
+        "faster_cases": 2100,
+        "series_clustered_geomean_ci95": [
+          8.316137687744035,
+          9.05402490608937
+        ],
+        "family_clustered_geomean_ci95": [
+          6.894496961033813,
+          10.384308394832397
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 6,
+            "geomean": 7.002744297421843
+          },
+          "Daphnet": {
+            "cases": 6,
+            "geomean": 6.270390686905568
+          },
+          "Exathlon": {
+            "cases": 180,
+            "geomean": 5.677973416106943
+          },
+          "IOPS": {
+            "cases": 90,
+            "geomean": 9.317940251636339
+          },
+          "LTDB": {
+            "cases": 48,
+            "geomean": 3.869261533736686
+          },
+          "MGAB": {
+            "cases": 48,
+            "geomean": 9.835254458800067
+          },
+          "MITDB": {
+            "cases": 42,
+            "geomean": 5.728820465065931
+          },
+          "MSL": {
+            "cases": 42,
+            "geomean": 7.687372699569941
+          },
+          "NAB": {
+            "cases": 138,
+            "geomean": 6.569709504944785
+          },
+          "NEK": {
+            "cases": 48,
+            "geomean": 7.669532165157176
+          },
+          "OPPORTUNITY": {
+            "cases": 162,
+            "geomean": 8.747195135713705
+          },
+          "Power": {
+            "cases": 6,
+            "geomean": 6.557378035591415
+          },
+          "SED": {
+            "cases": 12,
+            "geomean": 7.361397921859759
+          },
+          "SMAP": {
+            "cases": 102,
+            "geomean": 13.143119937764597
+          },
+          "SMD": {
+            "cases": 198,
+            "geomean": 10.301316938059603
+          },
+          "SVDB": {
+            "cases": 108,
+            "geomean": 6.383994961026929
+          },
+          "SWaT": {
+            "cases": 6,
+            "geomean": 6.052641891479844
+          },
+          "Stock": {
+            "cases": 48,
+            "geomean": 2.8591367696623236
+          },
+          "TAO": {
+            "cases": 12,
+            "geomean": 2.778972851253571
+          },
+          "TODS": {
+            "cases": 78,
+            "geomean": 8.045396986938965
+          },
+          "UCR": {
+            "cases": 420,
+            "geomean": 13.623600551292505
+          },
+          "WSD": {
+            "cases": 120,
+            "geomean": 9.167518172267217
+          },
+          "YAHOO": {
+            "cases": 180,
+            "geomean": 9.357980862896332
+          }
+        }
+      },
+      "fastest_tested": {
+        "cases": 2100,
+        "median": 2.0426598975652173,
+        "geomean": 1.976050598138112,
+        "min": 0.40166290437216606,
+        "max": 7.7476448255544925,
+        "faster_cases": 1891,
+        "series_clustered_geomean_ci95": [
+          1.8860330987888845,
+          2.0650996510239374
+        ],
+        "family_clustered_geomean_ci95": [
+          1.5340205173363635,
+          2.4181369601584346
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 6,
+            "geomean": 2.302505425080436
+          },
+          "Daphnet": {
+            "cases": 6,
+            "geomean": 1.9567258202507358
+          },
+          "Exathlon": {
+            "cases": 180,
+            "geomean": 1.6636105882605465
+          },
+          "IOPS": {
+            "cases": 90,
+            "geomean": 2.4978349221739893
+          },
+          "LTDB": {
+            "cases": 48,
+            "geomean": 1.2111751705756233
+          },
+          "MGAB": {
+            "cases": 48,
+            "geomean": 2.8591237527426623
+          },
+          "MITDB": {
+            "cases": 42,
+            "geomean": 2.326725416909212
+          },
+          "MSL": {
+            "cases": 42,
+            "geomean": 1.21811625399426
+          },
+          "NAB": {
+            "cases": 138,
+            "geomean": 1.238407303944118
+          },
+          "NEK": {
+            "cases": 48,
+            "geomean": 0.8657951052083649
+          },
+          "OPPORTUNITY": {
+            "cases": 162,
+            "geomean": 2.079269678893505
+          },
+          "Power": {
+            "cases": 6,
+            "geomean": 2.079696177036165
+          },
+          "SED": {
+            "cases": 12,
+            "geomean": 1.9925405407202768
+          },
+          "SMAP": {
+            "cases": 102,
+            "geomean": 2.348807240351175
+          },
+          "SMD": {
+            "cases": 198,
+            "geomean": 2.814381677945271
+          },
+          "SVDB": {
+            "cases": 108,
+            "geomean": 2.0799172879693417
+          },
+          "SWaT": {
+            "cases": 6,
+            "geomean": 1.9552682042044724
+          },
+          "Stock": {
+            "cases": 48,
+            "geomean": 0.6114111853393228
+          },
+          "TAO": {
+            "cases": 12,
+            "geomean": 0.6301152244796262
+          },
+          "TODS": {
+            "cases": 78,
+            "geomean": 1.302534684234392
+          },
+          "UCR": {
+            "cases": 420,
+            "geomean": 3.0877195571554554
+          },
+          "WSD": {
+            "cases": 120,
+            "geomean": 2.5941609446351763
+          },
+          "YAHOO": {
+            "cases": 180,
+            "geomean": 1.2186158480198115
+          }
+        }
+      },
+      "max_pr_error_vs_fast_vus": 2.7755575615628914e-15,
+      "same_machine_isolated_evaluator_seconds": {
+        "sparse_sum_of_case_medians": 14.775403497566003,
+        "fast_vus_sum_of_case_medians": 104.51848365922342
+      }
+    },
+    "Linux-x86": {
+      "fast_vus": {
+        "cases": 2100,
+        "median": 4.552960340528621,
+        "geomean": 4.504880366177989,
+        "min": 1.523194652131581,
+        "max": 17.971590083583273,
+        "faster_cases": 2100,
+        "series_clustered_geomean_ci95": [
+          4.337181508858491,
+          4.6817600792448335
+        ],
+        "family_clustered_geomean_ci95": [
+          3.7429028046283754,
+          5.218118943420288
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 6,
+            "geomean": 3.1763562467575057
+          },
+          "Daphnet": {
+            "cases": 6,
+            "geomean": 3.709928456765331
+          },
+          "Exathlon": {
+            "cases": 180,
+            "geomean": 2.8028323156583523
+          },
+          "IOPS": {
+            "cases": 90,
+            "geomean": 4.521172862335441
+          },
+          "LTDB": {
+            "cases": 48,
+            "geomean": 2.630056558749783
+          },
+          "MGAB": {
+            "cases": 48,
+            "geomean": 4.584845030812737
+          },
+          "MITDB": {
+            "cases": 42,
+            "geomean": 3.212421039399515
+          },
+          "MSL": {
+            "cases": 42,
+            "geomean": 6.218379622399705
+          },
+          "NAB": {
+            "cases": 138,
+            "geomean": 4.7455218459906625
+          },
+          "NEK": {
+            "cases": 48,
+            "geomean": 6.719228133092913
+          },
+          "OPPORTUNITY": {
+            "cases": 162,
+            "geomean": 3.7027555718208176
+          },
+          "Power": {
+            "cases": 6,
+            "geomean": 2.7635758547694644
+          },
+          "SED": {
+            "cases": 12,
+            "geomean": 4.1784555419164
+          },
+          "SMAP": {
+            "cases": 102,
+            "geomean": 6.2343353812403075
+          },
+          "SMD": {
+            "cases": 198,
+            "geomean": 4.872441648246405
+          },
+          "SVDB": {
+            "cases": 108,
+            "geomean": 3.3211045984514063
+          },
+          "SWaT": {
+            "cases": 6,
+            "geomean": 3.2888320555807526
+          },
+          "Stock": {
+            "cases": 48,
+            "geomean": 2.0480870908468773
+          },
+          "TAO": {
+            "cases": 12,
+            "geomean": 2.0191415904805736
+          },
+          "TODS": {
+            "cases": 78,
+            "geomean": 3.3396139635312068
+          },
+          "UCR": {
+            "cases": 420,
+            "geomean": 5.264323780976017
+          },
+          "WSD": {
+            "cases": 120,
+            "geomean": 5.258503479353106
+          },
+          "YAHOO": {
+            "cases": 180,
+            "geomean": 7.687125017963722
+          }
+        }
+      },
+      "fastest_tested": {
+        "cases": 2100,
+        "median": 1.3469420048716594,
+        "geomean": 1.4000002031037488,
+        "min": 0.36291383074288236,
+        "max": 8.401749639910802,
+        "faster_cases": 1526,
+        "series_clustered_geomean_ci95": [
+          1.3399942088876584,
+          1.4606515412622143
+        ],
+        "family_clustered_geomean_ci95": [
+          1.105851826072639,
+          1.6831973413021286
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 6,
+            "geomean": 1.5268985178782217
+          },
+          "Daphnet": {
+            "cases": 6,
+            "geomean": 1.509181133442245
+          },
+          "Exathlon": {
+            "cases": 180,
+            "geomean": 1.204728690330417
+          },
+          "IOPS": {
+            "cases": 90,
+            "geomean": 1.6249952735885396
+          },
+          "LTDB": {
+            "cases": 48,
+            "geomean": 1.008152762608879
+          },
+          "MGAB": {
+            "cases": 48,
+            "geomean": 2.250733314772002
+          },
+          "MITDB": {
+            "cases": 42,
+            "geomean": 2.0227333093145474
+          },
+          "MSL": {
+            "cases": 42,
+            "geomean": 1.01837010557979
+          },
+          "NAB": {
+            "cases": 138,
+            "geomean": 0.9145774615315437
+          },
+          "NEK": {
+            "cases": 48,
+            "geomean": 0.6911630965770743
+          },
+          "OPPORTUNITY": {
+            "cases": 162,
+            "geomean": 1.3185421425225172
+          },
+          "Power": {
+            "cases": 6,
+            "geomean": 1.1170497357626494
+          },
+          "SED": {
+            "cases": 12,
+            "geomean": 1.3965304839390558
+          },
+          "SMAP": {
+            "cases": 102,
+            "geomean": 1.5497163527148492
+          },
+          "SMD": {
+            "cases": 198,
+            "geomean": 1.9327736764188284
+          },
+          "SVDB": {
+            "cases": 108,
+            "geomean": 1.5404833622935703
+          },
+          "SWaT": {
+            "cases": 6,
+            "geomean": 1.436985697134968
+          },
+          "Stock": {
+            "cases": 48,
+            "geomean": 0.5358785074463452
+          },
+          "TAO": {
+            "cases": 12,
+            "geomean": 0.49830940886214176
+          },
+          "TODS": {
+            "cases": 78,
+            "geomean": 0.6741337442169637
+          },
+          "UCR": {
+            "cases": 420,
+            "geomean": 2.1111981459648494
+          },
+          "WSD": {
+            "cases": 120,
+            "geomean": 1.8903725001486429
+          },
+          "YAHOO": {
+            "cases": 180,
+            "geomean": 0.9463053440779556
+          }
+        }
+      },
+      "max_pr_error_vs_fast_vus": 2.4424906541753444e-15,
+      "same_machine_isolated_evaluator_seconds": {
+        "sparse_sum_of_case_medians": 14.386096368999645,
+        "fast_vus_sum_of_case_medians": 55.13723961200117
+      }
+    }
+  },
+  "certified": {
+    "certified_0.01": {
+      "30": {
+        "cases": 126,
+        "median": 0.834606198475303,
+        "geomean": 0.8078963226597232,
+        "min": 0.36698257855071437,
+        "max": 1.1727221777210408,
+        "faster_cases": 27,
+        "series_clustered_geomean_ci95": [
+          0.7544625582741001,
+          0.8636508104047191
+        ],
+        "family_clustered_geomean_ci95": [
+          0.7504308905100056,
+          0.874081503793552
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 3,
+            "geomean": 1.0658650201750717
+          },
+          "Daphnet": {
+            "cases": 3,
+            "geomean": 0.9933522682355949
+          },
+          "Exathlon": {
+            "cases": 6,
+            "geomean": 1.0828555651727416
+          },
+          "IOPS": {
+            "cases": 6,
+            "geomean": 0.8144165244299288
+          },
+          "LTDB": {
+            "cases": 6,
+            "geomean": 0.8396021885503883
+          },
+          "MGAB": {
+            "cases": 6,
+            "geomean": 0.8969430276341734
+          },
+          "MITDB": {
+            "cases": 6,
+            "geomean": 1.0344927486106008
+          },
+          "MSL": {
+            "cases": 6,
+            "geomean": 0.7402828145155637
+          },
+          "NAB": {
+            "cases": 6,
+            "geomean": 0.7361186441869911
+          },
+          "NEK": {
+            "cases": 6,
+            "geomean": 0.6102354458352879
+          },
+          "OPPORTUNITY": {
+            "cases": 6,
+            "geomean": 0.8639932881560445
+          },
+          "Power": {
+            "cases": 3,
+            "geomean": 1.1153012429154285
+          },
+          "SED": {
+            "cases": 6,
+            "geomean": 0.6973362415075148
+          },
+          "SMAP": {
+            "cases": 6,
+            "geomean": 0.7258045981013548
+          },
+          "SMD": {
+            "cases": 6,
+            "geomean": 0.9015398038438679
+          },
+          "SVDB": {
+            "cases": 6,
+            "geomean": 0.938683079987789
+          },
+          "SWaT": {
+            "cases": 3,
+            "geomean": 1.122400919739097
+          },
+          "Stock": {
+            "cases": 6,
+            "geomean": 0.7239775918516427
+          },
+          "TAO": {
+            "cases": 6,
+            "geomean": 0.7693889676593989
+          },
+          "TODS": {
+            "cases": 6,
+            "geomean": 0.6069745394292836
+          },
+          "UCR": {
+            "cases": 6,
+            "geomean": 0.7185718949915447
+          },
+          "WSD": {
+            "cases": 6,
+            "geomean": 0.8335962387409048
+          },
+          "YAHOO": {
+            "cases": 6,
+            "geomean": 0.5750766981151916
+          }
+        },
+        "median_unique_width_fraction": 0.16129032258064516,
+        "median_curve_evaluation_fraction": 0.16129032258064516,
+        "max_midpoint_error": 0.00230042343633452,
+        "rank_decisions": {
+          "model_pairs": 126,
+          "certified_pairs": 71,
+          "incorrect_certified_pairs": 0,
+          "selection_cases": 42,
+          "certified_unique_winners": 21,
+          "incorrect_certified_winners": 0,
+          "decision_margin": 2e-10,
+          "scope": "Numerical replay of real-arithmetic interval rule, not statistical generalization or a formally outward-rounded floating-point proof."
+        }
+      },
+      "100": {
+        "cases": 126,
+        "median": 0.9046107197653293,
+        "geomean": 0.8728123207501368,
+        "min": 0.38424816633726117,
+        "max": 1.8455780780475586,
+        "faster_cases": 46,
+        "series_clustered_geomean_ci95": [
+          0.7918788333683057,
+          0.9657830332406121
+        ],
+        "family_clustered_geomean_ci95": [
+          0.7721470123353686,
+          0.9864304979599756
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 3,
+            "geomean": 1.3681656477304875
+          },
+          "Daphnet": {
+            "cases": 3,
+            "geomean": 1.1485352310987749
+          },
+          "Exathlon": {
+            "cases": 6,
+            "geomean": 1.6491239049845963
+          },
+          "IOPS": {
+            "cases": 6,
+            "geomean": 0.82214006626528
+          },
+          "LTDB": {
+            "cases": 6,
+            "geomean": 0.8039915601006526
+          },
+          "MGAB": {
+            "cases": 6,
+            "geomean": 0.8671102455175809
+          },
+          "MITDB": {
+            "cases": 6,
+            "geomean": 1.1215563641201145
+          },
+          "MSL": {
+            "cases": 6,
+            "geomean": 0.8704229168092428
+          },
+          "NAB": {
+            "cases": 6,
+            "geomean": 0.6621600791064798
+          },
+          "NEK": {
+            "cases": 6,
+            "geomean": 0.4446198692924215
+          },
+          "OPPORTUNITY": {
+            "cases": 6,
+            "geomean": 0.9944705903822814
+          },
+          "Power": {
+            "cases": 3,
+            "geomean": 1.2604891972497478
+          },
+          "SED": {
+            "cases": 6,
+            "geomean": 0.5438666705876677
+          },
+          "SMAP": {
+            "cases": 6,
+            "geomean": 0.8963104592416327
+          },
+          "SMD": {
+            "cases": 6,
+            "geomean": 0.9651079367233939
+          },
+          "SVDB": {
+            "cases": 6,
+            "geomean": 0.992460846964839
+          },
+          "SWaT": {
+            "cases": 3,
+            "geomean": 1.4213141155972309
+          },
+          "Stock": {
+            "cases": 6,
+            "geomean": 0.6964851067829051
+          },
+          "TAO": {
+            "cases": 6,
+            "geomean": 1.0628806853490405
+          },
+          "TODS": {
+            "cases": 6,
+            "geomean": 0.5852455347767154
+          },
+          "UCR": {
+            "cases": 6,
+            "geomean": 0.876691533470148
+          },
+          "WSD": {
+            "cases": 6,
+            "geomean": 0.9567981414147518
+          },
+          "YAHOO": {
+            "cases": 6,
+            "geomean": 0.7469993515658597
+          }
+        },
+        "median_unique_width_fraction": 0.07920792079207921,
+        "median_curve_evaluation_fraction": 0.07920792079207921,
+        "max_midpoint_error": 0.002246501528950895,
+        "rank_decisions": {
+          "model_pairs": 126,
+          "certified_pairs": 66,
+          "incorrect_certified_pairs": 0,
+          "selection_cases": 42,
+          "certified_unique_winners": 17,
+          "incorrect_certified_winners": 0,
+          "decision_margin": 2e-10,
+          "scope": "Numerical replay of real-arithmetic interval rule, not statistical generalization or a formally outward-rounded floating-point proof."
+        }
+      },
+      "300": {
+        "cases": 126,
+        "median": 1.3128399639199915,
+        "geomean": 1.3697362815107321,
+        "min": 0.5442085563910797,
+        "max": 4.104696873990518,
+        "faster_cases": 100,
+        "series_clustered_geomean_ci95": [
+          1.207175071778697,
+          1.5565879462629144
+        ],
+        "family_clustered_geomean_ci95": [
+          1.1763957421476121,
+          1.6114479941068252
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 3,
+            "geomean": 1.9064200004307492
+          },
+          "Daphnet": {
+            "cases": 3,
+            "geomean": 1.4836138575379785
+          },
+          "Exathlon": {
+            "cases": 6,
+            "geomean": 3.4022753349185475
+          },
+          "IOPS": {
+            "cases": 6,
+            "geomean": 1.2629580461912413
+          },
+          "LTDB": {
+            "cases": 6,
+            "geomean": 1.0476130388944556
+          },
+          "MGAB": {
+            "cases": 6,
+            "geomean": 1.1537094466107838
+          },
+          "MITDB": {
+            "cases": 6,
+            "geomean": 1.4014495490257404
+          },
+          "MSL": {
+            "cases": 6,
+            "geomean": 0.9677654040471279
+          },
+          "NAB": {
+            "cases": 6,
+            "geomean": 0.8380255655782101
+          },
+          "NEK": {
+            "cases": 6,
+            "geomean": 1.120480105725047
+          },
+          "OPPORTUNITY": {
+            "cases": 6,
+            "geomean": 1.3579052986974185
+          },
+          "Power": {
+            "cases": 3,
+            "geomean": 1.8102518260712948
+          },
+          "SED": {
+            "cases": 6,
+            "geomean": 0.7199290859385393
+          },
+          "SMAP": {
+            "cases": 6,
+            "geomean": 1.1898095998375064
+          },
+          "SMD": {
+            "cases": 6,
+            "geomean": 1.4793515501156118
+          },
+          "SVDB": {
+            "cases": 6,
+            "geomean": 1.1218370193665708
+          },
+          "SWaT": {
+            "cases": 3,
+            "geomean": 2.3065789466196582
+          },
+          "Stock": {
+            "cases": 6,
+            "geomean": 1.5040587457954984
+          },
+          "TAO": {
+            "cases": 6,
+            "geomean": 2.8401587937275745
+          },
+          "TODS": {
+            "cases": 6,
+            "geomean": 1.158895190146763
+          },
+          "UCR": {
+            "cases": 6,
+            "geomean": 0.9583971408688073
+          },
+          "WSD": {
+            "cases": 6,
+            "geomean": 1.9130615357633045
+          },
+          "YAHOO": {
+            "cases": 6,
+            "geomean": 1.8587637428839376
+          }
+        },
+        "median_unique_width_fraction": 0.046511627906976744,
+        "median_curve_evaluation_fraction": 0.07308970099667775,
+        "max_midpoint_error": 0.0032596361737062818,
+        "rank_decisions": {
+          "model_pairs": 126,
+          "certified_pairs": 57,
+          "incorrect_certified_pairs": 0,
+          "selection_cases": 42,
+          "certified_unique_winners": 15,
+          "incorrect_certified_winners": 0,
+          "decision_margin": 2e-10,
+          "scope": "Numerical replay of real-arithmetic interval rule, not statistical generalization or a formally outward-rounded floating-point proof."
+        }
+      }
+    },
+    "certified_0.001": {
+      "30": {
+        "cases": 126,
+        "median": 0.6150636572069841,
+        "geomean": 0.5538690308207523,
+        "min": 0.22583858019274705,
+        "max": 1.0678656950849905,
+        "faster_cases": 4,
+        "series_clustered_geomean_ci95": [
+          0.4904285633860448,
+          0.6255289761447392
+        ],
+        "family_clustered_geomean_ci95": [
+          0.4782923674907273,
+          0.6378099767295269
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 3,
+            "geomean": 0.8814584606461867
+          },
+          "Daphnet": {
+            "cases": 3,
+            "geomean": 0.6257795455458856
+          },
+          "Exathlon": {
+            "cases": 6,
+            "geomean": 0.908415129916181
+          },
+          "IOPS": {
+            "cases": 6,
+            "geomean": 0.5592410063318366
+          },
+          "LTDB": {
+            "cases": 6,
+            "geomean": 0.361487389191855
+          },
+          "MGAB": {
+            "cases": 6,
+            "geomean": 0.8146181605558886
+          },
+          "MITDB": {
+            "cases": 6,
+            "geomean": 0.7359085489855764
+          },
+          "MSL": {
+            "cases": 6,
+            "geomean": 0.3250296216797136
+          },
+          "NAB": {
+            "cases": 6,
+            "geomean": 0.3290262817310348
+          },
+          "NEK": {
+            "cases": 6,
+            "geomean": 0.2607729093273535
+          },
+          "OPPORTUNITY": {
+            "cases": 6,
+            "geomean": 0.6383363442439086
+          },
+          "Power": {
+            "cases": 3,
+            "geomean": 0.7760733141346999
+          },
+          "SED": {
+            "cases": 6,
+            "geomean": 0.4699287282104335
+          },
+          "SMAP": {
+            "cases": 6,
+            "geomean": 0.4206225419529634
+          },
+          "SMD": {
+            "cases": 6,
+            "geomean": 0.6911116513971431
+          },
+          "SVDB": {
+            "cases": 6,
+            "geomean": 0.6906457068871305
+          },
+          "SWaT": {
+            "cases": 3,
+            "geomean": 1.0313519524870678
+          },
+          "Stock": {
+            "cases": 6,
+            "geomean": 0.7218304872829566
+          },
+          "TAO": {
+            "cases": 6,
+            "geomean": 0.7563814683624441
+          },
+          "TODS": {
+            "cases": 6,
+            "geomean": 0.45947001904501944
+          },
+          "UCR": {
+            "cases": 6,
+            "geomean": 0.4640489872871146
+          },
+          "WSD": {
+            "cases": 6,
+            "geomean": 0.5941629287599418
+          },
+          "YAHOO": {
+            "cases": 6,
+            "geomean": 0.4810957747587758
+          }
+        },
+        "median_unique_width_fraction": 0.5483870967741935,
+        "median_curve_evaluation_fraction": 0.8064516129032258,
+        "max_midpoint_error": 0.0007125494201160043,
+        "rank_decisions": {
+          "model_pairs": 126,
+          "certified_pairs": 111,
+          "incorrect_certified_pairs": 0,
+          "selection_cases": 42,
+          "certified_unique_winners": 33,
+          "incorrect_certified_winners": 0,
+          "decision_margin": 2e-10,
+          "scope": "Numerical replay of real-arithmetic interval rule, not statistical generalization or a formally outward-rounded floating-point proof."
+        }
+      },
+      "100": {
+        "cases": 126,
+        "median": 0.4256723167283628,
+        "geomean": 0.4075276724000076,
+        "min": 0.12068347934662281,
+        "max": 1.6579382224320287,
+        "faster_cases": 11,
+        "series_clustered_geomean_ci95": [
+          0.3391044189582594,
+          0.4883230859004358
+        ],
+        "family_clustered_geomean_ci95": [
+          0.3271952251947391,
+          0.5034807338635009
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 3,
+            "geomean": 0.7560073356262058
+          },
+          "Daphnet": {
+            "cases": 3,
+            "geomean": 0.3460445634153683
+          },
+          "Exathlon": {
+            "cases": 6,
+            "geomean": 0.9606142339457048
+          },
+          "IOPS": {
+            "cases": 6,
+            "geomean": 0.3712101766280035
+          },
+          "LTDB": {
+            "cases": 6,
+            "geomean": 0.2722536654745078
+          },
+          "MGAB": {
+            "cases": 6,
+            "geomean": 0.5747881619439272
+          },
+          "MITDB": {
+            "cases": 6,
+            "geomean": 0.45799705918356026
+          },
+          "MSL": {
+            "cases": 6,
+            "geomean": 0.19637395093268017
+          },
+          "NAB": {
+            "cases": 6,
+            "geomean": 0.17799085985466997
+          },
+          "NEK": {
+            "cases": 6,
+            "geomean": 0.14321842678889718
+          },
+          "OPPORTUNITY": {
+            "cases": 6,
+            "geomean": 0.4277350931002932
+          },
+          "Power": {
+            "cases": 3,
+            "geomean": 0.5501494108947076
+          },
+          "SED": {
+            "cases": 6,
+            "geomean": 0.19890339755833603
+          },
+          "SMAP": {
+            "cases": 6,
+            "geomean": 0.31784422570000764
+          },
+          "SMD": {
+            "cases": 6,
+            "geomean": 0.48949606265371465
+          },
+          "SVDB": {
+            "cases": 6,
+            "geomean": 0.45467883129402387
+          },
+          "SWaT": {
+            "cases": 3,
+            "geomean": 1.1011044201080886
+          },
+          "Stock": {
+            "cases": 6,
+            "geomean": 0.6985895543836884
+          },
+          "TAO": {
+            "cases": 6,
+            "geomean": 1.0794736056211012
+          },
+          "TODS": {
+            "cases": 6,
+            "geomean": 0.32879151980055926
+          },
+          "UCR": {
+            "cases": 6,
+            "geomean": 0.4065937333355611
+          },
+          "WSD": {
+            "cases": 6,
+            "geomean": 0.4220061153124802
+          },
+          "YAHOO": {
+            "cases": 6,
+            "geomean": 0.4988873358705697
+          }
+        },
+        "median_unique_width_fraction": 0.39603960396039606,
+        "median_curve_evaluation_fraction": 0.7425742574257426,
+        "max_midpoint_error": 0.0005594382529504616,
+        "rank_decisions": {
+          "model_pairs": 126,
+          "certified_pairs": 108,
+          "incorrect_certified_pairs": 0,
+          "selection_cases": 42,
+          "certified_unique_winners": 32,
+          "incorrect_certified_winners": 0,
+          "decision_margin": 2e-10,
+          "scope": "Numerical replay of real-arithmetic interval rule, not statistical generalization or a formally outward-rounded floating-point proof."
+        }
+      },
+      "300": {
+        "cases": 126,
+        "median": 0.3905955218417114,
+        "geomean": 0.4442467709037431,
+        "min": 0.12766313478166033,
+        "max": 3.1800407096649534,
+        "faster_cases": 25,
+        "series_clustered_geomean_ci95": [
+          0.3442596607238947,
+          0.5795328565482822
+        ],
+        "family_clustered_geomean_ci95": [
+          0.32467277676126816,
+          0.6209388398379616
+        ],
+        "families": {
+          "CATSv2": {
+            "cases": 3,
+            "geomean": 0.5912293395945692
+          },
+          "Daphnet": {
+            "cases": 3,
+            "geomean": 0.28101490993548756
+          },
+          "Exathlon": {
+            "cases": 6,
+            "geomean": 1.438823304092316
+          },
+          "IOPS": {
+            "cases": 6,
+            "geomean": 0.32931572166885037
+          },
+          "LTDB": {
+            "cases": 6,
+            "geomean": 0.2694150022731154
+          },
+          "MGAB": {
+            "cases": 6,
+            "geomean": 0.4646265214178478
+          },
+          "MITDB": {
+            "cases": 6,
+            "geomean": 0.36903919852953176
+          },
+          "MSL": {
+            "cases": 6,
+            "geomean": 0.17464004959333124
+          },
+          "NAB": {
+            "cases": 6,
+            "geomean": 0.16829821429350142
+          },
+          "NEK": {
+            "cases": 6,
+            "geomean": 0.23964828288659454
+          },
+          "OPPORTUNITY": {
+            "cases": 6,
+            "geomean": 0.2991791375290959
+          },
+          "Power": {
+            "cases": 3,
+            "geomean": 0.3455493627706398
+          },
+          "SED": {
+            "cases": 6,
+            "geomean": 0.15171207965859584
+          },
+          "SMAP": {
+            "cases": 6,
+            "geomean": 0.3204335638261072
+          },
+          "SMD": {
+            "cases": 6,
+            "geomean": 0.5446788507843182
+          },
+          "SVDB": {
+            "cases": 6,
+            "geomean": 0.30447536554855387
+          },
+          "SWaT": {
+            "cases": 3,
+            "geomean": 1.1267870856420217
+          },
+          "Stock": {
+            "cases": 6,
+            "geomean": 1.5103305337431674
+          },
+          "TAO": {
+            "cases": 6,
+            "geomean": 2.787165076716405
+          },
+          "TODS": {
+            "cases": 6,
+            "geomean": 0.5281026699763692
+          },
+          "UCR": {
+            "cases": 6,
+            "geomean": 0.31286683181571534
+          },
+          "WSD": {
+            "cases": 6,
+            "geomean": 0.5153866145777614
+          },
+          "YAHOO": {
+            "cases": 6,
+            "geomean": 1.1744850539293212
+          }
+        },
+        "median_unique_width_fraction": 0.2541528239202658,
+        "median_curve_evaluation_fraction": 0.5382059800664452,
+        "max_midpoint_error": 0.00034463480159963034,
+        "rank_decisions": {
+          "model_pairs": 126,
+          "certified_pairs": 107,
+          "incorrect_certified_pairs": 0,
+          "selection_cases": 42,
+          "certified_unique_winners": 34,
+          "incorrect_certified_winners": 0,
+          "decision_margin": 2e-10,
+          "scope": "Numerical replay of real-arithmetic interval rule, not statistical generalization or a formally outward-rounded floating-point proof."
+        }
+      }
+    }
+  },
+  "data_provenance": {
+    "macOS-arm64": {
+      "status": "PASS",
+      "mode": "baseline",
+      "scope": "Post-run provenance reconciliation added after benchmark start; not preregistration.",
+      "release_commit": "7565b6657ba510e79db13e79b809b58e77feacc0",
+      "release_bindings": {
+        "experiments/data_hashes.json": "d53de71d4fedad5824bb2793a5997f7e416fb3f18246c4a7675a1fefd071857b",
+        "experiments/data_manifest.json": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e",
+        "artifacts/public_benchmark_receipt.json": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+        "artifacts/selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+        "artifacts/external_supplement_selection.json": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee",
+        "artifacts/bolt_base_64-download.json": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+        "artifacts/TimeMoE-200M_64-download.json": "36bf99d0219b882257fa93d1252647999d40c9a6f01dbcb5f68ae10727514fad",
+        "artifacts/timesfm-1.0-200m_64-download.json": "91da5b782937e3b7538118241f9585e4f408571a0fc47feeda6126debe16d24c"
+      },
+      "original_benchmark_sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+      "measurement_rows": 2100,
+      "series": 350,
+      "families": 23,
+      "actual_label_members_verified": 350,
+      "actual_score_members_verified": 1050,
+      "source_files_sha256": {
+        "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+        "TSB-AD-U-Eva.csv": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a",
+        "score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+      },
+      "verified_score_manifest_sha256": "7c3eb7436ff21f28f7bbb0a0edf5428b88260fa200f898a62291250d42de7fa2",
+      "checks": [
+        "release manifest and receipt identity",
+        "original case coverage",
+        "score-member manifest locks",
+        "actual ZIP member CRC and SHA-256",
+        "actual label shape/classes/count",
+        "actual score shape/finite values",
+        "measurement per-row label/score identity",
+        "exact mode-specific case set"
+      ],
+      "whole_score_archive_md5_verified": false,
+      "gate_sha256": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983"
+    },
+    "Linux-x86": {
+      "status": "PASS",
+      "mode": "baseline",
+      "scope": "Post-run provenance reconciliation added after benchmark start; not preregistration.",
+      "release_commit": "7565b6657ba510e79db13e79b809b58e77feacc0",
+      "release_bindings": {
+        "experiments/data_hashes.json": "d53de71d4fedad5824bb2793a5997f7e416fb3f18246c4a7675a1fefd071857b",
+        "experiments/data_manifest.json": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e",
+        "artifacts/public_benchmark_receipt.json": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+        "artifacts/selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+        "artifacts/external_supplement_selection.json": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee",
+        "artifacts/bolt_base_64-download.json": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+        "artifacts/TimeMoE-200M_64-download.json": "36bf99d0219b882257fa93d1252647999d40c9a6f01dbcb5f68ae10727514fad",
+        "artifacts/timesfm-1.0-200m_64-download.json": "91da5b782937e3b7538118241f9585e4f408571a0fc47feeda6126debe16d24c"
+      },
+      "original_benchmark_sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+      "measurement_rows": 2100,
+      "series": 350,
+      "families": 23,
+      "actual_label_members_verified": 350,
+      "actual_score_members_verified": 1050,
+      "source_files_sha256": {
+        "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+        "TSB-AD-U-Eva.csv": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a",
+        "score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+      },
+      "verified_score_manifest_sha256": "7c3eb7436ff21f28f7bbb0a0edf5428b88260fa200f898a62291250d42de7fa2",
+      "checks": [
+        "release manifest and receipt identity",
+        "original case coverage",
+        "score-member manifest locks",
+        "actual ZIP member CRC and SHA-256",
+        "actual label shape/classes/count",
+        "actual score shape/finite values",
+        "measurement per-row label/score identity",
+        "exact mode-specific case set"
+      ],
+      "whole_score_archive_md5_verified": false,
+      "gate_sha256": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983"
+    },
+    "certified": {
+      "status": "PASS",
+      "mode": "certified",
+      "scope": "Post-run provenance reconciliation added after benchmark start; not preregistration.",
+      "release_commit": "7565b6657ba510e79db13e79b809b58e77feacc0",
+      "release_bindings": {
+        "experiments/data_hashes.json": "d53de71d4fedad5824bb2793a5997f7e416fb3f18246c4a7675a1fefd071857b",
+        "experiments/data_manifest.json": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e",
+        "artifacts/public_benchmark_receipt.json": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+        "artifacts/selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+        "artifacts/external_supplement_selection.json": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee",
+        "artifacts/bolt_base_64-download.json": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+        "artifacts/TimeMoE-200M_64-download.json": "36bf99d0219b882257fa93d1252647999d40c9a6f01dbcb5f68ae10727514fad",
+        "artifacts/timesfm-1.0-200m_64-download.json": "91da5b782937e3b7538118241f9585e4f408571a0fc47feeda6126debe16d24c"
+      },
+      "original_benchmark_sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+      "measurement_rows": 378,
+      "series": 42,
+      "families": 23,
+      "actual_label_members_verified": 42,
+      "actual_score_members_verified": 126,
+      "source_files_sha256": {
+        "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+        "TSB-AD-U-Eva.csv": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a",
+        "score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+      },
+      "verified_score_manifest_sha256": "424cdfabca8c00bbc89c349787290e07e62e90da182bd259119b45518d1310e2",
+      "checks": [
+        "release manifest and receipt identity",
+        "original case coverage",
+        "score-member manifest locks",
+        "actual ZIP member CRC and SHA-256",
+        "actual label shape/classes/count",
+        "actual score shape/finite values",
+        "measurement per-row label/score identity",
+        "exact mode-specific case set"
+      ],
+      "whole_score_archive_md5_verified": false,
+      "gate_sha256": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983"
+    }
+  },
+  "input_measurement_sha256": {
+    "macOS-arm64": "248e2fc9491bf4a5cf4d83312f51e58eae593ed1479d44ec5bd8e39fff7b2bba",
+    "Linux-x86": "b9c609bdcf6481613619c94d5fd8233fcd551f98f1148c7b951a35bc6d5c9f8f",
+    "certified": "32000ea30f876f47c4b421912c6f77b0902b5f0e396acc78d482ec3a544f11d4"
+  }
+}

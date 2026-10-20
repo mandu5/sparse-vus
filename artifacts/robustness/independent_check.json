@@ -1,0 +1,178 @@
+{
+  "status": "PASS",
+  "implementation": "Separate stdlib-only count reconstruction",
+  "records": 6300,
+  "all_case_pairs": 12600,
+  "reused_rows_equal_original": 2800,
+  "confirmed": {
+    "released/ROC": {
+      "pairs": 2100,
+      "strict_reversals": 5,
+      "exact_ties": 96,
+      "sampled_ties": 95,
+      "unique_top_changes": 2,
+      "top_cases": 700,
+      "material_reversals": {
+        "0.0001": 2,
+        "0.001": 0,
+        "0.01": 0
+      },
+      "affected_series": 2,
+      "affected_families": [
+        "WSD",
+        "YAHOO"
+      ]
+    },
+    "released/PR": {
+      "pairs": 2100,
+      "strict_reversals": 84,
+      "exact_ties": 96,
+      "sampled_ties": 95,
+      "unique_top_changes": 50,
+      "top_cases": 700,
+      "material_reversals": {
+        "0.0001": 62,
+        "0.001": 38,
+        "0.01": 5
+      },
+      "affected_series": 55,
+      "affected_families": [
+        "Exathlon",
+        "IOPS",
+        "MITDB",
+        "MSL",
+        "NAB",
+        "OPPORTUNITY",
+        "SMAP",
+        "SMD",
+        "SVDB",
+        "TODS",
+        "UCR",
+        "WSD",
+        "YAHOO"
+      ]
+    },
+    "first_score_fill64/ROC": {
+      "pairs": 2100,
+      "strict_reversals": 12,
+      "exact_ties": 96,
+      "sampled_ties": 95,
+      "unique_top_changes": 7,
+      "top_cases": 700,
+      "material_reversals": {
+        "0.0001": 4,
+        "0.001": 1,
+        "0.01": 0
+      },
+      "affected_series": 7,
+      "affected_families": [
+        "IOPS",
+        "LTDB",
+        "MSL",
+        "TAO",
+        "UCR",
+        "YAHOO"
+      ]
+    },
+    "first_score_fill64/PR": {
+      "pairs": 2100,
+      "strict_reversals": 93,
+      "exact_ties": 96,
+      "sampled_ties": 95,
+      "unique_top_changes": 52,
+      "top_cases": 700,
+      "material_reversals": {
+        "0.0001": 64,
+        "0.001": 41,
+        "0.01": 5
+      },
+      "affected_series": 59,
+      "affected_families": [
+        "Exathlon",
+        "IOPS",
+        "MGAB",
+        "MITDB",
+        "MSL",
+        "NAB",
+        "OPPORTUNITY",
+        "Power",
+        "SMAP",
+        "SMD",
+        "SVDB",
+        "TAO",
+        "TODS",
+        "UCR",
+        "WSD",
+        "YAHOO"
+      ]
+    },
+    "common_suffix64/ROC": {
+      "pairs": 2100,
+      "strict_reversals": 8,
+      "exact_ties": 96,
+      "sampled_ties": 95,
+      "unique_top_changes": 4,
+      "top_cases": 700,
+      "material_reversals": {
+        "0.0001": 5,
+        "0.001": 1,
+        "0.01": 0
+      },
+      "affected_series": 4,
+      "affected_families": [
+        "MSL",
+        "NAB",
+        "TAO",
+        "YAHOO"
+      ]
+    },
+    "common_suffix64/PR": {
+      "pairs": 2100,
+      "strict_reversals": 95,
+      "exact_ties": 96,
+      "sampled_ties": 95,
+      "unique_top_changes": 48,
+      "top_cases": 700,
+      "material_reversals": {
+        "0.0001": 68,
+        "0.001": 44,
+        "0.01": 5
+      },
+      "affected_series": 61,
+      "affected_families": [
+        "Exathlon",
+        "IOPS",
+        "MITDB",
+        "MSL",
+        "NAB",
+        "OPPORTUNITY",
+        "Power",
+        "SMAP",
+        "SMD",
+        "SVDB",
+        "TAO",
+        "UCR",
+        "WSD",
+        "YAHOO"
+      ]
+    }
+  },
+  "checked": [
+    "coverage",
+    "all strict/tie/material/top counts",
+    "family counts",
+    "overlap counts",
+    "reused values equal original"
+  ],
+  "not_checked": [
+    "new numerical kernels rerun",
+    "bootstrap draws independently reproduced"
+  ],
+  "input_sha256": {
+    "records.jsonl": "08a91bd422642f3f33d75ed7fb896f00b6532181719065288ee522fdbd22e0f2",
+    "summary.json": "e64a74326b2fa70a9e29fecb934ea308d378ed846a25b2755ed00095ef300ffc",
+    "family_effects.csv": "d69d4d3e6a9201bd559f78c474cf4fa0afd0b6bc7da2be4168a23b39f3f96f86",
+    "protocol.json": "892bb22de7f73d814dfb77f377b80e55c637a5f5a1e9be3310603f98bf8f4680"
+  },
+  "checker_sha256": "cda53f2fe128b897618d890c35dad256fb022058e942fbee79613e2025003c7c"
+}

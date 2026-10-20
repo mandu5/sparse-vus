@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "cases": 378,
+  "series": 42,
+  "families": 23,
+  "ratio_definition": "sparse_exact_seconds / certified_seconds",
+  "speed_ratios": {
+    "certified_0.001": {
+      "median": 0.4665422413482654,
+      "geomean": 0.46458247372863903,
+      "min": 0.12068347934662281,
+      "max": 3.1800407096649534,
+      "above_one": 40,
+      "count": 378
+    },
+    "certified_0.01": {
+      "median": 0.9664881050554033,
+      "geomean": 0.9884874345084828,
+      "min": 0.36698257855071437,
+      "max": 4.104696873990518,
+      "above_one": 173,
+      "count": 378
+    }
+  },
+  "evaluated_width_fractions": {
+    "certified_0.001": {
+      "median": 0.3588039867109635,
+      "geomean": 0.3241575200374145,
+      "min": 0.013289036544850499,
+      "max": 1.0,
+      "above_one": 0,
+      "count": 378
+    },
+    "certified_0.01": {
+      "median": 0.0967741935483871,
+      "geomean": 0.09829181487102412,
+      "min": 0.006644518272425249,
+      "max": 1.0,
+      "above_one": 0,
+      "count": 378
+    }
+  },
+  "max_exact_parity_error": 0.0,
+  "violations": 0,
+  "violation_records": [],
+  "measurements_sha256": "32000ea30f876f47c4b421912c6f77b0902b5f0e396acc78d482ec3a544f11d4",
+  "completed_utc": "2026-10-20T12:50:20.276264+00:00"
+}

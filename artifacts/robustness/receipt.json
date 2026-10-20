@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "started_utc": "2026-10-20T12:23:15.604178+00:00",
+  "completed_utc": "2026-10-20T12:26:49.349141+00:00",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "executable": "/opt/anaconda3/bin/python",
+  "numpy": "1.26.4",
+  "records": 6300,
+  "max_exact_dense_error": 3.6914915568786455e-13,
+  "protocol_sha256": "892bb22de7f73d814dfb77f377b80e55c637a5f5a1e9be3310603f98bf8f4680",
+  "output_sha256": {
+    "exclusions.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "family_effects.csv": "d69d4d3e6a9201bd559f78c474cf4fa0afd0b6bc7da2be4168a23b39f3f96f86",
+    "independent_check.py": "cda53f2fe128b897618d890c35dad256fb022058e942fbee79613e2025003c7c",
+    "inventory.json": "a45a1dda42d23b26f4710f18504195caedd4ca308d60138ca329e85bb96e0a59",
+    "protocol.json": "892bb22de7f73d814dfb77f377b80e55c637a5f5a1e9be3310603f98bf8f4680",
+    "ranking_pairs.csv": "a96f151478e5c1a3d5f067c320e7f28d0592419f4d76bb7c627ed778fe6c83d8",
+    "records.jsonl": "08a91bd422642f3f33d75ed7fb896f00b6532181719065288ee522fdbd22e0f2",
+    "self_test.json": "b8a77d03dfb303bc73ca2cf9e4dc729c6b19a0efcbe4d2005cf147e7618eee3f",
+    "summary.json": "e64a74326b2fa70a9e29fecb934ea308d378ed846a25b2755ed00095ef300ffc",
+    "timing_context.json": "91e8b23fea33d1101981ad410e5836385c56580cc304c6f93bd822a326e9dc25",
+    "top_models.json": "55bf38abd86274834d748b510b6a915eb147997ac4ada08f3342ffd22631a5b9"
+  }
+}

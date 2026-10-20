@@ -1,0 +1,53 @@
+{
+  "frozen_utc": "2026-10-20T12:22:30.647732+00:00",
+  "stage": "After inspecting original results and input zero prefixes; before transformed metric evaluation. Post-publication sensitivity, not preregistration.",
+  "models": [
+    "TimeMoE-200M_64",
+    "bolt_base_64",
+    "timesfm-1.0-200m_64"
+  ],
+  "max_buffer": [
+    10,
+    30
+  ],
+  "context": 64,
+  "variants": {
+    "released": "Reuse hash-bound complete original benchmark outputs.",
+    "first_score_fill64": "For the two README-documented zero-padded models replace score[:64] with score[64]; retain full labels and TimesFM scores.",
+    "common_suffix64": "Evaluate labels[64:] and score[64:] for all three models on identical positions."
+  },
+  "selection": "Every original series; explicitly log variant exclusions when transformed labels lack either class. No label-dependent crop start.",
+  "end_point_caveat": "Suffix removal changes prevalence, ranking thresholds, and the left-boundary buffer geometry; it is a sensitivity analysis, not an invariant metric.",
+  "ranking": {
+    "pairs": "All three unordered model pairs, both widths and both metrics.",
+    "strict_tie_tolerance": 1e-10,
+    "material_margin_grid": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "overlap": "Same series, width, metric and unordered pair versus released. Persistent means strict reversal in both."
+  },
+  "validation": "All newly computed exact outputs checked against dense direct-ramp compiled implementation at 1e-11. Seeded small fixtures additionally checked with pinned upstream exact and sampled code.",
+  "statistics": {
+    "seed": 2026102001,
+    "resamples": 5000,
+    "units": "Within a family, resample whole series retaining all models/widths/pairs. Across families, report equal-family means and family-cluster bootstrap.",
+    "scope": "Descriptive fixed-corpus intervals, no population-generalization or multiple-testing significance claim."
+  },
+  "timing": "No new performance measurements. Reuse original times only for absolute evaluator-cost and family-stratified summaries; inference and pipeline times are UNKNOWN.",
+  "source_sha256": {
+    "experiments/ranking_robustness.py": "7d6634e03d156ee7f59f3547f77b0da076d1cac6760f442cc7c0212e4afcd9c4",
+    "experiments/data_manifest.json": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e",
+    "experiments/data_hashes.json": "d53de71d4fedad5824bb2793a5997f7e416fb3f18246c4a7675a1fefd071857b",
+    "experiments/protocol.json": "b3ce071bc93c251b73121d6c5b3c7348bca3c4f50eee1d1cb0acede87cdcee79",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "artifacts/public_benchmark.jsonl": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+    "artifacts/public_benchmark_receipt.json": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+    "artifacts/selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+    "cache/official_metrics.py": "bd547c9746fc1b9bbce2895e20cb156f97d23365d5dce8c2a3fab90622ccdced",
+    "cache/score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+  },
+  "inventory_sha256": "a45a1dda42d23b26f4710f18504195caedd4ca308d60138ca329e85bb96e0a59"
+}
