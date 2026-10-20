@@ -17,6 +17,7 @@ python -m pip install -r experiments/requirements-benchmark.txt
 python -m pip install -e .
 python experiments/fetch_reference.py
 python experiments/dtaianomaly_adapter.py --fetch
+python experiments/fast_vus_adapter.py --fetch
 python -m pytest -q
 python experiments/independent_review_check.py --output artifacts/independent_core_review.json
 python experiments/fetch_score_ranges.py

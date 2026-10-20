@@ -29,5 +29,6 @@ jobs:
       - run: python -m pip install '.[accelerate,research]'
       - run: python experiments/fetch_reference.py
       - run: python experiments/dtaianomaly_adapter.py --fetch
+      - run: python experiments/fast_vus_adapter.py --fetch
       - run: python -m pytest -q
       # No model weights, large score archive, GPU, or paid API are required.
