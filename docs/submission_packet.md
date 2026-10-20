@@ -3,10 +3,18 @@
 Status on 20 October 2026: **working manuscript, unsubmitted**. This packet
 prepares an official-format counterpart; it is not an acceptance, venue
 endorsement, external scientific review, or confirmation of novelty.
-Actual author name, affiliation, country, and email remain pending.
+The confirmed author metadata is **Youngmin Ko — Independent Researcher,
+Republic of Korea — rhdudals0505@naver.com**. The author has graduated, and
+this work was conducted as an independent personal project. Penn State is
+not listed as the research affiliation. No city or ORCID was supplied.
 TMLR is the current primary venue candidate from the in-session scope review;
 the PVLDB file is a formatting counterpart, not a claim of venue fit or
 submission readiness. The scientific manuscript remains venue-neutral.
+The manuscript explicitly discloses AI assistance in software development,
+mathematical derivation, experiment analysis, manuscript drafting, and
+in-session review. Separate test implementations from this session are
+distinguished from external laboratory reproduction. Author review and
+responsibility for the complete manuscript remain required before submission.
 
 ## Scientific scope
 
@@ -52,7 +60,7 @@ The manuscript separates these numerical effects from model-quality claims.
 | [`paper/racing_method.tex`](../paper/racing_method.tex) | Shared incremental selection rule, finite-resolution proof, and work accounting |
 | [`paper/advancement_results.tex`](../paper/advancement_results.tex) | Current baseline and adaptive-width results derived from verified analysis |
 | [`paper/selection_results.tex`](../paper/selection_results.tex) | Generated fixed-tolerance and incremental decision results on both machines |
-| [`paper/vldb.tex`](../paper/vldb.tex) | Official-format entry point; pending author fields |
+| [`paper/vldb.tex`](../paper/vldb.tex) | Official-format entry point with confirmed author metadata |
 | [`paper/vldb-references.bib`](../paper/vldb-references.bib) | Primary-source metadata, formatted with the official bibliography style |
 | `paper/vldb-{title,abstract,macros,body}.tex` | Generated fragments from the same manuscript and inputs |
 | [`experiments/build_vldb.py`](../experiments/build_vldb.py) | Pinned-style verification, shared-source generation, optional PDF build |
@@ -125,7 +133,8 @@ The exact two-machine baseline, 378-case width-refinement results, 126-task
 fixed-tolerance selection slowdown, and 126-task incremental race on each
 machine are included. All timing work finished before final typesetting.
 
-Final verification on 20 October 2026 used Tectonic 0.17.0, `pdfinfo`,
+Final verification on 20 October 2026, after the confirmed author metadata
+was incorporated, used Tectonic 0.17.0, `pdfinfo`,
 `pdftotext -layout`, and `pdftoppm`. The generic PDF has **14 US Letter pages**;
 the official counterpart has **11 US Letter pages total**, including references
 and appendices. References begin on pages 14 and 11 respectively. Since even
@@ -138,19 +147,21 @@ locally retained under the ignored `paper/rendered/final-main/` and
 `paper/rendered/final-vldb/` directories. Figure 1 was enlarged to a spanning
 float after inspection. The final pages have legible figures and tables,
 no clipping or overlap, and intact precision notation.
+Both PDFs display the confirmed name, independent affiliation, country, and
+personal email; no author-information placeholder remains.
 
 Both final TeX logs contain **zero overfull boxes, missing glyphs, undefined
 citations/references, or fatal errors**. Text extraction contains no replacement
 characters or unresolved `??` markers. Underfull-box warnings remain and were
-visually inspected; the official class also warns about the pending affiliation
+visually inspected; the official class also warns about the omitted affiliation
 city and its own top-matter spacing. These are recorded rather than hidden.
 The generated-fragment check and all six pinned style/source hash checks pass.
 Bibliography intermediates (`.blg`, `.bbl`) and build logs/renders are ignored.
 
 | PDF | SHA-256 of verified build |
 |---|---|
-| `paper/main.pdf` | `b74061247824b283f08e145cac4536e7df31838b0f1abbfc33e97fbc84a46cd7` |
-| `paper/vldb.pdf` | `5c4469e114b59bb9c23d6184e2c2e278663aa91c73e9c482f2daaa7684a256bb` |
+| `paper/main.pdf` | `a966f3495cca9fc20233ac9b1ba6156fef94faf2b1965081cf50a2d59a95f1ea` |
+| `paper/vldb.pdf` | `5811041cd6d8be76e615818c7baf5f5601a71111d7e289759c6f5910a8a58736` |
 
 PDF build timestamps can change file hashes on a later rebuild; the source and
 template hashes identify the content inputs. This verification establishes the
@@ -166,9 +177,9 @@ manuscript; this is a proposed category, not a venue determination.
 The official-format PDF must be checked against the current rules again at
 submission time.
 
-Before external submission, the author must supply true metadata, approve the
-complete manuscript and authorship, select the submission cycle, provide a
-stable archival artifact URL, and complete the venue's author declarations.
+Before external submission, the author must approve the complete manuscript
+and authorship, select the venue and submission cycle, verify the archival
+artifact URL, and complete the venue's author declarations.
 No abstract, manuscript, or email has been sent to a venue or researcher.
 
 Evidence and boundaries:

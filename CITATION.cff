@@ -3,7 +3,8 @@ message: "If you use this implementation or its research artifact, please cite t
 type: software
 title: "Sparse VUS: Exact and Error-Bounded Evaluation through Sparse Events and Width Geometry"
 authors:
-  - name: "Sparse VUS contributors"
+  - family-names: "Ko"
+    given-names: "Youngmin"
 version: 0.2.0
 date-released: 2026-10-20
 url: "https://github.com/mandu5/sparse-vus"

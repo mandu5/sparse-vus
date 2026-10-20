@@ -217,7 +217,12 @@ def main() -> None:
         },
         "mode": "check" if args.check else "build" if args.build else "generate",
         "publication_status": "working manuscript; unsubmitted",
-        "author_metadata": "pending",
+        "author_metadata": {
+            "name": "Youngmin Ko",
+            "email": "rhdudals0505@naver.com",
+            "affiliation": "Independent Researcher",
+            "country": "Republic of Korea",
+        },
     }, indent=2))
 
 

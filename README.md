@@ -218,7 +218,7 @@ raw measurements, and separately authored in-session validation are included.
 The [official-format counterpart](paper/vldb.pdf) uses the same scientific
 sources and can be rebuilt with `python experiments/build_vldb.py --build`.
 Both manuscripts are unsubmitted; the [submission packet](docs/submission_packet.md)
-records authorship and venue decisions that remain.
+records the author metadata, completed checks, and remaining venue decisions.
 
 ## Reproduce the v0.2.0 follow-up
 
