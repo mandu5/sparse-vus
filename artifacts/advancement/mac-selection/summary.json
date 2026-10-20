@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "cases": 126,
+  "violations": [],
+  "measurements_sha256": "0eb9e33dcea8beecf0ffc6e50165d66d89f89aa9c2be0b25aeb3ce46a5937137",
+  "completed_utc": "2026-10-20T13:10:30.834045+00:00",
+  "by_width": {
+    "30": {
+      "cases": 42,
+      "exact_unique_winner_cases": 41,
+      "fixed250_wrong_selections": 4,
+      "sum_case_median_seconds": {
+        "sparse_exact": 1.7838662530994043,
+        "dense_direct": 5.092911708081374,
+        "dense_nearest": 5.040766620833892,
+        "fast_vus_exact_pr": 13.085153624007944,
+        "fixed250_pr": 3.8007419549976476,
+        "certificate_prune": 3.2112594210193492,
+        "certificate_no_prune": 3.3789551239751745
+      },
+      "certificate_prune": {
+        "early_winners": 21,
+        "exact_fallback_evaluations": 53,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.5792094880136989,
+            "faster_cases": 2
+          },
+          "dense_direct": {
+            "median": 1.4346546292824252,
+            "faster_cases": 26
+          },
+          "dense_nearest": {
+            "median": 1.5430624911400175,
+            "faster_cases": 28
+          },
+          "fast_vus_exact_pr": {
+            "median": 5.301020821976017,
+            "faster_cases": 42
+          },
+          "fixed250_pr": {
+            "median": 2.2044586576793925,
+            "faster_cases": 39
+          },
+          "certificate_no_prune": {
+            "median": 1.006444540235894,
+            "faster_cases": 24
+          }
+        }
+      },
+      "certificate_no_prune": {
+        "early_winners": 21,
+        "exact_fallback_evaluations": 63,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.5420548341174513,
+            "faster_cases": 2
+          },
+          "dense_direct": {
+            "median": 1.3020583755586004,
+            "faster_cases": 26
+          },
+          "dense_nearest": {
+            "median": 1.3915949670084988,
+            "faster_cases": 28
+          },
+          "fast_vus_exact_pr": {
+            "median": 5.008221454461232,
+            "faster_cases": 42
+          },
+          "fixed250_pr": {
+            "median": 2.1712825903678716,
+            "faster_cases": 39
+          },
+          "certificate_prune": {
+            "median": 0.9935982850077562,
+            "faster_cases": 18
+          }
+        }
+      }
+    },
+    "100": {
+      "cases": 42,
+      "exact_unique_winner_cases": 41,
+      "fixed250_wrong_selections": 5,
+      "sum_case_median_seconds": {
+        "sparse_exact": 2.8041844610124826,
+        "dense_direct": 14.214008709881455,
+        "dense_nearest": 10.33054604002973,
+        "fast_vus_exact_pr": 37.19181879007374,
+        "fixed250_pr": 10.550462709943531,
+        "certificate_prune": 4.68343641894171,
+        "certificate_no_prune": 4.924842502048705
+      },
+      "certificate_prune": {
+        "early_winners": 17,
+        "exact_fallback_evaluations": 63,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.5692843602313012,
+            "faster_cases": 4
+          },
+          "dense_direct": {
+            "median": 2.4617852073000206,
+            "faster_cases": 31
+          },
+          "dense_nearest": {
+            "median": 1.9764270423331873,
+            "faster_cases": 30
+          },
+          "fast_vus_exact_pr": {
+            "median": 9.137872356534974,
+            "faster_cases": 42
+          },
+          "fixed250_pr": {
+            "median": 4.072414391082582,
+            "faster_cases": 42
+          },
+          "certificate_no_prune": {
+            "median": 1.0035819310855056,
+            "faster_cases": 22
+          }
+        }
+      },
+      "certificate_no_prune": {
+        "early_winners": 17,
+        "exact_fallback_evaluations": 75,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.5324749086717273,
+            "faster_cases": 5
+          },
+          "dense_direct": {
+            "median": 2.6236981110207047,
+            "faster_cases": 30
+          },
+          "dense_nearest": {
+            "median": 1.8881626208045705,
+            "faster_cases": 30
+          },
+          "fast_vus_exact_pr": {
+            "median": 9.127298798169692,
+            "faster_cases": 42
+          },
+          "fixed250_pr": {
+            "median": 3.7232443034199143,
+            "faster_cases": 41
+          },
+          "certificate_prune": {
+            "median": 0.9964316849845307,
+            "faster_cases": 20
+          }
+        }
+      }
+    },
+    "300": {
+      "cases": 42,
+      "exact_unique_winner_cases": 41,
+      "fixed250_wrong_selections": 5,
+      "sum_case_median_seconds": {
+        "sparse_exact": 6.447095289913705,
+        "dense_direct": 41.05707804393023,
+        "dense_nearest": 28.454703128896654,
+        "fast_vus_exact_pr": 102.90808795701014,
+        "fixed250_pr": 33.419045001035556,
+        "certificate_prune": 9.79046858404763,
+        "certificate_no_prune": 10.130735460028518
+      },
+      "certificate_prune": {
+        "early_winners": 15,
+        "exact_fallback_evaluations": 69,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.7384280989371144,
+            "faster_cases": 11
+          },
+          "dense_direct": {
+            "median": 3.479030535914806,
+            "faster_cases": 38
+          },
+          "dense_nearest": {
+            "median": 2.4823838733692916,
+            "faster_cases": 34
+          },
+          "fast_vus_exact_pr": {
+            "median": 17.43094479487414,
+            "faster_cases": 42
+          },
+          "fixed250_pr": {
+            "median": 7.943431632116584,
+            "faster_cases": 42
+          },
+          "certificate_no_prune": {
+            "median": 1.0036346672039465,
+            "faster_cases": 24
+          }
+        }
+      },
+      "certificate_no_prune": {
+        "early_winners": 15,
+        "exact_fallback_evaluations": 81,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.6560458921515064,
+            "faster_cases": 11
+          },
+          "dense_direct": {
+            "median": 3.517359935655632,
+            "faster_cases": 37
+          },
+          "dense_nearest": {
+            "median": 2.2967540946356717,
+            "faster_cases": 34
+          },
+          "fast_vus_exact_pr": {
+            "median": 15.32765733872995,
+            "faster_cases": 42
+          },
+          "fixed250_pr": {
+            "median": 6.683305382208763,
+            "faster_cases": 42
+          },
+          "certificate_prune": {
+            "median": 0.9963801299631341,
+            "faster_cases": 18
+          }
+        }
+      }
+    }
+  }
+}

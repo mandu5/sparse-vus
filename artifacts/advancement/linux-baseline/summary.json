@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "cases": 2100,
+  "series": 350,
+  "families": 23,
+  "ratio_definition": "comparator_seconds / sparse_exact_seconds",
+  "speed_ratios": {
+    "dense_nearest": {
+      "median": 1.9519407198872156,
+      "geomean": 2.028434385400529,
+      "min": 0.6045870231376056,
+      "max": 12.047035938404097,
+      "above_one": 1997,
+      "count": 2100
+    },
+    "dense_direct": {
+      "median": 1.3469420048716594,
+      "geomean": 1.4004926526322885,
+      "min": 0.36291383074288236,
+      "max": 8.401749639910802,
+      "above_one": 1526,
+      "count": 2100
+    },
+    "dense_numpy": {
+      "median": 6.584982834454898,
+      "geomean": 7.159084319273767,
+      "min": 2.758546530746341,
+      "max": 60.3557012949361,
+      "above_one": 2100,
+      "count": 2100
+    },
+    "fast_vus_exact_pr": {
+      "median": 4.552960340528621,
+      "geomean": 4.504880366177989,
+      "min": 1.523194652131581,
+      "max": 17.971590083583273,
+      "above_one": 2100,
+      "count": 2100
+    },
+    "fastest_dense": {
+      "median": 1.3469420048716594,
+      "geomean": 1.4000002031037488,
+      "min": 0.36291383074288236,
+      "max": 8.401749639910802,
+      "above_one": 1526,
+      "count": 2100
+    },
+    "fastest_tested": {
+      "median": 1.3469420048716594,
+      "geomean": 1.4000002031037488,
+      "min": 0.36291383074288236,
+      "max": 8.401749639910802,
+      "above_one": 1526,
+      "count": 2100
+    }
+  },
+  "evaluated_width_fractions": {},
+  "max_exact_parity_error": 3.6914915568786455e-13,
+  "violations": 0,
+  "violation_records": [],
+  "measurements_sha256": "b9c609bdcf6481613619c94d5fd8233fcd551f98f1148c7b951a35bc6d5c9f8f",
+  "completed_utc": "2026-10-20T12:39:15.383296+00:00"
+}

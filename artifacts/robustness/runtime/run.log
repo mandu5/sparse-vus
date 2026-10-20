@@ -1,0 +1,295 @@
+{"status": "PASS", "seed": 2026102001, "fixture_cases": 24, "transformed_metric_checks": 144, "max_exact_error": 3.3306690738754696e-16, "max_sample_error": 2.220446049250313e-16}
+{"completed_series": 25, "total_series": 350, "records": 450}
+{"completed_series": 50, "total_series": 350, "records": 900}
+{"completed_series": 75, "total_series": 350, "records": 1350}
+{"completed_series": 100, "total_series": 350, "records": 1800}
+{"completed_series": 125, "total_series": 350, "records": 2250}
+{"completed_series": 150, "total_series": 350, "records": 2700}
+{"completed_series": 175, "total_series": 350, "records": 3150}
+{"completed_series": 200, "total_series": 350, "records": 3600}
+{"completed_series": 225, "total_series": 350, "records": 4050}
+{"completed_series": 250, "total_series": 350, "records": 4500}
+{"completed_series": 275, "total_series": 350, "records": 4950}
+{"completed_series": 300, "total_series": 350, "records": 5400}
+{"completed_series": 325, "total_series": 350, "records": 5850}
+{"completed_series": 350, "total_series": 350, "records": 6300}
+{
+  "variants": {
+    "released": {
+      "series": 350,
+      "evaluations": 2100,
+      "metrics": {
+        "ROC": {
+          "pairs": 2100,
+          "strict_reversals": 5,
+          "affected_series": 2,
+          "affected_families": [
+            "WSD",
+            "YAHOO"
+          ],
+          "exact_ties": 96,
+          "sampled_ties": 95,
+          "unique_top_changes": 2,
+          "top_cases": 700,
+          "mean_signed_error": -0.0003540130206716554,
+          "absolute_error_median": 4.5913641426725826e-05,
+          "absolute_error_p95": 0.0006211422505592362,
+          "absolute_error_max": 0.11684217217512993,
+          "material_reversals": {
+            "0.0001": 2,
+            "0.001": 0,
+            "0.01": 0
+          },
+          "equal_family_reversal_rate": {
+            "mean": 0.001328502415458937,
+            "ci95": [
+              0.0,
+              0.0036231884057971006
+            ],
+            "clusters": 23
+          }
+        },
+        "PR": {
+          "pairs": 2100,
+          "strict_reversals": 84,
+          "affected_series": 55,
+          "affected_families": [
+            "Exathlon",
+            "IOPS",
+            "MITDB",
+            "MSL",
+            "NAB",
+            "OPPORTUNITY",
+            "SMAP",
+            "SMD",
+            "SVDB",
+            "TODS",
+            "UCR",
+            "WSD",
+            "YAHOO"
+          ],
+          "exact_ties": 96,
+          "sampled_ties": 95,
+          "unique_top_changes": 50,
+          "top_cases": 700,
+          "mean_signed_error": -0.03271963646825607,
+          "absolute_error_median": 0.0025028730747865737,
+          "absolute_error_p95": 0.1783577263108279,
+          "absolute_error_max": 0.5827309171331194,
+          "material_reversals": {
+            "0.0001": 62,
+            "0.001": 38,
+            "0.01": 5
+          },
+          "equal_family_reversal_rate": {
+            "mean": 0.024385391451442827,
+            "ci95": [
+              0.01123246292669733,
+              0.040586701150820456
+            ],
+            "clusters": 23
+          }
+        }
+      }
+    },
+    "first_score_fill64": {
+      "series": 350,
+      "evaluations": 2100,
+      "metrics": {
+        "ROC": {
+          "pairs": 2100,
+          "strict_reversals": 12,
+          "affected_series": 7,
+          "affected_families": [
+            "IOPS",
+            "LTDB",
+            "MSL",
+            "TAO",
+            "UCR",
+            "YAHOO"
+          ],
+          "exact_ties": 96,
+          "sampled_ties": 95,
+          "unique_top_changes": 7,
+          "top_cases": 700,
+          "mean_signed_error": -0.0003557650004995015,
+          "absolute_error_median": 4.777238003333961e-05,
+          "absolute_error_p95": 0.0006368434514369636,
+          "absolute_error_max": 0.1178116206350337,
+          "material_reversals": {
+            "0.0001": 4,
+            "0.001": 1,
+            "0.01": 0
+          },
+          "equal_family_reversal_rate": {
+            "mean": 0.012016908212560384,
+            "ci95": [
+              0.0015527950310559005,
+              0.02898550724637681
+            ],
+            "clusters": 23
+          }
+        },
+        "PR": {
+          "pairs": 2100,
+          "strict_reversals": 93,
+          "affected_series": 59,
+          "affected_families": [
+            "Exathlon",
+            "IOPS",
+            "MGAB",
+            "MITDB",
+            "MSL",
+            "NAB",
+            "OPPORTUNITY",
+            "Power",
+            "SMAP",
+            "SMD",
+            "SVDB",
+            "TAO",
+            "TODS",
+            "UCR",
+            "WSD",
+            "YAHOO"
+          ],
+          "exact_ties": 96,
+          "sampled_ties": 95,
+          "unique_top_changes": 52,
+          "top_cases": 700,
+          "mean_signed_error": -0.03273058324060364,
+          "absolute_error_median": 0.002502839028657981,
+          "absolute_error_p95": 0.1783577263108279,
+          "absolute_error_max": 0.5827309157175767,
+          "material_reversals": {
+            "0.0001": 64,
+            "0.001": 41,
+            "0.01": 5
+          },
+          "equal_family_reversal_rate": {
+            "mean": 0.05448372533095836,
+            "ci95": [
+              0.021161114912446967,
+              0.1032218712743032
+            ],
+            "clusters": 23
+          }
+        }
+      }
+    },
+    "common_suffix64": {
+      "series": 350,
+      "evaluations": 2100,
+      "metrics": {
+        "ROC": {
+          "pairs": 2100,
+          "strict_reversals": 8,
+          "affected_series": 4,
+          "affected_families": [
+            "MSL",
+            "NAB",
+            "TAO",
+            "YAHOO"
+          ],
+          "exact_ties": 96,
+          "sampled_ties": 95,
+          "unique_top_changes": 4,
+          "top_cases": 700,
+          "mean_signed_error": -0.00037761887821393617,
+          "absolute_error_median": 4.4095512069047826e-05,
+          "absolute_error_p95": 0.0007455226820210324,
+          "absolute_error_max": 0.11780666761942316,
+          "material_reversals": {
+            "0.0001": 5,
+            "0.001": 1,
+            "0.01": 0
+          },
+          "equal_family_reversal_rate": {
+            "mean": 0.00697482521679119,
+            "ci95": [
+              0.00031505986137366095,
+              0.01597653554175293
+            ],
+            "clusters": 23
+          }
+        },
+        "PR": {
+          "pairs": 2100,
+          "strict_reversals": 95,
+          "affected_series": 61,
+          "affected_families": [
+            "Exathlon",
+            "IOPS",
+            "MITDB",
+            "MSL",
+            "NAB",
+            "OPPORTUNITY",
+            "Power",
+            "SMAP",
+            "SMD",
+            "SVDB",
+            "TAO",
+            "UCR",
+            "WSD",
+            "YAHOO"
+          ],
+          "exact_ties": 96,
+          "sampled_ties": 95,
+          "unique_top_changes": 48,
+          "top_cases": 700,
+          "mean_signed_error": -0.032640938088519145,
+          "absolute_error_median": 0.0024885913909589285,
+          "absolute_error_p95": 0.17726088912506874,
+          "absolute_error_max": 0.5826390505697903,
+          "material_reversals": {
+            "0.0001": 68,
+            "0.001": 44,
+            "0.01": 5
+          },
+          "equal_family_reversal_rate": {
+            "mean": 0.043122730306280464,
+            "ci95": [
+              0.01843175927579538,
+              0.07591586433285066
+            ],
+            "clusters": 23
+          }
+        }
+      }
+    }
+  },
+  "reversal_overlap": {
+    "first_score_fill64": {
+      "ROC": {
+        "neither": 2087,
+        "lost": 1,
+        "new": 8,
+        "persistent": 4,
+        "persistent_same_direction": 4
+      },
+      "PR": {
+        "neither": 1998,
+        "new": 18,
+        "lost": 9,
+        "persistent": 75,
+        "persistent_same_direction": 75
+      }
+    },
+    "common_suffix64": {
+      "ROC": {
+        "neither": 2091,
+        "new": 4,
+        "lost": 1,
+        "persistent": 4,
+        "persistent_same_direction": 4
+      },
+      "PR": {
+        "neither": 1995,
+        "new": 21,
+        "lost": 10,
+        "persistent": 74,
+        "persistent_same_direction": 74
+      }
+    }
+  },
+  "scope": "Post-publication sensitivity on the complete fixed corpus. Bootstrap intervals are descriptive, retaining series clusters within families; macro intervals weight source families equally."
+}

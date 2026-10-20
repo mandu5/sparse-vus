@@ -29,5 +29,25 @@ jobs:
       - run: python -m pip install '.[accelerate,research]'
       - run: python experiments/fetch_reference.py
       - run: python experiments/dtaianomaly_adapter.py --fetch
+      - run: python experiments/fast_vus_adapter.py --fetch
       - run: python -m pytest -q
       # No model weights, large score archive, GPU, or paid API are required.
+  installed-wheel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+      - run: python -m pip install build
+      - run: python -m build
+      - run: python -m venv /tmp/sparse-vus-wheel-check
+      - run: /tmp/sparse-vus-wheel-check/bin/python -m pip install dist/*.whl
+      - name: Verify the installed base package without optional Numba
+        run: /tmp/sparse-vus-wheel-check/bin/python experiments/check_installed_package.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-python-distributions
+          path: dist/*
+          if-no-files-found: error

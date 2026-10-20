@@ -1,0 +1,326 @@
+{
+  "source": "Original public_benchmark.jsonl medians, not newly timed.",
+  "summed_evaluator_median_seconds": {
+    "fastest_dense_per_case": 33.10023211875523,
+    "sparse": 14.682751962929615,
+    "saved": 18.417480155825615,
+    "ratio": 2.2543615939522295
+  },
+  "per_evaluation_saved_seconds_quantiles": {
+    "min": -0.010077749990159646,
+    "p25": 0.00039673925130045973,
+    "median": 0.0019449795145192184,
+    "p75": 0.0065804997575469315,
+    "max": 0.27695666599902324
+  },
+  "slowdown_cases": 184,
+  "family_summaries": [
+    {
+      "family": "CATSv2",
+      "series": 1,
+      "evaluations": 6,
+      "geometric_mean_speedup": 2.2063815357202694,
+      "series_bootstrap95": [
+        2.2063815357202694,
+        2.2063815357202694
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.512677617535173
+    },
+    {
+      "family": "Daphnet",
+      "series": 1,
+      "evaluations": 6,
+      "geometric_mean_speedup": 1.9289791294483631,
+      "series_bootstrap95": [
+        1.9289791294483631,
+        1.9289791294483631
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.5165551341735575
+    },
+    {
+      "family": "Exathlon",
+      "series": 30,
+      "evaluations": 180,
+      "geometric_mean_speedup": 1.7046245393766604,
+      "series_bootstrap95": [
+        1.6296477232983162,
+        1.7947234412362205
+      ],
+      "slower_or_equal": 1,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 0.9742684528979715
+    },
+    {
+      "family": "IOPS",
+      "series": 15,
+      "evaluations": 90,
+      "geometric_mean_speedup": 2.406524073062171,
+      "series_bootstrap95": [
+        2.187066645118197,
+        2.665718326749514
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.2227933685035155
+    },
+    {
+      "family": "LTDB",
+      "series": 8,
+      "evaluations": 48,
+      "geometric_mean_speedup": 1.2293719927678461,
+      "series_bootstrap95": [
+        1.1197656888668683,
+        1.3306167751390998
+      ],
+      "slower_or_equal": 7,
+      "material_slowdowns_le_1_over_1p1": 6,
+      "minimum_speedup": 0.674866275225974
+    },
+    {
+      "family": "MGAB",
+      "series": 8,
+      "evaluations": 48,
+      "geometric_mean_speedup": 2.881594151570469,
+      "series_bootstrap95": [
+        2.7737735074859056,
+        2.9733517401189657
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.886498112273949
+    },
+    {
+      "family": "MITDB",
+      "series": 7,
+      "evaluations": 42,
+      "geometric_mean_speedup": 2.264979969339976,
+      "series_bootstrap95": [
+        1.9923853679782233,
+        2.525958715475131
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.2672042691432555
+    },
+    {
+      "family": "MSL",
+      "series": 7,
+      "evaluations": 42,
+      "geometric_mean_speedup": 1.254705777643774,
+      "series_bootstrap95": [
+        1.0055580389433487,
+        1.5462345653022018
+      ],
+      "slower_or_equal": 11,
+      "material_slowdowns_le_1_over_1p1": 8,
+      "minimum_speedup": 0.5158275820007441
+    },
+    {
+      "family": "NAB",
+      "series": 23,
+      "evaluations": 138,
+      "geometric_mean_speedup": 1.2738575678105821,
+      "series_bootstrap95": [
+        1.1849681829074694,
+        1.3591174039673384
+      ],
+      "slower_or_equal": 19,
+      "material_slowdowns_le_1_over_1p1": 13,
+      "minimum_speedup": 0.6339486355956193
+    },
+    {
+      "family": "NEK",
+      "series": 8,
+      "evaluations": 48,
+      "geometric_mean_speedup": 0.8962620976212312,
+      "series_bootstrap95": [
+        0.8587155491819543,
+        0.933277976206867
+      ],
+      "slower_or_equal": 29,
+      "material_slowdowns_le_1_over_1p1": 25,
+      "minimum_speedup": 0.6866901719612128
+    },
+    {
+      "family": "OPPORTUNITY",
+      "series": 27,
+      "evaluations": 162,
+      "geometric_mean_speedup": 2.1924427103588906,
+      "series_bootstrap95": [
+        2.000923330184986,
+        2.3948222839152646
+      ],
+      "slower_or_equal": 1,
+      "material_slowdowns_le_1_over_1p1": 1,
+      "minimum_speedup": 0.7709639721797178
+    },
+    {
+      "family": "Power",
+      "series": 1,
+      "evaluations": 6,
+      "geometric_mean_speedup": 2.0900281528776863,
+      "series_bootstrap95": [
+        2.0900281528776863,
+        2.0900281528776863
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.1550926221159434
+    },
+    {
+      "family": "SED",
+      "series": 2,
+      "evaluations": 12,
+      "geometric_mean_speedup": 2.196429437683667,
+      "series_bootstrap95": [
+        2.1231824679107882,
+        2.272203330442203
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.3716091184681756
+    },
+    {
+      "family": "SMAP",
+      "series": 17,
+      "evaluations": 102,
+      "geometric_mean_speedup": 2.6795447063409106,
+      "series_bootstrap95": [
+        2.322322447557802,
+        3.094434020253253
+      ],
+      "slower_or_equal": 2,
+      "material_slowdowns_le_1_over_1p1": 2,
+      "minimum_speedup": 0.8656379676887656
+    },
+    {
+      "family": "SMD",
+      "series": 33,
+      "evaluations": 198,
+      "geometric_mean_speedup": 2.8796662326457474,
+      "series_bootstrap95": [
+        2.669188914334538,
+        3.1009261480390204
+      ],
+      "slower_or_equal": 1,
+      "material_slowdowns_le_1_over_1p1": 1,
+      "minimum_speedup": 0.8815520134698396
+    },
+    {
+      "family": "SVDB",
+      "series": 18,
+      "evaluations": 108,
+      "geometric_mean_speedup": 2.0742986067138434,
+      "series_bootstrap95": [
+        1.9098798438186424,
+        2.245931753074068
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.1958076708836884
+    },
+    {
+      "family": "SWaT",
+      "series": 1,
+      "evaluations": 6,
+      "geometric_mean_speedup": 1.8511493374877757,
+      "series_bootstrap95": [
+        1.8511493374877757,
+        1.8511493374877757
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.336297467682212
+    },
+    {
+      "family": "Stock",
+      "series": 8,
+      "evaluations": 48,
+      "geometric_mean_speedup": 0.6146160505476272,
+      "series_bootstrap95": [
+        0.552895080848828,
+        0.6666264418963838
+      ],
+      "slower_or_equal": 48,
+      "material_slowdowns_le_1_over_1p1": 48,
+      "minimum_speedup": 0.4176665910048584
+    },
+    {
+      "family": "TAO",
+      "series": 2,
+      "evaluations": 12,
+      "geometric_mean_speedup": 0.5850954572080167,
+      "series_bootstrap95": [
+        0.524293277810585,
+        0.6529488523580431
+      ],
+      "slower_or_equal": 12,
+      "material_slowdowns_le_1_over_1p1": 12,
+      "minimum_speedup": 0.27175240087058855
+    },
+    {
+      "family": "TODS",
+      "series": 13,
+      "evaluations": 78,
+      "geometric_mean_speedup": 1.3285795592025316,
+      "series_bootstrap95": [
+        1.1592709796751677,
+        1.562985284800976
+      ],
+      "slower_or_equal": 24,
+      "material_slowdowns_le_1_over_1p1": 20,
+      "minimum_speedup": 0.55258251698783
+    },
+    {
+      "family": "UCR",
+      "series": 70,
+      "evaluations": 420,
+      "geometric_mean_speedup": 3.133001530647107,
+      "series_bootstrap95": [
+        2.9773513292400198,
+        3.2950574792710148
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.1834701036499737
+    },
+    {
+      "family": "WSD",
+      "series": 20,
+      "evaluations": 120,
+      "geometric_mean_speedup": 2.6676408826513276,
+      "series_bootstrap95": [
+        2.481844819563814,
+        2.864361585022505
+      ],
+      "slower_or_equal": 0,
+      "material_slowdowns_le_1_over_1p1": 0,
+      "minimum_speedup": 1.584458715098373
+    },
+    {
+      "family": "YAHOO",
+      "series": 30,
+      "evaluations": 180,
+      "geometric_mean_speedup": 1.251392277705038,
+      "series_bootstrap95": [
+        1.1974351008047757,
+        1.3017712198012732
+      ],
+      "slower_or_equal": 29,
+      "material_slowdowns_le_1_over_1p1": 12,
+      "minimum_speedup": 0.7406631740735492
+    }
+  ],
+  "hypothetical_amdahl_speedup": {
+    "0.01": 1.0055952874241119,
+    "0.1": 1.0589199402473783,
+    "0.5": 1.385440141711137,
+    "1": 2.2543615939522295
+  },
+  "inference_time": "UNKNOWN: released scores reused; no detector training/inference measured.",
+  "caveat": "Summing isolated per-case medians is a descriptive evaluator budget, not an observed pipeline wall time. Amdahl scenarios are hypothetical metric fractions."
+}

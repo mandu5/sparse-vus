@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "seed": 2026102001,
+  "fixture_cases": 24,
+  "transformed_metric_checks": 144,
+  "max_exact_error": 3.3306690738754696e-16,
+  "max_sample_error": 2.220446049250313e-16
+}

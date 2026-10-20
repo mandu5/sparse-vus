@@ -17,6 +17,7 @@ python -m pip install -r experiments/requirements-benchmark.txt
 python -m pip install -e .
 python experiments/fetch_reference.py
 python experiments/dtaianomaly_adapter.py --fetch
+python experiments/fast_vus_adapter.py --fetch
 python -m pytest -q
 python experiments/independent_review_check.py --output artifacts/independent_core_review.json
 python experiments/fetch_score_ranges.py
@@ -28,5 +29,6 @@ python experiments/external_supplement.py
 python experiments/check_fixed_grid_pr.py
 python experiments/illustrate_event.py
 python experiments/analyze_results.py
-cd paper
-tectonic main.tex
+# This runner reproduces the original v0.1.0 experiments. The current paper
+# additionally uses the separately recorded v0.2.0 advancement experiments.
+echo 'Original experiment tables and figures reproduced under paper/ and artifacts/.'

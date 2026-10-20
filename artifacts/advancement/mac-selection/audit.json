@@ -1,0 +1,306 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-20T13:11:44.542933+00:00",
+  "scope": "Independent post-run receipt reconstruction, no metric kernels rerun.",
+  "measurements_sha256": "0eb9e33dcea8beecf0ffc6e50165d66d89f89aa9c2be0b25aeb3ce46a5937137",
+  "protocol_sha256": "f37760d9d40dbd91bdbf112ce633eb5679f90fc0e88eef974a18e01f65cbce36",
+  "environment_sha256": "338fd3c3280c6495df20854748ec0fe4eced48723db40fe89b60403d99cc6504",
+  "producer_summary_sha256": "ed298d4fd9fa8c92cfe1e4897e0d263a871c877b2488575b5b85d7ad1040ee10",
+  "auditor_sha256": "90721715f3d4c221916f07d07ae3b87934891064de0385d9adfd96c47e957fa3",
+  "source_sha256": {
+    "experiments/benchmark_selection.py": "ef247ffb82740e81877c20e4db4583b8df8ecd234c9cbe5b1463df8156315919",
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "reconstructed": {
+    "cases": 126,
+    "max_exact_pr_error": 1.3322676295501878e-15,
+    "max_enclosure_slack": 3.3306690738754696e-16,
+    "by_width": {
+      "30": {
+        "cases": 42,
+        "exact_unique_winner_cases": 41,
+        "fixed250_wrong_selections": 4,
+        "sum_case_median_seconds": {
+          "sparse_exact": 1.7838662530994043,
+          "dense_direct": 5.092911708081374,
+          "dense_nearest": 5.040766620833892,
+          "fast_vus_exact_pr": 13.085153624007944,
+          "fixed250_pr": 3.8007419549976476,
+          "certificate_prune": 3.2112594210193492,
+          "certificate_no_prune": 3.3789551239751745
+        },
+        "certificate_prune": {
+          "early_winners": 21,
+          "exact_fallback_evaluations": 53,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.5792094880136989,
+              "faster_cases": 2
+            },
+            "dense_direct": {
+              "median": 1.4346546292824252,
+              "faster_cases": 26
+            },
+            "dense_nearest": {
+              "median": 1.5430624911400175,
+              "faster_cases": 28
+            },
+            "fast_vus_exact_pr": {
+              "median": 5.301020821976017,
+              "faster_cases": 42
+            },
+            "fixed250_pr": {
+              "median": 2.2044586576793925,
+              "faster_cases": 39
+            },
+            "certificate_no_prune": {
+              "median": 1.006444540235894,
+              "faster_cases": 24
+            }
+          }
+        },
+        "certificate_no_prune": {
+          "early_winners": 21,
+          "exact_fallback_evaluations": 63,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.5420548341174513,
+              "faster_cases": 2
+            },
+            "dense_direct": {
+              "median": 1.3020583755586004,
+              "faster_cases": 26
+            },
+            "dense_nearest": {
+              "median": 1.3915949670084988,
+              "faster_cases": 28
+            },
+            "fast_vus_exact_pr": {
+              "median": 5.008221454461232,
+              "faster_cases": 42
+            },
+            "fixed250_pr": {
+              "median": 2.1712825903678716,
+              "faster_cases": 39
+            },
+            "certificate_prune": {
+              "median": 0.9935982850077562,
+              "faster_cases": 18
+            }
+          }
+        }
+      },
+      "100": {
+        "cases": 42,
+        "exact_unique_winner_cases": 41,
+        "fixed250_wrong_selections": 5,
+        "sum_case_median_seconds": {
+          "sparse_exact": 2.8041844610124826,
+          "dense_direct": 14.214008709881455,
+          "dense_nearest": 10.33054604002973,
+          "fast_vus_exact_pr": 37.19181879007374,
+          "fixed250_pr": 10.550462709943531,
+          "certificate_prune": 4.68343641894171,
+          "certificate_no_prune": 4.924842502048705
+        },
+        "certificate_prune": {
+          "early_winners": 17,
+          "exact_fallback_evaluations": 63,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.5692843602313012,
+              "faster_cases": 4
+            },
+            "dense_direct": {
+              "median": 2.4617852073000206,
+              "faster_cases": 31
+            },
+            "dense_nearest": {
+              "median": 1.9764270423331873,
+              "faster_cases": 30
+            },
+            "fast_vus_exact_pr": {
+              "median": 9.137872356534974,
+              "faster_cases": 42
+            },
+            "fixed250_pr": {
+              "median": 4.072414391082582,
+              "faster_cases": 42
+            },
+            "certificate_no_prune": {
+              "median": 1.0035819310855056,
+              "faster_cases": 22
+            }
+          }
+        },
+        "certificate_no_prune": {
+          "early_winners": 17,
+          "exact_fallback_evaluations": 75,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.5324749086717273,
+              "faster_cases": 5
+            },
+            "dense_direct": {
+              "median": 2.6236981110207047,
+              "faster_cases": 30
+            },
+            "dense_nearest": {
+              "median": 1.8881626208045705,
+              "faster_cases": 30
+            },
+            "fast_vus_exact_pr": {
+              "median": 9.127298798169692,
+              "faster_cases": 42
+            },
+            "fixed250_pr": {
+              "median": 3.7232443034199143,
+              "faster_cases": 41
+            },
+            "certificate_prune": {
+              "median": 0.9964316849845307,
+              "faster_cases": 20
+            }
+          }
+        }
+      },
+      "300": {
+        "cases": 42,
+        "exact_unique_winner_cases": 41,
+        "fixed250_wrong_selections": 5,
+        "sum_case_median_seconds": {
+          "sparse_exact": 6.447095289913705,
+          "dense_direct": 41.05707804393023,
+          "dense_nearest": 28.454703128896654,
+          "fast_vus_exact_pr": 102.90808795701014,
+          "fixed250_pr": 33.419045001035556,
+          "certificate_prune": 9.79046858404763,
+          "certificate_no_prune": 10.130735460028518
+        },
+        "certificate_prune": {
+          "early_winners": 15,
+          "exact_fallback_evaluations": 69,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.7384280989371144,
+              "faster_cases": 11
+            },
+            "dense_direct": {
+              "median": 3.479030535914806,
+              "faster_cases": 38
+            },
+            "dense_nearest": {
+              "median": 2.4823838733692916,
+              "faster_cases": 34
+            },
+            "fast_vus_exact_pr": {
+              "median": 17.43094479487414,
+              "faster_cases": 42
+            },
+            "fixed250_pr": {
+              "median": 7.943431632116584,
+              "faster_cases": 42
+            },
+            "certificate_no_prune": {
+              "median": 1.0036346672039465,
+              "faster_cases": 24
+            }
+          }
+        },
+        "certificate_no_prune": {
+          "early_winners": 15,
+          "exact_fallback_evaluations": 81,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.6560458921515064,
+              "faster_cases": 11
+            },
+            "dense_direct": {
+              "median": 3.517359935655632,
+              "faster_cases": 37
+            },
+            "dense_nearest": {
+              "median": 2.2967540946356717,
+              "faster_cases": 34
+            },
+            "fast_vus_exact_pr": {
+              "median": 15.32765733872995,
+              "faster_cases": 42
+            },
+            "fixed250_pr": {
+              "median": 6.683305382208763,
+              "faster_cases": 42
+            },
+            "certificate_prune": {
+              "median": 0.9963801299631341,
+              "faster_cases": 18
+            }
+          }
+        }
+      }
+    }
+  },
+  "data_provenance": {
+    "status": "PASS",
+    "mode": "certified",
+    "scope": "Post-run provenance reconciliation added after benchmark start; not preregistration.",
+    "release_commit": "7565b6657ba510e79db13e79b809b58e77feacc0",
+    "release_bindings": {
+      "experiments/data_hashes.json": "d53de71d4fedad5824bb2793a5997f7e416fb3f18246c4a7675a1fefd071857b",
+      "experiments/data_manifest.json": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e",
+      "artifacts/public_benchmark_receipt.json": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+      "artifacts/selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+      "artifacts/external_supplement_selection.json": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee",
+      "artifacts/bolt_base_64-download.json": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+      "artifacts/TimeMoE-200M_64-download.json": "36bf99d0219b882257fa93d1252647999d40c9a6f01dbcb5f68ae10727514fad",
+      "artifacts/timesfm-1.0-200m_64-download.json": "91da5b782937e3b7538118241f9585e4f408571a0fc47feeda6126debe16d24c"
+    },
+    "original_benchmark_sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+    "measurement_rows": 378,
+    "series": 42,
+    "families": 23,
+    "actual_label_members_verified": 42,
+    "actual_score_members_verified": 126,
+    "source_files_sha256": {
+      "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+      "TSB-AD-U-Eva.csv": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a",
+      "score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+    },
+    "verified_score_manifest_sha256": "424cdfabca8c00bbc89c349787290e07e62e90da182bd259119b45518d1310e2",
+    "checks": [
+      "release manifest and receipt identity",
+      "original case coverage",
+      "score-member manifest locks",
+      "actual ZIP member CRC and SHA-256",
+      "actual label shape/classes/count",
+      "actual score shape/finite values",
+      "measurement per-row label/score identity",
+      "exact mode-specific case set"
+    ],
+    "whole_score_archive_md5_verified": false,
+    "gate_sha256": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983"
+  },
+  "checks": [
+    "hash/protocol/source binding",
+    "mode-specific released-data identity",
+    "finite outputs and exact-model coverage",
+    "all exact parity and tie selections",
+    "3e-10 early/pruning policy",
+    "1e-10 tie retention",
+    "all fallback work",
+    "same initial bounds in ablation",
+    "positive finite times and medians",
+    "all summary counts, sums and comparator ratios"
+  ],
+  "limitations": [
+    "Input/kernel timing itself is not rerun.",
+    "Float64 enclosure checks are empirical, not outward-rounded certification.",
+    "Bound counters are validated for consistency, not reconstructed from an unrecorded per-model call trace."
+  ]
+}

@@ -1,0 +1,44 @@
+% Official PVLDB counterpart of main.tex.
+% Template: vldbproceedings/VLDB-Template at
+% 39c95f5c6fcbe652a83be24e4eff8f2134cd3fbc (2026-07-13).
+% Regenerate shared text with: python experiments/build_vldb.py
+% Author metadata is confirmed for independently conducted research.
+% This manuscript has not been submitted.
+\documentclass[sigconf, nonacm]{acmart}
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\usepackage{pvldb}% VLDB/PVLDB formatting overrides, see pvldb.sty for details.
+%%% VLDB block end %%%
+
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{https://github.com/mandu5/sparse-vus/releases/tag/v0.2.0}
+\input{vldb-macros.tex}
+% Allow a second line-breaking pass for long technical names in narrow columns.
+% Font, margin, line spacing, and all upstream style files remain unchanged.
+\emergencystretch=2em
+
+\begin{document}
+\input{vldb-title.tex}
+\subtitle{Working manuscript; unsubmitted}
+\author{Youngmin Ko}
+\email{rhdudals0505@naver.com}
+\affiliation{%
+  \institution{Independent Researcher}
+  \country{Republic of Korea}
+}
+% The author has graduated; no current university affiliation is asserted.
+% City and ORCID are not supplied and are not inferred.
+\begin{abstract}
+\input{vldb-abstract.tex}
+\end{abstract}
+\maketitle
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\vldbtopmatter
+%%% VLDB block end %%%
+
+\input{vldb-body.tex}
+\end{document}

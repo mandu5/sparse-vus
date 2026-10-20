@@ -1,0 +1,153 @@
+\section{Error-bounded refinement along the width axis}
+\label{sec:width}
+Exact threshold integration leaves a second cost: evaluating every integer
+width. We next bound the scalar average while omitting selected widths.
+This is a different reduction from restricting thresholds. It uses the
+geometry of expanded anomaly intervals and a probability-box (p-box)
+expectation bound; the latter is established prior work
+\cite{utkin2009,troffaes2011}.
+
+\subsection{Where width monotonicity holds}
+For consecutive original intervals ending at $e_i$ and starting at $s_{i+1}$,
+their expansions first overlap at
+\[
+ c_i=2\left\lceil\frac{s_{i+1}-e_i}{2}\right\rceil .
+\]
+The strict overlap convention matters: merely adjacent expansions do not merge.
+Partition $0,\ldots,L$ immediately before every distinct $c_i\le L$.
+Within each resulting integer interval $[a,b]$, the number $K$ of expanded
+segments is constant, each segment expands without merging, and each
+threshold's hit count is nondecreasing.
+
+\begin{lemma}[Coordinate order within a merge-free interval]
+For a fixed threshold and $a\le w\le b$ in one such interval,
+\[
+ R_a\le R_w\le R_b,\quad
+ \Prec_a\le\Prec_w\le\Prec_b,\quad
+ F_a\ge F_w\ge F_b .
+\]
+At any fixed width, recall and FPR are nondecreasing as the threshold falls.
+\end{lemma}
+\begin{proof}
+Let $O$ be the number of admitted original positives and $B_w$ the admitted
+buffer mass. Both $O$ and the prediction count $C$ are fixed across widths,
+while $B_w$ is nondecreasing. The unclipped overlap recall is
+$(O+B_w)/(P_0+B_w/2)$, whose derivative in $B_w$ is
+$(P_0-O/2)/(P_0+B_w/2)^2>0$. Multiplication by the nondecreasing
+existence reward $H_w/K$ and clipping preserve order.
+Precision is $(O+B_w)/C$. For FPR,
+\[
+ \frac{\partial F}{\partial B}
+ =\frac{-(n-P_0)+(C-O)/2}{(n-P_0-B/2)^2}<0,
+\]
+since $C-O\le n-P_0$.
+Across descending thresholds, original-positive admissions increase $O$;
+other admissions increase $B$ and increase the false-positive numerator by
+$1-a_i^{(w)}\ge0$ while decreasing its denominator. Thus both curve
+coordinates are nondecreasing in threshold order. Ties enter together.
+\end{proof}
+
+\begin{theorem}[ROC width enclosure]
+Within a merge-free interval, the exact ROC area is nondecreasing in width.
+Consequently every omitted width has area in
+$[\mathrm{ROC}_a,\mathrm{ROC}_b]$.
+\end{theorem}
+\begin{proof}
+Use the common full threshold sequence, with the prescribed origin and
+terminal point. Its trapezoidal area is coordinatewise nondecreasing in each
+recall and nonincreasing in each interior FPR:
+\[
+ \frac{\partial A}{\partial R_j}=\frac{F_{j+1}-F_{j-1}}2\ge0,\qquad
+ \frac{\partial A}{\partial F_j}=\frac{R_{j-1}-R_{j+1}}2\le0 .
+\]
+Linear interpolation between the endpoint coordinate sequences preserves
+their threshold monotonicity. Apply the coordinate-order lemma along this
+interpolation. Sparse event integration gives the same scalar area.
+\end{proof}
+
+Neither global ROC monotonicity nor PR-area monotonicity is assumed.
+For example, with $n=20$, positive positions $\{0,2,19\}$ and scores
+$(20,4,19,3,18,17,16,15,14,13,12,11,10,9,8,7,6,5,2,1)$,
+ROC drops from $0.444444$ at width one to $0.405557$ at width two when
+three expanded segments become two.
+Even without a merge, scalar endpoint PR values need not enclose the
+interior. Take $n=700$, positive positions $100,\ldots,199$ and $600$,
+and initially zero scores. Assign score three to positions $100,\ldots,149$,
+score one to $150,\ldots,199$ and $600$, and score two to
+$0,\ldots,99$, $200,\ldots,549$, and $599$. The first merge occurs at
+width 402. Direct evaluation gives PR $0.385206$ at width one,
+$0.366313$ at width two, and $0.909134$ at width 400.
+Thus the width-two area lies below both endpoint values on $[1,400]$.
+The artifact verifies this witness independently.
+
+\subsection{PR bounds without monotone precision}
+Index the common descending support events by $j=1,\ldots,G$.
+At every width, $q_j=R_j-R_{j-1}\ge0$ and $\sum_jq_j=1$, since the
+last support event has recall one. Hence PR is an expectation
+$\sum_j q_j\Prec_j$, with cumulative distribution $R_j$.
+For $z\in(0,1)$, define the feasible quantile window
+\[
+ \ell(z)=\min\{j:R_{b,j}\ge z\},\qquad
+ u(z)=\min\{j:R_{a,j}\ge z\}.
+\]
+The coordinate-order lemma implies that the quantile index for any
+intermediate width belongs to $[\ell(z),u(z)]$.
+
+\begin{theorem}[PR width enclosure]
+Every width in $[a,b]$ has exact PR area between
+\begin{align}
+ L_{a,b}^{\mathrm{PR}}
+ &=\int_0^1\min_{\ell(z)\le j\le u(z)}\Prec_{a,j}\,dz,\\
+ U_{a,b}^{\mathrm{PR}}
+ &=\int_0^1\max_{\ell(z)\le j\le u(z)}\Prec_{b,j}\,dz .
+\end{align}
+Both bounds can be computed in $O(G)$ time and space.
+\end{theorem}
+\begin{proof}
+The quantile representation of $\sum_jq_j\Prec_j$ integrates the precision
+at the quantile index over $z$. That index lies in the displayed window,
+and its precision is between the corresponding endpoint precisions.
+Taking the window minimum and maximum and integrating yields the bounds.
+Breakpoints are the union of the two endpoint recall sequences. Merge them
+in linear time. Both ends of the index window move only right; standard
+monotone deques maintain the precision minimum and maximum in amortized
+constant work per inserted or removed index. Each index is inserted and
+removed at most once.
+\end{proof}
+These are extrema over a relaxed p-box model, not necessarily values
+attained by an intermediate VUS width. This relaxation permits a valid bound
+despite oscillating precision. We claim the VUS-specific coordinate order,
+merge partition, and adaptive use of these bounds, not the general p-box
+expectation construction.
+
+\subsection{Adaptive evaluation and decisions}
+Evaluate the endpoints of each merge-free interval. If an active interval
+$[a,b]$ has $r=b-a-1$ unevaluated interior widths, add $rL_{a,b}$ and
+$rU_{a,b}$ to the lower and upper sums, respectively. Add evaluated scalar
+values exactly once, then divide by $L+1$. This encloses the target discrete
+average; it does not replace it with a continuous-width integral.
+
+Refine the interval with the largest contribution to uncertainty by
+evaluating its midpoint and replacing it by two subintervals.
+Stop once both metric intervals have half-width at most $\varepsilon$,
+or when every width is evaluated. The returned estimate is the midpoint.
+One model outranks another whenever its lower bound exceeds the other's
+upper bound; overlapping intervals produce no ordering assertion.
+
+With $m$ distinct evaluated widths, preparation, endpoint calculation,
+linear p-box bounds and heap refinement take
+$O(n\log(Q+1)+mQ+m\log m)$ time.
+A fixed-size endpoint-curve cache retains at most eight curves; evicted
+endpoints can be recomputed a constant number of times per refinement.
+Space is $O(n+Q+m)$, with no width-by-support matrix.
+The artifact records both distinct widths and actual curve evaluations.
+The bound is output-sensitive to the requested precision and geometry;
+neither $m\ll L$ nor a wall-clock improvement is guaranteed.
+
+The theorems are real-arithmetic statements. The implementation uses
+float64, clips ulp-scale recall drift, and adds an empirical $10^{-12}$
+guard to adaptive endpoints. It is not a directed-rounding interval library.
+Experiments independently audit enclosure within $10^{-10}$ and use a
+$2\cdot10^{-10}$ separation margin for numerical ordering checks.
+These allowances are reported separately from the requested approximation
+half-width. Setting $\varepsilon=0$ evaluates every width.

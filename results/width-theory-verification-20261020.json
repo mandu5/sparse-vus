@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "created_utc": "2026-10-20T12:51:12.068515+00:00",
+  "seed": 20261020,
+  "source_sha256": {
+    "experiments/verify_width_theory.py": "b91aff9aa566a5f335796f2a67f1cbe1155a2fc9d00feadeb241d7833c4942aa",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b"
+  },
+  "git_head": "67e622b45e3fca1378215cc5f3ca3e804e4b7a9b",
+  "versions": {
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1"
+  },
+  "scope": "Finite Float64 verification, not a proof of all inputs or formal machine intervals",
+  "timing_scope": "Validation duration only; not a controlled runtime comparison",
+  "pbox_linear_programs": {
+    "checks": 760,
+    "event_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "draws_per_event_count": 20,
+    "objectives_per_draw": 2,
+    "absolute_tolerance": 1e-09,
+    "max_absolute_error": 3.3306690738754696e-16,
+    "solver": "scipy.optimize.linprog(method='highs')"
+  },
+  "small_label_enumeration": {
+    "label_lengths": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "labels": "Every binary vector containing both classes",
+    "score_patterns": [
+      "First seeded permutation of distinct integer scores",
+      "Second seeded permutation of distinct integer scores",
+      "First seeded independent integer vector with values 0,1,2",
+      "Second seeded independent integer vector with values 0,1,2"
+    ],
+    "width_rule": "Every integer width from 0 through 2*n+1",
+    "label_vectors": 240,
+    "input_cases": 960,
+    "direct_curve_checks": 13776,
+    "width_enclosures": 13776,
+    "mean_comparisons_with_numpy_sparse": 960,
+    "max_curve_absolute_error": 6.661338147750939e-16,
+    "max_mean_absolute_error": 2.220446049250313e-16,
+    "max_bound_violation": 3.3306690738754696e-16,
+    "curve_absolute_tolerance": 2e-12,
+    "enclosure_absolute_tolerance": 2e-12,
+    "exhaustive_scope": "Labels only; four seeded score patterns, not all rankings or ties"
+  },
+  "counterexamples": {
+    "roc_decrease_at_merge": {
+      "n": 20,
+      "positive_indices": [
+        0,
+        2,
+        19
+      ],
+      "scores": [
+        20,
+        4,
+        19,
+        3,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        2,
+        1
+      ],
+      "values": {
+        "1": {
+          "roc": 0.4444444444444445,
+          "pr": 0.5277777777777777,
+          "segments": 3
+        },
+        "2": {
+          "roc": 0.40555697298022475,
+          "pr": 0.481515508054438,
+          "segments": 2
+        }
+      },
+      "cross_merge_bound_rejected": true
+    },
+    "pr_interior_below_both_endpoints_without_merge": {
+      "n": 700,
+      "positive_slices_python_half_open": [
+        [
+          100,
+          200
+        ]
+      ],
+      "additional_positive_indices": [
+        600
+      ],
+      "default_score": 0,
+      "score_assignments_python_half_open": [
+        {
+          "slice": [
+            100,
+            150
+          ],
+          "score": 3
+        },
+        {
+          "slice": [
+            150,
+            200
+          ],
+          "score": 1
+        },
+        {
+          "indices": [
+            600
+          ],
+          "score": 1
+        },
+        {
+          "slice": [
+            0,
+            100
+          ],
+          "score": 2
+        },
+        {
+          "slice": [
+            200,
+            550
+          ],
+          "score": 2
+        },
+        {
+          "indices": [
+            599
+          ],
+          "score": 2
+        }
+      ],
+      "first_merge_width": 402,
+      "values": {
+        "1": {
+          "roc": 0.4334451809120812,
+          "pr": 0.3852059118955374,
+          "segments": 2
+        },
+        "2": {
+          "roc": 0.5338899339742916,
+          "pr": 0.36631301878278155,
+          "segments": 2
+        },
+        "400": {
+          "roc": 0.943623337299765,
+          "pr": 0.9091335194574967,
+          "segments": 2
+        }
+      },
+      "pbox_pr_lower": 0.3226220825675382,
+      "pbox_pr_upper": 0.9175287921163148,
+      "analytic_pr_1": 0.3852059118955374,
+      "analytic_pr_2": 0.36631301878278155,
+      "analytic_pr_400_lower": 0.8016006014100532
+    }
+  },
+  "elapsed_seconds": 3.652938790997723
+}

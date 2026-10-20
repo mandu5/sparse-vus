@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-20T13:14:41.404149+00:00",
+  "phase": "Post-hoc algorithm follow-up after observing fixed-tolerance width overhead. Frozen before this racing experiment's outcomes.",
+  "cases": 126,
+  "models_per_case": 3,
+  "repetitions": 3,
+  "seed": 202610204,
+  "selection": "Unchanged released metadata-only 42-series selection, all three released models, widths 30/100/300; 300 is a stress regime.",
+  "selection_sha256": "7211e67626aa52b0617c3d7e899ed65b85f7f052e96795901512d309a9008818",
+  "contract": "All PR models within 1e-10 of the exact maximum; numerical bound separation/pruning uses 3e-10. Race stops at separated winner or when surviving candidates have all widths evaluated.",
+  "timing": "Whole three-model task including validation, preparation, endpoint evaluation and refinements. Scores loaded before calls. Warm JIT, one thread, serial randomized method order, three repeats.",
+  "comparators": "Fresh executable sparse, direct dense and nearest dense exact methods, each evaluated separately. No cross-run timing ratios.",
+  "scope": "Numerical audit, not directed rounding or detector inference speed.",
+  "exact_parity_tolerance": 1e-11,
+  "float64_containment_tolerance": 1e-10
+}

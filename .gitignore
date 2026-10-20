@@ -9,6 +9,8 @@ build/
 dist/
 paper/*.aux
 paper/*.log
+paper/*.blg
+paper/*.bbl
 paper/*.out
 paper/*.fls
 paper/*.fdb_latexmk

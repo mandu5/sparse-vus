@@ -1,0 +1,60 @@
+\section{Incremental PR model selection}
+\label{sec:racing}
+Fixed-tolerance evaluation asks each model to meet an absolute error target
+before using the resulting intervals to select a winner. This can over-refine
+already separable models and repeat preparation during exact fallback.
+We therefore also study an incremental PR race. It was designed after
+inspecting the standalone fixed-tolerance width-refinement results;
+its measurements are a separate
+post-hoc follow-up on the same 126 series/width selection tasks.
+
+For each of $M$ models, prepare its sparse evaluator once and initialize
+the endpoints of every merge-free width block. Retain all observed PR scalars,
+an endpoint-curve cache, and a heap of unevaluated interiors. An interior
+$(a,b)$ has priority $(b-a-1)(U_{a,b}^{\mathrm{PR}}-L_{a,b}^{\mathrm{PR}})$.
+Its midpoint refinement reuses preparation and updates the model's global
+PR enclosure $[\ell_k,u_k]$. The reused endpoint oracle still computes ROC,
+but only PR ordering controls selection; there is no predetermined
+scalar-error target.
+
+After initialization and every refinement, rescreen \emph{all} models.
+Return a singleton $k$ only if
+$\ell_k>u_j+\eta$ for every $j\ne k$, where $\eta=3\cdot10^{-10}$.
+Otherwise the current candidate set is
+\[
+ \mathcal C=\{k:u_k\ge\max_j\ell_j-\eta\}.
+\]
+This is repeated screening, not permanent deletion; a model outside
+$\mathcal C$ retains its state and is checked again.
+Among nonexact candidates, refine the model with the widest global PR interval,
+breaking ties by model name, and bisect its highest-priority width interior.
+If all candidates are exact, return every candidate whose exact PR is within
+$\tau=10^{-10}$ of their maximum. Exact means use already observed widths;
+no second preparation or separate exact evaluator is called.
+The no-pruning ablation keeps all models in $\mathcal C$ whenever the
+singleton condition fails, retaining the same stopping and refinement rules.
+
+\begin{proposition}[Finite decision resolution]
+With valid real-arithmetic width enclosures and $\eta>\tau$, the race returns
+the exact $\tau$-tie set and evaluates at most $M(L+1)$ distinct model/width
+pairs.
+\end{proposition}
+\begin{proof}
+A separated winner exceeds every other true PR by more than $\eta$.
+A currently excluded model has true PR more than $\eta$ below some model's
+lower bound, hence cannot belong to the global $\tau$-tie set.
+At least one candidate exists. Each refinement evaluates one unseen width
+in a nonempty interior; active interiors are disjoint. Therefore at most
+$M(L+1)$ distinct pairs can be observed. If separation does not occur, all
+remaining candidates eventually become exact and the tie rule resolves them.
+\end{proof}
+
+Let $T$ be the number of refinements and $m_k$ the number of distinct widths
+queried for model $k$. In addition to one preparation per model, endpoint work
+is $O(Q\sum_km_k)$, heap work is $O(T\log(L+1))$, and rescreening is $O(MT)$.
+With the default cache, actual curve calls are at most the initialization
+count plus $3T$; both actual calls and distinct widths are recorded.
+Close scores can require full evaluation, and decision bookkeeping can
+outweigh avoided curves. The float64 implementation retains the empirical
+$10^{-12}$ guard; the ordering margin is a numerical allowance, not a
+directed-rounding proof.

@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-20T12:29:09.682247+00:00",
+  "phase": "Before this experiment's outcomes; after inspecting v0.1.0 outcomes.",
+  "mode": "baseline",
+  "selection": "All 350 original common series, 3 models, widths 10 and 30.",
+  "cases": 2100,
+  "repetitions": 3,
+  "seed": 202610201,
+  "source_scores": "Unchanged released vectors, including documented zero padding.",
+  "timing": "Whole-call validation and preprocessing included; JIT warmup excluded. One thread; random method order in each repetition; serial timings.",
+  "baseline_comparison": "Actual fast-VUS returns PR only; Sparse VUS computes both ROC and PR, so this comparison favors fast-VUS.",
+  "certified_atol": [
+    0.01,
+    0.001
+  ],
+  "atol_definition": "Both returned interval half-widths <= atol.",
+  "float64_containment_tolerance": 1e-10,
+  "exact_parity_tolerance": 1e-11,
+  "reporting": "All cases and regressions; no timing substitution from old runs; float64 numerical audit is not directed-rounding certification.",
+  "selection_sha256": "14ce541b10098960a12338ed5330a8e19d69b595268cf737555698dcbff6b66c"
+}

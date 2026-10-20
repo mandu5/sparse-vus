@@ -1,0 +1,53 @@
+{
+  "started_utc": "2026-10-20T12:29:10.064247+00:00",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "numpy": "1.26.4",
+  "numba": "0.59.1",
+  "cpu_clearance": "Root suite and all agent computational checks completed; agents restricted to reading and writing; serial whole-call benchmark on shared M1 Pro, ordinary OS background load uncontrolled.",
+  "warmup_seconds": {
+    "sparse_exact": 0.340014457993675,
+    "fast_vus_exact_pr": 0.0031725829758215696,
+    "dense_direct": 0.003673875005915761,
+    "dense_nearest": 0.0034124579979106784,
+    "dense_numpy": 0.0006059999868739396
+  },
+  "threads": 1,
+  "threadpool_info": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    }
+  ],
+  "source_sha256": {
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "protocol_sha256": "9bc760a54fa874e3d0fb199276a10eeaaae94526f5283af690af2190e194edf6",
+  "external_baseline": {
+    "repository": "https://github.com/tomlouisklein/fast-VUS",
+    "revision": "1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00",
+    "upstream_commit_date": "2026-10-16T10:36:48Z",
+    "upstream_first_commit": "189de211f8821c3027110af2d00593e603c11cfc",
+    "upstream_first_commit_date": "2026-10-12T11:03:32Z",
+    "source_url": "https://raw.githubusercontent.com/tomlouisklein/fast-VUS/1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00/fast_vus.py",
+    "source_sha256": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "license": "Apache-2.0",
+    "license_sha256": "3b19b00e8d74e9e8f3db69d8407da5b5dd2078f3bf9c57ff47ff0fb9551db282",
+    "adapter": "Full upstream module imported and vus_pr called unchanged.",
+    "output": "PR scalar only; no ROC output.",
+    "threshold_contract": "250 by default; max_samples=len(scores) includes all score thresholds.",
+    "timing_contract": "Includes upstream validation, global and support sorting, ramp construction, and all width integrals; module import excluded after warm-up."
+  },
+  "cpu": "Apple M1 Pro"
+}
