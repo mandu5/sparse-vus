@@ -82,6 +82,17 @@ contain the exact values within the stated numerical audit tolerance.
 The [width proof](docs/theory_advancement_20261020.md) explains why PR needs
 p-box bounds even between interval merges.
 
+Use `sparse_vus_jit` as the default for repeated exact evaluations. The optional
+`sparse_vus.racing.race_pr_models(labels, scores_by_model, max_buffer)` selects
+the highest PR model by refining width bounds. Its decisions match exact
+selection in all 126 tasks on each platform, but its aggregate measured cost
+is **1.65× higher on macOS and 1.49× higher on Linux**. Positive median speed
+ratios occur only at width 300, and total time is still higher there. The
+fixed-tolerance selector is also slower in the median at all tested widths.
+These methods are released for investigation; fewer width queries do not
+imply lower runtime. See the [complete selection results](artifacts/advancement/selection-analysis/analysis.json)
+and [scientific assessment](docs/scientific_review_20261020.md).
+
 The first compiled call includes JIT initialization. Inputs must be finite,
 one-dimensional score values, binary labels with both classes, and a
 nonnegative integer maximum buffer width. Scores are converted to float64;
@@ -204,6 +215,10 @@ The analysis verifies the recorded input and source hashes before reading them.
 
 The supplied PDF is a working research manuscript. Source, executable protocols,
 raw measurements, and separately authored in-session validation are included.
+The [official-format counterpart](paper/vldb.pdf) uses the same scientific
+sources and can be rebuilt with `python experiments/build_vldb.py --build`.
+Both manuscripts are unsubmitted; the [submission packet](docs/submission_packet.md)
+records authorship and venue decisions that remain.
 
 ## Reproduce the v0.2.0 follow-up
 
@@ -230,6 +245,12 @@ python experiments/analyze_advancement.py \
   --linux-baseline artifacts/advancement/linux-baseline \
   --certified artifacts/advancement/mac-certified \
   --output artifacts/advancement/analysis
+
+python experiments/analyze_selection.py \
+  --selection artifacts/advancement/mac-selection \
+  --mac-racing artifacts/advancement/mac-racing \
+  --linux-racing artifacts/advancement/linux-racing \
+  --output artifacts/advancement/selection-analysis
 ```
 
 This checks measured source hashes and actual cached data bytes, so fetch the

@@ -29,22 +29,22 @@ below are agent decisions; no additional design approval is requested.
 
 ## Tasks
 
-- [ ] Prior-art audit: current official VUS, dtaianomaly, Sylligardos, and the
+- [x] Prior-art audit: current official VUS, dtaianomaly, Sylligardos, and the
   independently discovered `tomlouisklein/fast-VUS`; pin actual code and test
   semantics before timing.
-- [ ] Width theorem and implementation: add `src/sparse_vus/certified.py`;
+- [x] Width theorem and implementation: add `src/sparse_vus/certified.py`;
   expose `certified_vus(y, scores, max_buffer, atol=1e-3)` and
   `PreparedEvaluator.evaluate(width)`.
-- [ ] Independent correctness: tiny exhaustive instances, random continuous
+- [x] Independent correctness: tiny exhaustive instances, random continuous
   and tied scores, zero/one widths, merging/adjacent intervals, exact fallback,
   bound containment, requested half-width, and invalid inputs.
-- [ ] Score-data sensitivity: documented context-64 padding correction and
+- [x] Score-data sensitivity: documented context-64 padding correction and
   common valid suffix; all 350 series, all three models, both original widths.
-- [ ] Fresh comparison: all 350 series against actual fast-VUS plus strong
+- [x] Fresh comparison: all 350 series against actual fast-VUS plus strong
   dense baselines; a fixed 42-series cross-family width-certificate experiment.
-- [ ] Independent x86 Linux experiment through the public repository CI,
+- [x] Independent x86 Linux experiment through the public repository CI,
   retaining environment and raw paired timings.
-- [ ] Review mathematical claims and experiment records, revise manuscript
+- [x] Review mathematical claims and experiment records, revise manuscript
   and public artifacts to match only supported conclusions, render and inspect.
 
 ## Acceptance and decision rules

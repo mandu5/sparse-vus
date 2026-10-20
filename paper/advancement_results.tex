@@ -1,0 +1,111 @@
+% Measured source: artifacts/advancement/analysis/analysis.json
+% SHA-256: 3727de01958ef96deb0c15ad22823506eb9097e975f046334d84976a10e37762
+\subsection{Exact evaluation against released fast-VUS on two machines}
+A new complete run compares the unchanged fast-VUS module at full thresholds
+against Sparse VUS and the three dense implementations. Each machine evaluates
+all 2,100 original model/width cases on 350 series from 23 families. Each call
+includes validation, preprocessing, and integration; three repetitions use
+randomized method order, one compute thread, and excluded JIT warmup.
+The M1 Pro run uses Python 3.12.4, NumPy 1.26.4, and Numba 0.59.1.
+The Linux hosted runner identifies an AMD EPYC 9V74 and uses Python 3.12.15,
+NumPy 2.5.4, and Numba 0.68.0. Ordinary OS and hosted-hardware background load
+is uncontrolled. The Linux run is a separate execution, not an external
+laboratory reproduction.
+
+Table~\ref{tab:fast-vus} reports within-machine ratios. Fast-VUS returns only
+PR; Sparse VUS computes both ROC and PR. The per-case fastest-tested comparator
+is the minimum median runtime among fast-VUS and all three dense evaluators,
+excluding Sparse VUS itself. This is an oracle comparison, not a deployable
+selector. The maximum PR difference from fast-VUS is $2.78\cdot10^{-15}$;
+the largest discrepancy across all exact methods is $3.70\cdot10^{-13}$.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{llrrrr}
+\toprule
+Machine & Comparator & Median & \shortstack{Geometric mean\\(95\% interval)} & Faster & \shortstack{Slower\\or equal}\\
+\midrule
+M1 Pro & fast-VUS & 8.38 & 8.69 [8.32, 9.05] & 2100 & 0 \\
+M1 Pro & Fastest tested & 2.04 & 1.98 [1.89, 2.07] & 1891 & 209 \\
+EPYC 9V74 & fast-VUS & 4.55 & 4.50 [4.34, 4.68] & 2100 & 0 \\
+EPYC 9V74 & Fastest tested & 1.35 & 1.40 [1.34, 1.46] & 1526 & 574 \\
+\bottomrule
+\end{tabular}
+\caption{Comparator runtime divided by Sparse VUS runtime; values above one
+favor Sparse VUS. Every row covers 2,100 cases. Intervals resample whole series
+and describe geometric means on the fixed corpus. Both methods use all
+thresholds; fast-VUS computes PR only.}
+\label{tab:fast-vus}
+\end{table}
+
+Fast-VUS ratios range from 1.75 to 46.45 on M1 Pro and 1.52 to 17.97 on Linux.
+Against the fastest-tested comparator, ranges are 0.40--7.75 and 0.36--8.40.
+Whole-family bootstrap intervals for the latter geometric means are
+[1.53,2.42] and [1.11,1.68], respectively. The corpus and machines support a
+bounded measured advantage, with substantial dense-baseline slowdown cases;
+they do not settle the unavailable Sylligardos comparison.
+The sums of isolated per-case medians are 14.78 versus 104.52 seconds for
+Sparse VUS and fast-VUS on M1 Pro, and 14.39 versus 55.14 seconds on Linux.
+These sums are not measured batch or detector-pipeline wall times.
+
+\subsection{Error bounds and the cost of width refinement}
+The width-refinement experiment retains the metadata-selected 42 series
+covering all 23 families and all three released score vectors. Maximum widths
+30, 100, and 300 give 378 model/width cases; the width-300 setting is an
+explicit stress condition. Both $\varepsilon=0.01$ and $0.001$ bound the
+half-widths of both returned metric intervals. The M1 Pro timing protocol
+again includes whole-call preprocessing and uses three randomized-order
+repetitions. Table~\ref{tab:width-refinement} compares against full-width
+Sparse VUS on these same inputs.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{rrrrrr}
+\toprule
+$\varepsilon$ & $L$ & \shortstack{Median\\ratio} & Faster / 126 & \shortstack{Distinct\\widths (\%)} & \shortstack{Curve calls\\(\%)}\\
+\midrule
+0.01 & 30 & 0.835 & 27 & 16.1 & 16.1 \\
+0.01 & 100 & 0.905 & 46 & 7.9 & 7.9 \\
+0.01 & 300 & 1.313 & 100 & 4.7 & 7.3 \\
+0.001 & 30 & 0.615 & 4 & 54.8 & 80.6 \\
+0.001 & 100 & 0.426 & 11 & 39.6 & 74.3 \\
+0.001 & 300 & 0.391 & 25 & 25.4 & 53.8 \\
+\bottomrule
+\end{tabular}
+\caption{Full-width exact runtime divided by adaptive runtime. Width and
+curve-call columns are medians relative to $L+1$; cache eviction can make
+curve calls exceed the number of distinct widths. Values below one indicate
+that adaptive evaluation is slower.}
+\label{tab:width-refinement}
+\end{table}
+
+All 378 cases at both tolerances contain the full-width ROC and PR values
+within the separately declared $10^{-10}$ numerical audit allowance.
+Maximum midpoint errors are $0.003260$ and $0.000713$ for tolerances 0.01
+and 0.001. However, fewer width evaluations do not generally imply faster
+execution. Across all three maximum widths, median runtime ratios are
+0.966 and 0.467, with adaptive evaluation faster in 173 and 40 of 378 cases,
+respectively. At tolerance 0.01 and $L=300$, the geometric mean ratio is
+1.370 (series-bootstrap interval [1.207,1.557]); at the tighter tolerance,
+all three width groups have geometric mean ratios below one.
+The present implementation therefore provides useful enclosures, but the
+standalone fixed-tolerance strategy is often slower than exact evaluation.
+
+As a numerical decision replay, nonoverlapping PR intervals identify unique
+winners in 21, 17, and 15 of the 42 series at tolerance 0.01 for widths
+30, 100, and 300; the corresponding counts at tolerance 0.001 are 33, 32,
+and 34. All asserted winners agree with exact PR using the declared
+$2\cdot10^{-10}$ separation margin. These replay counts do not include
+additional decision-workload timing or establish a model-selection speedup.
+
+Separately authored validation directly constructs full-threshold curves
+for every both-class binary label vector of lengths two through seven,
+using four seeded score patterns per vector. It checks 13,776 widths and
+width enclosures and 960 discrete averages. The largest curve discrepancy
+is $6.67\cdot10^{-16}$ and the largest enclosure violation is
+$3.34\cdot10^{-16}$, within the declared $2\cdot10^{-12}$ allowance.
+A further 760 linear-programming comparisons of p-box extrema have maximum
+discrepancy $3.34\cdot10^{-16}$. Exhaustiveness concerns labels only, not all
+rankings or tie patterns; these checks audit the implementation and complement
+the real-arithmetic proofs.
+

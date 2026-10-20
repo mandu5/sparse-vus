@@ -330,3 +330,117 @@ PR values equal 1.0, while sampled-250 selects only TimesFM. Thus the unique
 exact-winner disagreements are 3, 4 and 4 out of 41 unique-winner tasks,
 respectively. Calling all 14 disagreements incorrect unique winners would
 overstate the result.
+
+## Completed cross-platform incremental-racing review
+
+The final combined report is
+[`selection-analysis/analysis.json`](../artifacts/advancement/selection-analysis/analysis.json),
+SHA-256
+`c985a62b74087d99f60a7afc440a369df272c34a5255b9f5905b3e3f5cf67c31`.
+It embeds successful post-run raw-record and released-data audits for fixed
+selection, macOS racing and Linux racing. Each data gate verifies the same
+42 actual label members and 126 actual score members, expanded into 378
+model-width identities. Raw racing JSONL hashes are:
+
+```text
+macOS fcd269e7e3d14c8bec2f94b186303dc28021273835841e01f043225c12fe688f
+Linux 28b8cb3f4d89b440aee352993d8486cbc4d30b21489a4e1ef993b19eb5a4d457
+```
+
+A separate stdlib-only reconstruction, importing neither the benchmark nor
+the audit modules, independently checked all 252 racing tasks and 504 racing
+outputs across the two architectures. It reconstructed exact tie sets,
+candidate and pruning decisions, bound containment, full-evaluation maps,
+unique-width and actual-curve accounting, each timing median, all comparator
+ratios and sums. It also compared every generated table row against those
+raw-record calculations and verified the report hash embedded in
+[`paper/selection_results.tex`](../paper/selection_results.tex).
+
+All checks passed. Sparse exact PR is bit-identical across the fixed-selection
+and both racing runs. Maximum disagreement among the exact racing baselines
+is `4.996003610813204e-16`; maximum enclosure slack is
+`3.3306690738754696e-16`. Every selected set, candidate set, excluded set,
+queried-width list, refinement count and work counter agrees across the two
+racing platforms.
+
+The following table uses the pruning variant. Each ratio is the median of
+42 separate task ratios, with the named exact method's time divided by
+racing time. The oracle takes the minimum time of the three independently
+measured exact methods for each task; it is an analytical comparator.
+
+| Platform | Width | Sparse | Dense direct | Dense nearest | Oracle | Faster than oracle |
+|---|---:|---:|---:|---:|---:|---:|
+| macOS arm64 | 30 | 0.8289 | 2.2282 | 2.0822 | 0.8289 | 8/42 |
+| macOS arm64 | 100 | 0.7150 | 2.2190 | 2.2214 | 0.6777 | 11/42 |
+| macOS arm64 | 300 | 1.1769 | 4.2634 | 2.2916 | 1.0629 | 22/42 |
+| Linux x86_64 | 30 | 0.8174 | 1.6970 | 2.1825 | 0.7962 | 8/42 |
+| Linux x86_64 | 100 | 0.7567 | 2.2883 | 2.2471 | 0.7043 | 10/42 |
+| Linux x86_64 | 300 | 1.3759 | 4.7110 | 3.1132 | 1.2160 | 26/42 |
+
+Both platforms show a positive median only in the width-300 stress regime.
+Neither shows reduced total evaluator time against sparse exact at any width:
+
+| Platform | Width | Sum of sparse task medians, seconds | Sum of racing task medians, seconds |
+|---|---:|---:|---:|
+| macOS arm64 | 30 | 1.670 | 2.195 |
+| macOS arm64 | 100 | 2.502 | 4.378 |
+| macOS arm64 | 300 | 6.249 | 10.615 |
+| Linux x86_64 | 30 | 1.513 | 1.909 |
+| Linux x86_64 | 100 | 2.602 | 4.180 |
+| Linux x86_64 | 300 | 7.051 | 10.522 |
+
+Geometric-mean oracle ratios at width 300 are also below one: macOS 0.7735
+and Linux 0.9344. The report's descriptive series-bootstrap 95% intervals are
+`[0.5959, 1.0074]` and `[0.7155, 1.2233]`, respectively; family-bootstrap
+intervals are `[0.5742, 1.0408]` and `[0.6895, 1.2572]`. The mean log ratio is
+negative in 13 of 23 macOS families and 12 of 23 Linux families. These interval
+values were inspected in the final report, not independently recomputed by
+the stdlib check. Their generator was statically reviewed: it resamples
+complete clusters and calculates an observation-weighted geometric mean.
+These are not confidence intervals for the reported median, nor evidence
+of generalization beyond the fixed corpus.
+
+The work counts below are identical across architectures. Full evaluations
+count models, not tasks. Fractions are medians of per-task counts divided by
+`3 * (width + 1)`.
+
+| Width | Unique curves, prune / no-prune | Actual curves, prune / no-prune | Fully evaluated models | Pruned median unique / actual fraction |
+|---|---:|---:|---:|---:|
+| 30 | 1,382 / 1,517 | 1,589 / 1,783 | 18 / 18 | 0.1828 / 0.1828 |
+| 100 | 3,523 / 3,957 | 5,262 / 6,186 | 3 / 3 | 0.1634 / 0.2822 |
+| 300 | 7,173 / 8,245 | 12,277 / 14,645 | 3 / 3 | 0.1047 / 0.1617 |
+
+All 41 unique-winner tasks per width exit via interval separation. At width
+30, five of those tasks have already evaluated every model fully; the
+remaining task at each width returns the exact three-way tie. Pruning's
+median time benefit over the no-prune variant is 1.022/1.032/1.094 on macOS
+and 1.018/1.056/1.088 on Linux. The saved queries therefore demonstrate an
+algorithmic work reduction, while complete latency must be judged separately.
+
+The five final analysis-review findings were addressed before the combined
+report was generated: actual OS prefixes are checked alongside architecture;
+each exact comparator has separate statistics; generated fallback and sampled
+disagreement counts come from the report; tie disagreements are distinguished
+from unique-winner disagreements; and the paper explicitly contrasts positive
+median ratios with higher total runtime. The reviewed generated text matches
+the data and states that this is an algorithm follow-up chosen after observing
+fixed-tolerance overhead. It does not claim detector-training/inference gains,
+preregistration, independent scientific peer review, or formal Float64 interval
+certification.
+
+## Release-preflight addendum
+
+The final read-only preflight inspected commit `598c466` plus the current
+working documentation and analyzers. All 36 measured-source hash bindings
+across the six advancement runs, all six environment-to-protocol bindings,
+and all 11 frozen robustness bindings were recomputed and matched. Measured
+sources remain unchanged.
+
+README commands, `run_advancement.sh`, `create_reproduction_workspace.py`,
+`pyproject.toml`, public module imports and the installed-wheel smoke-check
+contract were reviewed together. No concrete blocker was found: the original
+v0.1.0 workspace workflow is distinguished from the v0.2.0 follow-up; new
+measurements use a separate output directory; package discovery includes the
+new modules; and the NumPy-only base installation and optional compiled imports
+match the documented API. Both final analysis commands are present in README.
+This preflight did not rerun benchmarks, installations or tests.

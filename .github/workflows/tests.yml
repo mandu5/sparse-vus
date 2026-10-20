@@ -46,3 +46,8 @@ jobs:
       - run: /tmp/sparse-vus-wheel-check/bin/python -m pip install dist/*.whl
       - name: Verify the installed base package without optional Numba
         run: /tmp/sparse-vus-wheel-check/bin/python experiments/check_installed_package.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-python-distributions
+          path: dist/*
+          if-no-files-found: error

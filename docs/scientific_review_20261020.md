@@ -13,38 +13,39 @@ the manuscript/width files had uncommitted changes. Conclusions below
 concern the files inspected during this session, not an immutable release.
 The follow-up review below inspected the racing implementation at source
 SHA-256 `71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b`.
-The fixed-width experiment is now complete; complete selection/racing
-outcomes remain pending.
+The fixed-width, fixed-selector and both racing experiments are now complete.
+The final assessment below includes all of them.
 
 ## Recommendation
 
-**Continue through one decision-latency experiment, then make a submission
-decision. Do not currently advertise global SOTA or established PVLDB
-readiness.** The exact evaluator has a defensible, bounded algorithmic claim
-and useful published-code results. The merge-aware width method supplies a
-more substantial conceptual extension, but its practical contribution was
-initially unmeasured. The completed fixed-tolerance width experiment now
-shows a restricted benefit: the 0.01 setting is slower at widths 30 and 100
-and faster at width 300; the 0.001 setting is slower at every tested width.
-This does not support a general adaptive-evaluation speedup claim.
+**Stop algorithm iteration and release the complete, honest research
+artifact. Use exact scalar evaluation as the practical main contribution;
+present width bounds and racing as sound extensions with measured limits.**
+The fixed-tolerance selector loses to sparse exact at every width in median
+runtime. Incremental racing agrees with exact selection on all 126 tasks
+on both platforms and improves the median per-task ratio at width 300,
+but increases the sum of task medians at every tested width on both
+platforms. Neither supports a general faster-selection claim.
 
-The new incremental PR race is a coherent, disclosed post-hoc response to
-fixed-tolerance overhead. Source and proof inspection found no blocking
-real-arithmetic correctness defect. Its complete decision latency is still
-unknown, so its existence does not upgrade the submission recommendation.
+**TMLR is my recommended primary venue to assess for this completed
+scientific package. I do not recommend PVLDB as the next submission on the
+current evidence.** This is a judgment about the contribution's scope and
+demonstrated utility, not an editorial decision or acceptance probability.
+The exact method, comparative evaluation, failure examples and documented
+adaptive-cost limits support a bounded ML-evaluation paper. TMLR still
+requires clear lessons for its audience, accurate claims and substantive
+human authorship; this review does not establish those human conditions.
 
-If aiming at PVLDB, **Regular Research / Foundations and Algorithms** is the
-appropriate category. The present paper is substantially more coherent in
-that category than EA&B. My current scientific recommendation would be
-**not ready for submission to PVLDB**, with significance and experimental
-utility the central unresolved issues; I do not identify a demonstrated
-mathematical failure from the inspected material.
+If the authors nevertheless choose PVLDB, **Regular Research / Foundations
+and Algorithms** remains the appropriate category. EA&B is not an easier
+fallback. The coherent mathematics makes PVLDB scope arguable, but the
+remaining novelty is narrower after Klein and the completed decision study
+does not demonstrate the broader benefit that would make me recommend it.
+No mathematical failure was found that negates the exact or width results.
 
-If the decisive experiment is negative, preserve the exact evaluator and the
-negative result instead of enlarging the project indefinitely to rescue a
-venue target. A tightly scoped TMLR paper on reliable, efficient evaluation
-of anomaly detectors is a more defensible alternative to investigate.
-TMLR acceptance is not established either.
+Global SOTA, proven priority, formal Float64 certification, external
+reproduction and conference readiness remain unsupported. No further
+algorithm variant or larger benchmark is requested by this assessment.
 
 ## What has and has not been established
 
@@ -58,7 +59,7 @@ TMLR acceptance is not established either.
 | Are merge-aware bounds conceptually sound? | The independent in-session review validates the coordinate ordering, PR p-box construction and discrete averaging invariant in real arithmetic. | A substantive method candidate, with a precise mathematical scope. This review is not a second laboratory reproduction. |
 | Does the implementation provide a formal Float64 certificate? | Ordinary Float64 with an empirical guard; no directed rounding or accumulated-error proof. | No. Numerical audits support measured decisions only. |
 | Is threshold approximation sensitivity explained solely by padding? | PR reversals persist under both fixed corrections: 84 original, 93 fill, 95 suffix; five per variant have both margins at least 0.01. | No. However most changes are small, and none establishes which detector is operationally better. |
-| Do the adaptive bounds save useful work? | The completed 378-case macOS experiment has median ratios 0.966 at tolerance 0.01 and 0.467 at 0.001. The 0.01 setting reaches 1.313 at width 300, but loses at widths 30 and 100. Complete selection and racing outcomes remain pending. | Width omission is mathematically useful but is not yet a general practical speedup. Fewer queried widths alone is not an answer. |
+| Do the adaptive bounds save useful work? | Fixed-width medians are 0.966 overall at tolerance 0.01 and 0.467 at 0.001. Fixed selection loses at every width. Racing improves the width-300 median ratio, but raises the sum of task medians at every width on both platforms. | Width omission is mathematically useful and occasionally faster; a general or net-workload speedup over sparse exact is contradicted by the completed selection measurements. |
 
 The numbers above were read from
 `artifacts/advancement/linux-baseline/summary.json` and
@@ -121,21 +122,20 @@ mechanism prevents a global fastest or exclusive-priority claim. It is not a
 reason to demand an endless search or contact authors before any bounded
 paper can be written.
 
-## Ranked scientific blockers
+## Ranked scientific limits after the completed experiments
 
-### 1. The new width method has not demonstrated a useful decision-cost gain
+### 1. Adaptive selection does not reduce aggregate cost on this workload
 
-This is the most important remaining experiment. A certificate can be valid
-and still cost more than computing the answer, as the completed fixed-width
-experiment now demonstrates. Fixed tolerance also need not be tight enough
-to distinguish nearby detectors. Metric-only certificate measurements do not
-by themselves measure a complete exact-compatible model-selection task with
-all fallback work included. The fixed-tolerance selector and subsequent
-incremental race must retain separate source, timing and outcome records.
+This was the decisive open question, and the completed experiment now gives
+a bounded negative answer. The fixed selector's median ratio is below one
+at all widths; racing's width-300 median gain coexists with greater total
+task cost on both platforms. A certificate can be valid and still cost more
+than computing the answer. The exact evaluator is the practical default
+supported by this workload, while bounds remain a valid analytical result.
 
-**Closure:** run the single frozen selection experiment below. It should be
-allowed to fail. Report absolute milliseconds, totals, width-specific gains,
-fallback fractions, and all losses.
+**Disposition:** retain the failed fixed-tolerance design, the disclosed
+racing follow-up, their costs and all losses. The decision experiment is
+closed; do not keep it open merely because its result is inconvenient.
 
 ### 2. Significance is not established by corpus size or relative speed alone
 
@@ -146,9 +146,11 @@ audit's sum of metric medians shows that absolute savings can be small;
 this cannot be translated into end-to-end inference or operational savings.
 Most observed ranking reversals also have small margins.
 
-**Closure:** state one actual computational task and measure its full cost.
-The proposed selection task is enough for this continuation; training new
-models, adding a GPU system, or gathering user adoption are not prerequisites.
+**Disposition:** the complete selection task has now been measured. Its
+negative total-cost result limits the significance claim; it does not
+erase the exact evaluator's acceleration. Training new models, adding a
+GPU system, or gathering user adoption are not prerequisites for releasing
+this honest result.
 If gains arise only at width 300, call that a stress regime unless its scale
 is justified for the inspected data. The original VUS paper permits widths
 based on period, anomaly length or user choice; that general permission does
@@ -196,11 +198,11 @@ evaluation problem without inventing a deployment. It is a plausible scope
 case, not a confirmed editorial judgment. More rhetoric cannot compensate
 for an unhelpful experiment.
 
-## Decisive workload: time to an audited exact-compatible PR selection
+## Preserved protocol: time to an audited exact-compatible PR selection
 
 The root agent proposed the following bounded protocol after the initial
 recommendation and before inspecting its pipeline outcomes. This reviewer
-endorses it with the qualifications below. It reuses the frozen 42-series
+endorsed it with the qualifications below. It reuses the frozen 42-series
 metadata-only selection; it does not select favorable score patterns.
 
 **Task.** For each of 42 series and maximum widths 30, 100 and 300, select the
@@ -314,8 +316,8 @@ These figures were read from `artifacts/advancement/analysis/analysis.json`,
 `mac-certified/summary.json` and `mac-certified/environment.json`. The
 analysis binds certified measurements to
 `32000ea30f876f47c4b421912c6f77b0902b5f0e396acc78d482ec3a544f11d4`.
-The complete fixed-tolerance selection experiment is still necessary to
-measure fallback cost; the table above is not that result.
+The completed fixed-tolerance selection experiment below measures fallback
+cost; the table above is the distinct scalar-evaluation result.
 
 The follow-up `race_pr_models` addresses three specific costs: it keeps each
 model's preparation, refines according to PR uncertainty rather than a joint
@@ -378,22 +380,119 @@ successful Linux Python 3.11/3.12 jobs at commit
 `cb2b60d633c4b7ee3be50644864bde20fd022296`. That CI status supports its
 executed checks; it does not establish new runtime results.
 
-**Current gate:** finish and analyze the already authorized fixed-selector
-and racing runs, including separate executable exact baselines. Racing
-latency, its winner-set agreement on all 126 tasks, absolute savings and
-worst losses remain unknown in this review. A favorable result would
-strengthen a narrow practical contribution; it would not by itself establish
-global SOTA, external reproduction or venue acceptance. A negative result
-should narrow the main practical claim rather than trigger an open-ended
-series of further method variants.
+## Final measured selection outcome
+
+All three completed runs have PASS receipt reconstructions in
+`artifacts/advancement/selection-analysis/analysis.json`: macOS fixed
+selection, macOS racing and Linux racing. Every fixed-selector and racing
+winner set agrees with the corresponding all-model exact result. Each run
+uses the same 126 tasks; two platforms are not 252 distinct input tasks.
+This reviewer read the results and post-run audit outputs, without rerunning
+the numerical or timing kernels.
+
+The fixed-tolerance selector's median sparse-exact/selector ratios are
+0.579, 0.569 and 0.738 for widths 30, 100 and 300. The sum of case medians
+also increases at every width. The fixed-250 comparator disagrees on 4/42,
+5/42 and 5/42 selected sets. Of those, 3, 4 and 4 concern a unique exact
+winner; one case per width breaks an exact three-way tie. These are
+differences in the specified numerical selection task, not evidence that
+one detector has higher real-world utility.
+
+| Platform | Width | Racing median ratio vs sparse exact | Faster tasks / 42 | Sparse exact sum of task medians (s) | Racing sum of task medians (s) |
+|---|---:|---:|---:|---:|---:|
+| macOS arm64 | 30 | 0.829 | 8 | 1.670 | 2.195 |
+| macOS arm64 | 100 | 0.715 | 12 | 2.502 | 4.378 |
+| macOS arm64 | 300 | 1.177 | 23 | 6.249 | 10.615 |
+| Linux x86 | 30 | 0.817 | 8 | 1.513 | 1.909 |
+| Linux x86 | 100 | 0.757 | 13 | 2.602 | 4.180 |
+| Linux x86 | 300 | 1.376 | 26 | 7.051 | 10.522 |
+
+The comparator in this table is the executable sparse exact selector.
+The manuscript additionally reports a per-task oracle over three exact
+implementations; its win counts are different and must not be substituted
+under this table's label. Totals are sums of separately measured task
+medians, not the elapsed duration of a separately executed batch job.
+
+Across all widths the same aggregate is 17.187 versus 10.420 seconds on
+macOS, and 16.611 versus 11.166 seconds on Linux. Thus racing takes about
+1.649x and 1.488x the sparse exact total, respectively. A positive median
+per-task ratio at width 300 does not establish net workload savings.
+“Racing speeds selection up by 1.38x” without this restriction would be
+misleading.
+
+Each width has 41 unique exact winners and one exact-tie task. Racing
+returns via bound separation on the 41 unique-winner tasks; the audit
+records five width-30 tasks where all models had already been fully
+evaluated before that return. Therefore even the `early_winner` flag
+cannot be equated with saved width work. Median unique query fractions
+are 18.3%, 16.3% and 10.5%; median actual curve fractions are 18.3%, 28.2%
+and 16.2%. This distinction confirms why width-count reduction alone is
+an insufficient cost claim.
+
+The pruning ablation has a modest measured effect: no-pruning time divided
+by pruning time has median ratios 1.022/1.032/1.094 on macOS and
+1.018/1.056/1.088 on Linux. It does not reverse the overall conclusion.
+The racing runs compare against three freshly timed compiled exact
+implementations. They do not independently measure racing against Klein;
+Klein's direct timings belong to the separate exact and fixed-selector
+experiments.
+
+Receipt identities:
+
+- Fixed selection:
+  `0eb9e33dcea8beecf0ffc6e50165d66d89f89aa9c2be0b25aeb3ce46a5937137`.
+- macOS racing:
+  `fcd269e7e3d14c8bec2f94b186303dc28021273835841e01f043225c12fe688f`.
+- Linux racing:
+  `28b8cb3f4d89b440aee352993d8486cbc4d30b21489a4e1ef993b19eb5a4d457`.
+
+**Final scientific gate:** the bounded experiment is complete. Release the
+exact algorithm, mathematical extension, all three adaptive experiments,
+raw outcomes and limitations together. Keep sparse exact as the recommended
+implementation for the tested selection workload. Stop algorithm iteration.
+The remaining work is truthful presentation, artifact finalization and
+substantive human review, not another search for a favorable benchmark.
+
+## Defensible research and CV claims
+
+These are claims about the project evidence. First-person wording or
+sole-credit claims must match the human author's actual contribution and
+ability to explain the work; automated output does not establish authorship.
+
+| Supported project claim | Boundary that must stay attached |
+|---|---|
+| Exact support-event VUS evaluation with an `O(n log(Q+1)+(L+1)Q)` upper bound. | Exactness refers to the pinned scalar metric in real arithmetic; Float64 parity is empirical, not bitwise or formally rounded. |
+| Evaluated on 350 public series, 23 families and 2,100 model/width cases on each of two architectures. | The platforms reuse the same cases; do not call them 4,200 independent datasets or applications. |
+| Median 4.55x Linux / 8.38x macOS speedup against pinned Klein full-threshold PR, with wins in all 2,100 cases per platform. | Name the comparator, full-threshold setting and PR-only API; the proposed evaluator returns both ROC and PR. This is not global SOTA. |
+| Median 1.35x Linux / 2.04x macOS against the per-case fastest tested dense/Klein comparator. | This is an oracle comparison and includes 574/209 losses respectively; it is not a uniformly fastest algorithm. |
+| Derived merge-aware real-arithmetic bounds and evaluated an incremental PR selection method. | General p-box tools are prior art; universal Float64 certification and exclusive novelty priority are not established. |
+| All 126 racing selections match exact selection on both platforms under the audit convention. | They are repeated measurements of the same fixed task set; racing increases aggregate cost and does not improve detector quality. |
+| Documented threshold-approximation order sensitivity that persists under two padding interventions. | Most reversals have small margins; these are numerical metric-order effects, not measured operational model improvements. |
+
+A concise, evidence-aligned project description is:
+
+> **Sparse VUS — AI-assisted research software for exact time-series anomaly
+> metric evaluation.** Support-event evaluation with a proved real-arithmetic
+> complexity bound; benchmarked on 350 public series across Linux and macOS,
+> with 4.55x/8.38x median speedups against a pinned full-threshold fast-VUS
+> PR baseline. Developed and audited width bounds and PR racing, reporting
+> their negative aggregate-cost results.
+
+Use “developed” only to the extent it accurately describes the listed
+person's substantive contribution. Until a real submission or decision
+exists, list the work as a research project or preprint, not a publication
+at PVLDB/TMLR. Do not claim acceptance, external peer review, independent
+laboratory reproduction, formal machine certification, universal speedup,
+state-of-the-art detector accuracy, deployed adoption, or downstream
+business impact.
 
 ## Venue comparison
 
 | Venue or category | Fit judgment | Qualification |
 |---|---|---|
-| PVLDB 2027 Regular / Foundations and Algorithms | Correct PVLDB category and a credible stretch target if the decision experiment demonstrates useful gains. | Its core contribution can be algorithmic and formal, but scope, novelty and benefit remain review questions. |
+| PVLDB 2027 Regular / Foundations and Algorithms | Correct PVLDB category, but not my recommended next submission given the completed decision-cost results and narrow novelty delta. | Its core contribution can be algorithmic and formal. This assessment does not prove it would be rejected; it finds the current case insufficiently compelling to recommend the stretch. |
 | PVLDB EA&B | Poor fallback for the present paper. | The main scientific result is a proposed algorithm. The current three-model corpus is not a comprehensive evaluation paper yielding broad new conclusions about existing methods. |
-| TMLR | Most defensible alternative to investigate now for the bounded paper. | Frame the work as reliable numerical evaluation of anomaly detectors and explain the actionable lesson for ML evaluation. Its official criteria prioritize evidence and audience interest, explicitly not SOTA or novelty alone. This is not a promise of acceptance or of a conference presentation. |
+| TMLR | Recommended primary venue to assess for the completed bounded paper. | Lead with exact evaluation and clear lessons about sampling and bound overhead. Its official criteria prioritize evidence and audience interest, explicitly not SOTA or novelty alone. Substantive human authorship remains necessary; acceptance or conference presentation is not promised. |
 | ALENEX | Particularly good thematic fit for the algorithm-engineering version. | Official scope emphasizes implementation and extensive experimental analysis of nontrivial algorithms. ALENEX27's July 20, 2026 deadline has passed; a future cycle requires a new live deadline check. |
 | JOSS | Not an automatic immediate route. | The current policy asks for demonstrated research impact and substantive research software, and excludes minor/single-function utilities. A clean release and many tests alone do not establish this fit. |
 
@@ -448,10 +547,13 @@ The main local evidence inspected was:
   and environment
 - `src/sparse_vus/racing.py`, its selection/width dependencies,
   `tests/test_racing.py` and `docs/incremental_pr_racing_20261020.md`
+- Fixed-selection and both racing summaries, embedded post-run audits in
+  `artifacts/advancement/selection-analysis/analysis.json`, and the generated
+  `paper/selection_results.tex`
 
 The existing review supports the real-arithmetic mathematics; this review
 evaluates the resulting scientific story and experiment sufficiency, and
 the follow-up directly inspects the racing invariant and implementation.
-Fixed-width timings are now available; complete fixed-selector and racing
-outcomes remain pending. Future successful measurements can change the readiness judgment;
-they cannot retroactively make this review external peer review.
+All planned fixed-width, fixed-selector and racing outcomes are now included.
+The research continuation assessed here is complete. This review remains an
+internal AI-assisted assessment, not external scientific peer review.

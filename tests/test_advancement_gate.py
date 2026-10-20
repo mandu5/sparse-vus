@@ -91,10 +91,20 @@ def write_run(path, rows, *, mode="baseline", platform="macOS-test", machine="ar
     # ROOT is replaced by the fixture, so these are the only source bytes read.
     source = path.parent / "fixture_source.py"
     source.write_text("FIXTURE = 'bound source, not a metric implementation'\n")
+    hashes = {"fixture_source.py": sha_bytes(source.read_bytes())}
+    required = ["experiments/benchmark_advancement.py",
+                "src/sparse_vus/core.py", "src/sparse_vus/compiled.py"]
+    required += (["experiments/fast_vus_adapter.py", ".cache/fast_vus/fast_vus.py"]
+                 if mode == "baseline" else ["src/sparse_vus/certified.py"])
+    for name in required:
+        target = path.parent / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(source.read_bytes())
+        hashes[name] = sha_bytes(target.read_bytes())
     write_json(path / "environment.json", {
         "platform": platform, "machine": machine,
         "protocol_sha256": sha_bytes((path / "protocol.json").read_bytes()),
-        "source_sha256": {"fixture_source.py": sha_bytes(source.read_bytes())},
+        "source_sha256": hashes,
     })
     write_json(path / "summary.json", {
         "status": "PASS", "cases": len(rows), "measurements_sha256": sha_bytes(raw),
@@ -186,6 +196,16 @@ def test_changed_measured_source_is_rejected(run_factory):
     path, _ = run_factory()
     (path.parent / "fixture_source.py").write_text("FIXTURE = 'different code'\n")
     with pytest.raises(ValueError, match="source differs"):
+        analyzer.read_run(path)
+
+
+@pytest.mark.parametrize("mode", ["baseline", "certified"])
+def test_omitting_required_source_binding_is_rejected(run_factory, mode):
+    path, _ = run_factory(mode)
+    environment = json.loads((path / "environment.json").read_text())
+    environment["source_sha256"].pop("src/sparse_vus/compiled.py")
+    write_json(path / "environment.json", environment)
+    with pytest.raises(ValueError, match="missing required measured source"):
         analyzer.read_run(path)
 
 

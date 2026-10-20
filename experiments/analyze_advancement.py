@@ -31,6 +31,18 @@ def read_run(path):
         (path / "protocol.json").read_bytes()
     ).hexdigest():
         raise ValueError("protocol/environment binding mismatch")
+    required_sources = {
+        "experiments/benchmark_advancement.py",
+        "src/sparse_vus/core.py", "src/sparse_vus/compiled.py",
+    }
+    if protocol["mode"] == "baseline":
+        required_sources.update(("experiments/fast_vus_adapter.py", ".cache/fast_vus/fast_vus.py"))
+    elif protocol["mode"] == "certified":
+        required_sources.add("src/sparse_vus/certified.py")
+    else:
+        raise ValueError("unknown advancement mode")
+    if not required_sources <= set(environment["source_sha256"]):
+        raise ValueError("missing required measured source binding")
     for name, expected in environment["source_sha256"].items():
         source = (ROOT / name).resolve()
         if not source.is_relative_to(ROOT) or not source.is_file():

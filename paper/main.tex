@@ -12,33 +12,43 @@
 \newcommand{\FPR}{\mathrm{FPR}}
 \newcommand{\Prec}{\mathrm{Prec}}
 \input{results.tex}
-\title{Sparse-Support Event Elimination for Exact VUS Evaluation}
-\author{Anonymous research artifact}
-\date{20 October 2026\\\small Working manuscript}
+% The marked title, abstract, and body also generate the PVLDB counterpart.
+\title{Exact and Error-Bounded VUS Evaluation\\through Sparse Events and Width Geometry}
+\author{Author name, affiliation, and email pending}
+\date{20 October 2026\\\small Working manuscript; unsubmitted}
 \begin{document}
 \maketitle
 \begin{abstract}
-Volume Under the Surface (VUS) evaluates time-series anomaly scores across both
-thresholds and tolerance widths. Its threshold-dependent label mass makes a
-naive replacement by a weighted ROC curve incorrect. We show that thresholds
-admitting only positions outside the maximum anomaly support can be removed
-exactly, provided the intervening negative rectangle and subsequent support
-transition are integrated separately. Sorting only support scores and
-histogramming all remaining scores gives exact scalar VUS-ROC and VUS-PR in
-$O(n\log(Q+1)+(L+1)Q)$ time and $O(n+Q)$ memory, where $Q$ counts positions in
-the maximum expanded anomaly support and $L$ is the largest buffer width.
-The algorithm preserves a precisely pinned existing metric.
-We verify equivalence against the unmodified official implementation and
-evaluate \NumSeries{} public series with \NumScores{} released foundation-model
-score vectors. The compiled implementation achieves a median
-\MedianSpeedup{} speedup over the fastest of three NumPy/Numba dense
-implementations. The 250-threshold approximation changes 84 of 2,100 VUS-PR
-model-pair orders, affecting 55 series, and has maximum absolute error 0.583.
-The result provides a support-sensitive reduction with an explicit
-exactness proof and makes full-threshold evaluation practical without
-sampling-induced ranking changes.
+Volume Under the Surface (VUS) averages time-series anomaly-detection areas
+over score thresholds and tolerance widths. We reduce computation along both
+axes while preserving a pinned metric definition. First, thresholds outside
+the maximum anomaly support contribute analytically integrable ROC rectangles
+and zero PR area. Sorting support scores and counting remaining scores yields
+exact scalar VUS-ROC and VUS-PR in
+$O(n\log(Q+1)+(L+1)Q)$ time and $O(n+Q)$ memory, where $Q$ is the expanded
+support size and $L$ the largest width. Support restriction and cumulative
+sums are prior techniques; our reduction eliminates inactive threshold events.
+Second, expanded-interval merge events partition the width range into regions
+with ordered ROC coordinates. A probability-box expectation bound encloses PR
+without assuming monotone PR area. Adaptive refinement bounds the discrete
+width average to a requested half-width in real arithmetic; the float64
+implementation is numerically audited, not a directed-rounding certificate.
+Experiments use \NumSeries{} public series and \NumScores{} released score
+vectors. Against released fast-VUS computing PR only, the paired ROC/PR
+evaluator has median speedups of $8.38\times$ and $4.55\times$ on two CPU systems.
+Against the fastest tested comparator, including dense methods, the medians
+are $2.04\times$ and $1.35\times$; Sparse VUS is slower or equal in 209 and
+574 of 2,100 cases, respectively.
+Width refinement evaluates fewer curves but is often slower at tight tolerances.
+Incremental PR racing gives median speedups at width 300, yet increases the
+sum of per-task median latencies on both machines; both extensions remain optional.
+The reference's 250-threshold approximation changes 84 of 2,100 PR pair
+orders; 75 and 74 persist after two fixed padding interventions.
+The results distinguish exact-integration gains from the cost of
+error-bounded width reduction.
 \end{abstract}
 
+% BEGIN SHARED BODY
 \section{Introduction}
 VUS averages range-aware ROC or precision--recall integrals across tolerance
 widths, accounting for both overlap and whether an anomaly interval is hit
@@ -47,12 +57,23 @@ excluded VUS because of computational cost \cite{esa2024}. That observation
 motivates speed improvements; it does not establish suitability for ESA-ADB's
 other evaluation requirements.
 
-The official optimized evaluator partitions static and dynamic labels but still
-visits sampled thresholds repeatedly \cite{boniol2025}. A straightforward dense
-exact rank sweep avoids repeated threshold scans by scanning the full sequence
-once per width. Our key observation is that only positions near labeled
-anomalies can change the weighted positive state. All other score thresholds
-have an analytically integrable effect.
+The official optimized evaluator partitions static and dynamic labels and
+restricts work to maximum-width anomaly support \cite{boniol2025}.
+Klein's released fast-VUS further sorts support scores and uses cumulative
+weighted sums \cite{klein2026}. These optimizations already avoid much repeated
+work. We instead ask which threshold events can be eliminated altogether,
+and which widths can be omitted with a quantified error. Only positions near
+labeled anomalies change the weighted positive state. Other thresholds have
+an analytically integrable effect, but removing them requires preserving a
+ROC rectangle before each support transition.
+
+Width reduction requires a different argument. Expanded anomaly intervals
+can merge, changing existence reward discontinuously. Between merge events,
+we prove coordinate order and monotone ROC area. PR area need not be monotone
+even there. We express it as an expectation under recall increments and apply
+established p-box bounds \cite{utkin2009,troffaes2011}. This yields an adaptive
+discrete-width average with separate lower and upper limits, rather than a
+fixed width subsample with unknown error.
 
 Exact evaluation also avoids an accuracy limitation of a fixed uniform-rank
 threshold grid. At width zero, place the only anomaly at score rank two and
@@ -65,7 +86,8 @@ specific to the sparse evaluator.
 
 Our target is the pair of scalar outputs of
 \texttt{RangeAUC\_volume\_opt}, with \texttt{thre=n}, in TheDatumOrg/VUS commit
-\texttt{467bace0c103f5c2bdb4900306d82939bcac8ff9}. Tied repeated thresholds add
+\texttt{467bace0} (the full revision and file hashes are in the artifact).
+Tied repeated thresholds add
 zero area. The target includes dynamic label mass, sum-and-clip overlapping
 ramps, expanded-interval existence reward, ROC trapezoids, the terminal
 $(1,1)$ ROC point, and the PR right-endpoint step integral. Other historical
@@ -83,19 +105,20 @@ one. For $w=0$ no ramp is added.
 
 At threshold $t$, define $p_i(t)=\ind\{s_i\ge t\}$ and
 \begin{align}
- C(t)&=\sum_i p_i(t), &\TP(t)&=\sum_i a_i^{(w)}p_i(t),\\
- B(t)&=\sum_i(1-y_i)a_i^{(w)}p_i(t), &P(t)&=P_0+B(t)/2,\quad N(t)=n-P(t).
+ C(t)&=\sum_i p_i(t),\qquad \TP(t)=\sum_i a_i^{(w)}p_i(t),\\
+ B(t)&=\sum_i(1-y_i)a_i^{(w)}p_i(t),\\
+ P(t)&=P_0+B(t)/2,\qquad N(t)=n-P(t).
 \end{align}
 The identity for $P(t)$ follows by resetting original positive labels to one
 after thresholding the buffer labels, then averaging their mass with $P_0$.
 Let $K_w$ be the number of expanded intervals and $H(t)$ the number containing
 a predicted positive. Overlapping expansions merge; adjacent nonoverlapping
 expansions remain separate, matching the reference. The curve coordinates are
-\begin{equation}
- \TPR(t)=\min\{\TP(t)/P(t),1\}\frac{H(t)}{K_w},\qquad
- \FPR(t)=\frac{C(t)-\TP(t)}{N(t)},\qquad
+\begin{align}
+ \TPR(t)&=\min\{\TP(t)/P(t),1\}\frac{H(t)}{K_w},\\
+ \FPR(t)&=\frac{C(t)-\TP(t)}{N(t)},\qquad
  \Prec(t)=\frac{\TP(t)}{C(t)}.
-\end{equation}
+\end{align}
 Here $N(t)>0$ because $P(t)\le(n+P_0)/2<n$. ROC uses trapezoids from the origin
 through all distinct descending thresholds to the explicit terminal $(1,1)$.
 PR is $\sum_j(\TPR_j-\TPR_{j-1})\Prec_j$, with initial recall zero. VUS is
@@ -199,15 +222,31 @@ implementation retains per-width areas and uses an additional $O(L)$ space.
 For dense support, $Q=\Theta(n)$, no asymptotic improvement over a dense sweep
 is promised. The analysis establishes an upper bound.
 
+\input{width_method.tex}
+\input{racing_method.tex}
+
 \section{Prior art and implementation comparisons}
 Boniol et al. introduce optimized VUS implementations with static/dynamic
 label splitting, maximum-buffer support restriction, and memory tradeoffs
-\cite{boniol2025}; those are substantive
-prior optimizations. Sylligardos reports preliminary VUS speedups up to two
+\cite{boniol2025}; these are substantive prior optimizations.
+Klein's Apache-2.0 fast-VUS implementation, first committed on 12 October
+2026, computes support-score cumulative sums, globally sorts all scores, and
+evaluates the selected thresholds at every width \cite{klein2026}.
+At audited revision \texttt{1bae859f}, passing \texttt{thre=n} gives full-threshold
+PR with the target's dynamic mass, sum-and-clip ramps, expanded-interval
+existence reward, and right-endpoint integration. Its API returns PR only;
+our measured API computes ROC and PR together. Default 250-threshold and
+full-threshold calls are distinguished in every comparison.
+We do not claim support restriction, sorting support scores, or cumulative
+sums as new. The remaining exact reduction removes inactive threshold events,
+including their ROC contribution, and obtains prediction counts without
+globally sorting all scores. Width enclosures are a separate contribution.
+
+Sylligardos reports preliminary VUS speedups up to two
 orders on CPU and three on GPU over approximately 1,900 TSB-UAD series
 \cite{sylligardos2025}. That workshop paper does not disclose the detailed
 algorithm, and a corresponding released implementation was not located in our
-19 October 2026 search. Its mechanism could overlap with ours. We therefore
+20 October 2026 source audit. Its mechanism could overlap with ours. We therefore
 do not claim the first fast VUS implementation, the first 100-fold acceleration,
 or demonstrated superiority over that method.
 
@@ -227,6 +266,15 @@ dependency-isolating adapter, obtain both integrals from one curve calculation,
 and use one thread. Its support restriction differs from eliminating entire
 negative-only threshold runs and aggregating all support events in one pass.
 Both default 250-threshold and full-threshold variants are evaluated.
+
+P-box lower and upper expectations for nonmonotone functions are established
+by Utkin and Destercke \cite{utkin2009}; Troffaes and Destercke develop p-box
+inference on totally preordered spaces \cite{troffaes2011}.
+Our application uses the ordered support-event index as the state space and
+endpoint recall as CDF bounds. The VUS-specific work is the merge partition,
+coordinate-order proof, and adaptive integration over integer widths.
+The source audit located no disclosed VUS algorithm with these width
+enclosures, but this bounded search does not establish priority.
 
 \section{Experimental protocol}
 The protocol, exact source hashes, score archive selection, and a pre-outcome
@@ -287,38 +335,99 @@ not score vectors or width/model repetitions, are the units for uncertainty
 summaries. These are changes in ordering induced by metric computation, not
 claims that one model is superior.
 
+The padding sensitivity protocol was fixed after observing the original
+results and padding inventory, before evaluating its transformations.
+For Chronos-Bolt and Time-MoE, \emph{first-score fill} replaces the first
+64 scores with the score at index 64, retaining full labels and all TimesFM
+scores. \emph{Common suffix} evaluates positions 64 onward for every model.
+Both interventions use the same 350 series, model pairs, and widths.
+The suffix changes prevalence, threshold ranks, and boundary geometry;
+21 series contain positive labels in the removed prefix. Neither intervention
+reconstructs every preprocessing choice in the source model paper.
+
 \section{Results}
+\input{advancement_results.tex}
+\IfFileExists{selection_results.tex}{\input{selection_results.tex}}{}
+
+\subsection{Corpus-wide sampling effects and supporting measurements}
+The original fixed-corpus run provides the following threshold-sampling
+analysis and complementary dense-baseline measurements. These timings are
+retained as a separate run; they are not pooled with the current published-code
+comparisons.
 \input{result_body.tex}
+
+\subsection{Padding sensitivity and effect sizes}
+Table~\ref{tab:padding} reports all pairs, including small effects.
+All 350 series and 23 source families remain eligible in each variant.
+The largest newly computed exact-versus-dense discrepancy is
+$2.37\cdot10^{-13}$; 144 transformed small-case upstream checks also pass.
+Of 84 original PR reversals, 75 persist after filling and 74 on the suffix,
+all in the same direction. Filling removes nine and introduces 18; cropping
+removes ten and introduces 21. Thus documented zero padding alone does not
+explain the effect, while individual changed orders depend on preprocessing.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Variant & PR reversals & Series & Top changes & ROC reversals\\
+\midrule
+Released & 84 & 55 & 50 & 5\\
+First-score fill & 93 & 59 & 52 & 12\\
+Common suffix & 95 & 61 & 48 & 8\\
+\bottomrule
+\end{tabular}
+\caption{Each row has 2,100 unordered model-pair comparisons and 700
+series/width decisions. A reversal has opposite signs with both gaps
+above $10^{-10}$. Top changes require a unique best model in both calculations.}
+\label{tab:padding}
+\end{table}
+
+Most reversals have small margins. Requiring both exact and sampled PR gaps
+to be at least $10^{-3}$ leaves 38, 41, and 44 reversals in the three variants;
+at $10^{-2}$ each has five. On the common suffix the median, 95th-percentile,
+and maximum absolute PR errors are $0.002489$, $0.177261$, and $0.582639$.
+Giving source families equal weight yields reversal prevalences of
+2.44\%, 5.45\%, and 4.31\%, with descriptive family-bootstrap intervals
+[1.12,4.06]\%, [2.12,10.32]\%, and [1.84,7.59]\%, respectively.
+These differ from the pooled pair fractions 4.00\%, 4.43\%, and 4.52\%;
+singleton families cannot support precise population estimates.
+The result concerns approximation-induced metric order, not a change in
+detector quality or a claim that the exact metric is the best model selector.
 
 \section{Limitations and reproducibility}
 The target is a specific, pinned scalar implementation. Exactness does not
 resolve scientific criticisms of the underlying metric, extend it to all
 historical variants, or produce the full surface. The acceleration depends on
-sparse expanded support and can disappear for dense support. Floating-point
-equivalence is numerical, not bitwise. The NumPy/Numba dense implementations
+sparse expanded support and can disappear for dense support. Adaptive bounds
+can require all widths and add overhead; tolerance is not a guaranteed speedup.
+Real-arithmetic enclosures and float64 checks are distinct: no machine-level
+interval certificate or unconditional numerical ordering guarantee is claimed.
+Floating-point equivalence is numerical, not bitwise. The NumPy/Numba dense implementations
 are independently written algorithmic baselines, not published competing
-systems. The actual released dtaianomaly comparison is bounded, and the
+systems. Published-code comparisons retain API and threshold-resolution
+differences. The actual released dtaianomaly comparison is bounded, and the
 Sylligardos fast implementation remains unbenchmarked.
 
 The repository includes source, tests, a rigorous derivation, frozen protocols,
 download and source-checksum receipts, per-input timing and metric records,
 negative results, and scripts for regenerating figures and this manuscript.
-All experiments reuse released score vectors on a single CPU; no models are
-retrained. Experiments were executed on 19 October 2026 UTC.
+All experiments reuse released score vectors on CPUs; no models are
+retrained. Experiments were executed on 19--20 October 2026 UTC.
 Development and in-session code review used AI assistance; the separately
 authored checks are distinct test implementations within this session, not an
 external laboratory reproduction.
 
-\begin{thebibliography}{9}
-\bibitem{paparrizos2022} J. Paparrizos et al. Volume Under the Surface: A New Accuracy Evaluation Measure for Time-Series Anomaly Detection. PVLDB 15(11), 2022. \url{https://www.vldb.org/pvldb/vol15/p2774-paparrizos.pdf}.
-\bibitem{boniol2025} P. Boniol et al. VUS: Effective and Efficient Accuracy Measures for Time-Series Anomaly Detection. VLDB Journal 34, 2025. \url{https://arxiv.org/abs/2502.13318}.
-\bibitem{sylligardos2025} E. Sylligardos. Fast or Accurate? Rethinking Time Series Anomaly Detection. VLDB PhD Workshop, 2025, Section 4. \url{https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/PhD/PhD25_17.pdf}.
-\bibitem{boxer} P. Stergiotis. boxer/adscore, v0.0.23, 2026. \url{https://pkg.go.dev/github.com/stergiotis/boxer/public/analytics/timeseries/adscore}.
-\bibitem{dtaianomaly} ML-KULeuven. dtaianomaly, pinned revision \texttt{557b4357}, 13 October 2026. \url{https://github.com/ML-KULeuven/dtaianomaly}.
-\bibitem{zhu2026} X. Zhu, L. Carpentier, M. Verbeke. When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection. ICLR 2026. Scores: KU Leuven RDR, V1, \url{https://doi.org/10.48804/MCVI4N}.
-\bibitem{tsbad} Q. Liu and J. Paparrizos. The Elephant in the Room: Towards a Reliable Time-Series Anomaly Detection Benchmark. NeurIPS Datasets and Benchmarks, 2024. \url{https://github.com/TheDatumOrg/TSB-AD}.
-\bibitem{esa2024} K. Kotowski et al. European Space Agency Benchmark for Anomaly Detection in Satellite Telemetry. 2024, revised 2025. \url{https://arxiv.org/abs/2406.17826}.
-\end{thebibliography}
+\section{Conclusion}
+Inactive threshold events can be integrated analytically, giving exact
+scalar VUS with work governed by expanded anomaly support. On the tested
+corpus this evaluator is faster than released fast-VUS on both CPU systems,
+while strong dense methods retain favorable cases. Merge-aware coordinate
+order and p-box bounds additionally support width enclosures and incremental
+PR decisions. These extensions reduce distinct width queries but introduce
+substantial overhead: even where racing improves the median speed ratio,
+the sum of per-task medians increases. They remain optional APIs; full-width
+exact evaluation is the default.
 
 \appendix
 \section{A fixed uniform-rank grid can lose almost all PR area}
@@ -369,4 +478,18 @@ sampled area is less than $\varepsilon/2$, proving the claim.
 \end{proof}
 The artifact includes deterministic checks at $T=250$, $m\in\{1,10\}$,
 $L\in\{0,6\}$, and $n\in\{10^4,10^5\}$ against the two closed-form values.
+\begin{thebibliography}{99}
+\bibitem{paparrizos2022} J. Paparrizos et al. Volume Under the Surface: A New Accuracy Evaluation Measure for Time-Series Anomaly Detection. PVLDB 15(11), 2022. \url{https://www.vldb.org/pvldb/vol15/p2774-paparrizos.pdf}.
+\bibitem{boniol2025} P. Boniol et al. VUS: Effective and Efficient Accuracy Measures for Time-Series Anomaly Detection. VLDB Journal 34, 2025. \url{https://arxiv.org/abs/2502.13318}.
+\bibitem{sylligardos2025} E. Sylligardos. Fast or Accurate? Rethinking Time Series Anomaly Detection. VLDB PhD Workshop, 2025, Section 4. \url{https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/PhD/PhD25_17.pdf}.
+\bibitem{boxer} P. Stergiotis. boxer/adscore, v0.0.23, 2026. \url{https://pkg.go.dev/github.com/stergiotis/boxer/public/analytics/timeseries/adscore}.
+\bibitem{dtaianomaly} ML-KULeuven. dtaianomaly, pinned revision \texttt{557b4357}, 13 October 2026. \url{https://github.com/ML-KULeuven/dtaianomaly}.
+\bibitem{klein2026} T. L. Klein. fast-VUS. Software repository, first commit 12 October 2026, audited revision \texttt{1bae859f}, 16 October 2026. \url{https://github.com/tomlouisklein/fast-VUS}.
+\bibitem{utkin2009} L. Utkin and S. Destercke. Computing Expectations with Continuous P-Boxes: Univariate Case. International Journal of Approximate Reasoning 50(5), 778--798, 2009. \url{https://doi.org/10.1016/j.ijar.2009.02.004}.
+\bibitem{troffaes2011} M. C. M. Troffaes and S. Destercke. Probability Boxes on Totally Preordered Spaces for Multivariate Modelling. International Journal of Approximate Reasoning 52, 767--791, 2011. \url{https://doi.org/10.1016/j.ijar.2011.02.001}.
+\bibitem{zhu2026} X. Zhu, L. Carpentier, M. Verbeke. When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection. ICLR 2026. Scores: KU Leuven RDR, V1, \url{https://doi.org/10.48804/MCVI4N}.
+\bibitem{tsbad} Q. Liu and J. Paparrizos. The Elephant in the Room: Towards a Reliable Time-Series Anomaly Detection Benchmark. NeurIPS Datasets and Benchmarks, 2024. \url{https://github.com/TheDatumOrg/TSB-AD}.
+\bibitem{esa2024} K. Kotowski et al. European Space Agency Benchmark for Anomaly Detection in Satellite Telemetry. 2024, revised 2025. \url{https://arxiv.org/abs/2406.17826}.
+\end{thebibliography}
+% END SHARED BODY
 \end{document}

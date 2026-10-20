@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "cases": 126,
+  "violations": [],
+  "measurements_sha256": "fcd269e7e3d14c8bec2f94b186303dc28021273835841e01f043225c12fe688f",
+  "completed_utc": "2026-10-20T13:21:55.645599+00:00",
+  "by_width": {
+    "30": {
+      "cases": 42,
+      "exact_unique_winner_cases": 41,
+      "sum_case_median_seconds": {
+        "sparse_exact": 1.670145501906518,
+        "dense_direct": 4.056783370993799,
+        "dense_nearest": 4.157191498961765,
+        "race_prune": 2.1947777050663717,
+        "race_no_prune": 2.3075734958983958
+      },
+      "race_prune": {
+        "early_winners": 41,
+        "full_evaluations": 18,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.8289049164333322,
+            "faster_cases": 8
+          },
+          "dense_direct": {
+            "median": 2.228184815173889,
+            "faster_cases": 30
+          },
+          "dense_nearest": {
+            "median": 2.082191989561541,
+            "faster_cases": 32
+          },
+          "race_no_prune": {
+            "median": 1.0216654439717625,
+            "faster_cases": 27
+          }
+        }
+      },
+      "race_no_prune": {
+        "early_winners": 41,
+        "full_evaluations": 18,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.7835775923894615,
+            "faster_cases": 10
+          },
+          "dense_direct": {
+            "median": 2.111889271482407,
+            "faster_cases": 30
+          },
+          "dense_nearest": {
+            "median": 2.082425353235015,
+            "faster_cases": 31
+          },
+          "race_prune": {
+            "median": 0.9787940424078336,
+            "faster_cases": 15
+          }
+        }
+      }
+    },
+    "100": {
+      "cases": 42,
+      "exact_unique_winner_cases": 41,
+      "sum_case_median_seconds": {
+        "sparse_exact": 2.501720713917166,
+        "dense_direct": 11.073644992982736,
+        "dense_nearest": 8.79348650004249,
+        "race_prune": 4.378074670006754,
+        "race_no_prune": 4.847554917971138
+      },
+      "race_prune": {
+        "early_winners": 41,
+        "full_evaluations": 3,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.7150111681192551,
+            "faster_cases": 12
+          },
+          "dense_direct": {
+            "median": 2.218983422974876,
+            "faster_cases": 31
+          },
+          "dense_nearest": {
+            "median": 2.2213606664384438,
+            "faster_cases": 30
+          },
+          "race_no_prune": {
+            "median": 1.0315254544059316,
+            "faster_cases": 26
+          }
+        }
+      },
+      "race_no_prune": {
+        "early_winners": 41,
+        "full_evaluations": 3,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 0.6644981028683373,
+            "faster_cases": 10
+          },
+          "dense_direct": {
+            "median": 2.3416376564452905,
+            "faster_cases": 30
+          },
+          "dense_nearest": {
+            "median": 2.148842122907955,
+            "faster_cases": 29
+          },
+          "race_prune": {
+            "median": 0.9694395831831883,
+            "faster_cases": 16
+          }
+        }
+      }
+    },
+    "300": {
+      "cases": 42,
+      "exact_unique_winner_cases": 41,
+      "sum_case_median_seconds": {
+        "sparse_exact": 6.248608412046451,
+        "dense_direct": 38.428461003961274,
+        "dense_nearest": 26.24341954002739,
+        "race_prune": 10.614500089955982,
+        "race_no_prune": 12.18441907997476
+      },
+      "race_prune": {
+        "early_winners": 41,
+        "full_evaluations": 3,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 1.176944830559063,
+            "faster_cases": 23
+          },
+          "dense_direct": {
+            "median": 4.2634416671158135,
+            "faster_cases": 35
+          },
+          "dense_nearest": {
+            "median": 2.2916378337725076,
+            "faster_cases": 33
+          },
+          "race_no_prune": {
+            "median": 1.0938403101552554,
+            "faster_cases": 29
+          }
+        }
+      },
+      "race_no_prune": {
+        "early_winners": 41,
+        "full_evaluations": 3,
+        "ratios_by_comparator": {
+          "sparse_exact": {
+            "median": 1.0682633891095792,
+            "faster_cases": 21
+          },
+          "dense_direct": {
+            "median": 3.9974020373301347,
+            "faster_cases": 35
+          },
+          "dense_nearest": {
+            "median": 2.694729951661553,
+            "faster_cases": 31
+          },
+          "race_prune": {
+            "median": 0.9142212390304654,
+            "faster_cases": 13
+          }
+        }
+      }
+    }
+  }
+}
