@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-20T12:52:28.932185+00:00",
+  "phase": "Post-baseline follow-up; frozen before this selection experiment.",
+  "cases": 126,
+  "models_per_case": 3,
+  "repetitions": 3,
+  "seed": 202610203,
+  "atol": 0.01,
+  "selection": "Released metadata-only 42 series, all three released models; widths 30, 100, 300. Width 300 is an explicit stress regime.",
+  "selection_sha256": "7211e67626aa52b0617c3d7e899ed65b85f7f052e96795901512d309a9008818",
+  "contract": "Return all models within 1e-10 of the maximum exact PR. Certificate-first uses 3e-10 numerical separation, then exact fallback for unresolved candidates. No-pruning ablation falls back to all three models when unresolved.",
+  "timing": "Whole three-model calls including validation, preprocessing, bounds and fallback. Loading precomputed scores and JIT warmup excluded. One thread; randomized method order, three repetitions.",
+  "scope": "Numerically audited selection on frozen inputs, not a formal outward-rounded Float64 certificate or detector training speedup.",
+  "fixed250": "Speed/decision-error comparator, not an exact-contract baseline.",
+  "exact_parity_tolerance": 1e-11,
+  "float64_containment_tolerance": 1e-10
+}

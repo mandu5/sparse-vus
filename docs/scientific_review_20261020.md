@@ -11,6 +11,10 @@ The inspected branch was `research/certified-width-20261020`, with HEAD
 `67e622b45e3fca1378215cc5f3ca3e804e4b7a9b`;
 the manuscript/width files had uncommitted changes. Conclusions below
 concern the files inspected during this session, not an immutable release.
+The follow-up review below inspected the racing implementation at source
+SHA-256 `71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b`.
+The fixed-width experiment is now complete; complete selection/racing
+outcomes remain pending.
 
 ## Recommendation
 
@@ -19,7 +23,15 @@ decision. Do not currently advertise global SOTA or established PVLDB
 readiness.** The exact evaluator has a defensible, bounded algorithmic claim
 and useful published-code results. The merge-aware width method supplies a
 more substantial conceptual extension, but its practical contribution was
-still unmeasured at this review snapshot.
+initially unmeasured. The completed fixed-tolerance width experiment now
+shows a restricted benefit: the 0.01 setting is slower at widths 30 and 100
+and faster at width 300; the 0.001 setting is slower at every tested width.
+This does not support a general adaptive-evaluation speedup claim.
+
+The new incremental PR race is a coherent, disclosed post-hoc response to
+fixed-tolerance overhead. Source and proof inspection found no blocking
+real-arithmetic correctness defect. Its complete decision latency is still
+unknown, so its existence does not upgrade the submission recommendation.
 
 If aiming at PVLDB, **Regular Research / Foundations and Algorithms** is the
 appropriate category. The present paper is substantially more coherent in
@@ -46,7 +58,7 @@ TMLR acceptance is not established either.
 | Are merge-aware bounds conceptually sound? | The independent in-session review validates the coordinate ordering, PR p-box construction and discrete averaging invariant in real arithmetic. | A substantive method candidate, with a precise mathematical scope. This review is not a second laboratory reproduction. |
 | Does the implementation provide a formal Float64 certificate? | Ordinary Float64 with an empirical guard; no directed rounding or accumulated-error proof. | No. Numerical audits support measured decisions only. |
 | Is threshold approximation sensitivity explained solely by padding? | PR reversals persist under both fixed corrections: 84 original, 93 fill, 95 suffix; five per variant have both margins at least 0.01. | No. However most changes are small, and none establishes which detector is operationally better. |
-| Do the adaptive bounds save useful work? | The 378-case width experiment and proposed complete selection pipeline were pending here. | Unknown. Fewer distinct widths alone is not an answer. |
+| Do the adaptive bounds save useful work? | The completed 378-case macOS experiment has median ratios 0.966 at tolerance 0.01 and 0.467 at 0.001. The 0.01 setting reaches 1.313 at width 300, but loses at widths 30 and 100. Complete selection and racing outcomes remain pending. | Width omission is mathematically useful but is not yet a general practical speedup. Fewer queried widths alone is not an answer. |
 
 The numbers above were read from
 `artifacts/advancement/linux-baseline/summary.json` and
@@ -54,8 +66,11 @@ The numbers above were read from
 violations and maximum parity error `3.6914915568786455e-13`. Their existing
 PASS labels and recorded parity are evidence from the producing workflow;
 this reviewer did not independently rerun or complete the separate provenance
-gate. The two-platform replication strengthens the scoped exact performance
-finding without resolving adaptive-width utility.
+gate. The later `artifacts/advancement/analysis/analysis.json` now records
+PASS for the post-run provenance gates on both exact-platform runs and the
+fixed-width run; this reviewer read those gate summaries, not a fresh
+independent rerun. The two-platform replication strengthens the scoped
+exact performance finding without establishing selection utility.
 The padding figures were checked against the local experimental audit.
 
 ## Novelty and coherence
@@ -111,11 +126,12 @@ paper can be written.
 ### 1. The new width method has not demonstrated a useful decision-cost gain
 
 This is the most important remaining experiment. A certificate can be valid
-and still cost more than computing the answer. Fixed tolerance also need not
-be tight enough to distinguish nearby detectors. The current metric-only
-certificate protocol measures useful components, but it does not by itself
-measure a complete exact-compatible model-selection task with all fallback
-work included.
+and still cost more than computing the answer, as the completed fixed-width
+experiment now demonstrates. Fixed tolerance also need not be tight enough
+to distinguish nearby detectors. Metric-only certificate measurements do not
+by themselves measure a complete exact-compatible model-selection task with
+all fallback work included. The fixed-tolerance selector and subsequent
+incremental race must retain separate source, timing and outcome records.
 
 **Closure:** run the single frozen selection experiment below. It should be
 allowed to fail. Report absolute milliseconds, totals, width-specific gains,
@@ -180,7 +196,7 @@ evaluation problem without inventing a deployment. It is a plausible scope
 case, not a confirmed editorial judgment. More rhetoric cannot compensate
 for an unhelpful experiment.
 
-## One decisive experiment: time to an audited exact-compatible PR selection
+## Decisive workload: time to an audited exact-compatible PR selection
 
 The root agent proposed the following bounded protocol after the initial
 recommendation and before inspecting its pipeline outcomes. This reviewer
@@ -263,6 +279,114 @@ If this experiment is negative, the next action should be to narrow the
 paper's practical claim or choose a different venue, not automatically to
 invent a larger benchmark.
 
+## Completed fixed-width result and bounded racing follow-up
+
+The 378-case fixed-width experiment ran on an Apple M1 Pro, macOS arm64,
+Python 3.12.4. Ratios below are sparse-exact time divided by bounded-method
+time, so a ratio below one favors the exact baseline. Every width/tolerance
+row contains 126 model evaluations over the same 42 series.
+
+| Tolerance | Maximum width | Median speed ratio | Faster evaluations | Unique winners resolved from intervals / 42 |
+|---|---:|---:|---:|---:|
+| 0.01 | 30 | 0.835 | 27 / 126 | 21 |
+| 0.01 | 100 | 0.905 | 46 / 126 | 17 |
+| 0.01 | 300 | 1.313 | 100 / 126 | 15 |
+| 0.001 | 30 | 0.615 | 4 / 126 | 33 |
+| 0.001 | 100 | 0.426 | 11 / 126 | 32 |
+| 0.001 | 300 | 0.391 | 25 / 126 | 34 |
+
+Across all 378 evaluations, tolerance 0.01 has median ratio 0.966 and wins
+173 cases; tolerance 0.001 has median ratio 0.467 and wins 40. The analysis
+records zero incorrect interval-separated pairs or winners and zero
+containment/tolerance violations under its numerical audit. Its ranking
+margin is `2e-10`, whereas the later selection/racing margin is `3e-10`;
+the tables therefore do not predict the later pipeline's exact early-stop
+counts.
+
+The method can query few widths and still lose: at width 30/tolerance 0.01
+the median queried fraction is about 16%, yet the median runtime ratio is
+0.835. Tighter intervals improve decision coverage but substantially increase
+cost. The width-300 gain coincides with only 15/42 interval-resolved unique
+winners at tolerance 0.01. This is direct evidence that scalar approximation
+cost and complete decision cost are different objectives.
+
+These figures were read from `artifacts/advancement/analysis/analysis.json`,
+`mac-certified/summary.json` and `mac-certified/environment.json`. The
+analysis binds certified measurements to
+`32000ea30f876f47c4b421912c6f77b0902b5f0e396acc78d482ec3a544f11d4`.
+The complete fixed-tolerance selection experiment is still necessary to
+measure fallback cost; the table above is not that result.
+
+The follow-up `race_pr_models` addresses three specific costs: it keeps each
+model's preparation, refines according to PR uncertainty rather than a joint
+ROC/PR tolerance, and obtains exact values from accumulated widths instead
+of restarting an exact evaluator. It still computes ROC coordinates in the
+shared endpoint oracle. “PR-directed refinement” is accurate; “computes only
+PR operations” is not.
+
+This is a **post-hoc algorithm-design iteration on the same inspected
+workload**, not a preregistered independent confirmation. Fresh timings can
+honestly compare the final algorithm to its baselines on that workload, but
+they do not remove the dependence of the design on earlier outcomes.
+Preserve the fixed-width and fixed-tolerance selector results, freeze the
+race before measuring it, and retain the same 126 selection tasks. No new
+dataset, tolerance search or favorable subset is needed for this follow-up.
+
+### Racing proof and source findings
+
+No blocking defect was identified in the inspected real-arithmetic
+algorithm/proof:
+
+1. **Separation checks every model.** A candidate lower bound above all
+   other upper bounds by `3e-10` implies a unique maximum outside the
+   `1e-10` tie set.
+2. **Screening preserves the complete tie set.** An upper bound below the
+   greatest lower bound minus `3e-10` implies that model is more than
+   `3e-10` below some feasible competitor and therefore below the global
+   maximum. It cannot be an exact-tolerance tie.
+3. **Refinement preserves the partition.** Each heap item represents only
+   its unevaluated interior; the midpoint replaces one unknown width with
+   its scalar value and leaves disjoint child interiors. A refinement
+   adds exactly one previously unseen width.
+4. **Exact resolution terminates.** When all current candidates are fully
+   evaluated, their existing per-width values determine the tie set.
+   Otherwise each step adds a width. At most `M(L+1)` unique model-width
+   evaluations are possible, and valid intervals cannot screen out every
+   model.
+5. **Reported work is consistent.** With the default eight-curve cache,
+   one refinement computes its new midpoint and at most two evicted
+   endpoints. Actual curve evaluations, unique widths and preparation
+   counts remain separate quantities.
+
+One source-level nuance is worth preserving: candidates are recomputed
+from all models at each iteration. The implementation does not store a
+permanently shrinking active set. Thus “screened at this iteration” or
+“excluded from the final candidate set” is more precise than claiming
+permanent deletion. Correctness and finite termination do not require
+candidate-set monotonicity.
+
+The Float64 implementation updates running sums by additions and
+subtractions; repeated two-term `math.fsum` calls do not establish a global
+outward-rounding bound. The existing empirical guard and explicit numerical
+scope remain essential. The exact tie-resolution path can also differ by
+roundoff from another implementation near the tie boundary, so the fresh
+all-model exact comparisons are necessary.
+
+The source audit is not an additional formal verification or independent
+numerical reproduction. GitHub run `39426662776` was read live and reports
+successful Linux Python 3.11/3.12 jobs at commit
+`cb2b60d633c4b7ee3be50644864bde20fd022296`. That CI status supports its
+executed checks; it does not establish new runtime results.
+
+**Current gate:** finish and analyze the already authorized fixed-selector
+and racing runs, including separate executable exact baselines. Racing
+latency, its winner-set agreement on all 126 tasks, absolute savings and
+worst losses remain unknown in this review. A favorable result would
+strengthen a narrow practical contribution; it would not by itself establish
+global SOTA, external reproduction or venue acceptance. A negative result
+should narrow the main practical claim rather than trigger an open-ended
+series of further method variants.
+
 ## Venue comparison
 
 | Venue or category | Fit judgment | Qualification |
@@ -280,6 +404,20 @@ TMLR uses rolling submission and its published acceptance criteria require
 supported claims and clear interest for its audience.
 [TMLR overview](https://www.jmlr.org/tmlr/),
 [TMLR acceptance criteria](https://www.jmlr.org/tmlr/acceptance-criteria.html)
+
+TMLR's criteria also say that a fully AI-generated paper with little or no
+human involvement is unlikely to meet the audience-interest criterion.
+This is not a categorical ban on AI assistance, nor does it mean correctness
+alone suffices. Its policy allows LLMs as assistive tools while requiring
+human authors to make a substantial intellectual contribution, draft or
+revise the work, and take responsibility for its complete content; LLMs
+cannot be authors. This agent review and automated tests do not establish
+that a human has met those conditions. Human authorship and substantive
+engagement remain unverified here, so TMLR is an alternative to assess,
+not a ready submission channel.
+[TMLR acceptance criteria](https://www.jmlr.org/tmlr/acceptance-criteria.html),
+[TMLR LLM and authorship policies](https://www.jmlr.org/tmlr/editorial-policies.html)
+
 ALENEX's subject fit and closed 2027 deadline are explicit in its official
 pages.
 [ALENEX27 scope](https://www.siam.org/conferences-events/siam-conferences/alenex27/),
@@ -306,9 +444,14 @@ The main local evidence inspected was:
   certificate interface
 - `artifacts/advancement/linux-baseline/summary.json` and
   `artifacts/advancement/mac-baseline/summary.json`
+- `artifacts/advancement/analysis/analysis.json` and the fixed-width summary
+  and environment
+- `src/sparse_vus/racing.py`, its selection/width dependencies,
+  `tests/test_racing.py` and `docs/incremental_pr_racing_20261020.md`
 
 The existing review supports the real-arithmetic mathematics; this review
-evaluates the resulting scientific story and experiment sufficiency. The
-main certificate and selection timings were not yet available at this
-snapshot. Future successful measurements can change the readiness judgment;
+evaluates the resulting scientific story and experiment sufficiency, and
+the follow-up directly inspects the racing invariant and implementation.
+Fixed-width timings are now available; complete fixed-selector and racing
+outcomes remain pending. Future successful measurements can change the readiness judgment;
 they cannot retroactively make this review external peer review.

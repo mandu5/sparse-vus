@@ -105,7 +105,9 @@ def audit_racing_records(rows, protocol):
                     "One-new-width-per-refinement invariant failed")
             require(len(models) <= result["initial_unique_widths"] <= unique_total
                     and result["initial_curve_evaluations"] >= result["initial_unique_widths"]
-                    and curves_total >= result["initial_curve_evaluations"] + result["refinement_steps"],
+                    and result["initial_curve_evaluations"] + result["refinement_steps"]
+                    <= curves_total
+                    <= result["initial_curve_evaluations"] + 3 * result["refinement_steps"],
                     "Initial/refined racing work accounting is impossible")
             early = [m for m in models if all(
                 bounds[m]["pr_lower"] > bounds[other]["pr_upper"] + MARGIN

@@ -206,9 +206,127 @@ and checks every result's length, family, label hash and score hash. It then
 reads the selected source ZIP members to verify CRC/SHA-256, finite score
 shapes, binary labels and original positive counts.
 
-A metadata-only smoke check passes: 350 series, three models, 1,050 locked
-score hashes and the exact 42-series supplemental selection. Source ZIPs have
-not yet been reopened by this new gate because controlled timings were running.
-The full post-run gate and completed-result checks remain required before
-claiming a verified advancement result. This addition must be called a post-run
-provenance check, not a check that preceded the measurements.
+At the initial review, a metadata-only smoke check passed: 350 series, three
+models, 1,050 locked score hashes and the exact 42-series supplemental selection.
+Source ZIPs had not yet been reopened by this new gate because controlled
+timings were running. The full post-run gate and completed-result checks
+remained required before claiming a verified advancement result. This addition
+must be called a post-run provenance check, not a check that preceded the
+measurements. The completed selection audit below now verifies actual members.
+
+## Whole-call selection and racing follow-ups
+
+The selection and incremental-racing drivers were reviewed separately from the
+initial per-model tolerance experiment. Both use the same fixed 42-series
+supplemental selection, three released models, and maximum widths 30, 100 and
+300: 126 three-model tasks. Each method receives a fresh whole-call timer around
+preparation and its full selection procedure. Loading the released arrays and
+JIT warmup occur outside those timers. The three repetitions randomize method
+order, and the driver records each duration rather than only a median.
+
+`benchmark_selection.py` compares exact-all sparse, dense-direct, dense-nearest
+and pinned fastVUS PR evaluation, sampled-250 selection, and certificate
+selection with/without pruning. Initial bounds for all three models and all
+subsequent exact fallback calls are inside each certificate method's timer.
+The no-prune variant retains the same separated-winner rule, so it isolates
+pruning among unresolved candidates rather than disabling every early exit.
+An initially exact model is still counted and timed if the selection procedure
+calls the fallback evaluator for it.
+
+`benchmark_racing.py` is a disclosed algorithm follow-up after observing
+fixed-tolerance overhead. It compares incremental racing with/without pruning
+against fresh exact-all sparse, dense-direct and dense-nearest measurements.
+It does not reuse elapsed times from the selection run and does not rerun
+fastVUS. Each model retains its own prepared state and previously observed
+scalar PR values. Refinement adds one new width; evicted endpoint curves may
+be recomputed and are counted. Consequently, both unique-width counts and
+actual curve-evaluation counts are needed to interpret work reduction.
+
+Two static receipt omissions were reported and fixed before the racing source
+freeze: the shared `selection.py` ordering policy is now in the measured-source
+hash set, and `initial_unique_widths` is serialized, permitting the invariant
+`total_unique_widths = initial_unique_widths + refinement_steps`.
+
+The new independent receipt auditors are
+[`audit_selection.py`](../experiments/audit_selection.py) and
+[`audit_racing.py`](../experiments/audit_racing.py). Both rebuild timing medians,
+every separate comparator ratio, complete coverage, exact baseline agreement,
+tie selections, candidate/pruning decisions and producer summary counts from
+raw records. Both bind protocol and measured-source bytes, expand each task
+into its three model identities, and invoke the immutable released-data gate.
+The racing audit additionally verifies that every excluded model is below the
+exact best by more than the `1e-10` tie tolerance, reconciles exact-PR maps with
+all fully evaluated models, and checks the per-model and aggregate work
+counters. With the frozen default cache, every refinement requires between
+one and three actual curve evaluations.
+
+The algorithm's `early_winner` flag describes the interval-separation return
+path. It can be true after all widths have already been evaluated. Therefore
+an early-winner count alone is not evidence of saved evaluations. The racing
+auditor reports the actual work fractions and separately counts such fully
+evaluated early returns. Fully evaluated excluded models remain in `exact_pr`
+and in the full-evaluation count.
+
+Adversarial synthetic receipt tests were written in
+[`test_selection_audit.py`](../tests/test_selection_audit.py) and
+[`test_racing_audit.py`](../tests/test_racing_audit.py). They require false
+success claims to fail even after the raw-result hash is updated, covering
+lost ties, noncontaining bounds, false work counts, exact baseline disagreement,
+invalid timing, incomplete source bindings and fabricated summary ratios.
+These new auditor tests and the completed receipt audits were still pending
+at this static-review checkpoint; local tests were intentionally withheld
+during the controlled selection timing. The earlier advancement/data-gate
+regression suite had passed all 36 tests in 0.57 seconds.
+
+## Completed macOS fixed-tolerance selection audit
+
+The independent auditor completed successfully at
+`2026-10-20T13:11:44.542933+00:00`. Its receipt is
+[`mac-selection/audit.json`](../artifacts/advancement/mac-selection/audit.json);
+the measured JSONL SHA-256 is
+`0eb9e33dcea8beecf0ffc6e50165d66d89f89aa9c2be0b25aeb3ce46a5937137`.
+The audit reconstructed all 126 tasks, all seven methods, each of the three
+timing repetitions, and all producer summary aggregates. All exact methods and
+both certificate variants preserve the complete exact selection sets. Maximum
+exact PR discrepancy is `1.3322676295501878e-15`; maximum enclosure slack is
+`3.3306690738754696e-16`.
+
+The provenance gate passed for all 378 expanded model-width identities,
+42 series and 23 families. It reopened and verified all 42 actual label
+members and 126 actual score members against the immutable release bindings.
+The recorded environment is macOS 26.6.1, arm64.
+
+Ratios below are the median of the separate per-case baseline/certificate
+duration ratios; a value below one means the certificate method is slower.
+All columns use the pruning variant and 42 tasks per width.
+
+| Maximum width | Sparse exact | Dense direct | Dense nearest | fastVUS exact PR | Faster than sparse |
+|---|---:|---:|---:|---:|---:|
+| 30 | 0.5792 | 1.4347 | 1.5431 | 5.3010 | 2/42 |
+| 100 | 0.5693 | 2.4618 | 1.9764 | 9.1379 | 4/42 |
+| 300 | 0.7384 | 3.4790 | 2.4824 | 17.4309 | 11/42 |
+
+This is a negative result against the strongest sparse exact comparator.
+The sum of per-case median durations also favors sparse exact: 1.784 versus
+3.211 seconds at width 30, 2.804 versus 4.683 at width 100, and 6.447 versus
+9.790 at width 300. These are evaluator-only sums, not measured detector
+pipeline runtimes.
+
+| Maximum width | Early selections | Fallback calls, prune / no-prune | Initial unique / actual curves | Median initial unique / actual fraction |
+|---|---:|---:|---:|---:|
+| 30 | 21 | 53 / 63 | 1,031 / 1,045 | 0.1613 / 0.1613 |
+| 100 | 17 | 63 / 75 | 2,156 / 2,469 | 0.08251 / 0.08251 |
+| 300 | 15 | 69 / 81 | 3,132 / 3,949 | 0.04817 / 0.07475 |
+
+Fractions use `3 * (maximum width + 1)` as the per-task denominator.
+They cover initial certification only; whole-call timings also include the
+listed exact fallback calls. Pruning saves 10, 12 and 12 fallback calls across
+each 42-task group, but its median speedups over no-prune are only 1.0064,
+1.0036 and 1.0036.
+
+Sampled-250 selection-set disagreements are 4, 5 and 5. At every width, one
+of these is `723_YAHOO_id_173_WebService_tr_500_1st_1214`: all three exact
+PR values equal 1.0, while sampled-250 selects only TimesFM. Thus the unique
+exact-winner disagreements are 3, 4 and 4 out of 41 unique-winner tasks,
+respectively. Calling all 14 disagreements incorrect unique winners would
+overstate the result.

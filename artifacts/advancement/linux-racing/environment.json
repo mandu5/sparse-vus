@@ -1,0 +1,56 @@
+{
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+  "numpy": "2.5.4",
+  "numba": "0.68.0",
+  "threads": 1,
+  "threadpool_info": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-f48b354e.so",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+      "version": null
+    }
+  ],
+  "source_sha256": {
+    "experiments/benchmark_racing.py": "acfc6dfc7e844017534e81ce83be39a04ceff31e9c753753bdca4af4c8074aa0",
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32"
+  },
+  "protocol_sha256": "7d26f6ef7ce37215d4a5b5fbeb6da21c9ae623e889bf6f2193f7f01340ef0fc4",
+  "cpu_clearance": "Dedicated public GitHub Actions job; no concurrent steps; hosted hardware and background host load are not under our control.",
+  "warmup_seconds": {
+    "sparse_exact": 2.069855734000001,
+    "dense_direct": 1.470996798999991,
+    "dense_nearest": 0.9319054519999952,
+    "race_prune": 1.3014434840000035,
+    "race_no_prune": 0.0014320119999950975
+  }
+}

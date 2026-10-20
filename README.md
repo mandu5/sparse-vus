@@ -1,8 +1,8 @@
 # Sparse VUS
 
-Exact scalar VUS-ROC and VUS-PR by eliminating threshold events that cannot
-change weighted anomaly state. The implementation targets a pinned official
-VUS definition, including dynamic label mass and expanded-interval existence.
+Exact scalar VUS-ROC and VUS-PR, plus merge-aware error bounds over buffer
+widths. The implementation targets a pinned official VUS definition, including
+dynamic label mass and expanded-interval existence.
 
 For sequence length `n`, maximum buffer width `L`, and `Q` positions in the
 maximum expanded anomaly support, the algorithm takes
@@ -14,6 +14,19 @@ The contribution is support-event elimination with exact integration and
 off-support rank counting. Fast VUS and large CPU/GPU speedups have prior art,
 which we distinguish from this support-sensitive reduction. See [the proof](docs/theory.md),
 [prior art and licenses](THIRD_PARTY.md), and [the manuscript](paper/main.pdf).
+
+**v0.2.0 measured result:** against pinned, unmodified
+[Klein fast-VUS](https://github.com/tomlouisklein/fast-VUS/tree/1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00)
+at all thresholds, Sparse VUS is faster on all 2,100 cases on each of two
+platforms: median **8.38× on Apple M1 Pro** and **4.55× on AMD EPYC x86**.
+Klein returns PR only; Sparse VUS returns both ROC and PR. Against the per-case
+fastest tested exact comparator, the medians are **2.04×** and **1.35×**, with
+209 and 574 slower cases respectively. The per-case fastest comparator is an
+oracle reference, not a deployable algorithm. These are whole-call,
+single-thread, warmed-JIT measurements on released scores, not detector
+training/inference acceleration or a global SOTA claim.
+See [raw measurements and verified analysis](artifacts/advancement/analysis/analysis.json)
+and the [Linux benchmark run](https://github.com/mandu5/sparse-vus/actions/runs/39422191526).
 
 ## Install and use
 
@@ -49,6 +62,26 @@ from sparse_vus.compiled import sparse_vus_jit
 vus_roc, vus_pr = sparse_vus_jit(labels, scores, max_buffer=4)
 ```
 
+For bounds on the discrete width average:
+
+```python
+from sparse_vus.certified import certified_vus
+
+result = certified_vus(labels, scores, max_buffer=100, atol=0.01)
+print(result.estimate, result.pr_lower, result.pr_upper)
+print(result.evaluated_count, result.total_widths)
+```
+
+The half-width tolerance applies to both ROC and PR. The theorem is in real
+arithmetic; the implementation uses ordinary float64 with an empirical guard,
+not formal outward-rounded interval arithmetic. `atol=0` evaluates every width.
+Bounds can cost more than exact evaluation: at tolerance 0.01, median speed
+ratios on the 42-series subset are 0.83×, 0.90×, and 1.31× for maximum widths
+30, 100, and 300. Width 300 is a stress regime. All 378 measured intervals
+contain the exact values within the stated numerical audit tolerance.
+The [width proof](docs/theory_advancement_20261020.md) explains why PR needs
+p-box bounds even between interval merges.
+
 The first compiled call includes JIT initialization. Inputs must be finite,
 one-dimensional score values, binary labels with both classes, and a
 nonnegative integer maximum buffer width. Scores are converted to float64;
@@ -64,6 +97,7 @@ Its SHA-256 and commit are pinned.
 ```bash
 python experiments/fetch_reference.py
 python experiments/dtaianomaly_adapter.py --fetch
+python experiments/fast_vus_adapter.py --fetch
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1 python -m pytest -q
 python experiments/independent_review_check.py
 ```
@@ -91,9 +125,10 @@ bash experiments/run_reproduction.sh
 Use a new output directory. This preserves the published measurements and
 creates a separate workspace containing source and frozen protocols. The
 serial script installs the measured dependencies, fetches pinned references
-and public data, runs tests and all experiments, validates the results, and
-regenerates figures and the manuscript. Python 3.12 and `tectonic` must be
-available. Run timings without other CPU-intensive work.
+and public data, reruns the original v0.1.0 experiments, validates the results,
+and regenerates their tables and figures. The advancement experiments below
+are a separate follow-up. Python 3.12 must be available. Run timings without
+other CPU-intensive work.
 
 To rerun only the external comparison while retaining the published main
 records, use `python experiments/reproduce_external_supplement.py`; it writes
@@ -119,7 +154,7 @@ chosen separately for each input. The actual dtaianomaly implementation is
 also tested at 250 and all thresholds on a frozen 12-series NAB subset.
 The official 250-threshold baseline is a different-resolution computation.
 
-## Results and limits
+## Original retained results and limits
 
 On **350 public series from 23 dataset families**, with three released model
 score vectors and two width ranges (2,100 evaluations), compiled Sparse VUS
@@ -169,6 +204,37 @@ The analysis verifies the recorded input and source hashes before reading them.
 
 The supplied PDF is a working research manuscript. Source, executable protocols,
 raw measurements, and separately authored in-session validation are included.
+
+## Reproduce the v0.2.0 follow-up
+
+Use the cloned repository with its original frozen manifests and measurements
+present. Activate a dedicated Python 3.12 virtual environment, then run:
+
+```bash
+bash experiments/run_advancement.sh ../sparse-vus-v2-reproduction
+```
+
+The output directory must be new. The script reruns tests, the independent
+width verifier, the actual fast-VUS comparison, adaptive width evaluation,
+complete model selection, and incremental PR racing in sequence. It includes
+exact fallback/refinement costs and records all losses. The final two audits
+reconstruct model decisions, times, and corpus hashes from raw records.
+The original padding sensitivity is separately checked with
+`python experiments/ranking_robustness.py --verify`.
+
+To reconstruct the published two-platform figure and all enclosure decisions:
+
+```bash
+python experiments/analyze_advancement.py \
+  --mac-baseline artifacts/advancement/mac-baseline \
+  --linux-baseline artifacts/advancement/linux-baseline \
+  --certified artifacts/advancement/mac-certified \
+  --output artifacts/advancement/analysis
+```
+
+This checks measured source hashes and actual cached data bytes, so fetch the
+pinned references and score/label data first. A new source revision requires
+new measurement records; do not silently relabel old timings.
 
 ## Attribution
 

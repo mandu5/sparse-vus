@@ -29,5 +29,6 @@ python experiments/external_supplement.py
 python experiments/check_fixed_grid_pr.py
 python experiments/illustrate_event.py
 python experiments/analyze_results.py
-cd paper
-tectonic main.tex
+# This runner reproduces the original v0.1.0 experiments. The current paper
+# additionally uses the separately recorded v0.2.0 advancement experiments.
+echo 'Original experiment tables and figures reproduced under paper/ and artifacts/.'

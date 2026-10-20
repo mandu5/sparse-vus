@@ -1,0 +1,312 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-20T13:13:41.021059+00:00",
+  "scope": "Post-run independent receipt reconstruction; no metric or racing kernels rerun.",
+  "measurements_sha256": "28b8cb3f4d89b440aee352993d8486cbc4d30b21489a4e1ef993b19eb5a4d457",
+  "protocol_sha256": "7d26f6ef7ce37215d4a5b5fbeb6da21c9ae623e889bf6f2193f7f01340ef0fc4",
+  "environment_sha256": "86d9d46ee8e58405363e4522aa142a66018abcf896a3f8dabba4d32dc9e46422",
+  "producer_summary_sha256": "52e6b8086d9e75e834bf454e4d0611e587fa6f409233e09f8d062944ed7788c5",
+  "auditor_sha256": "c3fe73559e3ed105e1ede187a1bcaf1f8b441f92181dfa3d9e363bf5f947cb18",
+  "helper_sha256": "90721715f3d4c221916f07d07ae3b87934891064de0385d9adfd96c47e957fa3",
+  "source_sha256": {
+    "experiments/benchmark_racing.py": "acfc6dfc7e844017534e81ce83be39a04ceff31e9c753753bdca4af4c8074aa0",
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32"
+  },
+  "reconstructed": {
+    "cases": 126,
+    "max_exact_pr_error": 4.440892098500626e-16,
+    "max_enclosure_slack": 3.3306690738754696e-16,
+    "by_width": {
+      "30": {
+        "cases": 42,
+        "exact_unique_winner_cases": 41,
+        "sum_case_median_seconds": {
+          "sparse_exact": 1.512674138000392,
+          "dense_direct": 4.490153633000105,
+          "dense_nearest": 5.28341369799999,
+          "race_prune": 1.9094928540003195,
+          "race_no_prune": 2.0654026900002265
+        },
+        "race_prune": {
+          "early_winners": 41,
+          "full_evaluations": 18,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.8174192281236359,
+              "faster_cases": 8
+            },
+            "dense_direct": {
+              "median": 1.6969563160390615,
+              "faster_cases": 24
+            },
+            "dense_nearest": {
+              "median": 2.1825057454719947,
+              "faster_cases": 29
+            },
+            "race_no_prune": {
+              "median": 1.017558325816518,
+              "faster_cases": 32
+            }
+          }
+        },
+        "race_no_prune": {
+          "early_winners": 41,
+          "full_evaluations": 18,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.7623664354406265,
+              "faster_cases": 6
+            },
+            "dense_direct": {
+              "median": 1.7146977974202153,
+              "faster_cases": 24
+            },
+            "dense_nearest": {
+              "median": 2.104890797713586,
+              "faster_cases": 28
+            },
+            "race_prune": {
+              "median": 0.9827446513058764,
+              "faster_cases": 10
+            }
+          }
+        }
+      },
+      "100": {
+        "cases": 42,
+        "exact_unique_winner_cases": 41,
+        "sum_case_median_seconds": {
+          "sparse_exact": 2.6018374870002106,
+          "dense_direct": 13.452604751999743,
+          "dense_nearest": 14.619891252999594,
+          "race_prune": 4.180082734999985,
+          "race_no_prune": 4.752628888999979
+        },
+        "race_prune": {
+          "early_winners": 41,
+          "full_evaluations": 3,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.7566606001402438,
+              "faster_cases": 13
+            },
+            "dense_direct": {
+              "median": 2.2882872959628147,
+              "faster_cases": 30
+            },
+            "dense_nearest": {
+              "median": 2.247116954818148,
+              "faster_cases": 29
+            },
+            "race_no_prune": {
+              "median": 1.056042979290019,
+              "faster_cases": 33
+            }
+          }
+        },
+        "race_no_prune": {
+          "early_winners": 41,
+          "full_evaluations": 3,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 0.7033039484104584,
+              "faster_cases": 13
+            },
+            "dense_direct": {
+              "median": 2.2299551749044335,
+              "faster_cases": 30
+            },
+            "dense_nearest": {
+              "median": 2.2002842330257417,
+              "faster_cases": 29
+            },
+            "race_prune": {
+              "median": 0.9469324160507679,
+              "faster_cases": 9
+            }
+          }
+        }
+      },
+      "300": {
+        "cases": 42,
+        "exact_unique_winner_cases": 41,
+        "sum_case_median_seconds": {
+          "sparse_exact": 7.051154488999899,
+          "dense_direct": 39.53783925499987,
+          "dense_nearest": 43.01446360400011,
+          "race_prune": 10.521903150000057,
+          "race_no_prune": 12.198713692000197
+        },
+        "race_prune": {
+          "early_winners": 41,
+          "full_evaluations": 3,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 1.375920340602039,
+              "faster_cases": 26
+            },
+            "dense_direct": {
+              "median": 4.710970261964407,
+              "faster_cases": 36
+            },
+            "dense_nearest": {
+              "median": 3.113207956885667,
+              "faster_cases": 36
+            },
+            "race_no_prune": {
+              "median": 1.087860119108187,
+              "faster_cases": 33
+            }
+          }
+        },
+        "race_no_prune": {
+          "early_winners": 41,
+          "full_evaluations": 3,
+          "ratios_by_comparator": {
+            "sparse_exact": {
+              "median": 1.1601862389732656,
+              "faster_cases": 23
+            },
+            "dense_direct": {
+              "median": 4.479957656296934,
+              "faster_cases": 35
+            },
+            "dense_nearest": {
+              "median": 2.7923457538838403,
+              "faster_cases": 35
+            },
+            "race_prune": {
+              "median": 0.9192538453946278,
+              "faster_cases": 9
+            }
+          }
+        }
+      }
+    },
+    "work": {
+      "30": {
+        "race_prune": {
+          "initial_unique_widths": 738,
+          "total_unique_widths": 1382,
+          "total_curve_evaluations": 1589,
+          "refinement_steps": 644,
+          "median_unique_width_fraction": 0.1827956989247312,
+          "median_actual_curve_fraction": 0.1827956989247312,
+          "early_winners_with_all_models_fully_evaluated": 5
+        },
+        "race_no_prune": {
+          "initial_unique_widths": 738,
+          "total_unique_widths": 1517,
+          "total_curve_evaluations": 1783,
+          "refinement_steps": 779,
+          "median_unique_width_fraction": 0.1989247311827957,
+          "median_actual_curve_fraction": 0.1989247311827957,
+          "early_winners_with_all_models_fully_evaluated": 5
+        }
+      },
+      "100": {
+        "race_prune": {
+          "initial_unique_widths": 1545,
+          "total_unique_widths": 3523,
+          "total_curve_evaluations": 5262,
+          "refinement_steps": 1978,
+          "median_unique_width_fraction": 0.16336633663366334,
+          "median_actual_curve_fraction": 0.2821782178217822,
+          "early_winners_with_all_models_fully_evaluated": 0
+        },
+        "race_no_prune": {
+          "initial_unique_widths": 1545,
+          "total_unique_widths": 3957,
+          "total_curve_evaluations": 6186,
+          "refinement_steps": 2412,
+          "median_unique_width_fraction": 0.21947194719471946,
+          "median_actual_curve_fraction": 0.40924092409240925,
+          "early_winners_with_all_models_fully_evaluated": 0
+        }
+      },
+      "300": {
+        "race_prune": {
+          "initial_unique_widths": 2139,
+          "total_unique_widths": 7173,
+          "total_curve_evaluations": 12277,
+          "refinement_steps": 5034,
+          "median_unique_width_fraction": 0.10465116279069768,
+          "median_actual_curve_fraction": 0.16168327796234772,
+          "early_winners_with_all_models_fully_evaluated": 0
+        },
+        "race_no_prune": {
+          "initial_unique_widths": 2139,
+          "total_unique_widths": 8245,
+          "total_curve_evaluations": 14645,
+          "refinement_steps": 6106,
+          "median_unique_width_fraction": 0.11849390919158362,
+          "median_actual_curve_fraction": 0.1954595791805094,
+          "early_winners_with_all_models_fully_evaluated": 0
+        }
+      }
+    }
+  },
+  "data_provenance": {
+    "status": "PASS",
+    "mode": "certified",
+    "scope": "Post-run provenance reconciliation added after benchmark start; not preregistration.",
+    "release_commit": "7565b6657ba510e79db13e79b809b58e77feacc0",
+    "release_bindings": {
+      "experiments/data_hashes.json": "d53de71d4fedad5824bb2793a5997f7e416fb3f18246c4a7675a1fefd071857b",
+      "experiments/data_manifest.json": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e",
+      "artifacts/public_benchmark_receipt.json": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+      "artifacts/selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+      "artifacts/external_supplement_selection.json": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee",
+      "artifacts/bolt_base_64-download.json": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+      "artifacts/TimeMoE-200M_64-download.json": "36bf99d0219b882257fa93d1252647999d40c9a6f01dbcb5f68ae10727514fad",
+      "artifacts/timesfm-1.0-200m_64-download.json": "91da5b782937e3b7538118241f9585e4f408571a0fc47feeda6126debe16d24c"
+    },
+    "original_benchmark_sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+    "measurement_rows": 378,
+    "series": 42,
+    "families": 23,
+    "actual_label_members_verified": 42,
+    "actual_score_members_verified": 126,
+    "source_files_sha256": {
+      "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+      "TSB-AD-U-Eva.csv": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a",
+      "score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+    },
+    "verified_score_manifest_sha256": "424cdfabca8c00bbc89c349787290e07e62e90da182bd259119b45518d1310e2",
+    "checks": [
+      "release manifest and receipt identity",
+      "original case coverage",
+      "score-member manifest locks",
+      "actual ZIP member CRC and SHA-256",
+      "actual label shape/classes/count",
+      "actual score shape/finite values",
+      "measurement per-row label/score identity",
+      "exact mode-specific case set"
+    ],
+    "whole_score_archive_md5_verified": false,
+    "gate_sha256": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983"
+  },
+  "checks": [
+    "frozen hashes and complete source set",
+    "complete model/case input identity",
+    "all exact PR/tie choices",
+    "all interval containments",
+    "every pruned model below the exact best beyond tie tolerance",
+    "full-evaluation flags and exact-PR maps",
+    "per-model and aggregate width/curve counts",
+    "one unseen width per refinement",
+    "3e-10 early/pruning semantics",
+    "finite whole-call timings and exact medians",
+    "all producer summary aggregates"
+  ],
+  "limitations": [
+    "Floating-point checks are numerical, not directed-rounding proofs.",
+    "Initial per-model width IDs and timing-order trace are not recorded.",
+    "An early_winner flag need not imply fewer evaluated widths."
+  ]
+}

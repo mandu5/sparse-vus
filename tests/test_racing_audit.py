@@ -145,6 +145,16 @@ def test_noncontaining_interval_is_not_rescued_by_correct_selected_model():
         audit.audit_racing_records(rows, protocol(rows))
 
 
+def test_recomputed_endpoint_counts_cannot_exceed_three_curves_per_split():
+    rows = [record()]
+    value = rows[0]["values"]["race_prune"]
+    excess_total = value["initial_curve_evaluations"] + 3 * value["refinement_steps"] + 1
+    value["bounds"]["A"]["curve_evaluations"] += excess_total - value["total_curve_evaluations"]
+    value["total_curve_evaluations"] = excess_total
+    with pytest.raises(ValueError, match="accounting is impossible"):
+        audit.audit_racing_records(rows, protocol(rows))
+
+
 def test_false_early_winner_flag_on_exact_tie_is_rejected():
     rows = [record()]
     rows[0]["values"]["race_prune"]["early_winner"] = True
