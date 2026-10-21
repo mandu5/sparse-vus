@@ -8,10 +8,13 @@ assumptions: `n` is sequence length, `L` the maximum buffer width, and `Q` the
 number of positions in maximum expanded anomaly support. Complete global
 score ties and the integral contributions of omitted events are preserved.
 
-**v0.3.0 research artifact.** Both the Linux and Mac v3 holdouts
-are complete, with independent audits passing all 924 tasks on each platform.
-Release packaging is in progress.
-Stable [v0.2.0 assets](https://github.com/mandu5/sparse-vus/releases/tag/v0.2.0)
+**[v0.3.0 research release](https://github.com/mandu5/sparse-vus/releases/tag/v0.3.0).**
+Both the Linux and Mac v3 holdouts are complete, with independent audits
+passing all 924 tasks on each platform. The release contains verified Python
+packages, the working manuscript, research and computational archives, and
+SHA-256 provenance. [Release CI](https://github.com/mandu5/sparse-vus/actions/runs/39538283378)
+passes; all eight published assets were downloaded and verified after upload.
+Earlier [v0.2.0 assets](https://github.com/mandu5/sparse-vus/releases/tag/v0.2.0)
 remain unchanged; their earlier measurements are separated below.
 
 The target is a pinned official VUS definition, including dynamic label mass
@@ -22,11 +25,11 @@ representation and composition with existing ranking techniques. See the
 
 ## Install and use the exact radix APIs
 
-Use the research branch for these new entry points; they are absent from
-stable v0.2.0. Numerical CI covers Python 3.11 and 3.12.
+Use the v0.3.0 release for these entry points. Numerical CI covers Python
+3.11 and 3.12.
 
 ```bash
-git clone --branch research/pr-engine-20261021 https://github.com/mandu5/sparse-vus.git
+git clone --branch v0.3.0 --depth 1 https://github.com/mandu5/sparse-vus.git
 cd sparse-vus
 python3.12 -m venv .venv
 source .venv/bin/activate
