@@ -32,6 +32,18 @@ jobs:
       - run: python experiments/fast_vus_adapter.py --fetch
       - run: python experiments/benchopt_vus_adapter.py --fetch
       - run: python -m pytest -q
+      - name: Verify the real v2 report against its preserved source snapshot
+        if: matrix.python == '3.12'
+        run: |
+          ln -s "$GITHUB_WORKSPACE/.cache" artifacts/pr-engine/source-v2/.cache
+          python experiments/report_pr_engine.py artifacts/pr-engine/mac-development --output "$RUNNER_TEMP/pr-engine-v2-report/report" --tex
+      - name: Upload the verified v2 report
+        if: matrix.python == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-pr-engine-v2-report
+          path: ${{ runner.temp }}/pr-engine-v2-report/report.*
+          if-no-files-found: error
       # No model weights, large score archive, GPU, or paid API are required.
   installed-wheel:
     runs-on: ubuntu-latest

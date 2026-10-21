@@ -32,9 +32,10 @@ number of original anomaly intervals.
 
 \begin{proposition}[Fixed-width score preparation]
 \label{prop:radix}
-For finite binary64 score keys, assume unit-cost word operations, addresses
-and counts that fit a machine word, and unit-cost metric arithmetic including
-square roots. Preparation takes $O(n+Q+K)$ time. Exhaustive evaluation of
+For finite binary64 score keys, use a word-RAM for discrete preprocessing,
+with addresses, counts, widths and intermediate index arithmetic fitting
+machine words. Use a unit-cost real-arithmetic model for metric evaluation,
+including square roots. Preparation takes $O(n+Q+K)$ time. Exhaustive evaluation of
 either scalar PR or the ROC--PR pair takes $O(n+(L+1)Q)$ time and preserves
 the target integrals in exact metric arithmetic. The paired implementation
 uses $O(n+Q)$ auxiliary words; the current PR-only implementation uses

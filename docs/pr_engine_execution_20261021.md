@@ -51,7 +51,7 @@ correctness tests passed. The v3 integration and audit tests passed 40 checks,
 including all 15 actual adapters on tiny fixtures. They change no v2 measured
 source; the all-position controls use neither sparse event pruning nor ROC work.
 
-Protocol v3 retains all existing controls and add these two before any
+Protocol v3 retains all existing controls and adds these two before any
 new holdout outcomes. They have no fitted parameters. The 308-series holdout
 will retain all widths, with the primary width 30 executed before widths 100
 and 300. The v2 history will remain auditable against its original sources;
@@ -85,3 +85,17 @@ the run. The same commit starts the Linux workflow, which freezes its own
 protocol/environment before executing the identical fixed comparison.
 Each run retains 308 series, three widths, 14 methods, three models, and
 three serial randomized repetitions; the primary L=30 block comes first.
+
+The public freeze commit is `91696f79726ca83973cbda834e4ecf60c28441c8`.
+[CI run 39523992605](https://github.com/mandu5/sparse-vus/actions/runs/39523992605)
+passed: Python 3.12 had 3148 passed/2 optional Torch skips in 118.71 seconds,
+Python 3.11 had 3148 passed/2 skips in 114.22 seconds, and the isolated
+NumPy-only installed-wheel probe passed. The two Torch probes passed locally.
+
+[Linux run 39523992616](https://github.com/mandu5/sparse-vus/actions/runs/39523992616)
+successfully fetched all source bytes in its separate workspace and entered
+the frozen experiment. The Mac run began at 2026-10-21 00:56:59 UTC after all
+agent test/report work stopped. Lightweight document edits and status reads
+continue; no benchmark source is changed. The starting snapshot shows an
+unrelated Python worker at approximately 100 percent CPU, so the Mac remains
+explicitly non-isolated. The full 924-case outcomes and audit remain pending.
