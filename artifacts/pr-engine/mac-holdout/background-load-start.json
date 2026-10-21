@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-21T00:56:58.954794+00:00",
+  "scope": "Snapshot only; no unrelated process stopped. CPU percentages are ps estimates, not integrated run utilization. Agent tests and report execution ended before this snapshot.",
+  "processes": [
+    {
+      "pid": 5570,
+      "cpu_percent": 100.0,
+      "elapsed": "49:22",
+      "executable": "Python"
+    },
+    {
+      "pid": 412,
+      "cpu_percent": 26.1,
+      "elapsed": "02-20:33:48",
+      "executable": "WindowServer"
+    },
+    {
+      "pid": 5630,
+      "cpu_percent": 10.5,
+      "elapsed": "02-20:33:17",
+      "executable": "codex"
+    },
+    {
+      "pid": 31717,
+      "cpu_percent": 7.8,
+      "elapsed": "01:12:51",
+      "executable": "Naru Helper"
+    },
+    {
+      "pid": 35414,
+      "cpu_percent": 5.9,
+      "elapsed": "00:05",
+      "executable": "claude"
+    },
+    {
+      "pid": 31783,
+      "cpu_percent": 4.5,
+      "elapsed": "01:12:51",
+      "executable": "Naru Helper (Renderer)"
+    },
+    {
+      "pid": 29104,
+      "cpu_percent": 3.8,
+      "elapsed": "12:57:44",
+      "executable": "claude"
+    },
+    {
+      "pid": 90077,
+      "cpu_percent": 3.2,
+      "elapsed": "11:59:14",
+      "executable": "Orca"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+% v3 holdout; audit SHA256 577dab610dd482defcdaa55996e9a71281e8ccccb9420b680790f41ab2b69708
+% Comparator/radix PR ratios; >1 favors radix PR. Whole-call case medians; family-cluster intervals.
+\par\noindent\textbf{v3 holdout, $L=30$}
+Ratios are comparator time / radix\_pr time; values above 1 favor radix\_pr.
+Brackets show audited 95\% family-cluster intervals for three-repeat case medians.
+\par\smallskip
+\begin{tabular}{lrrr}
+Comparator & Median & Geomean [95\% CI] & Aggregate [95\% CI] \\
+\hline
+sparse\_pr & 1.987 & 1.916 [1.839, 2.013] & 1.955 [1.745, 2.095] \\
+dense\_pr\_direct & 4.894 & 4.161 [3.170, 5.008] & 5.385 [4.241, 6.191] \\
+sparse\_both & 2.071 & 1.997 [1.905, 2.124] & 2.039 [1.812, 2.197] \\
+dense\_nearest\_both & 6.917 & 5.890 [4.639, 6.923] & 7.214 [5.688, 8.187] \\
+klein\_pr & 14.538 & 13.814 [11.639, 15.930] & 11.232 [10.034, 12.514] \\
+benchopt\_both & 21.493 & 20.973 [18.481, 23.617] & 22.991 [19.193, 30.937] \\
+radix\_both & 1.072 & 1.084 [1.055, 1.124] & 1.081 [1.048, 1.139] \\
+dense\_pr\_direct\_radix & 4.419 & 3.756 [2.904, 4.486] & 4.708 [3.794, 5.276] \\
+dense\_pr\_nearest\_radix & 4.791 & 4.047 [3.142, 4.821] & 5.010 [3.933, 5.643] \\
+v02\_race & 2.307 & 2.500 [2.196, 3.056] & 2.324 [2.028, 2.721] \\
+fast\_race & 2.197 & 2.139 [2.011, 2.315] & 1.963 [1.800, 2.109] \\
+fast\_exact\_completion & 2.232 & 2.192 [2.082, 2.353] & 2.013 [1.833, 2.161] \\
+fast\_race\_radix & 1.188 & 1.199 [1.050, 1.359] & 1.020 [0.957, 1.101] \\
+\end{tabular}
+\par\smallskip
+Post-protocol descriptive PR-only oracle (no CI; frozen decisions unchanged): sparse\_pr, dense\_pr\_direct, klein\_pr, dense\_pr\_direct\_radix, dense\_pr\_nearest\_radix.
+Per-case minimum comparator/radix\_pr ratios: median 1.986, geomean 1.879, aggregate 1.928; radix\_pr faster/slower 302/6.
+
+\par\noindent\textbf{v3 holdout, $L=100$}
+Ratios are comparator time / radix\_pr time; values above 1 favor radix\_pr.
+Brackets show audited 95\% family-cluster intervals for three-repeat case medians.
+\par\smallskip
+\begin{tabular}{lrrr}
+Comparator & Median & Geomean [95\% CI] & Aggregate [95\% CI] \\
+\hline
+sparse\_pr & 1.715 & 1.670 [1.570, 1.746] & 1.635 [1.490, 1.740] \\
+dense\_pr\_direct & 7.901 & 6.927 [4.586, 9.319] & 8.628 [5.645, 11.366] \\
+sparse\_both & 1.908 & 1.875 [1.812, 1.922] & 1.846 [1.734, 1.931] \\
+dense\_nearest\_both & 10.010 & 8.500 [5.593, 11.392] & 10.292 [6.511, 13.688] \\
+klein\_pr & 28.468 & 24.678 [18.173, 30.602] & 19.173 [13.880, 24.409] \\
+benchopt\_both & 36.229 & 34.450 [27.078, 41.683] & 37.312 [27.113, 50.879] \\
+radix\_both & 1.203 & 1.195 [1.154, 1.246] & 1.211 [1.158, 1.269] \\
+dense\_pr\_direct\_radix & 7.465 & 6.666 [4.438, 8.952] & 8.220 [5.435, 10.714] \\
+dense\_pr\_nearest\_radix & 7.919 & 6.975 [4.574, 9.447] & 8.543 [5.360, 11.345] \\
+v02\_race & 1.951 & 2.256 [1.772, 2.943] & 2.122 [1.780, 2.539] \\
+fast\_race & 1.798 & 1.662 [1.431, 1.827] & 1.538 [1.364, 1.673] \\
+fast\_exact\_completion & 1.918 & 1.858 [1.716, 1.964] & 1.674 [1.537, 1.778] \\
+fast\_race\_radix & 1.027 & 0.971 [0.781, 1.116] & 0.907 [0.783, 1.027] \\
+\end{tabular}
+\par\smallskip
+Post-protocol descriptive PR-only oracle (no CI; frozen decisions unchanged): sparse\_pr, dense\_pr\_direct, klein\_pr, dense\_pr\_direct\_radix, dense\_pr\_nearest\_radix.
+Per-case minimum comparator/radix\_pr ratios: median 1.715, geomean 1.655, aggregate 1.612; radix\_pr faster/slower 301/7.
+
+\par\noindent\textbf{v3 holdout, $L=300$}
+Ratios are comparator time / radix\_pr time; values above 1 favor radix\_pr.
+Brackets show audited 95\% family-cluster intervals for three-repeat case medians.
+\par\smallskip
+\begin{tabular}{lrrr}
+Comparator & Median & Geomean [95\% CI] & Aggregate [95\% CI] \\
+\hline
+sparse\_pr & 1.275 & 1.323 [1.228, 1.404] & 1.259 [1.190, 1.330] \\
+dense\_pr\_direct & 7.800 & 7.465 [4.384, 11.169] & 8.977 [5.555, 13.480] \\
+sparse\_both & 1.636 & 1.648 [1.567, 1.712] & 1.573 [1.518, 1.625] \\
+dense\_nearest\_both & 9.133 & 8.428 [4.753, 12.877] & 10.040 [5.661, 15.396] \\
+klein\_pr & 29.888 & 26.660 [18.001, 35.878] & 19.650 [13.056, 28.794] \\
+benchopt\_both & 32.894 & 35.391 [24.667, 47.808] & 37.114 [23.930, 57.266] \\
+radix\_both & 1.337 & 1.321 [1.296, 1.356] & 1.317 [1.292, 1.340] \\
+dense\_pr\_direct\_radix & 7.612 & 7.360 [4.333, 10.986] & 8.808 [5.506, 13.079] \\
+dense\_pr\_nearest\_radix & 8.103 & 7.426 [4.155, 11.417] & 8.943 [5.047, 13.692] \\
+v02\_race & 1.157 & 1.332 [0.927, 1.789] & 1.774 [1.196, 2.405] \\
+fast\_race & 1.003 & 0.884 [0.688, 1.042] & 0.980 [0.806, 1.091] \\
+fast\_exact\_completion & 1.372 & 1.392 [1.277, 1.490] & 1.267 [1.195, 1.348] \\
+fast\_race\_radix & 0.557 & 0.542 [0.397, 0.670] & 0.727 [0.554, 0.864] \\
+\end{tabular}
+\par\smallskip
+Post-protocol descriptive PR-only oracle (no CI; frozen decisions unchanged): sparse\_pr, dense\_pr\_direct, klein\_pr, dense\_pr\_direct\_radix, dense\_pr\_nearest\_radix.
+Per-case minimum comparator/radix\_pr ratios: median 1.275, geomean 1.309, aggregate 1.235; radix\_pr faster/slower 294/14.

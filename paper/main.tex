@@ -31,14 +31,19 @@ $O(n+(L+1)Q)$ for finite binary64 inputs under the stated fixed-word and
 unit-cost metric-arithmetic assumptions. Support restriction, cumulative
 sums, and radix sorting are prior techniques; the VUS-specific reduction
 eliminates inactive events while preserving their integral contributions.
-An earlier comparison-based implementation evaluates both ROC and PR with
-median speedups of $8.38\times$ and $4.55\times$ against released PR-only
-fast-VUS on two CPUs. Against the fastest tested comparator, medians are
-$2.04\times$ and $1.35\times$, with 209 and 574 of 2,100 cases slower or equal.
-Optional width bounds reduce queries but can increase runtime; earlier
-racing experiments increase aggregate cost. Exactness concerns the
-all-threshold, all-width target, with floating-point agreement audited
-numerically rather than bitwise.
+On 308 series from 17 families, two CPU environments each complete 924
+three-model tasks at maximum widths 30, 100, and 300. At the primary width
+30, exact radix PR has median speedups of $20.92\times$ and $14.54\times$
+over released PR-only fast-VUS, and $2.60\times$ and $4.79\times$ over a
+matched nearest-distance dense radix PR control. Both platforms pass the
+frozen five-control confidence-interval criterion. Against a descriptive
+per-case PR-only oracle, median ratios are $1.71\times$ and $1.99\times$,
+with 40 and 6 of 308 cases slower. Maximum PR discrepancy among the
+exhaustive implementations relative to the comparison-based sparse control
+is below $1.56\times10^{-15}$. Optional width refinement reduces queries but does
+not pass its separate runtime criteria. Exactness concerns the
+all-threshold, all-width target; floating-point agreement is numerical,
+not bitwise.
 \end{abstract}
 
 % BEGIN SHARED BODY
@@ -335,6 +340,13 @@ independent seeded random method order within each task and one compute
 thread. Width-major task order, source hashes, required comparisons, and
 family-bootstrap summaries are fixed by the protocol.
 
+The v3 Mac environment is an Apple M1 Pro with 16 GiB host memory,
+Python 3.12.4, NumPy 1.26.4, and Numba 0.59.1. The separate Linux run uses
+an Ubuntu 24.04 GitHub Actions x86\_64 worker, Python 3.12.15,
+NumPy 2.5.4, and Numba 0.68.0. Its exact CPU model was not recorded.
+These software environments are kept distinct in the comparisons and
+receipts; the earlier Linux execution below is a different run.
+
 The matched dense controls and the v3 protocol were fixed after the v2
 development results and before inspection of the policy-holdout outcomes.
 The exact radix and radix racing hypotheses have separate decisions; each
@@ -483,11 +495,13 @@ Score groups containing no maximum-support position can be eliminated while
 preserving their ROC rectangles and the complete ties at retained events.
 Combining this exact representation with standard fixed-width ranking and
 linear interval geometry gives $O(n+(L+1)Q)$ exhaustive evaluation under the
-stated arithmetic model. The earlier comparison-based evaluator shows
-measured gains over released fast-VUS on both tested CPUs, while dense
-methods retain favorable cases. Matched PR-only dense radix controls are
-necessary to distinguish support-event gains from shared implementation
-improvements. Width enclosures and adaptive decisions remain optional:
+stated arithmetic model. Both CPU environments pass the frozen exact-radix
+criterion over five controls. Primary-width median gains over released
+PR-only fast-VUS are $20.92\times$ and $14.54\times$; matched dense radix
+controls show that the gains extend beyond the shared sorting improvement.
+The descriptive per-case PR-only oracle still wins 40 Mac and 6 Linux
+primary cases, which remain in the artifact and plots. Width enclosures
+and adaptive decisions remain optional:
 their lower query counts alone do not justify replacing exhaustive exact
 evaluation. The contribution concerns efficient computation of a specified
 metric, not the validity of that metric or universal runtime superiority.

@@ -266,7 +266,7 @@ def render(reports, report_hashes=None):
               "Racing outcomes are separate from the exact-radix decision, and failed criteria remain reported.",
               "The v2 development runs remain historical development evidence and are not pooled with this holdout.",
               "Platforms are summarized separately: no cross-run timing pooling is performed.",
-              "The Mac was not isolated: an unrelated Python worker and normal desktop activity remained active, as recorded in the load snapshots. Agent test, build, and report execution stopped during timing; lightweight status reads and document edits continued.",
+              "The Mac was not isolated: its starting snapshot shows an unrelated Python worker near 100 percent CPU, alongside normal desktop activity. Snapshots are not a continuous load trace. Agent test, build, and report execution stopped during timing; lightweight status reads, completed remote-artifact transfers, and document edits continued. No unrelated process was stopped by the experiment.",
               "The Linux confirmation used a separate serial GitHub Actions job; hosted hardware and host background load were outside our control.",
               "This policy holdout uses previously studied corpus families; it is not an external-domain dataset.",
               "The results address the stated workload and tested implementations, without establishing universal superiority.", ""]

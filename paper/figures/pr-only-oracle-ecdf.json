@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-21T03:05:59.205865+00:00",
+  "analysis": "post_protocol_descriptive_oracle_ecdf",
+  "caption": "v3 policy holdout. Post-protocol descriptive oracle: fastest eligible PR-only exhaustive control per case.\nAll 308 cases per width are included; no CIs or tail clipping. Ratios above 1 favor radix PR.\nControls: comparison-sort sparse/direct dense, Klein, and radix direct/nearest dense; three-repeat whole-task medians.",
+  "eligible_comparators": [
+    "sparse_pr",
+    "dense_pr_direct",
+    "klein_pr",
+    "dense_pr_direct_radix",
+    "dense_pr_nearest_radix"
+  ],
+  "confidence_intervals": "none",
+  "excluded_cases": 0,
+  "ratio": "minimum eligible complete-task case-median seconds / radix_pr case-median seconds",
+  "axis": {
+    "x_scale": "log",
+    "x_limits": [
+      0.4617290641131277,
+      3.8495112627338255
+    ],
+    "vertical_reference": 1.0
+  },
+  "platforms": {
+    "mac": {
+      "report_filename": "report.json",
+      "report_sha256": "c72f2df666c49e58c7deb7fec72dc10d9d3bddcdcb05602fb787ac09c62af2aa",
+      "audit_sha256": "a9d44deb51fa3d764a923a52217012498a574847ebee798ddf343f1e90f0d28f",
+      "protocol_sha256": "5417a38ec43cc4471e17a0ca7d6af0b11ef448689042a1c5dec4fa8ef2dffb07",
+      "measurements_sha256": "499f69e0e767f0c4971b8cc9cd839e3eedec3cb20f945b1cc6221f2604dd3228",
+      "inputs_sha256": "783d6ec769682c8b0735fe4f4a17591ab4de042b2f2907e8ffbecbcc74690cd6",
+      "cases": 924,
+      "by_width": {
+        "30": {
+          "included_cases": 308,
+          "losses": 40,
+          "timing_ties": 0,
+          "minimum_ratio": 0.5309884237300968,
+          "maximum_ratio": 3.3474010980294135
+        },
+        "100": {
+          "included_cases": 308,
+          "losses": 22,
+          "timing_ties": 0,
+          "minimum_ratio": 0.6180227493606502,
+          "maximum_ratio": 2.8214284071500844
+        },
+        "300": {
+          "included_cases": 308,
+          "losses": 23,
+          "timing_ties": 0,
+          "minimum_ratio": 0.6098335222889224,
+          "maximum_ratio": 2.803378591268415
+        }
+      }
+    },
+    "linux": {
+      "report_filename": "report.json",
+      "report_sha256": "46c6fba361e4e9f021781a08dd72050b43df8ded160883e35ed6a3594355f837",
+      "audit_sha256": "577dab610dd482defcdaa55996e9a71281e8ccccb9420b680790f41ab2b69708",
+      "protocol_sha256": "838c23163326fc1a71c3f2fbbc1a8245ed6f489d11b94a7c6d00d3cb2661bd45",
+      "measurements_sha256": "a54fd4ec9107e2b9517b455d221c9f6dfbc7ae6f1f84070f0cb6a37ddbc62060",
+      "inputs_sha256": "783d6ec769682c8b0735fe4f4a17591ab4de042b2f2907e8ffbecbcc74690cd6",
+      "cases": 924,
+      "by_width": {
+        "30": {
+          "included_cases": 308,
+          "losses": 6,
+          "timing_ties": 0,
+          "minimum_ratio": 0.8070115493378932,
+          "maximum_ratio": 2.4506732304135785
+        },
+        "100": {
+          "included_cases": 308,
+          "losses": 7,
+          "timing_ties": 0,
+          "minimum_ratio": 0.814775722665843,
+          "maximum_ratio": 2.2438201236138706
+        },
+        "300": {
+          "included_cases": 308,
+          "losses": 14,
+          "timing_ties": 0,
+          "minimum_ratio": 0.7700180570504198,
+          "maximum_ratio": 1.863833487705318
+        }
+      }
+    }
+  },
+  "plotter_sha256": "6d57ef3fc3b05811ff998df7efcecfaad3c2124ac26c42ba94fcc3baed019eda",
+  "matplotlib": "3.8.4",
+  "outputs": {
+    "png": {
+      "filename": "pr-only-oracle-ecdf.png",
+      "sha256": "1de526ab4aac050917a9c004a9e2c6a7528d7157a85ed47eee6b4336071c333d",
+      "bytes": 259330
+    },
+    "pdf": {
+      "filename": "pr-only-oracle-ecdf.pdf",
+      "sha256": "1f9c36b4e700c359ff0137bc4a9fe3b2d74ce11c19583b21288dab663dd7e648",
+      "bytes": 32378
+    },
+    "svg": {
+      "filename": "pr-only-oracle-ecdf.svg",
+      "sha256": "454f2af66eea624dff71cbca1958dd53cb49d58355d2eb73d1cfcea8fadab2f8",
+      "bytes": 88509
+    }
+  }
+}

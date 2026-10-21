@@ -1,0 +1,95 @@
+{
+  "builder_sha256": "69f2d11b757209122ccc09e0f174df84eb9325658e6f53fe4395dfa6ef9689ab",
+  "figure": {
+    "path": "figures/pr-only-oracle-ecdf.pdf",
+    "validation": "not performed by this builder; generate from the same two reports with plot_pr_engine.py"
+  },
+  "oracle_confidence_intervals": "none",
+  "output_filename": "pr_engine_results.tex",
+  "output_sha256": "e03f24e19114a05d3928f1f870bf5aa4072388676feabcfe7506d03313166ee9",
+  "platforms": {
+    "linux": {
+      "bindings": {
+        "audit_sha256": "577dab610dd482defcdaa55996e9a71281e8ccccb9420b680790f41ab2b69708",
+        "auditor_sha256": "d0def03dc7b7b7f90a8d879ce1b1aa400390111072a504c5e4bd3482b2c07fc0",
+        "environment_sha256": "533a450fd051cdfca7b62fa0a1309b6093b92ee48f46bd9ab6f02fafb418141b",
+        "inputs_sha256": "783d6ec769682c8b0735fe4f4a17591ab4de042b2f2907e8ffbecbcc74690cd6",
+        "measured_source_sha256": {
+          ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+          ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+          "experiments/advancement_data_gate.py": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+          "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+          "experiments/benchmark_pr_engine.py": "6354535834e693f8b6e7170e69d6a426a12d936c3b06c7ab418e7806cee32e9d",
+          "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+          "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+          "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+          "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+          "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+          "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+          "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+          "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+          "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+          "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+          "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f"
+        },
+        "measurements_sha256": "a54fd4ec9107e2b9517b455d221c9f6dfbc7ae6f1f84070f0cb6a37ddbc62060",
+        "protocol_sha256": "838c23163326fc1a71c3f2fbbc1a8245ed6f489d11b94a7c6d00d3cb2661bd45",
+        "reporter_sha256": "8bdb7290d845837a69521ee7fc6375b55c4ef781016dd1d93d9e9c40917e10bb",
+        "summary_sha256": "d94f1dcb50249589babdb543e924c19837f64df78f99e4380836514b1f0b5984"
+      },
+      "cases": 924,
+      "decisions": {
+        "primary_decision": false,
+        "radix_primary_decision": true,
+        "radix_racing_decision": false
+      },
+      "report_filename": "report.json",
+      "report_sha256": "46c6fba361e4e9f021781a08dd72050b43df8ded160883e35ed6a3594355f837",
+      "series": 308
+    },
+    "mac": {
+      "bindings": {
+        "audit_sha256": "a9d44deb51fa3d764a923a52217012498a574847ebee798ddf343f1e90f0d28f",
+        "auditor_sha256": "d0def03dc7b7b7f90a8d879ce1b1aa400390111072a504c5e4bd3482b2c07fc0",
+        "environment_sha256": "e7d2f2c41b2aee2821fc89ccccdeeaf1e407a6315acc4fd1cd4cab75a92a7cc0",
+        "inputs_sha256": "783d6ec769682c8b0735fe4f4a17591ab4de042b2f2907e8ffbecbcc74690cd6",
+        "measured_source_sha256": {
+          ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+          ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+          "experiments/advancement_data_gate.py": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+          "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+          "experiments/benchmark_pr_engine.py": "6354535834e693f8b6e7170e69d6a426a12d936c3b06c7ab418e7806cee32e9d",
+          "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+          "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+          "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+          "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+          "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+          "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+          "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+          "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+          "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+          "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+          "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f"
+        },
+        "measurements_sha256": "499f69e0e767f0c4971b8cc9cd839e3eedec3cb20f945b1cc6221f2604dd3228",
+        "protocol_sha256": "5417a38ec43cc4471e17a0ca7d6af0b11ef448689042a1c5dec4fa8ef2dffb07",
+        "reporter_sha256": "8bdb7290d845837a69521ee7fc6375b55c4ef781016dd1d93d9e9c40917e10bb",
+        "summary_sha256": "87a6ac61b99ab0f45c27671559c455d1b8112756f0fe2141d7f0f113711d241a"
+      },
+      "cases": 924,
+      "decisions": {
+        "primary_decision": false,
+        "radix_primary_decision": true,
+        "radix_racing_decision": false
+      },
+      "report_filename": "report.json",
+      "report_sha256": "c72f2df666c49e58c7deb7fec72dc10d9d3bddcdcb05602fb787ac09c62af2aa",
+      "series": 308
+    }
+  },
+  "schema_version": 1,
+  "scope": "validated report-to-manuscript derivation; no metric execution or raw-data reaudit",
+  "status": "PASS",
+  "timing_pooling": "none",
+  "validator_sha256": "6d57ef3fc3b05811ff998df7efcecfaad3c2124ac26c42ba94fcc3baed019eda"
+}

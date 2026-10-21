@@ -59,6 +59,17 @@ jobs:
           name: verified-pr-engine-linux-report
           path: ${{ runner.temp }}/pr-engine-linux-report/report.*
           if-no-files-found: error
+      - name: Verify the completed Mac v3 holdout report
+        if: matrix.python == '3.12'
+        run: |
+          python experiments/report_pr_engine.py artifacts/pr-engine/mac-holdout --output "$RUNNER_TEMP/pr-engine-mac-report/report" --tex
+      - name: Upload the verified Mac v3 holdout report
+        if: matrix.python == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-pr-engine-mac-report
+          path: ${{ runner.temp }}/pr-engine-mac-report/report.*
+          if-no-files-found: error
       # No model weights, large score archive, GPU, or paid API are required.
   installed-wheel:
     runs-on: ubuntu-latest

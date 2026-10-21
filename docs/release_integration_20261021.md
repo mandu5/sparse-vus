@@ -1,8 +1,10 @@
 # Exact radix release integration — 21 October 2026
 
-This is a static integration review while frozen holdout timings run. It is
-not a release receipt or a completed wheel/artifact verification. Stable
-v0.2.0, its tag/assets, and all measured implementation sources remain unchanged.
+This review records the additive v0.3.0 integration. Both frozen holdouts have
+completed and passed independent audits. The earlier v0.2.0 tag/assets and all
+16 measured implementation sources remain unchanged. Final release and
+transport receipts are recorded separately; this document is not an acceptance
+or global speed-record claim.
 
 ## API and installation
 
@@ -24,10 +26,10 @@ authority for reproducing its numerical/runtime environment.
 README now gives self-contained radix examples, outputs, tie/conversion rules,
 JIT/preparation costs, and scope of the asymptotic bound. It explicitly separates
 the branch APIs from v0.2.0 timing results and corrects the obsolete statement
-that Sylligardos-attributed FF-VUS code is unavailable. No new timing outcome or
-global speed claim is added.
+that Sylligardos-attributed FF-VUS code is unavailable. Both complete 924-task reports and all negative cases are now included;
+no global speed claim is added.
 
-## Integration fixes prepared, not executed locally
+## Integration fixes verified in CI
 
 - Fresh-workspace creation previously omitted the historical auditor required
   by a current test. Public and anonymous helpers now copy every inventoried
@@ -46,6 +48,11 @@ global speed claim is added.
   Python module's bytes and the distribution version against source. The first
   environment still checks absence of Numba. These are packaging/parity checks,
   not timings.
+
+CI run 39533404287 passed 3,206 tests on each of Python 3.11 and 3.12
+(two optional Torch probes skipped per environment), both isolated wheel
+checks, and real historical-v2 and Linux-v3 report reconstruction. The release
+adds the completed Mac report reconstruction to the same workflow.
 
 Before edits, both the v2 development and v3 holdout `source_sha256` maps were
 inspected. The changed workspace helpers, shell runners, CI configuration,
@@ -71,7 +78,7 @@ kernel, benchmark producer, adapter, data gate, or historical snapshot was edite
    of submission or venue suitability.
 4. Use a new additive release, preferably **v0.3.0**, after the evidence is frozen.
    At that point update `pyproject.toml` and `CITATION.cff` together, including
-   the actual release date and paper title. Both still say v0.2.0 now. Build a
+   the actual release date and paper title. Both now identify v0.3.0 and 21 October 2026. Build a
    new wheel, sdist, named manuscript/research artifact and checksums; do not
    overwrite v0.2.0 assets. Record source-byte identity separately from anonymous
    metadata transformations. Publish only the actual audited scope and CPU

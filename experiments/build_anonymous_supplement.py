@@ -31,7 +31,7 @@ SCIENTIFIC_DOCS = {
     "advancement_experiment_review_20261020.md", "experimental_audit_20261020.md",
     "prior_art_update_20261021.md", "pr_engine_review_20261021.md",
     "radix_prior_art_20261021.md", "pr_protocol_independent_review_20261021.md",
-    "exact_vus_sota_search_20261021.md",
+    "exact_vus_sota_search_20261021.md", "pr_engine_final_verification_20261021.md",
 }
 SNAPSHOT_LICENSES = {"artifacts/pr-engine/source-v2/LICENSE"}
 LOCAL_PATH = re.compile(r"(?:/Users/|/home/|/root/|/private/|/var/folders/|[A-Za-z]:[\\/]Users[\\/])[^\s\"'`<>]+")

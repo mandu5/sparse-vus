@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-21T03:04:56.336838+00:00",
+  "scope": "Snapshot after the complete Mac producer exited successfully and before local independent audit, tests, plots or builds. No unrelated process stopped. ps percentages are estimates, not integrated run utilization or peak process memory.",
+  "processes": [
+    {
+      "pid": 412,
+      "cpu_percent": 26.8,
+      "elapsed": "02-22:41:46",
+      "executable": "WindowServer"
+    },
+    {
+      "pid": 5630,
+      "cpu_percent": 13.7,
+      "elapsed": "02-22:41:15",
+      "executable": "codex"
+    },
+    {
+      "pid": 31717,
+      "cpu_percent": 8.7,
+      "elapsed": "03:20:49",
+      "executable": "Naru Helper"
+    },
+    {
+      "pid": 31783,
+      "cpu_percent": 4.9,
+      "elapsed": "03:20:49",
+      "executable": "Naru Helper (Renderer)"
+    },
+    {
+      "pid": 90077,
+      "cpu_percent": 4.9,
+      "elapsed": "14:07:12",
+      "executable": "Orca"
+    },
+    {
+      "pid": 546,
+      "cpu_percent": 3.1,
+      "elapsed": "02-22:41:45",
+      "executable": "mds_stores"
+    },
+    {
+      "pid": 97957,
+      "cpu_percent": 2.8,
+      "elapsed": "00:20",
+      "executable": "mdworker_shared"
+    },
+    {
+      "pid": 98072,
+      "cpu_percent": 2.4,
+      "elapsed": "02-19:41:54",
+      "executable": "codex-code-mode-host"
+    }
+  ]
+}
