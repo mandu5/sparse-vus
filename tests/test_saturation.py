@@ -1,5 +1,8 @@
 """Independent semantic tests for the active-prefix evaluator."""
 import itertools
+import hashlib
+import importlib.util
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -117,6 +120,40 @@ def test_buffer_saturation_precedes_last_original_positive():
     for actual in (early, last, full):
         np.testing.assert_allclose(list(actual['values'].values()),
                                    dense_vus_direct_jit(y, scores, 6), atol=1e-11, rtol=0)
+
+
+def test_buffer_saturation_separates_from_last_positive_cutoff():
+    from sparse_vus.saturation import profile_saturation
+    y = np.zeros(1001, dtype=np.int8)
+    y[[333, 666]] = 1
+    scores = np.zeros(1001)
+    scores[[333, 332, 334, 665, 666]] = [10, 9, 8, 7, -10]
+    early = profile_saturation(y, scores, 500)
+    last = profile_saturation(y, scores, 500, stop='last_positive')
+    assert early['visited'][:2] == [2, 2]
+    assert early['visited'][2:] == [4] * 499
+    assert last['visited'] == last['active']
+    assert sum(early['visited']) < sum(last['visited']) / 50
+    assert early['values'] == pytest.approx(last['values'], abs=1e-11)
+
+
+def test_pinned_official_original_target():
+    path = Path(__file__).resolve().parents[1] / 'cache/official_metrics.py'
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == (
+        'bd547c9746fc1b9bbce2895e20cb156f97d23365d5dce8c2a3fab90622ccdced')
+    spec = importlib.util.spec_from_file_location('saturation_official_oracle', path)
+    loaded = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(loaded)
+    oracle = loaded.metricor()
+    pr, both = functions()
+    rng = np.random.default_rng(2026102114)
+    for width in (0, 1, 2, 3, 8, 35, 80):
+        y = rng.integers(0, 2, size=31, dtype=np.int8)
+        y[0], y[-1] = 0, 1
+        scores = rng.integers(-3, 4, size=31).astype(float)
+        expected = oracle.RangeAUC_volume_opt(y, scores, width, thre=len(y))[-2:]
+        np.testing.assert_allclose(both(y,scores,width), expected, atol=1e-11, rtol=0)
+        assert pr(y,scores,width) == pytest.approx(expected[1], abs=1e-11)
 
 
 @pytest.mark.parametrize('stop', [False, 'last_positive'])

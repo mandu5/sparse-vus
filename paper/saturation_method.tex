@@ -1,0 +1,117 @@
+\subsection{Exact evaluation of active score prefixes}
+\label{sec:saturation}
+At a fixed width, let $A$ count admitted original-positive positions and let
+$B$ denote their admitted non-original buffer mass. Then $T=A+B$ and
+$P=P_0+B/2$. We call a complete score threshold \emph{saturated} when
+\begin{equation}
+ A+B/2\ge P_0\qquad\hbox{and}\qquad H=K_w.
+ \label{eq:saturation-condition}
+\end{equation}
+The condition includes the complete global numerical tie, even when only some
+positions in that tie belong to the width's active support.
+
+\begin{lemma}[Permanent saturation]
+After a threshold satisfying~\eqref{eq:saturation-condition}, every subsequent
+recall coordinate equals one. The remaining right-step PR contribution is
+zero, and the remaining trapezoidal ROC contribution, including the explicit
+terminal $(1,1)$ transition, is $1-F$, where $F$ is the current FPR.
+\end{lemma}
+\begin{proof}
+Threshold relaxation cannot decrease $A$, $B$, or the number of hit expanded
+components. Thus both conditions persist. The first is equivalent to
+$(A+B)/(P_0+B/2)\ge1$; the second makes the existence factor one. Every later
+PR recall increment vanishes. Every later ROC trapezoid has height one, so
+its signed horizontal increments telescope from the current $F$ to the
+terminal abscissa one. The proof does not assume a fixed negative denominator.
+\end{proof}
+
+Stopping at recall one is a standard flat-curve observation, not a claimed
+new integration principle. In particular, admitting the last original
+positive gives $A=P_0$ and hits every expanded component, so it is already a
+valid cutoff. The VUS-specific condition can stop earlier: buffer mass can
+compensate for original positives that have not yet been admitted. Both
+last-original-positive stopping and disabled stopping are explicit controls.
+
+A cutoff added after constructing every width's full support histogram would
+still pay $\Theta(Q)$ per width. To avoid that work, retain support positions
+in descending score order, and activate position $i$ at radius $d_1(i)$;
+original positives have activation radius zero. The score-ordered list is
+represented by integer next pointers. Bucket-sort activations by their
+integer radius. Starting from the full list, delete positions in reverse
+activation order and record the two neighbors at each deletion. Reversing
+these deletions inserts every position in constant time. Tied activation
+radii use the same fixed order in both directions. Consequently traversing
+the current list visits only positions with nonzero weight at that width.
+A complete retained event still uses its precomputed global $c^>,c^\ge$;
+points omitted from the current list may belong to that same global tie.
+
+For geometry, preprocessing also records one nearest original interval for
+each support position. At radius $r$, neighboring original intervals with
+endpoints $b_k,a_{k+1}$ merge precisely when
+$2r\ge a_{k+1}-b_k$. Bucket these edges by
+$\lceil(a_{k+1}-b_k)/2\rceil$ and maintain their components with union-find.
+Mere adjacency of expanded intervals does not merge them. An active point
+lies in its nearest interval's expansion. Any other expansion containing the
+point overlaps that expansion and belongs to the same component; hence the
+nearest interval's union-find root identifies the point's component. A
+width-stamped root array counts first hits without clearing all components
+at each width. Unions occur before a width's threshold scan, so roots are
+fixed throughout that scan.
+
+\begin{theorem}[Active-prefix bound]
+Use the fixed-binary64 word-RAM and unit-cost metric-arithmetic assumptions
+of Proposition~\ref{prop:radix}. Let $J_w$ be the number of active support
+positions visited through the complete first saturated score tie at width
+$w$, and let $K$ count original intervals. Both scalar integrals can be
+computed in
+\[
+ O\!\left(n+L+\alpha(K)\sum_{w=0}^{L}J_w\right)
+\]
+time and $O(n+Q)$ auxiliary words, where $\alpha$ denotes the inverse
+Ackermann factor for union-find. A diagnostic vector of per-width work
+counts uses an additional $O(L)$ words. The values equal the target
+integrals in exact metric arithmetic.
+\end{theorem}
+\begin{proof}
+Fixed-width radix ranking, complete global tie counts, the nearest-interval
+scan, and extraction of the ordered support take $O(n+Q+K)$ time.
+All activation distances and finite merge radii are at most $n-1$, so
+bucket arrays are capped at $\min(\lfloor L/2\rfloor,n-1)+1$, even if $L$
+is much larger than $n$. Counting-sort schedules and reverse deletions take
+$O(n+Q+K)$ time and space. Each position is activated once, and there are
+at most $K-1$ unions. Union by size with path compression takes amortized
+$O(\alpha(K))$ per operation. Every visited position performs one find;
+event arithmetic and first-hit accounting take constant additional time.
+No width requires an additional $Q$- or $K$-sized scan. Streaming the means
+requires $L+1$ width iterations. Since at width zero saturation requires all
+original positives, $J_0=P_0\ge K$, and the union cost is absorbed by
+$\alpha(K)\sum_w J_w$. Active-event elimination uses the same negative-run
+rectangles as before, and the lemma supplies the exact omitted suffix.
+All scratch state is input-, support-, or interval-sized.
+\end{proof}
+
+The bound is adaptive, not a worst-case improvement for every score vector:
+$J_w$ may equal the full active support size. Union-find and linked-list
+access also have costs that a work-count reduction does not measure.
+Nevertheless, a separating family exists even against the same active-list
+algorithm stopped at the last original positive. For $L\ge2$, take
+$n=4L+3$, with singleton originals at zero-based positions $L+1$ and $3L+1$.
+Rank first the first original, then its two immediate neighbors, then one
+immediate neighbor of the second original. Rank the second original last;
+put all remaining scores strictly between the fourth and last scores.
+At every width $w\ge2$, those three neighbors have weight at least
+$1/\sqrt2$, so the first four active positions satisfy
+\[
+ A+B/2\ge 1+\frac{3}{2\sqrt2}>2=P_0
+\]
+and hit both expanded components. Thus $J_w=4$, while at widths zero and
+one $J_w=2$. The last-original-positive control must traverse
+$Q_w=4\lfloor w/2\rfloor+2$ active positions at every width, giving
+$\Theta(L^2)$ traversal rather than $\Theta(L)$. With $K=2$ and $n=\Theta(L)$,
+the full adaptive algorithm takes $O(n+L)$ on this family. This is a
+structural operation-count separation, not an empirical runtime claim.
+
+The implementation uses finite-precision arithmetic and can differ from a
+full scan through summation order and suffix telescoping. The theorem is an
+exact-arithmetic identity; measured numerical parity, floating-point limits,
+and runtime comparisons must be reported separately.

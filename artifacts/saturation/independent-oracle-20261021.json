@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "schema_version": 1,
+  "started_utc": "2026-10-21T04:35:58.759767+00:00",
+  "finished_utc": "2026-10-21T04:36:05.043957+00:00",
+  "elapsed_seconds_including_imports_and_compilation": 6.284207583026728,
+  "protocol": {
+    "lengths": [
+      2,
+      5
+    ],
+    "labels": "all both-class binary label vectors",
+    "scores": "all assignments from {-1, 0, 1}; ties admitted atomically",
+    "maximum_width": "2*n+1, evaluating every integer width from zero",
+    "additional_inputs": "one reversed and one non-contiguous stride view, n=6, L=13",
+    "stop_modes": [
+      "saturation",
+      "full",
+      "last_original_positive"
+    ],
+    "targets": [
+      "paired ROC/PR public call",
+      "PR-only public call"
+    ],
+    "absolute_tolerance": 2e-12,
+    "relative_tolerance": 0.0,
+    "oracle": "direct ramps, overlap-only interval merging, every distinct global threshold",
+    "shared_production_helpers_used_by_oracle": []
+  },
+  "case_counts": {
+    "exhaustive": 8604,
+    "strided": 2
+  },
+  "case_mode_counts": {
+    "saturation": 8606,
+    "full": 8606,
+    "last_original_positive": 8606
+  },
+  "case_mode_pairs": 25818,
+  "candidate_public_calls": 51636,
+  "maximum_paired_absolute_error": 3.3306690738754696e-16,
+  "maximum_pr_only_absolute_error": 2.220446049250313e-16,
+  "failure_count": 0,
+  "first_failures": [],
+  "source_sha256_before": {
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "paper/saturation_method.tex": "3671bc35cc55b9238128d36db3792464c9a338244eb680f781cc9f998280ecda"
+  },
+  "source_sha256_after": {
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "paper/saturation_method.tex": "3671bc35cc55b9238128d36db3792464c9a338244eb680f781cc9f998280ecda"
+  },
+  "oracle_script_sha256": "b4ba42db3d1b7c8374647a778478dd9e3f976431e54168439c521dc10e993f55",
+  "sources_unchanged_during_audit": true,
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+    "numpy": "1.26.4",
+    "numba": "0.59.1",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "limits": [
+    "Exhaustive only within the stated finite labels/score domain.",
+    "Uses floating-point arithmetic, not symbolic or directed-rounding certification.",
+    "The independently written oracle is in-session validation, not external reproduction.",
+    "No performance, generalization, novelty or publication claim is established."
+  ]
+}
