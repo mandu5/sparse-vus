@@ -1,0 +1,8 @@
+{
+  "purpose": "Portable archival copy of a completed exploratory prototype, not the production implementation.",
+  "original_source_sha256": "da61a58fbf3fd5161cc9cb0c573d109b1ade31d91b32da6f17b842941ae93d43",
+  "portable_source_sha256": "9293006ab67016994571a395ee9bfd7d60cacfa70d86ace8ae8f6d2d17980a41",
+  "only_change": "One machine-specific absolute ROOT assignment replaced with Path(__file__).resolve().parents[2]. Metric, sorting and timing function bodies unchanged.",
+  "original_probe_sha256": "f6afcfeaac1fb1f18e4c2dfcddb30288cc5e2c22df3e8c4ee6267227545c9c84",
+  "note": "before.sha256 and after.sha256 identify the originally executed files. result.json retains the original prototype hash; it does not purport to hash the portable copy."
+}

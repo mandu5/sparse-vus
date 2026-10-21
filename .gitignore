@@ -1,8 +1,8 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-cache/
-.cache/
+/cache
+/.cache
 .venv/
 *.egg-info/
 build/
