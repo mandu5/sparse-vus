@@ -44,6 +44,21 @@ jobs:
           name: verified-pr-engine-v2-report
           path: ${{ runner.temp }}/pr-engine-v2-report/report.*
           if-no-files-found: error
+      - name: Verify the completed Linux v3 holdout report
+        if: matrix.python == '3.12'
+        run: |
+          linux_run=artifacts/reproductions/linux-pr-engine-39523992616
+          for receipt in protocol.json inputs.json environment.json measurements.jsonl summary.json audit.json; do
+            test -f "$linux_run/$receipt"
+          done
+          python experiments/report_pr_engine.py "$linux_run" --output "$RUNNER_TEMP/pr-engine-linux-report/report" --tex
+      - name: Upload the verified Linux v3 holdout report
+        if: matrix.python == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-pr-engine-linux-report
+          path: ${{ runner.temp }}/pr-engine-linux-report/report.*
+          if-no-files-found: error
       # No model weights, large score archive, GPU, or paid API are required.
   installed-wheel:
     runs-on: ubuntu-latest

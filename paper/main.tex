@@ -318,8 +318,9 @@ enclosures, but this bounded search does not establish priority.
 The follow-up separates exact event compression from implementation choices
 shared with dense methods. Its v3 protocol evaluates all three model scores
 per series, returning every model within $10^{-10}$ of the maximum exact PR.
-The 308 series outside the fixed 42-series development selection give 924
-tasks at $L\in\{30,100,300\}$. They are held out for this procedure, not newly
+The 308 series outside the fixed 42-series development selection span 17 of
+the original 23 source families and give 924 tasks at $L\in\{30,100,300\}$.
+They are held out for this procedure, not newly
 collected data: the same corpus appeared in earlier experiments. The main
 width is 30; widths 100 and 300 characterize wider-buffer regimes, with 300
 an explicit stress condition.
@@ -340,8 +341,9 @@ The exact radix and radix racing hypotheses have separate decisions; each
 requires correctness and favorable lower 95\% family-bootstrap bounds for
 both geometric-mean ratios and ratios of summed task-median runtimes
 against its required controls. These sums are not measured batch wall
-times; the intervals describe family variation, not uncertainty from three
-timing repetitions. The artifact preserves the amendments, complete v2 records and
+times; the intervals resample the 17 observed holdout families and describe
+family variation, not uncertainty from three timing repetitions. The artifact
+preserves the amendments, complete v2 records and
 original auditor. V2 and v3 timings are not pooled. These comparisons do not
 claim global CPU/GPU state of the art.
 

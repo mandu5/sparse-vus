@@ -138,3 +138,45 @@ versus direct dense radix PR, 2.598515 versus nearest dense radix PR, and
 20.924899 versus released Klein PR. Corresponding wins were 271, 303, 307,
 and 308 of 308. These are interim points; the full run, independent audit,
 family intervals, and Linux confirmation remain the final evidence.
+
+## Completed Linux holdout and integration CI
+
+[Linux run 39523992616](https://github.com/mandu5/sparse-vus/actions/runs/39523992616)
+completed its full v3 holdout. The original downloaded run bytes are retained in
+`artifacts/reproductions/linux-pr-engine-39523992616/`, with the GitHub artifact
+receipt recorded separately. Its producer summary is `PASS` with no semantic
+violations. The independent audit completed at
+`2026-10-21T02:21:32.666948+00:00`, reconstructs all 924 tasks, and records
+`data_provenance.status=PASS` and `source_members_checked=true`.
+The frozen input population has 308 series from **17 represented families**
+of the original 23-family corpus; it does not contain all 23 families.
+The audit's exact-radix primary decision at L=30 passed. Both separate racing
+decisions failed. Maximum absolute exact PR difference relative to the
+comparison-based sparse PR control is `1.3322676295501878e-15`.
+
+The completed Linux audit binds protocol
+`838c23163326fc1a71c3f2fbbc1a8245ed6f489d11b94a7c6d00d3cb2661bd45`,
+inputs `783d6ec769682c8b0735fe4f4a17591ab4de042b2f2907e8ffbecbcc74690cd6`,
+and raw measurements
+`a54fd4ec9107e2b9517b455d221c9f6dfbc7ae6f1f84070f0cb6a37ddbc62060`.
+These are completed Linux results only. The Mac run and its final audit were
+still pending when this entry was added, and no combined final manuscript
+fragment or cross-platform claim follows from this record.
+
+The coordinating agent inspected
+[CI run 39532592512](https://github.com/mandu5/sparse-vus/actions/runs/39532592512)
+at `6d4583e`: Python 3.12 had 3206 passed/2 optional skips in 72.66 seconds;
+Python 3.11 had 3206 passed/2 skips in 125.51 seconds. The NumPy-only installed
+wheel check and the separate accelerated-wheel check both passed. The latter
+verified 10 source-identical modules and four parity cases, using NumPy 2.5.4
+and Numba 0.68.0. Its package metadata still reports version 0.2.0 because the
+research branch has not been assigned a new release version; these branch
+distributions must not replace the stable v0.2.0 release.
+
+A subsequent Python 3.12 workflow step now requires every completed Linux
+receipt, runs the current report generator against those recorded bytes, and
+uploads `report.*` as `verified-pr-engine-linux-report`. This new step has
+not run at the time of writing. It checks report derivation and bindings in
+remote CI; it does not rerun metric kernels, bootstrap resampling, or download
+the large score archives. No local report generation was performed while Mac
+timing continued.
