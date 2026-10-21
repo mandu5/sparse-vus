@@ -62,6 +62,32 @@ from sparse_vus.compiled import sparse_vus_jit
 vus_roc, vus_pr = sparse_vus_jit(labels, scores, max_buffer=4)
 ```
 
+The research branch also provides fixed-width float64 preparation:
+
+```python
+from sparse_vus.radix import sparse_pr_radix_jit, sparse_vus_radix_jit
+
+vus_pr = sparse_pr_radix_jit(labels, scores, max_buffer=4)
+vus_roc, vus_pr = sparse_vus_radix_jit(labels, scores, max_buffer=4)
+```
+
+Eight explicit counting-radix passes and a linear interval scan reduce the
+exhaustive time bound to `O(n + (L+1)Q)` for finite float64 keys under the
+stated word-RAM model. Signed zero and complete global ties retain the API's
+semantics. The paired kernel uses `O(n+Q)` auxiliary space; the PR-only
+completion interface also stores `L+1` scalar values. This is a different
+preparation strategy from support-histogram binary search, not a new sorting
+algorithm. See [the argument and prior techniques](docs/radix_prior_art_20261021.md).
+The v0.2.0 measurements above concern the earlier comparison-based evaluator;
+they are not measurements of these new APIs.
+
+`sparse_vus.fast_racing.race_pr_models_fast` adds a compiled PR-only selection
+controller. It retains each computed width once and completes only unseen
+widths when its endpoint budget is reached. `preparation="radix"` selects the
+new preparation; the default is `"histogram"`. The memory budget limits retained
+curve coordinates per model, not process RSS or total runtime. Its guarded
+Float64 bounds carry the same numerical limitation as the width API below.
+
 For bounds on the discrete width average:
 
 ```python

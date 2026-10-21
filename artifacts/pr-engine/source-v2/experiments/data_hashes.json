@@ -1,0 +1,13 @@
+{
+  "purpose": "Observed content locks for exact reproduction; recorded after retrieval, not a preregistration artifact.",
+  "files": {
+    "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+    "TSB-AD-U-Eva.csv": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a",
+    "score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+  },
+  "score_member_manifests": {
+    "bolt_base_64": "fbfdc7bed004e7aca882017361d16d47c7f30a9365bea0163d4941aca9d40b7b",
+    "TimeMoE-200M_64": "f78d4557e2c051ac782a203955c86ce946d5f5eb4fa67a1fc0f23d03de1a67fe",
+    "timesfm-1.0-200m_64": "29e59e884fc01772e816e1ef7e9634fd1ced9a838498df37d3dad6b0beab8d9b"
+  }
+}

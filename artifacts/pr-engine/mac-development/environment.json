@@ -1,0 +1,87 @@
+{
+  "started_utc": "2026-10-21T00:19:12.089043+00:00",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "numpy": "1.26.4",
+  "numba": "0.59.1",
+  "threads": 1,
+  "threadpool_info": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    }
+  ],
+  "warmup_seconds": {
+    "sparse_pr": 0.29400508300750516,
+    "dense_pr_direct": 0.5075002080120612,
+    "sparse_both": 0.004196624999167398,
+    "dense_nearest_both": 0.29926050000358373,
+    "klein_pr": 0.008907541021471843,
+    "benchopt_both": 0.009939957992173731,
+    "radix_pr": 0.014229749998776242,
+    "radix_both": 0.0034010420204140246,
+    "v02_race": 0.006946165987756103,
+    "fast_race": 0.46759045898215845,
+    "fast_exact_completion": 0.0012503339967224747,
+    "fast_race_radix": 0.17035175001365133,
+    "fast_full_budget": 0.0013478750188369304
+  },
+  "source_sha256": {
+    "experiments/benchmark_pr_engine.py": "7e22d6beb6e58683d467e0c4f17fb5285a51194dfe4d43aeee5c0db9d6b265c4",
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "experiments/advancement_data_gate.py": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8"
+  },
+  "protocol_sha256": "e8197bcd29c1209bddd57d442823d5fefc08a87e330a199ec0c4d79f385ba8b9",
+  "cpu_clearance": "All agent tests and experiments stopped before this serial paired run. This is an active user Mac, not an isolated CPU: an unrelated user Python background worker was approximately 99 percent CPU at the prior snapshot and scheduler/UI processes also ran. No unrelated processes were paused. Sanitized process snapshot is retained. Methods use one thread and seeded randomized order; a separate dedicated Linux CI job will assess platform consistency.",
+  "external_sources": {
+    "klein_pr": {
+      "repository": "https://github.com/tomlouisklein/fast-VUS",
+      "revision": "1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00",
+      "upstream_commit_date": "2026-10-16T10:36:48Z",
+      "upstream_first_commit": "189de211f8821c3027110af2d00593e603c11cfc",
+      "upstream_first_commit_date": "2026-10-12T11:03:32Z",
+      "source_url": "https://raw.githubusercontent.com/tomlouisklein/fast-VUS/1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00/fast_vus.py",
+      "source_sha256": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+      "license": "Apache-2.0",
+      "license_sha256": "3b19b00e8d74e9e8f3db69d8407da5b5dd2078f3bf9c57ff47ff0fb9551db282",
+      "adapter": "Full upstream module imported and vus_pr called unchanged.",
+      "output": "PR scalar only; no ROC output.",
+      "threshold_contract": "250 by default; max_samples=len(scores) includes all score thresholds.",
+      "timing_contract": "Includes upstream validation, global and support sorting, ramp construction, and all width integrals; module import excluded after warm-up."
+    },
+    "benchopt_both": {
+      "repository": "https://github.com/benchopt/benchmark_tsfm",
+      "revision": "2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94",
+      "upstream_commit_date": "2026-09-29T21:02:26Z",
+      "vus_introduction_revision": "2283ad02a6e4546430ea9611fd336d65f4297638",
+      "vus_introduction_date": "2026-05-29T12:20:37Z",
+      "source_url": "https://raw.githubusercontent.com/benchopt/benchmark_tsfm/2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94/benchmark_utils/metrics.py",
+      "source_sha256": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+      "license": "No license file detected at this revision; upstream source is cache-only.",
+      "adapter": "Unchanged AST for _segments, _extend_labels, _merge_segments, _range_auc_volume; NumPy dependency only.",
+      "output": "ROC and PR pair, also when the consumer selects PR only.",
+      "threshold_contract": "250 by default; max_samples=len(scores) includes all score thresholds.",
+      "timing_contract": "Includes upstream score sorting, full-array ramps, cumulative sweeps, segment maxima and both integrals; cached source loading excluded after warm-up."
+    }
+  }
+}

@@ -30,7 +30,10 @@ SCIENTIFIC_DOCS = {
     "fast_vus_prior_art_20261020.md", "certified_independent_review_20261020.md",
     "advancement_experiment_review_20261020.md", "experimental_audit_20261020.md",
     "prior_art_update_20261021.md", "pr_engine_review_20261021.md",
+    "radix_prior_art_20261021.md", "pr_protocol_independent_review_20261021.md",
+    "exact_vus_sota_search_20261021.md",
 }
+SNAPSHOT_LICENSES = {"artifacts/pr-engine/source-v2/LICENSE"}
 LOCAL_PATH = re.compile(r"(?:/Users/|/home/|/root/|/private/|/var/folders/|[A-Za-z]:[\\/]Users[\\/])[^\s\"'`<>]+")
 URL = re.compile(r"(?:https?://|git@)[^\s\"'`<>]+", re.IGNORECASE)
 JSON_STRING = re.compile(r'"(?:[^"\\]|\\.)*"')
@@ -150,6 +153,7 @@ def selected_files(root: Path):
                     include = path.suffix == ".py"
                 else:
                     include = (path.suffix in CODE_SUFFIXES | DATA_SUFFIXES
+                               or path.relative_to(root).as_posix() in SNAPSHOT_LICENSES
                                or (area == "experiments" and name.startswith("requirements")
                                    and path.suffix == ".txt"))
                 if include:
@@ -233,6 +237,7 @@ python -m pip install -e '.[accelerate,research]'
 python experiments/fetch_reference.py
 python experiments/dtaianomaly_adapter.py --fetch
 python experiments/fast_vus_adapter.py --fetch
+python experiments/benchopt_vus_adapter.py --fetch
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1 python -m pytest -q
 ```
 
@@ -245,10 +250,35 @@ measured environment. Machine-specific timing receipts state other versions.
 
 ## Reconstruct analyses of the supplied measurements
 
-Fetch the source score/label members before analyses that reconcile input hashes:
+Fetch the source score/label members before analyses that reconcile input hashes.
+The downloader writes new download receipts, so run it in a separate workspace
+to preserve every supplied artifact and release anchor:
 
 ```sh
+python experiments/create_anonymous_reproduction_workspace.py --output ../vus-data-fetch
+cd ../vus-data-fetch
 python experiments/fetch_score_ranges.py
+cd -
+python - <<'PY'
+from pathlib import Path
+root = Path.cwd()
+download_cache = root.parent / "vus-data-fetch" / "cache"
+assert download_cache.is_dir(), "Complete the separate data download first"
+(root / "cache").mkdir(exist_ok=True)
+for source in sorted(download_cache.iterdir()):
+    if source.is_file():
+        destination = root / "cache" / source.name
+        if destination.exists() or destination.is_symlink():
+            raise SystemExit("Cache destination already exists: " + source.name)
+        destination.symlink_to(source)
+PY
+```
+
+These links are local conveniences created after extraction; the archive
+contains neither the downloaded inputs nor their links. Keep the data-download
+workspace available while running the audits. From the extracted root:
+
+```sh
 python experiments/verify_artifact.py --output /tmp/rechecked-original-artifact.json
 python experiments/analyze_advancement.py \\
   --mac-baseline artifacts/advancement/mac-baseline \\
@@ -265,6 +295,38 @@ older run's source gate fail; do not relabel it or bypass the check. Use the
 matching source snapshot or new measurements. New follow-up protocols and
 results, if included, remain separate runs; consult their protocol JSON and
 script `--help` for exact arguments. No result is inferred from file presence.
+
+## Audit the separate PR-engine protocol versions
+
+The v2 snapshot at `artifacts/pr-engine/source-v2/` contains its original
+auditor, measured project sources, own license and immutable release anchors.
+`source-manifest.json` inventories its exact original bytes. Upstream source
+and data are fetched separately as above. Create the following local links
+once, after those fetches, so the historical auditor can resolve its original
+relative cache paths:
+
+```sh
+ln -s ../../../cache artifacts/pr-engine/source-v2/cache
+ln -s ../../../.cache artifacts/pr-engine/source-v2/.cache
+python artifacts/pr-engine/source-v2/experiments/audit_pr_engine.py \\
+  artifacts/pr-engine/mac-development --output /tmp/pr-engine-v2-audit.json
+```
+
+Run the current auditor separately for an included, completed **v3** run.
+Set `V3_RUN` to its directory; confirm `protocol.json` has `"version": 3`.
+V3 adds matched dense controls; it must not absorb historical v2 timings.
+
+```sh
+: "${V3_RUN:?Set V3_RUN to an included completed protocol-v3 run directory}"
+python experiments/audit_pr_engine.py "$V3_RUN" --output /tmp/pr-engine-v3-audit.json
+```
+
+The current auditor is for v3, not a compatibility wrapper for v2. Invoke the
+unchanged snapshot auditor directly for v2; no `--source-root` option is needed.
+Both commands reconstruct the recorded statistics and reconcile source/data
+hashes without rerunning metric kernels. Their PASS is an audit of those
+records, not a new timing measurement or external peer review. Final artifact
+validation must execute both audits, in addition to verifying archive hashes.
 
 ## Rerun measurements without overwriting supplied records
 

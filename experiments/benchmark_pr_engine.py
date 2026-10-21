@@ -27,7 +27,7 @@ import time
 from advancement_data_gate import released_metadata
 
 ROOT = Path(__file__).resolve().parents[1]
-EXACT = ("sparse_pr", "dense_pr_direct", "sparse_both", "dense_nearest_both", "klein_pr", "benchopt_both", "radix_pr", "radix_both")
+EXACT = ("sparse_pr", "dense_pr_direct", "sparse_both", "dense_nearest_both", "klein_pr", "benchopt_both", "radix_pr", "radix_both", "dense_pr_direct_radix", "dense_pr_nearest_radix")
 METHODS = (*EXACT, "v02_race", "fast_race", "fast_exact_completion", "fast_race_radix")
 SOURCES = (
     "experiments/benchmark_pr_engine.py", "experiments/benchmark_advancement.py",
@@ -36,7 +36,7 @@ SOURCES = (
     "src/sparse_vus/fast_racing.py", "src/sparse_vus/racing.py",
     "src/sparse_vus/certified.py", "src/sparse_vus/selection.py",
     "src/sparse_vus/core.py", "src/sparse_vus/compiled.py",
-    "src/sparse_vus/radix.py",
+    "src/sparse_vus/radix.py", "src/sparse_vus/dense_radix.py",
     ".cache/fast_vus/fast_vus.py", ".cache/benchopt_vus/metrics.py",
 )
 
@@ -75,17 +75,19 @@ def freeze(output, split, *, adaptive_fraction=.125, memory_bytes=8 * 1024 * 102
                "n": metadata[series]["n"], "max_buffer": width,
                "label_sha256": metadata[series]["label_sha256"],
                "score_sha256": {m: score_hashes[series, m] for m in models}}
-              for series in selected for width in (30, 100, 300)]
+              for width in (30, 100, 300) for series in selected]
     hashes = source_hashes(root)
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     write_json(output / "inputs.json", inputs)
     protocol = {
-        "version": 2, "created_utc": datetime.now(timezone.utc).isoformat(),
+        "version": 3, "created_utc": datetime.now(timezone.utc).isoformat(),
         "split": split, "cases": len(inputs), "models": models,
         "families": sorted({r["family"] for r in inputs}),
         "widths": [30, 100, 300], "primary_width": 30, "secondary_width": 100,
         "stress_width": 300, "primary_widths": [30, 100],
+        "task_order": "width_then_series",
+        "task_order_reason": "Complete the primary L=30 block before L=100 and stress L=300; selected series are sorted within each block. All 924 holdout tasks remain planned. No outcome-dependent early stopping or omission; seeded method randomization remains within every case.",
         "primary_widths_meaning": "Combined primary and secondary descriptive report; the decision test uses only L=30.",
         "repetitions": 3, "seed": 2026102101,
         "method_ids": [*METHODS] + (["fast_full_budget"] if include_full_budget else []),
@@ -96,14 +98,15 @@ def freeze(output, split, *, adaptive_fraction=.125, memory_bytes=8 * 1024 * 102
         "bootstrap": {"unit": "family", "repetitions": 2000, "seed": 2026102102,
                       "confidence": .95, "references": ["fast_race", "sparse_pr", "radix_pr", "fast_race_radix"]},
         "primary_decision": "All semantic checks pass; at L=30 fast_race has both geomean and aggregate-ratio lower 95% family-bootstrap bounds above 1 against each of sparse_pr, dense_pr_direct, and radix_pr. This narrow decision is not broad or global SOTA acceptance.",
-        "radix_primary_decision": "All semantic checks pass; at L=30 radix_pr has both geomean and aggregate-ratio lower 95% family-bootstrap bounds above 1 against each of sparse_pr, dense_pr_direct, and dense_nearest_both. External Klein/Benchopt comparisons are descriptive; no global SOTA claim.",
-        "radix_racing_decision": "All semantic checks pass; at L=30 fast_race_radix has both geomean and aggregate-ratio lower 95% family-bootstrap bounds above 1 against each of sparse_pr, dense_pr_direct, and radix_pr. This is separate from the exact radix hypothesis.",
+        "radix_primary_decision": "All semantic checks pass; at L=30 radix_pr has both geomean and aggregate-ratio lower 95% family-bootstrap bounds above 1 against each of sparse_pr, dense_pr_direct, dense_nearest_both, dense_pr_direct_radix, and dense_pr_nearest_radix. External Klein/Benchopt comparisons are descriptive; no global SOTA claim.",
+        "radix_racing_decision": "All semantic checks pass; at L=30 fast_race_radix has both geomean and aggregate-ratio lower 95% family-bootstrap bounds above 1 against each of sparse_pr, dense_pr_direct, radix_pr, dense_pr_direct_radix, and dense_pr_nearest_radix. This is separate from the exact radix hypothesis.",
         "uncertainty_scope": "Paired whole-call case medians; resample all observed family clusters with replacement and retain every series/width condition within each sampled cluster. CIs describe between-family/case variation, not uncertainty from three timing repetitions. Other comparator CIs are descriptive and unadjusted. Report within-case max/min timing spread separately.",
         "history": "Development is the previous metadata-selected 42-series partition. The 308-series complement was previously studied in exact-metric experiments; it is prospectively held out only from this new policy-development run, within the same 23 source families. This is not retrospective preregistration of earlier studies or an unseen-domain test.",
         "preformal_amendment": "Version 2 adds radix_pr, radix_both, and fast_race_radix before any formal development or holdout measurements. A disclosed exploratory probe used only the six largest-n series among the existing 42 development series, all three models, L=30, three randomized repeats. It reported 18/18 wins, median 2.654x and total 1.16806s to 0.420764s against comparison-sort PR exact. Selection for large n limits that evidence; these pilot timings are not pooled into formal results. The 308-series policy holdout was not used by the probe.",
+        "preholdout_amendment": "Version 3 follows the completed and independently audited 126-case v2 development experiment, whose radix exact primary decision passed and racing decision failed. Exact radix is the main hypothesis; adaptive fraction 0.125 and memory budget are unchanged. Add parameter-free direct/nearest dense radix PR-only controls to isolate generic radix preparation and PR-only work from sparse support. Strengthen the radix exact and radix racing intersections to include both controls. Change case order prospectively to width then series. No held-out outcomes were inspected before this amendment; all new timings are paired within this v3 run, without pooling v2 timings. Historical v2 data and its exact original auditor remain preserved under source-v2.",
         "selection": "Unchanged released labels and all three released score vectors, including documented leading zero padding. Complete input identities are frozen before these new outcomes.",
         "timing": "Three serial repetitions in independent seeded random method order per task; one thread, warm JIT. Each timed complete three-model selection includes validation, sorting/preparation, all metric/controller work, and construction of the API result. Input loading and conversion of API results to JSON receipts are outside timing. No cross-run timing substitution.",
-        "comparators": "Sparse and direct-dense PR-only compiled exact controls, Klein actual PR-only code, prior paired sparse/nearest-dense compiled code, Benchopt actual paired ROC+PR code, previous width racer, new racer, zero-adaptation exact-completion ablation, exact radix PR/paired variants, and radix-prepared racer. All exhaustive methods use all distinct score thresholds and widths 0..L. Benchopt and the paired controls perform extra ROC work; PR-only controls isolate that confound. Radix variants retain the same metric kernels and change preparation.",
+        "comparators": "Sparse and direct-dense PR-only compiled exact controls, Klein actual PR-only code, prior paired sparse/nearest-dense compiled code, Benchopt actual paired ROC+PR code, previous width racer, new racer, zero-adaptation exact-completion ablation, exact radix PR/paired variants, radix-prepared racer, and matched direct/nearest dense radix PR-only controls. All exhaustive methods use all distinct score thresholds and widths 0..L. Benchopt and the paired controls perform extra ROC work; PR-only controls isolate that confound. Sparse radix variants retain their metric kernels and change preparation; matched dense radix controls include global radix preparation and full-array metric work.",
         "excluded_external": "DTAIAnomaly is excluded from this full 924-task main experiment based on the prior 10-second per-call censor and quadratic runtime. Its bounded external-supplement appendix is separate; those older/censored timings are not fused into these paired ratios. This experiment does not close all possible comparators or establish global SOTA.",
         "reporting": "All cases, exact ties, all tail regressions, family statistics, geomean and total-cost ratios. Float64 numerical audits are not formal outward-rounded certification. Retained curve bytes are not peak memory. Detector inference and input I/O are excluded.",
         "inputs_sha256": digest(output / "inputs.json"), "source_sha256": hashes,
@@ -117,6 +120,8 @@ def validate_frozen(output, expected_hash, split, *, root=ROOT):
     if digest(output / "protocol.json") != expected_hash:
         raise ValueError("Frozen protocol hash differs")
     protocol = json.loads((output / "protocol.json").read_text())
+    if protocol["version"] != 3 or protocol["task_order"] != "width_then_series":
+        raise ValueError("This driver requires the v3 width-first protocol")
     if protocol["split"] != split or digest(output / "inputs.json") != protocol["inputs_sha256"]:
         raise ValueError("Frozen split/input binding differs")
     if source_hashes(root) != protocol["source_sha256"]:
@@ -129,7 +134,7 @@ def validate_frozen(output, expected_hash, split, *, root=ROOT):
     expected_inputs = [{"series": s, "family": metadata[s]["family"], "n": metadata[s]["n"],
                         "max_buffer": w, "label_sha256": metadata[s]["label_sha256"],
                         "score_sha256": {m: score_hashes[s, m] for m in models}}
-                       for s in selected for w in (30, 100, 300)]
+                       for w in (30, 100, 300) for s in selected]
     inputs = json.loads((output / "inputs.json").read_text())
     if inputs != expected_inputs or protocol["models"] != models or protocol["cases"] != len(inputs):
         raise ValueError("Frozen manifest does not match the immutable partition")
@@ -149,6 +154,7 @@ def make_methods(protocol):
     from sparse_vus.racing import race_pr_models
     from sparse_vus.fast_racing import race_pr_models_fast
     from sparse_vus.radix import sparse_pr_radix_jit, sparse_vus_radix_jit
+    from sparse_vus.dense_radix import dense_pr_direct_radix_jit, dense_pr_nearest_radix_jit
     from fast_vus_adapter import fast_vus_pr
     from benchopt_vus_adapter import benchopt_vus
     functions = {
@@ -159,6 +165,8 @@ def make_methods(protocol):
         "benchopt_both": lambda y, s, w: benchopt_vus(y, s, w, max_samples=len(s))[1],
         "radix_pr": sparse_pr_radix_jit,
         "radix_both": lambda y, s, w: sparse_vus_radix_jit(y, s, w)[1],
+        "dense_pr_direct_radix": dense_pr_direct_radix_jit,
+        "dense_pr_nearest_radix": dense_pr_nearest_radix_jit,
     }
     methods = {name: (lambda y, scores, w, fn=fn: exact_selection(y, scores, w, fn))
                for name, fn in functions.items()}
@@ -313,8 +321,8 @@ def summarize(rows, protocol):
                                           for c in controls
                                           for metric in ("geomean_ci95", "aggregate_ratio_ci95"))
     passes = clears_controls("fast_race", ("sparse_pr", "dense_pr_direct", "radix_pr"))
-    radix_passes = clears_controls("radix_pr", ("sparse_pr", "dense_pr_direct", "dense_nearest_both"))
-    radix_racing_passes = clears_controls("fast_race_radix", ("sparse_pr", "dense_pr_direct", "radix_pr"))
+    radix_passes = clears_controls("radix_pr", ("sparse_pr", "dense_pr_direct", "dense_nearest_both", "dense_pr_direct_radix", "dense_pr_nearest_radix"))
+    radix_racing_passes = clears_controls("fast_race_radix", ("sparse_pr", "dense_pr_direct", "radix_pr", "dense_pr_direct_radix", "dense_pr_nearest_radix"))
     variation = {m: {"median_within_case_max_over_min": float(np.median([
         max(r["seconds"][m]) / min(r["seconds"][m]) for r in rows])),
         "max_within_case_max_over_min": max(max(r["seconds"][m]) / min(r["seconds"][m]) for r in rows)} for m in methods}
@@ -323,9 +331,9 @@ def summarize(rows, protocol):
             "primary_decision": {"width": 30, "passes": bool(passes),
                                  "criterion": "fast_race: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, and radix_pr; correctness also required."},
             "radix_primary_decision": {"width": 30, "passes": bool(radix_passes),
-                                       "criterion": "radix_pr: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, and dense_nearest_both; correctness also required."},
+                                       "criterion": "radix_pr: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, dense_nearest_both, dense_pr_direct_radix, and dense_pr_nearest_radix; correctness also required."},
             "radix_racing_decision": {"width": 30, "passes": bool(radix_racing_passes),
-                                      "criterion": "fast_race_radix: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, and radix_pr; correctness also required."}}
+                                      "criterion": "fast_race_radix: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, radix_pr, dense_pr_direct_radix, and dense_pr_nearest_radix; correctness also required."}}
 
 
 def execute(output, protocol_hash, split, cpu_clearance):

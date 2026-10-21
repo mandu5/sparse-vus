@@ -1,0 +1,56 @@
+\subsection{PR-only execution with a bounded endpoint budget}
+\label{sec:pr-engine}
+The negative aggregate-cost result for the preceding racer motivated a
+disclosed implementation follow-up. The earlier engine crosses Python and
+NumPy boundaries during refinement, constructs ROC coordinates even for PR
+selection, and can recompute evicted endpoint curves. Saving distinct width
+queries therefore need not save actual curve calculations or time.
+
+The follow-up executes the controller and PR curve calculations in compiled
+code. A single quantile traversal maintains separate minimum and maximum
+deques to compute both p-box extrema, avoiding materialized breakpoint and
+coordinate-envelope arrays. It computes the same real-arithmetic bounds;
+this is an execution change, not a new p-box theorem. Each observed width's
+scalar is retained. Endpoint coordinates are never evicted during adaptive
+refinement: before their budget is exhausted, that model switches to an
+exhaustive sweep of only its unobserved widths, reusing preparation and
+scratch storage. No public exact-evaluator call restarts the computation.
+
+Let $W=L+1$, $G_m$ be model $m$'s number of distinct support-score groups,
+and $Q$ be the maximum-support size. The endpoint capacity is
+\[
+ C_m=\min\!\left(W,\max(2,\lfloor\alpha W\rfloor),
+             \left\lfloor\frac{B}{16G_m}\right\rfloor\right),
+\]
+with $C_m=0$ when $\alpha=0$. If a model's initial merge-block endpoints
+already exceed this capacity, it uses exact completion immediately. The
+declared initial policy uses $\alpha=1/8$ and $B=8$ MiB per model. Two
+Float64 coordinate arrays per retained endpoint account for the factor 16;
+$B$ does not bound process RSS or all auxiliary memory.
+
+Each model performs at most $W$ actual width evaluations, including exact
+completion, because an observed scalar is never evaluated again. The
+artifact separately counts adaptive and completion evaluations. In addition
+to prepared inputs, retained coordinates use at most $\sum_m16C_mG_m$
+bytes, with $O(MW)$ scalar and controller state. The implementation scans
+the model-by-width state when updating global bounds and scans interval
+priorities during refinement. Its bookkeeping can require
+$O(MW\sum_m C_m)$ work, bounded above by $O(M^2W^2)$ when capacity scales
+with width. Consequently the endpoint budget is a query/storage guarantee,
+not a constant-factor wall-clock overhead guarantee.
+
+An equally specialized exhaustive PR-only sparse kernel and an independent
+PR-only dense kernel are required controls. The former uses the same
+unobserved-width completion primitive with every width initially unknown;
+the latter constructs the sum-and-clip ramps directly. Both execute all
+widths in one compiled call and reuse scratch arrays. Thus any advantage of
+the new racer must survive comparison with an exact method that also omits
+ROC work. Before the policy holdout, two further parameter-free controls
+receive the same global radix ranking: one retains direct ramp construction,
+and one uses the same linear nearest-interval geometry and weight formula
+as the sparse method. Both still traverse every input position and complete
+every numerical tie at every width, computing PR alone. These controls
+separate generic radix and geometry gains from sparse event elimination;
+the nearest variant takes $O((L+1)n)$ time and $O(n+K)$ auxiliary memory.
+Float64 guards, separation margins and exact-tie conventions are
+unchanged. This follow-up does not replace the earlier negative results.

@@ -1,0 +1,130 @@
+{
+  "measured_git_commit": "06a14d04e59a62ef0840aae837107bfd85c4400b",
+  "scope": "Exact original tracked source and immutable release anchors for protocol v2. Downloaded upstream code and source datasets are excluded. Local ignored cache links are transport conveniences and not part of this snapshot.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "b8bbfc61787c4e7def679b794780affc883f035c5da70cddad5df4147fd9aa06",
+      "bytes": 1080
+    },
+    {
+      "path": "artifacts/TimeMoE-200M_64-download.json",
+      "sha256": "36bf99d0219b882257fa93d1252647999d40c9a6f01dbcb5f68ae10727514fad",
+      "bytes": 80447
+    },
+    {
+      "path": "artifacts/bolt_base_64-download.json",
+      "sha256": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9",
+      "bytes": 80308
+    },
+    {
+      "path": "artifacts/external_supplement_selection.json",
+      "sha256": "dadd9dda028cd261b7715121f2526cb596e356188d5be7d57b29da21599eeaee",
+      "bytes": 13502
+    },
+    {
+      "path": "artifacts/public_benchmark.jsonl",
+      "sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+      "bytes": 3277093
+    },
+    {
+      "path": "artifacts/public_benchmark_receipt.json",
+      "sha256": "06415e81b835bdc649ca75bea0672d1e4ddc8ded0d04f5a2972cb6adf638e02d",
+      "bytes": 446
+    },
+    {
+      "path": "artifacts/selected_series.json",
+      "sha256": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+      "bytes": 17455
+    },
+    {
+      "path": "artifacts/timesfm-1.0-200m_64-download.json",
+      "sha256": "91da5b782937e3b7538118241f9585e4f408571a0fc47feeda6126debe16d24c",
+      "bytes": 80469
+    },
+    {
+      "path": "experiments/advancement_data_gate.py",
+      "sha256": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+      "bytes": 11644
+    },
+    {
+      "path": "experiments/audit_pr_engine.py",
+      "sha256": "2fd93ee8bb10ffd4546294d43e6e58c0bad41bcd3ae406e61dd9b13e8cd137a3",
+      "bytes": 26290
+    },
+    {
+      "path": "experiments/benchmark_advancement.py",
+      "sha256": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+      "bytes": 13593
+    },
+    {
+      "path": "experiments/benchmark_pr_engine.py",
+      "sha256": "7e22d6beb6e58683d467e0c4f17fb5285a51194dfe4d43aeee5c0db9d6b265c4",
+      "bytes": 29801
+    },
+    {
+      "path": "experiments/benchopt_vus_adapter.py",
+      "sha256": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+      "bytes": 4168
+    },
+    {
+      "path": "experiments/data_hashes.json",
+      "sha256": "d53de71d4fedad5824bb2793a5997f7e416fb3f18246c4a7675a1fefd071857b",
+      "bytes": 729
+    },
+    {
+      "path": "experiments/data_manifest.json",
+      "sha256": "1bec6e203f49125de455bc8f8518795135f1382596aeee69419dbec82d13006e",
+      "bytes": 1285
+    },
+    {
+      "path": "experiments/fast_vus_adapter.py",
+      "sha256": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+      "bytes": 4104
+    },
+    {
+      "path": "src/sparse_vus/certified.py",
+      "sha256": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+      "bytes": 13409
+    },
+    {
+      "path": "src/sparse_vus/compiled.py",
+      "sha256": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+      "bytes": 7480
+    },
+    {
+      "path": "src/sparse_vus/core.py",
+      "sha256": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+      "bytes": 8244
+    },
+    {
+      "path": "src/sparse_vus/fast_racing.py",
+      "sha256": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+      "bytes": 12950
+    },
+    {
+      "path": "src/sparse_vus/pr_compiled.py",
+      "sha256": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+      "bytes": 6746
+    },
+    {
+      "path": "src/sparse_vus/racing.py",
+      "sha256": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+      "bytes": 9641
+    },
+    {
+      "path": "src/sparse_vus/radix.py",
+      "sha256": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+      "bytes": 6386
+    },
+    {
+      "path": "src/sparse_vus/selection.py",
+      "sha256": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+      "bytes": 5682
+    }
+  ],
+  "excluded_measured_external_sources": {
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8"
+  }
+}

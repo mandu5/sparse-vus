@@ -13,9 +13,10 @@ import pytest
 EXPERIMENTS = Path(__file__).resolve().parents[1] / "experiments"
 sys.path.insert(0, str(EXPERIMENTS))
 METHODS = ["sparse_pr", "dense_pr_direct", "sparse_both", "dense_nearest_both",
-           "klein_pr", "benchopt_both", "radix_pr", "radix_both", "v02_race", "fast_race",
+           "klein_pr", "benchopt_both", "radix_pr", "radix_both",
+           "dense_pr_direct_radix", "dense_pr_nearest_radix", "v02_race", "fast_race",
            "fast_exact_completion", "fast_race_radix"]
-EXACT = METHODS[:8]
+EXACT = METHODS[:10]
 
 
 def audit():
@@ -27,8 +28,9 @@ def fixture():
     models = ["A", "B", "C"]
     inputs = [{"series": "tiny", "family": "synthetic", "n": 4, "max_buffer": 30,
                "label_sha256": "0" * 64, "score_sha256": {m: m.lower() * 64 for m in models}}]
-    protocol = {"version": 2, "split": "development", "cases": 1,
+    protocol = {"version": 3, "split": "development", "cases": 1,
                 "models": models, "widths": [30, 100, 300], "primary_widths": [30, 100],
+                "task_order": "width_then_series",
                 "repetitions": 3, "seed": 2026102101, "method_ids": METHODS,
                 "primary_width": 30, "secondary_width": 100, "stress_width": 300,
                 "bootstrap": {"unit": "family", "repetitions": 2000, "seed": 2026102102,
@@ -73,8 +75,8 @@ def test_valid_full_exact_receipt_and_separate_comparator_statistics():
     result = audit().audit_records(rows, protocol, inputs)
     assert result["cases"] == 1
     stats = result["by_width"]["30"]["methods"]["fast_race"]["by_comparator"]
-    assert stats["sparse_pr"]["median"] == 1 / 10
-    assert stats["dense_pr_direct"]["aggregate_ratio"] == 2 / 10
+    assert stats["sparse_pr"]["median"] == 1 / 12
+    assert stats["dense_pr_direct"]["aggregate_ratio"] == 2 / 12
     assert stats["sparse_pr"]["slower_cases"] == 1
 
 
@@ -144,8 +146,8 @@ def test_cluster_bootstrap_keeps_whole_families_and_reports_constant_ratio_exact
     rows, protocol, inputs = fixture()
     result = audit().audit_records(rows, protocol, inputs)
     ci = result["uncertainty"]["30"]["fast_race"]["sparse_pr"]
-    assert ci["geomean_ci95"] == pytest.approx([1 / 10, 1 / 10])
-    assert ci["aggregate_ratio_ci95"] == pytest.approx([1 / 10, 1 / 10])
+    assert ci["geomean_ci95"] == pytest.approx([1 / 12, 1 / 12])
+    assert ci["aggregate_ratio_ci95"] == pytest.approx([1 / 12, 1 / 12])
     assert ci["families"] == 1
     assert result["primary_decision"]["passes"] is False
 
@@ -168,6 +170,10 @@ def test_freeze_needs_no_kernel_import_or_corpus_load(tmp_path, monkeypatch):
     dev_ids = {r["series"] for r in json.loads((tmp_path / "dev/inputs.json").read_text())}
     held_ids = {r["series"] for r in json.loads((tmp_path / "held/inputs.json").read_text())}
     assert dev_ids.isdisjoint(held_ids) and len(dev_ids | held_ids) == 350
+    held_inputs = json.loads((tmp_path / "held/inputs.json").read_text())
+    assert [r["max_buffer"] for r in held_inputs] == [30] * 308 + [100] * 308 + [300] * 308
+    assert [(r["max_buffer"], r["series"]) for r in held_inputs] == sorted(
+        (r["max_buffer"], r["series"]) for r in held_inputs)
     # Neither a matching new file digest nor a current source mutation may
     # silently turn the existing freeze into a different measured experiment.
     protocol_hash = driver.digest(tmp_path / "held/protocol.json")
@@ -335,7 +341,7 @@ def test_manifest_gate_rejects_matching_rehashed_rows_for_wrong_source_members(m
     protocol["split"] = "holdout"
     inputs = [{"series": s, "family": "synthetic", "n": 4, "max_buffer": w,
                "label_sha256": "0" * 64, "score_sha256": {m: "1" * 64 for m in models}}
-              for s in list(metadata)[42:] for w in (30, 100, 300)]
+              for w in (30, 100, 300) for s in list(metadata)[42:]]
     assert module.validate_inputs_manifest(inputs, protocol, Path("/fixture"), verify_members=False)["series"] == 308
     # Record and input-file hashes could agree with this false identity; the
     # immutable released source hash must still independently reject it.
@@ -388,3 +394,48 @@ def test_previous_result_cleanup_cannot_be_charged_to_next_method(monkeypatch):
     assert first == second == {"selected": ["A"]}
     assert first_duration == second_duration == 1.
     assert events == ["clock", "metric", "clock", "serialize", "cleanup"] * 2
+
+
+@pytest.mark.parametrize("matched_control", ["dense_pr_direct_radix", "dense_pr_nearest_radix"])
+def test_radix_success_requires_beating_each_matched_radix_pr_dense_control(matched_control):
+    rows, protocol, inputs = fixture()
+    for method, duration in {"radix_pr": .2, "fast_race_radix": .1, matched_control: .05}.items():
+        rows[0]["seconds"][method] = [duration] * 3
+        rows[0]["median_seconds"][method] = duration
+    result = audit().audit_records(rows, protocol, inputs)
+    assert result["radix_primary_decision"]["passes"] is False
+    assert result["radix_racing_decision"]["passes"] is False
+    driver = importlib.import_module("benchmark_pr_engine")
+    audit().compare(driver.summarize(rows, protocol), result)
+
+
+def test_v3_rejects_old_series_first_schedule_even_with_unchanged_case_set():
+    _, protocol, inputs = fixture()
+    inputs = [{**inputs[0], "series": series, "max_buffer": width}
+              for series in ("a", "b") for width in (30, 100)]
+    protocol["cases"] = len(inputs)
+    with pytest.raises(ValueError, match="input task manifest"):
+        audit().audit_records([], protocol, inputs)
+
+
+def test_historical_v2_receipt_uses_preserved_auditor_not_current_v3_contract():
+    rows, protocol, inputs = fixture()
+    historical_path = EXPERIMENTS.parent / "artifacts/pr-engine/source-v2/experiments/audit_pr_engine.py"
+    assert historical_path.exists(), "The exact v2 historical auditor must remain available"
+    spec = importlib.util.spec_from_file_location("historical_pr_engine_v2_audit", historical_path)
+    historical = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(historical)
+    old_methods = [m for m in METHODS if m not in ("dense_pr_direct_radix", "dense_pr_nearest_radix")]
+    protocol.update(version=2, method_ids=old_methods)
+    del protocol["task_order"]
+    for field in ("values", "seconds", "median_seconds"):
+        rows[0][field] = {m: value for m, value in rows[0][field].items() if m in old_methods}
+    rng = random.Random(protocol["seed"])
+    rows[0]["method_order"] = []
+    for _ in range(3):
+        order = old_methods.copy()
+        rng.shuffle(order)
+        rows[0]["method_order"].append(order)
+    assert historical.audit_records(rows, protocol, inputs)["cases"] == 1
+    with pytest.raises(ValueError, match="source-v2 auditor"):
+        audit().audit_records(rows, protocol, inputs)

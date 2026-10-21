@@ -68,6 +68,48 @@ def test_allowlist_keeps_science_and_excludes_private_cache_and_logs(repository,
         assert "README.md" in archive.namelist()
 
 
+def test_followup_science_is_included_but_venue_and_author_context_are_excluded(repository, tmp_path):
+    science = ["radix_prior_art_20261021.md", "pr_protocol_independent_review_20261021.md",
+               "exact_vus_sota_search_20261021.md"]
+    private = ["venue_route_20261021.md", "tmlr_submission_audit_20261021.md",
+               "private-submission-context.md"]
+    for name in science:
+        put(repository, "docs/" + name, "Scientific evidence; third-party credit Tom Louis Klein.\n")
+    for name in private:
+        put(repository, "docs/" + name, "Unneeded author and submission context.\n")
+    output = tmp_path / "followup.zip"
+    build(repository, output)
+    with zipfile.ZipFile(output) as archive:
+        for name in science:
+            assert archive.read("docs/" + name) == (repository / "docs" / name).read_bytes()
+        assert all("docs/" + name not in archive.namelist() for name in private)
+
+
+def test_historical_snapshot_keeps_code_license_and_inventory_but_not_cache_links(repository, tmp_path):
+    snapshot = repository / "artifacts/pr-engine/source-v2"
+    source = put(snapshot, "experiments/audit_pr_engine.py", "VERSION = 2\n")
+    license_file = put(snapshot, "LICENSE", (repository / "LICENSE").read_bytes())
+    inventory = put(snapshot, "source-manifest.json", json.dumps({"files": [
+        {"path": "experiments/audit_pr_engine.py", "sha256": hashlib.sha256(source.read_bytes()).hexdigest()},
+        {"path": "LICENSE", "sha256": hashlib.sha256(license_file.read_bytes()).hexdigest()},
+    ]}, indent=2))
+    cached = tmp_path / "downloaded"
+    put(cached, "upstream.py", "UPSTREAM_MUST_NOT_BE_DISTRIBUTED = True\n")
+    (snapshot / "cache").symlink_to(cached, target_is_directory=True)
+    (snapshot / ".cache").symlink_to(cached, target_is_directory=True)
+    put(repository, "artifacts/unrelated/LICENSE", "Do not broaden the extensionless allowlist.\n")
+    output = tmp_path / "historical.zip"
+    build(repository, output)
+    with zipfile.ZipFile(output) as archive:
+        for path in (source, license_file, inventory):
+            assert archive.read(path.relative_to(repository).as_posix()) == path.read_bytes()
+        assert not any("/cache/" in name or "/.cache/" in name for name in archive.namelist())
+        assert "artifacts/unrelated/LICENSE" not in archive.namelist()
+        manifest = json.loads(archive.read("ANONYMIZATION_MANIFEST.json"))
+        entry = next(x for x in manifest["files"] if x["path"].endswith("source-v2/LICENSE"))
+        assert entry["byte_identical"] is True
+
+
 def test_metadata_redaction_keeps_numeric_results_and_third_party_identity(repository, tmp_path):
     source = '{"cache":"/Users/reviewuser/private/cache","owner":"https://github.com/review-owner/project", "credit":"Tom Louis Klein", "url":"https://github.com/tomlouisklein/fast-VUS", "seconds":[1.25000,2.5e-03],"author":"review user"}\n'
     put(repository, "artifacts/run/environment.json", source)

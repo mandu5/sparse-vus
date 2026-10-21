@@ -1,0 +1,14 @@
+{
+  "started_utc": "2026-10-19T14:30:18.401342+00:00",
+  "completed_utc": "2026-10-19T14:49:23.498550+00:00",
+  "unique_series": 350,
+  "score_vectors": 1050,
+  "metric_evaluations": 2100,
+  "family_count": 23,
+  "max_parity_error": 3.6914915568786455e-13,
+  "parity_failures": 0,
+  "crop_evaluations": 2100,
+  "external_evaluations": 72,
+  "exclusions": 0,
+  "records_sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96"
+}

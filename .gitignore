@@ -3,6 +3,8 @@ __pycache__/
 .pytest_cache/
 /cache
 /.cache
+/artifacts/pr-engine/source-v2/cache
+/artifacts/pr-engine/source-v2/.cache
 .venv/
 *.egg-info/
 build/

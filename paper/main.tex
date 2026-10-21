@@ -15,7 +15,7 @@
 % The marked title, abstract, and body also generate the PVLDB counterpart.
 \title{Exact and Error-Bounded VUS Evaluation\\through Sparse Events and Width Geometry}
 \author{Youngmin Ko\\Independent Researcher\\Republic of Korea\\\texttt{rhdudals0505@naver.com}}
-\date{20 October 2026\\\small Working manuscript; unsubmitted}
+\date{21 October 2026\\\small Working manuscript; unsubmitted}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -222,8 +222,10 @@ implementation retains per-width areas and uses an additional $O(L)$ space.
 For dense support, $Q=\Theta(n)$, no asymptotic improvement over a dense sweep
 is promised. The analysis establishes an upper bound.
 
+\input{radix_method.tex}
 \input{width_method.tex}
 \input{racing_method.tex}
+\input{pr_engine_method.tex}
 
 \section{Prior art and implementation comparisons}
 Boniol et al. introduce optimized VUS implementations with static/dynamic
@@ -235,20 +237,40 @@ evaluates the selected thresholds at every width \cite{klein2026}.
 At audited revision \texttt{1bae859f}, passing \texttt{thre=n} gives full-threshold
 PR with the target's dynamic mass, sum-and-clip ramps, expanded-interval
 existence reward, and right-endpoint integration. Its API returns PR only;
-our measured API computes ROC and PR together. Default 250-threshold and
+the original measured API computes ROC and PR together, while the follow-up
+also includes a PR-only kernel. Default 250-threshold and
 full-threshold calls are distinguished in every comparison.
 We do not claim support restriction, sorting support scores, or cumulative
 sums as new. The remaining exact reduction removes inactive threshold events,
-including their ROC contribution, and obtains prediction counts without
-globally sorting all scores. Width enclosures are a separate contribution.
+including their ROC contribution. The comparison-based preparation obtains
+prediction counts without globally sorting all scores; the fixed-width
+variant instead obtains them in a linear global radix pass.
+Width enclosures are a separate contribution.
 
 Sylligardos reports preliminary VUS speedups up to two
 orders on CPU and three on GPU over approximately 1,900 TSB-UAD series
-\cite{sylligardos2025}. That workshop paper does not disclose the detailed
-algorithm, and a corresponding released implementation was not located in our
-20 October 2026 source audit. Its mechanism could overlap with ours. We therefore
-do not claim the first fast VUS implementation, the first 100-fold acceleration,
-or demonstrated superiority over that method.
+\cite{sylligardos2025}. Our expanded 21 October audit located attributed
+FF-VUS NumPy/Torch code in the aVUSi repository, revision
+\texttt{facf4362} \cite{ffvus2026}; the code is not linked by an immutable
+receipt to that workshop figure. Its native linear, maximum-combined ramps
+differ from the target's square-root, sum-and-clip ramps. The public wrapper
+also rounds scores to two decimals, and Torch can interpolate intermediate
+existence values when its memory estimate exceeds a threshold. For labels
+$(0,1,0)$ and scores $(.101,.102,.001)$ at width zero, wrapper-equivalent
+rounding changes PR from $1$ to $0.5$. A separate seven-point witness shows
+a ramp mismatch even after matching physical radius. These are semantic
+audits of unchanged code, not GPU timing comparisons. We do not claim the
+first fast VUS implementation or superiority over all CPU/GPU variants.
+
+The Benchopt time-series foundation-model benchmark supplies another
+exact-compatible implementation, revision \texttt{2b55ccb1}, whose VUS
+functions were introduced in May 2026 \cite{benchopt2026}. It globally sorts
+scores, constructs full-array ramps, accumulates sorted masses, and obtains
+existence through segment maxima and binary searches. Its unchanged
+numerical function bodies return both ROC and PR; \texttt{thre=n} selects
+the full-threshold target. We include it as an external dense-cumsum
+comparator in the follow-up study, distinct from our independently written
+dense controls.
 
 The released Go \texttt{adscore} package implements an incremental dense rank
 sweep \cite{boxer}. Native execution of its unmodified v0.0.23 package confirms
@@ -407,7 +429,8 @@ Floating-point equivalence is numerical, not bitwise. The NumPy/Numba dense impl
 are independently written algorithmic baselines, not published competing
 systems. Published-code comparisons retain API and threshold-resolution
 differences. The actual released dtaianomaly comparison is bounded, and the
-Sylligardos fast implementation remains unbenchmarked.
+located FF-VUS implementation computes a different native metric and is
+audited semantically rather than ranked as an exact-compatible runtime baseline.
 
 The artifact includes source, tests, derivations, frozen protocols, download
 and source-checksum receipts, per-input timing and metric records, negative
@@ -485,6 +508,10 @@ $L\in\{0,6\}$, and $n\in\{10^4,10^5\}$ against the two closed-form values.
 \bibitem{boxer} P. Stergiotis. boxer/adscore, v0.0.23, 2026. \url{https://pkg.go.dev/github.com/stergiotis/boxer/public/analytics/timeseries/adscore}.
 \bibitem{dtaianomaly} ML-KULeuven. dtaianomaly, pinned revision \texttt{557b4357}, 13 October 2026. \url{https://github.com/ML-KULeuven/dtaianomaly}.
 \bibitem{klein2026} T. L. Klein. fast-VUS. Software repository, first commit 12 October 2026, audited revision \texttt{1bae859f}, 16 October 2026. \url{https://github.com/tomlouisklein/fast-VUS}.
+\bibitem{ffvus2026} E. Sylligardos. FF-VUS implementation in aVUSi. Software, audited revision \texttt{facf4362}, 23 June 2026. \url{https://github.com/doanthihoaithu/aVUSi}.
+\bibitem{benchopt2026} Benchopt contributors. Time-series foundation-model benchmark: VUS metrics. Software, audited revision \texttt{2b55ccb1}, 29 September 2026. \url{https://github.com/benchopt/benchmark_tsfm}.
+\bibitem{herf2001radix} M. Herf. \emph{Radix Tricks}. December 2001. \url{https://stereopsis.com/radix.html}. Accessed 2026-10-21.
+\bibitem{demaine2011radix} E. Demaine. \emph{Lecture 7: Linear-Time Sorting}. MIT OpenCourseWare, 6.006 Introduction to Algorithms, Fall 2011. \url{https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/bf7d79105762bf79bbc0925438e1468a_MIT6_006F11_lec07.pdf}. Accessed 2026-10-21.
 \bibitem{utkin2009} L. Utkin and S. Destercke. Computing Expectations with Continuous P-Boxes: Univariate Case. International Journal of Approximate Reasoning 50(5), 778--798, 2009. \url{https://doi.org/10.1016/j.ijar.2009.02.004}.
 \bibitem{troffaes2011} M. C. M. Troffaes and S. Destercke. Probability Boxes on Totally Preordered Spaces for Multivariate Modelling. International Journal of Approximate Reasoning 52, 767--791, 2011. \url{https://doi.org/10.1016/j.ijar.2011.02.001}.
 \bibitem{zhu2026} X. Zhu, L. Carpentier, M. Verbeke. When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection. ICLR 2026. Scores: KU Leuven RDR, V1, \url{https://doi.org/10.48804/MCVI4N}.

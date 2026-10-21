@@ -20,7 +20,7 @@ import zipfile
 from advancement_data_gate import RELEASE_BINDINGS, released_metadata
 
 ROOT = Path(__file__).resolve().parents[1]
-EXACT = ("sparse_pr", "dense_pr_direct", "sparse_both", "dense_nearest_both", "klein_pr", "benchopt_both", "radix_pr", "radix_both")
+EXACT = ("sparse_pr", "dense_pr_direct", "sparse_both", "dense_nearest_both", "klein_pr", "benchopt_both", "radix_pr", "radix_both", "dense_pr_direct_radix", "dense_pr_nearest_radix")
 BASE_METHODS = (*EXACT, "v02_race", "fast_race", "fast_exact_completion", "fast_race_radix")
 REQUIRED_SOURCES = {
     "experiments/benchmark_pr_engine.py", "experiments/benchmark_advancement.py",
@@ -29,7 +29,7 @@ REQUIRED_SOURCES = {
     "src/sparse_vus/fast_racing.py", "src/sparse_vus/racing.py",
     "src/sparse_vus/certified.py", "src/sparse_vus/selection.py",
     "src/sparse_vus/core.py", "src/sparse_vus/compiled.py",
-    "src/sparse_vus/radix.py",
+    "src/sparse_vus/radix.py", "src/sparse_vus/dense_radix.py",
     ".cache/fast_vus/fast_vus.py", ".cache/benchopt_vus/metrics.py",
 }
 IDENTITY = ("series", "family", "n", "max_buffer", "label_sha256", "score_sha256")
@@ -129,7 +129,8 @@ def uncertainty(rows, methods, specification):
 
 
 def audit_records(rows, protocol, inputs):
-    need(protocol["version"] == 2 and protocol["split"] in ("development", "holdout"), "Unknown protocol")
+    need(protocol["version"] == 3 and protocol["split"] in ("development", "holdout"),
+         "This auditor requires v3; use the unchanged source-v2 auditor for historical v2 runs")
     need(not protocol["include_full_budget"] or protocol["split"] == "development", "Full budget is development only")
     methods = [*BASE_METHODS] + (["fast_full_budget"] if protocol["include_full_budget"] else [])
     need(protocol["method_ids"] == methods, "Frozen method set differs")
@@ -137,6 +138,7 @@ def audit_records(rows, protocol, inputs):
          and protocol["primary_widths"] == [30, 100], "Unexpected coverage contract")
     need(protocol["primary_width"] == 30 and protocol["secondary_width"] == 100
          and protocol["stress_width"] == 300, "Changed primary decision regime")
+    need(protocol["task_order"] == "width_then_series", "Changed task ordering protocol")
     need(protocol["bootstrap"] == {"unit": "family", "repetitions": 2000, "seed": 2026102102,
                                    "confidence": .95, "references": ["fast_race", "sparse_pr", "radix_pr", "fast_race_radix"]},
          "Changed uncertainty protocol")
@@ -148,7 +150,7 @@ def audit_records(rows, protocol, inputs):
          "Invalid frozen work budget")
     models = protocol["models"]
     need(models == sorted(set(models)) and len(models) == 3, "Incomplete model coverage")
-    keys = [(r["series"], r["max_buffer"]) for r in inputs]
+    keys = [(r["max_buffer"], r["series"]) for r in inputs]
     need(keys == sorted(keys) and len(keys) == len(set(keys)), "Invalid input task manifest")
     need(len(rows) == len(inputs) == protocol["cases"] and bool(rows), "Missing or duplicate tasks")
     rng = random.Random(protocol["seed"])
@@ -288,11 +290,11 @@ def audit_records(rows, protocol, inputs):
         for measure in ("geomean_ci95", "aggregate_ratio_ci95"))
     radix_pass = "30" in intervals and all(
         intervals["30"]["radix_pr"][comparator][measure][0] > 1
-        for comparator in ("sparse_pr", "dense_pr_direct", "dense_nearest_both")
+        for comparator in ("sparse_pr", "dense_pr_direct", "dense_nearest_both", "dense_pr_direct_radix", "dense_pr_nearest_radix")
         for measure in ("geomean_ci95", "aggregate_ratio_ci95"))
     radix_racing_pass = "30" in intervals and all(
         intervals["30"]["fast_race_radix"][comparator][measure][0] > 1
-        for comparator in ("sparse_pr", "dense_pr_direct", "radix_pr")
+        for comparator in ("sparse_pr", "dense_pr_direct", "radix_pr", "dense_pr_direct_radix", "dense_pr_nearest_radix")
         for measure in ("geomean_ci95", "aggregate_ratio_ci95"))
     timing_variation = {method: {
         "median_within_case_max_over_min": statistics.median(max(r["seconds"][method]) / min(r["seconds"][method]) for r in rows),
@@ -303,9 +305,9 @@ def audit_records(rows, protocol, inputs):
             "primary_decision": {"width": 30, "passes": primary_pass,
                                  "criterion": "fast_race: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, and radix_pr; correctness also required."},
             "radix_primary_decision": {"width": 30, "passes": radix_pass,
-                                       "criterion": "radix_pr: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, and dense_nearest_both; correctness also required."},
+                                       "criterion": "radix_pr: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, dense_nearest_both, dense_pr_direct_radix, and dense_pr_nearest_radix; correctness also required."},
             "radix_racing_decision": {"width": 30, "passes": radix_racing_pass,
-                                      "criterion": "fast_race_radix: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, and radix_pr; correctness also required."}}
+                                      "criterion": "fast_race_radix: both geomean and aggregate-ratio lower 95% family-bootstrap bounds exceed 1 against sparse_pr, dense_pr_direct, radix_pr, dense_pr_direct_radix, and dense_pr_nearest_radix; correctness also required."}}
 
 
 def compare(actual, expected, path="summary"):
@@ -330,7 +332,7 @@ def validate_inputs_manifest(inputs, protocol, root, *, verify_members=True):
     expected = [{"series": s, "family": metadata[s]["family"], "n": metadata[s]["n"],
                  "max_buffer": w, "label_sha256": metadata[s]["label_sha256"],
                  "score_sha256": {m: score_hashes[s, m] for m in models}}
-                for s in wanted for w in (30, 100, 300)]
+                for w in (30, 100, 300) for s in wanted]
     need(inputs == expected and protocol["models"] == models, "Frozen inputs differ from immutable split")
     result = {"status": "PASS", "series": len(wanted), "score_vectors": 3 * len(wanted),
               "release_bindings": RELEASE_BINDINGS, "original_measurements_sha256": receipt["records_sha256"],
