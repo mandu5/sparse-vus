@@ -49,4 +49,14 @@ The generated README now fetches the pinned Benchopt reference explicitly. It ru
 
 The README runs `artifacts/pr-engine/source-v2/experiments/audit_pr_engine.py` directly for `artifacts/pr-engine/mac-development`. That unchanged auditor naturally resolves its own snapshot root; no `--source-root` flag or current-auditor v2 support is claimed. It documents local snapshot cache links created after extraction. The current auditor is used separately for v3, with an explicit `V3_RUN` directory chosen from an included completed run whose protocol version is 3. The directory is not guessed while v3 is still being prepared.
 
+The fresh-workspace helpers also preserve the entire inventoried `source-v2`
+snapshot, including its own original release metadata, benchmark records,
+auditor, and license. They validate each inventory hash/byte length before
+copying and exclude local cache links and unlisted files. These historical
+records stay under the snapshot root; root-level output locations remain empty
+for a fresh original-experiment rerun. The public helper implements this copy,
+and the generated anonymous helper calls that same function when history is
+present. A focused extracted-archive fixture covers the resulting workspace;
+the newly added checks have not been executed during controlled holdout timing.
+
 Final validation must execute both the historical v2 and current v3 audits against the extracted package after fetching references/data, not merely verify transported hashes. The final scientific freeze, complete archive build, and these isolated audits remain pending; no final artifact was built during this update.

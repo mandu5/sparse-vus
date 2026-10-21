@@ -48,6 +48,10 @@ jobs:
   installed-wheel:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      NUMBA_NUM_THREADS: "1"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
@@ -59,6 +63,14 @@ jobs:
       - run: /tmp/sparse-vus-wheel-check/bin/python -m pip install dist/*.whl
       - name: Verify the installed base package without optional Numba
         run: /tmp/sparse-vus-wheel-check/bin/python experiments/check_installed_package.py
+      - name: Install the accelerated wheel in a separate environment
+        run: |
+          python -m venv /tmp/sparse-vus-accelerated-wheel-check
+          release_wheels=(dist/*.whl)
+          test "${#release_wheels[@]}" -eq 1
+          /tmp/sparse-vus-accelerated-wheel-check/bin/python -m pip install "${release_wheels[0]}[accelerate]"
+      - name: Verify installed radix APIs and source-byte identity
+        run: /tmp/sparse-vus-accelerated-wheel-check/bin/python experiments/check_installed_accelerated_package.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: verified-python-distributions

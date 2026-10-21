@@ -34,8 +34,8 @@ artifact separately counts adaptive and completion evaluations. In addition
 to prepared inputs, retained coordinates use at most $\sum_m16C_mG_m$
 bytes, with $O(MW)$ scalar and controller state. The implementation scans
 the model-by-width state when updating global bounds and scans interval
-priorities during refinement. Its bookkeeping can require
-$O(MW\sum_m C_m)$ work, bounded above by $O(M^2W^2)$ when capacity scales
+priorities during refinement. Including the initial state scans, its bookkeeping
+can require $O(MW(1+\sum_m C_m))$ work, bounded above by $O(M^2W^2)$ when capacity scales
 with width. Consequently the endpoint budget is a query/storage guarantee,
 not a constant-factor wall-clock overhead guarantee.
 

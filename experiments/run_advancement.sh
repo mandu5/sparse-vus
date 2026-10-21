@@ -19,9 +19,20 @@ python -m pip install -e .
 python experiments/fetch_reference.py
 python experiments/dtaianomaly_adapter.py --fetch
 python experiments/fast_vus_adapter.py --fetch
+python experiments/benchopt_vus_adapter.py --fetch
 python -m pytest -q
 python experiments/verify_width_theory.py --output "$research_output/width-theory.json"
-python experiments/fetch_score_ranges.py
+# The downloader writes receipt JSONs. Stage its unchanged sources so those
+# receipts go under this rerun, while the benchmark can read the shared cache.
+python - "$research_output" <<'PY'
+from pathlib import Path
+import subprocess
+import sys
+from experiments.create_reproduction_workspace import prepare_data_fetch
+root = Path.cwd()
+staging = prepare_data_fetch(root, Path(sys.argv[1]))
+subprocess.run([sys.executable, str(staging / 'experiments/fetch_score_ranges.py')], check=True)
+PY
 python experiments/benchmark_advancement.py --mode baseline \
   --output "$research_output/baseline" --cpu-clearance 'Sequential reproduction; no concurrent research task.'
 python experiments/benchmark_advancement.py --mode certified \

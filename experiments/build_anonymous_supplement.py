@@ -197,6 +197,9 @@ for name in ("pyproject.toml", "README.md", "LICENSE", "THIRD_PARTY.md"):
 for name in ("mechanism_protocol.json", "external_supplement_protocol.json"):
     if (root / "artifacts" / name).exists():
         shutil.copyfile(root / "artifacts" / name, dest / "artifacts" / name)
+if (root / "artifacts/pr-engine/source-v2").exists():
+    from create_reproduction_workspace import copy_historical_snapshot
+    copy_historical_snapshot(root, dest)
 print("Fresh workspace created. Activate a dedicated environment there, then use run_reproduction.sh.")
 '''
 

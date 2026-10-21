@@ -217,6 +217,34 @@ def test_fresh_reproduction_workspace_preserves_published_results(repository, tm
     assert subprocess.run(command, cwd=extracted, capture_output=True).returncode != 0
 
 
+def test_anonymous_workspace_keeps_full_historical_snapshot_and_release_anchors(repository, tmp_path):
+    helper_path = Path(__file__).resolve().parents[1] / "experiments/create_reproduction_workspace.py"
+    put(repository, "experiments/create_reproduction_workspace.py", helper_path.read_bytes())
+    helper = importlib.import_module("create_reproduction_workspace")
+    snapshot = repository / "artifacts/pr-engine/source-v2"
+    entries = []
+    for name in sorted(helper.SNAPSHOT_REQUIRED | {"src/sparse_vus/radix.py"}):
+        # Valid JSON stays untouched by the anonymizer; source files need not run.
+        data = b'{"historical": true}\n' if Path(name).suffix in {".json", ".jsonl"} else b"# historical source\n"
+        put(snapshot, name, data)
+        entries.append({"path": name, "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)})
+    put(snapshot, "source-manifest.json", json.dumps({"files": entries}))
+    output = tmp_path / "historical-workspace.zip"
+    build(repository, output)
+    extracted = tmp_path / "extracted"
+    with zipfile.ZipFile(output) as archive:
+        archive.extractall(extracted)
+    destination = tmp_path / "rerun"
+    result = subprocess.run([sys.executable, "experiments/create_anonymous_reproduction_workspace.py",
+                             "--output", str(destination)], cwd=extracted, capture_output=True, text=True)
+    assert result.returncode == 0, result.stderr
+    copied = destination / "artifacts/pr-engine/source-v2"
+    for entry in entries:
+        assert (copied / entry["path"]).read_bytes() == (snapshot / entry["path"]).read_bytes()
+    assert (copied / "source-manifest.json").read_bytes() == (snapshot / "source-manifest.json").read_bytes()
+    assert not (destination / "artifacts/public_benchmark.jsonl").exists()
+
+
 def test_anonymous_hash_bindings_follow_changed_metadata_and_preserve_original_provenance(repository, tmp_path):
     environment = put(repository, "artifacts/run/environment.json", '{"cpu_clearance":"Private agent coordination","seconds":1.25}\n')
     old_hash = hashlib.sha256(environment.read_bytes()).hexdigest()

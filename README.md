@@ -5,7 +5,7 @@ widths. The implementation targets a pinned official VUS definition, including
 dynamic label mass and expanded-interval existence.
 
 For sequence length `n`, maximum buffer width `L`, and `Q` positions in the
-maximum expanded anomaly support, the algorithm takes
+maximum expanded anomaly support, the comparison-based evaluator takes
 `O(n log(Q+1) + (L+1)Q)` time. The compiled scalar implementation uses
 `O(n+Q)` space. The NumPy diagnostic version additionally retains `O(L)`
 per-width areas. `Q` counts positions, not distinct scores.
@@ -62,24 +62,50 @@ from sparse_vus.compiled import sparse_vus_jit
 vus_roc, vus_pr = sparse_vus_jit(labels, scores, max_buffer=4)
 ```
 
-The research branch also provides fixed-width float64 preparation:
+### Exact radix APIs on the research branch
+
+These additional entry points belong to the current research checkout; they
+are not included in the stable v0.2.0 release. Install the optional Numba
+dependency from this checkout with `python -m pip install '.[accelerate]'`.
+The `research` extra is needed for the experiment suite, not for these calls.
+The base `import sparse_vus` remains NumPy-only; import the compiled APIs
+explicitly from their submodules.
 
 ```python
 from sparse_vus.radix import sparse_pr_radix_jit, sparse_vus_radix_jit
 
+labels = [0, 1, 0, 0, 1, 0]
+scores = [1, 2, 3, 4, 5, 6]  # Higher scores indicate greater anomaly likelihood.
 vus_pr = sparse_pr_radix_jit(labels, scores, max_buffer=4)
 vus_roc, vus_pr = sparse_vus_radix_jit(labels, scores, max_buffer=4)
 ```
 
+`sparse_pr_radix_jit` returns one Python float and computes PR only.
+`sparse_vus_radix_jit` returns `(ROC, PR)`. Both evaluate every distinct score
+threshold and average all integer widths from zero through `max_buffer`.
+They accept the same finite float64-convertible scores and binary labels as
+the existing APIs, including negative scores and ties. Signed zeros form one
+tie; integer values indistinguishable after float64 conversion also form one
+tie. Inputs must be one-dimensional, equally long, and contain both label
+classes. Neither API returns per-width arrays or a full surface.
+
+The first call includes Numba compilation/cache initialization. Repeated calls
+still include input validation and preparation; there is no reusable prepared
+object in these public signatures. Numerical agreement is tolerance-based,
+not a promise of bitwise-identical floating-point sums.
+
 Eight explicit counting-radix passes and a linear interval scan reduce the
 exhaustive time bound to `O(n + (L+1)Q)` for finite float64 keys under the
-stated word-RAM model. Signed zero and complete global ties retain the API's
+stated word-RAM and unit-cost metric-arithmetic assumptions. Signed zero and
+complete global ties retain the API's
 semantics. The paired kernel uses `O(n+Q)` auxiliary space; the PR-only
 completion interface also stores `L+1` scalar values. This is a different
 preparation strategy from support-histogram binary search, not a new sorting
 algorithm. See [the argument and prior techniques](docs/radix_prior_art_20261021.md).
 The v0.2.0 measurements above concern the earlier comparison-based evaluator;
 they are not measurements of these new APIs.
+
+### Optional width and model-selection APIs
 
 `sparse_vus.fast_racing.race_pr_models_fast` adds a compiled PR-only selection
 controller. It retains each computed width once and completes only unseen
@@ -108,7 +134,7 @@ contain the exact values within the stated numerical audit tolerance.
 The [width proof](docs/theory_advancement_20261020.md) explains why PR needs
 p-box bounds even between interval merges.
 
-Use `sparse_vus_jit` as the default for repeated exact evaluations. The optional
+The v0.2.0 compiled exact entry point remains `sparse_vus_jit`. The optional
 `sparse_vus.racing.race_pr_models(labels, scores_by_model, max_buffer)` selects
 the highest PR model by refining width bounds. Its decisions match exact
 selection in all 126 tasks on each platform, but its aggregate measured cost
@@ -135,6 +161,7 @@ Its SHA-256 and commit are pinned.
 python experiments/fetch_reference.py
 python experiments/dtaianomaly_adapter.py --fetch
 python experiments/fast_vus_adapter.py --fetch
+python experiments/benchopt_vus_adapter.py --fetch
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1 python -m pytest -q
 python experiments/independent_review_check.py
 ```
@@ -221,8 +248,12 @@ The manuscript reports dense-support slowdowns, approximation error, ranking
 reversals, and the external-comparison scope. A faster synthetic case alone
 does not establish a better algorithm on every real input.
 
-The Sylligardos 2025 fast VUS implementation could not be located and is not
-benchmarked. The public Go `adscore` implementation was executed natively,
+Public Sylligardos-attributed FF-VUS CPU/GPU code has been located. Its native
+metric differs from this pinned target, so it is relevant acceleration prior
+art but is not an exact-target timing comparator. The public code does not
+establish which revision produced the workshop's reported speedups. See the
+[source and semantic audit](docs/prior_art_update_20261021.md).
+The public Go `adscore` implementation was executed natively,
 but computes different semantics and is not used as an exact-target speed
 baseline. See `artifacts/native_go_audit.json`.
 
@@ -260,6 +291,9 @@ width verifier, the actual fast-VUS comparison, adaptive width evaluation,
 complete model selection, and incremental PR racing in sequence. It includes
 exact fallback/refinement costs and records all losses. The final two audits
 reconstruct model decisions, times, and corpus hashes from raw records.
+Fresh data-download receipts are written under the new output directory;
+the original release bindings remain in place. Downloaded input cache files
+are shared with the benchmark checkout.
 The original padding sensitivity is separately checked with
 `python experiments/ranking_robustness.py --verify`.
 
