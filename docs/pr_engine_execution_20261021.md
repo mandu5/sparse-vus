@@ -126,3 +126,15 @@ At 2026-10-21 01:12:28 UTC the Mac had completed all 308 primary-width
 cases and reached 354/924 total cases with zero reported semantic
 violations. This is a progress record, not the final independent audit
 or a performance decision.
+
+At 2026-10-21 01:38:42 UTC, after the entire primary block had completed,
+a lightweight low-priority read computed interim point estimates from its
+308 immutable rows. This was the first holdout timing-outcome inspection;
+the report-only oracle rule was already committed before it. No measured
+source, parameter, stopping rule, required comparison, or remaining case
+changed. No bootstrap or new metric execution was performed. Median
+comparator/radix PR ratios were 1.774311 versus prior sparse PR, 2.676501
+versus direct dense radix PR, 2.598515 versus nearest dense radix PR, and
+20.924899 versus released Klein PR. Corresponding wins were 271, 303, 307,
+and 308 of 308. These are interim points; the full run, independent audit,
+family intervals, and Linux confirmation remain the final evidence.

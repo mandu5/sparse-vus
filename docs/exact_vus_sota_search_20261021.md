@@ -188,3 +188,41 @@ itself prove optimality, firstness or a universal runtime advantage; radix
 sorting and floating-point key transforms are established techniques, as
 documented in [the radix review](radix_prior_art_20261021.md). This search
 neither establishes acceptance nor closes the unverified GPU comparison.
+
+## Final lightweight source refresh — 21 October 2026
+
+A fresh online default-branch HEAD check through GitHub's commits API found
+no change to the measured/source-audited pins: Klein
+[`1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00`](https://github.com/tomlouisklein/fast-VUS/commit/1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00),
+official VUS
+[`467bace0c103f5c2bdb4900306d82939bcac8ff9`](https://github.com/thedatumorg/VUS/commit/467bace0c103f5c2bdb4900306d82939bcac8ff9),
+Benchopt
+[`2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94`](https://github.com/benchopt/benchmark_tsfm/commit/2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94),
+aVUSi
+[`facf4362092525671215031048a75842b9d6d632`](https://github.com/doanthihoaithu/aVUSi/commit/facf4362092525671215031048a75842b9d6d632),
+and dtaianomaly
+[`557b435790bebc57307d8e7f22047273ac923f36`](https://github.com/ML-KULeuven/dtaianomaly/commit/557b435790bebc57307d8e7f22047273ac923f36).
+TSB-AD, cloudens, MSADv2 and tsad-template also remain at the already
+documented revisions. No new source diff requires a metric or timing audit.
+
+One additional 2026 model-selection trail was resolved:
+[KDSelectorAlgorithm](https://github.com/chenyuanTKCY/KDSelectorAlgorithm/tree/c90342282b0ce38ed5e0cbd88982f08f208bec0c),
+HEAD `c90342282b0ce38ed5e0cbd88982f08f208bec0c`, 2026-09-10.
+Its [metrics.py](https://github.com/chenyuanTKCY/KDSelectorAlgorithm/blob/c90342282b0ce38ed5e0cbd88982f08f208bec0c/utils/metrics.py)
+is a legacy nested VUS evaluator: line 294 fixes the positive denominator
+using all buffered label mass, line 398 hardcodes 250 thresholds, and
+lines 425–427 use trapezoidal PR. It supplies neither the pinned dynamic-mass
+target nor a new exact full-threshold accelerator. Its source SHA-256 is
+`45210ec762e00e63b052e721b7ee4c1136c1124ddee7baa2e669b4278467a60e`.
+This conclusion is from unchanged source inspection; the evaluator was not run.
+
+Primary paper revision checks remain unchanged:
+[VUS](https://arxiv.org/abs/2502.13318) is v1 (18 February 2025),
+[MSAD](https://arxiv.org/abs/2510.26643) is v2 (2 December 2025), and the
+[adversarial metric audit](https://arxiv.org/abs/2607.11969) is v2
+(19 July 2026). Boniol's publication list was refreshed; no additional exact
+VUS computation method was identified there. The CIKM 2026 accepted-paper
+page still displays `TBD`. This lightweight refresh identified no additional
+eligible exact CPU comparator; it does not establish global absence.
+No benchmark, test suite, measured-source edit or local heavy computation was
+performed during the concurrent formal timing runs.
