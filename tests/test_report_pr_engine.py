@@ -126,3 +126,42 @@ def test_ratio_of_total_costs_is_not_the_mean_of_case_ratios():
     assert result["aggregate_ratio"] == pytest.approx(60 / 101)
     assert result["median"] == pytest.approx(5.25)
     assert len(result["regressions"]) == 1
+
+
+@pytest.mark.parametrize("version", [2, 3])
+def test_descriptive_oracle_selects_per_case_from_fixed_pr_only_controls(version):
+    rows = [{"series": "a", "family": "f", "max_buffer": 30,
+             "median_seconds": {"radix_pr": 1., "sparse_pr": .5, "dense_pr_direct": 2., "klein_pr": 10.,
+                                "dense_pr_direct_radix": .1, "dense_pr_nearest_radix": 4.,
+                                "benchopt_both": .001, "radix_both": .001, "fast_race": .001}},
+            {"series": "b", "family": "f", "max_buffer": 30,
+             "median_seconds": {"radix_pr": 1., "sparse_pr": 2., "dense_pr_direct": .5, "klein_pr": 10.,
+                                "dense_pr_direct_radix": 4., "dense_pr_nearest_radix": .2,
+                                "benchopt_both": .001, "radix_both": .001, "fast_race": .001}}]
+    # Each old dense/sparse control has aggregate ratio 1.25, yet their
+    # per-case fastest control has ratio .5 and defeats radix on both cases.
+    assert module().comparison(rows, "radix_pr", "sparse_pr")["aggregate_ratio"] == 1.25
+    assert module().comparison(rows, "radix_pr", "dense_pr_direct")["aggregate_ratio"] == 1.25
+    result = module().descriptive_oracle(rows, version)
+    expected = ["sparse_pr", "dense_pr_direct", "klein_pr"]
+    if version == 3:
+        expected += ["dense_pr_direct_radix", "dense_pr_nearest_radix"]
+    assert result["eligible_comparators"] == expected
+    assert result["statistics"]["aggregate_ratio"] == pytest.approx(.5 if version == 2 else .15)
+    assert result["statistics"]["slower_cases"] == 2
+    assert len(result["statistics"]["regressions"]) == 2
+    assert "geomean_ci95" not in result["statistics"]
+    assert "aggregate_ratio_ci95" not in result["statistics"]
+    winners = ["sparse_pr", "dense_pr_direct"] if version == 2 else ["dense_pr_direct_radix", "dense_pr_nearest_radix"]
+    assert [choice["selected_control"] for choice in result["per_case_choices"]] == winners
+    assert sum(result["winning_control_counts"].values()) == 2
+    assert all(result["winning_control_counts"][method] == 1 for method in winners)
+
+
+def test_oracle_timing_ties_are_visible_and_counted_only_once():
+    rows = [{"series": "tie", "family": "f", "max_buffer": 30,
+             "median_seconds": {"radix_pr": 1., "sparse_pr": .5, "dense_pr_direct": .5, "klein_pr": 2.}}]
+    result = module().descriptive_oracle(rows, 2)
+    assert result["tied_fastest_cases"] == 1
+    assert result["per_case_choices"][0]["tied_fastest_controls"] == ["dense_pr_direct", "sparse_pr"]
+    assert result["winning_control_counts"] == {"sparse_pr": 0, "dense_pr_direct": 1, "klein_pr": 0}

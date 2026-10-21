@@ -89,6 +89,42 @@ def comparison(rows, reference, comparator):
             "regressions": sorted(regressions, key=lambda r: (-r["slowdown"], r["series"], r["max_buffer"]))}
 
 
+def descriptive_oracle(rows, version):
+    """Post-protocol diagnostic: an optimistic per-case timing oracle.
+
+    The eligible set is fixed by protocol version, independently of outcomes.
+    No uncertainty calculation or frozen decision uses this selected minimum.
+    """
+    require(version in (2, 3), "Unsupported oracle comparator scope")
+    eligible = ["sparse_pr", "dense_pr_direct", "klein_pr"]
+    if version == 3:
+        eligible += list(MATCHED)
+    counts = {method: 0 for method in eligible}
+    synthetic, choices = [], []
+    for row in rows:
+        best = min(row["median_seconds"][method] for method in eligible)
+        tied = sorted(method for method in eligible if row["median_seconds"][method] == best)
+        winner = tied[0]
+        counts[winner] += 1
+        synthetic.append({**row, "median_seconds": {**row["median_seconds"], "__pr_only_oracle__": best}})
+        choices.append({"series": row["series"], "family": row["family"], "max_buffer": row["max_buffer"],
+                        "selected_control": winner, "tied_fastest_controls": tied,
+                        "oracle_seconds": best, "reference_seconds": row["median_seconds"]["radix_pr"]})
+    stats = comparison(synthetic, "radix_pr", "__pr_only_oracle__")
+    by_case = {(c["series"], c["max_buffer"]): c for c in choices}
+    for regression in stats["regressions"]:
+        choice = by_case[regression["series"], regression["max_buffer"]]
+        regression["selected_control"] = choice["selected_control"]
+        regression["tied_fastest_controls"] = choice["tied_fastest_controls"]
+    return {"status": "post_protocol_descriptive_oracle", "reference": "radix_pr",
+            "eligible_comparators": eligible,
+            "selection_rule": "Minimum eligible whole-task case-median time per case; exact timing ties choose the lexicographically first name for exclusive counts and list every tied control.",
+            "uncertainty": "No confidence intervals computed. This retrospective minimum is descriptive and does not alter any frozen decision.",
+            "winning_control_counts": counts,
+            "tied_fastest_cases": sum(len(c["tied_fastest_controls"]) > 1 for c in choices),
+            "per_case_choices": choices, "statistics": stats}
+
+
 def build_report(run, *, audit_path=None, root=ROOT):
     root, run = Path(root), Path(run)
     paths = {name: run / f"{name}.json" for name in ("protocol", "inputs", "summary", "environment")}
@@ -167,6 +203,7 @@ def build_report(run, *, audit_path=None, root=ROOT):
                     for key in verified:
                         same(stats[key], verified[key])
                 output["comparisons"][reference][comparator] = stats
+        output["descriptive_oracle"] = descriptive_oracle(cases, p["version"])
         output_groups[name] = output
     controls = {"primary_decision": ["sparse_pr", "dense_pr_direct", "radix_pr"],
                 "radix_primary_decision": ["sparse_pr", "dense_pr_direct", "dense_nearest_both"],
@@ -197,6 +234,7 @@ def build_report(run, *, audit_path=None, root=ROOT):
             "limitations": [*audited["limitations"],
                 "Ratios use paired within-run case medians; values above one favor the named reference. No cross-run or cross-version times are pooled.",
                 "Family-cluster CIs describe case variation, not uncertainty from only three timing repetitions; intervals are copied from the bound independent audit.",
+                "The fastest eligible PR-only exhaustive comparator is a post-protocol per-case oracle diagnostic. It has no confidence intervals and does not change the frozen decisions.",
                 "Benchopt and paired controls compute ROC and PR; matched PR-only controls isolate the extra-work confound.",
                 "The 308-series policy holdout belongs to the previously studied corpus and the same families; it is not a new external-domain dataset.",
                 "DTAIAnomaly's bounded external appendix is separate. These results do not establish global SOTA.",
@@ -225,7 +263,15 @@ def markdown(report):
                 cells = [f"{s['median']:.3f}", interval("geomean"), interval("aggregate_ratio"),
                          f"{s['faster_cases']}/{s['slower_cases']}", f"{max(1., s['max_slowdown']):.3f}x"]
             lines.append(f"| {method} | {timing['work']} | {timing['sum_case_median_seconds']:.6f} | " + " | ".join(cells) + " |")
-        lines += ["", "The JSON includes all four reference methods, every comparator, complete negative-case lists, family effects, and work accounting.", ""]
+        oracle = group["descriptive_oracle"]
+        stats = oracle["statistics"]
+        lines += ["", "**Post-protocol descriptive PR-only oracle.** Minimum per-case time among "
+                  + ", ".join(f"`{m}`" for m in oracle["eligible_comparators"]) + ".",
+                  f"Comparator/radix_pr ratios: median {stats['median']:.3f}, geomean {stats['geomean']:.3f}, aggregate {stats['aggregate_ratio']:.3f}; "
+                  f"radix_pr faster/slower {stats['faster_cases']}/{stats['slower_cases']}; worst radix_pr slowdown {max(1., stats['max_slowdown']):.3f}x.",
+                  "Winning-control counts: " + ", ".join(f"`{m}`={n}" for m, n in oracle["winning_control_counts"].items()) + ".",
+                  "No CI is computed for this retrospective oracle; frozen decisions are unchanged. Exact timing ties use lexicographic attribution, with all tied controls retained in JSON.", "",
+                  "The JSON includes all four reference methods, every comparator, complete negative-case lists, oracle choices, family effects, and work accounting.", ""]
     lines += ["## Scope", "", *[f"- {v}" for v in report["limitations"]], "",
               f"Audit SHA-256: `{report['bindings']['audit_sha256']}`", "",
               f"Raw records SHA-256: `{report['bindings']['measurements_sha256']}`", ""]
@@ -250,7 +296,14 @@ def latex(report):
             s = group["comparisons"]["radix_pr"][method]
             g, a = s["geomean_ci95"], s["aggregate_ratio_ci95"]
             lines.append(f"{escape(method)} & {s['median']:.3f} & {s['geomean']:.3f} [{g[0]:.3f}, {g[1]:.3f}] & {s['aggregate_ratio']:.3f} [{a[0]:.3f}, {a[1]:.3f}] " + r"\\")
-        lines += [r"\end{tabular}", ""]
+        oracle = group["descriptive_oracle"]
+        stats = oracle["statistics"]
+        lines += [r"\end{tabular}", r"\par\smallskip",
+                  r"Post-protocol descriptive PR-only oracle (no CI; frozen decisions unchanged): "
+                  + ", ".join(escape(m) for m in oracle["eligible_comparators"]) + ".",
+                  f"Per-case minimum comparator/radix\\_pr ratios: median {stats['median']:.3f}, "
+                  f"geomean {stats['geomean']:.3f}, aggregate {stats['aggregate_ratio']:.3f}; "
+                  f"radix\\_pr faster/slower {stats['faster_cases']}/{stats['slower_cases']}.", ""]
     return "\n".join(lines)
 
 

@@ -99,3 +99,16 @@ agent test/report work stopped. Lightweight document edits and status reads
 continue; no benchmark source is changed. The starting snapshot shows an
 unrelated Python worker at approximately 100 percent CPU, so the Mac remains
 explicitly non-isolated. The full 924-case outcomes and audit remain pending.
+
+## Report-only descriptive comparator
+
+After execution began, a report-only diagnostic was added: the fastest
+eligible PR-only exhaustive comparator for each complete task, chosen from
+the fixed existing method set. It includes the three prior PR-only controls
+and, for v3, both matched dense radix controls. Paired ROC/PR outputs and
+adaptive winner-only engines are excluded from this particular comparison.
+No holdout timing outcomes were inspected to select this rule. It is a
+post-protocol descriptive minimum with no confidence interval or change to
+the frozen decisions; it can expose heterogeneity hidden by separate
+pairwise aggregate wins. Complete choices and losses remain in the report.
+Report fixtures specifically include such a pairwise-win/oracle-loss case.
