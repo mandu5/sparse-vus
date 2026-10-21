@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "cd61a475cf8dcd0400e4bf6658afaf6880edadab73f9fd14581f9102228630e3",
+  "frozen_utc": "2026-10-21T04:55:10.967034+00:00",
+  "cases": 144,
+  "methods": 9,
+  "repetitions": 3,
+  "source_sha256": {
+    "experiments/run_saturation_external_reproduction.py": "c1e3ce3135876a3669f712188bdf4d3e11eb84cc3c6a33d49ca03be6a0a5fdda",
+    ".github/workflows/saturation-external-benchmark.yml": "07b050ea94b2d54c51b809985618cb3f44d584f609662ff6074719fea7870613",
+    "docs/saturation_data_licenses_20261021.md": "5b6f0a08283e03b8d72d9553dbe22015d93ac4980cbca92f3d631791e31b33aa",
+    "experiments/fetch_saturation_external.py": "6c946f2c61ac0efaa42c881caee51a2526fa0236000e199636b61d3e67d63a6f",
+    "experiments/benchmark_saturation.py": "902d9f83bfedb0063f0d21f82fa40f28f71a0bc6f4957392053fd034804f511e"
+  },
+  "timing_environment": "Dedicated GitHub Actions job; sequential steps and method calls; one compute thread. Hosted background load is not controlled."
+}

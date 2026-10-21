@@ -1,0 +1,321 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-21T05:02:40.189737+00:00",
+  "artifact_inventory_sha256": "33df79485d1027c71a6ba1ff5a9cfc7dbd623217582cf2a37114df839dec7366",
+  "artifact_files_verified": 53,
+  "files": [
+    {
+      "path": "ATTRIBUTION.md",
+      "sha256": "5b6f0a08283e03b8d72d9553dbe22015d93ac4980cbca92f3d631791e31b33aa",
+      "match": true
+    },
+    {
+      "path": "benchmark/completion.json",
+      "sha256": "cbaa8a121c429809d232cbef046e9269685d47b78b3ca8b25e233ff8012f3033",
+      "match": true
+    },
+    {
+      "path": "benchmark/environment-end.json",
+      "sha256": "e4e1353033009b8101ea2990e6f83cb00c5023d80442476a5c54f6b475f628fa",
+      "match": true
+    },
+    {
+      "path": "benchmark/environment.json",
+      "sha256": "7bb0b8a208c1bde5ef735d2f17068cebc2eef50fa08ad9e8d7d56cf7cf69884a",
+      "match": true
+    },
+    {
+      "path": "benchmark/inputs.json",
+      "sha256": "cb0a7d215101610e8034e4f7a69dd7e57a075117a12f4cb0f39e8bf35016b4f9",
+      "match": true
+    },
+    {
+      "path": "benchmark/measurements.jsonl",
+      "sha256": "f1533a4dcdfe346bcdf47169395eefa8b1c1180f2ad5c2fa9ba8a8bc37425076",
+      "match": true
+    },
+    {
+      "path": "benchmark/protocol.json",
+      "sha256": "cd61a475cf8dcd0400e4bf6658afaf6880edadab73f9fd14581f9102228630e3",
+      "match": true
+    },
+    {
+      "path": "benchmark/report.json",
+      "sha256": "cff6d8d22927e75a6fbd7b5af2eed86cf1084b3bf5163174a4d21bcc9d60130d",
+      "match": true
+    },
+    {
+      "path": "benchmark/run-start.json",
+      "sha256": "6090e72e5b6be3184c3cb9b5177494b5bafd90a188d655199474538dd5ac2a85",
+      "match": true
+    },
+    {
+      "path": "commands.json",
+      "sha256": "6be9264c9252ba4984bb0033bc3969ba7da4d544cec1a6eb4e1590cf1dd1ec1b",
+      "match": true
+    },
+    {
+      "path": "fast-vus-source.json",
+      "sha256": "5d7ee952dbc805fe7f749f48b573b86f108f1098b25329874aa14d1e690f1aed",
+      "match": true
+    },
+    {
+      "path": "frozen-protocol-receipt.json",
+      "sha256": "6cc7f8cef026a3d1b411e0e2a241fdad7dc8184e9bfbd64c646e04bcd10a89ec",
+      "match": true
+    },
+    {
+      "path": "input-identity-comparison.json",
+      "sha256": "6fd2ddf8bc0b87f4706e8be908a5d166a469cc84cf2780071a2ce81f087c5a11",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/CalIt2_traffic_test.receipt.json",
+      "sha256": "015f9b744012c275cca6e453788851bf7c50ecabb290d5a888585d9f4f1bb7ec",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/GECCO_water_quality_test.receipt.json",
+      "sha256": "51cfdbfe2b0ce0cc88ef3c077445f818f918c68f66d6cac846567a2e73177378",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.receipt.json",
+      "sha256": "d62490eb4d71a6a816f69db1bfe816d180d5a5e7b18fabf26649d80c455b732a",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test.receipt.json",
+      "sha256": "0f30d0eb45bb68eef6181964f755b8e464d09bc6dfef98b4e63c276dc509c87a",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/Genesis_test.receipt.json",
+      "sha256": "e2e65c76f5541d703d871841d81e2da6cc3652f0e6efba2bb170d9b002b1f5d7",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/GutenTAG_0_test.receipt.json",
+      "sha256": "89d3bdbe21a6afd7882a15c548f6e9cdb31405afd0f78e1f35fdec4bb5cfa797",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/GutenTAG_10_test.receipt.json",
+      "sha256": "e04c843d5ce9e8a67f996c91d8265d7119b3f05a8c72be8c4aedd25b7d9b1822",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/PSM_test.receipt.json",
+      "sha256": "ca2e3c1dd2c0b05199bfbd2e6000a7e490785bdb9cb9366890459879258d1236",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/mTSBench-file-tree.json",
+      "sha256": "42df9286fde2465e381426fd2112ef68cfc46bfcef2b8763e2d32dd6490e26c0",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/manifest.json",
+      "sha256": "ce29e116377f732548e541ee476fffc62b54170f23b21aa2de81c93cf2a953ea",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/metro_traffic-volume_test.receipt.json",
+      "sha256": "48b4d970fac11b4ee78b77adc09b0131f30224d4b4029d664cd94415ca8b1853",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/previous-selected-series.json",
+      "sha256": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/room-occupancy_1_test.receipt.json",
+      "sha256": "dfe133ef485c92cefb6b33a8d99b950fa568aacf6389d7df77a9db7a955cb2d6",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/room-occupancy_test.receipt.json",
+      "sha256": "194f3e66663ea3b4e0656546aa4337aa2ab019d29338ed8e9bf9d05544ba39c5",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/selection.json",
+      "sha256": "30b8fe5a94b7e60cffbcb04e06917108244963282fd06835622d718d48bd5003",
+      "match": true
+    },
+    {
+      "path": "linux-input-receipts/swan_sf_test.receipt.json",
+      "sha256": "2c95f44deb9cc5b6ebbf76ebf40fb12edba36b09458e0f2175fa117c89e6461a",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/CalIt2_traffic_test.receipt.json",
+      "sha256": "4429f4fc1f9c63b21edbbf2b2e6965f264dcf1a648f99a2218011a774e5a99f3",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/GECCO_water_quality_test.receipt.json",
+      "sha256": "d68adbfe221473db2ee8af4f8545cb1bcea5f648cb16cec0b32cdcfe13592a48",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.receipt.json",
+      "sha256": "0ff40ba16dbdcca30beb359556f7b21011d549325930d4ec3e0d8b88a1002576",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test.receipt.json",
+      "sha256": "cf871441988a5dac78f7a53981d45bed39848f2953348070a1d567924627294a",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/Genesis_test.receipt.json",
+      "sha256": "8c68b958cd2f01c6593e57c81c0325524e03f99daff627940cb510e37d05efa7",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/GutenTAG_0_test.receipt.json",
+      "sha256": "00dbe8e8650fa010f443084acd6353977de74099fc2a128bc704b5af568de3b4",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/GutenTAG_10_test.receipt.json",
+      "sha256": "d01d2bab8b5f62149c9bc513dcf1ba58559aefc6b614b8f4b91918b29c8f4b84",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/PSM_test.receipt.json",
+      "sha256": "d843dfa547b07e9aea62240a03c107995e58a6a00182b163de6a8195f03005af",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/mTSBench-file-tree.json",
+      "sha256": "42df9286fde2465e381426fd2112ef68cfc46bfcef2b8763e2d32dd6490e26c0",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/manifest.json",
+      "sha256": "f8785501739190fda771c2c2e8a469e65b22812f10cb46d24ff3ffe57edfca47",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/metro_traffic-volume_test.receipt.json",
+      "sha256": "387b6694a78bc399642d65ee87bd6f38852656adf450013ddc5de3bc94848b8c",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/previous-selected-series.json",
+      "sha256": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/room-occupancy_1_test.receipt.json",
+      "sha256": "e0ae3ab690cb5543584ed96bc3530ddf27bf6c8d33550e674d6debc033816a1d",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/room-occupancy_test.receipt.json",
+      "sha256": "5f0842ce9ae6b2207b9ef93e0474a45514ef1972f9733bcacd92aa13d4486cd4",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/selection.json",
+      "sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/swan_sf_test.receipt.json",
+      "sha256": "f88ddbdb8d92f8cd976650e747008821ad05f6efa0409e39db1d19fcaf38b7d9",
+      "match": true
+    },
+    {
+      "path": "mac-reference-input-receipts/verification.json",
+      "sha256": "2b0668a0adc663ca415272d70a81e7ca3eec1c722d6407c8730a2acde69bdb87",
+      "match": true
+    },
+    {
+      "path": "reproduction-environment.json",
+      "sha256": "03b89ff1f10886c9c93c2aa3de3fd0f352570ffeecfc8b127fc445a9817f753d",
+      "match": true
+    },
+    {
+      "path": "scripts/benchmark_saturation.py",
+      "sha256": "902d9f83bfedb0063f0d21f82fa40f28f71a0bc6f4957392053fd034804f511e",
+      "match": true
+    },
+    {
+      "path": "scripts/fetch_saturation_external.py",
+      "sha256": "6c946f2c61ac0efaa42c881caee51a2526fa0236000e199636b61d3e67d63a6f",
+      "match": true
+    },
+    {
+      "path": "scripts/run_saturation_external_reproduction.py",
+      "sha256": "c1e3ce3135876a3669f712188bdf4d3e11eb84cc3c6a33d49ca03be6a0a5fdda",
+      "match": true
+    },
+    {
+      "path": "scripts/saturation-external-benchmark.yml",
+      "sha256": "07b050ea94b2d54c51b809985618cb3f44d584f609662ff6074719fea7870613",
+      "match": true
+    },
+    {
+      "path": "scripts/saturation_data_licenses_20261021.md",
+      "sha256": "5b6f0a08283e03b8d72d9553dbe22015d93ac4980cbca92f3d631791e31b33aa",
+      "match": true
+    },
+    {
+      "path": "selection-identity-comparison.json",
+      "sha256": "e5b51bf597a325ef53cdc0ac03aa386ba9b90895fe5b310df27919eaf2f5daea",
+      "match": true
+    }
+  ],
+  "terminal_not_in_inventory": true,
+  "terminal_sha256": "c6ebaadc7532054f42081edfb51ad88cbf1c0c42a2ece249efadc739bae43e49",
+  "terminal": {
+    "status": "COMPLETED",
+    "started_utc": "2026-10-21T04:54:50.708799+00:00",
+    "run_id": "39546569039",
+    "run_attempt": "1",
+    "stage": "completed",
+    "protocol_sha256": "cd61a475cf8dcd0400e4bf6658afaf6880edadab73f9fd14581f9102228630e3",
+    "arrays_uploaded": false,
+    "score_vectors_equal": 11,
+    "parity_pass": true,
+    "primary_decision": false,
+    "ended_utc": "2026-10-21T04:58:57.326204+00:00"
+  },
+  "protocol_source_inventories_equal": {
+    "Mac-development": true,
+    "Mac-external": true,
+    "Linux-external": true
+  },
+  "source_files_per_inventory": 16,
+  "current_frozen_source_matches": {
+    "src/sparse_vus/__init__.py": true,
+    "src/sparse_vus/certified.py": true,
+    "src/sparse_vus/compiled.py": true,
+    "src/sparse_vus/core.py": true,
+    "src/sparse_vus/dense_radix.py": true,
+    "src/sparse_vus/fast_racing.py": true,
+    "src/sparse_vus/pr_compiled.py": true,
+    "src/sparse_vus/racing.py": true,
+    "src/sparse_vus/radix.py": true,
+    "src/sparse_vus/saturation.py": true,
+    "src/sparse_vus/selection.py": true,
+    "experiments/benchmark_saturation.py": true,
+    "experiments/benchmark_advancement.py": true,
+    "experiments/advancement_data_gate.py": true,
+    "experiments/fast_vus_adapter.py": true,
+    ".cache/fast_vus/fast_vus.py": true
+  },
+  "source_commits": {
+    "Mac-development": "f6cc3905bcf8d689521c78e47d936a2fc457237a",
+    "Mac-external": "f6cc3905bcf8d689521c78e47d936a2fc457237a",
+    "Linux-external": "595fb3bce1f7fa94de07c79d992166227c2aae0d"
+  },
+  "raw_label_identity_status": "REQUIRED_IDENTITIES_MATCH",
+  "score_vectors_byte_equal": 11,
+  "score_vectors_compared": 48,
+  "scope": "Linux input regeneration; score bytes are not assumed identical to Mac. Artifact-file hashes are verified against downloaded inventory; terminal separately hashed."
+}

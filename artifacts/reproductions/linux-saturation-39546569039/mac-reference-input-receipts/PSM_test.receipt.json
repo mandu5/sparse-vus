@@ -1,0 +1,103 @@
+{
+  "series": "PSM_test",
+  "family": "PSM",
+  "canonical_family": "psm",
+  "completed_utc": "2026-10-21T04:34:37.900397+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/PSM/PSM_test.csv",
+  "raw_bytes": 33707365,
+  "raw_sha256": "4cac499f2eacf6a292eeb94cd5dfc49b9a0bbe02d71c89207e090bde6361ef25",
+  "raw_git_blob_verified": false,
+  "raw_lfs_verified": true,
+  "npz_path": "cache/saturation-external/arrays/PSM_test.npz",
+  "npz_bytes": 1810225,
+  "npz_sha256": "9e08ff23ebdccc68b03a18520b06ad64ac1c6c727adfbd33675272be10375ef5",
+  "n": 70273,
+  "preprocessing": {
+    "feature_columns": [
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "feature_10",
+      "feature_11",
+      "feature_12",
+      "feature_13",
+      "feature_14",
+      "feature_15",
+      "feature_16",
+      "feature_17",
+      "feature_18",
+      "feature_19",
+      "feature_20",
+      "feature_21",
+      "feature_22",
+      "feature_23",
+      "feature_24",
+      "feature_25",
+      "feature_26"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "feature_1": 0,
+      "feature_2": 0,
+      "feature_3": 0,
+      "feature_4": 0,
+      "feature_5": 0,
+      "feature_6": 0,
+      "feature_7": 0,
+      "feature_8": 0,
+      "feature_9": 0,
+      "feature_10": 0,
+      "feature_11": 0,
+      "feature_12": 0,
+      "feature_13": 0,
+      "feature_14": 0,
+      "feature_15": 0,
+      "feature_16": 0,
+      "feature_17": 0,
+      "feature_18": 0,
+      "feature_19": 0,
+      "feature_20": 0,
+      "feature_21": 0,
+      "feature_22": 0,
+      "feature_23": 0,
+      "feature_24": 0,
+      "feature_25": 0,
+      "feature_26": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 26
+  },
+  "actual_parameters": {
+    "pca_rank": 5,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "0e34c587a94990e0fa3d7d4481ea54541d0ef3e740768c3c864d9a8d274a9f76",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.28230349998921156,
+    "pca_reconstruction": 0.06736929199541919,
+    "knn_distance": 0.7481515420076903,
+    "robust_marginal_z": 0.0576241250091698
+  },
+  "array_sha256": {
+    "labels": "cceaa1078c098ebd27f30cb8418ee8e46682c3b2d32355a036e794830c9a0aa7",
+    "isolation_forest": "eaf0601b8275d8f196687aec38a04590a28ae74987c329a55a531eed110b99f6",
+    "pca_reconstruction": "69d7d28d4bdf45cd223645145cc0ecace85ee7b9834d3c184a8c232c2716b290",
+    "knn_distance": "af8bdd5ff8f3e4f9276cc16329b12ca9ff066b136bc3272269338cebf45115ba",
+    "robust_marginal_z": "f00242c52923fe63ca6551d27b1406f536b5b6d574306f3b9638dcae84bad708"
+  },
+  "selection_sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+  "metric_outcomes_computed": false
+}

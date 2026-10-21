@@ -1,5 +1,42 @@
 # Sparse VUS
 
+## Active-prefix research branch (21 October 2026)
+
+This branch adds an evaluator whose complete-call bound is
+`O(n + L + alpha(K) * sum(J_w))`, where `J_w` counts the visited active
+positions through a complete terminating score tie. For one original anomaly
+interval and distinct support scores it takes `O(n + L*P0)` time for any
+score ordering. A singleton with `L <= n` has optimal `Theta(n)` worst-case
+time under the stated deterministic score-query and fixed-binary64 model.
+
+[Focused manuscript (PDF)](paper/active_prefix.pdf) ·
+[Reproduce and inspect the evidence](docs/active_prefix_reproduction_20261021.md) ·
+[Mathematical review](docs/saturation_math_review_20261021.md)
+
+The three frozen main studies retain **all 666 cases**. Their width-30
+primary runtime criterion **fails on each run**. At the prespecified width-300
+stress condition, the external median speedups over released sparse radix
+are **1.506× on Mac and 1.627× on Linux**, with all 48 cases faster per host.
+Other matched controls still win some cases. The 16-case structural study
+checks the predicted linear/quadratic traversal separation and the all-tied
+counterexample. The paper reports the complete comparisons and limitations.
+
+```python
+# Install this research branch with .[accelerate], rather than the older tag.
+from sparse_vus.saturation import sparse_pr_saturation_jit, sparse_vus_saturation_jit
+
+labels = [0, 1, 0, 0, 1, 0]
+scores = [1, 2, 3, 4, 5, 6]
+pr = sparse_pr_saturation_jit(labels, scores, max_buffer=4)
+roc, pr = sparse_vus_saturation_jit(labels, scores, max_buffer=4)
+```
+
+The manuscript is a research artifact; publication and editorial status are
+tracked separately from test, numerical-parity and timing results. The
+previous v0.3.0 release and its distinct experiments remain documented below.
+
+## Released support-event evaluator
+
 Exact scalar VUS-ROC and VUS-PR through support-event elimination. The new
 radix evaluator combines this reduction with established fixed-width score
 ordering and linear interval geometry. For finite binary64 scores it takes

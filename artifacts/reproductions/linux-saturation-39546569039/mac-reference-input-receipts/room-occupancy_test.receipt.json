@@ -1,0 +1,61 @@
+{
+  "series": "room-occupancy_test",
+  "family": "room-occupancy",
+  "canonical_family": "occupancy",
+  "completed_utc": "2026-10-21T04:34:40.934859+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/room-occupancy/room-occupancy_test.csv",
+  "raw_bytes": 432656,
+  "raw_sha256": "0a48b2c532241e33e00bf7662300b8a821fdd43905ef5c8e72fdc518effbc94b",
+  "raw_git_blob_verified": true,
+  "raw_lfs_verified": false,
+  "npz_path": "cache/saturation-external/arrays/room-occupancy_test.npz",
+  "npz_bytes": 151757,
+  "npz_sha256": "690b7fd26b0898251ca9668da773044afca62a0c984a96f3021ca40c4963f257",
+  "n": 6515,
+  "preprocessing": {
+    "feature_columns": [
+      "Temperature",
+      "Humidity",
+      "Light",
+      "CO2",
+      "HumidityRatio"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "Temperature": 0,
+      "Humidity": 0,
+      "Light": 0,
+      "CO2": 0,
+      "HumidityRatio": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 5
+  },
+  "actual_parameters": {
+    "pca_rank": 4,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "6165274da48bc025cf8287a759a97a9783265a9eff73a4fa3a962cc44cacf320",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.11084429197944701,
+    "pca_reconstruction": 0.0012546250072773546,
+    "knn_distance": 0.05631658300990239,
+    "robust_marginal_z": 0.0008562910079490393
+  },
+  "array_sha256": {
+    "labels": "bd0c523394476667c43038cb739b1a096db2eed9875b1ca9e72c752dcb9af975",
+    "isolation_forest": "8db0d64003a8848f67cb6be54923b974e1b362b7563ad6222f684bfc7a9c851a",
+    "pca_reconstruction": "bba4ddf5d48ff2a84144256371cd430da70d29ce1cc1666db921f428a850521f",
+    "knn_distance": "34d9f0d0bf375011bbf1052d7b5386be9ddbde4fc670fa344671d700f26624ec",
+    "robust_marginal_z": "c49da8a3e75d703b7981c982fd22f45d744a906d4e4cefd392a514451fbdf39a"
+  },
+  "selection_sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+  "metric_outcomes_computed": false
+}

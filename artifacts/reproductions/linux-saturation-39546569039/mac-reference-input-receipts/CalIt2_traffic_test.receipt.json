@@ -1,0 +1,55 @@
+{
+  "series": "CalIt2_traffic_test",
+  "family": "CalIt2",
+  "canonical_family": "calit2",
+  "completed_utc": "2026-10-21T04:34:07.934049+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/CalIt2/CalIt2_traffic_test.csv",
+  "raw_bytes": 106245,
+  "raw_sha256": "5a625b8c7a6b6629f09ddca3161358b67f5331329fc86674d724ba8b9127c1ca",
+  "raw_git_blob_verified": true,
+  "raw_lfs_verified": false,
+  "npz_path": "cache/saturation-external/arrays/CalIt2_traffic_test.npz",
+  "npz_bytes": 24391,
+  "npz_sha256": "889cd5efb58b4323c550135d116272d427bbe696893b4d8c31433ef2cc398860",
+  "n": 4032,
+  "preprocessing": {
+    "feature_columns": [
+      "in_count",
+      "out_count"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "in_count": 0,
+      "out_count": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 2
+  },
+  "actual_parameters": {
+    "pca_rank": 1,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "d4240281fcc22fb06df17caa543d05ce3055d338ce4988951b4acf207b205180",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.08651758299674839,
+    "pca_reconstruction": 0.002129250002326444,
+    "knn_distance": 0.02858233399456367,
+    "robust_marginal_z": 0.0003825410094577819
+  },
+  "array_sha256": {
+    "labels": "1cb4448e42c8f6982f594312769e0632382a0a7ef0e58f3c026292e8710414bb",
+    "isolation_forest": "0199197582cd75133c0a16aebdd86a34f7e58075d940165b92a6284b684739bd",
+    "pca_reconstruction": "bfc84fb08767be72b9f693bbe3dac78b9ba1b07c2b8b9f3a5cd45b9d7dede96e",
+    "knn_distance": "538c5d5f6587472682eb1e025e97314da641afde75c49910da2b045aab818ea2",
+    "robust_marginal_z": "8911077701b17f9bf40b35fb0e7276990816a8aa82e9e3c9db7dcf0e1babf73b"
+  },
+  "selection_sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+  "metric_outcomes_computed": false
+}

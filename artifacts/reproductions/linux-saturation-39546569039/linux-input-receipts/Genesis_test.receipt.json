@@ -1,0 +1,87 @@
+{
+  "series": "Genesis_test",
+  "family": "Genesis",
+  "canonical_family": "genesis",
+  "completed_utc": "2026-10-21T04:55:01.876989+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/Genesis/Genesis_test.csv",
+  "raw_bytes": 743751,
+  "raw_sha256": "15c241d24776b14cae63ce477aa145e93f96ce67f287959981b0461467dd7bb2",
+  "raw_git_blob_verified": true,
+  "raw_lfs_verified": false,
+  "npz_path": "cache/saturation-external/arrays/Genesis_test.npz",
+  "npz_bytes": 150074,
+  "npz_sha256": "1ed9b606eda701a76e511e82eb0feb5baa9eecfe1737798d3419fb17055f67d5",
+  "n": 9332,
+  "preprocessing": {
+    "feature_columns": [
+      "MotorData.ActCurrent",
+      "MotorData.ActPosition",
+      "MotorData.ActSpeed",
+      "MotorData.IsAcceleration",
+      "MotorData.IsForce",
+      "MotorData.Motor_Pos1reached",
+      "MotorData.Motor_Pos2reached",
+      "MotorData.Motor_Pos3reached",
+      "MotorData.Motor_Pos4reached",
+      "NVL_Recv_Ind.GL_Metall",
+      "NVL_Recv_Ind.GL_NonMetall",
+      "NVL_Recv_Storage.GL_I_ProcessStarted",
+      "NVL_Recv_Storage.GL_I_Slider_IN",
+      "NVL_Recv_Storage.GL_I_Slider_OUT",
+      "NVL_Recv_Storage.GL_LightBarrier",
+      "NVL_Send_Storage.ActivateStorage",
+      "PLC_PRG.Gripper",
+      "PLC_PRG.MaterialIsMetal"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "MotorData.ActCurrent": 0,
+      "MotorData.ActPosition": 0,
+      "MotorData.ActSpeed": 0,
+      "MotorData.IsAcceleration": 0,
+      "MotorData.IsForce": 0,
+      "MotorData.Motor_Pos1reached": 0,
+      "MotorData.Motor_Pos2reached": 0,
+      "MotorData.Motor_Pos3reached": 0,
+      "MotorData.Motor_Pos4reached": 0,
+      "NVL_Recv_Ind.GL_Metall": 0,
+      "NVL_Recv_Ind.GL_NonMetall": 0,
+      "NVL_Recv_Storage.GL_I_ProcessStarted": 0,
+      "NVL_Recv_Storage.GL_I_Slider_IN": 0,
+      "NVL_Recv_Storage.GL_I_Slider_OUT": 0,
+      "NVL_Recv_Storage.GL_LightBarrier": 0,
+      "NVL_Send_Storage.ActivateStorage": 0,
+      "PLC_PRG.Gripper": 0,
+      "PLC_PRG.MaterialIsMetal": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 18
+  },
+  "actual_parameters": {
+    "pca_rank": 5,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "5c7858409413747720fc58ad2a2659cee76f777b97276fe74294abf4453be00d",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.1510477500000036,
+    "pca_reconstruction": 0.005470059000003857,
+    "knn_distance": 0.10613595399999554,
+    "robust_marginal_z": 0.003143295999990414
+  },
+  "array_sha256": {
+    "labels": "0a7700fa551d91d3ab49d0d301183994bb4318a5ae1600c9d25a6728d145c454",
+    "isolation_forest": "79303e21e0aaff68f6733d7d55c566a351b95a4ff9be48b5f79b2c01425f7629",
+    "pca_reconstruction": "55d4a0cbeeadc38517cbe10ef18f74284c57af7833d6225096db78667ff26251",
+    "knn_distance": "a26cca181f903ac3985200d672858bf968a77ecfca2904f336e26e2aaa48019c",
+    "robust_marginal_z": "62a1230e29a0ee216a7a7b727c0fa295db2c3a933eacf24f997ef062b7780249"
+  },
+  "selection_sha256": "30b8fe5a94b7e60cffbcb04e06917108244963282fd06835622d718d48bd5003",
+  "metric_outcomes_computed": false
+}

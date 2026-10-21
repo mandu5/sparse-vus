@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-21T04:55:10.879034+00:00",
+  "phase": "external",
+  "cases": 144,
+  "series": 12,
+  "families": [
+    "CalIt2",
+    "GECCO",
+    "GHL",
+    "Genesis",
+    "GutenTAG",
+    "PSM",
+    "metro",
+    "room-occupancy",
+    "swan"
+  ],
+  "models": [
+    "isolation_forest",
+    "pca_reconstruction",
+    "knn_distance",
+    "robust_marginal_z"
+  ],
+  "widths": [
+    30,
+    100,
+    300
+  ],
+  "primary_width": 30,
+  "repetitions": 3,
+  "seed": 2026102113,
+  "method_ids": [
+    "saturation",
+    "active_full",
+    "last_positive",
+    "radix",
+    "dense_radix",
+    "klein",
+    "sparse_comparison",
+    "dense_direct",
+    "dense_direct_radix"
+  ],
+  "parity_atol": 1e-11,
+  "inputs_sha256": "cb0a7d215101610e8034e4f7a69dd7e57a075117a12f4cb0f39e8bf35016b4f9",
+  "source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "experiments/benchmark_saturation.py": "902d9f83bfedb0063f0d21f82fa40f28f71a0bc6f4957392053fd034804f511e",
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "experiments/advancement_data_gate.py": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "external_input_bindings": {
+    "artifacts/saturation/external-inputs/manifest.json": "ce29e116377f732548e541ee476fffc62b54170f23b21aa2de81c93cf2a953ea",
+    "artifacts/saturation/external-inputs/selection.json": "30b8fe5a94b7e60cffbcb04e06917108244963282fd06835622d718d48bd5003",
+    "experiments/fetch_saturation_external.py": "6c946f2c61ac0efaa42c881caee51a2526fa0236000e199636b61d3e67d63a6f"
+  },
+  "source_commit": "595fb3bce1f7fa94de07c79d992166227c2aae0d",
+  "timing": "Complete scalar PR public calls, including validation and preparation. Three seeded randomized serial repeats per case. One compute thread, warmed JIT. Input I/O and diagnostic profiling outside timing.",
+  "ablation": "active_full disables saturation; last_positive stops after all original positives; both retain identical activation/DSU preparation. Radix and nearest dense radix are unchanged v0.3 code. Klein is actual pinned PR-only implementation with all n thresholds.",
+  "decision": "Parity on every case; at L=30 geometric and aggregate ratio lower95% family-cluster bootstrap bounds above1 against every eight comparator methods. This is a scoped empirical criterion, not a global firstness or acceptance determination.",
+  "bootstrap": {
+    "unit": "family",
+    "repetitions": 2000,
+    "seed": 2026102114,
+    "confidence": 0.95
+  },
+  "history": "Metadata-only selection of12series from9source families absent from the previous23family corpus. Four newly generated CPU score vectors per series; no detector-quality claim. Labels/scores prepared before any new metric outcome; source-family novelty is not proof of independent real-world domains.",
+  "uncertainty": "Family-cluster intervals describe observed family/case variation, not timing-repeat or machine-population uncertainty. Individual ratios pair medians within this run."
+}

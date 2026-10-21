@@ -32,6 +32,24 @@ jobs:
       - run: python experiments/fast_vus_adapter.py --fetch
       - run: python experiments/benchopt_vus_adapter.py --fetch
       - run: python -m pytest -q
+      - name: Reconstruct frozen active-prefix evidence without input caches
+        if: matrix.python == '3.12'
+        run: |
+          python experiments/summarize_saturation_evidence.py \
+            --study Mac-development=artifacts/saturation/mac-development \
+            --study Mac-external=artifacts/saturation/mac-external \
+            --study Linux-external=artifacts/reproductions/linux-saturation-39546569039/benchmark \
+            --output "$RUNNER_TEMP/active-prefix-evidence"
+          python experiments/benchmark_saturation_structural.py report artifacts/saturation/mac-structural
+          python experiments/audit_saturation_supplement.py \
+            --output "$RUNNER_TEMP/active-prefix-evidence/supplement.json"
+      - name: Upload reconstructed active-prefix evidence
+        if: matrix.python == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-active-prefix-evidence
+          path: ${{ runner.temp }}/active-prefix-evidence/*
+          if-no-files-found: error
       - name: Verify the real v2 report against its preserved source snapshot
         if: matrix.python == '3.12'
         run: |
@@ -95,7 +113,7 @@ jobs:
           release_wheels=(dist/*.whl)
           test "${#release_wheels[@]}" -eq 1
           /tmp/sparse-vus-accelerated-wheel-check/bin/python -m pip install "${release_wheels[0]}[accelerate]"
-      - name: Verify installed radix APIs and source-byte identity
+      - name: Verify installed radix and active-prefix APIs and source-byte identity
         run: /tmp/sparse-vus-accelerated-wheel-check/bin/python experiments/check_installed_accelerated_package.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

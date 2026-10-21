@@ -1,0 +1,42 @@
+{
+  "retrieved_utc": "2026-10-21T05:02:41.570410+00:00",
+  "run": {
+    "attempt": 1,
+    "conclusion": "success",
+    "createdAt": "2026-10-21T04:54:14Z",
+    "databaseId": 39546569039,
+    "event": "push",
+    "headSha": "595fb3bce1f7fa94de07c79d992166227c2aae0d",
+    "status": "completed",
+    "updatedAt": "2026-10-21T04:59:01Z",
+    "url": "https://github.com/mandu5/sparse-vus/actions/runs/39546569039"
+  },
+  "artifacts_api": "https://api.github.com/repos/mandu5/sparse-vus/actions/runs/39546569039/artifacts",
+  "artifacts": {
+    "total_count": 1,
+    "artifacts": [
+      {
+        "id": 12322335771,
+        "node_id": "MDg6QXJ0aWZhY3QxMjMyMjMzNTc3MQ==",
+        "name": "linux-saturation-39546569039-attempt-1",
+        "size_in_bytes": 288886,
+        "url": "https://api.github.com/repos/mandu5/sparse-vus/actions/artifacts/12322335771",
+        "archive_download_url": "https://api.github.com/repos/mandu5/sparse-vus/actions/artifacts/12322335771/zip",
+        "expired": false,
+        "digest": "sha256:e390a364ba89e3dbf27bdce3013f4c48233669cfd1fac1d2da62ea3ebc9e0482",
+        "created_at": "2026-10-21T04:58:58Z",
+        "updated_at": "2026-10-21T04:58:58Z",
+        "expires_at": "2027-01-19T04:54:14Z",
+        "workflow_run": {
+          "id": 39546569039,
+          "repository_id": 1425799575,
+          "head_repository_id": 1425799575,
+          "head_branch": "research/saturation-20261021",
+          "head_sha": "595fb3bce1f7fa94de07c79d992166227c2aae0d"
+        }
+      }
+    ]
+  },
+  "local_extracted_artifact": "artifacts/reproductions/linux-saturation-39546569039",
+  "verification": "All listed extracted files verified; platform archive digest recorded from GitHub API, not independently verified against the ZIP bytes."
+}

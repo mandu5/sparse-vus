@@ -1,0 +1,110 @@
+\subsection{Numerical agreement and primary decision}
+All 666 cases across the three main runs meet the frozen $10^{-11}$ PR
+tolerance. Maximum absolute discrepancy is $1.34\times10^{-15}$ on Mac
+development and $3.67\times10^{-15}$ on each external run, rounded upward.
+An additional independently written dense oracle constructs ramps, expanded
+components, complete global thresholds and both integrals without calling
+the production geometry or integration helpers. Its 8,606 cases include
+small exhaustive binary labels and tied scores, all widths through $2n+1$,
+and noncontiguous inputs. Across 51,636 public calls, maximum discrepancy is
+$3.34\times10^{-16}$ for the paired output and $2.23\times10^{-16}$ for
+PR-only output, rounded upward. This is numerical evidence, not a proof of
+correct rounding for arbitrary floating-point inputs.
+
+\textbf{The predeclared primary runtime criterion fails in all three runs.}
+At $L=30$, median ratios against released sparse radix are 1.016 on Mac
+development, 1.026 on Mac external and 1.013 on Linux external, with
+52/126, 19/48 and 21/48 candidate losses. The family-bootstrap criterion
+does not hold against every matched control. A faster reference library
+comparison cannot override these outcomes. Table~\ref{tab:saturation-all-controls}
+retains all eight controls, all widths and the number of losses.
+\input{active_prefix_results_table.tex}
+
+\subsection{Secondary widths and practical overhead}
+At $L=300$, median ratios against released sparse radix are 1.660 on
+development, 1.506 on Mac external and 1.627 on Linux external. The candidate
+wins 125/126, 48/48 and 48/48 corresponding comparisons. The external
+family-bootstrap intervals are [1.417, 2.634] and [1.527, 2.982] for the
+geometric ratios, and [1.392, 2.472] and [1.554, 2.993] for aggregate ratios.
+These are the prespecified secondary/stress widths; they do not replace
+the failed primary test. Absolute sums of per-case median times at $L=300$
+are 0.584 versus 0.914 seconds on Mac external and 0.738 versus 1.388 seconds
+on Linux external for candidate versus released radix. These sums describe
+48 separately timed calls and are not a measured end-to-end application.
+
+To avoid selecting a weak comparator, we also report a post-measurement
+oracle that chooses the fastest of the eight controls separately per case.
+It is not a deployable selector. At $L=30$ its median ratios are below one
+in all three runs. At $L=300$ they are 1.136, 1.113 and 1.142, with
+24/126, 9/48 and 10/48 candidate losses. In particular, beating released
+radix in every external stress case does not mean beating every measured
+control. Figure~\ref{fig:saturation-cdf} shows the entire ratio distributions.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/saturation-cdf.pdf}
+\caption{Whole-call speed ratios against the fastest measured control for
+every case. The dashed line is equal runtime; values below one favor the
+control. Each panel retains all three widths and reports the count of slower
+candidate cases. Runs are summarized separately rather than pooled.}
+\Description{Three cumulative-distribution panels for Mac development,
+Mac external and Linux external, showing every width and slower-case count.}
+\label{fig:saturation-cdf}
+\end{figure*}
+
+The work profiles explain a mechanism without equating work reduction with
+speed. At $L=300$, aggregate saturation visits are 72.1\%, 57.5\% and
+57.5\% of full-active visits, and 73.8\%, 58.3\% and 58.3\% of
+last-positive visits, respectively. Median runtime ratios against the
+last-positive control are 1.198, 1.136 and 1.152. Preparation, pointer
+access and component bookkeeping still cost time; some cases with fewer
+visits remain slower. Figure~\ref{fig:saturation-work} compares work and time
+against the matched full-active control for every case; it is a descriptive
+association, not an estimate of the causal cost of one visit. Seven development
+series and four external series have one original interval. The theorem also
+requires distinct support scores; interval count alone does not establish
+its applicability.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/saturation-work.pdf}
+\caption{Traversal reduction versus full-call runtime. Horizontal position
+is full-active visits divided by saturation visits; vertical position is
+full-active time divided by saturation time. A work saving need
+not cross the horizontal equal-runtime line. Every measured case is retained.}
+\Description{Three scatter panels relate traversal reduction to complete-call
+speed ratio for all cases and widths on the three study runs.}
+\label{fig:saturation-work}
+\end{figure*}
+
+\subsection{Linux regeneration and additional external implementations}
+The frozen Linux workflow regenerated the external inputs from pinned raw
+sources, then ran the same protocol with the same source hashes. Raw data
+and labels match Mac hashes. Eleven of 48 score arrays match byte for byte;
+37 differ after platform-dependent scoring. This is a reproduction of the
+specified input-generation procedure and evaluator experiment, not an
+identical-array replay or an independent laboratory study. All 53 downloaded
+artifact-file hashes were checked against the workflow manifest.
+
+A separately frozen descriptive supplement compares the paired ROC--PR
+public call against actual pinned Benchopt and DTAI implementations, with
+exhaustive thresholds~\cite{benchopt2026,dtaianomaly}. It uses the 48 external
+score vectors at $L=30$, three warmed complete-call repetitions, and the
+released paired radix evaluator as a control. The native DTAI code retains
+its parallel/fast-math compilation but runs with one compute thread.
+Benchopt completes all 48 cases: its median ratio is $34.918\times$ and
+the minimum is $20.079\times$. The paired radix median is only $1.017\times$,
+with 19/48 candidate losses. Thus the large external-library ratio cannot
+be attributed to saturation alone.
+
+DTAI is prescribed for the Isolation Forest vector of each of the 12
+series. Ten complete all repetitions; PSM and swan hit the 30-second parent
+watchdog on their first timed call, and subsequent repetitions are skipped.
+The two cases receive no fabricated evaluator duration or speed ratio.
+The completed subset has median ratio $101.106\times$; censoring prevents
+interpreting it as the median over all 12 prescribed cases. All completed
+paired outputs agree within $8.22\times10^{-15}$. This supplement neither
+changes the main experiment's task nor its primary decision.
+
+\subsection{Structural mechanism checks}
+\input{active_prefix_structural_results.tex}

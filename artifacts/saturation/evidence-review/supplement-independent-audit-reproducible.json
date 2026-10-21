@@ -1,0 +1,1079 @@
+{
+  "schema_version": 1,
+  "status": "PASS_RECORDED_SUPPLEMENT",
+  "checked_utc": "2026-10-21T05:25:18.917792+00:00",
+  "auditor_sha256": "2a524c3c73b1a459ed5c6c4bd0746ec6d076ab32efacae25be507aa5326b8f43",
+  "study_directory": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/saturation/mac-external-baselines",
+  "primary_directory": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/saturation/mac-external",
+  "protocol_sha256": "8e9bf4a9e1d938f9b4467e46050ff5820ab04083d5cc8011cf770eb5083ae5ad",
+  "receipt_sha256": {
+    "protocol.json": "8e9bf4a9e1d938f9b4467e46050ff5820ab04083d5cc8011cf770eb5083ae5ad",
+    "inputs.json": "c16365b74e08fb5e1fd55ed797d48639a3a751edc3f6c61b21ded8096e9bdd9b",
+    "run-start.json": "514b13ec97fb27a2c59aa76245d322e2159afaa0032ebb88fcd731ade902be0b",
+    "terminal.json": "9a2d1aa09ae67f3479d3b2aa630e75b3e6f3fafa49987825659eda014313b94f",
+    "measurements.jsonl": "d83e4ecc8df6d64e993606a59bd48799751e61fd594b665b4cffe26bd348ebe8",
+    "workers.jsonl": "d46fa799c1f79026ffdd4e8a57828e73abec0a114df4a935d1fb3d76a110db41",
+    "report.json": "8684c5f3d41fb3f5d18b80d22a060467eedf30fc408912b8f38084b00810e1c3"
+  },
+  "primary_receipt_sha256": {
+    "protocol.json": "973656ba4ca05748a6f55fc6c179ae93e2ebddc93bfbc98add75cbd5cf9ac2f5",
+    "inputs.json": "827c6db2c47e1e7fcd2e5ae74f10bd3030be8ada54d4460e4aea3af95660a7ae",
+    "completion.json": "bd8f8c7311551edd65a3fe311a6679257a66f9a0e8f24cfda8a5dc028134fbc9",
+    "report.json": "599ab7dc59f3e2fc1a57313740e6f01bcde088f05025f83d5200c163274b1fbf",
+    "measurements.jsonl": "c0fe72ba539d8d2d04426178235c36ffa5bf34ec2dae8a148153d6f95959a7bf"
+  },
+  "recorded_source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "experiments/benchmark_saturation_external_baselines.py": "9285d70fd9cc66d1b621f9e0457e0e78cb7444da4087e8399f56cff860a6eaf8",
+    "docs/saturation_external_baseline_protocol_20261021.md": "eb76065ccbc1823815b62ba5605f643b20ad39096745d8810830083804307b89",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    "experiments/dtaianomaly_adapter.py": "7b53d095aa505567d11a9db33068977dd26697b799c1dc2ee28e2a9d14024a64",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+    ".cache/dtaianomaly/_volume_under_surface_metrics.py": "728045cd8ddf0caa6aab10a9ab66f5f876ee77e5d0ae80dfbce5029eab9ed5b7"
+  },
+  "shared_primary_source_names": [
+    "src/sparse_vus/__init__.py",
+    "src/sparse_vus/certified.py",
+    "src/sparse_vus/compiled.py",
+    "src/sparse_vus/core.py",
+    "src/sparse_vus/dense_radix.py",
+    "src/sparse_vus/fast_racing.py",
+    "src/sparse_vus/pr_compiled.py",
+    "src/sparse_vus/racing.py",
+    "src/sparse_vus/radix.py",
+    "src/sparse_vus/saturation.py",
+    "src/sparse_vus/selection.py"
+  ],
+  "cases": 48,
+  "series": 12,
+  "families": 9,
+  "comparisons": {
+    "radix_pair": {
+      "pairs": [
+        {
+          "case_id": "CalIt2_traffic_test|isolation_forest|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.00060425,
+          "reference_seconds": 0.000605916,
+          "ratio_reference_over_candidate": 1.002757136946628
+        },
+        {
+          "case_id": "CalIt2_traffic_test|knn_distance|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.000498583,
+          "reference_seconds": 0.000587,
+          "ratio_reference_over_candidate": 1.1773365718446074
+        },
+        {
+          "case_id": "CalIt2_traffic_test|pca_reconstruction|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.00053975,
+          "reference_seconds": 0.000560584,
+          "ratio_reference_over_candidate": 1.0385993515516445
+        },
+        {
+          "case_id": "CalIt2_traffic_test|robust_marginal_z|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.000505125,
+          "reference_seconds": 0.000557125,
+          "ratio_reference_over_candidate": 1.102944815639693
+        },
+        {
+          "case_id": "GECCO_water_quality_test|isolation_forest|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.004135708,
+          "reference_seconds": 0.004380833,
+          "ratio_reference_over_candidate": 1.0592703836924657
+        },
+        {
+          "case_id": "GECCO_water_quality_test|knn_distance|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.003762625,
+          "reference_seconds": 0.004059833,
+          "ratio_reference_over_candidate": 1.0789895352313876
+        },
+        {
+          "case_id": "GECCO_water_quality_test|pca_reconstruction|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.00391075,
+          "reference_seconds": 0.004128208,
+          "ratio_reference_over_candidate": 1.0556051908201751
+        },
+        {
+          "case_id": "GECCO_water_quality_test|robust_marginal_z|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.005064542,
+          "reference_seconds": 0.005012125,
+          "ratio_reference_over_candidate": 0.9896501993664976
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004702375,
+          "reference_seconds": 0.004594667,
+          "ratio_reference_over_candidate": 0.9770949786012388
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|30",
+          "family": "GHL",
+          "candidate_seconds": 0.00325675,
+          "reference_seconds": 0.003148,
+          "ratio_reference_over_candidate": 0.9666078145390343
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|30",
+          "family": "GHL",
+          "candidate_seconds": 0.003168917,
+          "reference_seconds": 0.003031708,
+          "ratio_reference_over_candidate": 0.9567016113075856
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004434125,
+          "reference_seconds": 0.004395125,
+          "ratio_reference_over_candidate": 0.9912045781298452
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004689042,
+          "reference_seconds": 0.004655208,
+          "ratio_reference_over_candidate": 0.9927844536261352
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|30",
+          "family": "GHL",
+          "candidate_seconds": 0.003163208,
+          "reference_seconds": 0.003107208,
+          "ratio_reference_over_candidate": 0.9822964534738153
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|30",
+          "family": "GHL",
+          "candidate_seconds": 0.003133833,
+          "reference_seconds": 0.003081125,
+          "ratio_reference_over_candidate": 0.9831809799692581
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004460375,
+          "reference_seconds": 0.0044045,
+          "ratio_reference_over_candidate": 0.9874730263711012
+        },
+        {
+          "case_id": "Genesis_test|isolation_forest|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.00073225,
+          "reference_seconds": 0.000738167,
+          "ratio_reference_over_candidate": 1.0080805735745988
+        },
+        {
+          "case_id": "Genesis_test|knn_distance|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.000601916,
+          "reference_seconds": 0.000590541,
+          "ratio_reference_over_candidate": 0.9811020142345444
+        },
+        {
+          "case_id": "Genesis_test|pca_reconstruction|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.000607792,
+          "reference_seconds": 0.000620333,
+          "ratio_reference_over_candidate": 1.0206337036354542
+        },
+        {
+          "case_id": "Genesis_test|robust_marginal_z|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.000726917,
+          "reference_seconds": 0.000721125,
+          "ratio_reference_over_candidate": 0.9920321027022342
+        },
+        {
+          "case_id": "GutenTAG_0_test|isolation_forest|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.0006525,
+          "reference_seconds": 0.000639167,
+          "ratio_reference_over_candidate": 0.9795662835249042
+        },
+        {
+          "case_id": "GutenTAG_0_test|knn_distance|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000550583,
+          "reference_seconds": 0.000589833,
+          "ratio_reference_over_candidate": 1.0712880710083674
+        },
+        {
+          "case_id": "GutenTAG_0_test|pca_reconstruction|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.00056225,
+          "reference_seconds": 0.000574458,
+          "ratio_reference_over_candidate": 1.021712761227212
+        },
+        {
+          "case_id": "GutenTAG_0_test|robust_marginal_z|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000623584,
+          "reference_seconds": 0.000604708,
+          "ratio_reference_over_candidate": 0.9697298198799199
+        },
+        {
+          "case_id": "GutenTAG_10_test|isolation_forest|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000606083,
+          "reference_seconds": 0.000604333,
+          "ratio_reference_over_candidate": 0.9971126066891828
+        },
+        {
+          "case_id": "GutenTAG_10_test|knn_distance|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000628958,
+          "reference_seconds": 0.000592542,
+          "ratio_reference_over_candidate": 0.9421010623920835
+        },
+        {
+          "case_id": "GutenTAG_10_test|pca_reconstruction|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000561417,
+          "reference_seconds": 0.0005115,
+          "ratio_reference_over_candidate": 0.9110874804289859
+        },
+        {
+          "case_id": "GutenTAG_10_test|robust_marginal_z|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000632,
+          "reference_seconds": 0.000594542,
+          "ratio_reference_over_candidate": 0.9407310126582279
+        },
+        {
+          "case_id": "PSM_test|isolation_forest|30",
+          "family": "PSM",
+          "candidate_seconds": 0.008331958,
+          "reference_seconds": 0.009680417,
+          "ratio_reference_over_candidate": 1.1618417903690825
+        },
+        {
+          "case_id": "PSM_test|knn_distance|30",
+          "family": "PSM",
+          "candidate_seconds": 0.008305625,
+          "reference_seconds": 0.009410625,
+          "ratio_reference_over_candidate": 1.133042365866506
+        },
+        {
+          "case_id": "PSM_test|pca_reconstruction|30",
+          "family": "PSM",
+          "candidate_seconds": 0.008345333,
+          "reference_seconds": 0.010248209,
+          "ratio_reference_over_candidate": 1.228016784950343
+        },
+        {
+          "case_id": "PSM_test|robust_marginal_z|30",
+          "family": "PSM",
+          "candidate_seconds": 0.007293042,
+          "reference_seconds": 0.008051333,
+          "ratio_reference_over_candidate": 1.1039745828969587
+        },
+        {
+          "case_id": "metro_traffic-volume_test|isolation_forest|30",
+          "family": "metro",
+          "candidate_seconds": 0.001352292,
+          "reference_seconds": 0.001515333,
+          "ratio_reference_over_candidate": 1.120566416129061
+        },
+        {
+          "case_id": "metro_traffic-volume_test|knn_distance|30",
+          "family": "metro",
+          "candidate_seconds": 0.001303791,
+          "reference_seconds": 0.001436584,
+          "ratio_reference_over_candidate": 1.101851447049412
+        },
+        {
+          "case_id": "metro_traffic-volume_test|pca_reconstruction|30",
+          "family": "metro",
+          "candidate_seconds": 0.001594625,
+          "reference_seconds": 0.001683958,
+          "ratio_reference_over_candidate": 1.056021321627342
+        },
+        {
+          "case_id": "metro_traffic-volume_test|robust_marginal_z|30",
+          "family": "metro",
+          "candidate_seconds": 0.001647334,
+          "reference_seconds": 0.001667792,
+          "ratio_reference_over_candidate": 1.0124188537357937
+        },
+        {
+          "case_id": "room-occupancy_1_test|isolation_forest|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000950292,
+          "reference_seconds": 0.000961,
+          "ratio_reference_over_candidate": 1.0112681154845038
+        },
+        {
+          "case_id": "room-occupancy_1_test|knn_distance|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.001006,
+          "reference_seconds": 0.00109175,
+          "ratio_reference_over_candidate": 1.0852385685884693
+        },
+        {
+          "case_id": "room-occupancy_1_test|pca_reconstruction|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000915875,
+          "reference_seconds": 0.001046542,
+          "ratio_reference_over_candidate": 1.142669032346117
+        },
+        {
+          "case_id": "room-occupancy_1_test|robust_marginal_z|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.00092175,
+          "reference_seconds": 0.000980083,
+          "ratio_reference_over_candidate": 1.0632850556007594
+        },
+        {
+          "case_id": "room-occupancy_test|isolation_forest|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000801917,
+          "reference_seconds": 0.000807167,
+          "ratio_reference_over_candidate": 1.0065468122012629
+        },
+        {
+          "case_id": "room-occupancy_test|knn_distance|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000711708,
+          "reference_seconds": 0.00080825,
+          "ratio_reference_over_candidate": 1.1356483276849494
+        },
+        {
+          "case_id": "room-occupancy_test|pca_reconstruction|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000752542,
+          "reference_seconds": 0.00074125,
+          "ratio_reference_over_candidate": 0.9849948574298844
+        },
+        {
+          "case_id": "room-occupancy_test|robust_marginal_z|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000751834,
+          "reference_seconds": 0.000818417,
+          "ratio_reference_over_candidate": 1.088560772723766
+        },
+        {
+          "case_id": "swan_sf_test|isolation_forest|30",
+          "family": "swan",
+          "candidate_seconds": 0.019031625,
+          "reference_seconds": 0.020189625,
+          "ratio_reference_over_candidate": 1.0608460917026266
+        },
+        {
+          "case_id": "swan_sf_test|knn_distance|30",
+          "family": "swan",
+          "candidate_seconds": 0.020209667,
+          "reference_seconds": 0.020643375,
+          "ratio_reference_over_candidate": 1.0214604228758444
+        },
+        {
+          "case_id": "swan_sf_test|pca_reconstruction|30",
+          "family": "swan",
+          "candidate_seconds": 0.020008333,
+          "reference_seconds": 0.020004583,
+          "ratio_reference_over_candidate": 0.9998125780893391
+        },
+        {
+          "case_id": "swan_sf_test|robust_marginal_z|30",
+          "family": "swan",
+          "candidate_seconds": 0.01760525,
+          "reference_seconds": 0.019781708,
+          "ratio_reference_over_candidate": 1.1236255094361056
+        }
+      ],
+      "incomplete": [],
+      "three_repeat_completed_case_ids": [
+        "CalIt2_traffic_test|isolation_forest|30",
+        "CalIt2_traffic_test|knn_distance|30",
+        "CalIt2_traffic_test|pca_reconstruction|30",
+        "CalIt2_traffic_test|robust_marginal_z|30",
+        "GECCO_water_quality_test|isolation_forest|30",
+        "GECCO_water_quality_test|knn_distance|30",
+        "GECCO_water_quality_test|pca_reconstruction|30",
+        "GECCO_water_quality_test|robust_marginal_z|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|30",
+        "Genesis_test|isolation_forest|30",
+        "Genesis_test|knn_distance|30",
+        "Genesis_test|pca_reconstruction|30",
+        "Genesis_test|robust_marginal_z|30",
+        "GutenTAG_0_test|isolation_forest|30",
+        "GutenTAG_0_test|knn_distance|30",
+        "GutenTAG_0_test|pca_reconstruction|30",
+        "GutenTAG_0_test|robust_marginal_z|30",
+        "GutenTAG_10_test|isolation_forest|30",
+        "GutenTAG_10_test|knn_distance|30",
+        "GutenTAG_10_test|pca_reconstruction|30",
+        "GutenTAG_10_test|robust_marginal_z|30",
+        "PSM_test|isolation_forest|30",
+        "PSM_test|knn_distance|30",
+        "PSM_test|pca_reconstruction|30",
+        "PSM_test|robust_marginal_z|30",
+        "metro_traffic-volume_test|isolation_forest|30",
+        "metro_traffic-volume_test|knn_distance|30",
+        "metro_traffic-volume_test|pca_reconstruction|30",
+        "metro_traffic-volume_test|robust_marginal_z|30",
+        "room-occupancy_1_test|isolation_forest|30",
+        "room-occupancy_1_test|knn_distance|30",
+        "room-occupancy_1_test|pca_reconstruction|30",
+        "room-occupancy_1_test|robust_marginal_z|30",
+        "room-occupancy_test|isolation_forest|30",
+        "room-occupancy_test|knn_distance|30",
+        "room-occupancy_test|pca_reconstruction|30",
+        "room-occupancy_test|robust_marginal_z|30",
+        "swan_sf_test|isolation_forest|30",
+        "swan_sf_test|knn_distance|30",
+        "swan_sf_test|pca_reconstruction|30",
+        "swan_sf_test|robust_marginal_z|30"
+      ],
+      "parity_invalid_case_ids": [],
+      "prescribed_cases": 48,
+      "three_repeat_completed_cases": 48,
+      "three_repeat_completion_fraction": 1.0,
+      "completed_parity_valid_pairs": 48,
+      "incomplete_cases": 0,
+      "parity_invalid_cases": 0,
+      "wins": 29,
+      "losses": 19,
+      "ties": 0,
+      "median_ratio": 1.016526278685624,
+      "geomean_ratio": 1.035677152839271,
+      "aggregate_ratio": 1.0552050599909395,
+      "minimum_ratio": 0.9110874804289859,
+      "loss_case_ids": [
+        "GECCO_water_quality_test|robust_marginal_z|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|30",
+        "Genesis_test|knn_distance|30",
+        "Genesis_test|robust_marginal_z|30",
+        "GutenTAG_0_test|isolation_forest|30",
+        "GutenTAG_0_test|robust_marginal_z|30",
+        "GutenTAG_10_test|isolation_forest|30",
+        "GutenTAG_10_test|knn_distance|30",
+        "GutenTAG_10_test|pca_reconstruction|30",
+        "GutenTAG_10_test|robust_marginal_z|30",
+        "room-occupancy_test|pca_reconstruction|30",
+        "swan_sf_test|pca_reconstruction|30"
+      ]
+    },
+    "benchopt_pair": {
+      "pairs": [
+        {
+          "case_id": "CalIt2_traffic_test|isolation_forest|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.00060425,
+          "reference_seconds": 0.014698791,
+          "ratio_reference_over_candidate": 24.325678113363676
+        },
+        {
+          "case_id": "CalIt2_traffic_test|knn_distance|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.000498583,
+          "reference_seconds": 0.014319958,
+          "ratio_reference_over_candidate": 28.72131219877132
+        },
+        {
+          "case_id": "CalIt2_traffic_test|pca_reconstruction|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.00053975,
+          "reference_seconds": 0.014916208,
+          "ratio_reference_over_candidate": 27.63540157480315
+        },
+        {
+          "case_id": "CalIt2_traffic_test|robust_marginal_z|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.000505125,
+          "reference_seconds": 0.014528083,
+          "ratio_reference_over_candidate": 28.761362039099232
+        },
+        {
+          "case_id": "GECCO_water_quality_test|isolation_forest|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.004135708,
+          "reference_seconds": 0.194413042,
+          "ratio_reference_over_candidate": 47.00840629947762
+        },
+        {
+          "case_id": "GECCO_water_quality_test|knn_distance|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.003762625,
+          "reference_seconds": 0.186598708,
+          "ratio_reference_over_candidate": 49.592693398890404
+        },
+        {
+          "case_id": "GECCO_water_quality_test|pca_reconstruction|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.00391075,
+          "reference_seconds": 0.189734583,
+          "ratio_reference_over_candidate": 48.51616262865179
+        },
+        {
+          "case_id": "GECCO_water_quality_test|robust_marginal_z|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.005064542,
+          "reference_seconds": 0.192586167,
+          "ratio_reference_over_candidate": 38.026373756995206
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004702375,
+          "reference_seconds": 0.162658542,
+          "ratio_reference_over_candidate": 34.590721071798825
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|30",
+          "family": "GHL",
+          "candidate_seconds": 0.00325675,
+          "reference_seconds": 0.162630333,
+          "ratio_reference_over_candidate": 49.93638842404237
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|30",
+          "family": "GHL",
+          "candidate_seconds": 0.003168917,
+          "reference_seconds": 0.161055667,
+          "ratio_reference_over_candidate": 50.82356748378074
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004434125,
+          "reference_seconds": 0.157529917,
+          "ratio_reference_over_candidate": 35.52671992783244
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004689042,
+          "reference_seconds": 0.162321625,
+          "ratio_reference_over_candidate": 34.617225650783254
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|30",
+          "family": "GHL",
+          "candidate_seconds": 0.003163208,
+          "reference_seconds": 0.163543667,
+          "ratio_reference_over_candidate": 51.70183781781028
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|30",
+          "family": "GHL",
+          "candidate_seconds": 0.003133833,
+          "reference_seconds": 0.163140708,
+          "ratio_reference_over_candidate": 52.05788183352463
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004460375,
+          "reference_seconds": 0.158356,
+          "ratio_reference_over_candidate": 35.502844491774795
+        },
+        {
+          "case_id": "Genesis_test|isolation_forest|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.00073225,
+          "reference_seconds": 0.020844208,
+          "ratio_reference_over_candidate": 28.465972004096958
+        },
+        {
+          "case_id": "Genesis_test|knn_distance|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.000601916,
+          "reference_seconds": 0.020650583,
+          "ratio_reference_over_candidate": 34.308081194053656
+        },
+        {
+          "case_id": "Genesis_test|pca_reconstruction|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.000607792,
+          "reference_seconds": 0.020730375,
+          "ratio_reference_over_candidate": 34.107679929976044
+        },
+        {
+          "case_id": "Genesis_test|robust_marginal_z|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.000726917,
+          "reference_seconds": 0.020384416,
+          "ratio_reference_over_candidate": 28.0422881842081
+        },
+        {
+          "case_id": "GutenTAG_0_test|isolation_forest|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.0006525,
+          "reference_seconds": 0.022406084,
+          "ratio_reference_over_candidate": 34.33882605363985
+        },
+        {
+          "case_id": "GutenTAG_0_test|knn_distance|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000550583,
+          "reference_seconds": 0.021800834,
+          "ratio_reference_over_candidate": 39.59590833716261
+        },
+        {
+          "case_id": "GutenTAG_0_test|pca_reconstruction|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.00056225,
+          "reference_seconds": 0.021712833,
+          "ratio_reference_over_candidate": 38.617755446865274
+        },
+        {
+          "case_id": "GutenTAG_0_test|robust_marginal_z|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000623584,
+          "reference_seconds": 0.021767542,
+          "ratio_reference_over_candidate": 34.907152845486735
+        },
+        {
+          "case_id": "GutenTAG_10_test|isolation_forest|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000606083,
+          "reference_seconds": 0.022135125,
+          "ratio_reference_over_candidate": 36.5216067766296
+        },
+        {
+          "case_id": "GutenTAG_10_test|knn_distance|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000628958,
+          "reference_seconds": 0.021969291,
+          "ratio_reference_over_candidate": 34.92966302996384
+        },
+        {
+          "case_id": "GutenTAG_10_test|pca_reconstruction|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000561417,
+          "reference_seconds": 0.021696875,
+          "ratio_reference_over_candidate": 38.64662986692601
+        },
+        {
+          "case_id": "GutenTAG_10_test|robust_marginal_z|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000632,
+          "reference_seconds": 0.022103792,
+          "ratio_reference_over_candidate": 34.97435443037975
+        },
+        {
+          "case_id": "PSM_test|isolation_forest|30",
+          "family": "PSM",
+          "candidate_seconds": 0.008331958,
+          "reference_seconds": 0.179028125,
+          "ratio_reference_over_candidate": 21.48692120147509
+        },
+        {
+          "case_id": "PSM_test|knn_distance|30",
+          "family": "PSM",
+          "candidate_seconds": 0.008305625,
+          "reference_seconds": 0.166765834,
+          "ratio_reference_over_candidate": 20.07866162991948
+        },
+        {
+          "case_id": "PSM_test|pca_reconstruction|30",
+          "family": "PSM",
+          "candidate_seconds": 0.008345333,
+          "reference_seconds": 0.168042209,
+          "ratio_reference_over_candidate": 20.136069944722397
+        },
+        {
+          "case_id": "PSM_test|robust_marginal_z|30",
+          "family": "PSM",
+          "candidate_seconds": 0.007293042,
+          "reference_seconds": 0.176262292,
+          "ratio_reference_over_candidate": 24.168555727500266
+        },
+        {
+          "case_id": "metro_traffic-volume_test|isolation_forest|30",
+          "family": "metro",
+          "candidate_seconds": 0.001352292,
+          "reference_seconds": 0.064551333,
+          "ratio_reference_over_candidate": 47.73475920880993
+        },
+        {
+          "case_id": "metro_traffic-volume_test|knn_distance|30",
+          "family": "metro",
+          "candidate_seconds": 0.001303791,
+          "reference_seconds": 0.064475125,
+          "ratio_reference_over_candidate": 49.45204024264624
+        },
+        {
+          "case_id": "metro_traffic-volume_test|pca_reconstruction|30",
+          "family": "metro",
+          "candidate_seconds": 0.001594625,
+          "reference_seconds": 0.065033541,
+          "ratio_reference_over_candidate": 40.78296840950067
+        },
+        {
+          "case_id": "metro_traffic-volume_test|robust_marginal_z|30",
+          "family": "metro",
+          "candidate_seconds": 0.001647334,
+          "reference_seconds": 0.062294375,
+          "ratio_reference_over_candidate": 37.81526697075395
+        },
+        {
+          "case_id": "room-occupancy_1_test|isolation_forest|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000950292,
+          "reference_seconds": 0.022008416,
+          "ratio_reference_over_candidate": 23.159635143724245
+        },
+        {
+          "case_id": "room-occupancy_1_test|knn_distance|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.001006,
+          "reference_seconds": 0.022137458,
+          "ratio_reference_over_candidate": 22.005425447316103
+        },
+        {
+          "case_id": "room-occupancy_1_test|pca_reconstruction|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000915875,
+          "reference_seconds": 0.022627958,
+          "ratio_reference_over_candidate": 24.706382421181928
+        },
+        {
+          "case_id": "room-occupancy_1_test|robust_marginal_z|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.00092175,
+          "reference_seconds": 0.02211425,
+          "ratio_reference_over_candidate": 23.991592080282068
+        },
+        {
+          "case_id": "room-occupancy_test|isolation_forest|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000801917,
+          "reference_seconds": 0.018083583,
+          "ratio_reference_over_candidate": 22.550442252751843
+        },
+        {
+          "case_id": "room-occupancy_test|knn_distance|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000711708,
+          "reference_seconds": 0.01706425,
+          "ratio_reference_over_candidate": 23.976476307699222
+        },
+        {
+          "case_id": "room-occupancy_test|pca_reconstruction|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000752542,
+          "reference_seconds": 0.017333541,
+          "ratio_reference_over_candidate": 23.03332039939299
+        },
+        {
+          "case_id": "room-occupancy_test|robust_marginal_z|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000751834,
+          "reference_seconds": 0.017336083,
+          "ratio_reference_over_candidate": 23.058391879058405
+        },
+        {
+          "case_id": "swan_sf_test|isolation_forest|30",
+          "family": "swan",
+          "candidate_seconds": 0.019031625,
+          "reference_seconds": 1.864016459,
+          "ratio_reference_over_candidate": 97.94310569906668
+        },
+        {
+          "case_id": "swan_sf_test|knn_distance|30",
+          "family": "swan",
+          "candidate_seconds": 0.020209667,
+          "reference_seconds": 1.857390416,
+          "ratio_reference_over_candidate": 91.90603764030352
+        },
+        {
+          "case_id": "swan_sf_test|pca_reconstruction|30",
+          "family": "swan",
+          "candidate_seconds": 0.020008333,
+          "reference_seconds": 1.856265208,
+          "ratio_reference_over_candidate": 92.77460586046823
+        },
+        {
+          "case_id": "swan_sf_test|robust_marginal_z|30",
+          "family": "swan",
+          "candidate_seconds": 0.01760525,
+          "reference_seconds": 1.877923125,
+          "ratio_reference_over_candidate": 106.66835887022337
+        }
+      ],
+      "incomplete": [],
+      "three_repeat_completed_case_ids": [
+        "CalIt2_traffic_test|isolation_forest|30",
+        "CalIt2_traffic_test|knn_distance|30",
+        "CalIt2_traffic_test|pca_reconstruction|30",
+        "CalIt2_traffic_test|robust_marginal_z|30",
+        "GECCO_water_quality_test|isolation_forest|30",
+        "GECCO_water_quality_test|knn_distance|30",
+        "GECCO_water_quality_test|pca_reconstruction|30",
+        "GECCO_water_quality_test|robust_marginal_z|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|30",
+        "Genesis_test|isolation_forest|30",
+        "Genesis_test|knn_distance|30",
+        "Genesis_test|pca_reconstruction|30",
+        "Genesis_test|robust_marginal_z|30",
+        "GutenTAG_0_test|isolation_forest|30",
+        "GutenTAG_0_test|knn_distance|30",
+        "GutenTAG_0_test|pca_reconstruction|30",
+        "GutenTAG_0_test|robust_marginal_z|30",
+        "GutenTAG_10_test|isolation_forest|30",
+        "GutenTAG_10_test|knn_distance|30",
+        "GutenTAG_10_test|pca_reconstruction|30",
+        "GutenTAG_10_test|robust_marginal_z|30",
+        "PSM_test|isolation_forest|30",
+        "PSM_test|knn_distance|30",
+        "PSM_test|pca_reconstruction|30",
+        "PSM_test|robust_marginal_z|30",
+        "metro_traffic-volume_test|isolation_forest|30",
+        "metro_traffic-volume_test|knn_distance|30",
+        "metro_traffic-volume_test|pca_reconstruction|30",
+        "metro_traffic-volume_test|robust_marginal_z|30",
+        "room-occupancy_1_test|isolation_forest|30",
+        "room-occupancy_1_test|knn_distance|30",
+        "room-occupancy_1_test|pca_reconstruction|30",
+        "room-occupancy_1_test|robust_marginal_z|30",
+        "room-occupancy_test|isolation_forest|30",
+        "room-occupancy_test|knn_distance|30",
+        "room-occupancy_test|pca_reconstruction|30",
+        "room-occupancy_test|robust_marginal_z|30",
+        "swan_sf_test|isolation_forest|30",
+        "swan_sf_test|knn_distance|30",
+        "swan_sf_test|pca_reconstruction|30",
+        "swan_sf_test|robust_marginal_z|30"
+      ],
+      "parity_invalid_case_ids": [],
+      "prescribed_cases": 48,
+      "three_repeat_completed_cases": 48,
+      "three_repeat_completion_fraction": 1.0,
+      "completed_parity_valid_pairs": 48,
+      "incomplete_cases": 0,
+      "parity_invalid_cases": 0,
+      "wins": 48,
+      "losses": 0,
+      "ties": 0,
+      "median_ratio": 34.91840793772529,
+      "geomean_ratio": 35.88035392161126,
+      "aggregate_ratio": 60.95099425753668,
+      "minimum_ratio": 20.07866162991948,
+      "loss_case_ids": []
+    },
+    "dtaianomaly_pair": {
+      "pairs": [
+        {
+          "case_id": "CalIt2_traffic_test|isolation_forest|30",
+          "family": "CalIt2",
+          "candidate_seconds": 0.00060425,
+          "reference_seconds": 0.06193375,
+          "ratio_reference_over_candidate": 102.49689697972694
+        },
+        {
+          "case_id": "GECCO_water_quality_test|isolation_forest|30",
+          "family": "GECCO",
+          "candidate_seconds": 0.004135708,
+          "reference_seconds": 4.253639708,
+          "ratio_reference_over_candidate": 1028.5154822342388
+        },
+        {
+          "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004702375,
+          "reference_seconds": 0.381548042,
+          "ratio_reference_over_candidate": 81.13943315877614
+        },
+        {
+          "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+          "family": "GHL",
+          "candidate_seconds": 0.004689042,
+          "reference_seconds": 0.3784825,
+          "ratio_reference_over_candidate": 80.71638087268146
+        },
+        {
+          "case_id": "Genesis_test|isolation_forest|30",
+          "family": "Genesis",
+          "candidate_seconds": 0.00073225,
+          "reference_seconds": 0.018754583,
+          "ratio_reference_over_candidate": 25.61226766814612
+        },
+        {
+          "case_id": "GutenTAG_0_test|isolation_forest|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.0006525,
+          "reference_seconds": 0.065064416,
+          "ratio_reference_over_candidate": 99.71558007662836
+        },
+        {
+          "case_id": "GutenTAG_10_test|isolation_forest|30",
+          "family": "GutenTAG",
+          "candidate_seconds": 0.000606083,
+          "reference_seconds": 0.053440708,
+          "ratio_reference_over_candidate": 88.17391017401907
+        },
+        {
+          "case_id": "metro_traffic-volume_test|isolation_forest|30",
+          "family": "metro",
+          "candidate_seconds": 0.001352292,
+          "reference_seconds": 0.309578083,
+          "ratio_reference_over_candidate": 228.92842891919793
+        },
+        {
+          "case_id": "room-occupancy_1_test|isolation_forest|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000950292,
+          "reference_seconds": 0.370328334,
+          "ratio_reference_over_candidate": 389.69951762195194
+        },
+        {
+          "case_id": "room-occupancy_test|isolation_forest|30",
+          "family": "room-occupancy",
+          "candidate_seconds": 0.000801917,
+          "reference_seconds": 0.228713875,
+          "ratio_reference_over_candidate": 285.20891189487196
+        }
+      ],
+      "incomplete": [
+        {
+          "case_id": "PSM_test|isolation_forest|30",
+          "completed_repeats": 0,
+          "repetitions": [
+            {
+              "repeat": 0,
+              "status": "TIMED_OUT",
+              "watchdog_seconds": 30,
+              "censor_scope": "Parent wall-clock watchdog, not a measured evaluator duration"
+            },
+            {
+              "repeat": 1,
+              "status": "NOT_ATTEMPTED",
+              "reason": {
+                "status": "TIMED_OUT",
+                "watchdog_seconds": 30,
+                "censor_scope": "Parent wall-clock watchdog, not a measured evaluator duration",
+                "stage": "measure"
+              }
+            },
+            {
+              "repeat": 2,
+              "status": "NOT_ATTEMPTED",
+              "reason": {
+                "status": "TIMED_OUT",
+                "watchdog_seconds": 30,
+                "censor_scope": "Parent wall-clock watchdog, not a measured evaluator duration",
+                "stage": "measure"
+              }
+            }
+          ],
+          "ratio": null,
+          "reason": "No three-repeat paired timing; no ratio inferred"
+        },
+        {
+          "case_id": "swan_sf_test|isolation_forest|30",
+          "completed_repeats": 0,
+          "repetitions": [
+            {
+              "repeat": 0,
+              "status": "TIMED_OUT",
+              "watchdog_seconds": 30,
+              "censor_scope": "Parent wall-clock watchdog, not a measured evaluator duration"
+            },
+            {
+              "repeat": 1,
+              "status": "NOT_ATTEMPTED",
+              "reason": {
+                "status": "TIMED_OUT",
+                "watchdog_seconds": 30,
+                "censor_scope": "Parent wall-clock watchdog, not a measured evaluator duration",
+                "stage": "measure"
+              }
+            },
+            {
+              "repeat": 2,
+              "status": "NOT_ATTEMPTED",
+              "reason": {
+                "status": "TIMED_OUT",
+                "watchdog_seconds": 30,
+                "censor_scope": "Parent wall-clock watchdog, not a measured evaluator duration",
+                "stage": "measure"
+              }
+            }
+          ],
+          "ratio": null,
+          "reason": "No three-repeat paired timing; no ratio inferred"
+        }
+      ],
+      "three_repeat_completed_case_ids": [
+        "CalIt2_traffic_test|isolation_forest|30",
+        "GECCO_water_quality_test|isolation_forest|30",
+        "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+        "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+        "Genesis_test|isolation_forest|30",
+        "GutenTAG_0_test|isolation_forest|30",
+        "GutenTAG_10_test|isolation_forest|30",
+        "metro_traffic-volume_test|isolation_forest|30",
+        "room-occupancy_1_test|isolation_forest|30",
+        "room-occupancy_test|isolation_forest|30"
+      ],
+      "parity_invalid_case_ids": [],
+      "prescribed_cases": 12,
+      "three_repeat_completed_cases": 10,
+      "three_repeat_completion_fraction": 0.8333333333333334,
+      "completed_parity_valid_pairs": 10,
+      "incomplete_cases": 2,
+      "parity_invalid_cases": 0,
+      "wins": 10,
+      "losses": 0,
+      "ties": 0,
+      "median_ratio": 101.10623852817764,
+      "geomean_ratio": 144.4527799646216,
+      "aggregate_ratio": 318.3843890808354,
+      "minimum_ratio": 25.61226766814612,
+      "loss_case_ids": []
+    }
+  },
+  "max_absolute_error": 8.215650382226158e-15,
+  "per_method_max_absolute_error": {
+    "saturation_pair": 0.0,
+    "radix_pair": 2.886579864025407e-15,
+    "benchopt_pair": 8.215650382226158e-15,
+    "dtaianomaly_pair": 2.220446049250313e-16
+  },
+  "scheduled_repetition_status_counts": {
+    "COMPLETE": 462,
+    "TIMED_OUT": 2,
+    "NOT_ATTEMPTED": 4
+  },
+  "worker_startups": 5,
+  "scope": "Cache-free independent reconstruction of recorded receipt identities, seeded order, worker lifecycle, completed-output parity, censoring and paired timing statistics. No metric kernel or data array is loaded. Source hashes are recorded identities; cached source bytes and NPZ contents are not reverified. DTAI ratios describe only completed parity-valid pairs; no timeout is treated as an evaluator time or speed ratio. This descriptive supplement does not change the earlier primary criterion or its outcome."
+}

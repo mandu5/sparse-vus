@@ -1,0 +1,211 @@
+\subsection{A uniform mass bound for active prefixes}
+\label{sec:saturation-mass-bound}
+Let $S_w$ be the union of the expanded intervals at width $w$, and write
+$Q_w=|S_w|$. List these active positions in decreasing score order, breaking
+numerical ties arbitrarily but consistently. Numerical equality here is
+that of the validated binary64 scores, including ties created by input
+conversion. Only ends of complete active-score ties are valid event indices;
+write their positive prefix lengths as
+\[
+ 0=b_0<b_1<\cdots<b_g=Q_w.
+\]
+For $1\le q\le Q_w$, define the tie-rounding map
+\[
+ \rho_w(q)=\min\{b_j:b_j\ge q\}.
+\]
+Global positions outside $S_w$ may share these scores. They remain included
+in the event's global prediction count, but are not counted in $Q_w$ or $b_j$.
+
+\begin{lemma}[Active support and prefix mass]
+For the stated half-width square-root ramps, $S_w$ is precisely the set of
+positions with positive label weight and precisely the set of positions
+capable of hitting an expanded component. Every active original position
+contributes one to $A+B/2$; every active non-original position contributes
+at least $1/(2\sqrt2)$. Therefore, after any $q$ active positions have been
+admitted, even within a score tie,
+\[
+ A+B/2\ge q/(2\sqrt2).
+\]
+\end{lemma}
+\begin{proof}
+At widths zero and one the active positions are exactly the originals, each
+of weight one. At width $w\ge2$, a non-original position is in $S_w$ exactly
+when at least one original interval is at integer distance
+$d\le\lfloor w/2\rfloor$. Its contribution from that interval is
+$\sqrt{1-d/w}\ge1/\sqrt2$. Summing additional nonnegative contributions
+and clipping at one preserves this lower bound. Such a position contributes
+half its weight to $A+B/2$, while an original contributes one. Summing gives
+the inequality. The same union defines expanded-component membership, so
+positions outside $S_w$ cannot change either mass or component hits.
+\end{proof}
+
+Let $M_w$ be the first complete active-event prefix length with
+$A+B/2\ge P_0$, and let $E_w$ be the first complete active-event prefix
+length that hits all $K_w$ expanded components. Both exist: at $b_g=Q_w$,
+all originals have been admitted, so $A=P_0$, and every expanded component
+contains an admitted original. Put
+\[
+ m=\lceil2\sqrt2 P_0\rceil.
+\]
+
+\begin{proposition}[Mass and coverage bound with complete ties]
+For the evaluator stopped at the first mass-and-coverage saturation event,
+\begin{align}
+ J_w&=\max\{M_w,E_w\},\\
+ M_w&\le\rho_w(\min\{Q_w,m\}),\\
+ J_w&\le\rho_w\!\left(\min\{Q_w,\max\{E_w,m\}\}\right).
+ \label{eq:mass-coverage-bound}
+\end{align}
+If $\tau_w=\max_j(b_j-b_{j-1})$ is the largest active-score tie size, then
+\[
+ J_w\le\min\{Q_w,\max\{E_w,m+\tau_w-1\}\}.
+\]
+\end{proposition}
+\begin{proof}
+Mass and coverage are each nondecreasing under threshold relaxation.
+Their first complete-event indices are $M_w$ and $E_w$, so both conditions
+first hold at their maximum. If $Q_w\ge m$, the preceding lemma guarantees
+the mass condition after $m$ positions; it still holds after completing
+that tie. If $Q_w<m$, the final event contains every original and satisfies
+the mass condition. This proves the bound on $M_w$. Since $E_w$ is already
+a complete-event prefix length, taking its maximum with the rounded mass
+bound gives~\eqref{eq:mass-coverage-bound}. Finally,
+$\rho_w(q)\le\min\{Q_w,q+\tau_w-1\}$, which yields the stated additive-tie
+bound. No partial tie is used as an evaluation threshold or stopping point.
+\end{proof}
+
+\begin{corollary}[One original interval]
+If $K=1$ and the validated scores within $S_L$ are pairwise distinct, then
+for every score ordering and every width,
+\[
+ J_w\le\min\{Q_w,\lceil2\sqrt2 P_0\rceil\}.
+\]
+Under the preceding computation model, the complete scalar evaluator takes
+$O(n+(L+1)P_0)=O(n+LP_0)$ time and $O(n+Q)$ auxiliary words. In particular,
+a single original anomalous position ($P_0=K=1$) gives $J_w\le3$ and total
+$O(n+L)$ time, without a score-quality assumption. At widths zero and one,
+$J_w=1$ in that singleton case.
+\end{corollary}
+\begin{proof}
+There is one expanded component at every width. The first active position
+hits it, and with distinct active scores $E_w=1$ and $\rho_w(q)=q$.
+Apply the proposition. Union-find operations are constant time when $K=1$,
+and sum the per-width bound. Since $P_0\le n$, the additional $P_0$ term is
+absorbed into $O(n+LP_0)$. For $P_0=1$, $\lceil2\sqrt2\rceil=3$.
+\end{proof}
+
+The distinctness requirement concerns active/support scores, not arbitrary
+off-support scores. Equal scores exclusively outside $S_L$, or off-support
+positions tied with a single active position, do not enlarge an active tie.
+More generally, with one original interval and $\tau_w\le\tau$ at every
+width, the same analysis gives $O(n+(L+1)(P_0+\tau))$ time.
+
+Arbitrary active ties prevent the singleton corollary for this
+position-by-position evaluator. For $L\ge1$ and $n=2L+1$, place the only original at
+zero-based position $L$ and assign all $n$ positions the same score. At
+width $w$, the sole active event contains
+$Q_w=2\lfloor w/2\rfloor+1$ positions. The evaluator visits that complete
+event, so $J_w=Q_w$ and $\sum_{w=0}^L J_w=\Theta(L^2)$, although
+$P_0=K=1$. This is a counterexample to dropping the tie restriction from
+this evaluator's bound; it is not a lower bound for all possible VUS
+algorithms or for implementations that aggregate tied masses differently.
+
+For multiple original intervals, the mass bound alone does not bound the
+coverage prefix $E_w$. A component whose active scores are all low can keep
+$E_w$ near $Q_w$ even after the mass condition holds. Thus neither small
+$P_0$ alone nor the mass inequality supplies a general multi-component
+$O(n+LP_0)$ guarantee. The proof concerns the pinned ramp, denominator,
+component-hit definition, and complete-threshold scalar target in exact
+metric arithmetic; finite-precision stopping is numerically validated
+separately.
+
+\subsection{Linear input-inspection optimality for a singleton anomaly}
+\label{sec:singleton-optimality}
+The preceding upper bound admits a matching input-inspection lower bound
+on a restricted class. The input-access model matters: an algorithm is
+deterministic and adaptively reads individual score coordinates in random
+access. Reading a coordinate reveals its validated binary64 value. The labels,
+$n$, and $L$ may be supplied without charge, and validity and pairwise score
+distinctness are promised. No precomputed ordering, score summary, or
+certificate is supplied. A unit-time word operation reads at most a constant
+number of score coordinates. Thus the argument does not charge input
+validation and does not concern parallel or aggregate-query oracles.
+
+\begin{theorem}[Singleton score-query lower bound]
+\label{thm:singleton-query-lower}
+Fix integers $n\ge4$ and $0\le L\le n$, and assume that the score domain
+contains $n-1$ distinct finite binary64 values below one. Every deterministic
+algorithm that exactly evaluates scalar VUS-PR on all inputs with these
+$n,L$, one original anomalous position, and pairwise distinct validated
+scores must, on some such input, inspect at least
+\[
+ n-\lfloor L/2\rfloor-1
+ \;\ge\;\lceil n/2\rceil-1
+ \;\ge\;n/4
+\]
+distinct score coordinates. The same lower bound applies when the requested
+output is the pair VUS-ROC and VUS-PR.
+\end{theorem}
+\begin{proof}
+Fix the label vector $y=(1,0,\ldots,0)$; the algorithm may know this vector
+for free. Set $r=\lfloor L/2\rfloor$. Because the only original is at the
+left boundary, its maximum support is $S_L=\{0,\ldots,r\}$. Let
+$U=\{r+1,\ldots,n-1\}$, so $|U|=n-r-1$. Choose a base score vector with
+$s_0=1$ and all other scores distinct and below one. For example,
+$s_i=-i$ for $i\ge1$ is exactly representable when $n\le2^{53}$.
+At every width $w\le L$, the first admitted position is the original:
+$A=1$, $B=0$, $H=K_w=1$, and the prediction count is one. Recall jumps
+from zero to one at precision one and remains one thereafter. Hence every
+width has PR area one, and the scalar average is one.
+
+Suppose the algorithm's execution on this base input terminates without
+inspecting some $j\in U$. Change only $s_j$ to two. The modified input is
+still finite and pairwise distinct. Since $j\notin S_L$, it is outside the
+support and every expanded component at every $w\le L$. On the modified
+input it is admitted first, with zero recall; the original is admitted
+second, with $A=1$, $B=0$, $H=K_w=1$, and prediction count two. The only
+nonzero recall increment is therefore from zero to one at precision
+$1/2$. All later recall increments vanish. Every width has PR area $1/2$,
+and so does their scalar average.
+
+The two adaptive query transcripts are identical. Inductively, identical
+previous query answers make a deterministic algorithm choose the same next
+query or termination action; every queried coordinate has the same value
+because coordinate $j$ was never read in the base execution. Consequently
+the algorithm returns the same output on both inputs, contradicting their
+different exact scalar PR values. It must therefore inspect every coordinate
+in $U$ on the base input. Counting these coordinates gives the stated bound.
+An algorithm returning both scalar integrals must return the PR component,
+so the same adversary applies to that output pair.
+\end{proof}
+
+\begin{corollary}[Linear-time optimal singleton subclass]
+\label{cor:singleton-linear-optimal}
+Under the fixed-key word-RAM and unit-cost exact metric-arithmetic model,
+for inputs with $P_0=K=1$, pairwise distinct validated binary64 scores,
+and $0\le L\le n$, the active-prefix evaluator uses $O(n)$ time and
+$O(n)$ auxiliary words, uniformly over anomaly locations and score
+orderings. Its worst-case time order matches the deterministic
+$\Omega(n)$ score-inspection lower bound for exact scalar VUS-PR and for
+the pair of scalar VUS-ROC and VUS-PR.
+\end{corollary}
+\begin{proof}
+The singleton mass bound gives $J_w\le3$ for every width. Preprocessing and
+all width evaluations therefore take $O(n+L)=O(n)$ time; $Q\le n$ gives
+the memory bound. The boundary-location inputs in
+Theorem~\ref{thm:singleton-query-lower} belong to this subclass and require
+at least $n/4$ score inspections. A constant number of such inspections per
+word operation gives the matching worst-case time lower bound.
+\end{proof}
+
+The lower bound is a finite-instance query statement for feasible distinct
+binary64 inputs; the explicit integer witness covers $4\le n\le2^{53}$.
+The asymptotic notation uses the same fixed-key operation-count convention
+as the upper bound, rather than asserting an unbounded sequence of distinct
+values in a literally finite 64-bit universe. Input validity need not be
+verified for the lower bound. No assumption promises that the original
+has the highest score: that property holds only for the adversary's base
+input. The conclusion is deterministic input-inspection optimality within
+the stated singleton subclass. It gives no $\Omega(L)$ lower bound for
+$L\gg n$, no general $\Omega(n+L)$ lower bound, no randomized lower bound,
+and no firstness or practical-performance claim.

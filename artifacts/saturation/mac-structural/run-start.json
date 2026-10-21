@@ -1,0 +1,14 @@
+{
+  "protocol_sha256": "61f69703dd7e2a4a3e368307abfdbdebe49ca31f91ae5039424e44bba386995f",
+  "source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "experiments/benchmark_saturation_structural.py": "55d97b5c0973ce3281bf560b6f94ad5d6d31f88676e9cd17657255aa95159873",
+    "docs/saturation_structural_protocol_20261021.md": "e133f07fbb013ecc5e8544d62f1977f40986c381e839032c8bd1f0c46c59daf9"
+  },
+  "utc": "2026-10-21T05:11:18.378501+00:00"
+}

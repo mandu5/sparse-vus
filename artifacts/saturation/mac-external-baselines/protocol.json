@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "width": 30,
+  "cases": 48,
+  "series": 12,
+  "families": 9,
+  "repetitions": 3,
+  "seed": 2026102127,
+  "parity_atol": 1e-11,
+  "main_methods": [
+    "saturation_pair",
+    "radix_pair",
+    "benchopt_pair"
+  ],
+  "dtai_method": "dtaianomaly_pair",
+  "dtai_model": "isolation_forest",
+  "dtai_cases": 12,
+  "warmup_timeout_seconds": 120,
+  "dtai_call_timeout_seconds": 30,
+  "other_call_timeout_seconds": 300,
+  "input_load_timeout_seconds": 120,
+  "output": [
+    "roc",
+    "pr"
+  ],
+  "compute_threads": 1,
+  "created_utc": "2026-10-21T05:04:39.951074+00:00",
+  "inputs_sha256": "c16365b74e08fb5e1fd55ed797d48639a3a751edc3f6c61b21ded8096e9bdd9b",
+  "source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "experiments/benchmark_saturation_external_baselines.py": "9285d70fd9cc66d1b621f9e0457e0e78cb7444da4087e8399f56cff860a6eaf8",
+    "docs/saturation_external_baseline_protocol_20261021.md": "eb76065ccbc1823815b62ba5605f643b20ad39096745d8810830083804307b89",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    "experiments/dtaianomaly_adapter.py": "7b53d095aa505567d11a9db33068977dd26697b799c1dc2ee28e2a9d14024a64",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+    ".cache/dtaianomaly/_volume_under_surface_metrics.py": "728045cd8ddf0caa6aab10a9ab66f5f876ee77e5d0ae80dfbce5029eab9ed5b7"
+  },
+  "source_commit": "595fb3bce1f7fa94de07c79d992166227c2aae0d",
+  "primary_receipts": {
+    "protocol.json": "973656ba4ca05748a6f55fc6c179ae93e2ebddc93bfbc98add75cbd5cf9ac2f5",
+    "inputs.json": "827c6db2c47e1e7fcd2e5ae74f10bd3030be8ada54d4460e4aea3af95660a7ae",
+    "completion.json": "bd8f8c7311551edd65a3fe311a6679257a66f9a0e8f24cfda8a5dc028134fbc9",
+    "report.json": "599ab7dc59f3e2fc1a57313740e6f01bcde088f05025f83d5200c163274b1fbf",
+    "measurements.jsonl": "c0fe72ba539d8d2d04426178235c36ffa5bf34ec2dae8a148153d6f95959a7bf"
+  },
+  "primary_directory": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/saturation/mac-external",
+  "status": "FROZEN_SUPPLEMENT_NO_SUPPLEMENTAL_OUTCOMES",
+  "scope": "Separate descriptive paired ROC/PR supplement, fixed after the primary study. Does not replace its L=30 primary failure or change its decision rule.",
+  "timing": "Three seeded randomized serial full public calls per case and method; one persistent warmed spawn worker per method; input I/O, IPC, imports and compilation excluded; validation and metric preparation included as implemented.",
+  "dtai_censoring": "On the first timed timeout or error for a case, terminate that worker and skip its remaining repeats for that case. Restart and warm for the next prescribed case. Ratios require three completed parity-valid repeats. Warm-up timeout is separate and supplies no runtime lower bound.",
+  "comparison": "Benchopt thre=n and DTAI max_samples=n; unchanged pinned source AST adapters. Both candidate and v0.3 radix return paired ROC/PR. Native DTAI parallel=True and fastmath=True remain enabled with one Numba thread. Benchopt's native kernel has less generic validation than the candidate public API.",
+  "decision": "Descriptive only: parity, full timing distributions, losses and censor counts. No new PASS criterion, no pooling of old timings, no censored speed ratios."
+}
