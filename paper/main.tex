@@ -13,39 +13,37 @@
 \newcommand{\Prec}{\mathrm{Prec}}
 \input{results.tex}
 % The marked title, abstract, and body also generate the PVLDB counterpart.
-\title{Exact and Error-Bounded VUS Evaluation\\through Sparse Events and Width Geometry}
+\title{Support-Sensitive Exact VUS Evaluation}
 \author{Youngmin Ko\\Independent Researcher\\Republic of Korea\\\texttt{rhdudals0505@naver.com}}
-\date{20 October 2026\\\small Working manuscript; unsubmitted}
+\date{21 October 2026\\\small Working manuscript; unsubmitted}
 \begin{document}
 \maketitle
 \begin{abstract}
 Volume Under the Surface (VUS) averages time-series anomaly-detection areas
-over score thresholds and tolerance widths. We reduce computation along both
-axes while preserving a pinned metric definition. First, thresholds outside
-the maximum anomaly support contribute analytically integrable ROC rectangles
-and zero PR area. Sorting support scores and counting remaining scores yields
-exact scalar VUS-ROC and VUS-PR in
-$O(n\log(Q+1)+(L+1)Q)$ time and $O(n+Q)$ memory, where $Q$ is the expanded
-support size and $L$ the largest width. Support restriction and cumulative
-sums are prior techniques; our reduction eliminates inactive threshold events.
-Second, expanded-interval merge events partition the width range into regions
-with ordered ROC coordinates. A probability-box expectation bound encloses PR
-without assuming monotone PR area. Adaptive refinement bounds the discrete
-width average to a requested half-width in real arithmetic; the float64
-implementation is numerically audited, not a directed-rounding certificate.
-Experiments use \NumSeries{} public series and \NumScores{} released score
-vectors. Against released fast-VUS computing PR only, the paired ROC/PR
-evaluator has median speedups of $8.38\times$ and $4.55\times$ on two CPU systems.
-Against the fastest tested comparator, including dense methods, the medians
-are $2.04\times$ and $1.35\times$; Sparse VUS is slower or equal in 209 and
-574 of 2,100 cases, respectively.
-Width refinement evaluates fewer curves but is often slower at tight tolerances.
-Incremental PR racing gives median speedups at width 300, yet increases the
-sum of per-task median latencies on both machines; both extensions remain optional.
-The reference's 250-threshold approximation changes 84 of 2,100 PR pair
-orders; 75 and 74 persist after two fixed padding interventions.
-The results distinguish exact-integration gains from the cost of
-error-bounded width reduction.
+over score thresholds and tolerance widths. We derive an exact scalar
+evaluator for a pinned VUS definition. Score groups containing no position
+in the maximum anomaly support contribute analytically integrable ROC
+rectangles and zero PR area; retained events admit complete global ties.
+Comparison-based preparation gives $O(n\log(Q+1)+(L+1)Q)$ time, where $Q$
+is expanded support size and $L$ the largest width. Combining this reduction
+with established radix ordering and linear interval geometry gives
+$O(n+(L+1)Q)$ for finite binary64 inputs under the stated fixed-word and
+unit-cost metric-arithmetic assumptions. Support restriction, cumulative
+sums, and radix sorting are prior techniques; the VUS-specific reduction
+eliminates inactive events while preserving their integral contributions.
+On 308 series from 17 families, two CPU environments each complete 924
+three-model tasks at maximum widths 30, 100, and 300. At the primary width
+30, exact radix PR has median speedups of $20.92\times$ and $14.54\times$
+over released PR-only fast-VUS, and $2.60\times$ and $4.79\times$ over a
+matched nearest-distance dense radix PR control. Both platforms pass the
+frozen five-control confidence-interval criterion. Against a descriptive
+per-case PR-only oracle, median ratios are $1.71\times$ and $1.99\times$,
+with 40 and 6 of 308 cases slower. Maximum PR discrepancy among the
+exhaustive implementations relative to the comparison-based sparse control
+is below $1.56\times10^{-15}$. Optional width refinement reduces queries but does
+not pass its separate runtime criteria. Exactness concerns the
+all-threshold, all-width target; floating-point agreement is numerical,
+not bitwise.
 \end{abstract}
 
 % BEGIN SHARED BODY
@@ -61,19 +59,30 @@ The official optimized evaluator partitions static and dynamic labels and
 restricts work to maximum-width anomaly support \cite{boniol2025}.
 Klein's released fast-VUS further sorts support scores and uses cumulative
 weighted sums \cite{klein2026}. These optimizations already avoid much repeated
-work. We instead ask which threshold events can be eliminated altogether,
-and which widths can be omitted with a quantified error. Only positions near
-labeled anomalies change the weighted positive state. Other thresholds have
-an analytically integrable effect, but removing them requires preserving a
-ROC rectangle before each support transition.
+work. We ask which threshold events can be eliminated altogether without
+changing the scalar integrals. A score group containing no position in the
+maximum anomaly support changes neither weighted positive mass nor existence
+reward. Its ROC contribution can be integrated analytically, while its PR
+contribution is zero. Removing such groups requires preserving the negative
+rectangle before each retained event and admitting its complete global tie.
 
-Width reduction requires a different argument. Expanded anomaly intervals
-can merge, changing existence reward discontinuously. Between merge events,
-we prove coordinate order and monotone ROC area. PR area need not be monotone
-even there. We express it as an expectation under recall increments and apply
-established p-box bounds \cite{utkin2009,troffaes2011}. This yields an adaptive
-discrete-width average with separate lower and upper limits, rather than a
-fixed width subsample with unknown error.
+The resulting width sweep costs $O((L+1)Q)$ for expanded support size $Q$.
+We give two preparation strategies: comparison-based support ranking with
+global counts, and fixed-width radix ranking with a linear interval scan.
+The latter yields $O(n+(L+1)Q)$ exhaustive evaluation for finite binary64
+inputs under the assumptions of Proposition~\ref{prop:radix}. The contribution
+is the VUS-specific event representation and its composition with established
+ranking techniques, not a new sorting algorithm. Matching radix ranking,
+interval geometry, and PR-only execution in dense controls is necessary to
+assess the practical benefit of sparse event elimination.
+
+The same event representation supports optional real-arithmetic width
+enclosures and incremental model selection. Those extensions answer a
+different question: whether avoiding width evaluations also reduces total
+work. Earlier measurements show that query savings can be outweighed by
+refinement and decision overhead. We retain these negative findings and the
+full derivations in Appendices~\ref{sec:width} and~\ref{sec:racing}; exhaustive
+exact evaluation remains the central method.
 
 Exact evaluation also avoids an accuracy limitation of a fixed uniform-rank
 threshold grid. At width zero, place the only anomaly at score rank two and
@@ -222,8 +231,20 @@ implementation retains per-width areas and uses an additional $O(L)$ space.
 For dense support, $Q=\Theta(n)$, no asymptotic improvement over a dense sweep
 is promised. The analysis establishes an upper bound.
 
-\input{width_method.tex}
-\input{racing_method.tex}
+\input{radix_method.tex}
+
+\subsection{Matched dense execution controls}
+The PR-only sparse implementation evaluates every width in one compiled
+call, reusing scratch arrays and returning the mean scalar area. Its dense
+controls also include validation, Float64 conversion, interval extraction,
+global radix ranking, and every width in their public calls. One constructs
+the original sum-and-clip ramps directly. The other computes the same two
+nearest interval distances for all $n$ positions and uses the same weight
+formula, retaining a full-rank PR-only sweep. Both complete global numerical
+ties, reuse width scratch, and avoid ROC work, support-event compression,
+and adaptive stopping. The nearest control takes $O((L+1)n)$ time and
+$O(n+K)$ auxiliary memory. Thus the comparison does not attribute generic
+radix, geometry, or single-metric savings to sparse support elimination.
 
 \section{Prior art and implementation comparisons}
 Boniol et al. introduce optimized VUS implementations with static/dynamic
@@ -235,20 +256,41 @@ evaluates the selected thresholds at every width \cite{klein2026}.
 At audited revision \texttt{1bae859f}, passing \texttt{thre=n} gives full-threshold
 PR with the target's dynamic mass, sum-and-clip ramps, expanded-interval
 existence reward, and right-endpoint integration. Its API returns PR only;
-our measured API computes ROC and PR together. Default 250-threshold and
+the original measured API computes ROC and PR together, while the follow-up
+also includes a PR-only kernel. Default 250-threshold and
 full-threshold calls are distinguished in every comparison.
 We do not claim support restriction, sorting support scores, or cumulative
 sums as new. The remaining exact reduction removes inactive threshold events,
-including their ROC contribution, and obtains prediction counts without
-globally sorting all scores. Width enclosures are a separate contribution.
+including their ROC contribution. The comparison-based preparation obtains
+prediction counts without globally sorting all scores; the fixed-width
+variant instead obtains them in a linear global radix pass.
+Optional width enclosures are developed separately in
+Appendix~\ref{sec:width}.
 
 Sylligardos reports preliminary VUS speedups up to two
 orders on CPU and three on GPU over approximately 1,900 TSB-UAD series
-\cite{sylligardos2025}. That workshop paper does not disclose the detailed
-algorithm, and a corresponding released implementation was not located in our
-20 October 2026 source audit. Its mechanism could overlap with ours. We therefore
-do not claim the first fast VUS implementation, the first 100-fold acceleration,
-or demonstrated superiority over that method.
+\cite{sylligardos2025}. Our expanded 21 October audit located attributed
+FF-VUS NumPy/Torch code in the aVUSi repository, revision
+\texttt{facf4362} \cite{ffvus2026}; the code is not linked by an immutable
+receipt to that workshop figure. Its native linear, maximum-combined ramps
+differ from the target's square-root, sum-and-clip ramps. The public wrapper
+also rounds scores to two decimals, and Torch can interpolate intermediate
+existence values when its memory estimate exceeds a threshold. For labels
+$(0,1,0)$ and scores $(.101,.102,.001)$ at width zero, wrapper-equivalent
+rounding changes PR from $1$ to $0.5$. A separate seven-point witness shows
+a ramp mismatch even after matching physical radius. These are semantic
+audits of unchanged code, not GPU timing comparisons. We do not claim the
+first fast VUS implementation or superiority over all CPU/GPU variants.
+
+The Benchopt time-series foundation-model benchmark supplies another
+exact-compatible implementation, revision \texttt{2b55ccb1}, whose VUS
+functions were introduced in May 2026 \cite{benchopt2026}. It globally sorts
+scores, constructs full-array ramps, accumulates sorted masses, and obtains
+existence through segment maxima and binary searches. Its unchanged
+numerical function bodies return both ROC and PR; \texttt{thre=n} selects
+the full-threshold target. We include it as an external dense-cumsum
+comparator in the follow-up study, distinct from our independently written
+dense controls.
 
 The released Go \texttt{adscore} package implements an incremental dense rank
 sweep \cite{boxer}. Native execution of its unmodified v0.0.23 package confirms
@@ -277,6 +319,47 @@ The source audit located no disclosed VUS algorithm with these width
 enclosures, but this bounded search does not establish priority.
 
 \section{Experimental protocol}
+\subsection{Matched PR-only protocol and policy holdout}
+The follow-up separates exact event compression from implementation choices
+shared with dense methods. Its v3 protocol evaluates all three model scores
+per series, returning every model within $10^{-10}$ of the maximum exact PR.
+The 308 series outside the fixed 42-series development selection span 17 of
+the original 23 source families and give 924 tasks at $L\in\{30,100,300\}$.
+They are held out for this procedure, not newly
+collected data: the same corpus appeared in earlier experiments. The main
+width is 30; widths 100 and 300 characterize wider-buffer regimes, with 300
+an explicit stress condition.
+
+Fourteen required methods include the comparison-based and radix sparse
+evaluators, PR-only direct and nearest dense radix controls, released Klein
+and Benchopt code, and the optional selection engines. Every timed call
+includes preparation, all model evaluations or refinement, and winner-set
+construction. Source loading, warmed imports/JIT compilation, and receipt
+serialization are outside the measured interval. Three repetitions use
+independent seeded random method order within each task and one compute
+thread. Width-major task order, source hashes, required comparisons, and
+family-bootstrap summaries are fixed by the protocol.
+
+The v3 Mac environment is an Apple M1 Pro with 16 GiB host memory,
+Python 3.12.4, NumPy 1.26.4, and Numba 0.59.1. The separate Linux run uses
+an Ubuntu 24.04 GitHub Actions x86\_64 worker, Python 3.12.15,
+NumPy 2.5.4, and Numba 0.68.0. Its exact CPU model was not recorded.
+These software environments are kept distinct in the comparisons and
+receipts; the earlier Linux execution below is a different run.
+
+The matched dense controls and the v3 protocol were fixed after the v2
+development results and before inspection of the policy-holdout outcomes.
+The exact radix and radix racing hypotheses have separate decisions; each
+requires correctness and favorable lower 95\% family-bootstrap bounds for
+both geometric-mean ratios and ratios of summed task-median runtimes
+against its required controls. These sums are not measured batch wall
+times; the intervals resample the 17 observed holdout families and describe
+family variation, not uncertainty from three timing repetitions. The artifact
+preserves the amendments, complete v2 records and
+original auditor. V2 and v3 timings are not pooled. These comparisons do not
+claim global CPU/GPU state of the art.
+
+\subsection{Earlier correctness and corpus studies}
 The protocol, exact source hashes, score archive selection, and a pre-outcome
 addendum are included with the artifact. The dtaianomaly comparator was selected
 before execution; a separate, retrospectively written addendum records that
@@ -295,14 +378,14 @@ zero padding for Chronos-Bolt and Time-MoE; we do not reproduce that paper's
 corrected model leaderboard. Original dataset licenses vary, and raw data and
 scores are not redistributed.
 
-The main experiment evaluates maximum widths 10 and 30. Each timing includes
+The original corpus experiment evaluates maximum widths 10 and 30. Each timing includes
 validation, preprocessing, sorting or histogramming, and integration. Three
 repetitions use a seeded randomized method order; JIT compilation/first-call
 time and downloads are excluded and recorded separately. The machine is an
 \MachineCPU{}, Python \PythonVersion{}, with all compute libraries restricted
 to one thread. We compare NumPy sparse, Numba sparse, NumPy dense, Numba dense
 with precomputed nearest distances, and a separately implemented Numba dense
-method constructing every original sum-and-clip ramp directly. The principal
+method constructing every original sum-and-clip ramp directly. Its principal
 speed ratio uses the fastest median among all three dense implementations for
 each input, favoring the dense baselines.
 
@@ -346,54 +429,41 @@ The suffix changes prevalence, threshold ranks, and boundary geometry;
 reconstructs every preprocessing choice in the source model paper.
 
 \section{Results}
+% BEGIN V3 RESULTS: the measurement owner supplies the audited fragment.
+\IfFileExists{pr_engine_results.tex}{\input{pr_engine_results.tex}}{}
+% END V3 RESULTS
+
+The following exact benchmark predates the fixed-width radix implementation.
+It measures individual score-vector calls at widths 10 and 30, separately
+from the v3 three-model PR-selection workload. Its results are retained as
+corroborating evidence for the earlier comparison-based event reduction;
+they are not measurements of the new radix kernel or pooled with v3 ratios.
 \input{advancement_results.tex}
-\IfFileExists{selection_results.tex}{\input{selection_results.tex}}{}
 
-\subsection{Corpus-wide sampling effects and supporting measurements}
-The original fixed-corpus run provides the following threshold-sampling
-analysis and complementary dense-baseline measurements. These timings are
-retained as a separate run; they are not pooled with the current published-code
-comparisons.
-\input{result_body.tex}
+\subsection{Optional width reduction: fewer queries can cost more}
+The support-event curves also admit merge-aware width enclosures using
+established probability-box bounds. Their real-arithmetic guarantees and
+numerical implementation allowances are distinct. In the earlier 378-case
+study, fixed-tolerance refinement had median exact/adaptive runtime ratios
+of 0.966 at tolerance 0.01 and 0.467 at tolerance 0.001. The ensuing
+incremental racer agreed with exact decisions on all 126 development tasks
+on both CPUs, but increased the sum of per-task median latencies even at
+width 300, where its median speed ratio exceeded one. Fewer distinct width
+queries therefore do not establish a practical acceleration. The compiled
+PR-only follow-up and matched dense controls are separately specified and
+measured; they do not erase the earlier negative results. Full proofs,
+controller details, measurements, and development chronology are retained
+in Appendices~\ref{sec:width} and~\ref{sec:racing}.
 
-\subsection{Padding sensitivity and effect sizes}
-Table~\ref{tab:padding} reports all pairs, including small effects.
-All 350 series and 23 source families remain eligible in each variant.
-The largest newly computed exact-versus-dense discrepancy is
-$2.37\cdot10^{-13}$; 144 transformed small-case upstream checks also pass.
-Of 84 original PR reversals, 75 persist after filling and 74 on the suffix,
-all in the same direction. Filling removes nine and introduces 18; cropping
-removes ten and introduces 21. Thus documented zero padding alone does not
-explain the effect, while individual changed orders depend on preprocessing.
-
-\begin{table}[t]
-\centering
-\begin{tabular}{lrrrr}
-\toprule
-Variant & PR reversals & Series & Top changes & ROC reversals\\
-\midrule
-Released & 84 & 55 & 50 & 5\\
-First-score fill & 93 & 59 & 52 & 12\\
-Common suffix & 95 & 61 & 48 & 8\\
-\bottomrule
-\end{tabular}
-\caption{Each row has 2,100 unordered model-pair comparisons and 700
-series/width decisions. A reversal has opposite signs with both gaps
-above $10^{-10}$. Top changes require a unique best model in both calculations.}
-\label{tab:padding}
-\end{table}
-
-Most reversals have small margins. Requiring both exact and sampled PR gaps
-to be at least $10^{-3}$ leaves 38, 41, and 44 reversals in the three variants;
-at $10^{-2}$ each has five. On the common suffix the median, 95th-percentile,
-and maximum absolute PR errors are $0.002489$, $0.177261$, and $0.582639$.
-Giving source families equal weight yields reversal prevalences of
-2.44\%, 5.45\%, and 4.31\%, with descriptive family-bootstrap intervals
-[1.12,4.06]\%, [2.12,10.32]\%, and [1.84,7.59]\%, respectively.
-These differ from the pooled pair fractions 4.00\%, 4.43\%, and 4.52\%;
-singleton families cannot support precise population estimates.
-The result concerns approximation-induced metric order, not a change in
-detector quality or a claim that the exact metric is the best model selector.
+\subsection{Consequences of a fixed threshold grid}
+In the original corpus experiment, the reference's 250-threshold grid
+reverses 84 of 2,100 PR pair orders relative to exact evaluation. Most gaps
+are small: only five reversals have both gaps at least 0.01. Two fixed
+padding interventions retain 75 and 74 of the original reversals, while
+also introducing other changed orders. Appendix~\ref{app:corpus} retains
+the full original results, effect-size analysis, and padding sensitivity.
+These are consequences of metric approximation, not evidence that one
+detector is better or that VUS is the preferred selection criterion.
 
 \section{Limitations and reproducibility}
 The target is a specific, pinned scalar implementation. Exactness does not
@@ -407,27 +477,34 @@ Floating-point equivalence is numerical, not bitwise. The NumPy/Numba dense impl
 are independently written algorithmic baselines, not published competing
 systems. Published-code comparisons retain API and threshold-resolution
 differences. The actual released dtaianomaly comparison is bounded, and the
-Sylligardos fast implementation remains unbenchmarked.
+located FF-VUS implementation computes a different native metric and is
+audited semantically rather than ranked as an exact-compatible runtime baseline.
 
 The artifact includes source, tests, derivations, frozen protocols, download
 and source-checksum receipts, per-input timing and metric records, negative
-results, and figure/manuscript regeneration scripts. Experiments ran on CPUs on
-19--20 October 2026 UTC using released scores; no models were retrained.
-AI assistance supported software development, mathematical derivation,
+results, and figure/manuscript regeneration scripts. Dated receipts identify
+each CPU execution and protocol version; all use released scores and no
+models are retrained. AI systems were used extensively in software
+development, mathematical derivation,
 experiment analysis, manuscript drafting, and in-session review.
 Separate checks use distinct test implementations within this session,
 not external laboratory reproduction.
 
 \section{Conclusion}
-Inactive threshold events can be integrated analytically, giving exact
-scalar VUS with work governed by expanded anomaly support. On the tested
-corpus this evaluator is faster than released fast-VUS on both CPU systems,
-while strong dense methods retain favorable cases. Merge-aware coordinate
-order and p-box bounds additionally support width enclosures and incremental
-PR decisions. These extensions reduce distinct width queries but introduce
-substantial overhead: even where racing improves the median speed ratio,
-the sum of per-task medians increases. They remain optional APIs; full-width
-exact evaluation is the default.
+Score groups containing no maximum-support position can be eliminated while
+preserving their ROC rectangles and the complete ties at retained events.
+Combining this exact representation with standard fixed-width ranking and
+linear interval geometry gives $O(n+(L+1)Q)$ exhaustive evaluation under the
+stated arithmetic model. Both CPU environments pass the frozen exact-radix
+criterion over five controls. Primary-width median gains over released
+PR-only fast-VUS are $20.92\times$ and $14.54\times$; matched dense radix
+controls show that the gains extend beyond the shared sorting improvement.
+The descriptive per-case PR-only oracle still wins 40 Mac and 6 Linux
+primary cases, which remain in the artifact and plots. Width enclosures
+and adaptive decisions remain optional:
+their lower query counts alone do not justify replacing exhaustive exact
+evaluation. The contribution concerns efficient computation of a specified
+metric, not the validity of that metric or universal runtime superiority.
 
 \appendix
 \section{A fixed uniform-rank grid can lose almost all PR area}
@@ -478,6 +555,61 @@ sampled area is less than $\varepsilon/2$, proving the claim.
 \end{proof}
 The artifact includes deterministic checks at $T=250$, $m\in\{1,10\}$,
 $L\in\{0,6\}$, and $n\in\{10^4,10^5\}$ against the two closed-form values.
+\section{Earlier corpus sampling and padding studies}
+\label{app:corpus}
+\subsection{Corpus-wide sampling effects and supporting measurements}
+The original fixed-corpus run provides the following threshold-sampling
+analysis and complementary dense-baseline measurements. These timings are
+retained as a separate run; they are not pooled with the current published-code
+comparisons.
+\input{result_body.tex}
+
+\subsection{Padding sensitivity and effect sizes}
+Table~\ref{tab:padding} reports all pairs, including small effects.
+All 350 series and 23 source families remain eligible in each variant.
+The largest newly computed exact-versus-dense discrepancy is
+$2.37\cdot10^{-13}$; 144 transformed small-case upstream checks also pass.
+Of 84 original PR reversals, 75 persist after filling and 74 on the suffix,
+all in the same direction. Filling removes nine and introduces 18; cropping
+removes ten and introduces 21. Thus documented zero padding alone does not
+explain the effect, while individual changed orders depend on preprocessing.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Variant & PR reversals & Series & Top changes & ROC reversals\\
+\midrule
+Released & 84 & 55 & 50 & 5\\
+First-score fill & 93 & 59 & 52 & 12\\
+Common suffix & 95 & 61 & 48 & 8\\
+\bottomrule
+\end{tabular}
+\caption{Each row has 2,100 unordered model-pair comparisons and 700
+series/width decisions. A reversal has opposite signs with both gaps
+above $10^{-10}$. Top changes require a unique best model in both calculations.}
+\label{tab:padding}
+\end{table}
+
+Most reversals have small margins. Requiring both exact and sampled PR gaps
+to be at least $10^{-3}$ leaves 38, 41, and 44 reversals in the three variants;
+at $10^{-2}$ each has five. On the common suffix the median, 95th-percentile,
+and maximum absolute PR errors are $0.002489$, $0.177261$, and $0.582639$.
+Giving source families equal weight yields reversal prevalences of
+2.44\%, 5.45\%, and 4.31\%, with descriptive family-bootstrap intervals
+[1.12,4.06]\%, [2.12,10.32]\%, and [1.84,7.59]\%, respectively.
+These differ from the pooled pair fractions 4.00\%, 4.43\%, and 4.52\%;
+singleton families cannot support precise population estimates.
+The result concerns approximation-induced metric order, not a change in
+detector quality or a claim that the exact metric is the best model selector.
+
+\input{width_method.tex}
+\input{width_results.tex}
+
+\input{racing_method.tex}
+\IfFileExists{selection_results.tex}{\input{selection_results.tex}}{}
+\input{pr_engine_method.tex}
+
 \begin{thebibliography}{99}
 \bibitem{paparrizos2022} J. Paparrizos et al. Volume Under the Surface: A New Accuracy Evaluation Measure for Time-Series Anomaly Detection. PVLDB 15(11), 2022. \url{https://www.vldb.org/pvldb/vol15/p2774-paparrizos.pdf}.
 \bibitem{boniol2025} P. Boniol et al. VUS: Effective and Efficient Accuracy Measures for Time-Series Anomaly Detection. VLDB Journal 34, 2025. \url{https://arxiv.org/abs/2502.13318}.
@@ -485,6 +617,10 @@ $L\in\{0,6\}$, and $n\in\{10^4,10^5\}$ against the two closed-form values.
 \bibitem{boxer} P. Stergiotis. boxer/adscore, v0.0.23, 2026. \url{https://pkg.go.dev/github.com/stergiotis/boxer/public/analytics/timeseries/adscore}.
 \bibitem{dtaianomaly} ML-KULeuven. dtaianomaly, pinned revision \texttt{557b4357}, 13 October 2026. \url{https://github.com/ML-KULeuven/dtaianomaly}.
 \bibitem{klein2026} T. L. Klein. fast-VUS. Software repository, first commit 12 October 2026, audited revision \texttt{1bae859f}, 16 October 2026. \url{https://github.com/tomlouisklein/fast-VUS}.
+\bibitem{ffvus2026} E. Sylligardos. FF-VUS implementation in aVUSi. Software, audited revision \texttt{facf4362}, 23 June 2026. \url{https://github.com/doanthihoaithu/aVUSi}.
+\bibitem{benchopt2026} Benchopt contributors. Time-series foundation-model benchmark: VUS metrics. Software, audited revision \texttt{2b55ccb1}, 29 September 2026. \url{https://github.com/benchopt/benchmark_tsfm}.
+\bibitem{herf2001radix} M. Herf. \emph{Radix Tricks}. December 2001. \url{https://stereopsis.com/radix.html}. Accessed 2026-10-21.
+\bibitem{demaine2011radix} E. Demaine. \emph{Lecture 7: Linear-Time Sorting}. MIT OpenCourseWare, 6.006 Introduction to Algorithms, Fall 2011. \url{https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/bf7d79105762bf79bbc0925438e1468a_MIT6_006F11_lec07.pdf}. Accessed 2026-10-21.
 \bibitem{utkin2009} L. Utkin and S. Destercke. Computing Expectations with Continuous P-Boxes: Univariate Case. International Journal of Approximate Reasoning 50(5), 778--798, 2009. \url{https://doi.org/10.1016/j.ijar.2009.02.004}.
 \bibitem{troffaes2011} M. C. M. Troffaes and S. Destercke. Probability Boxes on Totally Preordered Spaces for Multivariate Modelling. International Journal of Approximate Reasoning 52, 767--791, 2011. \url{https://doi.org/10.1016/j.ijar.2011.02.001}.
 \bibitem{zhu2026} X. Zhu, L. Carpentier, M. Verbeke. When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection. ICLR 2026. Scores: KU Leuven RDR, V1, \url{https://doi.org/10.48804/MCVI4N}.

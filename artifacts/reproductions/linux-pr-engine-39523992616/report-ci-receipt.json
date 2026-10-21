@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Transport and source-binding checks for the remotely generated report; no local statistics or metric execution",
+  "ci_run_url": "https://github.com/mandu5/sparse-vus/actions/runs/39533404287",
+  "ci_commit": "379f6325b75c5f28d61e42b14c92435a077c1182",
+  "artifact": "verified-pr-engine-linux-report",
+  "report_files_sha256": {
+    "report.json": "46c6fba361e4e9f021781a08dd72050b43df8ded160883e35ed6a3594355f837",
+    "report.md": "7704bc0872e0eaaac6e54f518a8355d6ef4d3dd081d88daa9554d4feb69736aa",
+    "report.tex": "a275033a2cf02e039e1846f8d2fa209e3284160cad0cce29f4a0148c5efc9849"
+  },
+  "reporter_sha256": "8bdb7290d845837a69521ee7fc6375b55c4ef781016dd1d93d9e9c40917e10bb"
+}

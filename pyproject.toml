@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sparse-vus"
-version = "0.2.0"
-description = "Exact and error-bounded VUS evaluation through sparse events and width geometry"
+version = "0.3.0"
+description = "Support-sensitive exact VUS evaluation with binary64 radix preparation"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"

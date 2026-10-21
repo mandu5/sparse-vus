@@ -1,0 +1,63 @@
+{
+  "scope": "Exploratory only; six largest development series by existing metadata, all 3 models, width30; no holdout",
+  "selection": [
+    {
+      "series": "173_MITDB_id_4_Medical_tr_13620_1st_13720",
+      "family": "MITDB",
+      "n": 650000,
+      "support_fraction": 0.1117723076923077,
+      "label_sha256": "3d5bf0285e945e291cceb9ead0549682026b87708ef001a4f4529d8e6eacb404",
+      "score_sha256": "36caa26ea7d0c84eaad01f7007f743e192f517ed33ad988daf3bc8d2b47a1bd0"
+    },
+    {
+      "series": "170_MITDB_id_1_Medical_tr_17675_1st_17775",
+      "family": "MITDB",
+      "n": 500000,
+      "support_fraction": 0.04863,
+      "label_sha256": "a606f3cb9297bd82531b7509dfff6afc909c01cc04fb13a599a8a6455ae33ca7",
+      "score_sha256": "42a8da883ede726db575c95b677a6e4dc0a0839685db2c0669358f4e1737de0b"
+    },
+    {
+      "series": "550_SWaT_id_1_Sensor_tr_43700_1st_43800",
+      "family": "SWaT",
+      "n": 419919,
+      "support_fraction": 0.12255458790862048,
+      "label_sha256": "5bfacad8722285d70fe3326c51f07002b86bf429f5bf8b5be9b2806debd66784",
+      "score_sha256": "29ba3853cc68f553228f8eb983164f219a87b4a9635e6ca9af38c2ec71d03bbb"
+    },
+    {
+      "series": "286_CATSv2_id_1_Sensor_tr_17792_1st_17892",
+      "family": "CATSv2",
+      "n": 300000,
+      "support_fraction": 0.05123333333333333,
+      "label_sha256": "5d2a161e8bd6cd5874d119e64b2040637ec937d3e6136a8fcb45f2cb772fb027",
+      "score_sha256": "5482bc3e9837a7650448e9ba4242f394cafeb35dcb25edc23911aba762e049c0"
+    },
+    {
+      "series": "243_SVDB_id_7_Medical_tr_11393_1st_11493",
+      "family": "SVDB",
+      "n": 180400,
+      "support_fraction": 0.036069844789356986,
+      "label_sha256": "811bae6083df6db794ad97bc181d915137e0170f3275d85c40e47292cfdf04d8",
+      "score_sha256": "21da1f39c3888fe9a9dace749b6428b07f1f835fde197c06ba5ecc1569deac3a"
+    },
+    {
+      "series": "216_LTDB_id_1_Medical_tr_500_1st_266",
+      "family": "LTDB",
+      "n": 100000,
+      "support_fraction": 0.18967,
+      "label_sha256": "254e87e9e148a0f9921fd4c4aa9e04cbf9d70cbf923f83679601a9bf44785dfa",
+      "score_sha256": "7d75322c59de0be5d0e42b9b34e1a2c4d5798884f80c405f2e386c038e0e5fae"
+    }
+  ],
+  "cases": 18,
+  "repetitions": 3,
+  "seed": 12971920261021,
+  "methods": [
+    "current",
+    "counting",
+    "u16",
+    "u64_timsort"
+  ],
+  "no_publishable_timing_claim": true
+}

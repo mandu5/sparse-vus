@@ -1,0 +1,87 @@
+name: PR engine held-out CPU benchmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      split:
+        description: Frozen workload partition
+        required: true
+        default: holdout
+        type: choice
+        options: [development, holdout]
+  push:
+    branches: [research/pr-engine-20261021]
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[pr-engine]')
+    runs-on: ubuntu-24.04
+    # The holdout has 5.06x as many input positions as development, and keeps
+    # every expensive width-300 external comparison. Do not truncate this
+    # prospectively declared workload to the primary width.
+    timeout-minutes: 240
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      NUMBA_NUM_THREADS: "1"
+      PR_ENGINE_SPLIT: ${{ inputs.split || 'holdout' }}
+      PR_ENGINE_OUTPUT: artifacts/reproductions/linux-pr-engine-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+      - run: python -m pip install '.[accelerate,research]'
+      - run: python experiments/fast_vus_adapter.py --fetch
+      - run: python experiments/benchopt_vus_adapter.py --fetch
+      - name: Fetch score bytes without replacing released evidence
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+          import subprocess
+          import sys
+          root = Path.cwd()
+          staging = root / '.cache' / 'pr-engine-data-fetch'
+          (staging / 'experiments').mkdir(parents=True)
+          (staging / 'artifacts').mkdir()
+          for name in ('fetch_score_ranges.py', 'fetch_data.py',
+                       'data_manifest.json', 'data_hashes.json'):
+              shutil.copy2(root / 'experiments' / name,
+                           staging / 'experiments' / name)
+          subprocess.run([sys.executable,
+                          str(staging / 'experiments/fetch_score_ranges.py')],
+                         check=True)
+          (root / 'cache').symlink_to(staging / 'cache', target_is_directory=True)
+          PY
+      - name: Freeze metadata and execute paired whole-call experiment
+        run: |
+          python - <<'PY'
+          import hashlib
+          import os
+          from pathlib import Path
+          import subprocess
+          import sys
+          output = Path(os.environ['PR_ENGINE_OUTPUT'])
+          command = [sys.executable, 'experiments/benchmark_pr_engine.py',
+                     '--split', os.environ['PR_ENGINE_SPLIT'], '--output', str(output)]
+          subprocess.run(command + ['--freeze-only'], check=True)
+          import shutil
+          shutil.copytree('.cache/pr-engine-data-fetch/artifacts',
+                          output / 'data-fetch-receipts')
+          frozen = hashlib.sha256((output / 'protocol.json').read_bytes()).hexdigest()
+          subprocess.run(command + ['--execute-frozen', frozen, '--cpu-clearance',
+              'Dedicated public GitHub Actions job; serial methods and steps; hosted '
+              'hardware and background host load are not under our control.'], check=True)
+          PY
+      - name: Independent raw-receipt audit
+        run: python experiments/audit_pr_engine.py "$PR_ENGINE_OUTPUT" --output "$PR_ENGINE_OUTPUT/audit.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: linux-pr-engine
+          path: ${{ env.PR_ENGINE_OUTPUT }}
+          if-no-files-found: error

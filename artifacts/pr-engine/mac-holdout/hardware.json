@@ -1,0 +1,11 @@
+{
+  "captured_utc": "2026-10-21T01:52:46.921555+00:00",
+  "method": "Read-only sysctl metadata during execution; no benchmark parameter or process setting changed.",
+  "metadata": {
+    "machdep.cpu.brand_string": "Apple M1 Pro",
+    "hw.physicalcpu": "10",
+    "hw.logicalcpu": "10",
+    "hw.memsize": "17179869184"
+  },
+  "scope": "Available host resources, not process RSS, reserved cores, or clock isolation."
+}

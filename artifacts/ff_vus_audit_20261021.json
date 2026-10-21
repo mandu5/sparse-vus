@@ -1,0 +1,184 @@
+{
+  "status": "COUNTEREXAMPLES_REPRODUCED",
+  "source": {
+    "repository": "https://github.com/doanthihoaithu/aVUSi",
+    "revision": "facf4362092525671215031048a75842b9d6d632",
+    "revision_date": "2026-06-23T21:55:37Z",
+    "ffvus_first_file_commit": "921e3bc2ec7b9484733a976434b9390fdacaa56d",
+    "ffvus_first_file_date": "2026-06-13T20:49:03Z",
+    "code_attribution": "File headers name Emmanouil Sylligardos and FF-VUS.",
+    "license": "Repository MIT, copyright 2026 Thu T. H. Doan; no upstream source vendored here.",
+    "sources": {
+      "vus_torch.py": {
+        "url": "https://raw.githubusercontent.com/doanthihoaithu/aVUSi/facf4362092525671215031048a75842b9d6d632/3_metric_calculator/metrics/ffvus/vus_torch.py",
+        "sha256": "bed53590c5981fbb06eb858007869a90617730f9c5a2738595352323b93e0224"
+      },
+      "vus_numpy.py": {
+        "url": "https://raw.githubusercontent.com/doanthihoaithu/aVUSi/facf4362092525671215031048a75842b9d6d632/3_metric_calculator/metrics/ffvus/vus_numpy.py",
+        "sha256": "5140c7e1e0ad4d83f3a256cce3a7bafeff4fe4df0e360cb98c24153958fcf973"
+      },
+      "ffvus_metrics.py": {
+        "url": "https://raw.githubusercontent.com/doanthihoaithu/aVUSi/facf4362092525671215031048a75842b9d6d632/3_metric_calculator/metrics/ffvus/ffvus_metrics.py",
+        "sha256": "49cd9c46b2af1dea338f39c36dd4c91e88fe728eed1421aeba0951db9a2dd446"
+      },
+      "LICENSE": {
+        "url": "https://raw.githubusercontent.com/doanthihoaithu/aVUSi/facf4362092525671215031048a75842b9d6d632/LICENSE",
+        "sha256": "034cb0ba268aa950853dace0de40ac90173dff46fae558e49ae3f6f1f6b80815"
+      },
+      "official_metrics.py": {
+        "url": "https://raw.githubusercontent.com/thedatumorg/VUS/467bace0c103f5c2bdb4900306d82939bcac8ff9/vus/utils/metrics.py",
+        "sha256": "bd547c9746fc1b9bbce2895e20cb156f97d23365d5dce8c2a3fab90622ccdced"
+      }
+    },
+    "paper_linkage": "Connection to the 2025 PhD workshop timing version is not independently established."
+  },
+  "numpy": "1.26.4",
+  "torch": "2.10.0",
+  "device": "cpu",
+  "counterexamples": [
+    {
+      "name": "wrapper_rounding_width_zero",
+      "labels": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "scores": [
+        0.101,
+        0.102,
+        0.001
+      ],
+      "max_buffer": 0,
+      "ffvus_score_input": [
+        0.1,
+        0.1,
+        0.0
+      ],
+      "ffvus_pr": 0.5,
+      "official_pr": 1.0,
+      "sparse_pr": 1.0,
+      "absolute_difference": 0.5
+    },
+    {
+      "name": "native_same_numeric_width",
+      "labels": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scores": [
+        0.0,
+        1.0,
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        -1.0
+      ],
+      "max_buffer": 2,
+      "ffvus_score_input": [
+        0.0,
+        1.0,
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        -1.0
+      ],
+      "ffvus_pr": 0.7200067639350891,
+      "official_pr": 0.5923495156295323,
+      "sparse_pr": 0.5923495156295323,
+      "absolute_difference": 0.1276572483055568
+    },
+    {
+      "name": "native_overlap",
+      "labels": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "scores": [
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        1.0
+      ],
+      "max_buffer": 2,
+      "ffvus_score_input": [
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        1.0
+      ],
+      "ffvus_pr": 0.7326459884643555,
+      "official_pr": 0.6080717853590961,
+      "sparse_pr": 0.6080717853590961,
+      "absolute_difference": 0.12457420310525935
+    }
+  ],
+  "matched_radius_geometry": {
+    "ff_slope": 2,
+    "official_width": 4,
+    "labels": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scores": [
+      0.0,
+      1.0,
+      5.0,
+      4.0,
+      3.0,
+      2.0,
+      -1.0
+    ],
+    "ff_width2_weights": [
+      0.0,
+      0.7071067690849304,
+      0.8535534143447876,
+      1.0,
+      0.8535534143447876,
+      0.7071067690849304,
+      0.0
+    ],
+    "official_width4_weights": [
+      0,
+      0.7071067811865476,
+      0.8660254037844386,
+      1,
+      0.8660254037844386,
+      0.7071067811865476,
+      0
+    ],
+    "ff_width2_pr": 0.8829716444015503,
+    "official_width4_pr": 0.8925296679207713,
+    "absolute_difference": 0.00955802351922097
+  },
+  "existence_memory_fallback": {
+    "direct": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "fallback": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "note": "Internal existence function; explicit memory budgets exercise both unmodified branches. No speed measurement."
+  },
+  "no_performance_claim": true
+}

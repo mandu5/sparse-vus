@@ -1,66 +1,184 @@
 # Sparse VUS
 
-Exact scalar VUS-ROC and VUS-PR, plus merge-aware error bounds over buffer
-widths. The implementation targets a pinned official VUS definition, including
-dynamic label mass and expanded-interval existence.
+Exact scalar VUS-ROC and VUS-PR through support-event elimination. The new
+radix evaluator combines this reduction with established fixed-width score
+ordering and linear interval geometry. For finite binary64 scores it takes
+`O(n + (L+1)Q)` time under the stated word-RAM and unit-cost metric-arithmetic
+assumptions: `n` is sequence length, `L` the maximum buffer width, and `Q` the
+number of positions in maximum expanded anomaly support. Complete global
+score ties and the integral contributions of omitted events are preserved.
 
-For sequence length `n`, maximum buffer width `L`, and `Q` positions in the
-maximum expanded anomaly support, the algorithm takes
-`O(n log(Q+1) + (L+1)Q)` time. The compiled scalar implementation uses
-`O(n+Q)` space. The NumPy diagnostic version additionally retains `O(L)`
-per-width areas. `Q` counts positions, not distinct scores.
+**v0.3.0 research artifact.** Both the Linux and Mac v3 holdouts
+are complete, with independent audits passing all 924 tasks on each platform.
+Release packaging is in progress.
+Stable [v0.2.0 assets](https://github.com/mandu5/sparse-vus/releases/tag/v0.2.0)
+remain unchanged; their earlier measurements are separated below.
 
-The contribution is support-event elimination with exact integration and
-off-support rank counting. Fast VUS and large CPU/GPU speedups have prior art,
-which we distinguish from this support-sensitive reduction. See [the proof](docs/theory.md),
-[prior art and licenses](THIRD_PARTY.md), and [the manuscript](paper/main.pdf).
+The target is a pinned official VUS definition, including dynamic label mass
+and expanded-interval existence. The contribution is its exact support-event
+representation and composition with existing ranking techniques. See the
+[event proof](docs/theory.md), [radix argument and prior techniques](docs/radix_prior_art_20261021.md),
+[attribution and licenses](THIRD_PARTY.md), and [working manuscript source](paper/main.tex).
 
-**v0.2.0 measured result:** against pinned, unmodified
-[Klein fast-VUS](https://github.com/tomlouisklein/fast-VUS/tree/1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00)
-at all thresholds, Sparse VUS is faster on all 2,100 cases on each of two
-platforms: median **8.38× on Apple M1 Pro** and **4.55× on AMD EPYC x86**.
-Klein returns PR only; Sparse VUS returns both ROC and PR. Against the per-case
-fastest tested exact comparator, the medians are **2.04×** and **1.35×**, with
-209 and 574 slower cases respectively. The per-case fastest comparator is an
-oracle reference, not a deployable algorithm. These are whole-call,
-single-thread, warmed-JIT measurements on released scores, not detector
-training/inference acceleration or a global SOTA claim.
-See [raw measurements and verified analysis](artifacts/advancement/analysis/analysis.json)
-and the [Linux benchmark run](https://github.com/mandu5/sparse-vus/actions/runs/39422191526).
+## Install and use the exact radix APIs
 
-## Install and use
-
-Python 3.11 or 3.12 is recommended for the tested research environment.
+Use the research branch for these new entry points; they are absent from
+stable v0.2.0. Numerical CI covers Python 3.11 and 3.12.
 
 ```bash
-git clone https://github.com/mandu5/sparse-vus.git
+git clone --branch research/pr-engine-20261021 https://github.com/mandu5/sparse-vus.git
 cd sparse-vus
 python3.12 -m venv .venv
 source .venv/bin/activate
-python -m pip install '.[accelerate,research]'
+python -m pip install '.[accelerate]'
 ```
 
-The measured Python 3.12.4 environment is recorded in
-[requirements-benchmark.txt](experiments/requirements-benchmark.txt) and the
-benchmark environment receipts. Use that pin file when recreating the measured
-dependency versions; the package itself supports the ranges in `pyproject.toml`.
+The `accelerate` extra supplies Numba. Add `research` when running the experiment
+suite. The base `import sparse_vus` remains NumPy-only; compiled APIs are imported
+explicitly from their submodules.
 
 ```python
-from sparse_vus import sparse_vus
+from sparse_vus.radix import sparse_pr_radix_jit, sparse_vus_radix_jit
 
 labels = [0, 1, 0, 0, 1, 0]
-scores = [1, 2, 3, 4, 5, 6]
-vus_roc, vus_pr = sparse_vus(labels, scores, max_buffer=4)
-# (0.6892652251673258, 0.6834092121537311)
+scores = [1, 2, 3, 4, 5, 6]  # Higher scores indicate more anomalous points.
+vus_pr = sparse_pr_radix_jit(labels, scores, max_buffer=4)
+vus_roc, vus_pr = sparse_vus_radix_jit(labels, scores, max_buffer=4)
 ```
 
-For the compiled implementation:
+`sparse_pr_radix_jit` returns one Python float and computes PR only.
+`sparse_vus_radix_jit` returns `(ROC, PR)`. Both return the exhaustive
+score-threshold integral averaged over all integer widths from zero through `max_buffer`.
+They accept the same finite float64-convertible scores and binary labels as
+the existing APIs, including negative scores and ties. Signed zeros form one
+tie; integer values indistinguishable after float64 conversion also form one
+tie. Inputs must be one-dimensional, equally long, and contain both label
+classes; `max_buffer` must be a nonnegative integer. Neither API returns
+per-width arrays or a full surface.
 
-```python
-from sparse_vus.compiled import sparse_vus_jit
+The first call includes Numba compilation/cache initialization. Repeated calls
+still include input validation and preparation; there is no reusable prepared
+object in these public signatures. Numerical agreement is tolerance-based,
+not a promise of bitwise-identical floating-point sums.
 
-vus_roc, vus_pr = sparse_vus_jit(labels, scores, max_buffer=4)
-```
+The paired radix kernel uses `O(n+Q)` auxiliary space. The PR-only completion
+interface stores `L+1` scalar values and uses `O(n+Q+L)` space. The earlier
+comparison-based evaluator takes `O(n log(Q+1) + (L+1)Q)` time and remains
+available as `sparse_vus.sparse_vus` (NumPy) or
+`sparse_vus.compiled.sparse_vus_jit` (Numba), both returning `(ROC, PR)`.
+`Q` counts positions, not distinct scores.
+
+## V3 holdout: audited Linux and Mac results
+
+The frozen workload contains **308 series from 17 represented families** of
+the original 23-family corpus, with the same three released model score vectors.
+Each task evaluates all three models and returns the best-PR model set,
+retaining numerical ties. Width 30 is primary, 100 secondary, and 300 a stress
+regime: **924 tasks per platform**. These series were held out from this new
+procedure's 42-series development run, but were studied in earlier corpus
+experiments; this is a policy holdout within known families.
+
+Measurements use one compute thread, warmed JIT code, three repetitions, and
+randomized method order within each task. Each timed whole task includes
+validation, ranking/preparation, metric/controller work, and winner construction.
+Detector inference, input loading, compilation, and downloads are excluded.
+Hosted Linux hardware/background load is not controlled. The Mac was an active
+user machine; its [starting process snapshot](artifacts/pr-engine/mac-holdout/background-load-start.json)
+recorded an unrelated worker at roughly 100% CPU. That snapshot does not establish
+continuous load throughout the run. Each platform is reported separately;
+earlier versions and cross-platform times are never pooled.
+
+| Platform | Independent audit | Exact-radix primary decision | Maximum exact PR discrepancy |
+|---|---|---|---:|
+| Hosted Linux x86_64 | PASS, all 924 tasks | PASS | 1.3322676295501878e-15 |
+| Mac arm64 | PASS, all 924 tasks | PASS | 1.5543122344752192e-15 |
+
+The discrepancy is relative to the exhaustive comparison-based sparse PR
+control across audited exact methods, not an error against symbolic real
+arithmetic. On each platform, the frozen decision requires both geometric-mean and
+aggregate-ratio lower 95% family-cluster bounds above one against all five
+marked controls, plus correctness. Klein and Benchopt comparisons are
+descriptive and are outside that decision.
+
+**Primary width, L=30:** ratios are comparator time / exact sparse-radix
+PR time; values above one favor radix PR. Brackets are audited 95%
+family-cluster intervals. Aggregate ratios divide sums of per-case median
+times, not observed batch wall times. F/S counts all 308 cases where radix PR
+is faster/slower; these rows have no timing ties. Decisions use unrounded bounds.
+
+**Linux**
+
+| Comparator | Work | Median ratio | Geomean [95% CI] | Aggregate [95% CI] | F/S |
+|---|---|---:|---:|---:|---:|
+| Comparison-based sparse † | PR only | 1.987 | 1.916 [1.839, 2.013] | 1.955 [1.745, 2.095] | 304/4 |
+| Direct dense † | PR only | 4.894 | 4.161 [3.170, 5.008] | 5.385 [4.241, 6.191] | 308/0 |
+| Nearest-distance dense † | **ROC+PR** | 6.917 | 5.890 [4.639, 6.923] | 7.214 [5.688, 8.187] | 308/0 |
+| Direct dense radix † | PR only | 4.419 | 3.756 [2.904, 4.486] | 4.708 [3.794, 5.276] | 308/0 |
+| Nearest-distance dense radix † | PR only | 4.791 | 4.047 [3.142, 4.821] | 5.010 [3.933, 5.643] | 306/2 |
+| Klein fast-VUS | PR only | 14.538 | 13.814 [11.639, 15.930] | 11.232 [10.034, 12.514] | 308/0 |
+| Benchopt VUS | **ROC+PR** | 21.493 | 20.973 [18.481, 23.617] | 22.991 [19.193, 30.937] | 308/0 |
+
+**Mac**
+
+| Comparator | Work | Median ratio | Geomean [95% CI] | Aggregate [95% CI] | F/S |
+|---|---|---:|---:|---:|---:|
+| Comparison-based sparse † | PR only | 1.774 | 1.620 [1.421, 1.920] | 1.960 [1.511, 2.323] | 271/37 |
+| Direct dense † | PR only | 3.331 | 3.160 [2.772, 3.506] | 4.255 [3.349, 5.112] | 306/2 |
+| Nearest-distance dense † | **ROC+PR** | 5.050 | 4.840 [4.356, 5.368] | 6.140 [4.974, 7.181] | 308/0 |
+| Direct dense radix † | PR only | 2.677 | 2.617 [2.318, 2.870] | 3.595 [2.752, 4.514] | 303/5 |
+| Nearest-distance dense radix † | PR only | 2.599 | 2.519 [2.297, 2.726] | 3.298 [2.624, 3.980] | 307/1 |
+| Klein fast-VUS | PR only | 20.925 | 22.360 [19.764, 24.238] | 19.450 [17.910, 20.623] | 308/0 |
+| Benchopt VUS | **ROC+PR** | 35.420 | 37.572 [34.754, 41.101] | 37.990 [34.728, 42.965] | 308/0 |
+
+† Five frozen primary controls. The two dense radix PR-only controls match
+fixed-width ranking and avoid extra ROC work, while retaining full dense
+evaluation. All exhaustive methods evaluate the same all-threshold,
+all-integer-width target. The intervals describe variation across families, not timing
+uncertainty from three repetitions.
+
+The **post-protocol descriptive PR-only oracle** selects the fastest control
+per case from comparison-based sparse PR, direct dense PR, Klein PR, and both
+dense radix PR-only controls. It has no confidence intervals and changes no
+frozen decision. All cases, including losses, are retained:
+
+| Platform | Width | Median ratio | Geomean | Aggregate | Radix faster/slower | Worst radix slowdown |
+|---|---:|---:|---:|---:|---:|---:|
+| Linux | 30 | 1.986 | 1.879 | 1.928 | 302/6 | 1.239× |
+| Linux | 100 | 1.715 | 1.655 | 1.612 | 301/7 | 1.227× |
+| Linux | 300 | 1.275 | 1.309 | 1.235 | 294/14 | 1.299× |
+| Mac | 30 | 1.709 | 1.582 | 1.924 | 268/40 | 1.883× |
+| Mac | 100 | 1.557 | 1.500 | 1.734 | 286/22 | 1.618× |
+| Mac | 300 | 1.278 | 1.293 | 1.375 | 285/23 | 1.640× |
+
+Both frozen racing decisions at width 30 failed on each platform. Racing results vary
+by width; the full reports include their costs, exact completion work, and
+negative cases. The study evaluates computation of the pinned metric; it
+does not establish detector quality, a global CPU/GPU speed record, or venue
+acceptance.
+
+See the complete [Linux report](artifacts/reproductions/linux-pr-engine-39523992616/report.md),
+[machine-readable report](artifacts/reproductions/linux-pr-engine-39523992616/report.json),
+[independent audit](artifacts/reproductions/linux-pr-engine-39523992616/audit.json),
+[raw task records](artifacts/reproductions/linux-pr-engine-39523992616/measurements.jsonl),
+and [report CI receipt](artifacts/reproductions/linux-pr-engine-39523992616/report-ci-receipt.json).
+The corresponding Mac [report](artifacts/pr-engine/mac-holdout/report.md),
+[machine-readable report](artifacts/pr-engine/mac-holdout/report.json),
+[independent audit](artifacts/pr-engine/mac-holdout/audit.json), and
+[raw task records](artifacts/pr-engine/mac-holdout/measurements.jsonl) retain all cases.
+The [Linux environment receipt](artifacts/reproductions/linux-pr-engine-39523992616/environment.json)
+and [Mac environment receipt](artifacts/pr-engine/mac-holdout/environment.json)
+record their actual dependency versions. The older
+[benchmark requirements file](experiments/requirements-benchmark.txt) pins the
+historical Mac environment and is not the environment of this Linux run.
+
+## Optional width and model-selection APIs
+
+`sparse_vus.fast_racing.race_pr_models_fast` adds a compiled PR-only selection
+controller. It retains each computed width once and completes only unseen
+widths when its endpoint budget is reached. `preparation="radix"` selects the
+new preparation; the default is `"histogram"`. The memory budget limits retained
+curve coordinates per model, not process RSS or total runtime. Its guarded
+Float64 bounds carry the same numerical limitation as the width API below.
 
 For bounds on the discrete width average:
 
@@ -75,21 +193,22 @@ print(result.evaluated_count, result.total_widths)
 The half-width tolerance applies to both ROC and PR. The theorem is in real
 arithmetic; the implementation uses ordinary float64 with an empirical guard,
 not formal outward-rounded interval arithmetic. `atol=0` evaluates every width.
-Bounds can cost more than exact evaluation: at tolerance 0.01, median speed
+In the earlier v0.2.0 study, bounds could cost more than exact evaluation:
+at tolerance 0.01, median speed
 ratios on the 42-series subset are 0.83×, 0.90×, and 1.31× for maximum widths
 30, 100, and 300. Width 300 is a stress regime. All 378 measured intervals
 contain the exact values within the stated numerical audit tolerance.
 The [width proof](docs/theory_advancement_20261020.md) explains why PR needs
 p-box bounds even between interval merges.
 
-Use `sparse_vus_jit` as the default for repeated exact evaluations. The optional
+The v0.2.0 compiled exact entry point remains `sparse_vus_jit`. The optional
 `sparse_vus.racing.race_pr_models(labels, scores_by_model, max_buffer)` selects
-the highest PR model by refining width bounds. Its decisions match exact
-selection in all 126 tasks on each platform, but its aggregate measured cost
+the highest PR model by refining width bounds. In that earlier study, its
+decisions matched exact selection in all 126 tasks on each platform, but its aggregate measured cost
 is **1.65× higher on macOS and 1.49× higher on Linux**. Positive median speed
 ratios occur only at width 300, and total time is still higher there. The
 fixed-tolerance selector is also slower in the median at all tested widths.
-These methods are released for investigation; fewer width queries do not
+These optional methods support investigation; fewer width queries do not
 imply lower runtime. See the [complete selection results](artifacts/advancement/selection-analysis/analysis.json)
 and [scientific assessment](docs/scientific_review_20261020.md).
 
@@ -106,9 +225,11 @@ The official reference is fetched into ignored cache rather than vendored.
 Its SHA-256 and commit are pinned.
 
 ```bash
+python -m pip install '.[accelerate,research]'
 python experiments/fetch_reference.py
 python experiments/dtaianomaly_adapter.py --fetch
 python experiments/fast_vus_adapter.py --fetch
+python experiments/benchopt_vus_adapter.py --fetch
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMBA_NUM_THREADS=1 python -m pytest -q
 python experiments/independent_review_check.py
 ```
@@ -116,10 +237,38 @@ python experiments/independent_review_check.py
 The main suite includes 1,000 distinct randomized cases, six structured edge
 cases, input validation, independently implemented dense baselines, sampled
 threshold checks, and a real compiled dtaianomaly adapter. Test counts are
-not counts of independent datasets. The independent reviewer also exercised
-1,960 exhaustive tiny-domain cases and 120 additional randomized cases.
+not counts of independent datasets. A separately authored in-session AI check
+also exercised 1,960 exhaustive tiny-domain cases and 120 additional randomized cases.
 
-## Reproduce public-score experiments
+## Reconstruct the completed v3 reports
+
+After installing the research extra and fetching the pinned references above:
+
+```bash
+python experiments/report_pr_engine.py \
+  artifacts/reproductions/linux-pr-engine-39523992616 \
+  --output ../sparse-vus-linux-v3-report/report --tex
+python experiments/report_pr_engine.py \
+  artifacts/pr-engine/mac-holdout \
+  --output ../sparse-vus-mac-v3-report/report --tex
+```
+
+Each command reconstructs a report from its recorded tasks, audited intervals, and
+source bindings. It does not rerun metric kernels, bootstrap resampling, or
+the source-member audit. The latter additionally requires the verified score
+and label cache and is implemented in
+[audit_pr_engine.py](experiments/audit_pr_engine.py).
+
+For new timings, the [v3 benchmark workflow](.github/workflows/pr-engine-benchmark.yml)
+contains the complete staged-download, freeze, execution, and audit sequence.
+Its runner uses `--freeze-only`, then `--execute-frozen` with the new protocol's
+SHA-256, and writes to a new run directory. Preserve the tracked original
+release anchors and the separate `source-v2` snapshot. Fetch datasets through
+the staging helper/workflow so fresh download receipts cannot replace those
+anchors. Use the newly recorded environment and never substitute old timings.
+The next section reproduces the earlier v0.1.0 workload instead.
+
+## Reproduce the original v0.1.0 public-score experiments
 
 The frozen corpus consists of all 350 common TSB-AD-U evaluation series for
 three released score vectors: Chronos-Bolt base, Time-MoE 200M, and TimesFM
@@ -157,7 +306,7 @@ fix selection and analysis before evaluation. All released score vectors are
 used unchanged, including the source README's documented zero padding. This
 tests metric computation and does not reproduce the source model leaderboard.
 
-Main timings use three randomized-order repetitions and one compute thread.
+These original timings use three randomized-order repetitions and one compute thread.
 Compilation, source download, and data download are excluded and reported
 separately. The principal exact baseline is the fastest of NumPy dense,
 Numba dense with nearest distances, and independent Numba direct-ramp dense,
@@ -165,9 +314,24 @@ chosen separately for each input. The actual dtaianomaly implementation is
 also tested at 250 and all thresholds on a frozen 12-series NAB subset.
 The official 250-threshold baseline is a different-resolution computation.
 
-## Original retained results and limits
+## Earlier comparison-based evidence: v0.2.0 and v0.1.0
 
-On **350 public series from 23 dataset families**, with three released model
+These measurements predate the radix implementation and evaluate individual
+score-vector calls, rather than the v3 three-model selection task. They are
+retained separately and are not pooled with the new holdout ratios.
+
+**v0.2.0:** against pinned, unmodified
+[Klein fast-VUS](https://github.com/tomlouisklein/fast-VUS/tree/1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00)
+at all thresholds, the earlier paired Sparse VUS evaluator was faster on all
+2,100 cases on each of two platforms: median **8.38× on Apple M1 Pro** and
+**4.55× on AMD EPYC x86**. Klein returns PR only; this Sparse VUS path returns
+both ROC and PR. Against the per-case fastest tested exact comparator,
+medians were **2.04×** and **1.35×**, with 209 and 574 slower cases respectively.
+This historical oracle is separate from the v3 PR-only oracle above.
+See the [v0.2.0 raw measurements and verified analysis](artifacts/advancement/analysis/analysis.json)
+and [historical Linux run](https://github.com/mandu5/sparse-vus/actions/runs/39422191526).
+
+**v0.1.0:** on **350 public series from 23 dataset families**, with three released model
 score vectors and two width ranges (2,100 evaluations), compiled Sparse VUS
 has a **2.06× median speedup** over the fastest of three dense implementations
 chosen separately for each input. It is faster in 1,916 cases and slower in
@@ -195,23 +359,41 @@ The manuscript reports dense-support slowdowns, approximation error, ranking
 reversals, and the external-comparison scope. A faster synthetic case alone
 does not establish a better algorithm on every real input.
 
-The Sylligardos 2025 fast VUS implementation could not be located and is not
-benchmarked. The public Go `adscore` implementation was executed natively,
+Public Sylligardos-attributed FF-VUS CPU/GPU code has been located. Its native
+metric differs from this pinned target, so it is relevant acceleration prior
+art but is not an exact-target timing comparator. The public code does not
+establish which revision produced the workshop's reported speedups. See the
+[source and semantic audit](docs/prior_art_update_20261021.md).
+The public Go `adscore` implementation was executed natively,
 but computes different semantics and is not used as an exact-target speed
 baseline. See `artifacts/native_go_audit.json`.
 
 ## Build the manuscript
 
-The tracked result tables and figures can be typeset directly:
+To regenerate the v3 two-platform fragment and figure from the complete audited
+reports, then typeset the working manuscript:
 
 ```bash
+python experiments/build_pr_engine_paper.py \
+  --mac artifacts/pr-engine/mac-holdout/report.json \
+  --linux artifacts/reproductions/linux-pr-engine-39523992616/report.json
+python experiments/plot_pr_engine.py \
+  --mac artifacts/pr-engine/mac-holdout/report.json \
+  --linux artifacts/reproductions/linux-pr-engine-39523992616/report.json \
+  --output-prefix paper/figures/pr-only-oracle-ecdf
 cd paper
 tectonic main.tex
 ```
 
-To regenerate tables and figures from the recorded measurements, fetch the
+To regenerate the original v0.1.0 tables and figures from recorded measurements, fetch the
 pinned references first, then run `python experiments/analyze_results.py`.
 The analysis verifies the recorded input and source hashes before reading them.
+The v3 workflow instead uses [report_pr_engine.py](experiments/report_pr_engine.py),
+[plot_pr_engine.py](experiments/plot_pr_engine.py), and
+[build_pr_engine_paper.py](experiments/build_pr_engine_paper.py). The two-platform
+plot/manuscript builders require both complete audited v3 reports and matching
+input identities. All values are derived from the recorded reports; no new
+timings are created by these commands.
 
 The supplied PDF is a working research manuscript. Source, executable protocols,
 raw measurements, and separately authored in-session validation are included.
@@ -234,6 +416,9 @@ width verifier, the actual fast-VUS comparison, adaptive width evaluation,
 complete model selection, and incremental PR racing in sequence. It includes
 exact fallback/refinement costs and records all losses. The final two audits
 reconstruct model decisions, times, and corpus hashes from raw records.
+Fresh data-download receipts are written under the new output directory;
+the original release bindings remain in place. Downloaded input cache files
+are shared with the benchmark checkout.
 The original padding sensitivity is separately checked with
 `python experiments/ranking_robustness.py --verify`.
 

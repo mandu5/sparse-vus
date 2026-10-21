@@ -1,0 +1,19 @@
+{
+  "frozen_before_score_evaluation": true,
+  "doi": "10.48804/MCVI4N",
+  "version": "1.0",
+  "license": "CC-BY-4.0",
+  "selection_rule": "Lexicographically first architecture within smallest context length 64, for each of the three prespecified families; all common valid series, with exclusions logged.",
+  "models": [
+    {"family": "Chronos", "name": "bolt_base_64", "id": 337897, "file": "bolt_base_64.zip", "bytes": 694881410, "md5": "b003c25be7d0b6937d976b34c6b728a9"},
+    {"family": "Time-MoE", "name": "TimeMoE-200M_64", "id": 337904, "file": "TimeMoE-200M_64.zip", "bytes": 195566747, "md5": "109fd38f9ab127473bce3fdcf20d83da"},
+    {"family": "TimesFM", "name": "timesfm-1.0-200m_64", "id": 337906, "file": "timesfm-1.0-200m_64.zip", "bytes": 195310348, "md5": "09dbe4ee8adfc7cf7762e4056eedbfcd"}
+  ],
+  "labels": {
+    "url": "https://www.thedatum.org/datasets/TSB-AD-U.zip",
+    "bytes_observed": 72900868,
+    "reference_repo_commit": "ed74348e7876c9268b7a737c77f2f5f56f7fa458",
+    "evaluation_list": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/Datasets/File_List/TSB-AD-U-Eva.csv",
+    "license_note": "Original dataset licenses vary; see https://thedatumorg.github.io/TSB-AD/ . Cache only, no redistribution."
+  }
+}

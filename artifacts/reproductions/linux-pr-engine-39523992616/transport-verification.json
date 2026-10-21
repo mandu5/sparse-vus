@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_run_url": "https://github.com/mandu5/sparse-vus/actions/runs/39523992616",
+  "measured_commit": "91696f79726ca83973cbda834e4ecf60c28441c8",
+  "artifact_id": 12315563163,
+  "artifact_name": "linux-pr-engine",
+  "artifact_zip_sha256": "8dd17716ce273e8ba02fbcdbc5f692aa4ed429b15fce7a8a40f0963946283ead",
+  "github_digest_match": true,
+  "transport": "Downloaded through gh run download; the ZIP was also downloaded independently through the artifact API and its SHA-256 matched the API digest.",
+  "scientific_audit": "The original audit.json was produced by the completed Linux workflow. Its scientific reconstruction is separate from this transport checksum.",
+  "record_preservation": "Original artifact members are retained unchanged; this receipt and github-artifact-receipt.json were added after download."
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "completed_utc": "2026-10-21T03:06:13.830960+00:00",
+  "scope": "Downloaded GitHub ZIP digest and every archived member match the retained original files; no timing rerun.",
+  "github_run_id": 39523992616,
+  "github_artifact_id": 12315563163,
+  "source_commit": "91696f79726ca83973cbda834e4ecf60c28441c8",
+  "archive_sha256": "8dd17716ce273e8ba02fbcdbc5f692aa4ed429b15fce7a8a40f0963946283ead",
+  "archive_bytes": 1542441,
+  "verified_members": 10,
+  "members": [
+    {
+      "path": "audit.json",
+      "bytes": 793858,
+      "sha256": "577dab610dd482defcdaa55996e9a71281e8ccccb9420b680790f41ab2b69708"
+    },
+    {
+      "path": "data-fetch-receipts/bolt_base_64-download.json",
+      "bytes": 80308,
+      "sha256": "b4b01871da70d7c778ede06274c077696f8af42d50e2787d4bfcb683d0eb9cc9"
+    },
+    {
+      "path": "data-fetch-receipts/TimeMoE-200M_64-download.json",
+      "bytes": 80447,
+      "sha256": "36bf99d0219b882257fa93d1252647999d40c9a6f01dbcb5f68ae10727514fad"
+    },
+    {
+      "path": "data-fetch-receipts/download_receipt.json",
+      "bytes": 1175,
+      "sha256": "d3abcdc8d8eac659f56bad2a93e96c7c45c43c8f0c713b6609cfdd129f74af35"
+    },
+    {
+      "path": "data-fetch-receipts/timesfm-1.0-200m_64-download.json",
+      "bytes": 80469,
+      "sha256": "91da5b782937e3b7538118241f9585e4f408571a0fc47feeda6126debe16d24c"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 6099,
+      "sha256": "533a450fd051cdfca7b62fa0a1309b6093b92ee48f46bd9ab6f02fafb418141b"
+    },
+    {
+      "path": "inputs.json",
+      "bytes": 484603,
+      "sha256": "783d6ec769682c8b0735fe4f4a17591ab4de042b2f2907e8ffbecbcc74690cd6"
+    },
+    {
+      "path": "measurements.jsonl",
+      "bytes": 10869224,
+      "sha256": "a54fd4ec9107e2b9517b455d221c9f6dfbc7ae6f1f84070f0cb6a37ddbc62060"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 8523,
+      "sha256": "838c23163326fc1a71c3f2fbbc1a8245ed6f489d11b94a7c6d00d3cb2661bd45"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 792184,
+      "sha256": "d94f1dcb50249589babdb543e924c19837f64df78f99e4380836514b1f0b5984"
+    }
+  ],
+  "additional_files": "Local verification receipts and github-artifact-receipt.json are outside the original ZIP."
+}
