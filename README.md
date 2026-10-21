@@ -237,8 +237,8 @@ python experiments/independent_review_check.py
 The main suite includes 1,000 distinct randomized cases, six structured edge
 cases, input validation, independently implemented dense baselines, sampled
 threshold checks, and a real compiled dtaianomaly adapter. Test counts are
-not counts of independent datasets. The independent reviewer also exercised
-1,960 exhaustive tiny-domain cases and 120 additional randomized cases.
+not counts of independent datasets. A separately authored in-session AI check
+also exercised 1,960 exhaustive tiny-domain cases and 120 additional randomized cases.
 
 ## Reconstruct the completed v3 reports
 
