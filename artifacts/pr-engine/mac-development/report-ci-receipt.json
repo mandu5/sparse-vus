@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/mandu5/sparse-vus/actions/runs/39525537293",
+  "commit": "06fab4679dbded59617468787a98ab982e065d38",
+  "artifact": "verified-pr-engine-v2-report",
+  "validation": "PASS: downloaded report bindings match local measured inputs and reporter; regeneration ran in remote CI while local timing continued.",
+  "files": {
+    "report.json": "615d9ec41ee33e73204c67dd7d5f2bebd7a0eafc8b4b4a80c63ad957cb4173b6",
+    "report.md": "108a9158a6cd01c4b2afb533e4d8133f223d02eb8745ac3858000e9f19eaba5a",
+    "report.tex": "dbfb768870e1875c36dae9e3f41e3c38f11b686baa693586e27de70241a0e68e"
+  }
+}

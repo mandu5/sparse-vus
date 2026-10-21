@@ -112,3 +112,17 @@ post-protocol descriptive minimum with no confidence interval or change to
 the frozen decisions; it can expose heterogeneity hidden by separate
 pairwise aggregate wins. Complete choices and losses remain in the report.
 Report fixtures specifically include such a pairwise-win/oracle-loss case.
+
+The report/primary-manuscript follow-up is committed as `f253ab1`, with
+the descriptive-oracle report addition at
+`06fab4679dbded59617468787a98ab982e065d38`. Neither changes a measured
+benchmark source. [CI run 39525537293](https://github.com/mandu5/sparse-vus/actions/runs/39525537293)
+passed on the latter commit: Python 3.11 had 3163 passed/2 skips in 59.36
+seconds and Python 3.12 had 3163 passed/2 skips in 62.12 seconds. The real
+v2 report also regenerated successfully from its original source snapshot
+and raw receipts in that remote job. Local timing was not interrupted.
+
+At 2026-10-21 01:12:28 UTC the Mac had completed all 308 primary-width
+cases and reached 354/924 total cases with zero reported semantic
+violations. This is a progress record, not the final independent audit
+or a performance decision.
