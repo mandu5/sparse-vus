@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETED",
+  "utc": "2026-10-21T04:52:03.367011+00:00",
+  "protocol_sha256": "80bca595d8784abfa3555f98cbd6dd027890fd0a87bb4a5727fc6de2cd7e7fa8",
+  "source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "experiments/benchmark_saturation.py": "902d9f83bfedb0063f0d21f82fa40f28f71a0bc6f4957392053fd034804f511e",
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "experiments/advancement_data_gate.py": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "measurements_sha256": "eb6be47aad9c7d9a3387e4b5f7e530dfcd9330080164da54029c7605f030c38f",
+  "cases": 378
+}

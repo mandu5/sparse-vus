@@ -1,0 +1,10 @@
+{
+  "status": "FROZEN_NO_COLLECTION_TIMING",
+  "protocol_sha256": "69ee646b505297e0feb124cb3206b0d600a6ad2a0a021c8fcea1c195dd4f56ea",
+  "inputs_sha256": "91616f1b90953db33bc1ee9a9d46cf863d97fa2dafdea7eb4e2fdf2f29bf92ef",
+  "driver_sha256": "9b30bb4bc2a15820ba3aa67ccb86608d5bced93ddff2d86e2081b380c3c8b5e3",
+  "verified_label_members": 308,
+  "verified_score_members": 924,
+  "npz_files": 308,
+  "npz_bytes": 379354532
+}

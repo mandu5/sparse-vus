@@ -1,0 +1,332 @@
+\section{Prospective published-score evaluation}
+\label{sec:new-evaluation}
+\subsection{Inputs, fixed comparisons, and independent controls}
+The MSAD archive supplies twelve stored detector configurations:
+IFOREST, LOF, MP, NORMA, IFOREST1, HBOS, OCSVM, PCA, AE, CNN, LSTM and
+POLY~\citep{msad2023}. Before computing metric outcomes, we fixed a
+family-stratified SHA-256 order over 1,863 metadata-eligible files,
+excluding training filenames and raw members larger than 12 MB. A fixed
+round-robin queue and validity/identity rules selected 128 files from
+sixteen families. Of 148 considered files, nineteen identity duplicates
+and one single-class file were excluded; no acquisition failure changed
+the selection. The final panel has 15,793,514 temporal observations and
+1,536 score vectors. A separate parser rechecked all 1,664 source members
+and 1,792 arrays, including 189,522,168 score scalars.
+
+All arrays are preserved without padding, repair, new quantization or
+outcome-based exclusion. Each stored score vector has at most 101 distinct
+values; every textual score has at most two decimal places. Thus this is
+a study of released, quantized scores, not recovered full-precision model
+outputs. The budget $H=250$ already exceeds the number of distinct scores,
+but uniform \emph{rank} sampling can revisit large ties and miss rare score
+classes. Enumerating every distinct score is a simple, important control.
+
+The primary setting is $L=30,H=250$; widths 100 and 300 and budgets
+32, 64, 128, 500 and 1,000 are sensitivity analyses. We retain full tied
+winner sets at tolerance $10^{-10}$, and report best- and worst-case
+exhaustive regret among sampled tied winners. The prospective practical
+decision uses
+\[
+ \widehat{\mathcal W}=\{m:s_m\geq\max_j s_j-10^{-10}\},\qquad
+ \Delta_{\rm best}=\max_j e_j-\max_{m\in\widehat{\mathcal W}}e_m,
+\]
+where $e_m$ and $s_m$ are the exhaustive and sampled values. Worst-case
+regret replaces the second maximum by a minimum. The prospective practical
+decision rule requires best-case regret at least 0.01 in at least 5\%
+of series and at least three source families. This rule is a declared
+finite-panel study threshold, not a universal utility cutoff or publication
+criterion. Per-family and equal-family results accompany pooled results;
+model pairs and widths are not treated as independent observations.
+
+At the primary setting, all 1,536 matched sampled results agree with the
+unchanged pinned upstream implementation to $1.06\times10^{-15}$.
+The fixed first two retained series per family give 30 validation series
+and 360 score vectors. All agree with both an independent dense exhaustive
+implementation and unchanged upstream evaluation at $H=n$, with maximum
+absolute differences $4.45\times10^{-15}$ and $3.34\times10^{-16}$.
+All 720 independent exhaustive calls complete without errors or timeouts.
+These are numerical controls; integer evidence below strengthens the
+ordering and regret claims to the ideal real-arithmetic target.
+
+\subsection{Sampling changes model-selection decisions}
+At $L=30,H=250$, the sampled winner set changes on 10/128 series, including
+nine changes between unique winners. Eight series (6.25\%) in four
+families have best-case exhaustive regret at least 0.01; the maximum
+regret is 0.398575. Thus the prespecified finite-panel effect threshold
+is met. The equal-family practical-error fraction is 5.28\%.
+A 2,000-replicate source-family bootstrap gives a pooled 95\% percentile
+interval of [1.09\%, 13.20\%]. The observed panel passes the declared
+threshold; this interval does not establish population prevalence above
+5\%. Table~\ref{tab:primary-families} retains every family, including the
+twelve with no practical winner error.
+
+\begin{table}[t]
+\caption{Primary setting on all 128 series. ``Errors'' counts sampled
+winner sets whose \emph{best} exhaustive value is at least 0.01 below the
+exhaustive maximum. Maximum regret includes all cases in each family.}
+\label{tab:primary-families}
+
+\centering\small
+\begin{tabular}{lrrr@{\qquad}lrrr}
+\toprule
+Family & $N$ & errors & max regret & Family & $N$ & errors & max regret\\
+\midrule
+Daphnet & 7 & 0 & .0000 & MITDB & 8 & 0 & .0000\\
+Dodgers & 1 & 0 & .0000 & NAB & 9 & 0 & .0000\\
+ECG & 11 & 0 & .0000 & OPPORTUNITY & 10 & 0 & .0000\\
+GHL & 10 & 1 & .0272 & Occupancy & 2 & 0 & .0000\\
+Genesis & 1 & 0 & .0000 & SMD & 9 & 0 & .0000\\
+IOPS & 11 & 0 & .0000 & SVDB & 10 & 0 & .0000\\
+KDD21 & 10 & 2 & .3986 & SensorScope & 10 & 0 & .0000\\
+MGAB & 10 & 1 & .2517 & YAHOO & 9 & 4 & .2362\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+Errors have both signs. Across the 1,536 scalar evaluations, mean absolute
+error is 0.009286, maximum underestimation is 0.560123 and maximum
+overestimation is 0.161692. Fifteen values overestimate by at least 0.01
+and 150 underestimate by at least 0.01. There are 106 strict pairwise
+reversals, 22 with both exact and sampled margins at least 0.01; these
+pairs are descriptive, not independent samples. The new inflation mechanism
+is therefore not a universal explanation for the observed selection errors.
+
+\paragraph{Source-overlap sensitivity.}
+The selection excluded exact label, observation and standardized-observation
+identities against 362 prior inputs. A subsequent bounded audit additionally
+compared joint observations and labels after dropping either endpoint. It
+found 20/128 matches to prior inputs under these transformations. We keep
+the frozen 128-case primary panel and report the descriptive 108-case
+nonmatching subgroup: four cases (3.70\%) in two families have regret at
+least 0.01, with maximum 0.236208. This subgroup does not meet the original
+5\%/three-family threshold. The 20 matched cases contain four practical
+errors and the overall maximum. The bounded audit neither proves the
+remaining physical recordings independent nor permits describing the
+full panel as previously unseen recordings. Its newly evaluated content
+is the released detector-score bank under this pinned metric contract.
+
+\subsection{A measured instance of post-saturation inflation}
+To connect the construction to actual scores, an exploratory diagnostic
+uses all twelve models on all eight primary harmful-selection series.
+For each width it inserts the first exhaustive threshold at which recall
+reaches one into the original sampled grid, adding at most one threshold.
+Integer mass brackets independently certify each first-saturation event
+and its predecessor on all 96 score vectors at all 31 widths.
+The difference between the original and inserted-grid areas measures the
+net effect of postponing that saturation boundary; the remaining
+inserted-grid error measures other omitted-threshold effects. This is an
+outcome-selected mechanism analysis, not a second prevalence estimate or
+a claimed faster algorithm.
+
+The largest-regret series, KDD21/005 (the distorted CIMIS air-temperature
+recording), has 8,183 points and one original positive. Its sampled winner
+is LOF, while exhaustive evaluation selects CNN
+(Table~\ref{tab:real-mechanism}). For LOF, inserting saturation reduces the
+area by 0.129093, or 79.84\% of its total 0.161692 overestimation.
+The net change decomposes into a positive 0.181891 buffer-mass term,
+zero original-mass term and a negative 0.052797 count-dilution term.
+For CNN, count dilution dominates: the corresponding terms are
+$+0.026004$ and $-0.470588$, explaining its 0.444584 underestimation.
+Inserting saturation recovers the exhaustive winner on three of the eight
+series; five selections remain wrong. Thus the mechanism occurs in real
+published scores, but correcting it alone is insufficient in general.
+
+\begin{table}[t]
+\caption{Two unchanged published score vectors on KDD21/005. The diagnostic
+inserts at most one threshold per width and isolates a particular error
+component; it does not remove all integration error.}
+\label{tab:real-mechanism}
+
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+Model & Exhaustive & Sampled, $H=250$ & Saturation inserted\\
+\midrule
+CNN & .500000 & .055416 & .500000\\
+LOF & .101425 & .263117 & .134024\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\subsection{Integer certificates and a full-grid control}
+All 3,072 partial-grid certificate calls complete: twelve configurations
+on all 128 series at $L=30$, for $H=250$ and $H=1,000$. A model is certified
+as the unique exhaustive winner only if its integer lower endpoint exceeds
+every competitor's integer upper endpoint. At $H=250$, 63/128 series
+(49.22\%) satisfy this test; the equal-family proportion is 50.52\%.
+At $H=1,000$, 94/128 (73.44\%) satisfy it, with equal-family proportion
+72.87\%. All certified winners agree with the corresponding unique
+sampled winner. No sampled winner set is certified strictly suboptimal
+\emph{by these partial-grid intervals}. The intervals confirm a subset
+of choices but leave the erroneous choices unresolved.
+
+The strong baseline retains every distinct score class by requesting
+$H=n$ and deduplicating complete threshold states. Its 1,536 calls also
+complete, and certify the unique exhaustive winner on \emph{all 128}
+series. Compared with the original $H=250$ selector, they prove ten
+strictly suboptimal sampled winner sets and eight with regret at least
+0.01. The largest guaranteed regret lower bound is 0.3985750301665.
+At $H=1,000$, one sampled set is provably suboptimal, with guaranteed
+regret 0.0018926253; none reaches 0.01. These are exact integer-endpoint
+decisions, not comparisons to a floating-point reference with a tolerance.
+
+\begin{table}[t]
+\caption{Integer enclosures at $L=30$. State counts and interval widths
+are per score vector; winner guarantees compare all twelve models jointly.
+A small median interval width does not replace the all-competitor test.}
+\label{tab:certificates}
+
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Retained grid & median states & certified winners & median width & max width\\
+\midrule
+250 ranks & 50 & 63/128 & $6.237\times10^{-3}$ & $\approx .99$\\
+1,000 ranks & 68 & 94/128 & $3.900\times10^{-4}$ & $\approx .99$\\
+All score classes & 96 & 128/128 & $2.766\times10^{-11}$ & $1.714\times10^{-9}$\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+All prior certified winners are preserved, and no full-grid interval is
+disjoint from its corresponding partial-grid interval. Independently
+rounded intervals need not nest; real-arithmetic refinement monotonicity
+is not asserted for the raw rounded outputs. Full-grid certification is
+an explicit same-guarantee baseline, not an implicit claim that partial
+certificates are more efficient. Costs are evaluated separately below.
+
+\paragraph{A real target versus a floating-point reference.}
+One $H=1,000$ interval has the floating-point exhaustive answer
+$7.63\times10^{-16}$ below its lower endpoint. Direct analysis resolves
+the case exactly: on the YAHOO/CNN input, three original intervals never
+merge over widths zero through thirty, eight leading originals cover all
+components, and the ninth original joins one negative in a complete score
+tie. Buffer points enter only after recall saturates. At every width the
+ideal value is $8/9+(1/9)(9/10)=89/90$, which the certificate contains.
+The discrepancy is floating-point accumulation in the reference, not an
+interval violation. No tolerance or widened interval was used to remove it.
+
+% Sensitivity and timing tables are inserted after the frozen collections end.
+
+\subsection{Sensitivity and matched computation costs}
+All 36,864 declared numerical calls finish successfully, including all
+4,608 upstream $H=250$ parity comparisons across the three widths.
+Table~\ref{tab:budget-sensitivity} reports every declared budget/width
+combination. Raising the budget to 1,000 removes practical selection
+regret at widths 30 and 100 on this panel, while width 300 retains one
+case with regret 0.095202. At $H=250$, widths 100 and 300 affect five
+and three families respectively. Width 300's six cases fall below the
+prespecified 5\% fraction; neither width replaces the primary result.
+
+\begin{table}[t]
+\caption{Series with best-case exhaustive regret at least 0.01; all
+denominators are 128. These sensitivity cells are not independent studies.}
+\label{tab:budget-sensitivity}
+
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Maximum width & $H=32$ & $64$ & $128$ & $250$ & $500$ & $1{,}000$\\
+\midrule
+30 (primary) & 21 & 16 & 11 & 8 & 1 & 0\\
+100 & 20 & 15 & 12 & 7 & 2 & 0\\
+300 & 20 & 15 & 11 & 6 & 2 & 1\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+Timings use the fixed 30-series validation subset, all twelve models,
+five independently randomized paired repetitions, one compute thread,
+a 30-second per-call process watchdog and non-study warmup. Other
+research compute jobs stop for this phase. Every timed scalar call includes
+public-API validation, preparation and integration. Input decoding,
+imports/JIT warmup, process setup, winner aggregation and record writing
+are outside its timer. The broader collection wall time is recorded
+separately and is not substituted for scalar-call latency. All 9,000
+planned timing calls complete with output parity and no timeout.
+
+Table~\ref{tab:matched-costs} reports per-case median times aggregated as
+geometric comparator/exhaustive-radix ratios, with source-family bootstrap
+intervals. Exact computation is modestly faster than matched compiled
+sampling: the ratio is 1.044, with interval [1.029, 1.062]. The larger
+ratio against unchanged Klein includes implementation differences and
+cannot be interpreted as an intrinsic exact-versus-approximate gain.
+The independent dense control additionally computes ROC internally;
+its output scope is disclosed rather than used as a matched PR-only
+speed claim. The saturation-exact interval includes one. These are warm,
+one-host measurements on the released quantized score panel.
+
+\begin{table}[t]
+\caption{360 paired series/model cases at $L=30$, five repetitions per
+method. Ratios above one favor exhaustive radix. The matched compiled
+row controls for preparation and implementation family.}
+\label{tab:matched-costs}
+
+\centering\small
+\begin{tabular}{lrrl}
+\toprule
+Comparator / exhaustive radix & geometric ratio & family 95\% interval & outputs\\
+\midrule
+Matched compiled, $H=250$ & 1.044 & [1.029, 1.062] & PR\\
+Saturation exact & 1.011 & [0.999, 1.026] & PR\\
+Unchanged Klein, $H=250$ & 5.077 & [4.186, 6.403] & PR\\
+Independent dense exact & 13.481 & [12.505, 14.583] & ROC and PR\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+% The separately frozen three-method certificate-cost collection follows.
+
+\paragraph{Cost of the stronger guarantee.}
+A separate frozen addendum measures the $H=250$ integer certificate,
+the full distinct-score integer certificate, and floating-point exhaustive
+radix together on the same 360 cases, with five randomized repetitions.
+The three-method comparison was specified before any timing outcomes;
+full-grid accuracy outcomes were already known when its final protocol
+was frozen. The original two-method protocol remains unexecuted and
+preserved, avoiding duplicate timing selection. All 5,400 calls pass,
+with no missing records, failures, timeouts or output mismatch. Integer
+endpoints match the completed certificate studies exactly.
+
+\begin{table}[t]
+\caption{Separate three-way timing, same 360 score vectors and five
+repetitions at $L=30$. These ratios describe time, so values below one
+favor the numerator method. They are descriptive finite-panel summaries;
+no confidence interval was specified for this addendum.}
+\label{tab:certificate-cost}
+
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+Cost ratio & median & geometric mean & equal-family geometric mean\\
+\midrule
+250-rank certificate / full certificate & .826 & .815 & .820\\
+250-rank certificate / numerical exact & 2.063 & 2.683 & 2.667\\
+Full certificate / numerical exact & 2.713 & 3.290 & 3.254\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+The partial certificate saves approximately 18.5\% in the geometric
+comparison with full certification, while certifying fewer winners on
+the full panel. Both cost more than numerical exhaustive evaluation.
+Summing the 360 per-case median times gives 4.686 s, 5.638 s and 3.127 s
+for partial certificate, full certificate and numerical exact respectively;
+these sums are not direct end-to-end collection timings. Actual collection
+wall time is 71.918 s, including input/output, setup and orchestration.
+The main and certificate timing runs use an Apple M1 Pro with 16 GiB RAM,
+Python 3.12.4, NumPy 1.26.4 and Numba 0.59.1. A single active desktop host
+limits portability; no cross-platform certificate performance claim is made.
+
+The practical recommendation for these stored scores is therefore simple:
+use the complete score classes for ordinary numerical evaluation, and
+request full-grid integer enclosures when a rigorous ideal-target order
+is required. Partial-grid certification provides a sufficient test and an
+explicit inconclusive outcome, but this experiment does not establish a
+better selection algorithm or a faster universal route to that guarantee.

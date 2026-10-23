@@ -1,0 +1,3021 @@
+{
+  "status": "PASS_PARITY_AND_WORK",
+  "protocol_sha256": "22422666d07dd30f05980d759f452b3afb962c5265a18659f8e352e421d16f8e",
+  "cases": 131,
+  "max_error": 5.551115123125783e-16,
+  "work_assertions": true,
+  "summary": {
+    "all_tied|L32": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.1412698412698412,
+          "losses": 0,
+          "aggregate_ratio": 1.1412698412698412
+        },
+        "radix": {
+          "median_ratio": 1.0185269841269842,
+          "losses": 0,
+          "aggregate_ratio": 1.0185269841269842
+        },
+        "klein": {
+          "median_ratio": 27.991009523809524,
+          "losses": 0,
+          "aggregate_ratio": 27.991009523809524
+        }
+      }
+    },
+    "distinct_original_last|L32": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.147457627118644,
+          "losses": 0,
+          "aggregate_ratio": 1.147457627118644
+        },
+        "radix": {
+          "median_ratio": 1.0661016949152542,
+          "losses": 0,
+          "aggregate_ratio": 1.0661016949152542
+        },
+        "klein": {
+          "median_ratio": 29.649722033898307,
+          "losses": 0,
+          "aggregate_ratio": 29.649722033898307
+        }
+      }
+    },
+    "eight_blocks|L32": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.168462893906487,
+          "losses": 0,
+          "aggregate_ratio": 1.168462893906487
+        },
+        "radix": {
+          "median_ratio": 1.046087229712194,
+          "losses": 0,
+          "aggregate_ratio": 1.046087229712194
+        },
+        "klein": {
+          "median_ratio": 29.921184553811692,
+          "losses": 0,
+          "aggregate_ratio": 29.921184553811692
+        }
+      }
+    },
+    "alternating|L32": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.0688278906260325,
+          "losses": 0,
+          "aggregate_ratio": 1.0688278906260325
+        },
+        "radix": {
+          "median_ratio": 1.0214756763186066,
+          "losses": 0,
+          "aggregate_ratio": 1.0214756763186066
+        },
+        "klein": {
+          "median_ratio": 28.72289108858551,
+          "losses": 0,
+          "aggregate_ratio": 28.72289108858551
+        }
+      }
+    },
+    "interval8_all_tied|L32": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.1849411375479033,
+          "losses": 0,
+          "aggregate_ratio": 1.1849411375479033
+        },
+        "radix": {
+          "median_ratio": 1.0637561688401203,
+          "losses": 0,
+          "aggregate_ratio": 1.0637561688401203
+        },
+        "klein": {
+          "median_ratio": 29.89130434782609,
+          "losses": 0,
+          "aggregate_ratio": 29.89130434782609
+        }
+      }
+    },
+    "all_tied|L128": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.305807667023166,
+          "losses": 0,
+          "aggregate_ratio": 1.305807667023166
+        },
+        "radix": {
+          "median_ratio": 1.6782479861063415,
+          "losses": 0,
+          "aggregate_ratio": 1.6782479861063415
+        },
+        "klein": {
+          "median_ratio": 91.86233896209662,
+          "losses": 0,
+          "aggregate_ratio": 91.86233896209662
+        }
+      }
+    },
+    "distinct_original_last|L128": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.0612637473311042,
+          "losses": 0,
+          "aggregate_ratio": 1.0612637473311042
+        },
+        "radix": {
+          "median_ratio": 1.8124118760826653,
+          "losses": 0,
+          "aggregate_ratio": 1.8124118760826653
+        },
+        "klein": {
+          "median_ratio": 94.10291866414212,
+          "losses": 0,
+          "aggregate_ratio": 94.10291866414212
+        }
+      }
+    },
+    "eight_blocks|L128": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.136156925395082,
+          "losses": 0,
+          "aggregate_ratio": 1.136156925395082
+        },
+        "radix": {
+          "median_ratio": 1.544627701580328,
+          "losses": 0,
+          "aggregate_ratio": 1.544627701580328
+        },
+        "klein": {
+          "median_ratio": 85.03794239654343,
+          "losses": 0,
+          "aggregate_ratio": 85.03794239654343
+        }
+      }
+    },
+    "alternating|L128": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.8181602220819504,
+          "losses": 1,
+          "aggregate_ratio": 0.8181602220819504
+        },
+        "radix": {
+          "median_ratio": 1.0472263511908397,
+          "losses": 0,
+          "aggregate_ratio": 1.0472263511908397
+        },
+        "klein": {
+          "median_ratio": 63.48826807300468,
+          "losses": 0,
+          "aggregate_ratio": 63.48826807300468
+        }
+      }
+    },
+    "interval8_all_tied|L128": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.3496774193548389,
+          "losses": 0,
+          "aggregate_ratio": 1.3496774193548389
+        },
+        "radix": {
+          "median_ratio": 1.7651612903225808,
+          "losses": 0,
+          "aggregate_ratio": 1.7651612903225808
+        },
+        "klein": {
+          "median_ratio": 96.37032258064517,
+          "losses": 0,
+          "aggregate_ratio": 96.37032258064517
+        }
+      }
+    },
+    "all_tied|L512": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 2.7522697730968257,
+          "losses": 0,
+          "aggregate_ratio": 2.7522697730968257
+        },
+        "radix": {
+          "median_ratio": 6.824556547869107,
+          "losses": 0,
+          "aggregate_ratio": 6.824556547869107
+        },
+        "klein": {
+          "median_ratio": 267.7137886553355,
+          "losses": 0,
+          "aggregate_ratio": 267.7137886553355
+        }
+      }
+    },
+    "distinct_original_last|L512": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.0863688833124217,
+          "losses": 0,
+          "aggregate_ratio": 1.0863688833124217
+        },
+        "radix": {
+          "median_ratio": 7.42638895859473,
+          "losses": 0,
+          "aggregate_ratio": 7.42638895859473
+        },
+        "klein": {
+          "median_ratio": 273.6953124215809,
+          "losses": 0,
+          "aggregate_ratio": 273.6953124215809
+        }
+      }
+    },
+    "eight_blocks|L512": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 2.086993914807302,
+          "losses": 0,
+          "aggregate_ratio": 2.086993914807302
+        },
+        "radix": {
+          "median_ratio": 7.429116970926301,
+          "losses": 0,
+          "aggregate_ratio": 7.429116970926301
+        },
+        "klein": {
+          "median_ratio": 292.48546315077755,
+          "losses": 0,
+          "aggregate_ratio": 292.48546315077755
+        }
+      }
+    },
+    "alternating|L512": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.4090455245503667,
+          "losses": 1,
+          "aggregate_ratio": 0.4090455245503667
+        },
+        "radix": {
+          "median_ratio": 1.157210664160728,
+          "losses": 0,
+          "aggregate_ratio": 1.157210664160728
+        },
+        "klein": {
+          "median_ratio": 58.56652483750554,
+          "losses": 0,
+          "aggregate_ratio": 58.56652483750554
+        }
+      }
+    },
+    "interval8_all_tied|L512": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 2.7901191066997524,
+          "losses": 0,
+          "aggregate_ratio": 2.7901191066997524
+        },
+        "radix": {
+          "median_ratio": 6.936312655086849,
+          "losses": 0,
+          "aggregate_ratio": 6.936312655086849
+        },
+        "klein": {
+          "median_ratio": 271.19933995037223,
+          "losses": 0,
+          "aggregate_ratio": 271.19933995037223
+        }
+      }
+    },
+    "all_tied|L2048": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 8.81599207566001,
+          "losses": 0,
+          "aggregate_ratio": 8.81599207566001
+        },
+        "radix": {
+          "median_ratio": 29.386344642653146,
+          "losses": 0,
+          "aggregate_ratio": 29.386344642653146
+        },
+        "klein": {
+          "median_ratio": 739.6153989526402,
+          "losses": 0,
+          "aggregate_ratio": 739.6153989526402
+        }
+      }
+    },
+    "distinct_original_last|L2048": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.9470723825870354,
+          "losses": 1,
+          "aggregate_ratio": 0.9470723825870354
+        },
+        "radix": {
+          "median_ratio": 32.91852737699483,
+          "losses": 0,
+          "aggregate_ratio": 32.91852737699483
+        },
+        "klein": {
+          "median_ratio": 765.5637309423709,
+          "losses": 0,
+          "aggregate_ratio": 765.5637309423709
+        }
+      }
+    },
+    "eight_blocks|L2048": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 5.126418525645024,
+          "losses": 0,
+          "aggregate_ratio": 5.126418525645024
+        },
+        "radix": {
+          "median_ratio": 31.187303765620772,
+          "losses": 0,
+          "aggregate_ratio": 31.187303765620772
+        },
+        "klein": {
+          "median_ratio": 789.3994920098719,
+          "losses": 0,
+          "aggregate_ratio": 789.3994920098719
+        }
+      }
+    },
+    "alternating|L2048": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.2770628683284396,
+          "losses": 1,
+          "aggregate_ratio": 0.2770628683284396
+        },
+        "radix": {
+          "median_ratio": 1.216221319839237,
+          "losses": 0,
+          "aggregate_ratio": 1.216221319839237
+        },
+        "klein": {
+          "median_ratio": 41.31947131463318,
+          "losses": 0,
+          "aggregate_ratio": 41.31947131463318
+        }
+      }
+    },
+    "interval8_all_tied|L2048": {
+      "cases": 1,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 8.867019178475164,
+          "losses": 0,
+          "aggregate_ratio": 8.867019178475164
+        },
+        "radix": {
+          "median_ratio": 29.487377706591438,
+          "losses": 0,
+          "aggregate_ratio": 29.487377706591438
+        },
+        "klein": {
+          "median_ratio": 739.1474871954244,
+          "losses": 0,
+          "aggregate_ratio": 739.1474871954244
+        }
+      }
+    },
+    "development|L30": {
+      "cases": 21,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.0101777966043481,
+          "losses": 10,
+          "aggregate_ratio": 1.0275139737718806
+        },
+        "radix": {
+          "median_ratio": 0.9844854802680566,
+          "losses": 14,
+          "aggregate_ratio": 1.013361192451171
+        },
+        "klein": {
+          "median_ratio": 23.60604731088443,
+          "losses": 0,
+          "aggregate_ratio": 22.637195827201882
+        }
+      }
+    },
+    "development|L100": {
+      "cases": 21,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.921243547411989,
+          "losses": 15,
+          "aggregate_ratio": 0.9374430499721932
+        },
+        "radix": {
+          "median_ratio": 0.9975437262357415,
+          "losses": 11,
+          "aggregate_ratio": 1.059644123901976
+        },
+        "klein": {
+          "median_ratio": 49.77599569408272,
+          "losses": 0,
+          "aggregate_ratio": 47.867346565277415
+        }
+      }
+    },
+    "development|L300": {
+      "cases": 21,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.8574454851323089,
+          "losses": 16,
+          "aggregate_ratio": 0.7750301754340182
+        },
+        "radix": {
+          "median_ratio": 1.1564674002000546,
+          "losses": 9,
+          "aggregate_ratio": 1.1516312078630924
+        },
+        "klein": {
+          "median_ratio": 58.77552722915326,
+          "losses": 0,
+          "aggregate_ratio": 67.38442154383178
+        }
+      }
+    },
+    "external|L30": {
+      "cases": 16,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.0139721867476257,
+          "losses": 5,
+          "aggregate_ratio": 1.0239379399311703
+        },
+        "radix": {
+          "median_ratio": 1.0068896937695353,
+          "losses": 5,
+          "aggregate_ratio": 1.0128265669435597
+        },
+        "klein": {
+          "median_ratio": 22.197151882520807,
+          "losses": 0,
+          "aggregate_ratio": 18.343665084577633
+        }
+      }
+    },
+    "external|L100": {
+      "cases": 16,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.9955796003785766,
+          "losses": 9,
+          "aggregate_ratio": 1.0093273918091454
+        },
+        "radix": {
+          "median_ratio": 1.00597267616986,
+          "losses": 6,
+          "aggregate_ratio": 1.0184634510411006
+        },
+        "klein": {
+          "median_ratio": 51.38870948510142,
+          "losses": 0,
+          "aggregate_ratio": 47.5215500084325
+        }
+      }
+    },
+    "external|L300": {
+      "cases": 16,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.834617783466039,
+          "losses": 14,
+          "aggregate_ratio": 0.9234025018744304
+        },
+        "radix": {
+          "median_ratio": 1.0750888555499827,
+          "losses": 0,
+          "aggregate_ratio": 1.082267683346391
+        },
+        "klein": {
+          "median_ratio": 99.2469943578439,
+          "losses": 0,
+          "aggregate_ratio": 114.75247482325062
+        }
+      }
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "all_tied|32",
+      "phase": "structural",
+      "family": "all_tied",
+      "max_buffer": 32,
+      "seconds": {
+        "tie_runs": 7.875e-05,
+        "saturation": 8.9875e-05,
+        "radix": 8.0209e-05,
+        "klein": 0.002204292
+      },
+      "ratios": {
+        "saturation": 1.1412698412698412,
+        "radix": 1.0185269841269842,
+        "klein": 27.991009523809524
+      },
+      "run_queries": 33,
+      "position_visits": 545
+    },
+    {
+      "case_id": "distinct_original_last|32",
+      "phase": "structural",
+      "family": "distinct_original_last",
+      "max_buffer": 32,
+      "seconds": {
+        "tie_runs": 7.375e-05,
+        "saturation": 8.4625e-05,
+        "radix": 7.8625e-05,
+        "klein": 0.002186667
+      },
+      "ratios": {
+        "saturation": 1.147457627118644,
+        "radix": 1.0661016949152542,
+        "klein": 29.649722033898307
+      },
+      "run_queries": 95,
+      "position_visits": 95
+    },
+    {
+      "case_id": "eight_blocks|32",
+      "phase": "structural",
+      "family": "eight_blocks",
+      "max_buffer": 32,
+      "seconds": {
+        "tie_runs": 7.3209e-05,
+        "saturation": 8.5542e-05,
+        "radix": 7.6583e-05,
+        "klein": 0.0021905
+      },
+      "ratios": {
+        "saturation": 1.168462893906487,
+        "radix": 1.046087229712194,
+        "klein": 29.921184553811692
+      },
+      "run_queries": 37,
+      "position_visits": 268
+    },
+    {
+      "case_id": "alternating|32",
+      "phase": "structural",
+      "family": "alternating",
+      "max_buffer": 32,
+      "seconds": {
+        "tie_runs": 7.5667e-05,
+        "saturation": 8.0875e-05,
+        "radix": 7.7292e-05,
+        "klein": 0.002173375
+      },
+      "ratios": {
+        "saturation": 1.0688278906260325,
+        "radix": 1.0214756763186066,
+        "klein": 28.72289108858551
+      },
+      "run_queries": 561,
+      "position_visits": 273
+    },
+    {
+      "case_id": "interval8_all_tied|32",
+      "phase": "structural",
+      "family": "interval8_all_tied",
+      "max_buffer": 32,
+      "seconds": {
+        "tie_runs": 7.2542e-05,
+        "saturation": 8.5958e-05,
+        "radix": 7.7167e-05,
+        "klein": 0.002168375
+      },
+      "ratios": {
+        "saturation": 1.1849411375479033,
+        "radix": 1.0637561688401203,
+        "klein": 29.89130434782609
+      },
+      "run_queries": 33,
+      "position_visits": 776
+    },
+    {
+      "case_id": "all_tied|128",
+      "phase": "structural",
+      "family": "all_tied",
+      "max_buffer": 128,
+      "seconds": {
+        "tie_runs": 0.000101917,
+        "saturation": 0.000133084,
+        "radix": 0.000171042,
+        "klein": 0.009362334
+      },
+      "ratios": {
+        "saturation": 1.305807667023166,
+        "radix": 1.6782479861063415,
+        "klein": 91.86233896209662
+      },
+      "run_queries": 129,
+      "position_visits": 8321
+    },
+    {
+      "case_id": "distinct_original_last|128",
+      "phase": "structural",
+      "family": "distinct_original_last",
+      "max_buffer": 128,
+      "seconds": {
+        "tie_runs": 9.9292e-05,
+        "saturation": 0.000105375,
+        "radix": 0.000179958,
+        "klein": 0.009343667
+      },
+      "ratios": {
+        "saturation": 1.0612637473311042,
+        "radix": 1.8124118760826653,
+        "klein": 94.10291866414212
+      },
+      "run_queries": 383,
+      "position_visits": 383
+    },
+    {
+      "case_id": "eight_blocks|128",
+      "phase": "structural",
+      "family": "eight_blocks",
+      "max_buffer": 128,
+      "seconds": {
+        "tie_runs": 0.000110167,
+        "saturation": 0.000125167,
+        "radix": 0.000170167,
+        "klein": 0.009368375
+      },
+      "ratios": {
+        "saturation": 1.136156925395082,
+        "radix": 1.544627701580328,
+        "klein": 85.03794239654343
+      },
+      "run_queries": 133,
+      "position_visits": 4108
+    },
+    {
+      "case_id": "alternating|128",
+      "phase": "structural",
+      "family": "alternating",
+      "max_buffer": 128,
+      "seconds": {
+        "tie_runs": 0.000147333,
+        "saturation": 0.000120542,
+        "radix": 0.000154291,
+        "klein": 0.009353917
+      },
+      "ratios": {
+        "saturation": 0.8181602220819504,
+        "radix": 1.0472263511908397,
+        "klein": 63.48826807300468
+      },
+      "run_queries": 8385,
+      "position_visits": 4161
+    },
+    {
+      "case_id": "interval8_all_tied|128",
+      "phase": "structural",
+      "family": "interval8_all_tied",
+      "max_buffer": 128,
+      "seconds": {
+        "tie_runs": 9.6875e-05,
+        "saturation": 0.00013075,
+        "radix": 0.000171,
+        "klein": 0.009335875
+      },
+      "ratios": {
+        "saturation": 1.3496774193548389,
+        "radix": 1.7651612903225808,
+        "klein": 96.37032258064517
+      },
+      "run_queries": 129,
+      "position_visits": 9224
+    },
+    {
+      "case_id": "all_tied|512",
+      "phase": "structural",
+      "family": "all_tied",
+      "max_buffer": 512,
+      "seconds": {
+        "tie_runs": 0.000202333,
+        "saturation": 0.000556875,
+        "radix": 0.001380833,
+        "klein": 0.054167334
+      },
+      "ratios": {
+        "saturation": 2.7522697730968257,
+        "radix": 6.824556547869107,
+        "klein": 267.7137886553355
+      },
+      "run_queries": 513,
+      "position_visits": 131585
+    },
+    {
+      "case_id": "distinct_original_last|512",
+      "phase": "structural",
+      "family": "distinct_original_last",
+      "max_buffer": 512,
+      "seconds": {
+        "tie_runs": 0.00019925,
+        "saturation": 0.000216459,
+        "radix": 0.001479708,
+        "klein": 0.054533791
+      },
+      "ratios": {
+        "saturation": 1.0863688833124217,
+        "radix": 7.42638895859473,
+        "klein": 273.6953124215809
+      },
+      "run_queries": 1535,
+      "position_visits": 1535
+    },
+    {
+      "case_id": "eight_blocks|512",
+      "phase": "structural",
+      "family": "eight_blocks",
+      "max_buffer": 512,
+      "seconds": {
+        "tie_runs": 0.000184875,
+        "saturation": 0.000385833,
+        "radix": 0.001373458,
+        "klein": 0.05407325
+      },
+      "ratios": {
+        "saturation": 2.086993914807302,
+        "radix": 7.429116970926301,
+        "klein": 292.48546315077755
+      },
+      "run_queries": 517,
+      "position_visits": 65548
+    },
+    {
+      "case_id": "alternating|512",
+      "phase": "structural",
+      "family": "alternating",
+      "max_buffer": 512,
+      "seconds": {
+        "tie_runs": 0.000919416,
+        "saturation": 0.000376083,
+        "radix": 0.001063958,
+        "klein": 0.053847
+      },
+      "ratios": {
+        "saturation": 0.4090455245503667,
+        "radix": 1.157210664160728,
+        "klein": 58.56652483750554
+      },
+      "run_queries": 131841,
+      "position_visits": 65793
+    },
+    {
+      "case_id": "interval8_all_tied|512",
+      "phase": "structural",
+      "family": "interval8_all_tied",
+      "max_buffer": 512,
+      "seconds": {
+        "tie_runs": 0.0002015,
+        "saturation": 0.000562209,
+        "radix": 0.001397667,
+        "klein": 0.054646667
+      },
+      "ratios": {
+        "saturation": 2.7901191066997524,
+        "radix": 6.936312655086849,
+        "klein": 271.19933995037223
+      },
+      "run_queries": 513,
+      "position_visits": 135176
+    },
+    {
+      "case_id": "all_tied|2048",
+      "phase": "structural",
+      "family": "all_tied",
+      "max_buffer": 2048,
+      "seconds": {
+        "tie_runs": 0.000665292,
+        "saturation": 0.005865209,
+        "radix": 0.0195505,
+        "klein": 0.492060208
+      },
+      "ratios": {
+        "saturation": 8.81599207566001,
+        "radix": 29.386344642653146,
+        "klein": 739.6153989526402
+      },
+      "run_queries": 2049,
+      "position_visits": 2099201
+    },
+    {
+      "case_id": "distinct_original_last|2048",
+      "phase": "structural",
+      "family": "distinct_original_last",
+      "max_buffer": 2048,
+      "seconds": {
+        "tie_runs": 0.000645542,
+        "saturation": 0.000611375,
+        "radix": 0.021250292,
+        "klein": 0.494203542
+      },
+      "ratios": {
+        "saturation": 0.9470723825870354,
+        "radix": 32.91852737699483,
+        "klein": 765.5637309423709
+      },
+      "run_queries": 6143,
+      "position_visits": 6143
+    },
+    {
+      "case_id": "eight_blocks|2048",
+      "phase": "structural",
+      "family": "eight_blocks",
+      "max_buffer": 2048,
+      "seconds": {
+        "tie_runs": 0.000625209,
+        "saturation": 0.003205083,
+        "radix": 0.019498583,
+        "klein": 0.493539667
+      },
+      "ratios": {
+        "saturation": 5.126418525645024,
+        "radix": 31.187303765620772,
+        "klein": 789.3994920098719
+      },
+      "run_queries": 2053,
+      "position_visits": 1048588
+    },
+    {
+      "case_id": "alternating|2048",
+      "phase": "structural",
+      "family": "alternating",
+      "max_buffer": 2048,
+      "seconds": {
+        "tie_runs": 0.01200525,
+        "saturation": 0.003326209,
+        "radix": 0.014601041,
+        "klein": 0.496050583
+      },
+      "ratios": {
+        "saturation": 0.2770628683284396,
+        "radix": 1.216221319839237,
+        "klein": 41.31947131463318
+      },
+      "run_queries": 2100225,
+      "position_visits": 1049601
+    },
+    {
+      "case_id": "interval8_all_tied|2048",
+      "phase": "structural",
+      "family": "interval8_all_tied",
+      "max_buffer": 2048,
+      "seconds": {
+        "tie_runs": 0.000669292,
+        "saturation": 0.005934625,
+        "radix": 0.019735666,
+        "klein": 0.4947055
+      },
+      "ratios": {
+        "saturation": 8.867019178475164,
+        "radix": 29.487377706591438,
+        "klein": 739.1474871954244
+      },
+      "run_queries": 2049,
+      "position_visits": 2113544
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|TimeMoE-200M_64|30",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000307834,
+        "saturation": 0.000301334,
+        "radix": 0.000284709,
+        "klein": 0.005456417
+      },
+      "ratios": {
+        "saturation": 0.9788847235847892,
+        "radix": 0.9248783435228078,
+        "klein": 17.72519279871619
+      },
+      "run_queries": 16209,
+      "position_visits": 16171
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|bolt_base_64|30",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000315542,
+        "saturation": 0.000285125,
+        "radix": 0.000291875,
+        "klein": 0.005428542
+      },
+      "ratios": {
+        "saturation": 0.9036039576347998,
+        "radix": 0.9249957216471975,
+        "klein": 17.203865095613263
+      },
+      "run_queries": 16211,
+      "position_visits": 16169
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|timesfm-1.0-200m_64|30",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000302083,
+        "saturation": 0.000283834,
+        "radix": 0.0002945,
+        "klein": 0.005429375
+      },
+      "ratios": {
+        "saturation": 0.9395894505814628,
+        "radix": 0.9748976274732442,
+        "klein": 17.97312328068776
+      },
+      "run_queries": 16213,
+      "position_visits": 16176
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|TimeMoE-200M_64|30",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000990958,
+        "saturation": 0.000910292,
+        "radix": 0.000898417,
+        "klein": 0.021543459
+      },
+      "ratios": {
+        "saturation": 0.9185979627794519,
+        "radix": 0.906614609297266,
+        "klein": 21.740032372714083
+      },
+      "run_queries": 5265,
+      "position_visits": 5230
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|bolt_base_64|30",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000902583,
+        "saturation": 0.00094775,
+        "radix": 0.000876208,
+        "klein": 0.021306417
+      },
+      "ratios": {
+        "saturation": 1.050041935201527,
+        "radix": 0.9707783106927562,
+        "klein": 23.60604731088443
+      },
+      "run_queries": 5243,
+      "position_visits": 5216
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|timesfm-1.0-200m_64|30",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000874917,
+        "saturation": 0.000889833,
+        "radix": 0.000867875,
+        "klein": 0.021165459
+      },
+      "ratios": {
+        "saturation": 1.0170484743124204,
+        "radix": 0.9919512365172926,
+        "klein": 24.19139072620603
+      },
+      "run_queries": 5250,
+      "position_visits": 5217
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|TimeMoE-200M_64|30",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000323875,
+        "saturation": 0.000316,
+        "radix": 0.00031375,
+        "klein": 0.0081285
+      },
+      "ratios": {
+        "saturation": 0.975685063681976,
+        "radix": 0.9687379390196835,
+        "klein": 25.097645696642225
+      },
+      "run_queries": 7471,
+      "position_visits": 7434
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|bolt_base_64|30",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000323709,
+        "saturation": 0.00031825,
+        "radix": 0.000318042,
+        "klein": 0.008112541
+      },
+      "ratios": {
+        "saturation": 0.9831360882768166,
+        "radix": 0.9824935358609121,
+        "klein": 25.06121547439212
+      },
+      "run_queries": 7471,
+      "position_visits": 7434
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|timesfm-1.0-200m_64|30",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.00033575,
+        "saturation": 0.000323875,
+        "radix": 0.000330541,
+        "klein": 0.007577417
+      },
+      "ratios": {
+        "saturation": 0.9646314221891288,
+        "radix": 0.9844854802680566,
+        "klein": 22.568628443782575
+      },
+      "run_queries": 7471,
+      "position_visits": 7434
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|TimeMoE-200M_64|30",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000420958,
+        "saturation": 0.000441959,
+        "radix": 0.000411333,
+        "klein": 0.0110305
+      },
+      "ratios": {
+        "saturation": 1.0498885874600317,
+        "radix": 0.9771354862005236,
+        "klein": 26.203326697675305
+      },
+      "run_queries": 430,
+      "position_visits": 412
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|bolt_base_64|30",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000407875,
+        "saturation": 0.000453792,
+        "radix": 0.000415958,
+        "klein": 0.011052834
+      },
+      "ratios": {
+        "saturation": 1.1125761569108183,
+        "radix": 1.019817346000613,
+        "klein": 27.09858167330677
+      },
+      "run_queries": 502,
+      "position_visits": 462
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|timesfm-1.0-200m_64|30",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000421917,
+        "saturation": 0.00046025,
+        "radix": 0.000448459,
+        "klein": 0.011341875
+      },
+      "ratios": {
+        "saturation": 1.0908543623508888,
+        "radix": 1.0629081075187774,
+        "klein": 26.881768215075475
+      },
+      "run_queries": 448,
+      "position_visits": 416
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|TimeMoE-200M_64|30",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.0003595,
+        "saturation": 0.00035675,
+        "radix": 0.000359458,
+        "klein": 0.0091065
+      },
+      "ratios": {
+        "saturation": 0.9923504867872045,
+        "radix": 0.9998831710709318,
+        "klein": 25.331015299026426
+      },
+      "run_queries": 5399,
+      "position_visits": 6174
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|bolt_base_64|30",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000359875,
+        "saturation": 0.000359333,
+        "radix": 0.000373208,
+        "klein": 0.009159791
+      },
+      "ratios": {
+        "saturation": 0.998493921500521,
+        "radix": 1.0370489753386591,
+        "klein": 25.45270163251129
+      },
+      "run_queries": 5295,
+      "position_visits": 6036
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|timesfm-1.0-200m_64|30",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000374875,
+        "saturation": 0.000404667,
+        "radix": 0.000373417,
+        "klein": 0.009154583
+      },
+      "ratios": {
+        "saturation": 1.0794718239413137,
+        "radix": 0.996110703567856,
+        "klein": 24.420361453817943
+      },
+      "run_queries": 5296,
+      "position_visits": 6051
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|TimeMoE-200M_64|30",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000262041,
+        "saturation": 0.000264708,
+        "radix": 0.000248417,
+        "klein": 0.005695125
+      },
+      "ratios": {
+        "saturation": 1.0101777966043481,
+        "radix": 0.9480081361313687,
+        "klein": 21.733717242721557
+      },
+      "run_queries": 1793,
+      "position_visits": 1753
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|bolt_base_64|30",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000276542,
+        "saturation": 0.000261667,
+        "radix": 0.000250958,
+        "klein": 0.00628125
+      },
+      "ratios": {
+        "saturation": 0.9462107021718219,
+        "radix": 0.9074860238227829,
+        "klein": 22.71354803248693
+      },
+      "run_queries": 1768,
+      "position_visits": 1745
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|timesfm-1.0-200m_64|30",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000234875,
+        "saturation": 0.0002385,
+        "radix": 0.000244917,
+        "klein": 0.006188
+      },
+      "ratios": {
+        "saturation": 1.0154337413517829,
+        "radix": 1.0427546567323043,
+        "klein": 26.345928685470994
+      },
+      "run_queries": 1757,
+      "position_visits": 1737
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|TimeMoE-200M_64|30",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000570791,
+        "saturation": 0.000624209,
+        "radix": 0.00065725,
+        "klein": 0.010251375
+      },
+      "ratios": {
+        "saturation": 1.0935859184885537,
+        "radix": 1.1514722551687044,
+        "klein": 17.959945058699244
+      },
+      "run_queries": 8618,
+      "position_visits": 35675
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|bolt_base_64|30",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.00051625,
+        "saturation": 0.000598667,
+        "radix": 0.000634375,
+        "klein": 0.009836625
+      },
+      "ratios": {
+        "saturation": 1.1596455205811138,
+        "radix": 1.2288135593220337,
+        "klein": 19.05399515738499
+      },
+      "run_queries": 8618,
+      "position_visits": 35675
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|timesfm-1.0-200m_64|30",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000541334,
+        "saturation": 0.000642583,
+        "radix": 0.000656334,
+        "klein": 0.01008825
+      },
+      "ratios": {
+        "saturation": 1.1870360997092368,
+        "radix": 1.212438162021968,
+        "klein": 18.635906852331463
+      },
+      "run_queries": 8666,
+      "position_visits": 35756
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|TimeMoE-200M_64|100",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000634958,
+        "saturation": 0.000456083,
+        "radix": 0.000544292,
+        "klein": 0.015500208
+      },
+      "ratios": {
+        "saturation": 0.7182884537244982,
+        "radix": 0.8572094532236778,
+        "klein": 24.411390989640257
+      },
+      "run_queries": 55113,
+      "position_visits": 54644
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|bolt_base_64|100",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000617417,
+        "saturation": 0.000443792,
+        "radix": 0.000548959,
+        "klein": 0.015377875
+      },
+      "ratios": {
+        "saturation": 0.7187881124102511,
+        "radix": 0.8891219386573418,
+        "klein": 24.906789090679393
+      },
+      "run_queries": 55072,
+      "position_visits": 54616
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|timesfm-1.0-200m_64|100",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000659,
+        "saturation": 0.000454,
+        "radix": 0.000537375,
+        "klein": 0.015448917
+      },
+      "ratios": {
+        "saturation": 0.6889226100151745,
+        "radix": 0.8154400606980273,
+        "klein": 23.442969650986342
+      },
+      "run_queries": 55112,
+      "position_visits": 54641
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|TimeMoE-200M_64|100",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.001052,
+        "saturation": 0.000998708,
+        "radix": 0.001049416,
+        "klein": 0.059431083
+      },
+      "ratios": {
+        "saturation": 0.949342205323194,
+        "radix": 0.9975437262357415,
+        "klein": 56.49342490494297
+      },
+      "run_queries": 18681,
+      "position_visits": 18169
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|bolt_base_64|100",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.001034292,
+        "saturation": 0.000989209,
+        "radix": 0.001018708,
+        "klein": 0.057601917
+      },
+      "ratios": {
+        "saturation": 0.9564117289894923,
+        "radix": 0.9849326882543806,
+        "klein": 55.69212272743094
+      },
+      "run_queries": 18273,
+      "position_visits": 17841
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|timesfm-1.0-200m_64|100",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000998666,
+        "saturation": 0.000985667,
+        "radix": 0.001102875,
+        "klein": 0.057496125
+      },
+      "ratios": {
+        "saturation": 0.9869836361706515,
+        "radix": 1.1043482004994662,
+        "klein": 57.57292728499819
+      },
+      "run_queries": 18246,
+      "position_visits": 17848
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|TimeMoE-200M_64|100",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.00049325,
+        "saturation": 0.000407333,
+        "radix": 0.000454583,
+        "klein": 0.0226245
+      },
+      "ratios": {
+        "saturation": 0.8258144956918398,
+        "radix": 0.9216077040040548,
+        "klein": 45.8682209832742
+      },
+      "run_queries": 26621,
+      "position_visits": 26144
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|bolt_base_64|100",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000500542,
+        "saturation": 0.000416958,
+        "radix": 0.000458375,
+        "klein": 0.022622709
+      },
+      "ratios": {
+        "saturation": 0.83301301389294,
+        "radix": 0.9157573190661323,
+        "klein": 45.19642507521847
+      },
+      "run_queries": 26667,
+      "position_visits": 26195
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|timesfm-1.0-200m_64|100",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000507458,
+        "saturation": 0.000423375,
+        "radix": 0.000457084,
+        "klein": 0.022803292
+      },
+      "ratios": {
+        "saturation": 0.8343054991743158,
+        "radix": 0.9007326714723188,
+        "klein": 44.93631394125228
+      },
+      "run_queries": 26680,
+      "position_visits": 26197
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|TimeMoE-200M_64|100",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.00043725,
+        "saturation": 0.000453625,
+        "radix": 0.000478208,
+        "klein": 0.0315115
+      },
+      "ratios": {
+        "saturation": 1.0374499714122356,
+        "radix": 1.0936718124642653,
+        "klein": 72.0674671240709
+      },
+      "run_queries": 1690,
+      "position_visits": 1552
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|bolt_base_64|100",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.00044525,
+        "saturation": 0.000446583,
+        "radix": 0.000482875,
+        "klein": 0.031134625
+      },
+      "ratios": {
+        "saturation": 1.0029938236945537,
+        "radix": 1.0845030881527231,
+        "klein": 69.92616507580011
+      },
+      "run_queries": 1762,
+      "position_visits": 1524
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|timesfm-1.0-200m_64|100",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000443459,
+        "saturation": 0.000467875,
+        "radix": 0.000484792,
+        "klein": 0.030536
+      },
+      "ratios": {
+        "saturation": 1.0550580775223866,
+        "radix": 1.093205910805734,
+        "klein": 68.85867690135954
+      },
+      "run_queries": 1568,
+      "position_visits": 1466
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|TimeMoE-200M_64|100",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000505,
+        "saturation": 0.000447625,
+        "radix": 0.000459583,
+        "klein": 0.025096416
+      },
+      "ratios": {
+        "saturation": 0.8863861386138613,
+        "radix": 0.9100653465346534,
+        "klein": 49.69587326732673
+      },
+      "run_queries": 20929,
+      "position_visits": 22263
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|bolt_base_64|100",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000507209,
+        "saturation": 0.000462041,
+        "radix": 0.000487125,
+        "klein": 0.025246833
+      },
+      "ratios": {
+        "saturation": 0.9109479524219799,
+        "radix": 0.9604029108316295,
+        "klein": 49.77599569408272
+      },
+      "run_queries": 19652,
+      "position_visits": 22067
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|timesfm-1.0-200m_64|100",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000499458,
+        "saturation": 0.00043725,
+        "radix": 0.000465042,
+        "klein": 0.025162083
+      },
+      "ratios": {
+        "saturation": 0.8754489867015844,
+        "radix": 0.9310933051427747,
+        "klein": 50.3787765938277
+      },
+      "run_queries": 20486,
+      "position_visits": 22400
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|TimeMoE-200M_64|100",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000301042,
+        "saturation": 0.000277333,
+        "radix": 0.00032525,
+        "klein": 0.0181215
+      },
+      "ratios": {
+        "saturation": 0.921243547411989,
+        "radix": 1.080414028607304,
+        "klein": 60.195919506248295
+      },
+      "run_queries": 6343,
+      "position_visits": 5949
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|bolt_base_64|100",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000305625,
+        "saturation": 0.000277875,
+        "radix": 0.000323083,
+        "klein": 0.017977584
+      },
+      "ratios": {
+        "saturation": 0.90920245398773,
+        "radix": 1.057122290388548,
+        "klein": 58.82236073619632
+      },
+      "run_queries": 6513,
+      "position_visits": 6261
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|timesfm-1.0-200m_64|100",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000282792,
+        "saturation": 0.000264708,
+        "radix": 0.000307375,
+        "klein": 0.018018166
+      },
+      "ratios": {
+        "saturation": 0.9360519392344903,
+        "radix": 1.0869296161136097,
+        "klein": 63.71526068629946
+      },
+      "run_queries": 6605,
+      "position_visits": 6217
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|TimeMoE-200M_64|100",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.0007365,
+        "saturation": 0.000852917,
+        "radix": 0.001063125,
+        "klein": 0.026692792
+      },
+      "ratios": {
+        "saturation": 1.1580678886625935,
+        "radix": 1.4434826883910388,
+        "klein": 36.2427589952478
+      },
+      "run_queries": 31035,
+      "position_visits": 119256
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|bolt_base_64|100",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000730333,
+        "saturation": 0.000832208,
+        "radix": 0.00105375,
+        "klein": 0.027692125
+      },
+      "ratios": {
+        "saturation": 1.139491163619883,
+        "radix": 1.442834980755354,
+        "klein": 37.91712136792395
+      },
+      "run_queries": 30435,
+      "position_visits": 118246
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|timesfm-1.0-200m_64|100",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000711917,
+        "saturation": 0.000832333,
+        "radix": 0.001041334,
+        "klein": 0.027622458
+      },
+      "ratios": {
+        "saturation": 1.1691433130547522,
+        "radix": 1.4627182663147533,
+        "klein": 38.80011012519718
+      },
+      "run_queries": 31696,
+      "position_visits": 119966
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|TimeMoE-200M_64|300",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001802667,
+        "saturation": 0.001052291,
+        "radix": 0.001502791,
+        "klein": 0.043983208
+      },
+      "ratios": {
+        "saturation": 0.5837412012312867,
+        "radix": 0.833648699399279,
+        "klein": 24.398964423268414
+      },
+      "run_queries": 182333,
+      "position_visits": 177910
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|bolt_base_64|300",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001803,
+        "saturation": 0.00104925,
+        "radix": 0.001498375,
+        "klein": 0.043997208
+      },
+      "ratios": {
+        "saturation": 0.581946755407654,
+        "radix": 0.8310454797559623,
+        "klein": 24.402222961730452
+      },
+      "run_queries": 182382,
+      "position_visits": 178034
+    },
+    {
+      "case_id": "015_NAB_id_15_Synthetic_tr_1007_1st_2787|timesfm-1.0-200m_64|300",
+      "phase": "development",
+      "family": "NAB",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001805208,
+        "saturation": 0.001054667,
+        "radix": 0.00149525,
+        "klein": 0.044289833
+      },
+      "ratios": {
+        "saturation": 0.5842357224209066,
+        "radix": 0.828297902513173,
+        "klein": 24.534476359510926
+      },
+      "run_queries": 182463,
+      "position_visits": 178028
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|TimeMoE-200M_64|300",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001381541,
+        "saturation": 0.001146625,
+        "radix": 0.001571208,
+        "klein": 0.160808542
+      },
+      "ratios": {
+        "saturation": 0.8299608914972484,
+        "radix": 1.1372865517563358,
+        "klein": 116.39795127325212
+      },
+      "run_queries": 59902,
+      "position_visits": 56598
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|bolt_base_64|300",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001347334,
+        "saturation": 0.001205667,
+        "radix": 0.001574625,
+        "klein": 0.159057833
+      },
+      "ratios": {
+        "saturation": 0.8948538372816243,
+        "radix": 1.1686968487398077,
+        "klein": 118.05375133411613
+      },
+      "run_queries": 58243,
+      "position_visits": 55620
+    },
+    {
+      "case_id": "199_SMD_id_22_Facility_tr_5925_1st_17580|timesfm-1.0-200m_64|300",
+      "phase": "development",
+      "family": "SMD",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001374625,
+        "saturation": 0.001178666,
+        "radix": 0.001589709,
+        "klein": 0.161111125
+      },
+      "ratios": {
+        "saturation": 0.8574454851323089,
+        "radix": 1.1564674002000546,
+        "klein": 117.20369191597709
+      },
+      "run_queries": 58361,
+      "position_visits": 55970
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|TimeMoE-200M_64|300",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.0013135,
+        "saturation": 0.000809291,
+        "radix": 0.001121458,
+        "klein": 0.065974708
+      },
+      "ratios": {
+        "saturation": 0.6161332318233727,
+        "radix": 0.8537936810049487,
+        "klein": 50.22817510468215
+      },
+      "run_queries": 97224,
+      "position_visits": 92976
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|bolt_base_64|300",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001297417,
+        "saturation": 0.000814791,
+        "radix": 0.001158416,
+        "klein": 0.065712833
+      },
+      "ratios": {
+        "saturation": 0.6280101154833027,
+        "radix": 0.8928632814276366,
+        "klein": 50.64896868161894
+      },
+      "run_queries": 97857,
+      "position_visits": 93312
+    },
+    {
+      "case_id": "334_UCR_id_32_HumanActivity_tr_1671_1st_2764|timesfm-1.0-200m_64|300",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001334375,
+        "saturation": 0.000827625,
+        "radix": 0.001163583,
+        "klein": 0.066115083
+      },
+      "ratios": {
+        "saturation": 0.6202341920374708,
+        "radix": 0.8720059953161592,
+        "klein": 49.54760318501171
+      },
+      "run_queries": 97733,
+      "position_visits": 93123
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|TimeMoE-200M_64|300",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.000535791,
+        "saturation": 0.000525833,
+        "radix": 0.000920083,
+        "klein": 0.09032075
+      },
+      "ratios": {
+        "saturation": 0.9814143947919991,
+        "radix": 1.717242357561064,
+        "klein": 168.5745934515511
+      },
+      "run_queries": 5894,
+      "position_visits": 5304
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|bolt_base_64|300",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.00050775,
+        "saturation": 0.000507917,
+        "radix": 0.0009205,
+        "klein": 0.090931416
+      },
+      "ratios": {
+        "saturation": 1.00032890201871,
+        "radix": 1.8129000492368292,
+        "klein": 179.0869837518464
+      },
+      "run_queries": 5586,
+      "position_visits": 4992
+    },
+    {
+      "case_id": "493_UCR_id_191_Sensor_tr_2847_1st_9330|timesfm-1.0-200m_64|300",
+      "phase": "development",
+      "family": "UCR",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.000540208,
+        "saturation": 0.000550167,
+        "radix": 0.000917916,
+        "klein": 0.089763958
+      },
+      "ratios": {
+        "saturation": 1.0184354915143794,
+        "radix": 1.6991899416521041,
+        "klein": 166.16554734472646
+      },
+      "run_queries": 6050,
+      "position_visits": 5263
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|TimeMoE-200M_64|300",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001206666,
+        "saturation": 0.000762209,
+        "radix": 0.001142416,
+        "klein": 0.071608625
+      },
+      "ratios": {
+        "saturation": 0.6316652661134068,
+        "radix": 0.9467541142287925,
+        "klein": 59.34419715149014
+      },
+      "run_queries": 78577,
+      "position_visits": 75416
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|bolt_base_64|300",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001225084,
+        "saturation": 0.000777458,
+        "radix": 0.001126792,
+        "klein": 0.072004958
+      },
+      "ratios": {
+        "saturation": 0.6346160753058565,
+        "radix": 0.9197671343352782,
+        "klein": 58.77552722915326
+      },
+      "run_queries": 78986,
+      "position_visits": 76897
+    },
+    {
+      "case_id": "540_SMAP_id_10_Sensor_tr_2051_1st_4575|timesfm-1.0-200m_64|300",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001232375,
+        "saturation": 0.000795417,
+        "radix": 0.001138958,
+        "klein": 0.069476708
+      },
+      "ratios": {
+        "saturation": 0.6454342225377827,
+        "radix": 0.9241975859620651,
+        "klein": 56.37627183284309
+      },
+      "run_queries": 80582,
+      "position_visits": 77994
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|TimeMoE-200M_64|300",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.000437125,
+        "saturation": 0.000455,
+        "radix": 0.000785958,
+        "klein": 0.05394525
+      },
+      "ratios": {
+        "saturation": 1.0408921933085502,
+        "radix": 1.7980165856448385,
+        "klein": 123.40920789247926
+      },
+      "run_queries": 19343,
+      "position_visits": 17749
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|bolt_base_64|300",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.000476208,
+        "saturation": 0.000416208,
+        "radix": 0.000801417,
+        "klein": 0.053074916
+      },
+      "ratios": {
+        "saturation": 0.874004636629372,
+        "radix": 1.6829137687733091,
+        "klein": 111.45322212142594
+      },
+      "run_queries": 20313,
+      "position_visits": 18940
+    },
+    {
+      "case_id": "545_SMAP_id_15_Sensor_tr_1173_1st_2750|timesfm-1.0-200m_64|300",
+      "phase": "development",
+      "family": "SMAP",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.000455625,
+        "saturation": 0.00040525,
+        "radix": 0.000824291,
+        "klein": 0.053429042
+      },
+      "ratios": {
+        "saturation": 0.8894375857338821,
+        "radix": 1.8091434842249658,
+        "klein": 117.26538710562416
+      },
+      "run_queries": 20805,
+      "position_visits": 18709
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|TimeMoE-200M_64|300",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001681833,
+        "saturation": 0.001739125,
+        "radix": 0.002592125,
+        "klein": 0.077726708
+      },
+      "ratios": {
+        "saturation": 1.0340652133713633,
+        "radix": 1.541249933851934,
+        "klein": 46.215473236641216
+      },
+      "run_queries": 122030,
+      "position_visits": 385051
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|bolt_base_64|300",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001649,
+        "saturation": 0.001682125,
+        "radix": 0.002554791,
+        "klein": 0.07863275
+      },
+      "ratios": {
+        "saturation": 1.0200879320800484,
+        "radix": 1.54929714978775,
+        "klein": 47.685112189205576
+      },
+      "run_queries": 113729,
+      "position_visits": 376019
+    },
+    {
+      "case_id": "843_OPPORTUNITY_id_2_HumanActivity_tr_808_1st_908|timesfm-1.0-200m_64|300",
+      "phase": "development",
+      "family": "OPPORTUNITY",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001730666,
+        "saturation": 0.001727125,
+        "radix": 0.002549041,
+        "klein": 0.081944
+      },
+      "ratios": {
+        "saturation": 0.9979539668543785,
+        "radix": 1.472867092783934,
+        "klein": 47.34824628206714
+      },
+      "run_queries": 124496,
+      "position_visits": 387566
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.004503459,
+        "saturation": 0.004651375,
+        "radix": 0.00462025,
+        "klein": 0.063656291
+      },
+      "ratios": {
+        "saturation": 1.0328449753844768,
+        "radix": 1.0259336212453585,
+        "klein": 14.134977358514869
+      },
+      "run_queries": 609,
+      "position_visits": 4929
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.003011459,
+        "saturation": 0.003184459,
+        "radix": 0.003058125,
+        "klein": 0.065805625
+      },
+      "ratios": {
+        "saturation": 1.0574472373689963,
+        "radix": 1.0154961432315697,
+        "klein": 21.851741962948857
+      },
+      "run_queries": 4655,
+      "position_visits": 4639
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.003017334,
+        "saturation": 0.003109417,
+        "radix": 0.003034083,
+        "klein": 0.066230542
+      },
+      "ratios": {
+        "saturation": 1.0305180003274415,
+        "radix": 1.0055509267452658,
+        "klein": 21.95002011709675
+      },
+      "run_queries": 4655,
+      "position_visits": 4639
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.004182167,
+        "saturation": 0.004334375,
+        "radix": 0.004391458,
+        "klein": 0.0634335
+      },
+      "ratios": {
+        "saturation": 1.036394529438925,
+        "radix": 1.050043673530971,
+        "klein": 15.167615257831647
+      },
+      "run_queries": 4459,
+      "position_visits": 4639
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.00462025,
+        "saturation": 0.004634625,
+        "radix": 0.004678167,
+        "klein": 0.065928833
+      },
+      "ratios": {
+        "saturation": 1.0031113035008927,
+        "radix": 1.01253546885991,
+        "klein": 14.269538012012339
+      },
+      "run_queries": 659,
+      "position_visits": 4945
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.0029645,
+        "saturation": 0.002992167,
+        "radix": 0.002928041,
+        "klein": 0.065250417
+      },
+      "ratios": {
+        "saturation": 1.0093327711249789,
+        "radix": 0.987701467363805,
+        "klein": 22.010597739922417
+      },
+      "run_queries": 4655,
+      "position_visits": 4639
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.002963709,
+        "saturation": 0.003059625,
+        "radix": 0.003005667,
+        "klein": 0.066338791
+      },
+      "ratios": {
+        "saturation": 1.0323635012749226,
+        "radix": 1.0141572603788023,
+        "klein": 22.383706025119196
+      },
+      "run_queries": 4655,
+      "position_visits": 4639
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|30",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.004208166,
+        "saturation": 0.004284958,
+        "radix": 0.004192583,
+        "klein": 0.062958
+      },
+      "ratios": {
+        "saturation": 1.0182483295573417,
+        "radix": 0.9962969616692876,
+        "klein": 14.960911713083561
+      },
+      "run_queries": 4459,
+      "position_visits": 4639
+    },
+    {
+      "case_id": "GutenTAG_0_test|isolation_forest|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000472667,
+        "saturation": 0.00047725,
+        "radix": 0.000472709,
+        "klein": 0.010909459
+      },
+      "ratios": {
+        "saturation": 1.0096960439379097,
+        "radix": 1.0000888574831752,
+        "klein": 23.08064451294463
+      },
+      "run_queries": 5795,
+      "position_visits": 5755
+    },
+    {
+      "case_id": "GutenTAG_0_test|knn_distance|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.0004605,
+        "saturation": 0.000450875,
+        "radix": 0.000453708,
+        "klein": 0.01081125
+      },
+      "ratios": {
+        "saturation": 0.9790988056460368,
+        "radix": 0.9852508143322475,
+        "klein": 23.477198697068403
+      },
+      "run_queries": 5797,
+      "position_visits": 5760
+    },
+    {
+      "case_id": "GutenTAG_0_test|pca_reconstruction|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000455834,
+        "saturation": 0.000455625,
+        "radix": 0.000444541,
+        "klein": 0.010699833
+      },
+      "ratios": {
+        "saturation": 0.9995414997564902,
+        "radix": 0.9752256303829903,
+        "klein": 23.47309108140244
+      },
+      "run_queries": 5791,
+      "position_visits": 5755
+    },
+    {
+      "case_id": "GutenTAG_0_test|robust_marginal_z|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.0005165,
+        "saturation": 0.000516166,
+        "radix": 0.00052075,
+        "klein": 0.01080325
+      },
+      "ratios": {
+        "saturation": 0.999353339787028,
+        "radix": 1.0082284607938046,
+        "klein": 20.9162633107454
+      },
+      "run_queries": 5305,
+      "position_visits": 5827
+    },
+    {
+      "case_id": "GutenTAG_10_test|isolation_forest|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000468459,
+        "saturation": 0.000458916,
+        "radix": 0.000474709,
+        "klein": 0.011658166
+      },
+      "ratios": {
+        "saturation": 0.9796289536544287,
+        "radix": 1.0133416158084272,
+        "klein": 24.886203488458968
+      },
+      "run_queries": 4682,
+      "position_visits": 4653
+    },
+    {
+      "case_id": "GutenTAG_10_test|knn_distance|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000450167,
+        "saturation": 0.000461375,
+        "radix": 0.000462958,
+        "klein": 0.011786958
+      },
+      "ratios": {
+        "saturation": 1.0248974269548856,
+        "radix": 1.0284138997305445,
+        "klein": 26.1835230036853
+      },
+      "run_queries": 4644,
+      "position_visits": 4620
+    },
+    {
+      "case_id": "GutenTAG_10_test|pca_reconstruction|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.000450667,
+        "saturation": 0.000450083,
+        "radix": 0.000433583,
+        "klein": 0.011780291
+      },
+      "ratios": {
+        "saturation": 0.9987041429703085,
+        "radix": 0.9620917440149823,
+        "klein": 26.139679630414477
+      },
+      "run_queries": 4692,
+      "position_visits": 4668
+    },
+    {
+      "case_id": "GutenTAG_10_test|robust_marginal_z|30",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 30,
+      "seconds": {
+        "tie_runs": 0.0004335,
+        "saturation": 0.000452292,
+        "radix": 0.000433583,
+        "klein": 0.010579458
+      },
+      "ratios": {
+        "saturation": 1.0433494809688582,
+        "radix": 1.0001914648212227,
+        "klein": 24.40474740484429
+      },
+      "run_queries": 3956,
+      "position_visits": 4695
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.004609667,
+        "saturation": 0.004734167,
+        "radix": 0.004736583,
+        "klein": 0.17814975
+      },
+      "ratios": {
+        "saturation": 1.0270084585285664,
+        "radix": 1.0275325744788073,
+        "klein": 38.64698903413197
+      },
+      "run_queries": 2743,
+      "position_visits": 16464
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.003089625,
+        "saturation": 0.003296833,
+        "radix": 0.003214292,
+        "klein": 0.178805833
+      },
+      "ratios": {
+        "saturation": 1.0670657442246227,
+        "radix": 1.0403502043128212,
+        "klein": 57.872988793138326
+      },
+      "run_queries": 15765,
+      "position_visits": 15615
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.002991459,
+        "saturation": 0.003007584,
+        "radix": 0.003086208,
+        "klein": 0.179074334
+      },
+      "ratios": {
+        "saturation": 1.0053903463159615,
+        "radix": 1.0316731735250257,
+        "klein": 59.86187141458399
+      },
+      "run_queries": 16345,
+      "position_visits": 16121
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.004391334,
+        "saturation": 0.004506667,
+        "radix": 0.004555584,
+        "klein": 0.174914875
+      },
+      "ratios": {
+        "saturation": 1.0262637731495714,
+        "radix": 1.037403212782266,
+        "klein": 39.83183128406994
+      },
+      "run_queries": 14785,
+      "position_visits": 16121
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.004587166,
+        "saturation": 0.004712708,
+        "radix": 0.004679417,
+        "klein": 0.17205875
+      },
+      "ratios": {
+        "saturation": 1.0273680961186058,
+        "radix": 1.0201106739978452,
+        "klein": 37.50872543090876
+      },
+      "run_queries": 3006,
+      "position_visits": 18804
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.00300925,
+        "saturation": 0.003081583,
+        "radix": 0.003023875,
+        "klein": 0.177359125
+      },
+      "ratios": {
+        "saturation": 1.0240368862673424,
+        "radix": 1.0048600149538922,
+        "klein": 58.93798288610119
+      },
+      "run_queries": 15765,
+      "position_visits": 15615
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.003063792,
+        "saturation": 0.003159666,
+        "radix": 0.0030855,
+        "klein": 0.17437275
+      },
+      "ratios": {
+        "saturation": 1.0312925942753295,
+        "radix": 1.0070853373858277,
+        "klein": 56.91403006470413
+      },
+      "run_queries": 16345,
+      "position_visits": 16121
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|100",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.00423775,
+        "saturation": 0.004225542,
+        "radix": 0.004409542,
+        "klein": 0.173769333
+      },
+      "ratios": {
+        "saturation": 0.9971192260043654,
+        "radix": 1.0405384933042297,
+        "klein": 41.00509303285941
+      },
+      "run_queries": 14785,
+      "position_visits": 16121
+    },
+    {
+      "case_id": "GutenTAG_0_test|isolation_forest|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.00063675,
+        "saturation": 0.000569417,
+        "radix": 0.000630083,
+        "klein": 0.030506583
+      },
+      "ratios": {
+        "saturation": 0.8942552021986652,
+        "radix": 0.989529642716922,
+        "klein": 47.90982803297998
+      },
+      "run_queries": 20737,
+      "position_visits": 20203
+    },
+    {
+      "case_id": "GutenTAG_0_test|knn_distance|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000627667,
+        "saturation": 0.00061825,
+        "radix": 0.000627916,
+        "klein": 0.033919542
+      },
+      "ratios": {
+        "saturation": 0.9849968215630261,
+        "radix": 1.000396707171159,
+        "klein": 54.04066487484605
+      },
+      "run_queries": 20862,
+      "position_visits": 20324
+    },
+    {
+      "case_id": "GutenTAG_0_test|pca_reconstruction|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000662125,
+        "saturation": 0.000567209,
+        "radix": 0.000577584,
+        "klein": 0.033899833
+      },
+      "ratios": {
+        "saturation": 0.8566494242023789,
+        "radix": 0.8723186709458185,
+        "klein": 51.19853955068907
+      },
+      "run_queries": 20965,
+      "position_visits": 20440
+    },
+    {
+      "case_id": "GutenTAG_0_test|robust_marginal_z|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000640084,
+        "saturation": 0.00062125,
+        "radix": 0.000716708,
+        "klein": 0.03138275
+      },
+      "ratios": {
+        "saturation": 0.9705757369345274,
+        "radix": 1.1197092881559296,
+        "klein": 49.02911180407572
+      },
+      "run_queries": 18808,
+      "position_visits": 19979
+    },
+    {
+      "case_id": "GutenTAG_10_test|isolation_forest|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000608042,
+        "saturation": 0.000577916,
+        "radix": 0.000588542,
+        "klein": 0.031362125
+      },
+      "ratios": {
+        "saturation": 0.950454080474704,
+        "radix": 0.9679298469513617,
+        "klein": 51.578879419513775
+      },
+      "run_queries": 16450,
+      "position_visits": 16141
+    },
+    {
+      "case_id": "GutenTAG_10_test|knn_distance|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000594125,
+        "saturation": 0.000590584,
+        "radix": 0.000552417,
+        "klein": 0.030903833
+      },
+      "ratios": {
+        "saturation": 0.9940399747527877,
+        "radix": 0.9297992846623185,
+        "klein": 52.01570881548495
+      },
+      "run_queries": 16310,
+      "position_visits": 16027
+    },
+    {
+      "case_id": "GutenTAG_10_test|pca_reconstruction|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000634417,
+        "saturation": 0.000561417,
+        "radix": 0.000584334,
+        "klein": 0.034018958
+      },
+      "ratios": {
+        "saturation": 0.8849337265552469,
+        "radix": 0.9210566551652936,
+        "klein": 53.62239347306268
+      },
+      "run_queries": 16925,
+      "position_visits": 16480
+    },
+    {
+      "case_id": "GutenTAG_10_test|robust_marginal_z|100",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 100,
+      "seconds": {
+        "tie_runs": 0.000665666,
+        "saturation": 0.000545041,
+        "radix": 0.000627458,
+        "klein": 0.031080583
+      },
+      "ratios": {
+        "saturation": 0.8187905045473256,
+        "radix": 0.9426018453699002,
+        "klein": 46.690957627398724
+      },
+      "run_queries": 14297,
+      "position_visits": 16372
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|isolation_forest|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.004776375,
+        "saturation": 0.004923042,
+        "radix": 0.005396208,
+        "klein": 0.518429917
+      },
+      "ratios": {
+        "saturation": 1.0307067598335558,
+        "radix": 1.12977058962079,
+        "klein": 108.54045526157388
+      },
+      "run_queries": 8943,
+      "position_visits": 49264
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.003429291,
+        "saturation": 0.003316541,
+        "radix": 0.003801416,
+        "klein": 0.497887958
+      },
+      "ratios": {
+        "saturation": 0.9671214837119393,
+        "radix": 1.108513684023899,
+        "klein": 145.186849993191
+      },
+      "run_queries": 47565,
+      "position_visits": 46834
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.003500875,
+        "saturation": 0.003179625,
+        "radix": 0.003561416,
+        "klein": 0.506293958
+      },
+      "ratios": {
+        "saturation": 0.9082372264076838,
+        "radix": 1.0172931052951049,
+        "klein": 144.61926175598956
+      },
+      "run_queries": 58745,
+      "position_visits": 56614
+    },
+    {
+      "case_id": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.004707542,
+        "saturation": 0.004623167,
+        "radix": 0.004984792,
+        "klein": 0.499950958
+      },
+      "ratios": {
+        "saturation": 0.9820766336232368,
+        "radix": 1.0588948542572747,
+        "klein": 106.20212374100963
+      },
+      "run_queries": 53185,
+      "position_visits": 56614
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.004748167,
+        "saturation": 0.004866125,
+        "radix": 0.0052645,
+        "klein": 0.504325333
+      },
+      "ratios": {
+        "saturation": 1.0248428498829125,
+        "radix": 1.108743647811882,
+        "klein": 106.21474202571224
+      },
+      "run_queries": 9806,
+      "position_visits": 63168
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.003219916,
+        "saturation": 0.003160583,
+        "radix": 0.003647459,
+        "klein": 0.49594075
+      },
+      "ratios": {
+        "saturation": 0.981573121783301,
+        "radix": 1.1327807930393214,
+        "klein": 154.02288444791725
+      },
+      "run_queries": 47565,
+      "position_visits": 46834
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.00343825,
+        "saturation": 0.00321175,
+        "radix": 0.00361825,
+        "klein": 0.493110125
+      },
+      "ratios": {
+        "saturation": 0.9341234639714973,
+        "radix": 1.0523522140623864,
+        "klein": 143.41892677961172
+      },
+      "run_queries": 58745,
+      "position_visits": 56614
+    },
+    {
+      "case_id": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|300",
+      "phase": "external",
+      "family": "GHL",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.004825541,
+        "saturation": 0.0046725,
+        "radix": 0.005117083,
+        "klein": 0.50983275
+      },
+      "ratios": {
+        "saturation": 0.9682852140309242,
+        "radix": 1.0604164382812207,
+        "klein": 105.65297238174952
+      },
+      "run_queries": 53185,
+      "position_visits": 56614
+    },
+    {
+      "case_id": "GutenTAG_0_test|isolation_forest|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001205375,
+        "saturation": 0.00086025,
+        "radix": 0.001280583,
+        "klein": 0.098499542
+      },
+      "ratios": {
+        "saturation": 0.7136783158768017,
+        "radix": 1.0623938608316914,
+        "klein": 81.71692792699366
+      },
+      "run_queries": 71108,
+      "position_visits": 67434
+    },
+    {
+      "case_id": "GutenTAG_0_test|knn_distance|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.00118375,
+        "saturation": 0.000856541,
+        "radix": 0.001274292,
+        "klein": 0.097163416
+      },
+      "ratios": {
+        "saturation": 0.7235826821541712,
+        "radix": 1.076487434002112,
+        "klein": 82.0810272439282
+      },
+      "run_queries": 70669,
+      "position_visits": 66548
+    },
+    {
+      "case_id": "GutenTAG_0_test|pca_reconstruction|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001148167,
+        "saturation": 0.000863459,
+        "radix": 0.001187041,
+        "klein": 0.096751083
+      },
+      "ratios": {
+        "saturation": 0.752032587593965,
+        "radix": 1.0338574440826116,
+        "klein": 84.26568870207905
+      },
+      "run_queries": 73729,
+      "position_visits": 69094
+    },
+    {
+      "case_id": "GutenTAG_0_test|robust_marginal_z|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001129875,
+        "saturation": 0.000859833,
+        "radix": 0.00124575,
+        "klein": 0.086708375
+      },
+      "ratios": {
+        "saturation": 0.7609983405243942,
+        "radix": 1.1025555924327912,
+        "klein": 76.74156433233765
+      },
+      "run_queries": 66108,
+      "position_visits": 69095
+    },
+    {
+      "case_id": "GutenTAG_10_test|isolation_forest|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001066958,
+        "saturation": 0.000801958,
+        "radix": 0.001197042,
+        "klein": 0.086810375
+      },
+      "ratios": {
+        "saturation": 0.7516303359644897,
+        "radix": 1.1219204504769633,
+        "klein": 81.36250442847796
+      },
+      "run_queries": 59130,
+      "position_visits": 56500
+    },
+    {
+      "case_id": "GutenTAG_10_test|knn_distance|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001088584,
+        "saturation": 0.000747542,
+        "radix": 0.00113775,
+        "klein": 0.094363333
+      },
+      "ratios": {
+        "saturation": 0.686710442189119,
+        "radix": 1.0451650952062497,
+        "klein": 86.68447542863021
+      },
+      "run_queries": 59383,
+      "position_visits": 56452
+    },
+    {
+      "case_id": "GutenTAG_10_test|pca_reconstruction|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001033125,
+        "saturation": 0.00068725,
+        "radix": 0.001129291,
+        "klein": 0.095916375
+      },
+      "ratios": {
+        "saturation": 0.6652147610405325,
+        "radix": 1.093082637628554,
+        "klein": 92.8410163339383
+      },
+      "run_queries": 59870,
+      "position_visits": 56481
+    },
+    {
+      "case_id": "GutenTAG_10_test|robust_marginal_z|300",
+      "phase": "external",
+      "family": "GutenTAG",
+      "max_buffer": 300,
+      "seconds": {
+        "tie_runs": 0.001060167,
+        "saturation": 0.00074825,
+        "radix": 0.001138291,
+        "klein": 0.087353291
+      },
+      "ratios": {
+        "saturation": 0.7057850319808106,
+        "radix": 1.0736902770978534,
+        "klein": 82.39578387178624
+      },
+      "run_queries": 57793,
+      "position_visits": 60362
+    }
+  ],
+  "scope": "Descriptive structural/reused-data evaluation; no new primary runtime success or unseen confirmation."
+}

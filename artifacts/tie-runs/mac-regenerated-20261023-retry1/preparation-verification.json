@@ -1,0 +1,16 @@
+{
+  "status": "PASS_PREPARED_INPUTS_NO_METRICS",
+  "verified_utc": "2026-10-23T04:18:16.114096+00:00",
+  "protocol_sha256": "13aa05f3d88e4e6ed86d89363b268655e5c6d9c8475b1e1d97e9cff1cc2fa795",
+  "cases": 68,
+  "phases": {
+    "structural": 20,
+    "external_regenerated": 48
+  },
+  "actual_frozen_runner_array_identity_checks": 68,
+  "public_npz_files": 20,
+  "regenerated_score_vectors_equal_to_mac": 48,
+  "regenerated_score_vectors_compared": 48,
+  "metric_timings_started": false,
+  "scope": "Existing unmodified runner contract and array hashes verified for all prepared cases. No metric, warmup, or timing performed."
+}

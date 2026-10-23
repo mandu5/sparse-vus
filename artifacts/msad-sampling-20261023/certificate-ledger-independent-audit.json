@@ -1,0 +1,22 @@
+{
+  "reviewed_utc": "2026-10-23T05:54:26.057487+00:00",
+  "reviewer": "independent sampling study branch",
+  "status": "PASS",
+  "method": "Independent exact Fraction parsing/cross-comparison of public integer endpoints; no certificate code imported and no corpus values recomputed.",
+  "protocol_sha256": "4b73c88d7f129f5d5fdfeb7b36e1efb71d753bc8351c55ea5815c3bb84897e04",
+  "records_sha256": "4e557a2696ab92d35b2c433bdf98918de41afeb7e1a92172da62adfa52e185ab",
+  "report_sha256": "ac9b0b1244ee969d2ee51b88e42668b534a9200fe8bcc788ba1c5c8ec6c8d1fb",
+  "source_and_input_hash_chain_verified": true,
+  "unique_scalar_records": 3072,
+  "series_budget_decisions_recomputed": 256,
+  "certified_winners": {
+    "250": 63,
+    "1000": 94
+  },
+  "informational_float_reference_outside": {
+    "250": 0,
+    "1000": 1
+  },
+  "coverage": "128 series x 12 models x 2 budgets; all intended keys exactly once; every published endpoint in [0,1]; complete per-family winner counts match",
+  "boundary": "Audits ledger consistency and exact decision arithmetic, not a new proof of endpoint construction or binary64-reference containment."
+}

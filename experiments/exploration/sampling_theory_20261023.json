@@ -1,0 +1,158 @@
+{
+  "status": "exploratory_theory_checks_not_a_timing_benchmark",
+  "sources": {
+    "experiments/exploration/sampling_theory_20261023.py": "a948a0caa72a78a96edc038f97ec1bfa2c4e6bb8320870898110fcbc19ab6109",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "enclosures": {
+    "enclosures_checked": 20880,
+    "maximum_roundoff_violation": 1.1102230246251565e-16
+  },
+  "indistinguishability": [
+    {
+      "H": 10,
+      "q": 40,
+      "m": 8,
+      "n": 361,
+      "L": 6,
+      "all_sampled_states_identical": true,
+      "exact_A": 0.7713789682539681,
+      "exact_B": 0.1166928894655335,
+      "sampled_A": 0.19512195121951217,
+      "sampled_B": 0.19512195121951217,
+      "exact_gap": 0.6546860787884347
+    },
+    {
+      "H": 20,
+      "q": 120,
+      "m": 20,
+      "n": 2281,
+      "L": 8,
+      "all_sampled_states_identical": true,
+      "exact_A": 0.8677320647618636,
+      "exact_B": 0.09173607575535536,
+      "sampled_A": 0.1652892561983471,
+      "sampled_B": 0.1652892561983471,
+      "exact_gap": 0.7759959890065082
+    }
+  ],
+  "overestimation": [
+    {
+      "H": 250,
+      "q": 10,
+      "m": 3,
+      "n": 2491,
+      "L": 30,
+      "exact": 0.25,
+      "sampled": 0.5064120865588823,
+      "closed_form": 0.5064120865588823,
+      "proved_lower_bound": 0.22134038338490367,
+      "overestimation": 0.25641208655888226,
+      "same_label_competitor": {
+        "distance": 5,
+        "exact": 0.757142306955327,
+        "sampled": 0.4181811179431437,
+        "exact_formula": 0.7571423069553272,
+        "sampled_formula": 0.41818111794314367,
+        "wrong_selection_regret": 0.507142306955327,
+        "sampled_wrong_winner_margin": 0.08823096861573854,
+        "dense_and_unmodified_full_threshold_parity": true
+      }
+    },
+    {
+      "H": 250,
+      "q": 20,
+      "m": 4,
+      "n": 4981,
+      "L": 100,
+      "exact": 0.1999999999999996,
+      "sampled": 0.6247428707729759,
+      "closed_form": 0.6247428707729759,
+      "proved_lower_bound": 0.4290422022142191,
+      "overestimation": 0.42474287077297623,
+      "same_label_competitor": {
+        "distance": 5,
+        "exact": 0.900579669423708,
+        "sampled": 0.5690084586149853,
+        "exact_formula": 0.9005796694237083,
+        "sampled_formula": 0.5690084586149853,
+        "wrong_selection_regret": 0.7005796694237084,
+        "sampled_wrong_winner_margin": 0.055734412157990576,
+        "dense_and_unmodified_full_threshold_parity": true
+      }
+    },
+    {
+      "H": 250,
+      "q": 40,
+      "m": 6,
+      "n": 9961,
+      "L": 300,
+      "exact": 0.14285714285714338,
+      "sampled": 0.7062888888433648,
+      "closed_form": 0.7062888888433646,
+      "proved_lower_bound": 0.5626641003317704,
+      "overestimation": 0.5634317459862215,
+      "same_label_competitor": {
+        "distance": 1,
+        "exact": 0.9892488966851481,
+        "sampled": 0.6687668395365358,
+        "exact_formula": 0.9892488966851478,
+        "sampled_formula": 0.668766839536536,
+        "wrong_selection_regret": 0.8463917538280048,
+        "sampled_wrong_winner_margin": 0.03752204930682901,
+        "dense_and_unmodified_full_threshold_parity": true
+      }
+    },
+    {
+      "H": 10,
+      "q": 40,
+      "m": 4,
+      "n": 361,
+      "L": 350,
+      "exact": 0.20000000000000132,
+      "sampled": 0.7587015773321771,
+      "closed_form": 0.758701577332177,
+      "proved_lower_bound": 0.62809562299748,
+      "overestimation": 0.5587015773321758
+    },
+    {
+      "H": 250,
+      "q": 8,
+      "m": 2,
+      "n": 1993,
+      "L": 1992,
+      "exact": 0.33333333333333615,
+      "sampled": 0.7720682569703615,
+      "closed_form": 0.7720682569703617,
+      "proved_lower_bound": 0.7658483149941755,
+      "overestimation": 0.4387349236370254
+    },
+    {
+      "H": 250,
+      "q": 30,
+      "m": 5,
+      "n": 7471,
+      "L": 7470,
+      "exact": 0.16666666666666766,
+      "sampled": 0.8319365598356934,
+      "closed_form": 0.8319365598356935,
+      "proved_lower_bound": 0.8251923050110421,
+      "overestimation": 0.6652698931690257
+    }
+  ],
+  "asymptotic_sampled_lower_bound_H250_Lleqn": 0.982280510610633,
+  "finite_rational_witness": {
+    "n": 498000001,
+    "L": 498000000,
+    "H": 250,
+    "q": 2000000,
+    "m": 1000,
+    "kind": "exact_rational_lower_bound_only_not_an_executed_metric_case",
+    "sampled_proved_lower_bound": "977516488501501/996000500000001",
+    "exact_value": "1/1001",
+    "overestimation_strictly_greater_than_0_98": true
+  }
+}

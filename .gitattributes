@@ -6,3 +6,5 @@
 *.svg whitespace=-blank-at-eol
 # Preserve historical pytest traces verbatim, including blank assertion lines.
 artifacts/*.txt whitespace=-blank-at-eol
+# Official journal template is preserved byte-for-byte at its pinned revision.
+paper/tmlr-style/* linguist-vendored whitespace=-blank-at-eol

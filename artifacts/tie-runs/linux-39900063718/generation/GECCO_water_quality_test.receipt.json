@@ -1,0 +1,69 @@
+{
+  "series": "GECCO_water_quality_test",
+  "family": "GECCO",
+  "canonical_family": "gecco",
+  "completed_utc": "2026-10-23T04:24:13.803660+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GECCO/GECCO_water_quality_test.csv",
+  "raw_bytes": 6114353,
+  "raw_sha256": "1540ae632c03828525c6ffde4dff12d27410c79ee38d69f6807ed8a4ff73941d",
+  "raw_git_blob_verified": true,
+  "raw_lfs_verified": false,
+  "npz_path": ".cache/tie-replication/linux-39900063718/generation/arrays/GECCO_water_quality_test.npz",
+  "npz_bytes": 1905080,
+  "npz_sha256": "239264bab67da763e88538575904c23c0447aa9820ba34b662603438e284ab26",
+  "n": 83113,
+  "preprocessing": {
+    "feature_columns": [
+      "Tp",
+      "Cl",
+      "pH",
+      "Redox",
+      "Leit",
+      "Trueb",
+      "Cl_2",
+      "Fm",
+      "Fm_2"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "Tp": 0,
+      "Cl": 0,
+      "pH": 0,
+      "Redox": 0,
+      "Leit": 0,
+      "Trueb": 0,
+      "Cl_2": 0,
+      "Fm": 0,
+      "Fm_2": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 9
+  },
+  "actual_parameters": {
+    "pca_rank": 5,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "77890cb76440c71d8f45f0d87d1084df1cbe035f864b462833967b78b4adb722",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.2886913320000133,
+    "pca_reconstruction": 0.015337860000002479,
+    "knn_distance": 0.9617135259999969,
+    "robust_marginal_z": 0.013750094000002377
+  },
+  "array_sha256": {
+    "labels": "a5a23798814307777806b5b9203d76b88b9202975d2330a247818aaa8b12c61b",
+    "isolation_forest": "72c7497043fe08540c7b4c7405192b082930928935a24e6b337ae1a173cd47e6",
+    "pca_reconstruction": "b37520a4298b297c73a96bc9985c54132092b7b947108dfb688e89dcfb1c3c08",
+    "knn_distance": "5aac7b9e416079e58a787827c1787fa7810cadbfebe12a015b025bcb5217e3b3",
+    "robust_marginal_z": "b0e61ac2505f23c68c63d0d6aabb370972d541ae5f78082271207af624c657ce"
+  },
+  "selection_sha256": "f6bef8a4ba9e0aee16a1afc11231533ca2c545ab0ee93fc2631a7de40ee749fe",
+  "metric_outcomes_computed": false
+}

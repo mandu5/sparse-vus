@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETED",
+  "started_utc": "2026-10-21T05:04:53.605801+00:00",
+  "protocol_sha256": "8e9bf4a9e1d938f9b4467e46050ff5820ab04083d5cc8011cf770eb5083ae5ad",
+  "source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "experiments/benchmark_saturation_external_baselines.py": "9285d70fd9cc66d1b621f9e0457e0e78cb7444da4087e8399f56cff860a6eaf8",
+    "docs/saturation_external_baseline_protocol_20261021.md": "eb76065ccbc1823815b62ba5605f643b20ad39096745d8810830083804307b89",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    "experiments/dtaianomaly_adapter.py": "7b53d095aa505567d11a9db33068977dd26697b799c1dc2ee28e2a9d14024a64",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+    ".cache/dtaianomaly/_volume_under_surface_metrics.py": "728045cd8ddf0caa6aab10a9ab66f5f876ee77e5d0ae80dfbce5029eab9ed5b7"
+  },
+  "completed_cases": 48,
+  "ended_utc": "2026-10-21T05:06:50.918361+00:00",
+  "measurements_sha256": "d83e4ecc8df6d64e993606a59bd48799751e61fd594b665b4cffe26bd348ebe8",
+  "workers_sha256": "d46fa799c1f79026ffdd4e8a57828e73abec0a114df4a935d1fb3d76a110db41"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "MATCH",
+  "stage": "before Linux raw-data download or score generation",
+  "utc": "2026-10-21T04:54:53.823383+00:00",
+  "fields_equal": {
+    "source": true,
+    "source_code_revision": true,
+    "source_data_revision": true,
+    "metadata_sha256": true,
+    "file_tree_sha256": true,
+    "previous_manifest_sha256": true,
+    "previous_families": true,
+    "previous_canonical_families": true,
+    "family_aliases": true,
+    "rule": true,
+    "selected_count": true,
+    "family_count": true,
+    "models": true,
+    "parameters": true,
+    "source_sha256": true,
+    "series": true
+  },
+  "mac_selection_sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+  "linux_selection_sha256": "30b8fe5a94b7e60cffbcb04e06917108244963282fd06835622d718d48bd5003",
+  "scope": "Required selection content is compared; timestamps and platform-specific environment bindings may differ."
+}

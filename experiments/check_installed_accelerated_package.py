@@ -31,6 +31,7 @@ def main():
     import numpy as np
     import sparse_vus
     from sparse_vus.radix import sparse_pr_radix_jit, sparse_vus_radix_jit
+    from sparse_vus.saturation import sparse_pr_saturation_jit, sparse_vus_saturation_jit
 
     repository = Path(__file__).resolve().parents[1]
     distribution = importlib.metadata.distribution("sparse-vus")
@@ -60,14 +61,21 @@ def main():
         pr = sparse_pr_radix_jit(labels, scores, max_buffer=width)
         np.testing.assert_allclose(pair, expected, rtol=0, atol=1e-11)
         np.testing.assert_allclose(pr, expected[1], rtol=0, atol=1e-11)
+        active_pair = sparse_vus_saturation_jit(labels, scores, max_buffer=width)
+        active_pr = sparse_pr_saturation_jit(labels, scores, max_buffer=width)
+        np.testing.assert_allclose(active_pair, expected, rtol=0, atol=1e-11)
+        np.testing.assert_allclose(active_pr, expected[1], rtol=0, atol=1e-11)
         if not isinstance(pair, tuple) or len(pair) != 2 or type(pr) is not float:
             raise AssertionError("Public radix return contract differs")
+        if not isinstance(active_pair, tuple) or len(active_pair) != 2 or type(active_pr) is not float:
+            raise AssertionError("Public active-prefix return contract differs")
     np.testing.assert_allclose(sparse_vus_radix_jit(*cases[0]),
                                (0.6892652251673258, 0.6834092121537311), rtol=0, atol=1e-12)
     if sparse_pr_radix_jit([0, 1], [-0., 0.], 0) != .5:
         raise AssertionError("Signed-zero tie semantics differ")
     print(json.dumps({"status": "PASS", "scope": "installed accelerated wheel; no timing claim",
                       "version": version, "source_identical_modules": len(originals),
+                      "api_routes": ["radix_pair", "radix_pr", "saturation_pair", "saturation_pr"],
                       "parity_cases": len(cases), "numpy": np.__version__,
                       "numba": importlib.metadata.version("numba")}))
 

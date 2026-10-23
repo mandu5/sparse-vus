@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-21T05:22:56.848411+00:00",
+  "status": "PASS_CHECKED_ARTIFACT_SCOPE",
+  "source_base_commit": "595fb3bce1f7fa94de07c79d992166227c2aae0d",
+  "source_sha256": {
+    "experiments/check_installed_accelerated_package.py": "ef7c57bdbf63d9470e92d82174e719dd2218ae7e4f9a3373b86c20e531aa8ed7",
+    "paper/active_prefix.pdf": "5d1218c4ac4a7f276bca8e41d96eff6c3c33384ca20e92fbae984b2c30e44702",
+    "paper/active_prefix.tex": "af40010ec322af57a1867e3e52aae2cb9aa75c43b220695d92d9b2983dd75267",
+    "paper/active_prefix_abstract_results.tex": "078cb880f5be8416f9f916284d93d1b552c51695814b0c6894222d590f6b9b97",
+    "paper/active_prefix_body.tex": "0befa4a0c4211d6fbe961078b885be332b5f86d1ca3a745beecdaa9f25d1ea73",
+    "paper/active_prefix_references.bib": "5e170b7ef524c7e6b0ec215261a5e2e18a6532bc5f26900369a75e3764526725",
+    "paper/active_prefix_results.tex": "95152415eaa215d8141de2ec263f82c8297978a3346e5d5fa2cf907ec1afefc1",
+    "paper/active_prefix_results_table.tex": "a6cfafa016c12d2990f19b98297fd742af80ba3b3a0aaacbe0f1e4d1e09514cc",
+    "paper/active_prefix_structural_results.tex": "dcc50512945b7490477e5fc330ac80a11846a1227da5562521ad1e76fb81ffa2",
+    "paper/saturation_mass_bound.tex": "59e9c47377a84779debb93c3851a1312c113f1128528ecc8183474a4813a4ebb",
+    "paper/saturation_method.tex": "3671bc35cc55b9238128d36db3792464c9a338244eb680f781cc9f998280ecda",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "experiments/audit_saturation_supplement.py": "2a524c3c73b1a459ed5c6c4bd0746ec6d076ab32efacae25be507aa5326b8f43",
+    "tests/test_saturation_supplement_audit.py": "695f07f11a497cee45aa4138c53c4adc357e47a1d92145549823d27cfc01cfd1"
+  },
+  "full_suite": {
+    "command": "/opt/anaconda3/bin/python -m pytest -q",
+    "exit_code": 0,
+    "passed": 3279,
+    "seconds": 73.52,
+    "scope": "Before subsequent supplemental-auditor additions; installed-check extension separately verified below."
+  },
+  "installed_wheel": {
+    "command": "/tmp/saturation-wheel-venv-20261021/bin/python /Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/check_installed_accelerated_package.py",
+    "exit_code": 0,
+    "source_identical_modules": 11,
+    "api_routes": [
+      "radix_pair",
+      "radix_pr",
+      "saturation_pair",
+      "saturation_pr"
+    ],
+    "parity_cases": 4,
+    "environment": "separate venv with system site dependencies; installed wheel code verified outside checkout",
+    "targeted_package_tests": {
+      "passed": 4,
+      "seconds": 0.02
+    }
+  },
+  "paper": {
+    "command": "tectonic --keep-intermediates --keep-logs active_prefix.tex",
+    "exit_code": 0,
+    "pages_including_references": 9,
+    "official_styles_verified": true,
+    "overfull_boxes": 0,
+    "undefined_references": 0,
+    "missing_characters": 0,
+    "fonts_embedded": true,
+    "render_visual_review": "All 9 pages inspected; changed pages re-inspected after final two arithmetic clarifications."
+  },
+  "scientific_scope": {
+    "primary_runtime_decisions": [
+      false,
+      false,
+      false
+    ],
+    "formal_optimality": "Deterministic singleton distinct-binary64 class, L<=n, stated computation model",
+    "external_peer_review": false,
+    "submission_receipt": null
+  },
+  "author_declarations": "Human contribution/revision/account facts requested against concrete manuscript; not inferred.",
+  "final_additions": {
+    "supplement_auditor_cli": "PASS_RECORDED_SUPPLEMENT; 48 cases; 462 completed repetitions; 2 timeouts; 4 skipped",
+    "targeted_tests": {
+      "command": "python -m pytest -q tests/test_saturation_supplement_audit.py tests/test_installed_accelerated_check.py",
+      "passed": 20
+    },
+    "independent_static_review": "No substantive correctness blocker in kernel, mathematical claims, drivers, or reusable supplemental auditor; NumPy documentation corrected."
+  },
+  "updated_utc": "2026-10-21T05:26:40.892645+00:00"
+}

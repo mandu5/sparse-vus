@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-10-23T04:17:06.292596+00:00",
+  "stage": "before selected data download and score generation",
+  "source": "mTSBench",
+  "source_code_revision": "0ebf90da7642e103192e05971fdb44e3149bcd51",
+  "source_data_revision": "8dea9af65a9895f39e9e76f118cf23a94d2d4d0a",
+  "metadata_url": "https://raw.githubusercontent.com/PLAN-Lab/mTSBench/0ebf90da7642e103192e05971fdb44e3149bcd51/Datasets/data_summary.csv",
+  "file_tree_url": "https://huggingface.co/api/datasets/PLAN-Lab/mTSBench/tree/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a?recursive=true&limit=1000",
+  "metadata_sha256": "7daa470a62b95d8ab59913348db6661a59b480f02ae1fbb9bbb246d6dd63efa7",
+  "file_tree_sha256": "42df9286fde2465e381426fd2112ef68cfc46bfcef2b8763e2d32dd6490e26c0",
+  "previous_manifest_sha256": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+  "previous_families": [
+    "CATSv2",
+    "Daphnet",
+    "Exathlon",
+    "IOPS",
+    "LTDB",
+    "MGAB",
+    "MITDB",
+    "MSL",
+    "NAB",
+    "NEK",
+    "OPPORTUNITY",
+    "Power",
+    "SED",
+    "SMAP",
+    "SMD",
+    "SVDB",
+    "SWaT",
+    "Stock",
+    "TAO",
+    "TODS",
+    "UCR",
+    "WSD",
+    "YAHOO"
+  ],
+  "previous_canonical_families": [
+    "catsv2",
+    "daphnet",
+    "exathlon",
+    "iops",
+    "ltdb",
+    "mgab",
+    "mitdb",
+    "msl",
+    "nab",
+    "nek",
+    "opportunity",
+    "power",
+    "sed",
+    "smap",
+    "smd",
+    "stock",
+    "svdb",
+    "swat",
+    "tao",
+    "tods",
+    "ucr",
+    "wsd",
+    "yahoo"
+  ],
+  "family_aliases": {
+    "nasamsl": "msl",
+    "nasasmap": "smap",
+    "kddtsad": "ucr",
+    "ucranomalyarchive": "ucr",
+    "webscopes5": "yahoo",
+    "yahoos5": "yahoo",
+    "roomoccupancy": "occupancy",
+    "occupancydetection": "occupancy",
+    "sensorscope": "ssa",
+    "cicids2017": "cicids",
+    "swansf": "swan",
+    "metrointerstatetrafficvolume": "metro",
+    "calit2buildingpeoplecounts": "calit2"
+  },
+  "rule": "exclude prior canonical source families; test files n<=100000; first two filenames lexicographically per family",
+  "scope": "new source families relative to this project's previous 350-series corpus; generated classical control scores, not original detector reproduction",
+  "selected_count": 12,
+  "family_count": 9,
+  "expected_download_bytes": 117045289,
+  "models": [
+    "isolation_forest",
+    "pca_reconstruction",
+    "knn_distance",
+    "robust_marginal_z"
+  ],
+  "parameters": {
+    "seed": 20261021,
+    "preprocessing": "all rows, no labels; finite-column median imputation; population standardization",
+    "isolation_forest": {
+      "n_estimators": 100,
+      "max_samples": "min(256,n)",
+      "max_features": 1.0,
+      "contamination": "auto",
+      "bootstrap": false,
+      "random_state": 20261021,
+      "n_jobs": 1,
+      "score": "negative decision_function"
+    },
+    "pca_reconstruction": {
+      "n_components": "min(5,d-1)",
+      "svd_solver": "full",
+      "whiten": false,
+      "score": "mean squared reconstruction residual",
+      "rank_zero": "zero reconstruction"
+    },
+    "knn_distance": {
+      "reference": "np.linspace(0,n-1,min(2048,n),dtype=np.int64)",
+      "n_neighbors": "min(20,reference_count)",
+      "algorithm": "brute",
+      "metric": "euclidean",
+      "n_jobs": 1,
+      "query_batch_rows": 512,
+      "score": "distance to kth neighbor; self is included where present"
+    },
+    "robust_marginal_z": {
+      "center": "median",
+      "scale": "1.4826*MAD",
+      "zero_scale_fallback": "population std if positive, otherwise 1",
+      "score": "max absolute standardized deviation"
+    }
+  },
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+    "executable": "/opt/anaconda3/bin/python",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "pandas": "3.0.1",
+      "threadpoolctl": "3.6.0"
+    }
+  },
+  "source_sha256": {
+    "experiments/fetch_saturation_external.py": "6c946f2c61ac0efaa42c881caee51a2526fa0236000e199636b61d3e67d63a6f",
+    "docs/saturation_external_design_20261021.md": "66899dddf2533ba74af891f99fe9dce559cb349294c9bf5d95d9a3b9f53604f8"
+  },
+  "series": [
+    {
+      "series": "CalIt2_traffic_test",
+      "family": "CalIt2",
+      "canonical_family": "calit2",
+      "source_path": "CalIt2/CalIt2_traffic_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/CalIt2/CalIt2_traffic_test.csv",
+      "expected_n": 4032,
+      "expected_bytes": 106245,
+      "git_blob_oid": "7e6d193570892814389b5a0525795d0ec3906c35",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/CalIt2",
+        "File": "CalIt2_traffic_test.csv",
+        "NumRows": "4032",
+        "NumNaNs": "0",
+        "NumChannels": "3",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "21",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(118, 124), (208, 226), (228, 233)]"
+      }
+    },
+    {
+      "series": "GECCO_water_quality_test",
+      "family": "GECCO",
+      "canonical_family": "gecco",
+      "source_path": "GECCO/GECCO_water_quality_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GECCO/GECCO_water_quality_test.csv",
+      "expected_n": 83113,
+      "expected_bytes": 6114353,
+      "git_blob_oid": "a1e533f861bda995c01fd34ba4be8a8d4916da77",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/GECCO",
+        "File": "GECCO_water_quality_test.csv",
+        "NumRows": "83113",
+        "NumNaNs": "0",
+        "NumChannels": "10",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "37",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(4195, 4447), (7012, 7021), (8809, 8830)]"
+      }
+    },
+    {
+      "series": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test",
+      "family": "GHL",
+      "canonical_family": "ghl",
+      "source_path": "GHL/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GHL/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.csv",
+      "expected_n": 80001,
+      "expected_bytes": 12971751,
+      "git_blob_oid": "4a066d3147e6e7d039e1c89a441b94c94388d996",
+      "lfs": {
+        "oid": "1092c17a60e431a1c7e3521f402665a7f51559bd57003c2c69787cbbed95b425",
+        "size": 12971751,
+        "pointerSize": 133
+      },
+      "metadata": {
+        "Folder": "mTSBench/GHL",
+        "File": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.csv",
+        "NumRows": "80001",
+        "NumNaNs": "0",
+        "NumChannels": "17",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "1",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(5784, 5928)]"
+      }
+    },
+    {
+      "series": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test",
+      "family": "GHL",
+      "canonical_family": "ghl",
+      "source_path": "GHL/GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GHL/GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test.csv",
+      "expected_n": 80001,
+      "expected_bytes": 12953089,
+      "git_blob_oid": "c3875dd430a0cf429432b7d36d1b4e44fd7a5254",
+      "lfs": {
+        "oid": "226314df1414bdbf9b47123a6cfe8f87f453fc67f8153b04f6efd4e196217ab5",
+        "size": 12953089,
+        "pointerSize": 133
+      },
+      "metadata": {
+        "Folder": "mTSBench/GHL",
+        "File": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test.csv",
+        "NumRows": "80001",
+        "NumNaNs": "0",
+        "NumChannels": "17",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "1",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(2463, 2607)]"
+      }
+    },
+    {
+      "series": "Genesis_test",
+      "family": "Genesis",
+      "canonical_family": "genesis",
+      "source_path": "Genesis/Genesis_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/Genesis/Genesis_test.csv",
+      "expected_n": 9332,
+      "expected_bytes": 743751,
+      "git_blob_oid": "430725db5003ad855f7c9b96dc348ba5a68209c3",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/Genesis",
+        "File": "Genesis_test.csv",
+        "NumRows": "9332",
+        "NumNaNs": "0",
+        "NumChannels": "19",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "2",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(9050, 9051), (9053, 9078)]"
+      }
+    },
+    {
+      "series": "GutenTAG_0_test",
+      "family": "GutenTAG",
+      "canonical_family": "gutentag",
+      "source_path": "GutenTAG/GutenTAG_0_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GutenTAG/GutenTAG_0_test.csv",
+      "expected_n": 10000,
+      "expected_bytes": 2914569,
+      "git_blob_oid": "ca62258dbc7577827d462601b80b55a702a584b8",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/GutenTAG",
+        "File": "GutenTAG_0_test.csv",
+        "NumRows": "10000",
+        "NumNaNs": "0",
+        "NumChannels": "21",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "1",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(6414, 6590)]"
+      }
+    },
+    {
+      "series": "GutenTAG_10_test",
+      "family": "GutenTAG",
+      "canonical_family": "gutentag",
+      "source_path": "GutenTAG/GutenTAG_10_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GutenTAG/GutenTAG_10_test.csv",
+      "expected_n": 10000,
+      "expected_bytes": 3229880,
+      "git_blob_oid": "ab9963ed1539188193050249cc3b626e075f3626",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/GutenTAG",
+        "File": "GutenTAG_10_test.csv",
+        "NumRows": "10000",
+        "NumNaNs": "0",
+        "NumChannels": "21",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "1",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(4819, 4962)]"
+      }
+    },
+    {
+      "series": "PSM_test",
+      "family": "PSM",
+      "canonical_family": "psm",
+      "source_path": "PSM/PSM_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/PSM/PSM_test.csv",
+      "expected_n": 70273,
+      "expected_bytes": 33707365,
+      "git_blob_oid": "6aa7c2b85a246779add3206bd849fce0c47d60cc",
+      "lfs": {
+        "oid": "4cac499f2eacf6a292eeb94cd5dfc49b9a0bbe02d71c89207e090bde6361ef25",
+        "size": 33707365,
+        "pointerSize": 133
+      },
+      "metadata": {
+        "Folder": "mTSBench/PSM",
+        "File": "PSM_test.csv",
+        "NumRows": "70273",
+        "NumNaNs": "0",
+        "NumChannels": "27",
+        "NumPointAnomalies": "0",
+        "NumSequenceAnomalies": "39",
+        "Top3PointIndices": "[]",
+        "Top3SequenceIndices": "[(423, 9283), (9285, 9291), (12092, 12094)]"
+      }
+    },
+    {
+      "series": "metro_traffic-volume_test",
+      "family": "metro",
+      "canonical_family": "metro",
+      "source_path": "metro/metro_traffic-volume_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/metro/metro_traffic-volume_test.csv",
+      "expected_n": 24102,
+      "expected_bytes": 1071536,
+      "git_blob_oid": "1f7728c3b84440d749006429b2fb0a81a579372e",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/metro",
+        "File": "metro_traffic-volume_test.csv",
+        "NumRows": "24102",
+        "NumNaNs": "0",
+        "NumChannels": "6",
+        "NumPointAnomalies": "20",
+        "NumSequenceAnomalies": "5",
+        "Top3PointIndices": "[552, 1900, 3122]",
+        "Top3SequenceIndices": "[(2217, 2218), (5401, 5402), (5978, 5979)]"
+      }
+    },
+    {
+      "series": "room-occupancy_1_test",
+      "family": "room-occupancy",
+      "canonical_family": "occupancy",
+      "source_path": "room-occupancy/room-occupancy_1_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/room-occupancy/room-occupancy_1_test.csv",
+      "expected_n": 7802,
+      "expected_bytes": 522031,
+      "git_blob_oid": "3d87c756467d33e094ccb639783183d118b1da8d",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/room-occupancy",
+        "File": "room-occupancy_1_test.csv",
+        "NumRows": "7802",
+        "NumNaNs": "0",
+        "NumChannels": "6",
+        "NumPointAnomalies": "3",
+        "NumSequenceAnomalies": "13",
+        "Top3PointIndices": "[579, 860, 5161]",
+        "Top3SequenceIndices": "[(582, 640), (647, 822), (869, 1090)]"
+      }
+    },
+    {
+      "series": "room-occupancy_test",
+      "family": "room-occupancy",
+      "canonical_family": "occupancy",
+      "source_path": "room-occupancy/room-occupancy_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/room-occupancy/room-occupancy_test.csv",
+      "expected_n": 6515,
+      "expected_bytes": 432656,
+      "git_blob_oid": "2d820949552be61231bdd609bc8b1378e09752a0",
+      "lfs": null,
+      "metadata": {
+        "Folder": "mTSBench/room-occupancy",
+        "File": "room-occupancy_test.csv",
+        "NumRows": "6515",
+        "NumNaNs": "0",
+        "NumChannels": "6",
+        "NumPointAnomalies": "2",
+        "NumSequenceAnomalies": "9",
+        "Top3PointIndices": "[642, 648]",
+        "Top3SequenceIndices": "[(651, 872), (877, 954), (978, 1001)]"
+      }
+    },
+    {
+      "series": "swan_sf_test",
+      "family": "swan",
+      "canonical_family": "swan",
+      "source_path": "swan/swan_sf_test.csv",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/swan/swan_sf_test.csv",
+      "expected_n": 72000,
+      "expected_bytes": 42278063,
+      "git_blob_oid": "c2ded02a00605bff221426437a2bc6aa8ed50383",
+      "lfs": {
+        "oid": "564a3a69292b4a5cfd678fe2c6984aa49f6dabaeadedd44bfccccaec5239484a",
+        "size": 42278063,
+        "pointerSize": 133
+      },
+      "metadata": {
+        "Folder": "mTSBench/swan",
+        "File": "swan_sf_test.csv",
+        "NumRows": "72000",
+        "NumNaNs": "0",
+        "NumChannels": "39",
+        "NumPointAnomalies": "5233",
+        "NumSequenceAnomalies": "1382",
+        "Top3PointIndices": "[728, 738, 748]",
+        "Top3SequenceIndices": "[(1153, 1154), (1284, 1285), (1301, 1302)]"
+      }
+    }
+  ],
+  "metric_outcomes_computed": false
+}

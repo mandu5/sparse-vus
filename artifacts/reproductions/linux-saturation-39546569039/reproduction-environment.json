@@ -1,0 +1,69 @@
+{
+  "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+  "executable": "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "packages": {
+    "numpy": "1.26.4",
+    "numba": "0.59.1",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "installed_packages": {
+    "Pygments": "2.21.0",
+    "charset-normalizer": "3.5.2",
+    "cloudpickle": "3.1.2",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "fonttools": "4.67.0",
+    "iniconfig": "2.3.1",
+    "joblib": "1.6.0",
+    "kiwisolver": "1.5.1",
+    "llvmlite": "0.42.0",
+    "matplotlib": "3.11.2",
+    "numba": "0.59.1",
+    "numpy": "1.26.4",
+    "packaging": "26.3",
+    "pandas": "3.0.1",
+    "pillow": "13.0.0",
+    "pip": "26.2.1",
+    "pluggy": "1.7.0",
+    "pyparsing": "3.3.3",
+    "pytest": "9.1.1",
+    "python-dateutil": "2.9.0.post0",
+    "reportlab": "5.0.1",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1",
+    "six": "1.17.0",
+    "sparse-vus": "0.3.0",
+    "threadpoolctl": "3.6.0",
+    "tqdm": "4.70.1"
+  },
+  "git_head": "595fb3bce1f7fa94de07c79d992166227c2aae0d",
+  "actions": {
+    "GITHUB_RUN_ID": "39546569039",
+    "GITHUB_RUN_ATTEMPT": "1",
+    "GITHUB_SHA": "595fb3bce1f7fa94de07c79d992166227c2aae0d",
+    "GITHUB_REF": "refs/heads/research/saturation-20261021",
+    "GITHUB_REPOSITORY": "mandu5/sparse-vus",
+    "RUNNER_OS": "Linux",
+    "RUNNER_ARCH": "X64",
+    "ImageOS": "ubuntu24",
+    "ImageVersion": "20261018.339.1"
+  },
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1"
+  },
+  "source_sha256": {
+    "experiments/run_saturation_external_reproduction.py": "c1e3ce3135876a3669f712188bdf4d3e11eb84cc3c6a33d49ca03be6a0a5fdda",
+    ".github/workflows/saturation-external-benchmark.yml": "07b050ea94b2d54c51b809985618cb3f44d584f609662ff6074719fea7870613",
+    "docs/saturation_data_licenses_20261021.md": "5b6f0a08283e03b8d72d9553dbe22015d93ac4980cbca92f3d631791e31b33aa",
+    "experiments/fetch_saturation_external.py": "6c946f2c61ac0efaa42c881caee51a2526fa0236000e199636b61d3e67d63a6f",
+    "experiments/benchmark_saturation.py": "902d9f83bfedb0063f0d21f82fa40f28f71a0bc6f4957392053fd034804f511e"
+  }
+}

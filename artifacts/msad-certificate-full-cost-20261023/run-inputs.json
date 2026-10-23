@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-10-23T07:50:03.957819+00:00",
+  "protocol_sha256": "651cb0cc4d5bde61195f8ef0da64a76694886dc06412b6314e3be22c27467c7a",
+  "reference_sha256": {
+    "artifacts/msad-sampling-20261023/records.jsonl": "283ccfafa5b712e2a7316b344b4c75ae8f528359bbb42725fd48fc3963224023",
+    "artifacts/msad-certificate-20261023/records.jsonl": "4e557a2696ab92d35b2c433bdf98918de41afeb7e1a92172da62adfa52e185ab",
+    "artifacts/msad-full-certificate-20261023/records.jsonl": "604a96f3f5ef1c42326a8786ae349381d49f715fac347196cafc5dc307eb4a46"
+  },
+  "idle_host_confirmed": true,
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "numpy": "1.26.4",
+  "host": {
+    "system": "Darwin",
+    "node": "yun-yeseul-ui-MacBookPro.local",
+    "release": "25.6.0",
+    "version": "Darwin Kernel Version 25.6.0: Sat Jul 11 15:26:21 PDT 2026; root:xnu-12377.161.13~4/RELEASE_ARM64_T6000",
+    "machine": "arm64",
+    "processor": "arm"
+  }
+}

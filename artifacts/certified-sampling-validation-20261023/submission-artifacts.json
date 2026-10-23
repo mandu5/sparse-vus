@@ -1,0 +1,29 @@
+{
+  "status": "VALIDATED_LOCAL_REVIEW_ARTIFACTS",
+  "files": {
+    "paper/certified_sampling.pdf": {
+      "sha256": "b1ab69110f592fa71f55d416565d2b12aa79e2d3074a82ca53b65984ecab861e",
+      "bytes": 146639,
+      "pages": 12
+    },
+    "paper/certified_sampling_anonymous.pdf": {
+      "sha256": "abc212787a4174736d18aa216c31be55194272118877d66eefa2854b19c70fcb",
+      "bytes": 143181,
+      "pages": 12
+    },
+    "paper/certified_sampling_anonymous_source.zip": {
+      "sha256": "4e3a5853b95eeb45f73132534e083e1506e7432d1aadcc557715cf7baac26508",
+      "bytes": 57351
+    },
+    "paper/certified-sampling-supplement.zip": {
+      "sha256": "898d1550a8aaba59fe655c48ecfdbeb86690b062cafc36f3eab24efe1ee84214",
+      "bytes": 5162442
+    }
+  },
+  "public_pdf_text_unchanged_after_immutable_link_update": true,
+  "source_zip_matches_generated_files": true,
+  "anonymous_supplement_receipt": "anonymous-supplement.json",
+  "scientific_snapshot": "60e68af3cb2534aa7a889b5a3e177633ce7d12b8",
+  "reproduction_guide_snapshot": "55f2304ca5a8abdb8e3a4da7c5d8a1f596d72ebc",
+  "external_submission_performed_by_this_build": false
+}

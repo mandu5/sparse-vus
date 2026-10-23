@@ -1,0 +1,41 @@
+{
+  "status": "PASS_ALL_REQUESTED_MEMBER_AND_ARRAY_IDENTITIES",
+  "started_utc": "2026-10-23T05:41:05.041695+00:00",
+  "completed_utc": "2026-10-23T05:41:15.429155+00:00",
+  "manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "protocol_sha256": "9bf1a79b50d4070eff761c6c66e6de6644f33d9b71d8a4d928ba24b50f7c15e7",
+  "source_series": 128,
+  "requested_series": 3,
+  "reproduced_series": 3,
+  "full_selected_corpus_reproduced": false,
+  "score_vectors": 36,
+  "array_count": 42,
+  "metric_outcomes_computed": false,
+  "expected_range_response_bytes": 2442792,
+  "series": [
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "candidate_index": 0,
+      "npz_path": ".cache/msad-corpus-reproduction-smoke-20261023/arrays/0000.npz",
+      "npz_sha256": "6c811766181d8a1f34cc657005c2f3d9110a1647e65c4547021befee5fc6b58f",
+      "original_npz_bytes_equal": true,
+      "all_member_and_array_hashes_match": true
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "candidate_index": 1,
+      "npz_path": ".cache/msad-corpus-reproduction-smoke-20261023/arrays/0001.npz",
+      "npz_sha256": "75f8ba9f3eb0a4a9431eb99ff91c825525f472a7ade866b640b28a2b525fb3ea",
+      "original_npz_bytes_equal": true,
+      "all_member_and_array_hashes_match": true
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "candidate_index": 2,
+      "npz_path": ".cache/msad-corpus-reproduction-smoke-20261023/arrays/0002.npz",
+      "npz_sha256": "6cc786cb48e78fbdddb1b27cf41a70cb9b9f7b5dea6290680470202a19378568",
+      "original_npz_bytes_equal": true,
+      "all_member_and_array_hashes_match": true
+    }
+  ]
+}

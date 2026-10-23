@@ -1,0 +1,15 @@
+{
+  "status": "EXACT_RATIONAL_TARGET_VERIFIED",
+  "series": "YAHOO/Yahoo_A2synthetic_44_data.out",
+  "model": "CNN",
+  "L": 30,
+  "H": 1000,
+  "npz_sha256": "dba6aded82861981933cd93f2547ab9e41e8b6c073b2398272535e10971eceda",
+  "records_sha256": "4e557a2696ab92d35b2c433bdf98918de41afeb7e1a92172da62adfa52e185ab",
+  "proof": "All widths preserve3components;first8score-rankedpointsareoriginalpositivesandhitall3components;lastpositivejoinsoneoff-supportfalsepositiveincompletetie;allbufferpointsenterafterrecall1. ThusPR=(8/9)*1+(1/9)*(9/10)=89/90at everywidth.",
+  "exact_real_value": "89/90",
+  "certificate_contains_exact_rational": true,
+  "binary64_reference": 0.988888888888888,
+  "binary64_reference_outside_lower_bound": true,
+  "interpretation": "Floating evaluator accumulation differs from ideal target; no certificate widening or epsilon was used."
+}

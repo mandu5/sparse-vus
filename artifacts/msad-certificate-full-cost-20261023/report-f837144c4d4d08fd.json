@@ -1,0 +1,3703 @@
+{
+  "expected_records": 5400,
+  "recorded_records": 5400,
+  "missing_records": 0,
+  "status_counts": {
+    "ok": 5400
+  },
+  "complete_three_way_cases": 360,
+  "comparative_claim_eligible": true,
+  "ratios": {
+    "certificate_over_full_certificate": {
+      "definition": "certificate complete-call seconds / full_certificate complete-call seconds",
+      "median": 0.8263708208592002,
+      "geometric_mean": 0.8153284771311585,
+      "equal_family_geometric_mean": 0.8196791790556954,
+      "per_family_geometric_mean": {
+        "Daphnet": 0.7590224338019111,
+        "Dodgers": 0.7699496954882457,
+        "ECG": 0.8234654473873668,
+        "GHL": 0.8240899101912381,
+        "Genesis": 1.0236800141101727,
+        "IOPS": 0.8491307578674575,
+        "KDD21": 0.7941895622937841,
+        "MGAB": 0.8173319824989062,
+        "MITDB": 0.8907976040478065,
+        "NAB": 0.8121225322086448,
+        "OPPORTUNITY": 0.8446407617490268,
+        "Occupancy": 0.8307582125421813,
+        "SMD": 0.7476149099247759,
+        "SVDB": 0.7734885274649201,
+        "SensorScope": 0.737886388284751,
+        "YAHOO": 0.8567131651917889
+      }
+    },
+    "certificate_over_radix_exact": {
+      "definition": "certificate complete-call seconds / radix_exact complete-call seconds",
+      "median": 2.0631726988303085,
+      "geometric_mean": 2.6825864928700174,
+      "equal_family_geometric_mean": 2.666980843927019,
+      "per_family_geometric_mean": {
+        "Daphnet": 2.148089417001148,
+        "Dodgers": 1.975539490273263,
+        "ECG": 1.1917963801605134,
+        "GHL": 1.1256893917849744,
+        "Genesis": 3.0223096662077173,
+        "IOPS": 1.5487713512926802,
+        "KDD21": 2.8751428053743044,
+        "MGAB": 1.7834931201699074,
+        "MITDB": 1.081611105865899,
+        "NAB": 13.623195889777028,
+        "OPPORTUNITY": 2.343087074761063,
+        "Occupancy": 6.6721733998197825,
+        "SMD": 3.026430902116607,
+        "SVDB": 1.1874770215685628,
+        "SensorScope": 2.606820521988775,
+        "YAHOO": 22.214140180103357
+      }
+    },
+    "full_certificate_over_radix_exact": {
+      "definition": "full_certificate complete-call seconds / radix_exact complete-call seconds",
+      "median": 2.7128536534909493,
+      "geometric_mean": 3.290191092440502,
+      "equal_family_geometric_mean": 3.2536886529184406,
+      "per_family_geometric_mean": {
+        "Daphnet": 2.8300736860193436,
+        "Dodgers": 2.565803326956991,
+        "ECG": 1.4472937315606391,
+        "GHL": 1.3659788548117853,
+        "Genesis": 2.9523968667443805,
+        "IOPS": 1.823949182081602,
+        "KDD21": 3.6202223522936965,
+        "MGAB": 2.182091436966734,
+        "MITDB": 1.2142052256887887,
+        "NAB": 16.774803492679172,
+        "OPPORTUNITY": 2.7740634609075125,
+        "Occupancy": 8.031426351359732,
+        "SMD": 4.048114693727982,
+        "SVDB": 1.5352225397065355,
+        "SensorScope": 3.5328209916548836,
+        "YAHOO": 25.92949552156161
+      }
+    }
+  },
+  "cases": [
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.005674999963957816,
+        "full_certificate": 0.007628500054124743,
+        "radix_exact": 0.004645499982871115
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.011304999992717057,
+        "full_certificate": 0.012680874962825328,
+        "radix_exact": 0.00411525001982227
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.007044167025014758,
+        "full_certificate": 0.009410750004462898,
+        "radix_exact": 0.004556458967272192
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.01060020801378414,
+        "full_certificate": 0.013139499991666526,
+        "radix_exact": 0.004252916027326137
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.008628083043731749,
+        "full_certificate": 0.010860249982215464,
+        "radix_exact": 0.004243625036906451
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.006967624998651445,
+        "full_certificate": 0.01030979200731963,
+        "radix_exact": 0.004214707994833589
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.012184625025838614,
+        "full_certificate": 0.013149250007700175,
+        "radix_exact": 0.0041556659853085876
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.011608208995312452,
+        "full_certificate": 0.01292100001592189,
+        "radix_exact": 0.004295833990909159
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.011990834027528763,
+        "full_certificate": 0.013035332958679646,
+        "radix_exact": 0.004349291033577174
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.009793459030333906,
+        "full_certificate": 0.012053957965690643,
+        "radix_exact": 0.004175833018962294
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.008118790981825441,
+        "full_certificate": 0.013022625003941357,
+        "radix_exact": 0.004360208986327052
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.008423125022090971,
+        "full_certificate": 0.010514875000808388,
+        "radix_exact": 0.0046084169880487025
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.0098816659883596,
+        "full_certificate": 0.012574208027217537,
+        "radix_exact": 0.004120500001590699
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.007808416965417564,
+        "full_certificate": 0.011599666031543165,
+        "radix_exact": 0.004115500021725893
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.009459499968215823,
+        "full_certificate": 0.013031582988332957,
+        "radix_exact": 0.0046102089690975845
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.010650375043042004,
+        "full_certificate": 0.012852750020101666,
+        "radix_exact": 0.004185124998912215
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.0074313749792054296,
+        "full_certificate": 0.008249167003668845,
+        "radix_exact": 0.0042461249977350235
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.004839042027015239,
+        "full_certificate": 0.007173791993409395,
+        "radix_exact": 0.004539916990324855
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.007656542002223432,
+        "full_certificate": 0.012055040977429599,
+        "radix_exact": 0.004209792008623481
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.007512499985750765,
+        "full_certificate": 0.010079000028781593,
+        "radix_exact": 0.004538915993180126
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.010015000007115304,
+        "full_certificate": 0.013084958016406745,
+        "radix_exact": 0.0046153750154189765
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.0114471249980852,
+        "full_certificate": 0.013046375010162592,
+        "radix_exact": 0.0045852920156903565
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.01117516600061208,
+        "full_certificate": 0.01306454197037965,
+        "radix_exact": 0.004610457981470972
+      }
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.009419625042937696,
+        "full_certificate": 0.011411374958697706,
+        "radix_exact": 0.004669875022955239
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.02150291600264609,
+        "full_certificate": 0.028169875033199787,
+        "radix_exact": 0.01947158295661211
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.023145667044445872,
+        "full_certificate": 0.02910958300344646,
+        "radix_exact": 0.01916883297963068
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.024838540994096547,
+        "full_certificate": 0.029393000004347414,
+        "radix_exact": 0.021558624983299524
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.02432533400133252,
+        "full_certificate": 0.029025625030044466,
+        "radix_exact": 0.019259665976278484
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.025515416986308992,
+        "full_certificate": 0.028824708017054945,
+        "radix_exact": 0.01968066702829674
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.02242491696961224,
+        "full_certificate": 0.028640749980695546,
+        "radix_exact": 0.021444834012072533
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.022427375020924956,
+        "full_certificate": 0.02849516598507762,
+        "radix_exact": 0.019547041971236467
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.024826542008668184,
+        "full_certificate": 0.029556916968431324,
+        "radix_exact": 0.02118266699835658
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.02679270796943456,
+        "full_certificate": 0.029365958995185792,
+        "radix_exact": 0.020958749984856695
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.025264249998144805,
+        "full_certificate": 0.02917254198109731,
+        "radix_exact": 0.02130325004691258
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.02403299999423325,
+        "full_certificate": 0.029329916986171156,
+        "radix_exact": 0.02124695898965001
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.023208250000607222,
+        "full_certificate": 0.028631917026359588,
+        "radix_exact": 0.021413084003143013
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.012751250003930181,
+        "full_certificate": 0.017117833020165563,
+        "radix_exact": 0.012084875022992492
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.012859624985139817,
+        "full_certificate": 0.016241916979197413,
+        "radix_exact": 0.012009290978312492
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.012439249956514686,
+        "full_certificate": 0.017709458013996482,
+        "radix_exact": 0.011753167025744915
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.013639167009387165,
+        "full_certificate": 0.01855291600804776,
+        "radix_exact": 0.011324040999170393
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.013685792044270784,
+        "full_certificate": 0.014123000029940158,
+        "radix_exact": 0.011925166996661574
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.012391542026307434,
+        "full_certificate": 0.014656500017736107,
+        "radix_exact": 0.0117324169841595
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.01271016598911956,
+        "full_certificate": 0.01330662501277402,
+        "radix_exact": 0.011763625021558255
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.012286000011954457,
+        "full_certificate": 0.012528249993920326,
+        "radix_exact": 0.011308582965284586
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.0152369579882361,
+        "full_certificate": 0.018517958000302315,
+        "radix_exact": 0.011449999990873039
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.012656625011004508,
+        "full_certificate": 0.018409957992844284,
+        "radix_exact": 0.01160787499975413
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.013903625018429011,
+        "full_certificate": 0.018753417010884732,
+        "radix_exact": 0.011875416967086494
+      }
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.013226957991719246,
+        "full_certificate": 0.015090708038769662,
+        "radix_exact": 0.011348291009198874
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.0072514580097049475,
+        "full_certificate": 0.007213749981019646,
+        "radix_exact": 0.0014075409853830934
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.0027346250135451555,
+        "full_certificate": 0.003041874966584146,
+        "radix_exact": 0.0013596659991890192
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.008820207964163274,
+        "full_certificate": 0.008545916993170977,
+        "radix_exact": 0.0016239170217886567
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.003961750015150756,
+        "full_certificate": 0.003962500020861626,
+        "radix_exact": 0.0013560830266214907
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.0016750420327298343,
+        "full_certificate": 0.0014364160015247762,
+        "radix_exact": 0.0012185410014353693
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0016077079926617444,
+        "full_certificate": 0.001470250019337982,
+        "radix_exact": 0.001241207995917648
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.0026022089878097177,
+        "full_certificate": 0.002484207972884178,
+        "radix_exact": 0.0015680830110795796
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.0015708329738117754,
+        "full_certificate": 0.0013629170134663582,
+        "radix_exact": 0.0014742090133950114
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.008367499976884574,
+        "full_certificate": 0.00853458303026855,
+        "radix_exact": 0.0013977499911561608
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.007867541979067028,
+        "full_certificate": 0.008238749986048788,
+        "radix_exact": 0.0013108749990351498
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.008659542014356703,
+        "full_certificate": 0.008506041951477528,
+        "radix_exact": 0.0014050420140847564
+      }
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.007330541033297777,
+        "full_certificate": 0.007574583985842764,
+        "radix_exact": 0.0014466250431723893
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.016774167015682906,
+        "full_certificate": 0.01843533298233524,
+        "radix_exact": 0.00958449998870492
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.013315457967109978,
+        "full_certificate": 0.01854691602056846,
+        "radix_exact": 0.009216749982442707
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.0176657079719007,
+        "full_certificate": 0.019421542005147785,
+        "radix_exact": 0.009579374978784472
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.016440958948805928,
+        "full_certificate": 0.01890008302871138,
+        "radix_exact": 0.009491375007200986
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.014851833053398877,
+        "full_certificate": 0.019167791993822902,
+        "radix_exact": 0.009399541944731027
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.014975457976106554,
+        "full_certificate": 0.018200999998953193,
+        "radix_exact": 0.009583249979186803
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.0126155840116553,
+        "full_certificate": 0.01813679200131446,
+        "radix_exact": 0.009880875004455447
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.017873667005915195,
+        "full_certificate": 0.019136750022880733,
+        "radix_exact": 0.010097499995026737
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.016157292004209012,
+        "full_certificate": 0.019237500033341348,
+        "radix_exact": 0.009920457960106432
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.016503249993547797,
+        "full_certificate": 0.019504165975376964,
+        "radix_exact": 0.010377375001553446
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.018187374982517213,
+        "full_certificate": 0.019497166038490832,
+        "radix_exact": 0.009971124993171543
+      }
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.013260999985504895,
+        "full_certificate": 0.015992208034731448,
+        "radix_exact": 0.009774375008419156
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.011150708014611155,
+        "full_certificate": 0.012617790955118835,
+        "radix_exact": 0.004122374986764044
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.006110542046371847,
+        "full_certificate": 0.009944666002411395,
+        "radix_exact": 0.0039992500096559525
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.011076833005063236,
+        "full_certificate": 0.01287862501339987,
+        "radix_exact": 0.00408608402358368
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.010699542006477714,
+        "full_certificate": 0.011876375006977469,
+        "radix_exact": 0.0039406249998137355
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.010721415979787707,
+        "full_certificate": 0.01217766699846834,
+        "radix_exact": 0.004186042002402246
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.005750207987148315,
+        "full_certificate": 0.01018358301371336,
+        "radix_exact": 0.004394999996293336
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.0060580839635804296,
+        "full_certificate": 0.011548166046850383,
+        "radix_exact": 0.0040257090004161
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.006921958003658801,
+        "full_certificate": 0.012869083031546324,
+        "radix_exact": 0.004487791971769184
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.010515125002712011,
+        "full_certificate": 0.013134791050106287,
+        "radix_exact": 0.00415987498126924
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.009875458024907857,
+        "full_certificate": 0.012781625031493604,
+        "radix_exact": 0.004463542019948363
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.01072041696170345,
+        "full_certificate": 0.01246679201722145,
+        "radix_exact": 0.004226416000165045
+      }
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.011098042014054954,
+        "full_certificate": 0.011289415997453034,
+        "radix_exact": 0.004006625036709011
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.009825791988987476,
+        "full_certificate": 0.013034041970968246,
+        "radix_exact": 0.006039708969183266
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.010581540991552174,
+        "full_certificate": 0.013205625000409782,
+        "radix_exact": 0.005922708020079881
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.014396500017028302,
+        "full_certificate": 0.015116041002329439,
+        "radix_exact": 0.006080208986531943
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.013103000004775822,
+        "full_certificate": 0.014278875023592263,
+        "radix_exact": 0.006035041995346546
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.011555125005543232,
+        "full_certificate": 0.0145926249679178,
+        "radix_exact": 0.006027875002473593
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.007046041951980442,
+        "full_certificate": 0.0136824999935925,
+        "radix_exact": 0.006123750004917383
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.009297334006987512,
+        "full_certificate": 0.01208029204281047,
+        "radix_exact": 0.006263417017180473
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.007695582986343652,
+        "full_certificate": 0.01343562500551343,
+        "radix_exact": 0.006276250001974404
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.014913833001628518,
+        "full_certificate": 0.01483041699975729,
+        "radix_exact": 0.006115583004429936
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.011196167033631355,
+        "full_certificate": 0.013774082995951176,
+        "radix_exact": 0.005870290973689407
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.014324624964501709,
+        "full_certificate": 0.01503004098776728,
+        "radix_exact": 0.006319167034234852
+      }
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.013310750015079975,
+        "full_certificate": 0.01339862501481548,
+        "radix_exact": 0.006386249966453761
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.04352008400019258,
+        "full_certificate": 0.05187337502138689,
+        "radix_exact": 0.04160637501627207
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.04432545800227672,
+        "full_certificate": 0.05042025004513562,
+        "radix_exact": 0.04074004100402817
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.05007633299101144,
+        "full_certificate": 0.05476587498560548,
+        "radix_exact": 0.04371320904465392
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.047312207985669374,
+        "full_certificate": 0.051024625019636005,
+        "radix_exact": 0.03997787501430139
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.046872417035046965,
+        "full_certificate": 0.05350683303549886,
+        "radix_exact": 0.041308665997348726
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.04438662499887869,
+        "full_certificate": 0.051316833996679634,
+        "radix_exact": 0.040895999991334975
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.042563125025480986,
+        "full_certificate": 0.04935425001895055,
+        "radix_exact": 0.03977608395507559
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.04910987499170005,
+        "full_certificate": 0.054500749974977225,
+        "radix_exact": 0.044329917000140995
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.05189800000516698,
+        "full_certificate": 0.05508429202018306,
+        "radix_exact": 0.04410704196197912
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.047469375014770776,
+        "full_certificate": 0.05568816600134596,
+        "radix_exact": 0.04445008304901421
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.04642295802477747,
+        "full_certificate": 0.05232504103332758,
+        "radix_exact": 0.04285404202528298
+      }
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.047445082978811115,
+        "full_certificate": 0.052794541988987476,
+        "radix_exact": 0.04534479102585465
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.00571245898026973,
+        "full_certificate": 0.006641165993642062,
+        "radix_exact": 0.0003283339901827276
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.006288832984864712,
+        "full_certificate": 0.007828041969332844,
+        "radix_exact": 0.0003201250219717622
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.005853458016645163,
+        "full_certificate": 0.008270332997199148,
+        "radix_exact": 0.0003363330033607781
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.0070900830323807895,
+        "full_certificate": 0.008885457995347679,
+        "radix_exact": 0.00032587500754743814
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.00576033303514123,
+        "full_certificate": 0.007733499980531633,
+        "radix_exact": 0.0003144169459119439
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.007684416952542961,
+        "full_certificate": 0.008373124990612268,
+        "radix_exact": 0.000318541016895324
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.005532249982934445,
+        "full_certificate": 0.007843416999094188,
+        "radix_exact": 0.00030320900259539485
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.007090541999787092,
+        "full_certificate": 0.008006999967619777,
+        "radix_exact": 0.00032699998700991273
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.00861550000263378,
+        "full_certificate": 0.008729083987418562,
+        "radix_exact": 0.000333332980517298
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.004175666021183133,
+        "full_certificate": 0.0051600830047391355,
+        "radix_exact": 0.00032041704980656505
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.005326750047970563,
+        "full_certificate": 0.006635500001721084,
+        "radix_exact": 0.00031295797089114785
+      }
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.0039952920051291585,
+        "full_certificate": 0.003940458002034575,
+        "radix_exact": 0.0003730839816853404
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.006065499968826771,
+        "full_certificate": 0.006994750001467764,
+        "radix_exact": 0.0035526249557733536
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.009876374970190227,
+        "full_certificate": 0.012277874979190528,
+        "radix_exact": 0.0037517499877139926
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.010690708993934095,
+        "full_certificate": 0.01203558302950114,
+        "radix_exact": 0.0034939590259455144
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.010139374993741512,
+        "full_certificate": 0.01123933302005753,
+        "radix_exact": 0.0037632500170730054
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.010024665971286595,
+        "full_certificate": 0.011715999979060143,
+        "radix_exact": 0.0043079589959234
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.004078667028807104,
+        "full_certificate": 0.004378500045277178,
+        "radix_exact": 0.0039291250286623836
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.009818082966376096,
+        "full_certificate": 0.011957917013205588,
+        "radix_exact": 0.003760292020160705
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.00965866696787998,
+        "full_certificate": 0.00942379201296717,
+        "radix_exact": 0.0032685829792171717
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.011284791980870068,
+        "full_certificate": 0.012116916012018919,
+        "radix_exact": 0.00383841700386256
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.0097248749807477,
+        "full_certificate": 0.01157833298202604,
+        "radix_exact": 0.0035021670046262443
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.010104207962285727,
+        "full_certificate": 0.011838791018817574,
+        "radix_exact": 0.004315083031542599
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.008137083030305803,
+        "full_certificate": 0.009606209001503885,
+        "radix_exact": 0.0043445409974083304
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.00851212500128895,
+        "full_certificate": 0.00959437497658655,
+        "radix_exact": 0.0017597500118426979
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.006051040953025222,
+        "full_certificate": 0.009701209026388824,
+        "radix_exact": 0.0018746249843388796
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.007687958015594631,
+        "full_certificate": 0.009709624981041998,
+        "radix_exact": 0.0018635420128703117
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.00817158300196752,
+        "full_certificate": 0.00938879098976031,
+        "radix_exact": 0.001742082997225225
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.006789417006075382,
+        "full_certificate": 0.0078059579827822745,
+        "radix_exact": 0.0017790000420063734
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.002095417003147304,
+        "full_certificate": 0.0024116249987855554,
+        "radix_exact": 0.0018368749879300594
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.005722667032387108,
+        "full_certificate": 0.009221458982210606,
+        "radix_exact": 0.0017589579802006483
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.002202000003308058,
+        "full_certificate": 0.0014602920273318887,
+        "radix_exact": 0.001831167028285563
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.006987417000345886,
+        "full_certificate": 0.008541125047486275,
+        "radix_exact": 0.0019239580142311752
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.008576583990361542,
+        "full_certificate": 0.009748707991093397,
+        "radix_exact": 0.0018962080357596278
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.007466625014785677,
+        "full_certificate": 0.009519000013824552,
+        "radix_exact": 0.001921208982821554
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.006264124996960163,
+        "full_certificate": 0.006046416005119681,
+        "radix_exact": 0.0019202500116080046
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.005923332995735109,
+        "full_certificate": 0.009458291984628886,
+        "radix_exact": 0.0021619159961119294
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.006354624987579882,
+        "full_certificate": 0.010026332980487496,
+        "radix_exact": 0.002340833016205579
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.007267499982845038,
+        "full_certificate": 0.01059033302590251,
+        "radix_exact": 0.002355000004172325
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.007264833024237305,
+        "full_certificate": 0.010310124955140054,
+        "radix_exact": 0.002325958979781717
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.006712207978125662,
+        "full_certificate": 0.009815207973588258,
+        "radix_exact": 0.0015750830061733723
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0046030000085011125,
+        "full_certificate": 0.005128415999934077,
+        "radix_exact": 0.0015800420078448951
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.005862416001036763,
+        "full_certificate": 0.009818250022362918,
+        "radix_exact": 0.0015383330173790455
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.010545124998316169,
+        "full_certificate": 0.010292415972799063,
+        "radix_exact": 0.002300625026691705
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.010010833968408406,
+        "full_certificate": 0.009723792027216405,
+        "radix_exact": 0.002269415999762714
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.008103375032078475,
+        "full_certificate": 0.009481041051913053,
+        "radix_exact": 0.0016314579988829792
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.004868040967267007,
+        "full_certificate": 0.01024245796725154,
+        "radix_exact": 0.0023466249695047736
+      }
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.003787291992921382,
+        "full_certificate": 0.004078792000655085,
+        "radix_exact": 0.002399749995674938
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.0196142079657875,
+        "full_certificate": 0.02585104200989008,
+        "radix_exact": 0.015660749981179833
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.01893795799696818,
+        "full_certificate": 0.0235943750012666,
+        "radix_exact": 0.015490040997974575
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.019785583019256592,
+        "full_certificate": 0.026197250001132488,
+        "radix_exact": 0.01645416597602889
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.01970112498383969,
+        "full_certificate": 0.0258387079811655,
+        "radix_exact": 0.015966833976563066
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.02144504099851474,
+        "full_certificate": 0.025890332995913923,
+        "radix_exact": 0.015979374991729856
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.01890870794886723,
+        "full_certificate": 0.026241499988827854,
+        "radix_exact": 0.016911500017158687
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.01825349999126047,
+        "full_certificate": 0.023880707973148674,
+        "radix_exact": 0.01578712504124269
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.0195282920030877,
+        "full_certificate": 0.02584495797054842,
+        "radix_exact": 0.01630262500839308
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.023121792008168995,
+        "full_certificate": 0.02670466701965779,
+        "radix_exact": 0.016650125035084784
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.017699249961879104,
+        "full_certificate": 0.026001584017649293,
+        "radix_exact": 0.017946792009752244
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.019097124983090907,
+        "full_certificate": 0.026818874990567565,
+        "radix_exact": 0.017280374944675714
+      }
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.019831083016470075,
+        "full_certificate": 0.02397775003919378,
+        "radix_exact": 0.0170425419928506
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.009127457975409925,
+        "full_certificate": 0.012313624960370362,
+        "radix_exact": 0.0029104999848641455
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.012213833979330957,
+        "full_certificate": 0.012629541975911707,
+        "radix_exact": 0.00280904199462384
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.010452542046550661,
+        "full_certificate": 0.01191504200687632,
+        "radix_exact": 0.0031742920400574803
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.009618000010959804,
+        "full_certificate": 0.01185075001558289,
+        "radix_exact": 0.0027311249868944287
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.0090940420050174,
+        "full_certificate": 0.01126679201843217,
+        "radix_exact": 0.0027727909618988633
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0033072500373236835,
+        "full_certificate": 0.007861333026085049,
+        "radix_exact": 0.00299708399688825
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.011526875023264438,
+        "full_certificate": 0.012688166985753924,
+        "radix_exact": 0.002748916973359883
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.003114124992862344,
+        "full_certificate": 0.0036994589609093964,
+        "radix_exact": 0.003072874969802797
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.009712832979857922,
+        "full_certificate": 0.012164374988060445,
+        "radix_exact": 0.0030939579592086375
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.009838166006375104,
+        "full_certificate": 0.011793957964982837,
+        "radix_exact": 0.0029378330218605697
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.007527833979111165,
+        "full_certificate": 0.011636999959591776,
+        "radix_exact": 0.0030895000090822577
+      }
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.005023250007070601,
+        "full_certificate": 0.006235916982404888,
+        "radix_exact": 0.003075583023019135
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.004949584021233022,
+        "full_certificate": 0.005683415976818651,
+        "radix_exact": 0.000155583955347538
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.00490699999500066,
+        "full_certificate": 0.006160749995615333,
+        "radix_exact": 0.0001562089892104268
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.004608499992173165,
+        "full_certificate": 0.005186417023651302,
+        "radix_exact": 0.0001581659889779985
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.003945040982216597,
+        "full_certificate": 0.005075625027529895,
+        "radix_exact": 0.00015245896065607667
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.0031080000335350633,
+        "full_certificate": 0.004029833013191819,
+        "radix_exact": 0.00021004100563004613
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0010212080087512732,
+        "full_certificate": 0.0011606250191107392,
+        "radix_exact": 0.00020125001901760697
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.005788709037005901,
+        "full_certificate": 0.0065470830304548144,
+        "radix_exact": 0.00022087496472522616
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.004847167001571506,
+        "full_certificate": 0.005606124992482364,
+        "radix_exact": 0.00018924998585134745
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.005774499964900315,
+        "full_certificate": 0.006607417017221451,
+        "radix_exact": 0.00015070801600813866
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.004321584012359381,
+        "full_certificate": 0.004993290989659727,
+        "radix_exact": 0.00014404201647266746
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.0019062499632127583,
+        "full_certificate": 0.0023189160274341702,
+        "radix_exact": 0.0001479170168749988
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.001129375013988465,
+        "full_certificate": 0.0010983750107698143,
+        "radix_exact": 0.00014462502440437675
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.004527540993876755,
+        "full_certificate": 0.006639082974288613,
+        "radix_exact": 0.0036938749835826457
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.010250332998111844,
+        "full_certificate": 0.012741624959744513,
+        "radix_exact": 0.003424333001021296
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.007742707966826856,
+        "full_certificate": 0.011749249999411404,
+        "radix_exact": 0.0038657080149278045
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.009007957996800542,
+        "full_certificate": 0.012834666995331645,
+        "radix_exact": 0.003628833976108581
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.008521582989487797,
+        "full_certificate": 0.012064624985214323,
+        "radix_exact": 0.0037697500083595514
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.005256875010672957,
+        "full_certificate": 0.009554832999128848,
+        "radix_exact": 0.003709707991220057
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.009874500043224543,
+        "full_certificate": 0.012502000026870519,
+        "radix_exact": 0.0033727079862728715
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.010603667004033923,
+        "full_certificate": 0.01253895804984495,
+        "radix_exact": 0.0042435830109752715
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.010472124966327101,
+        "full_certificate": 0.012394333025440574,
+        "radix_exact": 0.0040042909677140415
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.009428499964997172,
+        "full_certificate": 0.011570208997000009,
+        "radix_exact": 0.0034376669791527092
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.007655124994926155,
+        "full_certificate": 0.012744540988933295,
+        "radix_exact": 0.0037954170256853104
+      }
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.008238291018642485,
+        "full_certificate": 0.011214375030249357,
+        "radix_exact": 0.004144124977756292
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.01886658399598673,
+        "full_certificate": 0.024638500006403774,
+        "radix_exact": 0.01615174999460578
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.01871462498093024,
+        "full_certificate": 0.024906500009819865,
+        "radix_exact": 0.01594195800134912
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.019857083971146494,
+        "full_certificate": 0.024764959001913667,
+        "radix_exact": 0.0167901249951683
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.01992216700455174,
+        "full_certificate": 0.0244125000317581,
+        "radix_exact": 0.01560241699917242
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.021098790981341153,
+        "full_certificate": 0.025220375042408705,
+        "radix_exact": 0.016171916970051825
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.018013000022619963,
+        "full_certificate": 0.023561624984722584,
+        "radix_exact": 0.01773441699333489
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.019002834043931216,
+        "full_certificate": 0.0233439999865368,
+        "radix_exact": 0.01594258303521201
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.020456624974031,
+        "full_certificate": 0.02513733395608142,
+        "radix_exact": 0.01601512497290969
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.023819291964173317,
+        "full_certificate": 0.02462750003905967,
+        "radix_exact": 0.01675629196688533
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.022411541955079883,
+        "full_certificate": 0.0246811670367606,
+        "radix_exact": 0.016836916969623417
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.01928091701120138,
+        "full_certificate": 0.024304958002176136,
+        "radix_exact": 0.017539750027935952
+      }
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.020527707994915545,
+        "full_certificate": 0.024948292004410177,
+        "radix_exact": 0.017393167014233768
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.013388750026933849,
+        "full_certificate": 0.01908845896832645,
+        "radix_exact": 0.01260550000006333
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.013796665996778756,
+        "full_certificate": 0.014367917028721422,
+        "radix_exact": 0.012665999995078892
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.014560415991581976,
+        "full_certificate": 0.02012916700914502,
+        "radix_exact": 0.012721874983981252
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.013630040979478508,
+        "full_certificate": 0.018182167026679963,
+        "radix_exact": 0.012299790978431702
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.01268045901088044,
+        "full_certificate": 0.012390209012664855,
+        "radix_exact": 0.011782416026107967
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.012034417013637722,
+        "full_certificate": 0.013038332981523126,
+        "radix_exact": 0.011366875027306378
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.012650709017179906,
+        "full_certificate": 0.012434458010829985,
+        "radix_exact": 0.011218291998375207
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.012211250024847686,
+        "full_certificate": 0.013270959025248885,
+        "radix_exact": 0.01173966599162668
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.017505374969914556,
+        "full_certificate": 0.018149666022509336,
+        "radix_exact": 0.011880000005476177
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.013162790972273797,
+        "full_certificate": 0.020029708044603467,
+        "radix_exact": 0.011689041974022985
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.013009833986870944,
+        "full_certificate": 0.017986749997362494,
+        "radix_exact": 0.011690584011375904
+      }
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.013213832979090512,
+        "full_certificate": 0.017464541015215218,
+        "radix_exact": 0.011327291023917496
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.016131084004882723,
+        "full_certificate": 0.019902791013009846,
+        "radix_exact": 0.010537374997511506
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.013932750036474317,
+        "full_certificate": 0.017586625006515533,
+        "radix_exact": 0.010365792026277632
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.01883270899998024,
+        "full_certificate": 0.0195707090315409,
+        "radix_exact": 0.011205666000023484
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.01720983302220702,
+        "full_certificate": 0.019553458027075976,
+        "radix_exact": 0.010363499983213842
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.016636874992400408,
+        "full_certificate": 0.020612874999642372,
+        "radix_exact": 0.011087207996752113
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.015116291993763298,
+        "full_certificate": 0.01910795900039375,
+        "radix_exact": 0.01093216601293534
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.013544625020585954,
+        "full_certificate": 0.01791833300376311,
+        "radix_exact": 0.010301333968527615
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.01829449995420873,
+        "full_certificate": 0.01904300000751391,
+        "radix_exact": 0.011080667027272284
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.018353916006162763,
+        "full_certificate": 0.019610707997344434,
+        "radix_exact": 0.011063499958254397
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.017442291020415723,
+        "full_certificate": 0.018192000046838075,
+        "radix_exact": 0.011032124981284142
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.016277541988529265,
+        "full_certificate": 0.019277208019047976,
+        "radix_exact": 0.011515458987560123
+      }
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.01478370901895687,
+        "full_certificate": 0.016837499977555126,
+        "radix_exact": 0.011288332985714078
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.004024458001367748,
+        "full_certificate": 0.004557834006845951,
+        "radix_exact": 0.0012481660232879221
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.003822583006694913,
+        "full_certificate": 0.00512495799921453,
+        "radix_exact": 0.001283833000343293
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.006469167012255639,
+        "full_certificate": 0.006896124978084117,
+        "radix_exact": 0.0011499999673105776
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.006271416030358523,
+        "full_certificate": 0.006854416977148503,
+        "radix_exact": 0.001179334009066224
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.005298375035636127,
+        "full_certificate": 0.006523999967612326,
+        "radix_exact": 0.0010705000022426248
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0038889580173417926,
+        "full_certificate": 0.005782166961580515,
+        "radix_exact": 0.001312792010139674
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.005275417002849281,
+        "full_certificate": 0.006326125003397465,
+        "radix_exact": 0.0013246669550426304
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.00437037501251325,
+        "full_certificate": 0.0059708330081775784,
+        "radix_exact": 0.0014799169730395079
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.005004165985155851,
+        "full_certificate": 0.006580208020750433,
+        "radix_exact": 0.0014980409760028124
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.005467249953653663,
+        "full_certificate": 0.006771625019609928,
+        "radix_exact": 0.0014213750255294144
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.00659733300562948,
+        "full_certificate": 0.006842832954134792,
+        "radix_exact": 0.0015384580474346876
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.0055296660284511745,
+        "full_certificate": 0.004802332958206534,
+        "radix_exact": 0.0013777079875580966
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.009529875009320676,
+        "full_certificate": 0.0127660830039531,
+        "radix_exact": 0.007229459006339312
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.010857417015358806,
+        "full_certificate": 0.014613499981351197,
+        "radix_exact": 0.006844000017736107
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.014762417005840689,
+        "full_certificate": 0.014622666989453137,
+        "radix_exact": 0.00685416697524488
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.013712209009099752,
+        "full_certificate": 0.014307292003650218,
+        "radix_exact": 0.00677341700065881
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.013657125004101545,
+        "full_certificate": 0.01477133296430111,
+        "radix_exact": 0.007017833006102592
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.007822540996130556,
+        "full_certificate": 0.015230416029226035,
+        "radix_exact": 0.006393875053618103
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.010334249993320554,
+        "full_certificate": 0.0135796659742482,
+        "radix_exact": 0.00661695800954476
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.008847583027090877,
+        "full_certificate": 0.013895542011596262,
+        "radix_exact": 0.006632958014961332
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.01583579200087115,
+        "full_certificate": 0.01577058300608769,
+        "radix_exact": 0.006382499996107072
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.012288625002838671,
+        "full_certificate": 0.0144387919572182,
+        "radix_exact": 0.006877625011838973
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.014937959029339254,
+        "full_certificate": 0.01473316695773974,
+        "radix_exact": 0.0069629999925382435
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.014073500002268702,
+        "full_certificate": 0.014001125004142523,
+        "radix_exact": 0.0074379160068929195
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.053073666989803314,
+        "full_certificate": 0.059646832989528775,
+        "radix_exact": 0.04798004199983552
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.05094391602324322,
+        "full_certificate": 0.05628241703379899,
+        "radix_exact": 0.048251790984068066
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.06389083300018683,
+        "full_certificate": 0.06928925000829622,
+        "radix_exact": 0.06013533298391849
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.05425587500212714,
+        "full_certificate": 0.06015375000424683,
+        "radix_exact": 0.04849150002701208
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.05454129196004942,
+        "full_certificate": 0.06204683403484523,
+        "radix_exact": 0.04881283297436312
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.04794004198629409,
+        "full_certificate": 0.054612207983154804,
+        "radix_exact": 0.049270041985437274
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.050110875046812,
+        "full_certificate": 0.05634783301502466,
+        "radix_exact": 0.048018166969995946
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.05174816702492535,
+        "full_certificate": 0.0585306670400314,
+        "radix_exact": 0.05018708296120167
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.061194333946332335,
+        "full_certificate": 0.06704479199834168,
+        "radix_exact": 0.0569678750471212
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.06266741699073464,
+        "full_certificate": 0.07160191697767004,
+        "radix_exact": 0.05888974998379126
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.05516379198525101,
+        "full_certificate": 0.06207508296938613,
+        "radix_exact": 0.053489500016439706
+      }
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.057035750010982156,
+        "full_certificate": 0.06224191701039672,
+        "radix_exact": 0.05330729199340567
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.006949333008378744,
+        "full_certificate": 0.008743666985537857,
+        "radix_exact": 0.0003690419835038483
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.007914832967799157,
+        "full_certificate": 0.009031624998897314,
+        "radix_exact": 0.0003215419710613787
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.0008546669851057231,
+        "full_certificate": 0.0009040000149980187,
+        "radix_exact": 0.0003541670157574117
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.006427709013223648,
+        "full_certificate": 0.008406708016991615,
+        "radix_exact": 0.0003410839708521962
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.005853500042576343,
+        "full_certificate": 0.008484499994665384,
+        "radix_exact": 0.0003600839991122484
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0020103330025449395,
+        "full_certificate": 0.0032397499890066683,
+        "radix_exact": 0.0003737910301424563
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.006790500017814338,
+        "full_certificate": 0.007836250006221235,
+        "radix_exact": 0.0003914589760825038
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.007138083048630506,
+        "full_certificate": 0.00887662498280406,
+        "radix_exact": 0.0004361250321380794
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.007281458005309105,
+        "full_certificate": 0.009251917013898492,
+        "radix_exact": 0.00044791598338633776
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.005836875003296882,
+        "full_certificate": 0.008218291972298175,
+        "radix_exact": 0.0005034999921917915
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.0010972500313073397,
+        "full_certificate": 0.0014382500085048378,
+        "radix_exact": 0.00036695896415039897
+      }
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.001615708984900266,
+        "full_certificate": 0.0016545829712413251,
+        "radix_exact": 0.000396332994569093
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.005291250010486692,
+        "full_certificate": 0.007485084002837539,
+        "radix_exact": 0.0029749589739367366
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.0066553750075399876,
+        "full_certificate": 0.008601374982390553,
+        "radix_exact": 0.0028043329948559403
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.005022292025387287,
+        "full_certificate": 0.005557917000260204,
+        "radix_exact": 0.00304454198339954
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.006888291973154992,
+        "full_certificate": 0.008658332983031869,
+        "radix_exact": 0.0030305000254884362
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.009035499999299645,
+        "full_certificate": 0.010360624990426004,
+        "radix_exact": 0.0028265839791856706
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.005229500005953014,
+        "full_certificate": 0.007851375034078956,
+        "radix_exact": 0.0029429999995045364
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.0065413329866714776,
+        "full_certificate": 0.009037667012307793,
+        "radix_exact": 0.00272679200861603
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.009670874977018684,
+        "full_certificate": 0.010140000027604401,
+        "radix_exact": 0.002778791997116059
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.009428041987121105,
+        "full_certificate": 0.009899457974825054,
+        "radix_exact": 0.0027862080023624003
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.009329083026386797,
+        "full_certificate": 0.01040937501238659,
+        "radix_exact": 0.002745790989138186
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.006093375035561621,
+        "full_certificate": 0.008274084015283734,
+        "radix_exact": 0.0027202089549973607
+      }
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.006072834017686546,
+        "full_certificate": 0.007340957992710173,
+        "radix_exact": 0.0038709159707650542
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.007615417009219527,
+        "full_certificate": 0.00922320899553597,
+        "radix_exact": 0.00046779203694313765
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.006927084003109485,
+        "full_certificate": 0.00902841700008139,
+        "radix_exact": 0.0004562920075841248
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.00805379101075232,
+        "full_certificate": 0.009123833035118878,
+        "radix_exact": 0.00044949998846277595
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.006890582968480885,
+        "full_certificate": 0.00817791698500514,
+        "radix_exact": 0.00045966694597154856
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.005237624980509281,
+        "full_certificate": 0.007210750016383827,
+        "radix_exact": 0.0004439170006662607
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0024653750006109476,
+        "full_certificate": 0.004683999984990805,
+        "radix_exact": 0.0004092919989489019
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.006283750000875443,
+        "full_certificate": 0.00885312503669411,
+        "radix_exact": 0.00047633296344429255
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.007412832987029105,
+        "full_certificate": 0.008831084007397294,
+        "radix_exact": 0.0004582080291584134
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.008282915980089456,
+        "full_certificate": 0.008997333003208041,
+        "radix_exact": 0.000478917034342885
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.007526875007897615,
+        "full_certificate": 0.0095768750179559,
+        "radix_exact": 0.000512500002514571
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.008917667029891163,
+        "full_certificate": 0.009376875008456409,
+        "radix_exact": 0.0004368749796412885
+      }
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.0042648749658837914,
+        "full_certificate": 0.00425408297451213,
+        "radix_exact": 0.00039379100780934095
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.005603249999694526,
+        "full_certificate": 0.008454292023088783,
+        "radix_exact": 0.0038433329900726676
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.009538540965877473,
+        "full_certificate": 0.010214124980848283,
+        "radix_exact": 0.0022600420052185655
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.004304624977521598,
+        "full_certificate": 0.006868082971777767,
+        "radix_exact": 0.0022635000059381127
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.006876166968140751,
+        "full_certificate": 0.009618250012863427,
+        "radix_exact": 0.002246415999252349
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.006377084006089717,
+        "full_certificate": 0.009944125020410866,
+        "radix_exact": 0.002220166032202542
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.005049582978244871,
+        "full_certificate": 0.006875917024444789,
+        "radix_exact": 0.002107583044562489
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.008363207976799458,
+        "full_certificate": 0.010557333007454872,
+        "radix_exact": 0.0025046670343726873
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.007597082993015647,
+        "full_certificate": 0.0097295839805156,
+        "radix_exact": 0.0019334160024300218
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.009165875031612813,
+        "full_certificate": 0.01020491699455306,
+        "radix_exact": 0.0022856250288896263
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.007955499982926995,
+        "full_certificate": 0.009849334019236267,
+        "radix_exact": 0.0020461659878492355
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.00511299999197945,
+        "full_certificate": 0.007700957998167723,
+        "radix_exact": 0.002007500035688281
+      }
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.005675665976013988,
+        "full_certificate": 0.006649334041867405,
+        "radix_exact": 0.002331875031813979
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.01726245798636228,
+        "full_certificate": 0.0241784579702653,
+        "radix_exact": 0.015701707976404577
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.018467416986823082,
+        "full_certificate": 0.024029000021982938,
+        "radix_exact": 0.01590220903744921
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.01949329097988084,
+        "full_certificate": 0.025175916031003,
+        "radix_exact": 0.016538291005417705
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.019783833995461464,
+        "full_certificate": 0.024800624989438802,
+        "radix_exact": 0.016211083973757923
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.021303749992512167,
+        "full_certificate": 0.02446695795515552,
+        "radix_exact": 0.016265207959804684
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.01961029099766165,
+        "full_certificate": 0.02574483398348093,
+        "radix_exact": 0.016861375013832003
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.01823400001740083,
+        "full_certificate": 0.022125417017377913,
+        "radix_exact": 0.016215916955843568
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.018946625001262873,
+        "full_certificate": 0.02718899998581037,
+        "radix_exact": 0.016891833976842463
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.020157125021796674,
+        "full_certificate": 0.02560574997914955,
+        "radix_exact": 0.01596600003540516
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.017817917047068477,
+        "full_certificate": 0.02586616697954014,
+        "radix_exact": 0.015557624981738627
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.018699000007472932,
+        "full_certificate": 0.02384962496580556,
+        "radix_exact": 0.015728833037428558
+      }
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.020200334023684263,
+        "full_certificate": 0.022117958986200392,
+        "radix_exact": 0.01648470899090171
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.004818374989554286,
+        "full_certificate": 0.00872054195497185,
+        "radix_exact": 0.002133250003680587
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.0066947920131497085,
+        "full_certificate": 0.009964625001884997,
+        "radix_exact": 0.0028407080098986626
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.008348750008735806,
+        "full_certificate": 0.010456457966938615,
+        "radix_exact": 0.002442584023810923
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.008405125001445413,
+        "full_certificate": 0.010540542018134147,
+        "radix_exact": 0.0024078330025076866
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.006636124977376312,
+        "full_certificate": 0.009260083024855703,
+        "radix_exact": 0.002315332996658981
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.003326167003251612,
+        "full_certificate": 0.00648591696517542,
+        "radix_exact": 0.0022899580071680248
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.006586416973732412,
+        "full_certificate": 0.0104600420454517,
+        "radix_exact": 0.002279332955367863
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.002648791007231921,
+        "full_certificate": 0.004268624994438142,
+        "radix_exact": 0.0020648750360123813
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.009112250001635402,
+        "full_certificate": 0.009656583948526531,
+        "radix_exact": 0.002328875008970499
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.009019417047966272,
+        "full_certificate": 0.011004208994563669,
+        "radix_exact": 0.0023082499974407256
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.006303958012722433,
+        "full_certificate": 0.010477749980054796,
+        "radix_exact": 0.002489167032763362
+      }
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.006026084010954946,
+        "full_certificate": 0.006449249980505556,
+        "radix_exact": 0.0023992499918676913
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "AE",
+      "median_seconds": {
+        "certificate": 0.00475149997510016,
+        "full_certificate": 0.005361667019315064,
+        "radix_exact": 0.00019845797214657068
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "CNN",
+      "median_seconds": {
+        "certificate": 0.006721791985910386,
+        "full_certificate": 0.0071004999917931855,
+        "radix_exact": 0.00015425001038238406
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "HBOS",
+      "median_seconds": {
+        "certificate": 0.004752708016894758,
+        "full_certificate": 0.005386750039178878,
+        "radix_exact": 0.00015995802823454142
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "IFOREST",
+      "median_seconds": {
+        "certificate": 0.0055666250409558415,
+        "full_certificate": 0.006623041990678757,
+        "radix_exact": 0.00013925001258030534
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "IFOREST1",
+      "median_seconds": {
+        "certificate": 0.0033518329728394747,
+        "full_certificate": 0.004289124975912273,
+        "radix_exact": 0.000152749998960644
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "LOF",
+      "median_seconds": {
+        "certificate": 0.0026562080020084977,
+        "full_certificate": 0.003361542010679841,
+        "radix_exact": 0.0001662920112721622
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "LSTM",
+      "median_seconds": {
+        "certificate": 0.0032352919806726277,
+        "full_certificate": 0.0034341250429861248,
+        "radix_exact": 0.00014125002780929208
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "MP",
+      "median_seconds": {
+        "certificate": 0.002529499994125217,
+        "full_certificate": 0.0030452909995801747,
+        "radix_exact": 0.00017166597535833716
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "NORMA",
+      "median_seconds": {
+        "certificate": 0.0029569999896921217,
+        "full_certificate": 0.004366625042166561,
+        "radix_exact": 0.00012983300257474184
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "OCSVM",
+      "median_seconds": {
+        "certificate": 0.005528750014491379,
+        "full_certificate": 0.0061484999605454504,
+        "radix_exact": 0.00015954102855175734
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "PCA",
+      "median_seconds": {
+        "certificate": 0.004769082996062934,
+        "full_certificate": 0.005652374995406717,
+        "radix_exact": 0.00016616698121652007
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "model": "POLY",
+      "median_seconds": {
+        "certificate": 0.001949041965417564,
+        "full_certificate": 0.0019572500023059547,
+        "radix_exact": 0.00013637501979246736
+      }
+    }
+  ],
+  "sum_case_medians_seconds": {
+    "certificate": 4.6858825839008205,
+    "full_certificate": 5.637601828551851,
+    "radix_exact": 3.1267247507930733
+  },
+  "exact_float_outside_certificate_informational": {
+    "certificate": 0,
+    "full_certificate": 0
+  },
+  "scope": "Fixed thirty-series published-score subset; real-arithmetic certification and floating evaluation are distinct guarantees.",
+  "protocol_sha256": "651cb0cc4d5bde61195f8ef0da64a76694886dc06412b6314e3be22c27467c7a",
+  "records_sha256": "f837144c4d4d08fd1dc00b647f563145defc99e39d64b02a61636155542b1c31",
+  "reference_sha256": {
+    "artifacts/msad-sampling-20261023/records.jsonl": "283ccfafa5b712e2a7316b344b4c75ae8f528359bbb42725fd48fc3963224023",
+    "artifacts/msad-certificate-20261023/records.jsonl": "4e557a2696ab92d35b2c433bdf98918de41afeb7e1a92172da62adfa52e185ab",
+    "artifacts/msad-full-certificate-20261023/records.jsonl": "604a96f3f5ef1c42326a8786ae349381d49f715fac347196cafc5dc307eb4a46"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Fresh virtual environment outside checkout; public APIs and module byte identity",
+  "python": "3.12.4",
+  "numpy": "2.5.4",
+  "numba": "0.68.0",
+  "llvmlite": "0.50.0",
+  "artifacts": {
+    "sparse_vus-0.3.0-py3-none-any.whl": "5945ea5a3d9b122125cca8d72c85af1f927cbdcd386a25f2e80b12f9cca502c8",
+    "sparse_vus-0.3.0.tar.gz": "230618722b151ea2b9d20699d016af60f8f7e3a09208af7e59960a75bd4e22f3"
+  },
+  "check_sha256": "be95c114a8f272d163612ee3b5682832892ebef82960a80755e62b3621c650ce"
+}

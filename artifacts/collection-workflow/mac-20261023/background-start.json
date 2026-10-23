@@ -1,0 +1,126 @@
+{
+  "utc": "2026-10-23T04:02:59.200027+00:00",
+  "scope": "Top20 process snapshot, not a continuous trace; no unrelated process was stopped",
+  "processes": [
+    {
+      "pid": 3013,
+      "ppid": 1,
+      "cpu_percent_snapshot": 41.9,
+      "executable_basename": "Python"
+    },
+    {
+      "pid": 412,
+      "ppid": 1,
+      "cpu_percent_snapshot": 39.4,
+      "executable_basename": "WindowServer"
+    },
+    {
+      "pid": 5630,
+      "ppid": 5597,
+      "cpu_percent_snapshot": 13.9,
+      "executable_basename": "codex"
+    },
+    {
+      "pid": 90077,
+      "ppid": 1,
+      "cpu_percent_snapshot": 10.6,
+      "executable_basename": "Orca"
+    },
+    {
+      "pid": 31717,
+      "ppid": 31667,
+      "cpu_percent_snapshot": 8.9,
+      "executable_basename": "Naru Helper"
+    },
+    {
+      "pid": 90333,
+      "ppid": 90077,
+      "cpu_percent_snapshot": 7.3,
+      "executable_basename": "Orca Helper (Renderer)"
+    },
+    {
+      "pid": 5633,
+      "ppid": 5623,
+      "cpu_percent_snapshot": 6.7,
+      "executable_basename": "codex"
+    },
+    {
+      "pid": 31783,
+      "ppid": 31667,
+      "cpu_percent_snapshot": 5.5,
+      "executable_basename": "Naru Helper (Renderer)"
+    },
+    {
+      "pid": 1702,
+      "ppid": 1,
+      "cpu_percent_snapshot": 5.0,
+      "executable_basename": "orca-terminal-host"
+    },
+    {
+      "pid": 90217,
+      "ppid": 90077,
+      "cpu_percent_snapshot": 4.8,
+      "executable_basename": "Orca Helper"
+    },
+    {
+      "pid": 617,
+      "ppid": 1,
+      "cpu_percent_snapshot": 3.3,
+      "executable_basename": "com.apple.DriverKit-AppleBCMWLAN"
+    },
+    {
+      "pid": 29104,
+      "ppid": 28710,
+      "cpu_percent_snapshot": 2.8,
+      "executable_basename": "claude"
+    },
+    {
+      "pid": 98072,
+      "ppid": 5630,
+      "cpu_percent_snapshot": 2.2,
+      "executable_basename": "codex-code-mode-host"
+    },
+    {
+      "pid": 66147,
+      "ppid": 1,
+      "cpu_percent_snapshot": 1.2,
+      "executable_basename": "trustd"
+    },
+    {
+      "pid": 51922,
+      "ppid": 1,
+      "cpu_percent_snapshot": 0.8,
+      "executable_basename": "Amphetamine"
+    },
+    {
+      "pid": 485,
+      "ppid": 1,
+      "cpu_percent_snapshot": 0.8,
+      "executable_basename": "mDNSResponder"
+    },
+    {
+      "pid": 380,
+      "ppid": 1,
+      "cpu_percent_snapshot": 0.8,
+      "executable_basename": "opendirectoryd"
+    },
+    {
+      "pid": 447,
+      "ppid": 1,
+      "cpu_percent_snapshot": 0.7,
+      "executable_basename": "symptomsd"
+    },
+    {
+      "pid": 463,
+      "ppid": 1,
+      "cpu_percent_snapshot": 0.6,
+      "executable_basename": "syspolicyd"
+    },
+    {
+      "pid": 1,
+      "ppid": 0,
+      "cpu_percent_snapshot": 0.6,
+      "executable_basename": "launchd"
+    }
+  ]
+}

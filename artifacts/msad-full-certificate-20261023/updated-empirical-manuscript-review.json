@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "paper_sha256": "0f3bcdaa934b33c7414ff045dc8bc7faed75a09df29d30eb4c721bccc47fb74c",
+  "primary_claim_table_sha256": "32dcb810bec43e44b8bba76b58752c1da29d9120aac87f4a287453e398e05c8c",
+  "overlap_audit_sha256": "281c9af140cc9378ad993d35c637359ccc54eed637c190a36767be878c02b900",
+  "family_table_entries_checked": 16,
+  "zero_maximum_regret_families": 12,
+  "matched_cases": 20,
+  "nonmatching_cases": 108,
+  "nonmatching_harmful_cases": 4,
+  "nonmatching_harmful_families": 2,
+  "full_grid_ideal_regret_threshold_counts": {
+    "250": {
+      "guaranteed_at_least_0_01": 8,
+      "guaranteed_below_0_01": 120,
+      "maximum_regret_upper_fraction": [
+        "28720357725250031",
+        "72057594037927936"
+      ],
+      "maximum_regret_upper_display": 0.39857503027554464
+    },
+    "1000": {
+      "guaranteed_at_least_0_01": 0,
+      "guaranteed_below_0_01": 128,
+      "maximum_regret_upper_fraction": [
+        "68189022888369",
+        "36028797018963968"
+      ],
+      "maximum_regret_upper_display": 0.0018926255809339765
+    }
+  },
+  "scope": "Read-only exact certificate ledger and primary-source table checks, no metric recomputation"
+}

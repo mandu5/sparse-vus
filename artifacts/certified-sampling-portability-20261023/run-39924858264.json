@@ -1,0 +1,47 @@
+{
+  "conclusion": "success",
+  "databaseId": 39924858264,
+  "event": "pull_request",
+  "headSha": "ddc68c67f52c1a050c7806b9b1320386834269cd",
+  "jobs": [
+    {
+      "databaseId": 120318631132,
+      "name": "parity (3.11)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:28:18Z",
+      "completedAt": "2026-10-23T08:30:03Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924858264/job/120318631132"
+    },
+    {
+      "databaseId": 120318631199,
+      "name": "parity (3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:28:18Z",
+      "completedAt": "2026-10-23T08:31:40Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924858264/job/120318631199"
+    },
+    {
+      "databaseId": 120318631248,
+      "name": "installed-wheel",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:28:19Z",
+      "completedAt": "2026-10-23T08:29:00Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924858264/job/120318631248"
+    },
+    {
+      "databaseId": 120318631275,
+      "name": "sampling-report-portability",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:28:18Z",
+      "completedAt": "2026-10-23T08:28:35Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924858264/job/120318631275"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924858264",
+  "workflowName": "Numerical parity"
+}

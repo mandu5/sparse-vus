@@ -1,0 +1,13 @@
+{
+  "status": "PREPARATION_FAILED_NO_METRIC_OUTCOMES",
+  "recorded_utc": "2026-10-23T04:14:51.498987+00:00",
+  "stage": "structural_fixture_array_hash_validation",
+  "error": "ValueError: Structural arrays changed",
+  "generator_completed": true,
+  "generated_series": 12,
+  "generated_score_vectors": 48,
+  "generation_manifest_sha256": "f6743fabe2392d512cad7972e0891082c64f39679d81bb728396e8f2add669f0",
+  "source_sha256": "e0a9687fb44f342b012cef620297a1975bf79497dacb8f5aaf1c5e540e7c0a53",
+  "frozen_benchmark_protocol_created": false,
+  "scope": "Fresh failed attempt retained; no metric kernels or timings invoked by preparation. The structural fixture and generator use distinct array-hash contracts; investigating before new retry."
+}

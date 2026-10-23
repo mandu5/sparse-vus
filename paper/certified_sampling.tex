@@ -1,0 +1,235 @@
+% Working preprint. The template's preprint option makes no review-status claim.
+\documentclass[10pt]{article}
+\usepackage[preprint]{tmlr-style/tmlr}
+\usepackage{amsmath,amssymb,amsthm,booktabs,graphicx,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newcommand{\ind}{\mathbf{1}}
+\emergencystretch=2em
+\title{When Threshold Sampling Reverses VUS Rankings:\\
+Exact and Certified Evaluation of Anomaly Scores}
+\author{\name Youngmin Ko \email rhdudals0505@naver.com\\
+\addr Independent Researcher, Republic of Korea}
+\begin{document}
+\maketitle
+\begin{abstract}
+Volume Under the Surface (VUS) compares anomaly scores across temporal
+tolerance widths and score thresholds.\footnote{LLM assistance was used in
+literature search, mathematical derivation, implementation, experiment
+orchestration, and drafting. Verification used independent implementations,
+exact rational checks, pinned upstream controls, and frozen evidence;
+agent reviews were internal checks, not external peer review.}
+Its mathematical definition can
+be threshold-independent while a finite integration grid remains
+inaccurate. We analyze a specific failure of the original dynamic VUS-PR:
+soft-label mass admitted after exhaustive recall saturates can inflate
+the precision assigned to an earlier recall jump. We give a finite
+worst-case overestimation bound exceeding 0.98 and same-label, distinct-score
+constructions at 250 thresholds with exact-score selection regret of
+0.507, 0.701 and 0.846 at maximum widths 30, 100 and 300.
+We derive bidirectional error enclosures and implement them with integer
+square roots and directed integer arithmetic, certifying the ideal
+real-arithmetic target without relying on a floating-point tolerance.
+A prospectively selected panel re-evaluates 1,536 published detector score
+vectors on 128 time series from sixteen source families. At width 30,
+the default grid selects a model with exhaustive regret at least 0.01
+on eight series across four families; the largest regret is 0.399.
+Integer enclosures prove all eight regret claims and the unique
+exhaustive winner on all 128 series. Partial grids certify 63 winners
+at 250 thresholds and 94 at 1,000. All stored score vectors have at most
+101 distinct values: requesting more ranks than distinct scores does
+not ensure exhaustive integration. We report source-overlap sensitivity,
+signed errors, matched exhaustive controls, and certification costs.
+\end{abstract}
+
+\section{Introduction}
+An anomaly detector produces scores; an evaluation procedure turns those
+scores into evidence for comparing or selecting models. Approximation in
+the evaluator can therefore affect the scientific conclusion even when
+the labels, models, and score vectors do not change. Volume Under the
+Surface (VUS) extends range-aware ROC and PR areas by averaging across
+temporal tolerance widths~\citep{paparrizos2022,boniol2025}. This work
+studies fidelity to one explicitly pinned VUS-PR definition, rather than
+whether that metric is the best proxy for a deployment's utility.
+
+Finite-threshold approximation is well known. Classical work shows that
+PR interpolation differs from ROC interpolation~\citep{davis2006}, and
+weighted PR requires additional care~\citep{keilwagen2014}. Keras documents
+finite-threshold errors and bounding estimates~\citep{kerasauc}; TimeEval
+also warns about coarse VUS threshold grids~\citep{timeevalvus}.
+PAULA derives sampled-rank precision bounds under explicit monotonicity
+assumptions in an annotation-budget setting~\citep{sabharwal2017}. Generic
+claims that approximation loses information, or that evaluation metrics
+can change a ranking, would add little to this literature.
+
+Our specific observation concerns a dynamic soft-label target in which
+recall is clipped before all soft positive mass has entered. Precision can
+continue increasing after recall reaches one. A sampled threshold can
+assign this later precision to a recall jump that happened at a much
+lower precision. The corresponding exhaustive integral assigns zero area
+to the post-saturation mass. This produces a qualitatively different
+mechanism from the familiar loss of early positive ranks under coarse
+sampling. Figure~\ref{fig:mechanism} illustrates the mechanism and large
+same-label ranking reversals at ordinary maximum widths.
+
+\begin{figure}[t]
+\centering\includegraphics[width=\linewidth]{figures/sampling_witnesses.pdf}
+\caption{Constructed failures, not prevalence estimates. Left: after the
+sole original positive enters at rank four, recall is one while buffer
+mass keeps increasing precision. The next retained threshold is rank
+eleven. Right: all-width averages at the standard 250-threshold budget
+prefer score vector A although exhaustive evaluation prefers B.}
+\label{fig:mechanism}
+\end{figure}
+
+We provide three forms of evidence. First, explicit constructions and
+proofs establish what the approximation can do, including large finite
+overestimation and selection regret. Second, a mass-envelope analysis
+yields intervals that can certify the exhaustive ordering of models, with
+an integer implementation that preserves the mathematical guarantee.
+Third, a fixed, previously unmeasured bank of twelve released score
+configurations per series separates worst-case possibility from observed
+effects and computational costs. The score bank is used for offline
+evaluation with labels, not label-free selection at deployment.
+
+A publicly released support-event evaluator supplies the numerical
+exhaustive baseline~\citep{sparsevus03}. We do not relabel that earlier
+implementation, its already measured speedups, ordinary radix sorting, or
+generic PR error bounds as new discoveries. The new investigation isolates
+post-saturation inflation, a sound integer remedy, and its consequences on
+a broader published detector panel. Likewise, certification of a ranking
+does not certify the detector's real-world usefulness.
+
+\input{sampling_theory.tex}
+
+\section{Matched exhaustive and sampled computation}
+\label{sec:matched-computation}
+Both routes use the same numerical score conversion, complete global ties,
+radix preparation primitives, interval geometry and compiled PR kernel.
+The exhaustive route retains every support event; the sampled route
+assigns each support event to its first retained global threshold. This
+matched control avoids attributing a Python-versus-compiled implementation
+difference to exactness. Both calls include validation and preparation.
+
+For completeness, let $S_L$ be maximum-width expanded support and
+$Q=|S_L|$. A score group containing no point in $S_L$ changes neither
+weighted positive mass nor component coverage. Its recall increment and
+PR contribution are zero. At each retained support score $v$, its
+precision denominator must nevertheless be the \emph{global} count
+$|\{i:s_i\geq v\}|$, including off-support positions tied with it.
+All nonzero PR contributions are therefore recovered from support events
+and their complete global counts. Two nearest distinct original intervals
+suffice to determine every weight: no active ramp gives zero, exactly one
+gives its square root, and two give one after clipping. Ordered intervals
+permit a linear temporal scan.
+
+Eight stable byte-radix passes order finite binary64 scores, with signed
+zeros sharing a numerical tie. Preparing counts and geometry takes
+$O(n+Q)$ fixed-word operations. Each width costs $O(Q)$, giving
+$O(n+(L+1)Q)$ exhaustive evaluation with $O(n+Q+L)$ auxiliary words.
+This is a fixed-word, unit-cost metric-arithmetic bound, not a
+comparison-model sorting result for arbitrary real numbers or a bound on
+exact symbolic square-root arithmetic. The floating-point evaluator is
+numerically exhaustive; only the separate integer certificate encloses
+the ideal real target rigorously.
+
+The sampled implementation has the analogous
+$O(n+(L+1)(Q+H))$ bound before deduplication of retained threshold states.
+Both scan maximum support. Consequently fewer requested thresholds need
+not make this matched sampled control faster than the exact sparse route.
+Certificate costs additionally include bounded-precision integer root
+brackets and arbitrary-precision endpoint arithmetic; its usefulness and
+overhead require measurement rather than inference from $H$ alone.
+
+\input{sampling_empirical.tex}
+
+\section{Related work and scope of the contribution}
+VUS and its optimized implementations already exploit static and dynamic
+anomaly regions~\citep{paparrizos2022,boniol2025}. Klein's released
+implementation sorts support scores and uses cumulative weighted
+sums~\citep{klein2026}. Our comparison runs the unchanged pinned source
+with its actual default grid and separately with exhaustive thresholds;
+equivalence to a sampled reference is not claimed to be an erroneous
+exhaustive-integral promise. TimeEval documents deliberate changes in
+ramps, overlap handling, component counting and integration, while other
+implementations expose further conventions~\citep{timeevalvus,ffvus2026}.
+Results for those different targets cannot be called approximation error
+relative to one universal VUS definition. We study the original dynamic
+right-step PR target only.
+
+The geometry of PR curves and the problems with linear interpolation have
+been analyzed extensively~\citep{davis2006,keilwagen2014}. Our elementary
+endpoint envelopes build on that general numerical concern; we make no
+priority claim for the general concept of an error interval. The specific
+analysis concerns clipped dynamic recall, component existence, complete
+ties, and precision growth after saturation. A fixed uniform grid can
+also severely underestimate early recall increments, a separate effect
+already documented in the precursor. Both directions of error matter;
+overestimation is not a universal sign claim.
+
+PAULA bounds precision from sampled ranks under weak or strong
+precision-monotonicity assumptions while acquiring unknown binary
+labels~\citep{sabharwal2017}. Here all labels and scores are available;
+the enclosure applies to a clipped dynamic integral without assuming
+monotone precision. The information-access task and target differ,
+so no annotation-efficiency or performance comparison is implied.
+
+Recent adversarial studies examine whether TSAD metrics reward unskilled
+detectors or best-of-many reporting~\citep{lyu2026}. Those questions
+change reporting behavior or detector construction. Our main empirical
+question keeps every published score vector and label fixed and changes
+only threshold integration of one metric contract. MSAD supplies a
+published model-selection score bank~\citep{msad2023}; re-evaluating its
+stored scores under our pinned dynamic target does not reproduce or
+correct its original metric tables, which use a different implementation.
+
+\section{Limitations and practical interpretation}
+Large constructed regret proves possibility. It does not measure the
+frequency of such cases, invalidate the VUS metric, or imply that its
+exhaustive winner is optimal for an application's costs. The large finite
+overestimation theorem uses a tolerance width comparable to series length;
+the three smaller constructions separately establish substantial regret
+at maximum widths 30, 100 and 300.
+
+The empirical panel is prospective with respect to this project's metric
+outcomes, but is not a sample of all anomaly-detection deployments. Exact
+identity exclusions do not remove every transformed channel or cropped
+version of a common source recording. Published score quantization is
+preserved; conclusions concern those stored vectors, not recovered
+full-precision detector outputs or retrained models. Family-level
+summaries reduce one source of pseudoreplication without establishing
+independence of every underlying recording.
+
+Certificate intervals can remain nearly unit width when the retained
+transcript hides the score ordering that matters. The impossibility
+example explains why this cannot always be repaired by clever endpoint
+arithmetic alone. An inconclusive certificate requires additional
+threshold information or exhaustive evaluation. Soundness is distinct
+from speed, and integer certification may cost more than a floating-point
+exhaustive answer. This is a useful explicit tradeoff, not a hidden
+acceleration claim.
+
+\paragraph{Research assistance and reproducibility.}
+Code, tests, frozen protocols, outcome records, raw integer witnesses and
+input-reacquisition instructions are available through the
+\href{https://github.com/mandu5/sparse-vus/blob/55f2304ca5a8abdb8e3a4da7c5d8a1f596d72ebc/docs/certified_sampling_reproduction_20261023.md}{immutable reproduction guide (snapshot \texttt{60e68af3})}.
+After cloning, run \texttt{git checkout 60e68af3} before its installation
+and audit commands.
+Its standard-library audit verifies the public ledgers without the raw
+input cache; fresh metric execution and input acquisition are distinct
+reproduction steps. The raw third-party data retain their original
+attribution and are reacquired from their source.
+
+AI tools assisted literature search, mathematical derivation, code,
+experiment orchestration and drafting. Independent implementations,
+exact rational checks, unchanged upstream controls, frozen input/source
+hashes, and preserved failure records test those outputs. Agent reviews
+are internal checks, not external peer review. The public working draft
+does not attest to author completion of a submission's review declarations.
+
+\bibliographystyle{tmlr-style/tmlr}
+\bibliography{sparse_vus_references,sampling_references}
+\end{document}

@@ -1,0 +1,83 @@
+{
+  "series": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test",
+  "family": "GHL",
+  "canonical_family": "ghl",
+  "completed_utc": "2026-10-23T04:24:16.071129+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GHL/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.csv",
+  "raw_bytes": 12971751,
+  "raw_sha256": "1092c17a60e431a1c7e3521f402665a7f51559bd57003c2c69787cbbed95b425",
+  "raw_git_blob_verified": false,
+  "raw_lfs_verified": true,
+  "npz_path": ".cache/tie-replication/linux-39900063718/generation/arrays/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.npz",
+  "npz_bytes": 1402693,
+  "npz_sha256": "fd1b03cb0409e3c0320faa150bc7b810b5b70b27d2a7525b25e7e1445ec75a7b",
+  "n": 80001,
+  "preprocessing": {
+    "feature_columns": [
+      "RT_level_ini",
+      "RT_temperature.T",
+      "C_temperature.T",
+      "RT_level",
+      "out_valve_act",
+      "inv_valve_act",
+      "limiter.y",
+      "inj_valve_act",
+      "Relaxing.active",
+      "boundary.m_flow_in",
+      "dir_valve_act",
+      "C_level",
+      "HT_temperature.T",
+      "heater_act",
+      "HT_level",
+      "limiter1.y"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "RT_level_ini": 0,
+      "RT_temperature.T": 0,
+      "C_temperature.T": 0,
+      "RT_level": 0,
+      "out_valve_act": 0,
+      "inv_valve_act": 0,
+      "limiter.y": 0,
+      "inj_valve_act": 0,
+      "Relaxing.active": 0,
+      "boundary.m_flow_in": 0,
+      "dir_valve_act": 0,
+      "C_level": 0,
+      "HT_temperature.T": 0,
+      "heater_act": 0,
+      "HT_level": 0,
+      "limiter1.y": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 16
+  },
+  "actual_parameters": {
+    "pca_rank": 5,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "e1da0c2eb204842c9452560627a7d4399dfe8ecda65cac1ddddd3fc3ef2ac0e4",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.25387109300000077,
+    "pca_reconstruction": 0.026059283999998684,
+    "knn_distance": 0.7154686619999922,
+    "robust_marginal_z": 0.017666198000000577
+  },
+  "array_sha256": {
+    "labels": "a189cadd92c539d11a8477ffd92f2b7ea6cf890f188dd3808729869516cf1147",
+    "isolation_forest": "f8eb03d216a060af5191629878c7a253c6ffed35d25979757cc0657b5916ccff",
+    "pca_reconstruction": "9cffd399a901bf406dfdaec982e2bec6256210fc6aab16679039e859f97436ed",
+    "knn_distance": "51f9b23dad601db06799216238abe5016719e4d407e39a32932e3e7d963689ab",
+    "robust_marginal_z": "ac7e675093e47940d36a09bdafac0f48c404e0192d19f21c9eb79b4c427ee078"
+  },
+  "selection_sha256": "f6bef8a4ba9e0aee16a1afc11231533ca2c545ab0ee93fc2631a7de40ee749fe",
+  "metric_outcomes_computed": false
+}

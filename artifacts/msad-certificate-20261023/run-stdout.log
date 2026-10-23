@@ -1,0 +1,49 @@
+Completed 8/128 series
+Completed 16/128 series
+Completed 24/128 series
+Completed 32/128 series
+Completed 40/128 series
+Completed 48/128 series
+Completed 56/128 series
+Completed 64/128 series
+Completed 72/128 series
+Completed 80/128 series
+Completed 88/128 series
+Completed 96/128 series
+Completed 104/128 series
+Completed 112/128 series
+Completed 120/128 series
+Completed 128/128 series
+{
+  "record_count": 3072,
+  "budgets": {
+    "250": {
+      "attempted_series": 128,
+      "complete_series": 128,
+      "successful_scalar_calls": 1536,
+      "failed_scalar_calls": 0,
+      "certified_unique_winners": 63,
+      "certified_sampled_unique_winners": 63,
+      "certified_suboptimal_sampled_sets": 0,
+      "equal_family_certified_winner_fraction_attempted_denominator": 0.5051654942279942,
+      "interval_width_median": 0.0062365738967743445,
+      "interval_width_max": 0.9955625321948419,
+      "float_reference_outside_count_informational": 0,
+      "float_reference_max_outside_distance_informational": 0.0
+    },
+    "1000": {
+      "attempted_series": 128,
+      "complete_series": 128,
+      "successful_scalar_calls": 1536,
+      "failed_scalar_calls": 0,
+      "certified_unique_winners": 94,
+      "certified_sampled_unique_winners": 94,
+      "certified_suboptimal_sampled_sets": 0,
+      "equal_family_certified_winner_fraction_attempted_denominator": 0.7287405303030303,
+      "interval_width_median": 0.00038996400964232125,
+      "interval_width_max": 0.9865367082864087,
+      "float_reference_outside_count_informational": 1,
+      "float_reference_max_outside_distance_informational": 7.632783294297951e-16
+    }
+  }
+}

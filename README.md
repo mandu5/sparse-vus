@@ -1,5 +1,143 @@
 # Sparse VUS
 
+## Threshold sampling and certified rankings (23 October 2026)
+
+[When Threshold Sampling Reverses VUS Rankings (PDF)](paper/certified_sampling.pdf)
+studies the original dynamic VUS-PR target on twelve published detector
+configurations across 128 prospectively selected series. At the primary
+250-threshold budget and maximum width 30, **8/128 model selections have
+exhaustive regret at least 0.01**, spanning four source families. Full-grid
+integer enclosures prove exactly these eight cases and certify the unique
+exhaustive winner on all 128 series. The largest ideal regret is enclosed
+in **[0.3985750301665, 0.3985750302756]**.
+
+The paper derives a post-saturation soft-mass inflation mechanism and sound
+integer error bounds. All stored vectors have at most 101 score classes;
+sampling 250 *ranks* can nevertheless miss rare classes. Enumerating every
+class is the simple complete remedy on this score release. Partial-grid
+certificates confirm 63/128 winners at 250 thresholds and 94/128 at 1,000;
+they leave the wrong sampled selections unresolved.
+
+The full study completed **36,864 numerical calls, 720 independent exhaustive
+controls, and 9,000 timing calls**. Exact numerical evaluation is 1.044 times
+as fast as matched compiled sampling in the geometric paired comparison
+(family-bootstrap interval [1.029, 1.062]). This modest, one-host result is
+separate from the additional cost of rigorous integer certification.
+
+The fixed panel preserves published quantization. An endpoint-shift audit
+finds 20 recordings overlapping prior inputs; the descriptive 108-case
+nonmatching subgroup has four practical errors in two families. This is
+not a claim of entirely unseen physical recordings or population prevalence.
+[Full numerical study](artifacts/msad-sampling-20261023/README.md) ·
+[Integer guarantees](docs/msad_full_certificate_study_20261023.md) ·
+[Mechanism audit](docs/msad_saturation_and_empirical_review_20261023.md) ·
+[Reproduction guide](docs/certified_sampling_reproduction_20261023.md).
+
+```python
+# Research branch; install with .[accelerate]. The older v0.3.0 tag predates these APIs.
+from sparse_vus.sampling import sampled_pr_radix_jit
+from sparse_vus.sampling_bounds import certified_sampled_pr
+
+labels = [0, 1, 1, 0]
+scores = [4, 3, 2, 1]
+approximation = sampled_pr_radix_jit(labels, scores, max_buffer=0, thresholds=2)
+certificate = certified_sampled_pr(labels, scores, max_buffer=0, thresholds=len(labels))
+print(approximation, certificate.lower, certificate.upper)
+# Compare certificates with cert_a.certifies_greater_than(cert_b), using integers.
+```
+
+## Earlier exact-evaluator manuscript (23 October 2026)
+
+[Sparse Events and Complete-Tie Prefixes for Exact VUS Evaluation (PDF)](paper/sparse_vus.pdf)
+presents the support-event evaluator and its active-prefix and complete-tie
+extensions as one research article. The public v0.3.0 software precursor is
+cited with its actual date; its measurements are not assigned to new code.
+[Reproduction guide](docs/sparse_vus_reproduction_20261023.md) ·
+[Submission packet](docs/sparse_vus_submission_packet_20261023.md) ·
+[Prior-art audit](docs/active_prefix_novelty_audit_20261023.md).
+
+The whole-evaluator study passes its frozen five-control primary criterion on
+both CPU platforms. Across 308 series, primary-width median ratios against
+Klein fast-VUS are **20.925× (Mac)** and **14.538× (Linux)**; against matched
+nearest-distance dense radix PR they are **2.599×** and **4.791×**. These are
+complete three-model evaluation tasks, with imports, JIT and I/O excluded.
+The separate incremental active-prefix primary failures remain reported below.
+
+A separate **directly timed disk-to-JSON workflow** reads 308 stored NPZ files
+(379 MB), evaluates all 924 scores at `L=30`, selects the best-model sets, and
+writes the results. Across three repetitions per method, whole-operation
+medians are **3.187 s (sparse radix), 11.298 s (matched dense radix), and
+63.647 s (Klein)**: descriptive ratios of **3.545×** and **19.973×**. All nine
+passes return identical selected-model sets, with maximum pairwise PR
+difference `1.333e-15`. This uses warmed filesystem/JIT state on the active
+Mac desktop; detector inference and durable-storage latency are outside the
+operation. All nine times and the frozen order are in
+[the collection report](artifacts/collection-workflow/mac-20261023/report.json).
+
+The new `sparse_vus.tie_runs` module aggregates complete numerical score classes
+by contiguous temporal runs for **one original anomaly interval**. An integer
+stopping certificate bounds the number of visited classes by `3*P0`; bounded
+fragmentation gives `O(n+L)` time for a singleton even with large ties. Exact
+three-limb prefix subtraction avoids cancellation in sums of rounded roots.
+The theorem distinguishes exact metric arithmetic from the implemented local
+mass-error bound and measured scalar parity.
+
+All 131 prespecified run-study cases pass parity and work-count checks. A
+separate verifier checks 650 random metric cases, 36 complete integrals using
+80-digit Decimal arithmetic, and exact prefix/carry/borrow operations. At
+`L=2048`, the all-tied singleton examines 2,049 runs instead of 2,099,201
+active positions and is 8.816× faster than the position-prefix implementation.
+Alternating ties are a negative control, and real-score results do not support
+replacing active prefix broadly. Full timings and losses are retained in
+[the frozen report](artifacts/tie-runs/mac-20261023/report.json).
+
+The portable regeneration route also completed **68 cases and 1,360 timed
+calls per host** on Mac and a fresh Linux runner. Both pass parity and work
+checks; maximum discrepancy from radix is `2.23e-16`. This is procedural
+replication on previously studied data: all 48 generated Mac score vectors
+match historical bytes, but only 9 of 48 Linux vectors do. See the
+[Mac report](artifacts/tie-runs/mac-regenerated-20261023-retry1/report.json),
+[Linux report](artifacts/tie-runs/linux-39900063718/report.json), and
+[executed Linux workflow](https://github.com/mandu5/sparse-vus/actions/runs/39900063718).
+The 63 historical development cases are outside this portable subset.
+
+## Active-prefix research branch (21 October 2026)
+
+This branch adds an evaluator whose complete-call bound is
+`O(n + L + alpha(K) * sum(J_w))`, where `J_w` counts the visited active
+positions through a complete terminating score tie. For one original anomaly
+interval and distinct support scores it takes `O(n + L*P0)` time for any
+score ordering. A singleton with `L <= n` has optimal `Theta(n)` worst-case
+time under the stated deterministic score-query and fixed-binary64 model.
+
+[Focused manuscript (PDF)](paper/active_prefix.pdf) ·
+[Reproduce and inspect the evidence](docs/active_prefix_reproduction_20261021.md) ·
+[Mathematical review](docs/saturation_math_review_20261021.md)
+
+The three frozen main studies retain **all 666 cases**. Their width-30
+primary runtime criterion **fails on each run**. At the prespecified width-300
+stress condition, the external median speedups over released sparse radix
+are **1.506× on Mac and 1.627× on Linux**, with all 48 cases faster per host.
+Other matched controls still win some cases. The 16-case structural study
+checks the predicted linear/quadratic traversal separation and the all-tied
+counterexample. The paper reports the complete comparisons and limitations.
+
+```python
+# Install this research branch with .[accelerate], rather than the older tag.
+from sparse_vus.saturation import sparse_pr_saturation_jit, sparse_vus_saturation_jit
+
+labels = [0, 1, 0, 0, 1, 0]
+scores = [1, 2, 3, 4, 5, 6]
+pr = sparse_pr_saturation_jit(labels, scores, max_buffer=4)
+roc, pr = sparse_vus_saturation_jit(labels, scores, max_buffer=4)
+```
+
+The manuscript is a research artifact; publication and editorial status are
+tracked separately from test, numerical-parity and timing results. The
+previous v0.3.0 release and its distinct experiments remain documented below.
+
+## Released support-event evaluator
+
 Exact scalar VUS-ROC and VUS-PR through support-event elimination. The new
 radix evaluator combines this reduction with established fixed-width score
 ordering and linear interval geometry. For finite binary64 scores it takes

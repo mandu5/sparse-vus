@@ -1,0 +1,158 @@
+\subsection{Complete-tie aggregation for one original interval}
+\label{sec:tie-run-method}
+This subsection describes a separate candidate evaluator. It does not alter
+the frozen position-by-position evaluator or its recorded measurements.
+Assume there is exactly one original interval $[a,b]$, with
+$P_0=b-a+1$. Its maximum support $S_L$ is a single interval. For each
+validated numerical score class $g$ in $S_L$, store its maximal contiguous
+spatial runs, and let $R_g$ be their number. These runs are defined in the
+maximum support, not separately at each width. A class becomes active when
+the width radius first reaches the minimum distance of one of its positions
+from $[a,b]$. Classes, rather than individual positions, can therefore use
+the same reverse-deletion insertion schedule, in descending score order.
+Global prediction counts still include every position in a complete global
+tie, including positions outside $S_L$.
+
+\begin{lemma}[A ramp run is one square-root range sum]
+Let $w\ge2$, and let a nonempty run fragment on one side of $[a,b]$
+have active distances $1\le d_-\le d_+\le\lfloor w/2\rfloor$.
+Writing $U(t)=\sum_{j=1}^{t}\sqrt j$, with $U(0)=0$, its buffer mass is
+\[
+ \sum_{d=d_-}^{d_+}\sqrt{1-d/w}
+ =\frac{U(w-d_-)-U(w-d_+-1)}{\sqrt w}.
+\]
+Every stored run has at most two such fragments and one original fragment.
+Thus its exact mass and admitted-position counts require constant work
+given exact range sums. At widths zero and one, only the original fragment
+contributes.
+\end{lemma}
+\begin{proof}
+The distance to a single interval changes by one at consecutive positions
+on either side. The identity follows from
+$\sqrt{1-d/w}=\sqrt{w-d}/\sqrt w$ and reversing the summation order.
+Intersections with the left ramp, original interval, and right ramp
+are interval intersections and require constant work.
+\end{proof}
+
+\begin{lemma}[Integer saturation certificate]
+\label{lem:integer-saturation}
+At the end of a complete active score class, let $A$ count admitted original
+positions and let $D$ count admitted non-original active positions. The test
+\[
+ \left\lfloor D/3\right\rfloor\ge P_0-A
+ \label{eq:integer-saturation}
+\]
+certifies true mass-and-coverage saturation. It uses only integer counts,
+and the test $D\mathbin{//}3\ge P_0-A$ avoids multiplication overflow.
+It may stop later than the real-valued mass test. Nevertheless, the
+number of complete active score classes visited at any width is at most
+$3P_0$, without any tie-size assumption.
+\end{lemma}
+\begin{proof}
+Every active non-original weight is at least $1/\sqrt2>2/3$, hence
+$B/2\ge D/(2\sqrt2)\ge D/3$. The certificate implies
+$A+B/2\ge P_0$. There is one expanded component, hit by the first active
+class. If $q=A+D\ge3P_0$ positions have been admitted, then
+$D=q-A\ge3P_0-3A$, so the certificate holds. If fewer than $3P_0$
+active positions exist, admitting them all gives $A=P_0$ and also
+certifies saturation. Each visited active class contains at least one
+new position. Consequently, after at most $3P_0$ complete classes the
+certificate holds, regardless of the cardinality of those classes.
+\end{proof}
+
+Let $\mathcal G_w$ be the classes visited through the first complete
+class satisfying the integer certificate. The bound below charges all
+$R_g$ maximum-support runs of each visited class, including those inactive
+at that particular width.
+
+\begin{theorem}[Tie-run work bound]
+\label{thm:tie-run-bound}
+Under the fixed-key and unit-cost exact metric-arithmetic model, the ideal
+run-aggregated evaluator computes both scalar integrals in
+\[
+ O\!\left(n+L+\sum_{w=0}^{L}\sum_{g\in\mathcal G_w}R_g\right)
+\]
+time and $O(n+L)$ auxiliary words. For
+$R_{\max}=\max_g R_g$, its time is
+$O(n+L+(L+1)P_0R_{\max})$.
+For a singleton original and bounded $R_{\max}$, it is $O(n+L)$ even
+with arbitrary active tie cardinalities. If all support scores are tied,
+it is $O(n+L)$ for every one-interval length $P_0$.
+\end{theorem}
+\begin{proof}
+Radix ranking, global tie counts, temporal run extraction, class activation
+distances, and the offline class insertion schedule take $O(n)$ time and
+space. Each class is inserted once. The $L+1$ square-root prefixes take
+$O(L)$ time and space in exact metric arithmetic. A visited class costs
+$O(R_g)$ to compute its mass and counts. The one-component existence factor
+requires constant work. After the complete class, the standard
+negative-run rectangle, event trapezoid, and right-step PR formulas use
+these exact event aggregates. Lemma~\ref{lem:integer-saturation} makes the
+omitted suffix valid by permanent saturation. Summing gives the first
+bound; $|\mathcal G_w|\le3P_0$ gives the second. For an all-tied support,
+there is one class containing one run, visited once per width.
+\end{proof}
+
+The hypothesis is on score-class fragmentation, not the number of distinct
+scores. An alternating high/low score pattern can give $R_g=\Theta(n)$,
+so this theorem is not a universal linear-time result for arbitrary ties.
+The extra $O(L)$ prefix storage is present even without diagnostics. It
+differs from the frozen evaluator's $O(n+Q)$ auxiliary-space bound.
+
+\paragraph{A cancellation-free finite-precision range-sum implementation.}
+Fixed-point superaccumulators are established summation techniques~\cite{neal2015}.
+Subtracting two ordinary floating-point square-root prefixes can lose
+relative accuracy on short ranges. Instead, let $q_j$ be the binary64
+evaluation of $\sqrt j$ and accumulate the integers $2^{52}q_j$ exactly.
+For $1\le j\le L\le2^{63}-1$, $1\le q_j<2^{32}$, and every
+$2^{52}q_j$ is an integer below $2^{84}$. Every prefix is therefore below
+$2^{147}$ and fits in three unsigned 64-bit limbs. Carry and borrow
+operations give exact integer prefixes and exact range subtraction in a
+constant number of word operations. If a nonnegative range difference
+has limbs $(h,m,\ell)$, high to low, convert it by
+\[
+ \operatorname{fl}\!\left(
+   2^{76}\operatorname{fl}(h)
+   +2^{12}\operatorname{fl}(m)
+   +2^{-52}\operatorname{fl}(\ell)\right),
+\]
+then divide by the evaluated $\sqrt w$. All additions are nonnegative;
+there is no subtraction of rounded large prefixes. This preserves the
+stated operation and storage bounds, up to a constant of three words per
+prefix. It exactly sums the \emph{rounded} square-root table, not symbolic
+square roots.
+
+\begin{proposition}[Local range-mass error]
+Assume binary64 round-to-nearest operations, the usual relative error
+bound for integer conversion and square root, no reassociation, and exact
+limb arithmetic. Put $u=2^{-53}$ and $\gamma_k=ku/(1-ku)$.
+The preceding implementation's nonempty ramp-fragment mass $\widehat B$
+satisfies
+\[
+ \left|\widehat B/B-1\right|\le\gamma_8.
+\]
+If every table index and width is at most $2^{53}$, $\gamma_6$ suffices.
+These bounds do not grow with the prefix index or the fragment length.
+Summing $t$ nonempty fragment masses using ordinary positive additions
+gives a relative bound $\gamma_{t+7}$, provided $(t+7)u<1$.
+\end{proposition}
+\begin{proof}
+Integer conversion followed by square root places each $q_j/\sqrt j$
+between $(1-u)^2$ and $(1+u)^2$. Exact nonnegative summation preserves
+these bounds. Conversion of each limb and two nonnegative additions add
+at most three rounding factors; power-of-two scaling is exact and in
+range. Division adds one factor, and the evaluated denominator contributes
+at most two factors. Thus the final ratio lies between
+$(1-u)^6/(1+u)^2$ and $(1+u)^6/(1-u)^2$, contained in
+$[1-\gamma_8,1+\gamma_8]$. Exact integer conversion removes one factor
+from both numerator and denominator, yielding $\gamma_6$. The standard
+positive-sum product bound combines $\gamma_8$ with $\gamma_{t-1}$ to
+give $\gamma_{t+7}$.
+\end{proof}
+
+This is a local mass-error bound. It is not an end-to-end error certificate
+for the integrated scalar metrics, nor a claim of bitwise agreement with
+the frozen $\sqrt{1-d/w}$ evaluation. The integer stopping certificate
+is independent of these mass-rounding errors, but metric arithmetic and
+summation still use finite precision. The work bound does not imply runtime
+dominance; the experiments examine both compressible and fragmented ties.

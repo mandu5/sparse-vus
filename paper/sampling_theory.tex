@@ -1,0 +1,266 @@
+\section{Sampling can inflate the dynamic PR integral}
+\label{sec:sampling-inflation}
+Fix the original dynamic VUS-PR contract for $n$ binary labels with both
+classes present, $0<P_0<n$, finite scores, and a nonnegative integer
+maximum width $L$. The implementation evaluates the scores after its
+documented binary64 conversion. At width $w$, original positives
+have unit weight and each interval adds a square-root ramp
+$\sqrt{1-d/w}$ at distances $1\leq d\leq\lfloor w/2\rfloor$;
+overlapping contributions are summed and clipped at one. At a complete
+score threshold, let $C$ be the predicted count, $A$ the admitted original
+positive count, $B$ the admitted buffer mass, $P_0$ the total original
+positive count, and $h/K_w$ the fraction of expanded components hit.
+Overlapping expanded intervals merge, whereas adjacent nonoverlapping
+intervals remain distinct. The coordinates are
+\[
+ T=A+B,\qquad P=P_0+B/2,\qquad
+ R=\min(T/P,1)h/K_w,\qquad \pi=T/C.
+\]
+The exhaustive PR area is $\sum_j(R_j-R_{j-1})\pi_j$, beginning at
+$R_0=0$ and admitting each distinct global score tie completely. VUS-PR
+averages this area over every integer width $0,\ldots,L$.
+
+The sampled implementation retains descending zero-based ranks
+\texttt{linspace(0,n-1,H).astype(int)}, with $H=250$ by default
+in both the official VUS optimized API~\citep{officialvuscode} and
+the pinned fast-VUS source~\citep{klein2026}. It uses the same PR
+integral on those retained states. Sampling error is different from a
+change of metric semantics or an implementation defect: the upstream
+routine correctly computes its configured sampled target.
+
+The important feature is that precision can increase \emph{after} recall
+has already reached one. Additional buffer mass then contributes zero
+exhaustive area, but a coarse threshold can incorrectly assign that later
+precision to a recall jump which occurred earlier. Binary average
+precision cannot add positive mass after every original positive has
+already been admitted. The following construction isolates the additional
+soft-label mechanism.
+
+\begin{proposition}[A parameterized sampling family]
+\label{prop:overshoot-family}
+Let $H\geq2$, $1\leq m<q$, $n=1+(H-1)q$, and
+$\lfloor L/2\rfloor<n-m$. Put a single original positive at temporal
+position zero. Assign distinct descending scores first to the last $m$
+positions, then to position zero, and then to positions
+$1,\ldots,n-m-1$ in temporal order. The exhaustive VUS-PR equals
+$E=1/(m+1)$, whereas its $H$-threshold sampled value is
+\begin{equation}
+ S=\frac{1+(L+1)^{-1}\sum_{w=0}^L B_w}{q+1},\qquad
+ B_w=\sum_{d=1}^{\min(q-m,\lfloor w/2\rfloor)}\sqrt{1-d/w},
+ \label{eq:overshoot-value}
+\end{equation}
+where the empty sum at $w=0$ is zero. The sign of $S-E$ depends on the
+parameters; the overestimation regimes below are separate conclusions.
+\end{proposition}
+\begin{proof}
+The first $m$ positions are outside every evaluated support. At actual
+rank $m+1$, admitting the sole original positive makes both coverage and
+clipped recall one. The entire exhaustive recall increase therefore has
+precision $1/(m+1)$, independently of width. Later recall increments vanish.
+The retained one-based ranks are exactly $1,1+q,\ldots,n$. Recall at the
+first is zero; recall at the second is one, and the second includes the
+original plus the nearest $q-m$ positions. Its precision is
+$(1+B_w)/(q+1)$, proving the formula after averaging widths.
+\end{proof}
+
+\begin{corollary}[Large finite overestimation]
+\label{cor:large-overshoot}
+For $H=250$ there is a finite member of
+Proposition~\ref{prop:overshoot-family} with $S-E>0.98$.
+\end{corollary}
+\begin{proof}
+For $L\geq2q$, retain only widths $2q,\ldots,L$ and use
+$\sqrt{1-x}\geq1-x$ to obtain
+\[
+ S\geq\frac{(L-2q+1)(q-m+1)
+       -\frac{(q-m)(q-m+1)}2\sum_{w=2q}^Lw^{-1}}
+       {(L+1)(q+1)}.
+\]
+Take $q=2{,}000{,}000$, $m=1000$, $n=498{,}000{,}001$ and
+$L=498{,}000{,}000$. The harmonic tail is less than
+$\log(L/(2q-1))<5$; the latter inequality follows, for example, from
+the degree-seven positive Taylor lower bound for $\exp(5)$.
+Thus $S>977516488501501/996000500000001$. Exact rational subtraction
+of $E=1/1001$ exceeds $98/100$.
+\end{proof}
+This finite statement was verified symbolically, without allocating the
+large input or executing an evaluator on it. Its maximum width is $n-1$;
+it is not a claim about a typical small tolerance width. More generally,
+with fixed $H>3$, $L=(H-1)q$, $m\to\infty$ and $m/q\to0$,
+\[
+ \liminf S\geq1-\frac2{H-1}
+                   -\frac{\log((H-1)/2)}{2(H-1)},\qquad E\to0.
+\]
+This asymptotic family is a real-arithmetic statement, rather than an
+unbounded supply of distinct binary64 scores.
+
+\paragraph{Large selection regret at ordinary fixed widths.}
+For a second score vector on the same labels, place a nearby buffer
+position $d$ first and the original second. Fill the remaining $q-1$
+positions through rank $q+1$ with far outside-support negatives; rank
+everything else later. Sufficient feasibility conditions are
+$n-q+1>\lfloor L/2\rfloor$ and $1\leq d<n-q+1$.
+At $w<2d$ the exhaustive and sampled areas are respectively
+$1/2$ and $1/(q+1)$. Otherwise, writing
+$a=\sqrt{1-d/w}$ and $r=a/(1+a/2)$ gives
+\[
+ E_B(w)=ra+(1-r)(1+a)/2,\quad
+ S_B(w)=ra+(1-r)(1+a)/(q+1).
+\]
+Table~\ref{tab:constructed-reversal} reports complete width averages.
+All scores are distinct finite integers. Closed forms, independent dense
+evaluation, compiled exhaustive evaluation, and unchanged pinned upstream
+calls at $H=250$ and $H=n$ agree numerically. These are exploratory
+constructed witnesses of possibility, not estimates of prevalence.
+
+\begin{table}[t]
+\caption{Same-label reversals with $H=250$. Sampling selects A; exhaustive
+evaluation selects B. Regret is $E_B-E_A$, measured in exhaustive VUS-PR
+units and not in an operational detection utility.}
+\label{tab:constructed-reversal}
+
+\centering\small
+\begin{tabular}{rrrrrrrr}
+\toprule
+$L$ & $n$ & $(q,m,d)$ & $E_A$ & $S_A$ & $E_B$ & $S_B$ & regret\\
+\midrule
+30 & 2491 & $(10,3,5)$ & .250000 & .506412 & .757142 & .418181 & .507142\\
+100 & 4981 & $(20,4,5)$ & .200000 & .624743 & .900580 & .569008 & .700580\\
+300 & 9961 & $(40,6,1)$ & .142857 & .706289 & .989249 & .668767 & .846392\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\section{Sound bounds from retained threshold states}
+\label{sec:threshold-certificate}
+An approximation can be accompanied by a checkable interval instead of
+being treated as an exact scalar. The general idea of bounding numerical
+quadrature is established; our result supplies a bound for this dynamic,
+clipped-recall, soft-label target without assuming monotone precision.
+
+\begin{theorem}[Mass-envelope PR enclosure]
+\label{thm:threshold-enclosure}
+At one width, consider two consecutive retained complete-threshold states
+$(c_a,t_a,r_a)$ and $(c_b,t_b,r_b)$, including an initial zero state and
+discarding repeated states. Put $\delta=t_b-t_a$ and
+\[
+ \ell=\frac{t_a}{c_b-\delta},\qquad
+ u=\frac{t_b}{c_a+\delta}.
+\]
+If $c_b-\delta=0$, set $\ell=1$; a zero-mass block contributes zero.
+The exhaustive PR area inside this block is between
+\begin{equation}
+ \int_{r_a}^{r_b}\max(\ell,P_0r/c_b)\,dr
+ \quad\text{and}\quad (r_b-r_a)u.
+ \label{eq:block-bounds}
+\end{equation}
+Summing these bounds over blocks and averaging widths encloses exhaustive
+VUS-PR. In particular, disjoint model intervals certify their exact order.
+\end{theorem}
+\begin{proof}
+Every temporal weight lies in $[0,1]$. At an intermediate predicted count
+$c$, its true mass $t$ satisfies
+\[
+ \max(t_a,t_b-c_b+c)\leq t\leq\min(t_b,t_a+c-c_a).
+\]
+Dividing by $c$ and optimizing the two continuous piecewise envelopes
+gives $\ell\leq t/c\leq u$. Optimizing over continuous counts is safe
+for integer counts and complete ties because it enlarges the feasible
+set. If the lower denominator vanishes, all admitted weights are one.
+
+Recall is nondecreasing along descending scores: $(A+B)/(P_0+B/2)$
+increases in $A$ and $B$, with derivative in $B$ proportional to
+$P_0-A/2>0$. Clipping and multiplication by nonnegative, nondecreasing
+coverage preserve this property. Thus all recall increments are nonnegative.
+Also $T\geq P_0R$, and $C\leq c_b$, so contributing precision is at
+least $P_0R/c_b$. The exact right-step sum dominates the integral of the
+nondecreasing lower envelope; its upper bound follows by summing recall
+increments times $u$.
+\end{proof}
+
+The bound is elementary and can be loose. Refining a retained grid
+monotonically tightens the real-arithmetic enclosure: $c-t$ is
+nondecreasing, so each subblock has a lower mass envelope at least as
+large, an upper envelope no larger, and a no-smaller linear lower envelope.
+If consecutive global distinct-score ordinals establish that no valid
+threshold was omitted, use the observed exact right-step term instead.
+A complete tie can admit many positions without containing any valid
+intermediate threshold.
+
+\paragraph{An information limit.}
+Endpoint-only bounds cannot always be narrow. Fix $H\geq3$ and $L$;
+choose one original interval of $m$ points and a sampling gap $q\gg m+L$.
+Two score orders can put those originals immediately after the first
+off-support negative, or at the end of the same gap, while giving identical
+$(C,A,B,h)$ at every retained threshold and every width. Their exhaustive
+areas are obtained by placing the entire maximum-width halo in a common
+tail after that gap and filling the remaining gap with off-support points.
+Recall saturates before the common halo enters. The exhaustive
+areas are respectively
+\[
+ \frac1m\sum_{j=1}^m\frac{j}{j+1},\qquad
+ \frac1m\sum_{j=1}^m\frac{j}{q+1-m+j}.
+\]
+The first tends to one and the second to zero as $m\to\infty$ and
+$q/m\to\infty$. A bound valid for every score ordering consistent with
+that retained transcript must include both. This is an ordinary ranking
+information-loss argument; it does not lower-bound methods that inspect
+omitted support scores or adapt their thresholds.
+
+\section{Integer-directed realization}
+\label{sec:integer-certificate}
+Theorem~\ref{thm:threshold-enclosure} concerns real arithmetic. Adding a
+floating-point tolerance to a numerical check would not implement that
+guarantee. We instead construct dyadic enclosures using integer square
+roots and directed integer division.
+
+Let $D=2^{32}$ be the weight scale. For a single ramp at distance $d$,
+set $z=(w-d)D^2$ and $q=\operatorname{isqrt}(\lfloor z/w\rfloor)$.
+Then $q/D\leq\sqrt{1-d/w}\leq(q+1)/D$, with exact upper numerator
+$q$ when $q^2w=z$. Original positives and points covered by two ramps have
+exact numerator $D$; inactive points have zero. Since every active ramp
+is at least $1/\sqrt2$, two ramps indeed clip to one. For $n<2^{31}$,
+all compiled signed-64-bit cumulative buffer sums are below $2^{63}$.
+Nonlinear calculations and final sums use arbitrary-precision Python
+integers; public NumPy integer parameters are normalized before them.
+
+For an endpoint with exact original count $A$, buffer brackets
+$[B_-,B_+]/D$, and exact hit count $h$, use
+\[
+ f(B)=\frac{h\min\{2(AD+B),\,2P_0D+B\}}
+              {K_w(2P_0D+B)}.
+\]
+Monotonicity gives $f(B_-)\leq R\leq f(B_+)$. With output scale
+$S=2^{56}$, floor the lower product $Sf(B_-)$ and ceil the upper
+product $Sf(B_+)$. Both endpoint precision envelopes can be rewritten
+as functions nondecreasing in each total-mass argument:
+\[
+ \ell(t_a,t_b)=\frac{t_a}{c_b-t_b+t_a},\qquad
+ u(t_a,t_b)=\frac{t_b}{c_a-t_a+t_b}.
+\]
+Substitute both lower mass endpoints into $\ell$ and both upper
+endpoints into $u$. Combine these rational precision bounds with directed
+recall differences. When $R_a^+<R_b^-$, the linear lower refinement is
+integrated analytically over $[R_a^+,R_b^-]$, a subset of the actual recall
+interval; otherwise that refinement contributes zero. Floor each
+lower block numerator, ceil each upper numerator, then apply the same
+directions after width averaging. No irrational or floating-point
+operation enters this chain of bounds.
+
+The returned certificate retains integer endpoints and scale. Strict
+ordering compares integer cross-products, while float displays are
+rounded outward and are not used for the decision. The certified target
+is ideal real-arithmetic VUS-PR, not a promise to contain the exact bit
+pattern of every floating-point summation implementation. An application
+requiring nested refinement intervals must intersect independently rounded
+bounds. This implementation is not an adaptive refinement policy.
+
+An independent standard-library calculation checked 14,400 enclosures
+against exact rational evaluations at deliberately coarse weight/output
+precisions of three/twelve bits, and 12,500 root brackets by squared-integer
+inequalities. The production implementation is additionally checked against
+an independent 90-digit direct-ramp oracle, complete ties, boundary and
+overlapping intervals, saturated recall, and signed/unsigned NumPy integer
+parameters. These checks exercise the implementation; the universal
+guarantee follows from the inequalities and accumulator bounds above.

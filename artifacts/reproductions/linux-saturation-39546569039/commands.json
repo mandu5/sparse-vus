@@ -1,0 +1,70 @@
+[
+  {
+    "stage": "fetch-fast-vus",
+    "argv": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "experiments/fast_vus_adapter.py",
+      "--fetch"
+    ],
+    "started_utc": "2026-10-21T04:54:50.776002+00:00",
+    "returncode": 0,
+    "ended_utc": "2026-10-21T04:54:51.131653+00:00",
+    "seconds": 0.35552182799999343
+  },
+  {
+    "stage": "freeze-linux-input-selection",
+    "argv": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "experiments/fetch_saturation_external.py",
+      "--freeze"
+    ],
+    "started_utc": "2026-10-21T04:54:51.132528+00:00",
+    "returncode": 0,
+    "ended_utc": "2026-10-21T04:54:53.822478+00:00",
+    "seconds": 2.689693113000004
+  },
+  {
+    "stage": "generate-linux-inputs",
+    "argv": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "experiments/fetch_saturation_external.py",
+      "--generate"
+    ],
+    "started_utc": "2026-10-21T04:54:53.823871+00:00",
+    "returncode": 0,
+    "ended_utc": "2026-10-21T04:55:10.345024+00:00",
+    "seconds": 16.52077307400002
+  },
+  {
+    "stage": "freeze-external-protocol",
+    "argv": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "experiments/benchmark_saturation.py",
+      "freeze",
+      "/home/runner/work/sparse-vus/sparse-vus/artifacts/reproductions/linux-saturation-39546569039/benchmark",
+      "--phase",
+      "external"
+    ],
+    "started_utc": "2026-10-21T04:55:10.349868+00:00",
+    "returncode": 0,
+    "ended_utc": "2026-10-21T04:55:10.966253+00:00",
+    "seconds": 0.6160710419999873
+  },
+  {
+    "stage": "run-external-protocol",
+    "argv": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "experiments/benchmark_saturation.py",
+      "run",
+      "/home/runner/work/sparse-vus/sparse-vus/artifacts/reproductions/linux-saturation-39546569039/benchmark",
+      "--protocol-sha256",
+      "cd61a475cf8dcd0400e4bf6658afaf6880edadab73f9fd14581f9102228630e3",
+      "--phase",
+      "external"
+    ],
+    "started_utc": "2026-10-21T04:55:10.967413+00:00",
+    "returncode": 0,
+    "ended_utc": "2026-10-21T04:58:57.313066+00:00",
+    "seconds": 226.34536235199997
+  }
+]

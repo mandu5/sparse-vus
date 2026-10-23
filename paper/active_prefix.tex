@@ -1,0 +1,51 @@
+% Focused research manuscript. No submission or editorial decision is implied.
+% Uses the unchanged official PVLDB template pinned by build_vldb.py.
+\documentclass[sigconf,nonacm]{acmart}
+%%% VLDB block start %%%
+\usepackage{pvldb}
+%%% VLDB block end %%%
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{https://github.com/mandu5/sparse-vus/tree/research/saturation-20261021}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\TPR}{\mathrm{TPR}}
+\newcommand{\FPR}{\mathrm{FPR}}
+\emergencystretch=2em
+\begin{document}
+\title{Active-Prefix Evaluation of Dynamic VUS}
+\subtitle{Research manuscript}
+\author{Youngmin Ko}
+\email{rhdudals0505@naver.com}
+\affiliation{\institution{Independent Researcher}\country{Republic of Korea}}
+\begin{abstract}
+Volume Under the Surface (VUS) evaluates time-series anomaly scores over
+thresholds and tolerance widths. Existing support sweeps can still inspect
+every maximum-support position at every width, even after the integral can
+no longer change. We give an instance-sensitive evaluator for the original
+dynamic-denominator, sum-and-clip VUS definition. A complete score threshold
+permanently saturates recall when admitted original positives plus half the
+admitted buffer mass reach the original positive count and every expanded
+component has been hit. Its remaining PR contribution vanishes; its ROC
+suffix telescopes analytically. Combining this condition with reversible
+support activation and incremental component unions eliminates width-wise
+full-support preparation. Under fixed-binary64 ranking and unit-cost metric
+arithmetic, the full call takes
+$O(n+L+\alpha(K)\sum_{w=0}^{L}J_w)$ time and $O(n+Q)$ auxiliary words,
+where $J_w$ includes the complete terminating active score tie.
+\input{active_prefix_abstract_results.tex}
+Exactness refers to the mathematical all-threshold, all-width target;
+floating-point parity and runtime are evaluated separately.
+\end{abstract}
+\maketitle
+%%% VLDB block start %%%
+\vldbtopmatter
+%%% VLDB block end %%%
+\input{active_prefix_body.tex}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{active_prefix_references}
+\end{document}

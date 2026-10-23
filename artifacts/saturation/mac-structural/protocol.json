@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-21T05:11:05.053719+00:00",
+  "cases": 16,
+  "families": [
+    "singleton_original_last",
+    "two_positive_separation",
+    "interval8_original_last",
+    "tied_singleton"
+  ],
+  "widths": [
+    32,
+    128,
+    512,
+    2048
+  ],
+  "repetitions": 3,
+  "seed": 2026102127,
+  "parity_atol": 1e-11,
+  "method_ids": [
+    "saturation",
+    "last_positive",
+    "active_full",
+    "radix"
+  ],
+  "inputs_sha256": "de94a3046d41ff0a91d47350f230c99267c92654a2358d2bbb3ef4a3394f6418",
+  "source_sha256": {
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "experiments/benchmark_saturation_structural.py": "55d97b5c0973ce3281bf560b6f94ad5d6d31f88676e9cd17657255aa95159873",
+    "docs/saturation_structural_protocol_20261021.md": "e133f07fbb013ecc5e8544d62f1977f40986c381e839032c8bd1f0c46c59daf9"
+  },
+  "source_commit": "595fb3bce1f7fa94de07c79d992166227c2aae0d",
+  "hypotheses": {
+    "singleton_original_last": "Every J_w<=min(Q_w,3); sum J<=3(L+1).",
+    "two_positive_separation": "J_0=J_1=2, J_w=4 for w>=2; sum J=4L. Last-positive visits Q_w=2+4 floor(w/2), whose sum is quadratic in L.",
+    "interval8_original_last": "Every J_w<=min(Q_w,ceil(16 sqrt(2)))=min(Q_w,23).",
+    "tied_singleton": "All three active-list modes visit Q_w=1+2 floor(w/2); no early-stop work reduction."
+  },
+  "timing": "Complete public scalar PR calls including validation and preparation; one untimed per-case call per method, then three seeded randomized serial repetitions. Profile and I/O work excluded. One compute thread.",
+  "decision": "Require complete coverage, structural assertions, and parity <=1e-11. No runtime success threshold; preserve all wins and losses.",
+  "scope": "Constructed theorem witnesses and a negative control, not unseen-domain confirmation, an empirical population sample, or a firstness/SOTA claim."
+}

@@ -1,0 +1,499 @@
+{
+  "status": "PRIMARY_L30_COMPLETE_AND_INDEPENDENTLY_VALIDATED",
+  "scope": "All128 frozen series and all12 original score configurations; H250 is primary. Sensitivity widths and timings are separate pending phases.",
+  "protocol_sha256": "c778699fe9393ba4f5a6bb9e54362bb9327bcdc1efb3aca4b2cad6deb3cdc2cb",
+  "source_manifest_sha256": "dae17c7e3e370c5d4d1206762ab201435f1c693d1ececf80f506972b72b0e96d",
+  "validated_report": "artifacts/msad-sampling-20261023/report-078716c3561caad8.json",
+  "validated_report_sha256": "91cba796ccd1aa258e32485f14a9d37f268f5479a53865c6360418cf88643c80",
+  "primary_record_subset_count": 13008,
+  "primary_record_subset_sha256": "596e88d115cf8e7bd8d3733ee9c490b0576241297eab5378fc174b786aad1625",
+  "subset_hash_definition": "SHA256 of UTF8 json.dumps(sorted(all numerical/validation records at width30,key=key),sort_keys=True,separators=(comma,colon))",
+  "input_manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "metrics": {
+    "series": 128,
+    "practical_regret_fraction": 0.0625,
+    "worst_case_practical_regret_fraction": 0.0625,
+    "winner_set_change_fraction": 0.078125,
+    "unique_winner_change_fraction": 0.0703125,
+    "top3_change_fraction": 0.1328125,
+    "mean_best_regret": 0.007931819733804435,
+    "maximum_best_regret": 0.39857503023809177,
+    "mean_absolute_error": 0.009285764061915638,
+    "maximum_absolute_error": 0.5601231694325864,
+    "pair_reversals": 106,
+    "large_pair_reversals": 22
+  },
+  "equal_family": {
+    "practical_regret_fraction": 0.05277777777777778,
+    "mean_best_regret": 0.006541013797147984,
+    "mean_absolute_error": 0.007527840725472941,
+    "winner_set_change_fraction": 0.06597222222222222,
+    "unique_winner_change_fraction": 0.059027777777777776
+  },
+  "per_family": {
+    "Daphnet": {
+      "series": 7,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.14285714285714285,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.00046051537095408894,
+      "maximum_absolute_error": 0.011626728261759284,
+      "pair_reversals": 3,
+      "large_pair_reversals": 0
+    },
+    "Dodgers": {
+      "series": 1,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.0,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.0006522521749547915,
+      "maximum_absolute_error": 0.002307236430066195,
+      "pair_reversals": 0,
+      "large_pair_reversals": 0
+    },
+    "ECG": {
+      "series": 11,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.18181818181818182,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.00272623746326162,
+      "maximum_absolute_error": 0.036024455182176715,
+      "pair_reversals": 8,
+      "large_pair_reversals": 1
+    },
+    "GHL": {
+      "series": 10,
+      "practical_regret_fraction": 0.1,
+      "worst_case_practical_regret_fraction": 0.1,
+      "winner_set_change_fraction": 0.2,
+      "unique_winner_change_fraction": 0.2,
+      "top3_change_fraction": 0.4,
+      "mean_best_regret": 0.0027655392750277753,
+      "maximum_best_regret": 0.02722035169702184,
+      "mean_absolute_error": 0.0032917260568861655,
+      "maximum_absolute_error": 0.20544821444174946,
+      "pair_reversals": 17,
+      "large_pair_reversals": 1
+    },
+    "Genesis": {
+      "series": 1,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.0,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 6.679451417631352e-06,
+      "maximum_absolute_error": 7.379194590000776e-05,
+      "pair_reversals": 0,
+      "large_pair_reversals": 0
+    },
+    "IOPS": {
+      "series": 11,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.36363636363636365,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.012932938899866712,
+      "maximum_absolute_error": 0.17885915634884378,
+      "pair_reversals": 16,
+      "large_pair_reversals": 7
+    },
+    "KDD21": {
+      "series": 10,
+      "practical_regret_fraction": 0.2,
+      "worst_case_practical_regret_fraction": 0.2,
+      "winner_set_change_fraction": 0.2,
+      "unique_winner_change_fraction": 0.2,
+      "top3_change_fraction": 0.1,
+      "mean_best_regret": 0.045428988146384006,
+      "maximum_best_regret": 0.39857503023809177,
+      "mean_absolute_error": 0.022446286234020264,
+      "maximum_absolute_error": 0.44458388435529433,
+      "pair_reversals": 22,
+      "large_pair_reversals": 3
+    },
+    "MGAB": {
+      "series": 10,
+      "practical_regret_fraction": 0.1,
+      "worst_case_practical_regret_fraction": 0.1,
+      "winner_set_change_fraction": 0.1,
+      "unique_winner_change_fraction": 0.1,
+      "top3_change_fraction": 0.1,
+      "mean_best_regret": 0.02517241171624629,
+      "maximum_best_regret": 0.2517241171624629,
+      "mean_absolute_error": 0.0520695808159732,
+      "maximum_absolute_error": 0.5601231694325864,
+      "pair_reversals": 11,
+      "large_pair_reversals": 1
+    },
+    "MITDB": {
+      "series": 8,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.0,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.001161399389286443,
+      "maximum_absolute_error": 0.029832988600938012,
+      "pair_reversals": 0,
+      "large_pair_reversals": 0
+    },
+    "NAB": {
+      "series": 9,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.1111111111111111,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.001745884882041618,
+      "maximum_absolute_error": 0.02828771319393847,
+      "pair_reversals": 8,
+      "large_pair_reversals": 0
+    },
+    "OPPORTUNITY": {
+      "series": 10,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.1,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.0013355603947611126,
+      "maximum_absolute_error": 0.02023287605520807,
+      "pair_reversals": 1,
+      "large_pair_reversals": 0
+    },
+    "Occupancy": {
+      "series": 2,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.0,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.0001239288447771695,
+      "maximum_absolute_error": 0.0008590157513302943,
+      "pair_reversals": 0,
+      "large_pair_reversals": 0
+    },
+    "SMD": {
+      "series": 9,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.1111111111111111,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.002727615944930823,
+      "maximum_absolute_error": 0.028733401174302037,
+      "pair_reversals": 5,
+      "large_pair_reversals": 1
+    },
+    "SVDB": {
+      "series": 10,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.0,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.002029960141838789,
+      "maximum_absolute_error": 0.02435826812239965,
+      "pair_reversals": 2,
+      "large_pair_reversals": 0
+    },
+    "SensorScope": {
+      "series": 10,
+      "practical_regret_fraction": 0.0,
+      "worst_case_practical_regret_fraction": 0.0,
+      "winner_set_change_fraction": 0.0,
+      "unique_winner_change_fraction": 0.0,
+      "top3_change_fraction": 0.0,
+      "mean_best_regret": 0.0,
+      "maximum_best_regret": 0.0,
+      "mean_absolute_error": 0.000298654142976077,
+      "maximum_absolute_error": 0.001392630928794436,
+      "pair_reversals": 0,
+      "large_pair_reversals": 0
+    },
+    "YAHOO": {
+      "series": 9,
+      "practical_regret_fraction": 0.4444444444444444,
+      "worst_case_practical_regret_fraction": 0.4444444444444444,
+      "winner_set_change_fraction": 0.5555555555555556,
+      "unique_winner_change_fraction": 0.4444444444444444,
+      "top3_change_fraction": 0.1111111111111111,
+      "mean_best_regret": 0.031289281616709665,
+      "maximum_best_regret": 0.23620847848121473,
+      "mean_absolute_error": 0.016436231399620558,
+      "maximum_absolute_error": 0.35714285714285754,
+      "pair_reversals": 13,
+      "large_pair_reversals": 8
+    }
+  },
+  "families_with_regret_at_least_0_01": 4,
+  "family_bootstrap": {
+    "unit": "source_family",
+    "families": 16,
+    "replicates": 2000,
+    "pooled_95_percentile": [
+      0.010860983981693365,
+      0.13196861814345978
+    ],
+    "equal_family_95_percentile": [
+      0.00625,
+      0.11458333333333333
+    ]
+  },
+  "predeclared_primary_effect_threshold_passed": true,
+  "independent_controls": {
+    "klein250": {
+      "comparisons": 1536,
+      "maximum_absolute_difference": 1.0547118733938987e-15
+    },
+    "dense_exact": {
+      "comparisons": 360,
+      "maximum_absolute_difference": 4.440892098500626e-15
+    },
+    "klein_exact": {
+      "comparisons": 360,
+      "maximum_absolute_difference": 3.3306690738754696e-16
+    }
+  },
+  "scalar_signed_error": {
+    "count": 1536,
+    "maximum_overestimation": 0.16169228120233792,
+    "maximum_underestimation": 0.5601231694325864,
+    "overestimations_ge_0_01": 15,
+    "underestimations_ge_0_01": 150,
+    "positive_over_1e_10": 501,
+    "negative_below_minus_1e_10": 829
+  },
+  "eight_harmful_cases": [
+    {
+      "series": "GHL/02_Lev_fault_Temp_corr_seed_17_vars_23.test.csv@13.out",
+      "family": "GHL",
+      "n": 200000,
+      "positive_points": 145,
+      "best_case_regret": 0.02722035169702184,
+      "worst_case_regret": 0.02722035169702184,
+      "models": {
+        "HBOS": {
+          "exact": 0.03229658145022477,
+          "sampled250": 0.03395554569728159,
+          "sampled_minus_exact": 0.0016589642470568183,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "OCSVM": {
+          "exact": 0.05951693314724661,
+          "sampled250": 0.02323712752974554,
+          "sampled_minus_exact": -0.036279805617501076,
+          "exact_winner": true,
+          "sampled_winner": false
+        }
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "n": 8183,
+      "positive_points": 1,
+      "best_case_regret": 0.39857503023809177,
+      "worst_case_regret": 0.39857503023809177,
+      "models": {
+        "CNN": {
+          "exact": 0.5,
+          "sampled250": 0.055416115644705645,
+          "sampled_minus_exact": -0.44458388435529433,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LOF": {
+          "exact": 0.10142496976190823,
+          "sampled250": 0.26311725096424615,
+          "sampled_minus_exact": 0.16169228120233792,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+      "family": "KDD21",
+      "n": 24666,
+      "positive_points": 160,
+      "best_case_regret": 0.05571485122574826,
+      "worst_case_regret": 0.05571485122574826,
+      "models": {
+        "LOF": {
+          "exact": 0.49443597831431607,
+          "sampled250": 0.46889525101895696,
+          "sampled_minus_exact": -0.02554072729535911,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "OCSVM": {
+          "exact": 0.5501508295400643,
+          "sampled250": 0.42763646017914597,
+          "sampled_minus_exact": -0.12251436936091836,
+          "exact_winner": true,
+          "sampled_winner": false
+        }
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "n": 99999,
+      "positive_points": 200,
+      "best_case_regret": 0.2517241171624629,
+      "worst_case_regret": 0.2517241171624629,
+      "models": {
+        "LOF": {
+          "exact": 0.7665604689489272,
+          "sampled250": 0.24067578969740538,
+          "sampled_minus_exact": -0.5258846792515217,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "MP": {
+          "exact": 0.5148363517864643,
+          "sampled250": 0.30047063811116337,
+          "sampled_minus_exact": -0.21436571367530088,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/YahooA3Benchmark-TS40_data.out",
+      "family": "YAHOO",
+      "n": 1679,
+      "positive_points": 10,
+      "best_case_regret": 0.01733616634180679,
+      "worst_case_regret": 0.01733616634180679,
+      "models": {
+        "CNN": {
+          "exact": 0.9702088666710823,
+          "sampled250": 0.8918462866723621,
+          "sampled_minus_exact": -0.0783625799987202,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LSTM": {
+          "exact": 0.9528727003292755,
+          "sampled250": 0.9515312221177141,
+          "sampled_minus_exact": -0.0013414782115613866,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/YahooA4Benchmark-TS75_data.out",
+      "family": "YAHOO",
+      "n": 1679,
+      "positive_points": 13,
+      "best_case_regret": 0.01505515317666617,
+      "worst_case_regret": 0.01505515317666617,
+      "models": {
+        "CNN": {
+          "exact": 0.9695675042294785,
+          "sampled250": 0.8452889142950837,
+          "sampled_minus_exact": -0.12427858993439478,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LSTM": {
+          "exact": 0.9545123510528123,
+          "sampled250": 0.8970647077649523,
+          "sampled_minus_exact": -0.057447643287860006,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "n": 1438,
+      "positive_points": 2,
+      "best_case_regret": 0.23620847848121473,
+      "worst_case_regret": 0.23620847848121473,
+      "models": {
+        "IFOREST1": {
+          "exact": 1.0,
+          "sampled250": 0.6428571428571425,
+          "sampled_minus_exact": -0.35714285714285754,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LOF": {
+          "exact": 0.7637915215187853,
+          "sampled250": 0.7637915215187853,
+          "sampled_minus_exact": 0.0,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "PCA": {
+          "exact": 0.7637915215187853,
+          "sampled250": 0.7637915215187853,
+          "sampled_minus_exact": 0.0,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A2synthetic_44_data.out",
+      "family": "YAHOO",
+      "n": 1420,
+      "positive_points": 9,
+      "best_case_regret": 0.01111111111111196,
+      "worst_case_regret": 0.01111111111111196,
+      "models": {
+        "CNN": {
+          "exact": 0.988888888888888,
+          "sampled250": 0.9316239316239318,
+          "sampled_minus_exact": -0.057264957264956284,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "IFOREST1": {
+          "exact": 1.0,
+          "sampled250": 0.8290598290598294,
+          "sampled_minus_exact": -0.17094017094017055,
+          "exact_winner": true,
+          "sampled_winner": false
+        }
+      }
+    }
+  ],
+  "interpretation": "This is measured offline evaluation fidelity, not detector utility at deployment or general population prevalence; empirical errors may be positive or negative and are not all attributed to post-saturation inflation."
+}

@@ -1,0 +1,76 @@
+name: Saturation external-family Linux reproduction
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/saturation-20261021]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: saturation-external-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[saturation-external]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMBA_NUM_THREADS: "1"
+      SATURATION_OUTPUT: artifacts/reproductions/linux-saturation-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+      - name: Install fixed CPU dependencies
+        run: >-
+          python -m pip install '.[accelerate,research]'
+          numpy==1.26.4 numba==0.59.1 pandas==3.0.1 scipy==1.17.1
+          scikit-learn==1.8.0 threadpoolctl==3.6.0
+      - name: Regenerate inputs, verify identities, and execute all 144 cases
+        run: python experiments/run_saturation_external_reproduction.py
+      - name: Preserve a terminal receipt after early failure or interruption
+        if: always()
+        env:
+          WORKFLOW_JOB_STATUS: ${{ job.status }}
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          import json
+          import os
+          from pathlib import Path
+          import shutil
+          output = Path(os.environ['SATURATION_OUTPUT'])
+          output.mkdir(parents=True, exist_ok=True)
+          terminal = output / 'terminal.json'
+          result = json.loads(terminal.read_text()) if terminal.exists() else {}
+          if result.get('status') not in ('COMPLETED', 'FAILED'):
+              result.update(status='FAILED', stage=result.get('stage', 'before-wrapper'),
+                            error='Workflow ended before wrapper terminal completion',
+                            workflow_job_status=os.environ['WORKFLOW_JOB_STATUS'],
+                            ended_utc=datetime.now(timezone.utc).isoformat(),
+                            arrays_uploaded=False)
+              terminal.write_text(json.dumps(result, indent=2) + '\n')
+          note = Path('docs/saturation_data_licenses_20261021.md')
+          if note.exists():
+              shutil.copy2(note, output / 'ATTRIBUTION.md')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: linux-saturation-${{ github.run_id }}-attempt-${{ github.run_attempt }}
+          # Positive allowlist: receipts, outcomes, attribution, and script copies only.
+          path: |
+            ${{ env.SATURATION_OUTPUT }}/**/*.json
+            ${{ env.SATURATION_OUTPUT }}/**/*.jsonl
+            ${{ env.SATURATION_OUTPUT }}/**/*.md
+            ${{ env.SATURATION_OUTPUT }}/**/*.txt
+            ${{ env.SATURATION_OUTPUT }}/**/*.py
+            ${{ env.SATURATION_OUTPUT }}/**/*.yml
+          if-no-files-found: error

@@ -1,0 +1,243 @@
+{
+  "study": "msad-certificate-cost-20261023",
+  "schema_version": 1,
+  "frozen_utc": "2026-10-23T05:58:12.414430+00:00",
+  "freeze_scope": "Before this supplement author reads certificate corpus outcomes and before any timed supplement calls; main numerical/accuracy protocols already running.",
+  "manifest": "artifacts/msad-corpus-20261023/manifest.json",
+  "manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "subset": "artifacts/msad-corpus-20261023/timing-subset-proposal.json",
+  "subset_rule": "first two retained candidates per source family in the original fixed SHA256 order; fewer if family has fewer retained cases",
+  "series": [
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "npz_sha256": "6c811766181d8a1f34cc657005c2f3d9110a1647e65c4547021befee5fc6b58f",
+      "n": 55039
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "npz_sha256": "75f8ba9f3eb0a4a9431eb99ff91c825525f472a7ade866b640b28a2b525fb3ea",
+      "n": 50399
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "npz_sha256": "6cc786cb48e78fbdddb1b27cf41a70cb9b9f7b5dea6290680470202a19378568",
+      "n": 229899
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "npz_sha256": "f6d31264f41d60bc35c780efc17d28d5dba91245727f7ad7f40e26f85358780d",
+      "n": 200000
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "npz_sha256": "9f5c90027d57d5572b1b86e6681a626498992654d1adfe5f97a608e8a9fc074a",
+      "n": 16219
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "npz_sha256": "4fd99028182f691ca4778ee711b54987899f51fb9731cd1351c9f372bee53c1a",
+      "n": 149154
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "npz_sha256": "9098797b1648fd5772c7b4a5cbe8b2eb79316241ef85b3c0cb6bfa4ce49ecdcd",
+      "n": 63999
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "npz_sha256": "aee6800bf0d58dc3db882e41aaa726155a928d96943badca013e4c4304125c14",
+      "n": 99999
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "npz_sha256": "4d46b782ce38c4ac05b3c94ea2b236e3dd19969490e81b7dc8710aab688efd76",
+      "n": 649999
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "npz_sha256": "4b92397068bc747cf5dbcc128040ca082053eedf12faef975cb02e2f6bc973fd",
+      "n": 2160
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "npz_sha256": "1608d386b531d2276b31852819ae6ca717d2d98430b5a1ecdb096768c4d02f3b",
+      "n": 41234
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "npz_sha256": "b58a6021dc1ec2961d67d77f9561f1106a0ae733e27e1eeb4edea78a2956fe19",
+      "n": 9751
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "npz_sha256": "594cf8c793dfc41aa3eb22bf9cf1a45c10fc1331b0f7313a2c169f7f98e79d48",
+      "n": 23695
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "npz_sha256": "6e2b8f1043866b4fe56b44690ee0a4a86db3c83585357639296189ce3ae0e6df",
+      "n": 230399
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "npz_sha256": "3854ac4fd1d2f107141de61f1b52d68fb109a0d5ed6922f38796969fda7449df",
+      "n": 30492
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "npz_sha256": "cf9bf913be96beafd5898671957a9f99d5ad6ee9f3f4677c187a660bdd135439",
+      "n": 1438
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "npz_sha256": "e16c869e68cb9df62696035e1377b8649b0fcd760c281b67a54098a3b88a5e11",
+      "n": 35839
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "npz_sha256": "b7910e687fc4fb3be22de8d6c73df146c368307a4ac0589870701329a5b2ee82",
+      "n": 229899
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "npz_sha256": "0974558d7f41efbe9970439266273241340aae0259dd73b3be7b1e12e2331c4f",
+      "n": 200000
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "npz_sha256": "b190d473d218ac5e6dd25ac2ed441a816a90ed6e276e4214dbaf10d193afcead",
+      "n": 149147
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "npz_sha256": "aa18ad118848b55e932f0b7c42cb1fd194ec4a8e6bb09d192be19b97a7829432",
+      "n": 8183
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "npz_sha256": "7169d5c65a2c2cbf609f42771d0547c79376a027d0bb15267b848e1005545829",
+      "n": 99999
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "npz_sha256": "d2ddc2f3ef56a39ac907c068daaec2a7a90b4b0540e39ec6771264f3ce9dd546",
+      "n": 649999
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "npz_sha256": "29bfe2ed9daed6eddf23d9dc1ae3b113c4f0e198b819df70d23754100a9eec02",
+      "n": 4030
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "npz_sha256": "fbe5723af440e72af91e0e2cf576c1c1a8cb3269aa09325228e9a83a4cbd233d",
+      "n": 32223
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "npz_sha256": "64396950272b657ded7c73c1edc80a6a1b419969e07381e380b5fd9ccb1c5ddc",
+      "n": 2664
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "npz_sha256": "190dd59137f2fd1572dfdbd96431b3d0fdeca5ee8edf065dc6e9e2f909b1f094",
+      "n": 23692
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "npz_sha256": "68b238a3d76dbcd73270ac08743fec2d0ed0953bf68363cc070af2387eec7eed",
+      "n": 230399
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "npz_sha256": "1d2df60dcace01fbaaeee0c4de5327450acd4331ff7d55fdf4d78cf4630d44be",
+      "n": 20733
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "npz_sha256": "f1320f0bda13617376d245b92ea646c7bbe29ce35a92ca4cacd1882aa3e36c19",
+      "n": 740
+    }
+  ],
+  "models": [
+    "AE",
+    "CNN",
+    "HBOS",
+    "IFOREST",
+    "IFOREST1",
+    "LOF",
+    "LSTM",
+    "MP",
+    "NORMA",
+    "OCSVM",
+    "PCA",
+    "POLY"
+  ],
+  "width": 30,
+  "thresholds": 250,
+  "methods": [
+    "certificate",
+    "radix_exact"
+  ],
+  "repetitions": 5,
+  "seed": 20261023,
+  "ordering": "For each series/model/repetition the two methods are ordered by one fixed SHA256 bit; serial execution.",
+  "timer_scope": "Already loaded arrays; complete public function call including validation, preprocessing, integer square-root construction, and certificate assembly; excludes NPZ decode/hash, IPC, serialization, and synthetic warmup.",
+  "resource_rule": "Run only after main numerical/validation/timing, certificate accuracy, and root full tests release CPU; explicit idle-host flag required.",
+  "timeout_seconds_per_call": 30,
+  "worker": "Reused spawn subprocess, terminated/restarted on timeout; both methods warmed on fixed synthetic data after each start.",
+  "output_validation": "Integer endpoints identical to frozen accuracy study, exact values within 2e-10 of frozen main numerical study, and repeat consistency; complete coverage required for global ratio.",
+  "parity_tolerance": 2e-10,
+  "reference_records": {
+    "exact": "artifacts/msad-sampling-20261023/records.jsonl",
+    "certificate": "artifacts/msad-certificate-20261023/records.jsonl"
+  },
+  "failure_policy": "Keep each timeout/error/mismatch in denominator; resume only missing scheduled calls, never rerun an observed timed failure for this panel.",
+  "cost_claim": "No claim that certification is faster; directly report certificate/exact ratios and total paired median cost.",
+  "sources": {
+    "experiments/msad_certificate_cost.py": "64d9eb498a798521efa1907959443060e5d95a048c74c9efb9eb821e41563fca",
+    "tests/test_msad_certificate_cost.py": "f76942cd3488dcb59c4edad083602f908cee04669e1854b52555a39a2c67d5ef",
+    "experiments/msad_sampling_study.py": "f190a4005bee4a9360e06f6719585e45093381eae33dde95486c20015eb36313",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    "src/sparse_vus/sampling_bounds.py": "ec1511ff448373096bc3e6d253e3e748a8182bc04c4d20e2d5ca5391a8adb790",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "artifacts/msad-corpus-20261023/manifest.json": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+    "artifacts/msad-corpus-20261023/timing-subset-proposal.json": "287786d46a52d346bf91fd066c40148df4c819ff862f918181df1241373c852f",
+    "artifacts/msad-certificate-20261023/protocol.json": "4b73c88d7f129f5d5fdfeb7b36e1efb71d753bc8351c55ea5815c3bb84897e04",
+    "artifacts/msad-sampling-20261023/source_manifest.json": "dae17c7e3e370c5d4d1206762ab201435f1c693d1ececf80f506972b72b0e96d"
+  }
+}

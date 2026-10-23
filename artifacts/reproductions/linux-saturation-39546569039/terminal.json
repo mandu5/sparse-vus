@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "started_utc": "2026-10-21T04:54:50.708799+00:00",
+  "run_id": "39546569039",
+  "run_attempt": "1",
+  "stage": "completed",
+  "protocol_sha256": "cd61a475cf8dcd0400e4bf6658afaf6880edadab73f9fd14581f9102228630e3",
+  "arrays_uploaded": false,
+  "score_vectors_equal": 11,
+  "parity_pass": true,
+  "primary_decision": false,
+  "ended_utc": "2026-10-21T04:58:57.326204+00:00"
+}

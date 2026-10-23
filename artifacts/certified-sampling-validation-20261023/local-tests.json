@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "tests_passed": 3517,
+  "tests_failed": 0,
+  "warnings": 1,
+  "warning_scope": "Existing dateutil timezone deprecation warning",
+  "pytest_seconds": 78.51,
+  "python": "3.12.4",
+  "scope": "Full repository test suite; distinct from benchmarks or peer review",
+  "artifacts": {
+    "pytest.log": "1d6561f0c27c6730a99de7b60c1c48baa00455eba4d439e368e65bd7a124e7bf",
+    "bundle-audit.json": "1e220cbdf444abf7dae66867d89c6e86ff05fe87ccdc8da20dcb50cf92f211d9"
+  }
+}

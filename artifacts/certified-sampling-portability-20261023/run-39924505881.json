@@ -1,0 +1,56 @@
+{
+  "conclusion": "success",
+  "databaseId": 39924505881,
+  "event": "push",
+  "headSha": "33c6882b5b6f4204ef71f9674da8ef058e9b25f4",
+  "jobs": [
+    {
+      "databaseId": 120317476629,
+      "name": "installed-wheel",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:25:18Z",
+      "completedAt": "2026-10-23T08:25:53Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924505881/job/120317476629"
+    },
+    {
+      "databaseId": 120317476682,
+      "name": "sampling-report-portability (baseline)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:25:18Z",
+      "completedAt": "2026-10-23T08:25:36Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924505881/job/120317476682"
+    },
+    {
+      "databaseId": 120317476763,
+      "name": "sampling-report-portability (default)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:25:18Z",
+      "completedAt": "2026-10-23T08:25:33Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924505881/job/120317476763"
+    },
+    {
+      "databaseId": 120317476816,
+      "name": "parity (3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:25:19Z",
+      "completedAt": "2026-10-23T08:28:48Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924505881/job/120317476816"
+    },
+    {
+      "databaseId": 120317476892,
+      "name": "parity (3.11)",
+      "status": "completed",
+      "conclusion": "success",
+      "startedAt": "2026-10-23T08:25:18Z",
+      "completedAt": "2026-10-23T08:28:13Z",
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924505881/job/120317476892"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/mandu5/sparse-vus/actions/runs/39924505881",
+  "workflowName": "Numerical parity"
+}

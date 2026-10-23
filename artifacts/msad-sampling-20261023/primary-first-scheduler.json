@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-23T05:52:50.072971+00:00",
+  "authorization": "Root expressly authorized primary-first scheduling with unchanged scientific protocol and methods.",
+  "change": "Execution order only: finish L30 requests for all128, perform fixed exact validation, then resume all widths; every durable result retained.",
+  "interruption": "SIGINT closes current isolated worker and fsyncs collection receipt. A possibly in-flight unrecorded call is rerun; no completed record is removed or overwritten.",
+  "original_protocol_sha256": "c778699fe9393ba4f5a6bb9e54362bb9327bcdc1efb3aca4b2cad6deb3cdc2cb",
+  "source_manifest_sha256": "dae17c7e3e370c5d4d1206762ab201435f1c693d1ececf80f506972b72b0e96d",
+  "wrapper": "experiments/msad_primary_first_20261023.py",
+  "wrapper_sha256": "aa0a3e5d251bc52660d5c14559f27b5b847d44e98f36bb6cd8b4eb6e933b52f9",
+  "durable_records_at_request": 9324,
+  "last_durable_record_key": "[\"numerical\",\"ECG/MBA_ECG14046_data_23.out\",\"AE\",300,\"matched_sampled\",1000,null]",
+  "results_inspected_for_selection": false
+}

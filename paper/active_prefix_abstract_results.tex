@@ -1,0 +1,9 @@
+With one original interval and distinct support scores, the bound is
+$O(n+LP_0)$ for every score ordering. For a singleton and $L\le n$, it
+matches a deterministic score-query lower bound, giving optimal linear time
+under the stated model. We evaluate 378 development cases on macOS and 144
+external cases on each of macOS and Linux. The predeclared width-30 runtime
+criterion fails in all three runs. At width 300, external median speedups
+over the preceding sparse radix evaluator are $1.51\times$ and $1.63\times$,
+with all 48 cases faster on each platform. Maximum observed PR discrepancy
+in these three runs is below $3.67\times10^{-15}$.

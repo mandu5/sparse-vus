@@ -1,0 +1,53 @@
+{
+  "status": "PASS_INDEPENDENT_STORED_TEXT_TO_ARRAY_IDENTITIES",
+  "source_sha256": "76372eb37d010509e8d921676d3eb57bfa01aa101d7cbc5b929bc86e6de60cf4",
+  "manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "protocol_sha256": "9bf1a79b50d4070eff761c6c66e6de6644f33d9b71d8a4d928ba24b50f7c15e7",
+  "series": 128,
+  "models": [
+    "AE",
+    "CNN",
+    "HBOS",
+    "IFOREST",
+    "IFOREST1",
+    "LOF",
+    "LSTM",
+    "MP",
+    "NORMA",
+    "OCSVM",
+    "PCA",
+    "POLY"
+  ],
+  "families": {
+    "Daphnet": 7,
+    "Dodgers": 1,
+    "ECG": 11,
+    "GHL": 10,
+    "Genesis": 1,
+    "IOPS": 11,
+    "KDD21": 10,
+    "MGAB": 10,
+    "MITDB": 8,
+    "NAB": 9,
+    "OPPORTUNITY": 10,
+    "Occupancy": 2,
+    "SMD": 9,
+    "SVDB": 10,
+    "SensorScope": 10,
+    "YAHOO": 9
+  },
+  "counts": {
+    "raw_members": 128,
+    "score_members": 1536,
+    "array_members": 1792,
+    "time_positions": 15793514,
+    "score_scalars": 189522168
+  },
+  "prior_raw_provenance_checked": 350,
+  "prior_identity_rows": 362,
+  "fixed_candidate_prefix_checked": 148,
+  "exclusion_count": 20,
+  "parser": "Python csv.reader and scalar float; NumPy only for arrays, membership, and container IO",
+  "scope": "Verifies original stored member hashes/CRC, independent raw/score text parsing, arrays, prior source hashes, queue and receipts; no VUS or model-ranking outcome.",
+  "metric_outcomes_computed": false
+}

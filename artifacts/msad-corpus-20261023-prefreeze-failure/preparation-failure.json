@@ -1,0 +1,5 @@
+{
+  "stage": "before protocol freeze and corpus download",
+  "error": "prior raw path lacked family directory",
+  "metric_outcomes_computed": false
+}

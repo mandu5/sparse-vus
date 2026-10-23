@@ -1,0 +1,219 @@
+{
+  "status": "complete_primary_numerical_descriptive_extraction_before_full_validation",
+  "generated_utc": "2026-10-23T05:57:01.207951+00:00",
+  "protocol_sha256": "c778699fe9393ba4f5a6bb9e54362bb9327bcdc1efb3aca4b2cad6deb3cdc2cb",
+  "source_manifest_sha256": "dae17c7e3e370c5d4d1206762ab201435f1c693d1ececf80f506972b72b0e96d",
+  "primary_report": "artifacts/msad-sampling-20261023/report-50a7ae1f9cae41e0.json",
+  "primary_report_sha256": "b50e386fb574568a421a7a349003a3954f3aa4c5690548cf0c1a5c0027d3ae0b",
+  "meaning": "signed error is sampled250 minus exhaustive; this extraction does not attribute all empirical reversals to the constructed post-saturation mechanism",
+  "scalar_signed_error": {
+    "count": 1536,
+    "maximum_overestimation": 0.16169228120233792,
+    "maximum_underestimation": 0.5601231694325864,
+    "overestimations_ge_0_01": 15,
+    "underestimations_ge_0_01": 150,
+    "positive_over_1e_10": 501,
+    "negative_below_minus_1e_10": 829
+  },
+  "harmful_cases": [
+    {
+      "series": "GHL/02_Lev_fault_Temp_corr_seed_17_vars_23.test.csv@13.out",
+      "family": "GHL",
+      "n": 200000,
+      "positive_points": 145,
+      "best_case_regret": 0.02722035169702184,
+      "worst_case_regret": 0.02722035169702184,
+      "models": {
+        "HBOS": {
+          "exact": 0.03229658145022477,
+          "sampled250": 0.03395554569728159,
+          "sampled_minus_exact": 0.0016589642470568183,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "OCSVM": {
+          "exact": 0.05951693314724661,
+          "sampled250": 0.02323712752974554,
+          "sampled_minus_exact": -0.036279805617501076,
+          "exact_winner": true,
+          "sampled_winner": false
+        }
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "n": 8183,
+      "positive_points": 1,
+      "best_case_regret": 0.39857503023809177,
+      "worst_case_regret": 0.39857503023809177,
+      "models": {
+        "CNN": {
+          "exact": 0.5,
+          "sampled250": 0.055416115644705645,
+          "sampled_minus_exact": -0.44458388435529433,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LOF": {
+          "exact": 0.10142496976190823,
+          "sampled250": 0.26311725096424615,
+          "sampled_minus_exact": 0.16169228120233792,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+      "family": "KDD21",
+      "n": 24666,
+      "positive_points": 160,
+      "best_case_regret": 0.05571485122574826,
+      "worst_case_regret": 0.05571485122574826,
+      "models": {
+        "LOF": {
+          "exact": 0.49443597831431607,
+          "sampled250": 0.46889525101895696,
+          "sampled_minus_exact": -0.02554072729535911,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "OCSVM": {
+          "exact": 0.5501508295400643,
+          "sampled250": 0.42763646017914597,
+          "sampled_minus_exact": -0.12251436936091836,
+          "exact_winner": true,
+          "sampled_winner": false
+        }
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "n": 99999,
+      "positive_points": 200,
+      "best_case_regret": 0.2517241171624629,
+      "worst_case_regret": 0.2517241171624629,
+      "models": {
+        "LOF": {
+          "exact": 0.7665604689489272,
+          "sampled250": 0.24067578969740538,
+          "sampled_minus_exact": -0.5258846792515217,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "MP": {
+          "exact": 0.5148363517864643,
+          "sampled250": 0.30047063811116337,
+          "sampled_minus_exact": -0.21436571367530088,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/YahooA3Benchmark-TS40_data.out",
+      "family": "YAHOO",
+      "n": 1679,
+      "positive_points": 10,
+      "best_case_regret": 0.01733616634180679,
+      "worst_case_regret": 0.01733616634180679,
+      "models": {
+        "CNN": {
+          "exact": 0.9702088666710823,
+          "sampled250": 0.8918462866723621,
+          "sampled_minus_exact": -0.0783625799987202,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LSTM": {
+          "exact": 0.9528727003292755,
+          "sampled250": 0.9515312221177141,
+          "sampled_minus_exact": -0.0013414782115613866,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/YahooA4Benchmark-TS75_data.out",
+      "family": "YAHOO",
+      "n": 1679,
+      "positive_points": 13,
+      "best_case_regret": 0.01505515317666617,
+      "worst_case_regret": 0.01505515317666617,
+      "models": {
+        "CNN": {
+          "exact": 0.9695675042294785,
+          "sampled250": 0.8452889142950837,
+          "sampled_minus_exact": -0.12427858993439478,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LSTM": {
+          "exact": 0.9545123510528123,
+          "sampled250": 0.8970647077649523,
+          "sampled_minus_exact": -0.057447643287860006,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "n": 1438,
+      "positive_points": 2,
+      "best_case_regret": 0.23620847848121473,
+      "worst_case_regret": 0.23620847848121473,
+      "models": {
+        "IFOREST1": {
+          "exact": 1.0,
+          "sampled250": 0.6428571428571425,
+          "sampled_minus_exact": -0.35714285714285754,
+          "exact_winner": true,
+          "sampled_winner": false
+        },
+        "LOF": {
+          "exact": 0.7637915215187853,
+          "sampled250": 0.7637915215187853,
+          "sampled_minus_exact": 0.0,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "PCA": {
+          "exact": 0.7637915215187853,
+          "sampled250": 0.7637915215187853,
+          "sampled_minus_exact": 0.0,
+          "exact_winner": false,
+          "sampled_winner": true
+        }
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A2synthetic_44_data.out",
+      "family": "YAHOO",
+      "n": 1420,
+      "positive_points": 9,
+      "best_case_regret": 0.01111111111111196,
+      "worst_case_regret": 0.01111111111111196,
+      "models": {
+        "CNN": {
+          "exact": 0.988888888888888,
+          "sampled250": 0.9316239316239318,
+          "sampled_minus_exact": -0.057264957264956284,
+          "exact_winner": false,
+          "sampled_winner": true
+        },
+        "IFOREST1": {
+          "exact": 1.0,
+          "sampled250": 0.8290598290598294,
+          "sampled_minus_exact": -0.17094017094017055,
+          "exact_winner": true,
+          "sampled_winner": false
+        }
+      }
+    }
+  ]
+}

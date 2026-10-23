@@ -1,0 +1,41 @@
+A separately frozen synthetic study tests four input families at
+$L\in\{32,128,512,2048\}$, with $n=4L+3$. The first places a singleton
+original last among distinct scores; the second uses an eight-position
+original interval with all originals last; the third realizes the
+two-original separating construction, with equal middle scores below its
+four decisive positions; the fourth is an all-tied singleton negative
+control. All inputs, source hashes and count predictions are fixed before
+timing. Each case uses three randomized warmed complete-call repetitions.
+All 16 cases satisfy their count predictions and agree with released radix
+within $1.39\times10^{-17}$. This comparison uses production radix rather
+than an additional independent dense oracle.
+
+The singleton distinct-score family visits $3L-1$ positions in total;
+the two-original family visits $4L$. At $L=2048$, the latter visits 8,192
+positions versus 4,198,402 for last-positive stopping, a $512.5\times$
+traversal reduction. Its median full call takes 0.717 milliseconds, with
+$17.06\times$ speedup over last-positive stopping and $53.88\times$ over
+released radix. The all-tied singleton instead visits the entire active
+support, as predicted. Its last-positive ratio remains close to one.
+These constructed inputs demonstrate mechanisms and their limitations;
+their timing gains do not estimate gains on real-world data.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrr}
+\toprule
+Family & $L=32$ & 128 & 512 & 2048\\
+\midrule
+Singleton, original last & 0.845 & 1.401 & 4.530 & 17.536\\
+Eight originals last & 1.019 & 1.273 & 3.354 & 12.793\\
+Two-original separation & 1.025 & 1.387 & 4.161 & 17.063\\
+All-tied singleton & 0.972 & 1.005 & 0.998 & 1.012\\
+\bottomrule
+\end{tabular}
+\caption{Descriptive structural-study ratios: last-positive median time
+divided by saturation median time. All 16 cases are shown, including small
+input overhead and the tied negative control.}
+\label{tab:structural-runtime}
+\end{table}

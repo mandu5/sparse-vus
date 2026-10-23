@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "protocol_sha256": "76b9ba48540cf13b960342058357726d9a29a34442d1def38e131904e202f2c4",
+  "source_sha256": "8abc75472a3fea5f6821a3b552ded08ada2e8c43d1b93da0358194733056a148",
+  "witnesses_sha256": "cdd636a7ed855dee9effbdd2d0739baae344893e70be272c8afdf7a989db21ca",
+  "model_records": 96,
+  "width_records": 2976,
+  "first_saturation_proofs": 2976,
+  "method": "Independent direct temporal ramps, global score classes, component coverage, Python integer roots and exact Fraction comparisons; no production metric imports"
+}

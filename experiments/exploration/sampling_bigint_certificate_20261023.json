@@ -1,0 +1,11 @@
+{
+  "status": "PASS_EXACT_RATIONAL_ORACLE",
+  "source_sha256": "870e2b6416300b15f23567b02384c97a152bae3065a63a97fe92476585ac0f4a",
+  "enclosure_checks": 14400,
+  "weight_bits_for_stress": 3,
+  "output_bits_for_stress": 12,
+  "sqrt_integer_bracket_checks": 12500,
+  "certificate_uses_only_integer_arithmetic": true,
+  "oracle": "Exact Fraction evaluations of lower, midpoint and upper admissible weights",
+  "scope": "Independent arithmetic spike, not production certification or a timing claim"
+}

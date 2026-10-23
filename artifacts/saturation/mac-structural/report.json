@@ -1,0 +1,398 @@
+{
+  "cases": 16,
+  "structural_assertions_pass": true,
+  "parity_pass": true,
+  "max_absolute_pr_error": 1.3877787807814457e-17,
+  "protocol_sha256": "61f69703dd7e2a4a3e368307abfdbdebe49ca31f91ae5039424e44bba386995f",
+  "inputs_sha256": "de94a3046d41ff0a91d47350f230c99267c92654a2358d2bbb3ef4a3394f6418",
+  "measurements_sha256": "812ab9c5fab5aa85ced8151b699f468efcfdbbdaefb5341409febc83b677aa5f",
+  "results": [
+    {
+      "case_id": "singleton_original_last__L32",
+      "family": "singleton_original_last",
+      "n": 131,
+      "max_buffer": 32,
+      "median_seconds": {
+        "saturation": 9.0125e-05,
+        "last_positive": 7.6125e-05,
+        "active_full": 7.4833e-05,
+        "radix": 7.1791e-05
+      },
+      "baseline_over_saturation": {
+        "last_positive": 0.8446601941747572,
+        "active_full": 0.8303245492371707,
+        "radix": 0.7965714285714287
+      },
+      "visited_sums": {
+        "saturation": 95,
+        "last_positive": 545,
+        "active_full": 545
+      },
+      "maximum_support_size": 33,
+      "radix_full_support_position_budget": 1089
+    },
+    {
+      "case_id": "two_positive_separation__L32",
+      "family": "two_positive_separation",
+      "n": 131,
+      "max_buffer": 32,
+      "median_seconds": {
+        "saturation": 7.4542e-05,
+        "last_positive": 7.6375e-05,
+        "active_full": 7.6417e-05,
+        "radix": 7.5041e-05
+      },
+      "baseline_over_saturation": {
+        "last_positive": 1.0245901639344261,
+        "active_full": 1.025153604679241,
+        "radix": 1.0066942126586353
+      },
+      "visited_sums": {
+        "saturation": 128,
+        "last_positive": 1090,
+        "active_full": 1090
+      },
+      "maximum_support_size": 66,
+      "radix_full_support_position_budget": 2178
+    },
+    {
+      "case_id": "interval8_original_last__L32",
+      "family": "interval8_original_last",
+      "n": 131,
+      "max_buffer": 32,
+      "median_seconds": {
+        "saturation": 7.2791e-05,
+        "last_positive": 7.4209e-05,
+        "active_full": 7.3584e-05,
+        "radix": 7.125e-05
+      },
+      "baseline_over_saturation": {
+        "last_positive": 1.0194804302729732,
+        "active_full": 1.0108942039537856,
+        "radix": 0.9788298003874105
+      },
+      "visited_sums": {
+        "saturation": 521,
+        "last_positive": 776,
+        "active_full": 776
+      },
+      "maximum_support_size": 40,
+      "radix_full_support_position_budget": 1320
+    },
+    {
+      "case_id": "tied_singleton__L32",
+      "family": "tied_singleton",
+      "n": 131,
+      "max_buffer": 32,
+      "median_seconds": {
+        "saturation": 7.3833e-05,
+        "last_positive": 7.1792e-05,
+        "active_full": 7.15e-05,
+        "radix": 6.725e-05
+      },
+      "baseline_over_saturation": {
+        "last_positive": 0.972356534341013,
+        "active_full": 0.9684016632129265,
+        "radix": 0.9108393265883818
+      },
+      "visited_sums": {
+        "saturation": 545,
+        "last_positive": 545,
+        "active_full": 545
+      },
+      "maximum_support_size": 33,
+      "radix_full_support_position_budget": 1089
+    },
+    {
+      "case_id": "singleton_original_last__L128",
+      "family": "singleton_original_last",
+      "n": 515,
+      "max_buffer": 128,
+      "median_seconds": {
+        "saturation": 9.4334e-05,
+        "last_positive": 0.000132208,
+        "active_full": 0.000131708,
+        "radix": 0.000170333
+      },
+      "baseline_over_saturation": {
+        "last_positive": 1.4014883287043909,
+        "active_full": 1.3961880128055633,
+        "radix": 1.805637415989993
+      },
+      "visited_sums": {
+        "saturation": 383,
+        "last_positive": 8321,
+        "active_full": 8321
+      },
+      "maximum_support_size": 129,
+      "radix_full_support_position_budget": 16641
+    },
+    {
+      "case_id": "two_positive_separation__L128",
+      "family": "two_positive_separation",
+      "n": 515,
+      "max_buffer": 128,
+      "median_seconds": {
+        "saturation": 0.00010225,
+        "last_positive": 0.000141792,
+        "active_full": 0.000142834,
+        "radix": 0.000237375
+      },
+      "baseline_over_saturation": {
+        "last_positive": 1.3867188264058679,
+        "active_full": 1.3969095354523227,
+        "radix": 2.3215158924205377
+      },
+      "visited_sums": {
+        "saturation": 512,
+        "last_positive": 16642,
+        "active_full": 16642
+      },
+      "maximum_support_size": 258,
+      "radix_full_support_position_budget": 33282
+    },
+    {
+      "case_id": "interval8_original_last__L128",
+      "family": "interval8_original_last",
+      "n": 515,
+      "max_buffer": 128,
+      "median_seconds": {
+        "saturation": 0.000105292,
+        "last_positive": 0.000134041,
+        "active_full": 0.000134667,
+        "radix": 0.000174917
+      },
+      "baseline_over_saturation": {
+        "last_positive": 1.2730406868518027,
+        "active_full": 1.2789860578201573,
+        "radix": 1.661256315769479
+      },
+      "visited_sums": {
+        "saturation": 2494,
+        "last_positive": 9224,
+        "active_full": 9224
+      },
+      "maximum_support_size": 136,
+      "radix_full_support_position_budget": 17544
+    },
+    {
+      "case_id": "tied_singleton__L128",
+      "family": "tied_singleton",
+      "n": 515,
+      "max_buffer": 128,
+      "median_seconds": {
+        "saturation": 0.00011675,
+        "last_positive": 0.000117375,
+        "active_full": 0.000117292,
+        "radix": 0.000161666
+      },
+      "baseline_over_saturation": {
+        "last_positive": 1.0053533190578157,
+        "active_full": 1.004642398286938,
+        "radix": 1.3847194860813705
+      },
+      "visited_sums": {
+        "saturation": 8321,
+        "last_positive": 8321,
+        "active_full": 8321
+      },
+      "maximum_support_size": 129,
+      "radix_full_support_position_budget": 16641
+    },
+    {
+      "case_id": "singleton_original_last__L512",
+      "family": "singleton_original_last",
+      "n": 2051,
+      "max_buffer": 512,
+      "median_seconds": {
+        "saturation": 0.000177583,
+        "last_positive": 0.0008045,
+        "active_full": 0.000806166,
+        "radix": 0.001462958
+      },
+      "baseline_over_saturation": {
+        "last_positive": 4.530275983624558,
+        "active_full": 4.539657512261871,
+        "radix": 8.238164689187592
+      },
+      "visited_sums": {
+        "saturation": 1535,
+        "last_positive": 131585,
+        "active_full": 131585
+      },
+      "maximum_support_size": 513,
+      "radix_full_support_position_budget": 263169
+    },
+    {
+      "case_id": "two_positive_separation__L512",
+      "family": "two_positive_separation",
+      "n": 2051,
+      "max_buffer": 512,
+      "median_seconds": {
+        "saturation": 0.000205667,
+        "last_positive": 0.000855791,
+        "active_full": 0.000858458,
+        "radix": 0.00253575
+      },
+      "baseline_over_saturation": {
+        "last_positive": 4.161051602833706,
+        "active_full": 4.174019166905726,
+        "radix": 12.329396548790033
+      },
+      "visited_sums": {
+        "saturation": 2048,
+        "last_positive": 263170,
+        "active_full": 263170
+      },
+      "maximum_support_size": 1026,
+      "radix_full_support_position_budget": 526338
+    },
+    {
+      "case_id": "interval8_original_last__L512",
+      "family": "interval8_original_last",
+      "n": 2051,
+      "max_buffer": 512,
+      "median_seconds": {
+        "saturation": 0.00024275,
+        "last_positive": 0.00081425,
+        "active_full": 0.0008155,
+        "radix": 0.001481375
+      },
+      "baseline_over_saturation": {
+        "last_positive": 3.35427394438723,
+        "active_full": 3.3594232749742536,
+        "radix": 6.102471678681772
+      },
+      "visited_sums": {
+        "saturation": 11085,
+        "last_positive": 135176,
+        "active_full": 135176
+      },
+      "maximum_support_size": 520,
+      "radix_full_support_position_budget": 266760
+    },
+    {
+      "case_id": "tied_singleton__L512",
+      "family": "tied_singleton",
+      "n": 2051,
+      "max_buffer": 512,
+      "median_seconds": {
+        "saturation": 0.000518959,
+        "last_positive": 0.000517833,
+        "active_full": 0.000518958,
+        "radix": 0.001351791
+      },
+      "baseline_over_saturation": {
+        "last_positive": 0.9978302717555722,
+        "active_full": 0.9999980730655023,
+        "radix": 2.604812711601494
+      },
+      "visited_sums": {
+        "saturation": 131585,
+        "last_positive": 131585,
+        "active_full": 131585
+      },
+      "maximum_support_size": 513,
+      "radix_full_support_position_budget": 263169
+    },
+    {
+      "case_id": "singleton_original_last__L2048",
+      "family": "singleton_original_last",
+      "n": 8195,
+      "max_buffer": 2048,
+      "median_seconds": {
+        "saturation": 0.000609167,
+        "last_positive": 0.010682083,
+        "active_full": 0.010599833,
+        "radix": 0.021236084
+      },
+      "baseline_over_saturation": {
+        "last_positive": 17.535557572882315,
+        "active_full": 17.40053712692907,
+        "radix": 34.860857531678505
+      },
+      "visited_sums": {
+        "saturation": 6143,
+        "last_positive": 2099201,
+        "active_full": 2099201
+      },
+      "maximum_support_size": 2049,
+      "radix_full_support_position_budget": 4198401
+    },
+    {
+      "case_id": "two_positive_separation__L2048",
+      "family": "two_positive_separation",
+      "n": 8195,
+      "max_buffer": 2048,
+      "median_seconds": {
+        "saturation": 0.0007165,
+        "last_positive": 0.01222575,
+        "active_full": 0.012288875,
+        "radix": 0.038606458
+      },
+      "baseline_over_saturation": {
+        "last_positive": 17.06315422191207,
+        "active_full": 17.151256106071177,
+        "radix": 53.882006978367066
+      },
+      "visited_sums": {
+        "saturation": 8192,
+        "last_positive": 4198402,
+        "active_full": 4198402
+      },
+      "maximum_support_size": 4098,
+      "radix_full_support_position_budget": 8396802
+    },
+    {
+      "case_id": "interval8_original_last__L2048",
+      "family": "interval8_original_last",
+      "n": 8195,
+      "max_buffer": 2048,
+      "median_seconds": {
+        "saturation": 0.000829875,
+        "last_positive": 0.010616917,
+        "active_full": 0.010653667,
+        "radix": 0.021235875
+      },
+      "baseline_over_saturation": {
+        "last_positive": 12.793392980870614,
+        "active_full": 12.837676758547975,
+        "radix": 25.589245368278355
+      },
+      "visited_sums": {
+        "saturation": 46413,
+        "last_positive": 2113544,
+        "active_full": 2113544
+      },
+      "maximum_support_size": 2056,
+      "radix_full_support_position_budget": 4212744
+    },
+    {
+      "case_id": "tied_singleton__L2048",
+      "family": "tied_singleton",
+      "n": 8195,
+      "max_buffer": 2048,
+      "median_seconds": {
+        "saturation": 0.005773583,
+        "last_positive": 0.005840416,
+        "active_full": 0.005782416,
+        "radix": 0.0194775
+      },
+      "baseline_over_saturation": {
+        "last_positive": 1.0115756541475198,
+        "active_full": 1.0015298991977772,
+        "radix": 3.3735550350622825
+      },
+      "visited_sums": {
+        "saturation": 2099201,
+        "last_positive": 2099201,
+        "active_full": 2099201
+      },
+      "maximum_support_size": 2049,
+      "radix_full_support_position_budget": 4198401
+    }
+  ],
+  "scope": "Constructed theorem witnesses and a negative control, not unseen-domain confirmation, an empirical population sample, or a firstness/SOTA claim.",
+  "runtime_decision": "Descriptive only; no runtime pass/fail threshold or population confidence interval.",
+  "radix_budget_scope": "Analytic maximum-support positions per width, not an instrumented radix profile."
+}

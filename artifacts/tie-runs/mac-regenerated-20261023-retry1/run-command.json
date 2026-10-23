@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-u",
+    "experiments/reproduce_tie_runs.py",
+    "run",
+    "--output",
+    "artifacts/tie-runs/mac-regenerated-20261023-retry1",
+    "--protocol-sha256",
+    "13aa05f3d88e4e6ed86d89363b268655e5c6d9c8475b1e1d97e9cff1cc2fa795"
+  ],
+  "cwd": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation",
+  "started_utc": "2026-10-23T04:21:03.977932+00:00",
+  "protocol_sha256": "13aa05f3d88e4e6ed86d89363b268655e5c6d9c8475b1e1d97e9cff1cc2fa795",
+  "clearance": "Parent authorized exact frozen 68-case five-repetition run; other local team tests/builds/benchmarks stopped.",
+  "background_limitation": "Active user desktop and background processes were not isolated.",
+  "stdout_stderr": "run-stdout.log"
+}

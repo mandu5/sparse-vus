@@ -1,0 +1,522 @@
+{
+  "status": "PASS_INDEPENDENT_POST_RUN_AUDIT",
+  "verified_utc": "2026-10-23T04:24:07.257542+00:00",
+  "protocol_sha256": "13aa05f3d88e4e6ed86d89363b268655e5c6d9c8475b1e1d97e9cff1cc2fa795",
+  "cases": 68,
+  "phases": {
+    "structural": 20,
+    "external_regenerated": 48
+  },
+  "repetitions_per_case_method": 5,
+  "methods": [
+    "tie_runs",
+    "saturation",
+    "radix",
+    "klein"
+  ],
+  "timed_calls": 1360,
+  "warmup_calls_excluded_from_timing": 272,
+  "source_bindings_verified": 23,
+  "manifest_bindings_verified": 8,
+  "npz_and_array_identity_checks": 68,
+  "width_work_checks": 20548,
+  "max_error": 2.220446049250313e-16,
+  "parity_atol": 1e-11,
+  "work_assertions": true,
+  "seeded_orders_reconstructed": true,
+  "full_per_case_and_summary_reconstructed": true,
+  "official_report_reconstruction_command": [
+    "python",
+    "experiments/benchmark_tie_runs.py",
+    "report",
+    "--output",
+    "artifacts/tie-runs/mac-regenerated-20261023-retry1"
+  ],
+  "official_report_reconstruction_exit_code": 0,
+  "external_unique_series": 4,
+  "external_unique_score_vectors": 16,
+  "external_widths": [
+    30,
+    100,
+    300
+  ],
+  "regeneration_score_vectors_compared_to_historical_mac": 48,
+  "regeneration_score_vectors_identical_on_this_host": 48,
+  "public_npz_count": 20,
+  "public_npz_are_only_synthetic": true,
+  "external_inputs_remain_in_ignored_cache": true,
+  "loss_counts_all_cases": {
+    "saturation": 28,
+    "radix": 16,
+    "klein": 0
+  },
+  "all_slower_cases": {
+    "saturation": [
+      {
+        "case_id": "alternating|128",
+        "phase": "structural",
+        "max_buffer": 128,
+        "comparator_seconds": 0.000116375,
+        "tie_runs_seconds": 0.000148625,
+        "comparator_over_tie_runs": 0.7830109335576114
+      },
+      {
+        "case_id": "alternating|512",
+        "phase": "structural",
+        "max_buffer": 512,
+        "comparator_seconds": 0.000399292,
+        "tie_runs_seconds": 0.000920459,
+        "comparator_over_tie_runs": 0.4337966166879785
+      },
+      {
+        "case_id": "distinct_original_last|2048",
+        "phase": "structural",
+        "max_buffer": 2048,
+        "comparator_seconds": 0.000622666,
+        "tie_runs_seconds": 0.00063325,
+        "comparator_over_tie_runs": 0.9832862218712989
+      },
+      {
+        "case_id": "alternating|2048",
+        "phase": "structural",
+        "max_buffer": 2048,
+        "comparator_seconds": 0.003293333,
+        "tie_runs_seconds": 0.011963416,
+        "comparator_over_tie_runs": 0.2752836647994185
+      },
+      {
+        "case_id": "regenerated|GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|pca_reconstruction|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.003341667,
+        "tie_runs_seconds": 0.003570833,
+        "comparator_over_tie_runs": 0.9358228178130985
+      },
+      {
+        "case_id": "regenerated|GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.003143125,
+        "tie_runs_seconds": 0.003232,
+        "comparator_over_tie_runs": 0.9725015470297029
+      },
+      {
+        "case_id": "regenerated|GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.003248,
+        "tie_runs_seconds": 0.003385583,
+        "comparator_over_tie_runs": 0.9593620950955861
+      },
+      {
+        "case_id": "regenerated|GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|robust_marginal_z|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.004767958,
+        "tie_runs_seconds": 0.004813584,
+        "comparator_over_tie_runs": 0.9905214077494026
+      },
+      {
+        "case_id": "regenerated|GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.003093958,
+        "tie_runs_seconds": 0.003231125,
+        "comparator_over_tie_runs": 0.9575482223683701
+      },
+      {
+        "case_id": "regenerated|GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.003356792,
+        "tie_runs_seconds": 0.003560167,
+        "comparator_over_tie_runs": 0.9428748707574672
+      },
+      {
+        "case_id": "regenerated|GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|knn_distance|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.003302167,
+        "tie_runs_seconds": 0.003426041,
+        "comparator_over_tie_runs": 0.9638433982547202
+      },
+      {
+        "case_id": "regenerated|GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|robust_marginal_z|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.004461584,
+        "tie_runs_seconds": 0.004729375,
+        "comparator_over_tie_runs": 0.9433770847099247
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|isolation_forest|30",
+        "phase": "external_regenerated",
+        "max_buffer": 30,
+        "comparator_seconds": 0.000469084,
+        "tie_runs_seconds": 0.000473333,
+        "comparator_over_tie_runs": 0.9910232331149529
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|isolation_forest|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000534834,
+        "tie_runs_seconds": 0.0006135,
+        "comparator_over_tie_runs": 0.8717750611246944
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|isolation_forest|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.000809417,
+        "tie_runs_seconds": 0.001145375,
+        "comparator_over_tie_runs": 0.7066829640947289
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|pca_reconstruction|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000560125,
+        "tie_runs_seconds": 0.000620459,
+        "comparator_over_tie_runs": 0.9027590864182806
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|pca_reconstruction|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.000798917,
+        "tie_runs_seconds": 0.001169917,
+        "comparator_over_tie_runs": 0.6828834866063148
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|knn_distance|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000489583,
+        "tie_runs_seconds": 0.000557792,
+        "comparator_over_tie_runs": 0.8777160662038896
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|knn_distance|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.00086875,
+        "tie_runs_seconds": 0.001149584,
+        "comparator_over_tie_runs": 0.7557081518183969
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|robust_marginal_z|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000619042,
+        "tie_runs_seconds": 0.0006675,
+        "comparator_over_tie_runs": 0.927403745318352
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|robust_marginal_z|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.000812333,
+        "tie_runs_seconds": 0.00112525,
+        "comparator_over_tie_runs": 0.7219133525883138
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|isolation_forest|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000561,
+        "tie_runs_seconds": 0.000624375,
+        "comparator_over_tie_runs": 0.8984984984984984
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|isolation_forest|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.000838375,
+        "tie_runs_seconds": 0.001082583,
+        "comparator_over_tie_runs": 0.7744209912773432
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|pca_reconstruction|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000551792,
+        "tie_runs_seconds": 0.00064275,
+        "comparator_over_tie_runs": 0.8584861921431349
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|pca_reconstruction|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.00082325,
+        "tie_runs_seconds": 0.001117667,
+        "comparator_over_tie_runs": 0.7365789631437629
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|knn_distance|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000541875,
+        "tie_runs_seconds": 0.000590334,
+        "comparator_over_tie_runs": 0.917912571527305
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|knn_distance|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.000813333,
+        "tie_runs_seconds": 0.001055959,
+        "comparator_over_tie_runs": 0.7702316093711972
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|robust_marginal_z|300",
+        "phase": "external_regenerated",
+        "max_buffer": 300,
+        "comparator_seconds": 0.00085975,
+        "tie_runs_seconds": 0.0011395,
+        "comparator_over_tie_runs": 0.7544975866608161
+      }
+    ],
+    "radix": [
+      {
+        "case_id": "all_tied|32",
+        "phase": "structural",
+        "max_buffer": 32,
+        "comparator_seconds": 7.9042e-05,
+        "tie_runs_seconds": 7.9125e-05,
+        "comparator_over_tie_runs": 0.9989510268562403
+      },
+      {
+        "case_id": "alternating|32",
+        "phase": "structural",
+        "max_buffer": 32,
+        "comparator_seconds": 7.8167e-05,
+        "tie_runs_seconds": 7.9542e-05,
+        "comparator_over_tie_runs": 0.9827135349878051
+      },
+      {
+        "case_id": "regenerated|GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test|knn_distance|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.003183375,
+        "tie_runs_seconds": 0.003232,
+        "comparator_over_tie_runs": 0.9849551361386139
+      },
+      {
+        "case_id": "regenerated|GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|pca_reconstruction|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.003134083,
+        "tie_runs_seconds": 0.003231125,
+        "comparator_over_tie_runs": 0.9699664977368564
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|isolation_forest|30",
+        "phase": "external_regenerated",
+        "max_buffer": 30,
+        "comparator_seconds": 0.00046925,
+        "tie_runs_seconds": 0.000473333,
+        "comparator_over_tie_runs": 0.99137393758728
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|isolation_forest|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000561208,
+        "tie_runs_seconds": 0.0006135,
+        "comparator_over_tie_runs": 0.9147644661776692
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|pca_reconstruction|30",
+        "phase": "external_regenerated",
+        "max_buffer": 30,
+        "comparator_seconds": 0.000453583,
+        "tie_runs_seconds": 0.00046075,
+        "comparator_over_tie_runs": 0.9844449267498644
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|pca_reconstruction|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000585959,
+        "tie_runs_seconds": 0.000620459,
+        "comparator_over_tie_runs": 0.9443960036037837
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|knn_distance|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000552834,
+        "tie_runs_seconds": 0.000557792,
+        "comparator_over_tie_runs": 0.9911113820205382
+      },
+      {
+        "case_id": "regenerated|GutenTAG_0_test|robust_marginal_z|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000641334,
+        "tie_runs_seconds": 0.0006675,
+        "comparator_over_tie_runs": 0.9608
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|isolation_forest|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000580083,
+        "tie_runs_seconds": 0.000624375,
+        "comparator_over_tie_runs": 0.9290618618618618
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|pca_reconstruction|30",
+        "phase": "external_regenerated",
+        "max_buffer": 30,
+        "comparator_seconds": 0.00046075,
+        "tie_runs_seconds": 0.000480542,
+        "comparator_over_tie_runs": 0.9588131734583034
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|pca_reconstruction|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000581833,
+        "tie_runs_seconds": 0.00064275,
+        "comparator_over_tie_runs": 0.9052244262932712
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|knn_distance|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.00058525,
+        "tie_runs_seconds": 0.000590334,
+        "comparator_over_tie_runs": 0.991387926157057
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|robust_marginal_z|30",
+        "phase": "external_regenerated",
+        "max_buffer": 30,
+        "comparator_seconds": 0.00044025,
+        "tie_runs_seconds": 0.000447875,
+        "comparator_over_tie_runs": 0.9829751604800447
+      },
+      {
+        "case_id": "regenerated|GutenTAG_10_test|robust_marginal_z|100",
+        "phase": "external_regenerated",
+        "max_buffer": 100,
+        "comparator_seconds": 0.000643667,
+        "tie_runs_seconds": 0.000651459,
+        "comparator_over_tie_runs": 0.9880391551885844
+      }
+    ],
+    "klein": []
+  },
+  "external_summaries": {
+    "external_regenerated|L30": {
+      "cases": 16,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 1.0237607957948667,
+          "losses": 1,
+          "aggregate_ratio": 1.0246238541195698
+        },
+        "radix": {
+          "median_ratio": 1.018132998114953,
+          "losses": 4,
+          "aggregate_ratio": 1.0198317386842353
+        },
+        "klein": {
+          "median_ratio": 22.89157256348635,
+          "losses": 0,
+          "aggregate_ratio": 18.293843542200516
+        }
+      }
+    },
+    "external_regenerated|L100": {
+      "cases": 16,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.9650248846990366,
+          "losses": 9,
+          "aggregate_ratio": 0.99630515246746
+        },
+        "radix": {
+          "median_ratio": 0.9895752686045614,
+          "losses": 10,
+          "aggregate_ratio": 1.0055632012519575
+        },
+        "klein": {
+          "median_ratio": 51.57758883563268,
+          "losses": 0,
+          "aggregate_ratio": 47.51029339881383
+        }
+      }
+    },
+    "external_regenerated|L300": {
+      "cases": 16,
+      "comparators": {
+        "saturation": {
+          "median_ratio": 0.8551219045452209,
+          "losses": 14,
+          "aggregate_ratio": 0.9290371518816838
+        },
+        "radix": {
+          "median_ratio": 1.0859924314719924,
+          "losses": 0,
+          "aggregate_ratio": 1.0884957315234625
+        },
+        "klein": {
+          "median_ratio": 97.86150615479275,
+          "losses": 0,
+          "aggregate_ratio": 114.9952943255494
+        }
+      }
+    }
+  },
+  "all_tied_L2048": {
+    "cases": 1,
+    "comparators": {
+      "saturation": {
+        "median_ratio": 8.8843067736518,
+        "losses": 0,
+        "aggregate_ratio": 8.8843067736518
+      },
+      "radix": {
+        "median_ratio": 29.446850531815638,
+        "losses": 0,
+        "aggregate_ratio": 29.446850531815638
+      },
+      "klein": {
+        "median_ratio": 740.5310692293339,
+        "losses": 0,
+        "aggregate_ratio": 740.5310692293339
+      }
+    }
+  },
+  "file_sha256": {
+    "protocol.json": "13aa05f3d88e4e6ed86d89363b268655e5c6d9c8475b1e1d97e9cff1cc2fa795",
+    "inputs.json": "2533f5cc9029aba32c9966d8bf7297f7351bfa0108695935b8915f7a5969ad46",
+    "measurements.jsonl": "78852395c6457abe22916310babd8e2a4351417758d873f3d87ae9ed6fa04284",
+    "report.json": "31dc104f24f853f286a5aeaf5aa10980245bafbb6ae8a400ee6ae63a92651e4c",
+    "completion.json": "627e272156b227580ce50308fffa71be3cd29123d1b5022437221bda3fe2f4ba",
+    "run-command.json": "4bac10a97168512b52671a17995062694d469c269255b92676ede16317c1004c",
+    "run-stdout.log": "d741aa9795de9469aa4a14eb3b08bee96080ba679ea2f9a5c2ece4e3915b5d59",
+    "run-execution.json": "c00afa3cf682c6420e740a5b36039e5e7583da62b6ac52fd23b49c69bbe4902f"
+  },
+  "scope": "Descriptive replication of 20 prior synthetic cases and 48 regenerated external width-specific cases. Excludes 63 historical development cases; no new domains, unseen confirmation, or primary runtime success. Active user desktop/background processes were not isolated.",
+  "failed_first_preparation_preserved": true,
+  "max_error_reference": "Every recorded scalar versus the first radix scalar for that case, matching the frozen report.",
+  "max_pairwise_error": 2.7755575615628914e-16,
+  "max_pairwise_error_witness": {
+    "case_id": "regenerated|GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test|isolation_forest|300",
+    "lower": {
+      "method": "klein",
+      "repetition": 0,
+      "value": 0.4857145449031173
+    },
+    "upper": {
+      "method": "tie_runs",
+      "repetition": 0,
+      "value": 0.48571454490311755
+    }
+  },
+  "independent_second_reader": "Separate agent independently reconstructed all per-case medians, external runtime ratios and loss counts from raw measurements; confirmed report baseline error and identified larger pairwise error reported here."
+}

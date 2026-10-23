@@ -1,0 +1,18 @@
+{
+  "verified_utc": "2026-10-21T04:35:46.991369+00:00",
+  "manifest_sha256": "f8785501739190fda771c2c2e8a469e65b22812f10cb46d24ff3ffe57edfca47",
+  "selection_sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+  "status": "PASS",
+  "series": 12,
+  "families": 9,
+  "scores": 48,
+  "checks": [
+    "all saved raw/NPZ/array hashes verified by acquisition verifier",
+    "individual receipts equal manifest records",
+    "new canonical families disjoint from old23",
+    "all recorded compute threadpools equal one",
+    "no metric outcomes computed",
+    "source files free of trailing whitespace"
+  ],
+  "metric_outcomes_computed": false
+}

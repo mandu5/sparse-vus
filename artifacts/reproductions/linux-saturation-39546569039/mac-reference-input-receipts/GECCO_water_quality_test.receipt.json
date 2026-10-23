@@ -1,0 +1,69 @@
+{
+  "series": "GECCO_water_quality_test",
+  "family": "GECCO",
+  "canonical_family": "gecco",
+  "completed_utc": "2026-10-21T04:34:11.388667+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GECCO/GECCO_water_quality_test.csv",
+  "raw_bytes": 6114353,
+  "raw_sha256": "1540ae632c03828525c6ffde4dff12d27410c79ee38d69f6807ed8a4ff73941d",
+  "raw_git_blob_verified": true,
+  "raw_lfs_verified": false,
+  "npz_path": "cache/saturation-external/arrays/GECCO_water_quality_test.npz",
+  "npz_bytes": 1905309,
+  "npz_sha256": "681633af4c6e9f6511d15939b2d5e53d08a4c6f63caac979fd84ce5345abba4b",
+  "n": 83113,
+  "preprocessing": {
+    "feature_columns": [
+      "Tp",
+      "Cl",
+      "pH",
+      "Redox",
+      "Leit",
+      "Trueb",
+      "Cl_2",
+      "Fm",
+      "Fm_2"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "Tp": 0,
+      "Cl": 0,
+      "pH": 0,
+      "Redox": 0,
+      "Leit": 0,
+      "Trueb": 0,
+      "Cl_2": 0,
+      "Fm": 0,
+      "Fm_2": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 9
+  },
+  "actual_parameters": {
+    "pca_rank": 5,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "77890cb76440c71d8f45f0d87d1084df1cbe035f864b462833967b78b4adb722",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.2853742500010412,
+    "pca_reconstruction": 0.020363916992209852,
+    "knn_distance": 0.9165846669930033,
+    "robust_marginal_z": 0.01978108298499137
+  },
+  "array_sha256": {
+    "labels": "a5a23798814307777806b5b9203d76b88b9202975d2330a247818aaa8b12c61b",
+    "isolation_forest": "2aa7f901dd6135db096b17f56c1204c78353fb1b1c30a11673a73586ef265d01",
+    "pca_reconstruction": "d8272a8b56d24635ac3db1359ed0279331b5240e83dfa207177a60809b58dc08",
+    "knn_distance": "0ff6344fad562ca507e32ee89e113a511a32c181c9318fd1b0990aaa949ca728",
+    "robust_marginal_z": "b0e61ac2505f23c68c63d0d6aabb370972d541ae5f78082271207af624c657ce"
+  },
+  "selection_sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+  "metric_outcomes_computed": false
+}

@@ -1,0 +1,76 @@
+{
+  "measurement_bindings": {
+    "Mac": [
+      "artifacts/pr-engine/mac-holdout",
+      "499f69e0e767f0c4971b8cc9cd839e3eedec3cb20f945b1cc6221f2604dd3228"
+    ],
+    "Linux": [
+      "artifacts/reproductions/linux-pr-engine-39523992616",
+      "a54fd4ec9107e2b9517b455d221c9f6dfbc7ae6f1f84070f0cb6a37ddbc62060"
+    ]
+  },
+  "statistics": {
+    "Mac-30": {
+      "radix_pr": {
+        "sum_seconds": 3.0944096709717996,
+        "median_ms": 3.735562990186736
+      },
+      "dense_pr_nearest_radix": {
+        "sum_seconds": 10.20424659588025,
+        "median_ms": 8.737020500120707
+      },
+      "klein_pr": {
+        "sum_seconds": 60.18622320695431,
+        "median_ms": 91.54079201107379
+      }
+    },
+    "Mac-300": {
+      "radix_pr": {
+        "sum_seconds": 10.22920928520034,
+        "median_ms": 9.009895991766825
+      },
+      "dense_pr_nearest_radix": {
+        "sum_seconds": 80.73329454447958,
+        "median_ms": 67.2978744842112
+      },
+      "klein_pr": {
+        "sum_seconds": 479.67012008608435,
+        "median_ms": 737.4669374985388
+      }
+    },
+    "Linux-30": {
+      "radix_pr": {
+        "sum_seconds": 2.3176123810005436,
+        "median_ms": 2.247681000000057
+      },
+      "dense_pr_nearest_radix": {
+        "sum_seconds": 11.610223588999872,
+        "median_ms": 10.716717500002915
+      },
+      "klein_pr": {
+        "sum_seconds": 26.031929783000635,
+        "median_ms": 29.519297000007327
+      }
+    },
+    "Linux-300": {
+      "radix_pr": {
+        "sum_seconds": 11.248736707009357,
+        "median_ms": 7.971452999981921
+      },
+      "dense_pr_nearest_radix": {
+        "sum_seconds": 100.60075319799739,
+        "median_ms": 90.2688165000427
+      },
+      "klein_pr": {
+        "sum_seconds": 221.03676560800227,
+        "median_ms": 261.57471749991146
+      }
+    }
+  },
+  "frozen_tex_sha256": "e03f24e19114a05d3928f1f870bf5aa4072388676feabcfe7506d03313166ee9",
+  "generator_sha256": "c51b9b96a126a04ea8420ee67e9d113550a9e4b51d241ea03fc7caa6e9c9d0c0",
+  "outputs_sha256": {
+    "paper/sparse_vus_absolute_results.tex": "2d7cf9923613faccd6261257085784ebfcc7d7001268e1aae153183d90c55944",
+    "paper/sparse_vus_engine_results.tex": "ea41c4a4b5a20849f10c9bd39118c136ef38310c45b2fb435e615491bf296912"
+  }
+}

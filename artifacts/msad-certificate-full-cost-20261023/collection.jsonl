@@ -1,0 +1,1 @@
+{"id": "46f558fc-3ea9-4bc4-89bd-365b4310e99e", "ended_utc": "2026-10-23T07:51:15.911933+00:00", "protocol_sha256": "651cb0cc4d5bde61195f8ef0da64a76694886dc06412b6314e3be22c27467c7a", "new_calls": 5400, "wall_seconds": 71.91806412499864, "scope": "Includes source/input verification, decode, synthetic warmup, IPC, metric calls and durable writes."}

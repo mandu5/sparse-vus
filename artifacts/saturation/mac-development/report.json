@@ -1,0 +1,559 @@
+{
+  "cases": 378,
+  "parity_pass": true,
+  "max_absolute_error": 1.3322676295501878e-15,
+  "widths": {
+    "30": {
+      "cases": 126,
+      "families": [
+        "CATSv2",
+        "Daphnet",
+        "Exathlon",
+        "IOPS",
+        "LTDB",
+        "MGAB",
+        "MITDB",
+        "MSL",
+        "NAB",
+        "NEK",
+        "OPPORTUNITY",
+        "Power",
+        "SED",
+        "SMAP",
+        "SMD",
+        "SVDB",
+        "SWaT",
+        "Stock",
+        "TAO",
+        "TODS",
+        "UCR",
+        "WSD",
+        "YAHOO"
+      ],
+      "comparisons": {
+        "active_full": {
+          "median_ratio": 1.0048181655715522,
+          "geomean_ratio": 1.0445724692608942,
+          "aggregate_ratio": 1.0068038691495673,
+          "geomean_ci95": [
+            0.9703833631245882,
+            1.1199964212283318
+          ],
+          "aggregate_ci95": [
+            0.9851301914319982,
+            1.0604878949619725
+          ],
+          "wins": 67,
+          "losses": 59,
+          "ties": 0,
+          "minimum_ratio": 0.33179663994729325,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 0.6441540799999999
+        },
+        "last_positive": {
+          "median_ratio": 1.0106167594992015,
+          "geomean_ratio": 1.0573063847116166,
+          "aggregate_ratio": 0.9961629332227414,
+          "geomean_ci95": [
+            1.0084060255751477,
+            1.1159550394439746
+          ],
+          "aggregate_ci95": [
+            0.9665684149774678,
+            1.0548301432051177
+          ],
+          "wins": 72,
+          "losses": 54,
+          "ties": 0,
+          "minimum_ratio": 0.2922657296585044,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 0.637345999
+        },
+        "radix": {
+          "median_ratio": 1.0159044911445054,
+          "geomean_ratio": 1.0285837917715561,
+          "aggregate_ratio": 1.001385197988403,
+          "geomean_ci95": [
+            0.950471482900045,
+            1.108589402368448
+          ],
+          "aggregate_ci95": [
+            0.972530930987774,
+            1.067254285336134
+          ],
+          "wins": 74,
+          "losses": 52,
+          "ties": 0,
+          "minimum_ratio": 0.31206156345972447,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 0.6406872089999999
+        },
+        "dense_radix": {
+          "median_ratio": 2.60233530119166,
+          "geomean_ratio": 2.446716745805927,
+          "aggregate_ratio": 3.5322108864363404,
+          "geomean_ci95": [
+            2.157679848224424,
+            2.759679375726444
+          ],
+          "aggregate_ci95": [
+            2.6109690703985695,
+            3.987449008314723
+          ],
+          "wins": 121,
+          "losses": 5,
+          "ties": 0,
+          "minimum_ratio": 0.8312294564582116,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 2.259911909
+        },
+        "klein": {
+          "median_ratio": 20.175161851930486,
+          "geomean_ratio": 20.960225711882295,
+          "aggregate_ratio": 17.94137813091552,
+          "geomean_ci95": [
+            18.144212756574458,
+            24.206369178001488
+          ],
+          "aggregate_ci95": [
+            16.13477644850673,
+            20.66491540267648
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 7.089758147887494,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 11.478910916
+        },
+        "sparse_comparison": {
+          "median_ratio": 2.041213518297578,
+          "geomean_ratio": 1.9772693675061832,
+          "aggregate_ratio": 2.5582957817327934,
+          "geomean_ci95": [
+            1.7454273362870198,
+            2.204797051025852
+          ],
+          "aggregate_ci95": [
+            2.151509660735433,
+            2.757503238531145
+          ],
+          "wins": 117,
+          "losses": 9,
+          "ties": 0,
+          "minimum_ratio": 0.5077289997075667,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 1.636800092
+        },
+        "dense_direct": {
+          "median_ratio": 3.2861021409795192,
+          "geomean_ratio": 3.0134337945729373,
+          "aggregate_ratio": 4.72454095793961,
+          "geomean_ci95": [
+            2.574026776453769,
+            3.5325198076667066
+          ],
+          "aggregate_ci95": [
+            3.379375225026859,
+            5.484523488031343
+          ],
+          "wins": 123,
+          "losses": 3,
+          "ties": 0,
+          "minimum_ratio": 0.7823883109292811,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 3.022765831
+        },
+        "dense_direct_radix": {
+          "median_ratio": 2.6718493179426392,
+          "geomean_ratio": 2.463042145354209,
+          "aggregate_ratio": 3.818333730910106,
+          "geomean_ci95": [
+            2.1322998063717886,
+            2.844356641915529
+          ],
+          "aggregate_ci95": [
+            2.7125634328306445,
+            4.405685294949477
+          ],
+          "wins": 121,
+          "losses": 5,
+          "ties": 0,
+          "minimum_ratio": 0.6827198129748685,
+          "candidate_seconds_sum": 0.639800958,
+          "reference_seconds_sum": 2.4429735790000002
+        }
+      }
+    },
+    "100": {
+      "cases": 126,
+      "families": [
+        "CATSv2",
+        "Daphnet",
+        "Exathlon",
+        "IOPS",
+        "LTDB",
+        "MGAB",
+        "MITDB",
+        "MSL",
+        "NAB",
+        "NEK",
+        "OPPORTUNITY",
+        "Power",
+        "SED",
+        "SMAP",
+        "SMD",
+        "SVDB",
+        "SWaT",
+        "Stock",
+        "TAO",
+        "TODS",
+        "UCR",
+        "WSD",
+        "YAHOO"
+      ],
+      "comparisons": {
+        "active_full": {
+          "median_ratio": 1.0572441241914028,
+          "geomean_ratio": 1.1515314497508686,
+          "aggregate_ratio": 1.0688989587574238,
+          "geomean_ci95": [
+            1.0392242027317535,
+            1.29466602471604
+          ],
+          "aggregate_ci95": [
+            0.9862215361170744,
+            1.28113616293119
+          ],
+          "wins": 88,
+          "losses": 38,
+          "ties": 0,
+          "minimum_ratio": 0.44314090967234987,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 1.024322627
+        },
+        "last_positive": {
+          "median_ratio": 1.0395552445949754,
+          "geomean_ratio": 1.1333041043746914,
+          "aggregate_ratio": 1.0669390162024976,
+          "geomean_ci95": [
+            1.0419349385320142,
+            1.2490353584678628
+          ],
+          "aggregate_ci95": [
+            1.0004373637512298,
+            1.2286210224378844
+          ],
+          "wins": 84,
+          "losses": 42,
+          "ties": 0,
+          "minimum_ratio": 0.39252312860526717,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 1.02244442
+        },
+        "radix": {
+          "median_ratio": 1.1914626560534451,
+          "geomean_ratio": 1.3250796229145199,
+          "aggregate_ratio": 1.2094620316463827,
+          "geomean_ci95": [
+            1.1824998731082343,
+            1.5103284151853964
+          ],
+          "aggregate_ci95": [
+            1.1156229618293563,
+            1.4589275971046052
+          ],
+          "wins": 112,
+          "losses": 14,
+          "ties": 0,
+          "minimum_ratio": 0.4265430953651928,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 1.159023793
+        },
+        "dense_radix": {
+          "median_ratio": 4.606717505563443,
+          "geomean_ratio": 4.673122983038329,
+          "aggregate_ratio": 6.605720865040746,
+          "geomean_ci95": [
+            3.9848354011567397,
+            5.499915085304918
+          ],
+          "aggregate_ci95": [
+            4.413896530213501,
+            7.766708752983718
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 1.5325613431720146,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 6.3302422499999995
+        },
+        "klein": {
+          "median_ratio": 41.29096370035039,
+          "geomean_ratio": 43.313136628980686,
+          "aggregate_ratio": 33.243830319596015,
+          "geomean_ci95": [
+            36.39790360312255,
+            51.39963943820547
+          ],
+          "aggregate_ci95": [
+            26.30437876880531,
+            43.428655676149916
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 10.33860107062482,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 31.857461667
+        },
+        "sparse_comparison": {
+          "median_ratio": 2.0873670971420983,
+          "geomean_ratio": 2.1027528339745825,
+          "aggregate_ratio": 2.3591458795438696,
+          "geomean_ci95": [
+            1.8491333067148703,
+            2.4053319664177617
+          ],
+          "aggregate_ci95": [
+            2.1158798023705123,
+            2.550179282316451
+          ],
+          "wins": 120,
+          "losses": 6,
+          "ties": 0,
+          "minimum_ratio": 0.6588488131880058,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 2.2607623339999994
+        },
+        "dense_direct": {
+          "median_ratio": 5.517979686644143,
+          "geomean_ratio": 5.461094046177842,
+          "aggregate_ratio": 8.199010417609966,
+          "geomean_ci95": [
+            4.642866118845749,
+            6.474529255529023
+          ],
+          "aggregate_ci95": [
+            5.144488507150929,
+            9.935320198220303
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 2.1976393568902184,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 7.8570867909999995
+        },
+        "dense_direct_radix": {
+          "median_ratio": 4.970361557311797,
+          "geomean_ratio": 5.018342995306649,
+          "aggregate_ratio": 7.3633349213031645,
+          "geomean_ci95": [
+            4.304714801838429,
+            5.879968587540034
+          ],
+          "aggregate_ci95": [
+            4.757406064064712,
+            8.79474674101304
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 2.085790194244507,
+          "candidate_seconds_sum": 0.9582969639999998,
+          "reference_seconds_sum": 7.0562615
+        }
+      }
+    },
+    "300": {
+      "cases": 126,
+      "families": [
+        "CATSv2",
+        "Daphnet",
+        "Exathlon",
+        "IOPS",
+        "LTDB",
+        "MGAB",
+        "MITDB",
+        "MSL",
+        "NAB",
+        "NEK",
+        "OPPORTUNITY",
+        "Power",
+        "SED",
+        "SMAP",
+        "SMD",
+        "SVDB",
+        "SWaT",
+        "Stock",
+        "TAO",
+        "TODS",
+        "UCR",
+        "WSD",
+        "YAHOO"
+      ],
+      "comparisons": {
+        "active_full": {
+          "median_ratio": 1.2707964472531685,
+          "geomean_ratio": 1.5338166983400094,
+          "aggregate_ratio": 1.254156114193163,
+          "geomean_ci95": [
+            1.285862629639971,
+            1.8643483462754993
+          ],
+          "aggregate_ci95": [
+            1.1275295923823032,
+            1.5887450213575058
+          ],
+          "wins": 111,
+          "losses": 15,
+          "ties": 0,
+          "minimum_ratio": 0.7407200340119469,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 2.694608172000001
+        },
+        "last_positive": {
+          "median_ratio": 1.1976011920186578,
+          "geomean_ratio": 1.4290237266658403,
+          "aggregate_ratio": 1.2424720135883949,
+          "geomean_ci95": [
+            1.2299152912235862,
+            1.6850629716593892
+          ],
+          "aggregate_ci95": [
+            1.125167796763597,
+            1.5054809042362212
+          ],
+          "wins": 105,
+          "losses": 21,
+          "ties": 0,
+          "minimum_ratio": 0.7226728062372456,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 2.6695043810000003
+        },
+        "radix": {
+          "median_ratio": 1.659764504879707,
+          "geomean_ratio": 2.050345652745438,
+          "aggregate_ratio": 1.4908113669443541,
+          "geomean_ci95": [
+            1.6988830843002547,
+            2.5226923749545596
+          ],
+          "aggregate_ci95": [
+            1.3354981574654858,
+            2.083442828406993
+          ],
+          "wins": 125,
+          "losses": 1,
+          "ties": 0,
+          "minimum_ratio": 0.9771295162838824,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 3.2030721269999995
+        },
+        "dense_radix": {
+          "median_ratio": 8.107223593249325,
+          "geomean_ratio": 8.040758785553697,
+          "aggregate_ratio": 8.89934028432831,
+          "geomean_ci95": [
+            6.456152136642752,
+            10.038131731540934
+          ],
+          "aggregate_ci95": [
+            5.700811871231972,
+            11.308390948649784
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 2.6181859261002587,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 19.12061408
+        },
+        "klein": {
+          "median_ratio": 72.43481596395449,
+          "geomean_ratio": 76.48596457059764,
+          "aggregate_ratio": 42.31602272812183,
+          "geomean_ci95": [
+            58.563172414019206,
+            98.7414770168585
+          ],
+          "aggregate_ci95": [
+            29.017277270686773,
+            76.14114466846219
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 8.25723171647868,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 90.91778875
+        },
+        "sparse_comparison": {
+          "median_ratio": 2.2854798813814847,
+          "geomean_ratio": 2.6693327672746547,
+          "aggregate_ratio": 2.077564652601165,
+          "geomean_ci95": [
+            2.2444457506836493,
+            3.198220973587336
+          ],
+          "aggregate_ci95": [
+            1.876938639244623,
+            2.7930758410070724
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 1.0903051181102361,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 4.463736713
+        },
+        "dense_direct": {
+          "median_ratio": 10.557129751753845,
+          "geomean_ratio": 9.869110748998864,
+          "aggregate_ratio": 10.480342720329974,
+          "geomean_ci95": [
+            7.894503845674851,
+            12.120508836177212
+          ],
+          "aggregate_ci95": [
+            6.391068379394845,
+            13.520345858517434
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 2.7441135262071246,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 22.517465584999997
+        },
+        "dense_direct_radix": {
+          "median_ratio": 10.123804698775142,
+          "geomean_ratio": 9.590510291247114,
+          "aggregate_ratio": 10.124759480595813,
+          "geomean_ci95": [
+            7.669966349563131,
+            11.743531314607827
+          ],
+          "aggregate_ci95": [
+            6.217974699928261,
+            13.135812571135476
+          ],
+          "wins": 126,
+          "losses": 0,
+          "ties": 0,
+          "minimum_ratio": 2.6669342481441984,
+          "candidate_seconds_sum": 2.1485428659999997,
+          "reference_seconds_sum": 21.753479751999997
+        }
+      }
+    }
+  },
+  "primary_decision": false,
+  "scope": "Original42series development partition, previously studied. No unseen-data claim. New algorithm derived without these runtime outcomes.",
+  "protocol_sha256": "80bca595d8784abfa3555f98cbd6dd027890fd0a87bb4a5727fc6de2cd7e7fa8",
+  "measurements_sha256": "eb6be47aad9c7d9a3387e4b5f7e530dfcd9330080164da54029c7605f030c38f",
+  "inputs_sha256": "4156372c95aafa93a32e1172428f720d05166dafd93853ab5dcf901475dcc841",
+  "phase": "development"
+}

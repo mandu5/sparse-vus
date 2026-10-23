@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-23T03:14:15.614557+00:00",
+  "status": "FROZEN_BEFORE_COLLECTION_TIMING",
+  "series": 308,
+  "models": [
+    "TimeMoE-200M_64",
+    "bolt_base_64",
+    "timesfm-1.0-200m_64"
+  ],
+  "families": [
+    "Exathlon",
+    "IOPS",
+    "LTDB",
+    "MGAB",
+    "MITDB",
+    "MSL",
+    "NAB",
+    "NEK",
+    "OPPORTUNITY",
+    "SMAP",
+    "SMD",
+    "SVDB",
+    "Stock",
+    "TODS",
+    "UCR",
+    "WSD",
+    "YAHOO"
+  ],
+  "max_buffer": 30,
+  "methods": [
+    "radix_pr",
+    "dense_pr_nearest_radix",
+    "klein_pr"
+  ],
+  "repetitions": 3,
+  "seed": 2026102307,
+  "orders": [
+    [
+      "radix_pr",
+      "klein_pr",
+      "dense_pr_nearest_radix"
+    ],
+    [
+      "klein_pr",
+      "radix_pr",
+      "dense_pr_nearest_radix"
+    ],
+    [
+      "klein_pr",
+      "radix_pr",
+      "dense_pr_nearest_radix"
+    ]
+  ],
+  "tie_atol": 1e-10,
+  "parity_atol": 1e-11,
+  "cache_relative": ".cache/vus-collection/mac-20261023",
+  "cache_bytes": 379354532,
+  "inputs_sha256": "91616f1b90953db33bc1ee9a9d46cf863d97fa2dafdea7eb4e2fdf2f29bf92ef",
+  "source_sha256": {
+    "experiments/benchmark_vus_collection.py": "9b30bb4bc2a15820ba3aa67ccb86608d5bced93ddff2d86e2081b380c3c8b5e3",
+    "experiments/advancement_data_gate.py": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    ".cache/fast_vus/LICENSE": "3b19b00e8d74e9e8f3db69d8407da5b5dd2078f3bf9c57ff47ff0fb9551db282",
+    "docs/vus_collection_protocol_20261023.md": "033223184f0718677fa68872714984b5907d3b8053f3403c1509ea9ccbca54dc"
+  },
+  "original_inputs_sha256": "783d6ec769682c8b0735fe4f4a17591ab4de042b2f2907e8ffbecbcc74690cd6",
+  "original_protocol_sha256": "5417a38ec43cc4471e17a0ca7d6af0b11ef448689042a1c5dec4fa8ef2dffb07",
+  "original_benchmark_sha256": "29fc773db307d20730c3b32d1b1daa4de06517e802194a08a07dc1ffc260cf96",
+  "source_archive_sha256": {
+    "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+    "TimeMoE-200M_64.score-range.zip": "72c7c1026c55fad8d1b84faf7adc9780d9bfec66e4fc8600cb90ce41a18037de",
+    "bolt_base_64.score-range.zip": "857904ab48fcdce59515b8c8d1d35db37f10fbab3735e2089691bece3de9ca1b",
+    "timesfm-1.0-200m_64.score-range.zip": "0b2221cedeabbac54bc3243002187312f649f8e445da3fe5ac485b915aecd315"
+  },
+  "source_file_locks": {
+    "TSB-AD-U.zip": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+    "TSB-AD-U-Eva.csv": "6f4e1d4ddbde195f9687f2c5a951b51faff54dda4b658d85f0c07e3e2879615a",
+    "score-archive-README.txt": "595fe740b433ffe355ae7a72700a50bed4bf98e2aac7f45816eb29081b4a4e94"
+  },
+  "array_preparation": "Original score NPY arrays preserved bit-for-bit without scaling, reordering, or new padding; binary CSV labels cast to int8 exactly as existing Corpus.load. Decoded and stored label identities are both recorded.",
+  "selection": "All 308 previously studied holdout series and all 3 original released score vectors; sorted series and model order; no duplication, sampling, or extrapolated collection size.",
+  "metric": "Full public PR-only calls including validation and preparation, exhaustive widths 0..30; Klein max_samples=n. No tie-run aggregation or active-prefix candidate.",
+  "timing": "One serial process, one numerical thread. Each whole pass starts before its first NPZ open and ends after the result JSON has been serialized, written and closed. 308 file loads, 924 full metric calls, 308 selections, one JSON write. Stage clocks are diagnostic; the decision uses the measured whole clock, never their sum or old case medians.",
+  "startup": "Imports, tiny synthetic dtype-matched JIT warmups, provenance checks and explicit filesystem warming are outside timing. Before each pass read and SHA-256-check all NPZ bytes, then reopen and materialize every array inside the timed workflow. Warm OS filesystem/page cache, no cache eviction or cold-disk claim; JSON close without fsync.",
+  "decision": "All 9 passes select identical best-model sets per series and maximum pairwise PR difference across methods/repetitions is <=1e-11; median whole-collection radix runtime is strictly smaller than both control medians. Report all 3 times per method; no CI or significance claim.",
+  "scope": "Local stored-score model selection, from disk input to JSON decisions. Excludes detector training/inference, source download, network, first-use compilation and cold-cache storage. Same previously studied 17-family corpus; not new-domain confirmation or an operational adoption study."
+}

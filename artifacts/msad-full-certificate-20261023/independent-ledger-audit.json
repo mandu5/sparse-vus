@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "audit_source_sha256": "ff97fff7efdcfc9104331cea0104e4e94c1f040749511dda27928c66b779f9e3",
+  "imports": "Python standard library only; no study/metric implementation",
+  "protocol_sha256": "fb1e1ba34bdcf6b4c21c098386fbd8e0efa46fe457c20a41d9c6905877d2ee66",
+  "records_sha256": "604a96f3f5ef1c42326a8786ae349381d49f715fac347196cafc5dc307eb4a46",
+  "report_sha256": "7e47200822c26bb3c608a65f8c1c9128986e99662c98b188e5d5d7d804e9dce5",
+  "endpoint_records_checked": 1536,
+  "comparison_pairs_checked": 3072,
+  "decisions_checked": 256,
+  "full_retained_thresholds_median": 96.0,
+  "comparison_budgets": {
+    "250": {
+      "certified_unique_winners": 128,
+      "certified_suboptimal_sampled_sets": 10,
+      "certified_regret_at_least_0_01": 8,
+      "harmful_series_indices": [
+        15,
+        20,
+        21,
+        32,
+        41,
+        66,
+        83,
+        112
+      ],
+      "harmful_families": {
+        "YAHOO": 4,
+        "KDD21": 2,
+        "MGAB": 1,
+        "GHL": 1
+      },
+      "maximum_full_interval_escape_beyond_prior_informational": 3.503711210051108e-12,
+      "retained_thresholds_median": 50.0
+    },
+    "1000": {
+      "certified_unique_winners": 128,
+      "certified_suboptimal_sampled_sets": 1,
+      "certified_regret_at_least_0_01": 0,
+      "harmful_series_indices": [],
+      "harmful_families": {},
+      "maximum_full_interval_escape_beyond_prior_informational": 9.426140423762774e-12,
+      "retained_thresholds_median": 68.0
+    }
+  }
+}

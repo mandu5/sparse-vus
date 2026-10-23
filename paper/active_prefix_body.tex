@@ -1,0 +1,329 @@
+\section{Introduction}
+Large anomaly-detection studies evaluate many score vectors against the same
+time-series labels. VUS integrates a range-aware precision--recall or ROC
+curve over tolerance widths, making evaluation itself a repeated analytics
+operation~\cite{paparrizos2022,boniol2025}. Efficient exact evaluation matters
+when an analyst wants exhaustive thresholds and every integer width rather
+than a sampled approximation. We study the evaluator after scores have been
+produced; detector training, inference, and data ingestion are separate costs.
+
+Support restriction is already established in optimized VUS, and released
+fast-VUS combines support-score sorting with cumulative
+sums~\cite{boniol2025,klein2026}. Our earlier public Sparse VUS implementation~\cite{sparsevus03}
+compresses negative-only threshold runs and uses binary64 radix preparation,
+but still performs maximum-support work at every width. A full-recall cutoff
+alone does not remove that preparation. We instead organize the computation
+around the active score prefix whose contribution can change the answer.
+
+Three features of the original metric make this nontrivial. First, its
+positive and negative denominators depend on which buffer points pass the
+threshold. Second, a separate existence factor rewards coverage of expanded
+anomaly components, which merge as width increases. Third, points with zero
+weight can share scores with active positions; removing them from a traversal
+must not split a global tie or change precision and false-positive counts.
+
+We address these features jointly. Complete global tie counts preserve the
+effects of omitted positions. An offline reversible-list schedule activates
+support positions in score order as widths increase. Incremental union-find
+tracks component merges. The threshold scan stops only after both a mass
+condition and complete component coverage permanently saturate recall. The
+resulting bound depends on the actual visited prefix, without a hidden
+width-by-support preprocessing term. A separating family establishes a
+quadratic-to-linear traversal gap even against the same active-list method
+stopped at the last original positive. A stronger single-interval guarantee
+does not require a favorable score ordering, provided active scores are
+distinct after conversion.
+
+The study separates these mathematical claims from practical efficiency.
+Whole-call timings include validation and preparation; matched ablations
+disable saturation or retain only last-positive stopping. A predeclared
+development corpus and a newly assembled external corpus test full-call
+performance, numerical parity, and failure cases. These experiments measure
+metric evaluation, not detector quality or complete model-selection pipelines.
+
+\section{Target and exact event representation}
+Let $y\in\{0,1\}^n$ contain both classes and $s\in\mathbb{R}^n$ contain finite
+scores after binary64 conversion. Larger scores indicate greater anomaly
+evidence. Let $P_0=\sum_i y_i$, and let the $K$ maximal original anomaly
+intervals have inclusive endpoints $[a_k,b_k]$ in temporal order. Widths are
+the integers $w=0,\ldots,L$. The continuous label $a_i^{(w)}$ is one on
+original positives. An interval contributes $\sqrt{1-d/w}$ outside its
+endpoints at integer distance $1\le d\le\lfloor w/2\rfloor$; contributions
+are summed and clipped at one. At $w=0$ no ramp is added. Expanded intervals
+that overlap merge, while adjacent nonoverlapping intervals remain separate.
+This is the original dynamic VUS target pinned to the official
+\texttt{RangeAUC\_volume\_opt} source at revision
+\texttt{467bace0}, configured for exhaustive thresholds~\cite{vusreference}.
+It is not shared by all software named VUS.
+
+For a threshold $t$, define
+\begin{align}
+ p_i(t)&=\ind\{s_i\ge t\}, & C(t)&=\sum_i p_i(t),\\
+ A(t)&=\sum_i y_i p_i(t), &
+ B(t)&=\sum_i(1-y_i)a_i^{(w)}p_i(t),\\
+ T(t)&=A(t)+B(t), & P(t)&=P_0+B(t)/2,\\
+ N(t)&=n-P(t).
+\end{align}
+Let $H(t)$ count expanded components hit by at least one predicted positive,
+and let $K_w$ count those components. The curve coordinates are
+\begin{align}
+ R(t)&=\min\{T(t)/P(t),1\}\,H(t)/K_w,\\
+ F(t)&=(C(t)-T(t))/N(t), & \pi(t)&=T(t)/C(t).
+\end{align}
+Precision is used only at nonempty retained thresholds, where $C(t)>0$;
+the initial origin requires no precision value.
+The denominator is positive: $P(t)\le(n+P_0)/2<n$. ROC integrates trapezoids
+from the origin through complete distinct descending score thresholds to
+the explicit terminal $(1,1)$. PR uses the right-step sum
+$\sum_j(R_j-R_{j-1})\pi_j$, with $R_0=0$. Each VUS scalar is the arithmetic
+mean over every width. Signed horizontal ROC increments are preserved; the
+derivation does not replace a dynamic denominator by a fixed one.
+
+Let $S_w=\{i:a_i^{(w)}>0\}$, $Q_w=|S_w|$, and $Q=Q_L$. For an active event
+with score $v_j$, precompute the complete global counts
+$c_j^>=|\{i:s_i>v_j\}|$ and $c_j^\ge=|\{i:s_i\ge v_j\}|$. They include
+positions outside $S_w$ and outside $S_L$.
+
+\begin{lemma}[Inactive threshold runs]
+Between consecutive active score events at a fixed width, $T,B,P,N,H,R$
+are constant. Omitted thresholds contribute a horizontal ROC rectangle and
+zero PR area. At an active score, its complete global numerical tie is a
+single transition.
+\end{lemma}
+\begin{proof}
+A newly admitted inactive point has zero weight and cannot hit an expanded
+component. Only $C$ changes. The horizontal increments
+$(\Delta C)/N$ telescope at fixed height $R$. All positions tied with an
+active event enter at its global threshold, so both counts must retain them.
+\end{proof}
+
+If the previous retained state is $(T_o,N_o,R_o,c_o)$, event $j$ contributes
+\begin{align}
+ f_j^-&=(c_j^>-T_o)/N_o,\\
+ \Delta\mathrm{ROC}_j&=
+ (c_j^>-c_o)R_o/N_o+(F_j-f_j^-)(R_j+R_o)/2,\\
+ \Delta\mathrm{PR}_j&=(R_j-R_o)T_j/c_j^\ge.
+\end{align}
+The initial state is $(0,n-P_0,0,0)$, and afterwards $c_o=c_j^\ge$.
+Connecting retained endpoints without the intervening rectangle is
+incorrect. For example, $y=(1,0,1,0)$, $s=(3,2,1,0)$ and $L=0$ give ROC
+area $0.625$; connecting support endpoints alone gives $0.8125$.
+
+\begin{lemma}[Two-distance geometry]
+The weight of a non-original point is determined by its distances $d_1,d_2$
+to the nearest two distinct original intervals. It is zero if
+$d_1>\lfloor w/2\rfloor$, one if $d_2\le\lfloor w/2\rfloor$, and
+$\sqrt{1-d_1/w}$ otherwise.
+\end{lemma}
+\begin{proof}
+Every active ramp has weight at least $1/\sqrt2$. Two contributions therefore
+clip to one. If exactly one interval contributes, its distance determines
+the weight. Distances to ordered intervals are monotone moving away on each
+side, so two neighbors on each side contain the nearest two intervals.
+\end{proof}
+
+\begin{proposition}[Fixed-binary64 preparation]
+\label{prop:radix}
+For finite binary64 scores, complete global tie counts, the score ordering
+of maximum support, and its two-distance geometry can be prepared in
+$O(n+Q+K)$ time and $O(n+Q)$ auxiliary words. Discrete work uses a word-RAM
+with input indices, counts, widths, and intermediate index arithmetic
+fitting words. Metric arithmetic, including square roots, has unit cost.
+\end{proposition}
+\begin{proof}
+Normalize signed zeros. Complement a negative score's bit pattern and flip
+the sign bit of a nonnegative score, then complement the result to obtain a
+descending numerical key. Eight stable byte-counting passes order these
+64-bit keys in $O(n)$ time. Scan complete ties and retain their starting and
+ending global ranks. Filter the permutation to maximum-support positions.
+A temporal scan with a monotone interval pointer computes nearest distances
+and owners in $O(Q+K)$ time. All arrays are input- or support-sized.
+\end{proof}
+Radix sorting and floating-point key transforms are established
+techniques~\cite{demaine2011radix,herf2001radix}. This assumption does not give
+linear sorting of arbitrary real scores or a bit-complexity bound for growing
+precision. Conversion defines numerical ties, including collisions between
+distinct large integer inputs.
+
+\section{Active-prefix algorithm}
+\begin{figure}[t]
+\begin{minipage}{\linewidth}
+\textbf{Preparation (once).} Rank all scores; retain global tie counts.
+Compute support distances and interval owners. Schedule activations and
+component unions. Record insertion neighbors by reverse deletions.\\[3pt]
+\textbf{For each width $w=0,\ldots,L$:}\\
+1. Restore newly active positions and union newly overlapping intervals.\\
+2. Set mass, hits and area to zero; start at the active list's head.\\
+3. Visit the next complete active score tie; update mass and stamped hits.\\
+4. Integrate its negative rectangle and global tied transition.\\
+5. If $A+B/2\ge P_0$ and $H=K_w$, add ROC tail $1-F$ and finish the width.\\
+6. Otherwise continue at step 3. Accumulate the width's scalar areas.\\[3pt]
+\textbf{Return} the two means, or PR alone with ROC arithmetic omitted.
+\end{minipage}
+\caption{Active-prefix evaluation. Preparation occurs once. Each width visits
+only its prefix and does not clear a support-sized or component-sized array.}
+\Description{Preparation ranks scores and schedules activations. A width loop
+restores active positions, merges components, then scans complete ties until
+mass and component coverage saturate recall.}
+\label{fig:active-algorithm}
+\end{figure}
+\input{saturation_method.tex}
+\input{saturation_mass_bound.tex}
+
+\subsection{Implementation and arithmetic contract}
+The implementation supplies a PR-only public call and a paired ROC--PR call.
+Both validate inputs, prepare ranking and geometry, and stream the mean over
+widths. They use the same active-list kernel; the PR route omits ROC arithmetic.
+Diagnostic profiles additionally return actual visited and active counts for
+every width and are never included in metric timings. A disabled-stop control
+visits the entire active list. A last-original-positive control has identical
+preparation and component bookkeeping but stops only at $A=P_0$.
+
+Active lists and interval unions are reused across widths, but area values
+cannot generally be reused for consecutive odd and even widths. Although
+$\lfloor w/2\rfloor$ can be equal, the ramp $\sqrt{1-d/w}$ changes. For
+$y=(0,1,0)$ and $s=(2,1,0)$, width-two PR is about $0.77705$, whereas
+width-three PR is about $0.85505$. Every integer width is therefore evaluated.
+
+The proofs describe exact metric arithmetic. Compiled implementations use
+finite precision without a claim of symbolic or bitwise identity. Summation
+order, square roots, and suffix telescoping can change final bits. Rounding
+can also change the saturation predicate; no directed-rounding certificate
+or all-input floating-point error bound is claimed. Testing
+therefore compares scalar values against separately constructed references,
+and timing decisions require the frozen numerical tolerance on every case.
+
+\section{Related work}
+Original VUS and its optimized implementations motivate restricting label
+work to maximum buffers~\cite{paparrizos2022,boniol2025}. Klein's released
+fast-VUS sorts support scores and uses cumulative sums at each width; it is
+the closest inspected external PR-only implementation~\cite{klein2026}.
+Our public version 0.3~\cite{sparsevus03} supplies support events, two-distance geometry and
+radix execution, and is an explicit baseline here. The present contribution
+is the active-prefix computation and its bounds, not those earlier
+ingredients by themselves.
+
+Sorted curve scans, complete ties and trapezoidal integration are standard
+ROC techniques~\cite{fawcett2006}. The scikit-learn 1.0.2 PR routine explicitly
+truncates its returned curve at full recall after constructing cumulative
+counts~\cite{sklearn102}. Thus the observation that recall-one suffixes add
+no PR area is established. Last-positive stopping is a necessary control.
+Our mass condition can stop before the last original positive, and its
+benefit is realized only when preparation also avoids full-support work.
+
+Reverse deletion and restoration follow the established reversible-list
+technique described by Knuth~\cite{knuth2000}. The union-find implementation
+uses union by size and path halving, whose amortized analysis is established
+by Tarjan and van Leeuwen~\cite{tarjan1984}. Our complexity proof accounts
+for how often this problem invokes those operations; it does not introduce
+a new list or disjoint-set data structure.
+
+Sylligardos reports preliminary CPU and GPU VUS acceleration in a Ph.D.
+workshop paper~\cite{sylligardos2025}. Public Sylligardos-attributed FF-VUS
+code exists in aVUSi~\cite{ffvus2026}. Its native geometry and integration
+contract differ from the original target used here, and the wrapper rounds
+scores. We retain this relevant prior work without interpreting its native
+runtime as an exact-target comparison. Similarly, package names alone do not
+establish semantic equivalence. Source revisions and concrete semantic
+witnesses are included with the artifact. The bounds and measurements here
+do not establish superiority over an unmeasured GPU implementation.
+
+\section{Experimental design}
+The primary task is one exact PR scalar for a fixed label vector, score
+vector and maximum width. Every method receives identical arrays in a case.
+The candidate, both stopping ablations, version-0.3 sparse radix, matched
+nearest-distance dense radix, actual pinned Klein fast-VUS, sparse comparison
+sorting, direct dense comparison sorting and direct dense radix form nine
+methods. All are PR-only in this study; Klein receives $n$ thresholds to
+evaluate the exhaustive target. The other evaluators process distinct global
+ties. Repeated tied thresholds in Klein add zero recall increments.
+
+The development set contains 42 previously studied series and three released
+foundation-model score vectors per series~\cite{zhu2026}. It is not an unseen
+corpus. The external set was selected from mTSBench metadata before scores
+or metric outcomes were computed~\cite{mtsbench}. We excluded the 23 earlier
+source-family names with recorded alias normalization, restricted test
+lengths to at most 100,000, and selected the lexicographically first two
+eligible series per family. This yields 12 series from nine source families,
+457,171 rows in total. Source-family disjointness does not prove independent
+real-world domains. GutenTAG synthetic data and reused source
+datasets are identified in the manifest.
+
+Four label-free CPU scoring procedures generate the external inputs:
+Isolation Forest, standardized PCA reconstruction error, reference-set
+nearest-neighbor distance, and robust marginal deviation. Their preprocessing,
+seeds and parameters were fixed before metric evaluation. These are diverse
+score inputs, not claims of anomaly-detection quality or reproductions of a
+benchmark's detector pipeline. Model generation is outside the timed metric
+calls. Raw and derived array hashes bind every case.
+
+Maximum width 30 is primary; 100 and 300 are secondary and stress conditions.
+Thus development has 378 series--model--width cases, while external
+confirmation has 144; the primary external width contains 48 score vectors
+from 12 series, not 144 independent datasets. Each case has three warmed,
+serial, complete-call timing repetitions in a seeded randomized method order.
+Validation, score conversion, sorting and all preparation are timed. Data I/O,
+imports, JIT warm-up and diagnostic profiles are excluded. Compute libraries
+and Numba use one thread. Source and input hashes are frozen before each
+run, and all losses are retained. Environment and process snapshots are
+recorded; the local host is not a dedicated isolated benchmark machine.
+The Mac runs use an Apple M1 Pro with Python 3.12.4. The hosted Ubuntu
+24.04 runner reports an AMD EPYC 9V74 processor, four exposed logical CPUs,
+and Python 3.12.15. Both use NumPy 1.26.4 and Numba 0.59.1. Measurements
+use one compute thread on each host; host and background-load effects are
+not experimentally separated.
+
+The predeclared primary criterion requires maximum absolute discrepancy at
+most $10^{-11}$ on all cases and lower 95\% family-cluster bootstrap bounds
+above one for both geometric and aggregate speed ratios against each of the
+eight controls at width 30. Ratios are control time divided by candidate
+time. We pair medians within a run and resample source families 2,000 times.
+These intervals characterize the observed family/case variation, not
+timing-repeat uncertainty, unseen machines, or the population of all domains.
+Aggregate ratios compare sums of per-case medians. Passing this criterion
+supports the stated experiment; it does not establish global firstness.
+
+\section{Results}
+\input{active_prefix_results.tex}
+
+\section{Limitations and reproducibility}
+The active-prefix bound is adaptive. Component coverage can require low-ranked
+points, and a large terminating tie can force traversal of most active
+support. Pointer access, union-find and preparation introduce overhead. A
+reduction in visited positions therefore need not reduce full-call runtime.
+The scalar algorithm does not return the entire threshold surface. Its
+linear preparation assumes finite fixed-width binary64 keys; exact real
+arithmetic in the theorem is distinct from implemented floating-point math.
+
+The small external corpus was selected reproducibly but does not exhaust
+anomaly-label geometries, score ties or source domains. Its four score
+generators share simple CPU preprocessing, and no detector-quality claim is
+made. Hardware conclusions are limited to the measured environments. GPU
+acceleration and methods with different native VUS definitions require
+separate fidelity and hardware comparisons.
+
+The artifact contains the implementation, tests, theorem sources, independent
+oracle, frozen protocols, append-only measurements, every slower case and
+report reconstruction code. External data are downloaded from pinned public
+sources and regenerated locally; the artifact does not relicense or bundle
+raw third-party data. Source-specific data terms are recorded separately.
+The Linux reproduction preserves raw/label identity and reports every score
+hash match or difference instead of assuming bitwise cross-platform scores.
+
+\paragraph{AI assistance disclosure.}
+OpenAI Codex assisted with literature retrieval, algorithm and proof
+development, implementation, experiment orchestration, testing, and manuscript
+drafting. Separately prompted agent contexts constructed the oracle and
+reviewed mathematical and empirical claims within the same workflow. These
+checks are internal verification, not independent laboratory replication or
+external peer review. The artifact records the generated code and measured
+evidence; AI tools are not listed as authors.
+
+\section{Conclusion}
+Exact dynamic VUS can be evaluated by active score prefixes while accounting
+analytically for omitted thresholds. Reversible activation and incremental
+component unions remove the per-width maximum-support setup that would
+otherwise hide behind a stopping rule. The resulting instance-sensitive bound,
+the single-interval guarantee, and the separation from last-positive stopping
+characterize when less traversal is possible. The empirical study separately
+tests whether those savings survive complete-call costs.

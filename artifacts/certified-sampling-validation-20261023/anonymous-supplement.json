@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "zip_path": "paper/certified-sampling-supplement.zip",
+  "zip_sha256": "898d1550a8aaba59fe655c48ecfdbeb86690b062cafc36f3eab24efe1ee84214",
+  "zip_bytes": 5162442,
+  "archive_files": 101,
+  "original_files": 97,
+  "audited_dependency_count": 51,
+  "anonymization_manifest_sha256": "5f76b02d28cf124d12c4d49b9c7f13440a8b84eedd8ae702cc26df15a8013c5e",
+  "fresh_extraction_audit_sha256": "428ed0a0da6222938c41f31d2847e4022a2b3ebaacb688e6e2b7635c23132220",
+  "fresh_extraction_audit_status": "PASS",
+  "transport_checksum_and_SHA_literal_auditor_verification": "PASS",
+  "reacquisition_source_metadata_closure": "PASS: all 128 cases and 12 models bound; no raw download rerun",
+  "all_original_files_unchanged": true,
+  "all_scientific_sources_byte_identical": true,
+  "metadata_redactions": {
+    "machine_hostname": 2
+  },
+  "metadata_files_changed": 18,
+  "numeric_JSON_lexemes_integer_strings_and_nontext_tree_unchanged": true,
+  "builder_tests": {
+    "passed": 8
+  },
+  "included_scientific_tests": {
+    "passed": 2682,
+    "warnings": 1,
+    "duration_seconds": 60.45,
+    "tested_preview_sha256": "f732026e7e2a12bc560cd2ccb55a9f0c56262cbebd2b96ad40aa1dcd2d5b4d70",
+    "final_identical_test_source_and_config_files": 52,
+    "all_tested_executable_bytes_equal_in_final": true,
+    "additional_final_executable": "experiments/msad_primary_first_20261023.py; unchanged frozen scheduling wrapper"
+  },
+  "upstream_references_fetched_and_hash_checked": [
+    "original VUS",
+    "Klein fast-VUS"
+  ],
+  "preview_change": "Added frozen scheduling wrapper and strengthened builder invariance assertions; no scientific data or implementation change",
+  "no_external_upload": true
+}

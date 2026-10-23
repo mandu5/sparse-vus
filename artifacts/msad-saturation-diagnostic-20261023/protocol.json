@@ -1,0 +1,43 @@
+{
+  "kind": "Exploratory mechanism attribution AFTER observing primary results",
+  "created_utc": "2026-10-23T05:59:47.574066+00:00",
+  "selection": "All eight cases meeting frozen primary best-case regret >=.01, all twelve models; not a prevalence estimate",
+  "series": [
+    "GHL/02_Lev_fault_Temp_corr_seed_17_vars_23.test.csv@13.out",
+    "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+    "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+    "MGAB/1.test.out",
+    "YAHOO/YahooA3Benchmark-TS40_data.out",
+    "YAHOO/YahooA4Benchmark-TS75_data.out",
+    "YAHOO/Yahoo_A1real_33_data.out",
+    "YAHOO/Yahoo_A2synthetic_44_data.out"
+  ],
+  "models": [
+    "AE",
+    "CNN",
+    "HBOS",
+    "IFOREST",
+    "IFOREST1",
+    "LOF",
+    "LSTM",
+    "MP",
+    "NORMA",
+    "OCSVM",
+    "PCA",
+    "POLY"
+  ],
+  "width": 30,
+  "thresholds": 250,
+  "intervention": "Insert first exact saturation threshold separately at every width, at most one extra retained threshold",
+  "decomposition": "sampled-exact = (sampled-saturation_inserted)+(saturation_inserted-exact); first term splits admitted buffer, original mass and count dilution",
+  "extraction_sha256": "949ef2358d49621308e24ec65db7541dbd86e36d24e36de4d3bd989ac25d5144",
+  "manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "sources": {
+    "experiments/msad_saturation_diagnostic.py": "ad89bac9c4cf51230ec2e91d0e2aae10a58bfa8504350bfcb489e45961da3cd9",
+    "src/sparse_vus/sampling_bounds.py": "ec1511ff448373096bc3e6d253e3e748a8182bc04c4d20e2d5ca5391a8adb790",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646"
+  }
+}
