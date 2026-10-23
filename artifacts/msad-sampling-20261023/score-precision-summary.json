@@ -1,0 +1,153 @@
+{
+  "status": "ALL_1536_ORIGINAL_STORED_SCORE_VECTORS",
+  "scope": "Observed source precision and complete ties; no scores changed or repaired. Having <=H distinct scores does not imply a rank-uniform H-grid hits every distinct threshold.",
+  "source_manifest_sha256": "dae17c7e3e370c5d4d1206762ab201435f1c693d1ececf80f506972b72b0e96d",
+  "per_model": {
+    "AE": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        38,
+        88.0,
+        101
+      ],
+      "distinct_fraction_median": 0.0015703370365161957,
+      "largest_tie_fraction_median": 0.08920762755034682,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "CNN": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        13,
+        87.0,
+        101
+      ],
+      "distinct_fraction_median": 0.0018039716012239562,
+      "largest_tie_fraction_median": 0.11669476601185855,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "HBOS": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        4,
+        101.0,
+        101
+      ],
+      "distinct_fraction_median": 0.0015781496585884154,
+      "largest_tie_fraction_median": 0.13859954183832351,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "IFOREST": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        38,
+        100.0,
+        101
+      ],
+      "distinct_fraction_median": 0.00238405711574007,
+      "largest_tie_fraction_median": 0.0785385225669578,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "IFOREST1": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        2,
+        95.5,
+        101
+      ],
+      "distinct_fraction_median": 0.0016724376080534996,
+      "largest_tie_fraction_median": 0.12540859116761116,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "LOF": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        1,
+        79.0,
+        101
+      ],
+      "distinct_fraction_median": 0.001004075573029672,
+      "largest_tie_fraction_median": 0.4865588510875799,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 5
+    },
+    "LSTM": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        3,
+        88.5,
+        101
+      ],
+      "distinct_fraction_median": 0.0017707227367234498,
+      "largest_tie_fraction_median": 0.15551840511694626,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "MP": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        2,
+        95.0,
+        101
+      ],
+      "distinct_fraction_median": 0.000920009200092001,
+      "largest_tie_fraction_median": 0.10784553690645003,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "NORMA": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        59,
+        101.0,
+        101
+      ],
+      "distinct_fraction_median": 0.0025364057778570074,
+      "largest_tie_fraction_median": 0.0549222602739726,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "OCSVM": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        70,
+        99.0,
+        101
+      ],
+      "distinct_fraction_median": 0.0022701681350334527,
+      "largest_tie_fraction_median": 0.048339209614121206,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "PCA": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        10,
+        101.0,
+        101
+      ],
+      "distinct_fraction_median": 0.0023604358080199167,
+      "largest_tie_fraction_median": 0.10227092657065626,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    },
+    "POLY": {
+      "vectors": 128,
+      "distinct_scores_min_median_max": [
+        9,
+        68.0,
+        101
+      ],
+      "distinct_fraction_median": 0.0011489948595344265,
+      "largest_tie_fraction_median": 0.1531317754878606,
+      "at_most_250_distinct_scores": 128,
+      "constant_score_vectors": 0
+    }
+  },
+  "vectors_at_most_250_distinct": 1536,
+  "constant_vectors": 5
+}

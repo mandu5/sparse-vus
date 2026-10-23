@@ -1,0 +1,61 @@
+{
+  "study": "msad-certificate-20261023",
+  "schema_version": 1,
+  "frozen_utc": "2026-10-23T05:48:21.896458+00:00",
+  "freeze_status": "before this study reads any corpus metric outcome",
+  "manifest": "artifacts/msad-corpus-20261023/manifest.json",
+  "manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "series_count": 128,
+  "models": [
+    "AE",
+    "CNN",
+    "HBOS",
+    "IFOREST",
+    "IFOREST1",
+    "LOF",
+    "LSTM",
+    "MP",
+    "NORMA",
+    "OCSVM",
+    "PCA",
+    "POLY"
+  ],
+  "source_families": 16,
+  "width": 30,
+  "budgets": [
+    250,
+    1000
+  ],
+  "primary_budget": 250,
+  "secondary_budget": 1000,
+  "target": "Ideal real-arithmetic original dynamic VUS-PR with exact sqrt weights",
+  "certificate_method": "certified_sampled_pr",
+  "weight_bits": 32,
+  "output_bits": 56,
+  "sampled_method": "sampled_pr_radix_jit",
+  "reference_float_method": "sparse_pr_radix_jit",
+  "sampled_winner_tolerance": 1e-10,
+  "winner_certificate": "One model lower endpoint strictly exceeds every other upper endpoint; Python integer cross products only",
+  "sampled_set_regret_certificate": "max(model lower)-max(sampled-winner-set upper), clipped at zero; strict positivity certifies every approximate winner is suboptimal",
+  "scalar_containment": "Fraction.from_float(exhaustive_float) in exact dyadic interval is informational only; not the certified target and no epsilon assertion",
+  "coverage": "Every128series by12models atBOTH budgets; no selection based on outcomes",
+  "aggregation": [
+    "pooled case counts",
+    "per family",
+    "equal-family rates"
+  ],
+  "conditional_rate_scope": "Finite selected published-score corpus; no general population claim",
+  "failure_policy": "Append failure record, retain denominator and continue; complete-case rates accompanied by attempted coverage",
+  "timeout_seconds_per_model_budget": 120,
+  "timing": "No runtime measurements or timing claims in this study; ordinary run timestamps are provenance",
+  "sources": {
+    "experiments/msad_certificate_study.py": "872ea39cdb0dc88a0027c89b731a741414e4cb8bf34e3d4fe053056160c8e8b3",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    "src/sparse_vus/sampling_bounds.py": "ec1511ff448373096bc3e6d253e3e748a8182bc04c4d20e2d5ca5391a8adb790",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1"
+  }
+}

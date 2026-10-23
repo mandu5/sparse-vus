@@ -1,0 +1,1474 @@
+{
+  "completed_utc": "2026-10-23T06:03:55.053224+00:00",
+  "manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "source_sha256": "fa67d82c1458220dcb05221768a2a3f114ae863ea3f9816fd5d7264b60647c2d",
+  "source_log": "artifacts/msad-sampling-20261023/records.jsonl",
+  "source_log_prefix_bytes": 22129795,
+  "source_log_prefix_sha256": "f8937ac6e333ee7560de0c34a0f6641ff4160e013a381d4a408727c5cb34602c",
+  "overlap_audit_sha256": "281c9af140cc9378ad993d35c637359ccc54eed637c190a36767be878c02b900",
+  "scope": "Independent L30/H250 primary table; post-acquisition overlap subgroup is descriptive, not a replacement primary panel.",
+  "primary_fixed_128": {
+    "series": 128,
+    "practical_best_case_regret_cases": 8,
+    "practical_fraction": 0.0625,
+    "affected_families": {
+      "YAHOO": 4,
+      "KDD21": 2,
+      "MGAB": 1,
+      "GHL": 1
+    },
+    "maximum_best_case_regret": 0.39857503023809177,
+    "minimum_signed_error": -0.5601231694325864,
+    "maximum_signed_error": 0.16169228120233792
+  },
+  "bounded_nonmatch_108": {
+    "series": 108,
+    "practical_best_case_regret_cases": 4,
+    "practical_fraction": 0.037037037037037035,
+    "affected_families": {
+      "YAHOO": 3,
+      "GHL": 1
+    },
+    "maximum_best_case_regret": 0.23620847848121473,
+    "minimum_signed_error": -0.40805544581979836,
+    "maximum_signed_error": 0.06643327758361761
+  },
+  "joint_overlap_20": {
+    "series": 20,
+    "practical_best_case_regret_cases": 4,
+    "practical_fraction": 0.2,
+    "affected_families": {
+      "KDD21": 2,
+      "MGAB": 1,
+      "YAHOO": 1
+    },
+    "maximum_best_case_regret": 0.39857503023809177,
+    "minimum_signed_error": -0.5601231694325864,
+    "maximum_signed_error": 0.16169228120233792
+  },
+  "parity": {
+    "klein250": {
+      "comparisons": 1536,
+      "maximum_error": 1.0547118733938987e-15
+    },
+    "dense_exact": {
+      "comparisons": 360,
+      "maximum_error": 4.440892098500626e-15
+    },
+    "klein_exact": {
+      "comparisons": 360,
+      "maximum_error": 3.3306690738754696e-16
+    }
+  },
+  "rows": [
+    {
+      "series": "Daphnet/S03R01E0.test.csv@8.out",
+      "family": "Daphnet",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.0005396834229821068,
+      "maximum_signed_error": 9.726293660328178e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Dodgers/101-freeway-traffic.test.out",
+      "family": "Dodgers",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.002307236430066195,
+      "maximum_signed_error": 0.00039617340763638265,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_1.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0010566300354452607,
+      "maximum_signed_error": 0.000686998166766456,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/47_Lev_corr_Temp_fault_seed_197_vars_23.test.csv@1.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": 0.0,
+      "maximum_signed_error": 0.0,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Genesis/genesis-anomalies.test.csv@17.out",
+      "family": "Genesis",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -3.400871097867207e-06,
+      "maximum_signed_error": 7.379194590000776e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-adb2fde9-8589-3f5b-a410-5fe14386c7af.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.042864334970393804,
+      "maximum_signed_error": 2.9124712486998383e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.05452181654626603,
+      "maximum_signed_error": 0.0007696698690802806,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MGAB/2.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.5601231694325864,
+      "maximum_signed_error": 3.389886162962364e-06,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MITDB/105.test.csv@2.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0057907230159426615,
+      "maximum_signed_error": 4.071491269708183e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_2.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "HBOS"
+      ],
+      "minimum_signed_error": -0.002046991903076112,
+      "maximum_signed_error": 0.0023346540521697046,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "OPPORTUNITY/S4-ADL1.test.csv@16.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "HBOS"
+      ],
+      "minimum_signed_error": -0.0010425677543779571,
+      "maximum_signed_error": 0.007618688715910538,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Occupancy/room-occupancy-1.test.csv@3.out",
+      "family": "Occupancy",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.0003355469069277195,
+      "maximum_signed_error": 0.0003869925590146428,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-2-7.test.csv@20.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.0014767475921844825,
+      "maximum_signed_error": 5.426101568627856e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/812.test.csv@1.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.004724713543174552,
+      "maximum_signed_error": 0.0003251223161468697,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-19.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0008126624207225874,
+      "maximum_signed_error": 0.00014214942747081682,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.23620847848121473,
+      "sampled_winner_set": [
+        "LOF",
+        "PCA"
+      ],
+      "minimum_signed_error": -0.35714285714285754,
+      "maximum_signed_error": 0.06643327758361761,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Daphnet/S03R01E1.test.csv@7.out",
+      "family": "Daphnet",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -3.308987590722179e-05,
+      "maximum_signed_error": 0.0006086563700821723,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_36.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.008885593026911887,
+      "maximum_signed_error": 0.0016971178590491909,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/12_Lev_fault_Temp_corr_seed_43_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.0005780162133978209,
+      "maximum_signed_error": 0.000933701459328265,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-6efa3a07-4544-34a0-b921-a155bd1a05e8.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.0035581718275973784,
+      "maximum_signed_error": 8.451109821859537e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "family": "KDD21",
+      "best_case_regret": 0.39857503023809177,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.44458388435529433,
+      "maximum_signed_error": 0.16169228120233792,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.2517241171624629,
+      "sampled_winner_set": [
+        "MP"
+      ],
+      "minimum_signed_error": -0.5258846792515217,
+      "maximum_signed_error": 3.7836197488315057e-06,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MITDB/219.test.csv@1.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0024126482986411846,
+      "maximum_signed_error": 0.0007204291362102877,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_11.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.02828771319393847,
+      "maximum_signed_error": 0.005620696602243458,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@126.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -1.8037008116297826e-05,
+      "maximum_signed_error": 0.0009678942209277452,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Occupancy/room-occupancy-0.test.csv@1.out",
+      "family": "Occupancy",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0008590157513302943,
+      "maximum_signed_error": 0.00018875229648096514,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-3-10.test.csv@14.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.02172087625933894,
+      "maximum_signed_error": 0.0005076992822048432,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/883.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.01674709836274757,
+      "maximum_signed_error": -7.992022201434856e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-29.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.0013754077885632654,
+      "maximum_signed_error": 0.0004024900532298148,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_54_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.043904032203801124,
+      "maximum_signed_error": 0.006596735530409403,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Daphnet/S02R01E0.test.csv@3.out",
+      "family": "Daphnet",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.001885288613957814,
+      "maximum_signed_error": 0.0004798693987687619,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_23.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.012678617954388904,
+      "maximum_signed_error": 0.0031140597534203285,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/02_Lev_fault_Temp_corr_seed_17_vars_23.test.csv@13.out",
+      "family": "GHL",
+      "best_case_regret": 0.02722035169702184,
+      "sampled_winner_set": [
+        "HBOS"
+      ],
+      "minimum_signed_error": -0.036279805617501076,
+      "maximum_signed_error": 0.004572117100498277,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-8723f0fb-eaef-32e6-b372-6034c9c04b80.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.07384810149381874,
+      "maximum_signed_error": 0.0004484437025691762,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "KDD21/072_UCR_Anomaly_DISTORTEDltstdbs30791ES_20000_52600_52800.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.08464026898548827,
+      "maximum_signed_error": 0.03247439792569551,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MGAB/7.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.39943888444979314,
+      "maximum_signed_error": 3.3973356995311427e-06,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "NAB/NAB_data_tweets_8.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.010822510822510845,
+      "maximum_signed_error": 0.00010600249401748751,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "OPPORTUNITY/S2-ADL3.test.csv@91.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "MP"
+      ],
+      "minimum_signed_error": -0.00023754053730676294,
+      "maximum_signed_error": 0.0009666038118615466,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-3-8.test.csv@22.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.008447178122240995,
+      "maximum_signed_error": 1.8117589850381866e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/889.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0016783421786177033,
+      "maximum_signed_error": 0.00030674231762201076,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-13.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0005113193476113387,
+      "maximum_signed_error": 0.00018631357712550756,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/YahooA4Benchmark-TS75_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.01505515317666617,
+      "sampled_winner_set": [
+        "LSTM"
+      ],
+      "minimum_signed_error": -0.12427858993439478,
+      "maximum_signed_error": 0.0021559598861017326,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Daphnet/S03R03E4.test.csv@1.out",
+      "family": "Daphnet",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.005261985472680142,
+      "maximum_signed_error": 0.011626728261759284,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_32.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.006630529544056296,
+      "maximum_signed_error": -0.0002265207426432464,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/09_Lev_fault_Temp_corr_seed_37_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0010914248086734881,
+      "maximum_signed_error": 0.00026839007170666434,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-e0747cad-8dc8-38a9-a9ab-855b61f5551d.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LSTM"
+      ],
+      "minimum_signed_error": -0.03634978527516114,
+      "maximum_signed_error": 0.002752819548421201,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "KDD21/115_UCR_Anomaly_CIMIS44AirTemperature3_4000_6520_6544.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.0917336602353549,
+      "maximum_signed_error": 0.041777348348033705,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MGAB/8.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.3778288573309367,
+      "maximum_signed_error": 1.707315766642098e-06,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MITDB/212.test.csv@1.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -7.660314681257659e-07,
+      "maximum_signed_error": 2.4271914260721355e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "NAB/NAB_data_CloudWatch_2.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.0019009066179804246,
+      "maximum_signed_error": 0.0005221122925065103,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL5.test.csv@120.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "HBOS"
+      ],
+      "minimum_signed_error": -0.0010998437216806559,
+      "maximum_signed_error": 0.006308296671141966,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-1-7.test.csv@34.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.0026644572014272727,
+      "maximum_signed_error": 0.0005463620760639831,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/820.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0018311577102850807,
+      "maximum_signed_error": 0.0018023350254058879,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-32.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.001392630928794436,
+      "maximum_signed_error": 0.00018514910639189086,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/Yahoo_A2synthetic_10_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "CNN"
+      ],
+      "minimum_signed_error": -0.29166666666666685,
+      "maximum_signed_error": 0.0009071798886311003,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Daphnet/S09R01E0.test.csv@1.out",
+      "family": "Daphnet",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.0005537909180310038,
+      "maximum_signed_error": 0.0008512903786363213,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_25.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.015028343333145844,
+      "maximum_signed_error": 0.0018132884805174276,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/04_Lev_fault_Temp_corr_seed_23_vars_23.test.csv@2.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.20544821444174946,
+      "maximum_signed_error": 0.014046472672822996,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-0efb375b-b902-3661-ab23-9a0bb799f4e3.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "MP"
+      ],
+      "minimum_signed_error": -0.012662973107619026,
+      "maximum_signed_error": 0.005517132025477434,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "KDD21/116_UCR_Anomaly_CIMIS44AirTemperature4_4000_5549_5597.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.11418420782581062,
+      "maximum_signed_error": 0.01115018776699056,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MGAB/9.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.30881661581175823,
+      "maximum_signed_error": 3.3362626580334814e-05,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "NAB/NAB_data_art1_2.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.006285313332263551,
+      "maximum_signed_error": 0.0025154919244035345,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL3.test.csv@122.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0001158171261519958,
+      "maximum_signed_error": 0.0002702851442206722,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-2-9.test.csv@15.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.002780408496134368,
+      "maximum_signed_error": 0.0017530157556946424,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/855.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0008780914345916102,
+      "maximum_signed_error": 0.0003777113642980945,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-2.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.0006360755683945396,
+      "maximum_signed_error": 0.00011813337739211005,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/YahooA3Benchmark-TS40_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.01733616634180679,
+      "sampled_winner_set": [
+        "LSTM"
+      ],
+      "minimum_signed_error": -0.0783625799987202,
+      "maximum_signed_error": 0.0015035385560068226,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_42.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0022592310099338597,
+      "maximum_signed_error": 0.0007105941030332019,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/10_Lev_fault_Temp_corr_seed_39_vars_23.test.csv@4.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "HBOS"
+      ],
+      "minimum_signed_error": -0.017912192537674086,
+      "maximum_signed_error": 0.003932806286865383,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-43115f2a-baeb-3b01-96f7-4ea14188343c.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.046005467779693665,
+      "maximum_signed_error": 0.000195468806740786,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "KDD21/184_UCR_Anomaly_resperation10_48000_130700_131880.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.017378993846385273,
+      "maximum_signed_error": 8.768076871718336e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MGAB/3.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.37775100432537717,
+      "maximum_signed_error": 1.1649039066558009e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MITDB/221.test.csv@2.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.0005051583103059532,
+      "maximum_signed_error": 2.920595949085225e-06,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_3.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.0013944420753616016,
+      "maximum_signed_error": 0.0003645893439321868,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "OPPORTUNITY/S3-ADL4.test.csv@108.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.007788989083022918,
+      "maximum_signed_error": 0.0003530470870481417,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-3-4.test.csv@7.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.004400495691809711,
+      "maximum_signed_error": 0.0013407784098044828,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/878.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0019062170007957957,
+      "maximum_signed_error": 0.00019425346508611385,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-6.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.0006785289332650879,
+      "maximum_signed_error": 0.00041247828194823644,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/YahooA4Benchmark-TS17_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.0018926254395873476,
+      "sampled_winner_set": [
+        "LSTM"
+      ],
+      "minimum_signed_error": -0.11917052858352217,
+      "maximum_signed_error": 0.0,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Daphnet/S03R02E0.test.csv@3.out",
+      "family": "Daphnet",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.0017895054554932233,
+      "maximum_signed_error": 0.0008247869339802483,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_24.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.036024455182176715,
+      "maximum_signed_error": 0.003678688209972747,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/08_Lev_fault_Temp_corr_seed_33_vars_23.test.csv@4.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "HBOS"
+      ],
+      "minimum_signed_error": -0.022806513583223165,
+      "maximum_signed_error": 0.0009999913102490508,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-6a757df4-95e5-3357-8406-165e2bd49360.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.009364162697265227,
+      "maximum_signed_error": 0.002773903590269078,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+      "family": "KDD21",
+      "best_case_regret": 0.05571485122574826,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.12305168170631664,
+      "maximum_signed_error": 0.0010070905759361967,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MGAB/10.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.2218843378344626,
+      "maximum_signed_error": 0.0,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MITDB/213.test.csv@1.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "OCSVM"
+      ],
+      "minimum_signed_error": -0.0017688182519772777,
+      "maximum_signed_error": 0.0007950665522772904,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "NAB/NAB_data_Traffic_6.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "OCSVM"
+      ],
+      "minimum_signed_error": -0.003482599021831345,
+      "maximum_signed_error": 0.0017664878007557228,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "OPPORTUNITY/S2-ADL2.test.csv@104.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.002778982393882065,
+      "maximum_signed_error": 0.02023287605520807,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-3-6.test.csv@31.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.006810787772196819,
+      "maximum_signed_error": 7.376218300542137e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/806.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.02435826812239965,
+      "maximum_signed_error": 0.0017237087684529584,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-18.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0012198605970413223,
+      "maximum_signed_error": 0.00010101283257335503,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/YahooA3Benchmark-TS71_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "CNN"
+      ],
+      "minimum_signed_error": -0.019075525957880313,
+      "maximum_signed_error": 0.0027093718681201473,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "Daphnet/S01R02E0.test.csv@4.out",
+      "family": "Daphnet",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.0005493741892949461,
+      "maximum_signed_error": 0.0011254973248263356,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_2.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.005821859212344682,
+      "maximum_signed_error": 0.0010643856041888111,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-1c6d7a26-1f1a-3321-bb4d-7a9d969ec8f0.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.17885915634884378,
+      "maximum_signed_error": 0.000512986654694042,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "KDD21/055_UCR_Anomaly_DISTORTEDapneaecg2_10000_20950_21100.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.27077161938671046,
+      "maximum_signed_error": 0.0007970586557863313,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MGAB/5.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.40805544581979836,
+      "maximum_signed_error": 1.5777397340578647e-06,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MITDB/201.test.csv@1.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0007452783182327893,
+      "maximum_signed_error": 0.0005916489787275436,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL2.test.csv@80.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.008205186211609428,
+      "maximum_signed_error": 0.004558441804501379,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/859.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0008006132209325001,
+      "maximum_signed_error": 0.001209835725806574,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-15.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0005767120998115827,
+      "maximum_signed_error": 0.00022588310717908122,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_45.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.008279453292388883,
+      "maximum_signed_error": 0.002963608649627636,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/20_Lev_fault_Temp_corr_seed_67_vars_23.test.csv@10.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.0004287383513865862,
+      "maximum_signed_error": 0.0008046291648155339,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-05f10d3a-239c-3bef-9bdc-a2feeb0037aa.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.09938957991844752,
+      "maximum_signed_error": 4.198037725302445e-06,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "KDD21/062_UCR_Anomaly_DISTORTEDgaitHunt1_18500_33070_33180.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.18124883868677505,
+      "maximum_signed_error": 0.001021695451337297,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MGAB/6.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.2505272182012629,
+      "maximum_signed_error": 3.350100906759565e-06,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MITDB/233.test.csv@1.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0010378864797694898,
+      "maximum_signed_error": 0.0003018136208825517,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "NAB/NAB_data_tweets_5.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.011961401506337344,
+      "maximum_signed_error": 0.0009821692411739608,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL3.test.csv@55.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.01883366685491704,
+      "maximum_signed_error": 0.003665209542915715,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-2-1.test.csv@22.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.0007983876040354582,
+      "maximum_signed_error": 0.0006956237810249177,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/864.test.csv@2.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0039017098302647213,
+      "maximum_signed_error": 0.0018022494149180779,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-4.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "CNN"
+      ],
+      "minimum_signed_error": -0.000738053963259766,
+      "maximum_signed_error": 0.0004894352195800034,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/Yahoo_A2synthetic_44_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.01111111111111196,
+      "sampled_winner_set": [
+        "CNN"
+      ],
+      "minimum_signed_error": -0.17094017094017055,
+      "maximum_signed_error": 0.016109504019976295,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "ECG/MBA_ECG820_data.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.0025925695977067065,
+      "maximum_signed_error": 0.0019058880210294782,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/13_Lev_fault_Temp_corr_seed_666_vars_23.test.csv@8.out",
+      "family": "GHL",
+      "best_case_regret": 0.00043504105325591416,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.00011462076992571103,
+      "maximum_signed_error": 0.0009203619174710954,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-c02607e8-7399-3dde-9d28-8a8da5e5d251.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.1172716666909554,
+      "maximum_signed_error": 0.026611317608772167,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "KDD21/119_UCR_Anomaly_ECG1_10000_11800_12100.out",
+      "family": "KDD21",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.08572439933551051,
+      "maximum_signed_error": 0.0076785667043295786,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "MGAB/4.test.out",
+      "family": "MGAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "LOF"
+      ],
+      "minimum_signed_error": -0.24993174325734313,
+      "maximum_signed_error": 9.433620117948842e-07,
+      "joint_one_point_prior_overlap": true
+    },
+    {
+      "series": "MITDB/117.test.csv@2.out",
+      "family": "MITDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST"
+      ],
+      "minimum_signed_error": -0.026561171462575472,
+      "maximum_signed_error": 0.029832988600938012,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "NAB/NAB_data_tweets_9.out",
+      "family": "NAB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.003363675795716753,
+      "maximum_signed_error": 0.0001632589991399369,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "OPPORTUNITY/S1-ADL5.test.csv@67.out",
+      "family": "OPPORTUNITY",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.011034231230589775,
+      "maximum_signed_error": 0.003550839831750252,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SMD/machine-3-1.test.csv@20.out",
+      "family": "SMD",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "POLY"
+      ],
+      "minimum_signed_error": -0.028733401174302037,
+      "maximum_signed_error": 0.002937498905547939,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SVDB/886.test.csv@1.out",
+      "family": "SVDB",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.010494430186603565,
+      "maximum_signed_error": 9.131624088915685e-05,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "SensorScope/stb-28.test.out",
+      "family": "SensorScope",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "AE"
+      ],
+      "minimum_signed_error": -0.001242463457138021,
+      "maximum_signed_error": 0.0003104227588016373,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_67_data.out",
+      "family": "YAHOO",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.03549265754319064,
+      "maximum_signed_error": 0.015655340521865013,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "ECG/MBA_ECG14046_data_11.out",
+      "family": "ECG",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "NORMA"
+      ],
+      "minimum_signed_error": -0.009107900565127725,
+      "maximum_signed_error": -0.00017228018642372056,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "GHL/22_Lev_fault_Temp_corr_seed_777_vars_23.test.csv@2.out",
+      "family": "GHL",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "PCA"
+      ],
+      "minimum_signed_error": -0.009956527380975385,
+      "maximum_signed_error": 0.012556466019720856,
+      "joint_one_point_prior_overlap": false
+    },
+    {
+      "series": "IOPS/KPI-f0932edd-6400-3e63-9559-0a9860a1baa9.test.out",
+      "family": "IOPS",
+      "best_case_regret": 0.0,
+      "sampled_winner_set": [
+        "IFOREST1"
+      ],
+      "minimum_signed_error": -0.019790775548961567,
+      "maximum_signed_error": 0.0006726216199161861,
+      "joint_one_point_prior_overlap": false
+    }
+  ]
+}

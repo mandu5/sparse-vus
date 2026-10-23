@@ -1,0 +1,6 @@
+{
+  "source": "experiments/exploration/sampling_theory_20261023.json",
+  "source_sha256": "416c1834197e1c762b2566bfa80690458846f6839d681d40008ec3ff9bd822af",
+  "script_sha256": "a4e1b5a85b870c29d459e1bc75dc19f078ed0de9e6f9372962c131c0506ebb8d",
+  "scope": "Constructed witnesses; no corpus prevalence inference"
+}

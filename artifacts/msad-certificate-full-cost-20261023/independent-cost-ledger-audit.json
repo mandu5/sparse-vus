@@ -1,0 +1,121 @@
+{
+  "auditor_sha256": "9a6839ef7dba6713d6f7d00d49f3c9c12b7f70f8395e906c3998863c8988eedc",
+  "complete_three_way_cases": 360,
+  "families": 16,
+  "max_float_difference": 0.0,
+  "ratios": {
+    "certificate_over_full_certificate": {
+      "equal_family_geometric_mean": 0.8196791790556954,
+      "geometric_mean": 0.8153284771311585,
+      "median": 0.8263708208592002,
+      "per_family_geometric_mean": {
+        "Daphnet": 0.7590224338019111,
+        "Dodgers": 0.7699496954882457,
+        "ECG": 0.8234654473873668,
+        "GHL": 0.8240899101912381,
+        "Genesis": 1.0236800141101727,
+        "IOPS": 0.8491307578674575,
+        "KDD21": 0.7941895622937841,
+        "MGAB": 0.8173319824989062,
+        "MITDB": 0.8907976040478065,
+        "NAB": 0.8121225322086448,
+        "OPPORTUNITY": 0.8446407617490268,
+        "Occupancy": 0.8307582125421813,
+        "SMD": 0.7476149099247759,
+        "SVDB": 0.7734885274649201,
+        "SensorScope": 0.737886388284751,
+        "YAHOO": 0.8567131651917889
+      }
+    },
+    "certificate_over_radix_exact": {
+      "equal_family_geometric_mean": 2.666980843927019,
+      "geometric_mean": 2.6825864928700174,
+      "median": 2.0631726988303085,
+      "per_family_geometric_mean": {
+        "Daphnet": 2.148089417001148,
+        "Dodgers": 1.975539490273263,
+        "ECG": 1.1917963801605134,
+        "GHL": 1.1256893917849744,
+        "Genesis": 3.0223096662077173,
+        "IOPS": 1.5487713512926802,
+        "KDD21": 2.8751428053743044,
+        "MGAB": 1.7834931201699074,
+        "MITDB": 1.081611105865899,
+        "NAB": 13.623195889777028,
+        "OPPORTUNITY": 2.343087074761063,
+        "Occupancy": 6.6721733998197825,
+        "SMD": 3.026430902116607,
+        "SVDB": 1.1874770215685628,
+        "SensorScope": 2.606820521988775,
+        "YAHOO": 22.214140180103357
+      }
+    },
+    "full_certificate_over_radix_exact": {
+      "equal_family_geometric_mean": 3.2536886529184406,
+      "geometric_mean": 3.290191092440502,
+      "median": 2.7128536534909493,
+      "per_family_geometric_mean": {
+        "Daphnet": 2.8300736860193436,
+        "Dodgers": 2.565803326956991,
+        "ECG": 1.4472937315606391,
+        "GHL": 1.3659788548117853,
+        "Genesis": 2.9523968667443805,
+        "IOPS": 1.823949182081602,
+        "KDD21": 3.6202223522936965,
+        "MGAB": 2.182091436966734,
+        "MITDB": 1.2142052256887887,
+        "NAB": 16.774803492679172,
+        "OPPORTUNITY": 2.7740634609075125,
+        "Occupancy": 8.031426351359732,
+        "SMD": 4.048114693727982,
+        "SVDB": 1.5352225397065355,
+        "SensorScope": 3.5328209916548836,
+        "YAHOO": 25.92949552156161
+      }
+    }
+  },
+  "records": 5400,
+  "repetitions_per_case_method": 5,
+  "scope": "Independent ledger/hash/coverage/output/aggregate audit. No producer functions imported; no timing reruns or host-interference proof.",
+  "series": 30,
+  "status": "PASS_INDEPENDENT_STDLIB_COST_LEDGER_AUDIT",
+  "sum_case_medians_seconds": {
+    "certificate": 4.6858825839008205,
+    "full_certificate": 5.637601828551851,
+    "radix_exact": 3.1267247507930733
+  },
+  "utc": "2026-10-23T07:54:50.408789+00:00",
+  "validated_outputs": {
+    "certificate": 1800,
+    "full_certificate": 1800,
+    "radix_exact": 1800
+  },
+  "verified_sha256": {
+    "artifacts/msad-certificate-20261023/protocol.json": "4b73c88d7f129f5d5fdfeb7b36e1efb71d753bc8351c55ea5815c3bb84897e04",
+    "artifacts/msad-certificate-20261023/records.jsonl": "4e557a2696ab92d35b2c433bdf98918de41afeb7e1a92172da62adfa52e185ab",
+    "artifacts/msad-certificate-cost-20261023/protocol.json": "7a9962a21a2bc25292ef25c6c629fbe400cab7275de77547fc87d8210be2a267",
+    "artifacts/msad-corpus-20261023/manifest.json": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+    "artifacts/msad-corpus-20261023/timing-subset-proposal.json": "287786d46a52d346bf91fd066c40148df4c819ff862f918181df1241373c852f",
+    "artifacts/msad-full-certificate-20261023/protocol.json": "fb1e1ba34bdcf6b4c21c098386fbd8e0efa46fe457c20a41d9c6905877d2ee66",
+    "artifacts/msad-full-certificate-20261023/records.jsonl": "604a96f3f5ef1c42326a8786ae349381d49f715fac347196cafc5dc307eb4a46",
+    "artifacts/msad-sampling-20261023/records.jsonl": "283ccfafa5b712e2a7316b344b4c75ae8f528359bbb42725fd48fc3963224023",
+    "artifacts/msad-sampling-20261023/source_manifest.json": "dae17c7e3e370c5d4d1206762ab201435f1c693d1ececf80f506972b72b0e96d",
+    "experiments/msad_certificate_cost.py": "64d9eb498a798521efa1907959443060e5d95a048c74c9efb9eb821e41563fca",
+    "experiments/msad_certificate_full_cost.py": "df190071d30e1fb36e506399560dad6ae914530e53422cd3fd59b36a0720e1d5",
+    "experiments/msad_full_certificate_study.py": "59806d697570405ebed91cb0ace3a957f0b9ac1556d30117d0ec61a431425dcf",
+    "experiments/msad_sampling_study.py": "f190a4005bee4a9360e06f6719585e45093381eae33dde95486c20015eb36313",
+    "protocol.json": "651cb0cc4d5bde61195f8ef0da64a76694886dc06412b6314e3be22c27467c7a",
+    "records.jsonl": "f837144c4d4d08fd1dc00b647f563145defc99e39d64b02a61636155542b1c31",
+    "report-f837144c4d4d08fd.json": "ec1baed881703f27427f6ef23762547de6cc66a81a853063eedf6ed5dfddd1ec",
+    "run-inputs.json": "2d5d878c32319d7b1cd6c260f2e35cd43859df15f87e1fa237a67688ec88daae",
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    "src/sparse_vus/sampling_bounds.py": "ec1511ff448373096bc3e6d253e3e748a8182bc04c4d20e2d5ca5391a8adb790",
+    "tests/test_msad_certificate_cost.py": "f76942cd3488dcb59c4edad083602f908cee04669e1854b52555a39a2c67d5ef",
+    "tests/test_msad_certificate_full_cost.py": "9406f18c774e2a59d17d98bb2c15498ccf51bd5ab974ade9c6c5c565bd7613b6"
+  }
+}

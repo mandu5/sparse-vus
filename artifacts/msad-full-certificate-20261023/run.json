@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-23T06:04:59.672728+00:00",
+  "protocol_sha256": "fb1e1ba34bdcf6b4c21c098386fbd8e0efa46fe457c20a41d9c6905877d2ee66",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "numpy": "1.26.4",
+  "platform": "macOS-26.6.1-arm64-arm-64bit"
+}

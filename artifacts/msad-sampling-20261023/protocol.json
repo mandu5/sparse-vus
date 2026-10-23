@@ -1,0 +1,106 @@
+{
+  "study_id": "msad-sampling-20261023",
+  "schema_version": 1,
+  "frozen_utc": "2026-10-23T05:38:32Z",
+  "freeze_status": "before any study corpus metric computation",
+  "acquisition_protocol": "artifacts/msad-corpus-20261023/protocol.json",
+  "acquisition_protocol_sha256": "9bf1a79b50d4070eff761c6c66e6de6644f33d9b71d8a4d928ba24b50f7c15e7",
+  "acquisition_manifest": "artifacts/msad-corpus-20261023/manifest.json",
+  "expected_series": 128,
+  "models": [
+    "AE",
+    "CNN",
+    "HBOS",
+    "IFOREST",
+    "IFOREST1",
+    "LOF",
+    "LSTM",
+    "MP",
+    "NORMA",
+    "OCSVM",
+    "PCA",
+    "POLY"
+  ],
+  "semantic_contract": "original dynamic VUS: sum-clip sqrt ramps, overlap-only merged coverage, P=P0+B/2, clipped recall times coverage, complete numerical ties, right-step PR, mean every integer width 0..L",
+  "score_policy": "original published finite stored values; no rescaling, repair, tie splitting, padding, smoothing, or changed direction",
+  "widths": [
+    30,
+    100,
+    300
+  ],
+  "threshold_budgets": [
+    32,
+    64,
+    128,
+    250,
+    500,
+    1000
+  ],
+  "primary_width": 30,
+  "primary_thresholds": 250,
+  "exact_method": "sparse_pr_radix_jit",
+  "sampled_method": "sampled_pr_radix_jit",
+  "upstream_control": "unmodified Klein fast-VUS at revision 1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00",
+  "upstream_parity": "H250, all selected series, all twelve models, all three widths; absolute tolerance 2e-10",
+  "exact_validation": "top two retained series per source family in the frozen acquisition hash order; all twelve models; primary L30; compare independent dense exact and unmodified Klein H=n with radix exact at absolute tolerance 2e-10",
+  "tie_tolerance": 1e-10,
+  "parity_tolerance": 2e-10,
+  "winner_policy": "all models within tie_tolerance of maximum; report best-case and worst-case exact regret of sampled winner set; lexical choice secondary",
+  "top3_policy": "include every model within tolerance of the third-largest value",
+  "pair_reversal_policy": "strict opposite signs with both absolute margins greater than tie_tolerance; separately count both margins >=0.01",
+  "kendall_policy": "tau-b with tolerance-defined pair ties; undefined denominator reported null",
+  "practical_regret_threshold": 0.01,
+  "promotion_gate": {
+    "primary": "best-case sampled-winner exact regret >=0.01",
+    "minimum_series_fraction": 0.05,
+    "minimum_source_families": 3,
+    "interpretation": "declared practical study criterion, not a venue acceptance rule"
+  },
+  "aggregation": [
+    "pooled series",
+    "equal source family",
+    "per source family"
+  ],
+  "bootstrap": {
+    "unit": "source family (all its series retained together)",
+    "replicates": 2000,
+    "seed": 20261023,
+    "confidence": 0.95,
+    "primary_statistic": "fraction of series with best-case regret >=0.01"
+  },
+  "parent_dependence": "source family clustering is conservative but does not establish independent parent recordings; no known parent map, no invented parent grouping",
+  "timing": {
+    "subset": "first two retained per source family, sorted by SHA256(msad-vus-20261023-v1\\0 + family/filename), same subset as exact validation",
+    "width": 30,
+    "thresholds": 250,
+    "models": "all twelve",
+    "repetitions": 5,
+    "method_order": "independently permuted each case and repetition by seeded RNG 20261023",
+    "methods": [
+      "radix_exact",
+      "saturation_exact",
+      "dense_exact",
+      "klein250",
+      "matched250"
+    ],
+    "outputs": {
+      "radix_exact": "PR",
+      "saturation_exact": "PR",
+      "dense_exact": "ROC+PR internally; returned PR; extra-output work explicitly retained",
+      "klein250": "PR",
+      "matched250": "PR"
+    },
+    "scope": "complete call including validation, preparation, sorting and all widths; excludes source decode/import; separate collection wall time includes decode/evaluation/report write",
+    "warmup": "all methods on a fixed non-study synthetic input before timing",
+    "threads": 1,
+    "timeout_seconds_per_call": 30,
+    "timeout_policy": "retain censored/failure record; no favorable deletion or parameter substitution",
+    "serial": true,
+    "concurrency": "begin only after acquisition and other heavy tests have stopped",
+    "summary": "per-case method medians over successful paired reps; report missing/censored coverage; comparator/radix ratios, geometric means, medians, equal-family and family bootstrap"
+  },
+  "numerical_timeout_seconds_per_call": 30,
+  "source_freeze": "write immutable source-hash manifest binding protocol, acquisition manifest, runner and called implementation files before first corpus metric",
+  "records": "append-only JSONL, resume by unique phase/case/model/width/budget/method/repetition key; reject conflicting duplicate keys and changed source/data hashes",
+  "negative_result_policy": "retain every selected case, source quantization statistic, exclusion, failure, timeout and failed gate; do not tune widths or replace the panel based on outcomes"
+}

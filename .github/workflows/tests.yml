@@ -32,6 +32,19 @@ jobs:
       - run: python experiments/fast_vus_adapter.py --fetch
       - run: python experiments/benchopt_vus_adapter.py --fetch
       - run: python -m pytest -q
+      - name: Verify the certified-sampling evidence without raw input caches
+        if: matrix.python == '3.12'
+        run: |
+          python experiments/audit_certified_sampling_bundle.py \
+            --output "$RUNNER_TEMP/certified-sampling-audit.json"
+          PYTHONPATH=src python experiments/msad_sampling_study.py report
+      - name: Upload the certified-sampling audit
+        if: matrix.python == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-certified-sampling-evidence
+          path: ${{ runner.temp }}/certified-sampling-audit.json
+          if-no-files-found: error
       - name: Reconstruct frozen active-prefix evidence without input caches
         if: matrix.python == '3.12'
         run: |
@@ -126,6 +139,8 @@ jobs:
         run: /tmp/sparse-vus-accelerated-wheel-check/bin/python experiments/check_installed_accelerated_package.py
       - name: Verify installed complete-tie APIs and source-byte identity
         run: /tmp/sparse-vus-accelerated-wheel-check/bin/python experiments/check_installed_tie_runs.py
+      - name: Verify installed sampling and integer-certificate APIs
+        run: /tmp/sparse-vus-accelerated-wheel-check/bin/python experiments/check_installed_sampling.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: verified-python-distributions

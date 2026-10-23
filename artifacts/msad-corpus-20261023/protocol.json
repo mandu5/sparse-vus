@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-10-23T05:29:41.835228+00:00",
+  "stage": "before candidate metric outcomes and bulk acquisition",
+  "target_series": 128,
+  "models": [
+    "AE",
+    "CNN",
+    "HBOS",
+    "IFOREST",
+    "IFOREST1",
+    "LOF",
+    "LSTM",
+    "MP",
+    "NORMA",
+    "OCSVM",
+    "PCA",
+    "POLY"
+  ],
+  "source_url": "https://drive.usercontent.google.com/download?id=1PQKwu5lZTnTmsmms1ipko9KF712Oc5DE&export=download&confirm=t",
+  "source_repository": "https://github.com/boniolp/MSAD/tree/8141b94eb3d2b1811f81ffcf7bc8aa5dcbd6c204",
+  "source_archive": {
+    "central_offset": 837690528,
+    "central_bytes": 3584956,
+    "central_sha256": "c13f23efdbe798ecd4a3faf3587f8fb26fca0000634b752f719081a370c76f92",
+    "members": 26354,
+    "archive_bytes": 841275484
+  },
+  "eligible_series": 1863,
+  "eligible_families": {
+    "Daphnet": 45,
+    "Dodgers": 1,
+    "ECG": 52,
+    "GHL": 126,
+    "Genesis": 6,
+    "IOPS": 29,
+    "KDD21": 250,
+    "MGAB": 10,
+    "MITDB": 32,
+    "NAB": 57,
+    "OPPORTUNITY": 465,
+    "Occupancy": 7,
+    "SMD": 278,
+    "SVDB": 115,
+    "SensorScope": 23,
+    "YAHOO": 367
+  },
+  "salt": "msad-vus-20261023-v1\u0000",
+  "order": "sorted-family round-robin over per-family SHA256 order",
+  "max_download_response_bytes": 500000000,
+  "metric_outcomes_computed": false,
+  "source_sha256": {
+    "experiments/fetch_msad_score_corpus.py": "f9e47e0c6cf19423e01732d92f52e33816de5b9c9186e3a6fdbdf7e3a3a567f5",
+    "docs/msad_score_corpus_design_20261023.md": "df6621ea6457c52ada62725e692b805532193473a49d200a323559303a18739f",
+    "artifacts/selected_series.json": "c8a48fcffe7b06d62067ad573bc4144d354619022972277c760070b18a65ef40",
+    "artifacts/saturation/external-inputs/manifest.json": "f8785501739190fda771c2c2e8a469e65b22812f10cb46d24ff3ffe57edfca47"
+  },
+  "metadata_sha256": {
+    "archive-directory.json": "455a71fe71e19672b159c1d2f2586d94f06ef8412cec1b191d4c3271cd871c83",
+    "prior-identity-index.json": "24d3a51a1ca0eb4b8e1e76dedbf171731dcd3645c0001ec5320dced7fa612e76",
+    "candidate-queue.json": "6868edd38dd71235775d86088d034139b8069848fab66244a7ceb1c198a896d2"
+  },
+  "identity_scope": "Exact label and exact/rounded-standardized observation equality rejection; not proof against every cropped/transformed overlap.",
+  "data_license": "Individual original dataset licenses apply; raw data and scores not redistributed."
+}

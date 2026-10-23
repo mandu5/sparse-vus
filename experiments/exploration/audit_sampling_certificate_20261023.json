@@ -1,0 +1,20 @@
+{
+  "status": "PASS_INDEPENDENT_PRODUCTION_AUDIT",
+  "source_sha256": {
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    "src/sparse_vus/sampling_bounds.py": "ec1511ff448373096bc3e6d253e3e748a8182bc04c4d20e2d5ca5391a8adb790",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "experiments/exploration/sampling_bigint_certificate_20261023.py": "870e2b6416300b15f23567b02384c97a152bae3065a63a97fe92476585ac0f4a",
+    "experiments/exploration/audit_sampling_certificate_20261023.py": "3247e51e31cab80acfae1e62273f9849f31e7e5ddcc14ac1035898168882f8f1"
+  },
+  "exact_fraction_block_enclosures": 14400,
+  "decimal120_full_api_checks": 360,
+  "independent_integer_endpoint_states": 4627,
+  "global_tie_ordinal_checks": 360,
+  "numpy_scalar_regression_cases": 10,
+  "outward_float_display_checks": 5000,
+  "overflow_guard_checked": true,
+  "target": "Ideal real-arithmetic original dynamic VUS-PR; decimal checks supplementary to integer proof"
+}

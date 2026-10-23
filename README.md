@@ -1,6 +1,52 @@
 # Sparse VUS
 
-## Unified research manuscript (23 October 2026)
+## Threshold sampling and certified rankings (23 October 2026)
+
+[When Threshold Sampling Reverses VUS Rankings (PDF)](paper/certified_sampling.pdf)
+studies the original dynamic VUS-PR target on twelve published detector
+configurations across 128 prospectively selected series. At the primary
+250-threshold budget and maximum width 30, **8/128 model selections have
+exhaustive regret at least 0.01**, spanning four source families. Full-grid
+integer enclosures prove exactly these eight cases and certify the unique
+exhaustive winner on all 128 series. The largest ideal regret is enclosed
+in **[0.3985750301665, 0.3985750302756]**.
+
+The paper derives a post-saturation soft-mass inflation mechanism and sound
+integer error bounds. All stored vectors have at most 101 score classes;
+sampling 250 *ranks* can nevertheless miss rare classes. Enumerating every
+class is the simple complete remedy on this score release. Partial-grid
+certificates confirm 63/128 winners at 250 thresholds and 94/128 at 1,000;
+they leave the wrong sampled selections unresolved.
+
+The full study completed **36,864 numerical calls, 720 independent exhaustive
+controls, and 9,000 timing calls**. Exact numerical evaluation is 1.044 times
+as fast as matched compiled sampling in the geometric paired comparison
+(family-bootstrap interval [1.029, 1.062]). This modest, one-host result is
+separate from the additional cost of rigorous integer certification.
+
+The fixed panel preserves published quantization. An endpoint-shift audit
+finds 20 recordings overlapping prior inputs; the descriptive 108-case
+nonmatching subgroup has four practical errors in two families. This is
+not a claim of entirely unseen physical recordings or population prevalence.
+[Full numerical study](artifacts/msad-sampling-20261023/README.md) ·
+[Integer guarantees](docs/msad_full_certificate_study_20261023.md) ·
+[Mechanism audit](docs/msad_saturation_and_empirical_review_20261023.md) ·
+[Reproduction guide](docs/certified_sampling_reproduction_20261023.md).
+
+```python
+# Research branch; install with .[accelerate]. The older v0.3.0 tag predates these APIs.
+from sparse_vus.sampling import sampled_pr_radix_jit
+from sparse_vus.sampling_bounds import certified_sampled_pr
+
+labels = [0, 1, 1, 0]
+scores = [4, 3, 2, 1]
+approximation = sampled_pr_radix_jit(labels, scores, max_buffer=0, thresholds=2)
+certificate = certified_sampled_pr(labels, scores, max_buffer=0, thresholds=len(labels))
+print(approximation, certificate.lower, certificate.upper)
+# Compare certificates with cert_a.certifies_greater_than(cert_b), using integers.
+```
+
+## Earlier exact-evaluator manuscript (23 October 2026)
 
 [Sparse Events and Complete-Tie Prefixes for Exact VUS Evaluation (PDF)](paper/sparse_vus.pdf)
 presents the support-event evaluator and its active-prefix and complete-tie

@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE_ALL_DECLARED_STUDY_REQUESTS",
+  "completed_utc": "2026-10-23T06:25:58.438171+00:00",
+  "numerical_calls": 36864,
+  "independent_exact_control_calls": 720,
+  "timing_calls": 9000,
+  "failed_or_timed_out_calls": 0,
+  "records_closed": true,
+  "artifacts_sha256": {
+    "protocol.json": "c778699fe9393ba4f5a6bb9e54362bb9327bcdc1efb3aca4b2cad6deb3cdc2cb",
+    "source_manifest.json": "dae17c7e3e370c5d4d1206762ab201435f1c693d1ececf80f506972b72b0e96d",
+    "records.jsonl": "283ccfafa5b712e2a7316b344b4c75ae8f528359bbb42725fd48fc3963224023",
+    "report-283ccfafa5b712e2.json": "b193de60aade226e99491a16b18b50084591984b78a246c925f51ba3b1428e4d",
+    "primary-first-scheduler.json": "f7ab45dbce90383701e069471ad0c967554c59d9c6006fa5265a2abefe23e512",
+    "primary-validated-claim-table.json": "32dcb810bec43e44b8bba76b58752c1da29d9120aac87f4a287453e398e05c8c",
+    "primary-signed-error-extraction.json": "949ef2358d49621308e24ec65db7541dbd86e36d24e36de4d3bd989ac25d5144",
+    "score-precision-summary.json": "65f0d327e6b269f41b67b565a78e41774436cee593ce14a85c1ebd6102b8c29e",
+    "certificate-ledger-independent-audit.json": "6865fb8f47a08ef704dbbb82af68b1854e3823c754e31b59aed8991d683b5b35",
+    "README.md": "7971369d67ce261a9971968bbb825104e61443c6e7b8f18a232622b9a48cc917",
+    "execution_log.md": "c437aa8859621ea83af10b431d264fccbcb8adba86bc9390a3dc51ad17df8548"
+  },
+  "primary_effect_threshold_met": true,
+  "full_control_coverage": true,
+  "interpretation_boundaries": [
+    "quantized published score release; at most101 distinct values",
+    "twenty one-endpoint observation+label overlaps with earlier physical recordings",
+    "108 bounded-nonmatch subgroup does not meet primary gate",
+    "dense timing control computes both ROC and PR",
+    "no external peer-review acceptance or universal optimality inferred"
+  ]
+}

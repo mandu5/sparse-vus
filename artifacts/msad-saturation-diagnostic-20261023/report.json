@@ -1,0 +1,122 @@
+{
+  "protocol_sha256": "5603f8b261af280dcb77acf39155a8329f8cd3262e1a81adae4a0372c860935b",
+  "records_sha256": "98709c790ff7c767dc816d35fa47921ca577a102fc552b3ece68d27190b1e039",
+  "count": 96,
+  "all_saturation_indices_integer_verified": true,
+  "decisions": [
+    {
+      "series": "GHL/02_Lev_fault_Temp_corr_seed_17_vars_23.test.csv@13.out",
+      "winner_sets": {
+        "exact": [
+          "OCSVM"
+        ],
+        "sampled": [
+          "HBOS"
+        ],
+        "saturation_inserted": [
+          "HBOS"
+        ]
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "winner_sets": {
+        "exact": [
+          "CNN"
+        ],
+        "sampled": [
+          "LOF"
+        ],
+        "saturation_inserted": [
+          "CNN"
+        ]
+      }
+    },
+    {
+      "series": "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+      "winner_sets": {
+        "exact": [
+          "OCSVM"
+        ],
+        "sampled": [
+          "LOF"
+        ],
+        "saturation_inserted": [
+          "LOF"
+        ]
+      }
+    },
+    {
+      "series": "MGAB/1.test.out",
+      "winner_sets": {
+        "exact": [
+          "LOF"
+        ],
+        "sampled": [
+          "MP"
+        ],
+        "saturation_inserted": [
+          "MP"
+        ]
+      }
+    },
+    {
+      "series": "YAHOO/YahooA3Benchmark-TS40_data.out",
+      "winner_sets": {
+        "exact": [
+          "CNN"
+        ],
+        "sampled": [
+          "LSTM"
+        ],
+        "saturation_inserted": [
+          "LSTM"
+        ]
+      }
+    },
+    {
+      "series": "YAHOO/YahooA4Benchmark-TS75_data.out",
+      "winner_sets": {
+        "exact": [
+          "CNN"
+        ],
+        "sampled": [
+          "LSTM"
+        ],
+        "saturation_inserted": [
+          "LSTM"
+        ]
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A1real_33_data.out",
+      "winner_sets": {
+        "exact": [
+          "IFOREST1"
+        ],
+        "sampled": [
+          "LOF",
+          "PCA"
+        ],
+        "saturation_inserted": [
+          "IFOREST1"
+        ]
+      }
+    },
+    {
+      "series": "YAHOO/Yahoo_A2synthetic_44_data.out",
+      "winner_sets": {
+        "exact": [
+          "IFOREST1"
+        ],
+        "sampled": [
+          "CNN"
+        ],
+        "saturation_inserted": [
+          "IFOREST1"
+        ]
+      }
+    }
+  ],
+  "scope": "Exploratory followup on selected harmful cases; diagnostic is not a faster algorithm or independent prevalence estimate"
+}

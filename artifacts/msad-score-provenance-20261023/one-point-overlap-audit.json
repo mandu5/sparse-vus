@@ -1,0 +1,332 @@
+{
+  "completed_utc": "2026-10-23T06:01:54.066813+00:00",
+  "manifest_sha256": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+  "source_sha256": "a5bafa10c7152032143e4a2c76900010243ffe17943b73855968a049e040c5a5",
+  "acquisition_source_sha256": "f9e47e0c6cf19423e01732d92f52e33816de5b9c9186e3a6fdbdf7e3a3a567f5",
+  "prior_inputs_checked": 362,
+  "selected_series": 128,
+  "selected_with_joint_one_point_matches": [
+    "IOPS/KPI-0efb375b-b902-3661-ab23-9a0bb799f4e3.test.out",
+    "IOPS/KPI-1c6d7a26-1f1a-3321-bb4d-7a9d969ec8f0.test.out",
+    "IOPS/KPI-e0747cad-8dc8-38a9-a9ab-855b61f5551d.test.out",
+    "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+    "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+    "KDD21/115_UCR_Anomaly_CIMIS44AirTemperature3_4000_6520_6544.out",
+    "KDD21/116_UCR_Anomaly_CIMIS44AirTemperature4_4000_5549_5597.out",
+    "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+    "MGAB/1.test.out",
+    "MGAB/10.test.out",
+    "MGAB/2.test.out",
+    "MGAB/4.test.out",
+    "MGAB/6.test.out",
+    "MGAB/7.test.out",
+    "MGAB/9.test.out",
+    "MITDB/219.test.csv@1.out",
+    "NAB/NAB_data_Traffic_2.out",
+    "NAB/NAB_data_Traffic_3.out",
+    "NAB/NAB_data_tweets_5.out",
+    "YAHOO/Yahoo_A2synthetic_44_data.out"
+  ],
+  "matches": [
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "transformation": "drop_first",
+      "selected_series": "NAB/NAB_data_Traffic_3.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "transformation": "drop_first",
+      "selected_series": "NAB/NAB_data_Traffic_2.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "024_NAB_id_24_Synthetic_tr_1007_1st_2787",
+      "transformation": "drop_first",
+      "selected_series": "NAB/NAB_data_art1_2.out",
+      "labels_match": false,
+      "observations_exact_match": false,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "transformation": "drop_first",
+      "selected_series": "NAB/NAB_data_tweets_5.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "173_MITDB_id_4_Medical_tr_13620_1st_13720",
+      "transformation": "drop_first",
+      "selected_series": "MITDB/219.test.csv@1.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "225_MGAB_id_1_Synthetic_tr_25000_1st_38478",
+      "transformation": "drop_first",
+      "selected_series": "MGAB/10.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "227_MGAB_id_3_Synthetic_tr_25000_1st_44340",
+      "transformation": "drop_first",
+      "selected_series": "MGAB/6.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "228_MGAB_id_4_Synthetic_tr_25000_1st_38948",
+      "transformation": "drop_first",
+      "selected_series": "MGAB/9.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "229_MGAB_id_5_Synthetic_tr_25000_1st_33098",
+      "transformation": "drop_first",
+      "selected_series": "MGAB/2.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "231_MGAB_id_7_Synthetic_tr_25000_1st_35544",
+      "transformation": "drop_first",
+      "selected_series": "MGAB/7.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "232_MGAB_id_8_Synthetic_tr_25000_1st_32708",
+      "transformation": "drop_first",
+      "selected_series": "MGAB/1.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "233_MGAB_id_9_Synthetic_tr_25000_1st_41300",
+      "transformation": "drop_first",
+      "selected_series": "MGAB/4.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "271_IOPS_id_12_WebService_tr_500_1st_341",
+      "transformation": "drop_first",
+      "selected_series": "IOPS/KPI-e0747cad-8dc8-38a9-a9ab-855b61f5551d.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "272_IOPS_id_13_WebService_tr_3442_1st_3542",
+      "transformation": "drop_first",
+      "selected_series": "IOPS/KPI-1c6d7a26-1f1a-3321-bb4d-7a9d969ec8f0.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "275_IOPS_id_16_WebService_tr_1482_1st_1582",
+      "transformation": "drop_first",
+      "selected_series": "IOPS/KPI-0efb375b-b902-3661-ab23-9a0bb799f4e3.test.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "311_UCR_id_9_HumanActivity_tr_16000_1st_38400",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/172_UCR_Anomaly_gaitHunt3_23400_38400_39200.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "315_UCR_id_13_HumanActivity_tr_16000_1st_33070",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/062_UCR_Anomaly_DISTORTEDgaitHunt1_18500_33070_33180.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "319_UCR_id_17_Environment_tr_6166_1st_19280",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "332_UCR_id_30_Facility_tr_13750_1st_52600",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/072_UCR_Anomaly_DISTORTEDltstdbs30791ES_20000_52600_52800.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "382_UCR_id_80_Medical_tr_7500_1st_11800",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/119_UCR_Anomaly_ECG1_10000_11800_12100.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "387_UCR_id_85_Environment_tr_2046_1st_5549",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/116_UCR_Anomaly_CIMIS44AirTemperature4_4000_5549_5597.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "400_UCR_id_98_Environment_tr_2046_1st_5391",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "420_UCR_id_118_Facility_tr_13750_1st_52600",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/072_UCR_Anomaly_DISTORTEDltstdbs30791ES_20000_52600_52800.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "421_UCR_id_119_HumanActivity_tr_48750_1st_130700",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/184_UCR_Anomaly_resperation10_48000_130700_131880.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "445_UCR_id_143_Environment_tr_6166_1st_19280",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "467_UCR_id_165_Environment_tr_6166_1st_19280",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/102_UCR_Anomaly_NOISEMesoplodonDensirostris_10000_19280_19440.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "474_UCR_id_172_Environment_tr_2046_1st_6520",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/115_UCR_Anomaly_CIMIS44AirTemperature3_4000_6520_6544.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "495_UCR_id_193_Environment_tr_2046_1st_6520",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/115_UCR_Anomaly_CIMIS44AirTemperature3_4000_6520_6544.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "496_UCR_id_194_Environment_tr_2046_1st_5391",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "labels_match": true,
+      "observations_exact_match": true,
+      "observations_standardized_match": true
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "504_UCR_id_202_Environment_tr_2046_1st_5549",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/116_UCR_Anomaly_CIMIS44AirTemperature4_4000_5549_5597.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "506_UCR_id_204_Environment_tr_2046_1st_5549",
+      "transformation": "drop_first",
+      "selected_series": "KDD21/116_UCR_Anomaly_CIMIS44AirTemperature4_4000_5549_5597.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "570_YAHOO_id_20_Synthetic_tr_500_1st_658",
+      "transformation": "drop_first",
+      "selected_series": "YAHOO/Yahoo_A2synthetic_10_data.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": false
+    },
+    {
+      "prior_source": "prior-tsb-ad",
+      "prior_series": "571_YAHOO_id_21_Synthetic_tr_500_1st_623",
+      "transformation": "drop_first",
+      "selected_series": "YAHOO/Yahoo_A2synthetic_44_data.out",
+      "labels_match": true,
+      "observations_exact_match": false,
+      "observations_standardized_match": true
+    }
+  ],
+  "scope": "Post-acquisition drop-first/drop-last diagnostic against prior350 TSB-AD and12 mTSBench; not a full cropped-recording or transformed-source overlap detector.",
+  "selection_modified": false,
+  "metric_outcomes_computed": false
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PASS_SOURCE_ALGEBRA_AND_LEDGER_REPLAY",
+  "audit_source_sha256": "4fafd36ce637b2587195f00a86a16e7f636a2c9953a50322ac7d048752fe3653",
+  "protocol_sha256": "5603f8b261af280dcb77acf39155a8329f8cd3262e1a81adae4a0372c860935b",
+  "records_sha256": "98709c790ff7c767dc816d35fa47921ca577a102fc552b3ece68d27190b1e039",
+  "report_sha256": "7c97c4f3824efa14bd36a44ea553605656507f64efa90993201d0c8f1735e650",
+  "model_records_checked": 96,
+  "width_records_checked": 2976,
+  "all_eight_cases_all_twelve_models": true,
+  "all_logged_integer_stopping_checks_true": true,
+  "integer_stop_test_algebra_reviewed": "Full coverage and B>=2(P0-A); use current lower and prior upper weight brackets",
+  "integer_states_independently_recomputed": false,
+  "integer_evidence_scope": "Frozen producer source algebra and all logged booleans verified; ledger omits raw integer witnesses, no kernel/input replay performed during timings",
+  "largest_binary64_identity_residual": 1.6653345369377348e-16,
+  "largest_mean_residual": 5.551115123125783e-16,
+  "restored_winner_count": 3,
+  "restored_series": [
+    "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+    "YAHOO/Yahoo_A1real_33_data.out",
+    "YAHOO/Yahoo_A2synthetic_44_data.out"
+  ],
+  "cnn_lof_decomposition": [
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "model": "CNN",
+      "means": {
+        "exact": 0.5,
+        "sampled": 0.05541611564470564,
+        "saturation_inserted": 0.5,
+        "total_error": -0.44458388435529433,
+        "post_saturation_change": -0.44458388435529433,
+        "remaining_pre_saturation_error": 0.0,
+        "post_saturation_buffer_mass_term": 0.02600435093882327,
+        "post_saturation_original_mass_term": 0.0,
+        "post_saturation_count_dilution_term": -0.47058823529411764
+      }
+    },
+    {
+      "series": "KDD21/005_UCR_Anomaly_DISTORTEDCIMIS44AirTemperature1_4000_5391_5392.out",
+      "model": "LOF",
+      "means": {
+        "exact": 0.10142496976190822,
+        "sampled": 0.2631172509642462,
+        "saturation_inserted": 0.1340240552842771,
+        "total_error": 0.16169228120233797,
+        "post_saturation_change": 0.12909319567996905,
+        "remaining_pre_saturation_error": 0.03259908552236892,
+        "post_saturation_buffer_mass_term": 0.181890550791957,
+        "post_saturation_original_mass_term": 0.0,
+        "post_saturation_count_dilution_term": -0.052797355111987944
+      }
+    }
+  ],
+  "interpretation": "Exploratory insertion intervention includes buffer mass, original mass, and count dilution; restoring 3/8 does not attribute all three reversals solely to buffer inflation"
+}
