@@ -1,0 +1,60 @@
+{
+  "started_utc": "2026-10-23T04:03:00.785504+00:00",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu": "Apple M1 Pro",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "numpy": "1.26.4",
+  "numba": "0.59.1",
+  "threads": 1,
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    }
+  ],
+  "warmup": [
+    {
+      "method": "radix_pr",
+      "label_dtype": "|i1",
+      "score_dtype": "<f8",
+      "seconds": 0.375797667
+    },
+    {
+      "method": "dense_pr_nearest_radix",
+      "label_dtype": "|i1",
+      "score_dtype": "<f8",
+      "seconds": 0.003125916
+    },
+    {
+      "method": "klein_pr",
+      "label_dtype": "|i1",
+      "score_dtype": "<f8",
+      "seconds": 0.004002416
+    }
+  ],
+  "cpu_clearance": "Root reviewed frozen code and protocol; all team tests, builds and other benchmarks are stopped during this run. This is an active desktop without CPU affinity or isolation; the preceding snapshot showed unrelated OCR and Python activity near one combined CPU core. No unrelated processes were stopped; lightweight status and document edits may continue.",
+  "protocol_sha256": "69ee646b505297e0feb124cb3206b0d600a6ad2a0a021c8fcea1c195dd4f56ea",
+  "inputs_sha256": "91616f1b90953db33bc1ee9a9d46cf863d97fa2dafdea7eb4e2fdf2f29bf92ef",
+  "source_sha256": {
+    "experiments/benchmark_vus_collection.py": "9b30bb4bc2a15820ba3aa67ccb86608d5bced93ddff2d86e2081b380c3c8b5e3",
+    "experiments/advancement_data_gate.py": "0c94cb61ba42de18f9e4cc488c51319fc1bab3038ea44413ee6b93ed9abdb983",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    ".cache/fast_vus/LICENSE": "3b19b00e8d74e9e8f3db69d8407da5b5dd2078f3bf9c57ff47ff0fb9551db282",
+    "docs/vus_collection_protocol_20261023.md": "033223184f0718677fa68872714984b5907d3b8053f3403c1509ea9ccbca54dc"
+  },
+  "filesystem": "Explicitly warmed before every measured pass"
+}

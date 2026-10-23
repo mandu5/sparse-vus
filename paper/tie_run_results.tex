@@ -1,0 +1,78 @@
+\subsection{Run aggregation: structured ties and a fragmentation control}
+The separately frozen run study evaluates 20 constructed cases (five score
+families at $L=32,128,512,2048$) and every one-interval case from the previous
+development and external corpora: 63 and 48 cases, respectively. This is
+reused-data evaluation, not unseen confirmation. All four methods are PR-only
+and include validation, ranking, geometry and, for run aggregation, the
+square-root table. Each case has one untimed warm call per method and five
+seeded randomized serial repetitions on the Apple M1 Pro with one compute
+thread (Python 3.12.4, NumPy 1.26.4, Numba 0.59.1).
+
+All 131 cases satisfy the numerical and work assertions. The maximum absolute
+discrepancy from released radix is $5.56\times10^{-16}$. Every width visits at
+most $3P_0$ score classes. For the all-tied singleton at $L=2048$, run aggregation
+inspects 2,049 runs in total, while the position scan visits 2,099,201 positions.
+These counts support the proved separation; they do not determine wall time.
+
+A separate untimed verifier compares 650 random cases against direct dense
+evaluation (maximum absolute difference $3.34\times10^{-16}$), and 36 small
+complete integrals against independently constructed Decimal arithmetic at
+80-digit precision (maximum $2.60\times10^{-16}$). It also checks every one of
+150,000 integer prefixes against Python integers, 20,009 synthetic limb
+subtractions, and 6,569 per-width counter reconstructions. These are internal
+implementation checks, separate from benchmark cases and the local error theorem.
+
+Table~\ref{tab:tie-structural} reports every constructed family at the largest
+width. Larger ratios favor run aggregation; subunit ratios are regressions.
+The alternating-score control defeats compression because each score class is
+highly fragmented. Distinct scores also offer little aggregation benefit.
+These are constructed witnesses, not a sample of operational detectors.
+
+\begin{table}[t]
+\centering\small
+\caption{Constructed $L=2048$ cases, $n=8195$: comparator / run-aggregation median
+time. All five families retained; full results at every width are in the artifact.}
+\label{tab:tie-structural}
+\begin{tabular}{lrrr}
+\toprule
+Scores / labels & Active prefix & Radix & Fast-VUS\\
+\midrule
+All tied / singleton & 8.816 & 29.386 & 739.615 \\
+Distinct / original last & 0.947 & 32.919 & 765.564 \\
+Eight blocks / singleton & 5.126 & 31.187 & 789.399 \\
+Alternating / singleton & 0.277 & 1.216 & 41.319 \\
+All tied / interval of 8 & 8.867 & 29.487 & 739.147 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The real-score results in Table~\ref{tab:tie-real} are deliberately separate.
+At $L=300$, run aggregation loses to active prefix on 16 of 21 development
+cases and 14 of 16 external cases. It is therefore an option for compressible
+ties, not a replacement justified by broad real-data gains. No runtime selector
+or population confidence interval is inferred from these reused cases.
+
+\begin{table}[t]
+\centering\small
+\caption{All reused one-interval cases. Each entry is median comparator/run
+ratio, followed by the number of run-aggregation losses.}
+\label{tab:tie-real}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrr}
+\toprule
+Corpus & $L$ & Active prefix & Radix & Fast-VUS\\
+\midrule
+Dev. ($n_c=21$) & 30 & 1.010 (10) & 0.984 (14) & 23.606 (0) \\
+Dev. ($n_c=21$) & 100 & 0.921 (15) & 0.998 (11) & 49.776 (0) \\
+Dev. ($n_c=21$) & 300 & 0.857 (16) & 1.156 (9) & 58.776 (0) \\
+Ext. ($n_c=16$) & 30 & 1.014 (5) & 1.007 (5) & 22.197 (0) \\
+Ext. ($n_c=16$) & 100 & 0.996 (9) & 1.006 (6) & 51.389 (0) \\
+Ext. ($n_c=16$) & 300 & 0.835 (14) & 1.075 (0) & 99.247 (0) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The protocol, source inventory, input hashes, five raw repetitions and work
+profiles are frozen together. The complete 131-case report includes every
+ratio and loss. This study changes neither the whole-method primary PASS nor
+the active-prefix primary FAIL decisions.

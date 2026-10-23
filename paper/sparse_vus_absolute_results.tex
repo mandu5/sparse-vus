@@ -1,0 +1,9 @@
+\paragraph{Absolute workload costs.}
+For the 308 primary three-score tasks, sums of per-task median times are
+Mac: 3.094, 10.204, and 60.186 seconds (sparse radix, matched nearest dense radix, and fast-VUS, respectively).
+Linux: 2.318, 11.610, and 26.032 seconds (sparse radix, matched nearest dense radix, and fast-VUS, respectively).
+At $L=300$, the corresponding sums are Mac: 10.229, 80.733, and 479.670 seconds.
+Linux: 11.249, 100.601, and 221.037 seconds.
+These quantify operator cost across a stored-score collection; they are
+sums of separately timed medians, not measured batch wall times. They exclude
+score generation and I/O and do not establish a detector-pipeline speedup.

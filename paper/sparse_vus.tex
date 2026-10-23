@@ -1,0 +1,54 @@
+% Unified working manuscript; no submission or editorial decision is implied.
+% Existing frozen manuscripts, methods, and result fragments remain unchanged.
+\documentclass[sigconf,nonacm]{acmart}
+\usepackage{pvldb}
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{https://github.com/mandu5/sparse-vus/tree/research/saturation-20261021}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\TPR}{\mathrm{TPR}}
+\newcommand{\FPR}{\mathrm{FPR}}
+\emergencystretch=2em
+\begin{document}
+\title{Sparse Events and Complete-Tie Prefixes for Exact VUS Evaluation}
+\author{Youngmin Ko}
+\email{rhdudals0505@naver.com}
+\affiliation{\institution{Independent Researcher}\country{Republic of Korea}}
+\begin{abstract}
+Volume Under the Surface (VUS) evaluates anomaly scores across thresholds
+and temporal tolerance widths. We derive an exact scalar event representation
+for a pinned dynamic VUS definition: thresholds without active support have
+analytically integrable contributions, while retained events preserve complete
+global score ties. With standard binary64 radix ranking and interval geometry,
+the evaluator takes $O(n+(L+1)Q)$ time, where $Q$ is maximum-buffer support.
+Reversible activation and incremental component unions further reduce this to
+$O(n+L+\alpha(K)\sum_wJ_w)$, where $J_w$ counts the active prefix through
+recall saturation. For one original interval, spatial runs aggregate complete
+score classes; an integer stopping certificate gives a run-sensitive bound
+without restricting tie cardinality. A fixed-point range-sum implementation
+has a local mass-error bound, distinct from exact real-arithmetic evaluation.
+A frozen three-score-vector workload covers 308 series in 17 families and
+924 series--width tasks per CPU platform. At primary width 30, sparse radix
+passes its five-control criterion; median ratios against released fast-VUS
+are $20.925\times$ and $14.538\times$, and against matched dense radix
+$2.599\times$ and $4.791\times$. A separate incremental study finds that
+saturation fails its default-width runtime criterion in all three runs,
+with qualified gains at larger widths. Exactness concerns the exhaustive
+mathematical target. Run aggregation helps structured large ties but does not
+broadly improve the measured real-score runtimes. Numerical parity and
+practical speed are separate claims. A directly timed 308-file evaluation,
+selection and output workflow takes 3.187 seconds at the median, versus
+11.298 seconds for matched dense radix and 63.647 seconds for fast-VUS,
+with identical selected-model sets across all nine passes.
+\end{abstract}
+\maketitle
+\vldbtopmatter
+\input{sparse_vus_body.tex}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sparse_vus_references}
+\end{document}

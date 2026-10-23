@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE",
+  "passes": 9,
+  "protocol_sha256": "69ee646b505297e0feb124cb3206b0d600a6ad2a0a021c8fcea1c195dd4f56ea",
+  "inputs_sha256": "91616f1b90953db33bc1ee9a9d46cf863d97fa2dafdea7eb4e2fdf2f29bf92ef",
+  "measurements_sha256": "87d432e49891faef25bbe70175044a6662ff7bcb3ce96501757015439a51b0bf",
+  "environment_sha256": "04588d4c504647634a3dcae85c3e23253998d17adf8a59df73344b7b74c4d79b",
+  "outputs_sha256": {
+    "trial-0-radix_pr.json": "878b04a39e5b6e1a2ba98cba8990d2b0b6e903651e77d76073f2920ad2ffe8e4",
+    "trial-0-klein_pr.json": "d829c0d243b63725f772f7b37e45a95c34555f597f2603249dad0fd14d4a0b89",
+    "trial-0-dense_pr_nearest_radix.json": "0f2ebd46dadb9883e7199da95711a3ef4da478fa6b669536017ed11939b6777a",
+    "trial-1-klein_pr.json": "f73375ace5c2256a1a4fcda019cf9a2764d13ffcdc46e389f29ebb7d741945ad",
+    "trial-1-radix_pr.json": "5205a2791e36a27a02e791208efd778335216aadf12038cf6fa7150c7fa45038",
+    "trial-1-dense_pr_nearest_radix.json": "fd819dbe0cb217685d261b30b0432bf41c77805ffad1dd7c0791beeffecd5442",
+    "trial-2-klein_pr.json": "c246aff0c510e85e52e4c7f3776b7aff9c9093f6768c5d420624258da5b8f9d8",
+    "trial-2-radix_pr.json": "455debfb6c36b8b8e96fbfa392eb788ae6bf26244b5cd5bba7541c1fdbcfae8d",
+    "trial-2-dense_pr_nearest_radix.json": "f9304968271ec2281b412edc3207439cb40e5bac3914630cbe3f01a14397906b"
+  }
+}

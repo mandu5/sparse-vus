@@ -43,6 +43,15 @@ jobs:
           python experiments/benchmark_saturation_structural.py report artifacts/saturation/mac-structural
           python experiments/audit_saturation_supplement.py \
             --output "$RUNNER_TEMP/active-prefix-evidence/supplement.json"
+          python experiments/audit_tie_runs.py \
+            > "$RUNNER_TEMP/active-prefix-evidence/tie-run-independent.json"
+          python experiments/benchmark_tie_runs.py report \
+            --output artifacts/tie-runs/mac-20261023 \
+            > "$RUNNER_TEMP/active-prefix-evidence/tie-run-recorded.json"
+          python experiments/audit_vus_collection.py \
+            artifacts/collection-workflow/mac-20261023 \
+            --protocol-sha256 69ee646b505297e0feb124cb3206b0d600a6ad2a0a021c8fcea1c195dd4f56ea \
+            --output "$RUNNER_TEMP/active-prefix-evidence/collection-workflow.json"
       - name: Upload reconstructed active-prefix evidence
         if: matrix.python == '3.12'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -115,6 +124,8 @@ jobs:
           /tmp/sparse-vus-accelerated-wheel-check/bin/python -m pip install "${release_wheels[0]}[accelerate]"
       - name: Verify installed radix and active-prefix APIs and source-byte identity
         run: /tmp/sparse-vus-accelerated-wheel-check/bin/python experiments/check_installed_accelerated_package.py
+      - name: Verify installed complete-tie APIs and source-byte identity
+        run: /tmp/sparse-vus-accelerated-wheel-check/bin/python experiments/check_installed_tie_runs.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: verified-python-distributions

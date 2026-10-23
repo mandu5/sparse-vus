@@ -1,0 +1,51 @@
+\subsection{Directly timed stored-score collection workflow}
+\label{sec:collection-workflow}
+A separate protocol measures an actual local collection operation, beyond
+sums of separately timed task medians. Each pass reopens 308 uncompressed
+NPZ files, materializes the labels and three original score arrays, makes
+924 full PR calls at $L=30$, selects all best-model ties per series, and
+serializes the values and decisions into one JSON file. Inputs are the same
+17-family policy holdout; no detector inference occurs in this operation.
+The stored files total 379,354,532 bytes. Each method uses the unchanged
+released implementation and exhaustive thresholds. All validation and
+preparation inside the public calls are timed.
+
+The whole monotonic clock runs from before the first NPZ open until the
+result file is closed. Imports, synthetic dtype-matched JIT warmup, hashing
+and explicit filesystem-cache warming precede each pass. Every measured
+pass rereads and decodes the files; it is a warm-filesystem workflow, not a
+cold-disk or durable-write benchmark (no \texttt{fsync}). Three replications
+run serially with one numerical thread on the M1 Pro. Seeded method order
+was frozen before timing; its draw places dense last in all three
+replications, so order is randomized but not position-balanced. The active
+desktop was not isolated; background OCR/Python activity was recorded before
+execution. Agent tests, builds and other benchmarks were stopped.
+
+\begin{table*}[t]
+\centering\small
+\caption{Measured collection wall times in seconds. The last two columns
+are separately summarized phase medians, not additive whole-time estimates.
+All nine passes and all numeric outputs are retained.}
+\label{tab:collection-workflow}
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & Run 1 & Run 2 & Run 3 & Whole median & Metric median & Read median\\
+\midrule
+Sparse radix PR & 2.902 & 3.187 & 3.721 & 3.187 & 2.816 & 0.299 \\
+Dense nearest radix PR & 11.456 & 10.944 & 11.298 & 11.298 & 10.605 & 0.413 \\
+Klein fast-VUS PR & 59.041 & 63.647 & 63.749 & 63.647 & 62.493 & 0.927 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+Every selected-model set agrees across all nine passes for all 308 series.
+The maximum pairwise PR difference is $1.332\times10^{-15}$, below the frozen
+$10^{-11}$ tolerance; model ties use $10^{-10}$. Sparse radix takes 3.187 seconds at the median,
+giving descriptive whole-workflow ratios of $3.545\times$
+against matched dense radix and $19.973\times$ against Klein.
+Both comparisons satisfy the frozen median-time criterion. Three observations
+per method do not establish a confidence interval or timing significance.
+This directly demonstrates savings for the specified stored-score operation;
+it does not measure a full training/inference pipeline, production deployment,
+or a new-domain evaluation. An independent standard-library auditor
+reconstructs the decisions, order, counts, clocks and numeric comparisons
+from the public hash-bound output receipts without raw input arrays.

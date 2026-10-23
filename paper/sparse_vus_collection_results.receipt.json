@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "69ee646b505297e0feb124cb3206b0d600a6ad2a0a021c8fcea1c195dd4f56ea",
+  "report_sha256": "a7c7406049ee7783a6134b89b1fe60e7960c3b75d0998446e7881477488cb66f",
+  "independent_auditor_sha256": "73a25b58ca3e638b86ec36ce8d1cae093b0721f332991f7d53d085d194fdd1b0",
+  "generator_sha256": "2303ae245468071a885c5d55b0240c2ccd7fbc9b3fce970f70785afc8bc9efe9",
+  "tex_sha256": "d25f0e8952d43bdf0eb6c9013aeeed774100bd6f78b4e066a58601cb9b712f18",
+  "series": 308,
+  "rows": 15161812,
+  "passes": 9
+}

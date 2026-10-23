@@ -1,5 +1,50 @@
 # Sparse VUS
 
+## Unified research manuscript (23 October 2026)
+
+[Sparse Events and Complete-Tie Prefixes for Exact VUS Evaluation (PDF)](paper/sparse_vus.pdf)
+presents the support-event evaluator and its active-prefix and complete-tie
+extensions as one research article. The public v0.3.0 software precursor is
+cited with its actual date; its measurements are not assigned to new code.
+[Reproduction guide](docs/sparse_vus_reproduction_20261023.md) ·
+[Submission packet](docs/sparse_vus_submission_packet_20261023.md) ·
+[Prior-art audit](docs/active_prefix_novelty_audit_20261023.md).
+
+The whole-evaluator study passes its frozen five-control primary criterion on
+both CPU platforms. Across 308 series, primary-width median ratios against
+Klein fast-VUS are **20.925× (Mac)** and **14.538× (Linux)**; against matched
+nearest-distance dense radix PR they are **2.599×** and **4.791×**. These are
+complete three-model evaluation tasks, with imports, JIT and I/O excluded.
+The separate incremental active-prefix primary failures remain reported below.
+
+A separate **directly timed disk-to-JSON workflow** reads 308 stored NPZ files
+(379 MB), evaluates all 924 scores at `L=30`, selects the best-model sets, and
+writes the results. Across three repetitions per method, whole-operation
+medians are **3.187 s (sparse radix), 11.298 s (matched dense radix), and
+63.647 s (Klein)**: descriptive ratios of **3.545×** and **19.973×**. All nine
+passes return identical selected-model sets, with maximum pairwise PR
+difference `1.333e-15`. This uses warmed filesystem/JIT state on the active
+Mac desktop; detector inference and durable-storage latency are outside the
+operation. All nine times and the frozen order are in
+[the collection report](artifacts/collection-workflow/mac-20261023/report.json).
+
+The new `sparse_vus.tie_runs` module aggregates complete numerical score classes
+by contiguous temporal runs for **one original anomaly interval**. An integer
+stopping certificate bounds the number of visited classes by `3*P0`; bounded
+fragmentation gives `O(n+L)` time for a singleton even with large ties. Exact
+three-limb prefix subtraction avoids cancellation in sums of rounded roots.
+The theorem distinguishes exact metric arithmetic from the implemented local
+mass-error bound and measured scalar parity.
+
+All 131 prespecified run-study cases pass parity and work-count checks. A
+separate verifier checks 650 random metric cases, 36 complete integrals using
+80-digit Decimal arithmetic, and exact prefix/carry/borrow operations. At
+`L=2048`, the all-tied singleton examines 2,049 runs instead of 2,099,201
+active positions and is 8.816× faster than the position-prefix implementation.
+Alternating ties are a negative control, and real-score results do not support
+replacing active prefix broadly. Full timings and losses are retained in
+[the frozen report](artifacts/tie-runs/mac-20261023/report.json).
+
 ## Active-prefix research branch (21 October 2026)
 
 This branch adds an evaluator whose complete-call bound is

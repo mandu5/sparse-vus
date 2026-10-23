@@ -1,0 +1,24 @@
+{
+  "synthetic_subtractions": 20009,
+  "synthetic_max_ulp_from_single_rounding": 1.0,
+  "real_prefix_entries": 150000,
+  "low_limb_carries": 9455,
+  "high_prefix_limb_nonzero": false,
+  "layout_width_cases": 35,
+  "randomized_metric_cases": 650,
+  "independent_counter_widths": 6569,
+  "max_dense_metric_absolute_difference": 3.3306690738754696e-16,
+  "decimal_precision": 80,
+  "decimal_integral_cases": 36,
+  "max_decimal_integral_absolute_error": "2.590520390792031927655140559E-16",
+  "source_sha256": {
+    "experiments/audit_tie_runs.py": "71a23a688ec053c2e365051d97c794ab32dc7d835fbacf86461b156ec0e85b11",
+    "src/sparse_vus/tie_runs.py": "8058994f4f7a7745326218bfa9b7c39444acde2d38dfc07e65e9455a50ba7436",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914"
+  },
+  "status": "PASS_RECORDED_CHECKS",
+  "scope": "Independent implementation checks within one agent workflow; not external peer review or an all-input floating integral error certificate."
+}

@@ -1,0 +1,9 @@
+{
+  "protocol_sha256": "22422666d07dd30f05980d759f452b3afb962c5265a18659f8e352e421d16f8e",
+  "independent_audit_sha256": "d3f86a845f32a9c39b3fec2fa01e43ae58b48f56468c49303076eac1ee5e607e",
+  "measurements_sha256": "847edae1e7c0fcb168a11ad7fe3a8ffc5016c70262003cdf8ba6676a9dcaf6da",
+  "report_sha256": "cf12324cf93d8243657b69e65b7664b3ba879ceb72c8ef7e3257dfa5861cbb08",
+  "generator_sha256": "cf3df4c846fe4d9c85de1615ea41befffa40fbb08e4c44c3795114ff9001a3d0",
+  "tex_sha256": "d026a08501c7482a226aaf767a0a75dce3f7e21eed30830ab3c19e330d1d1901",
+  "cases": 131
+}
