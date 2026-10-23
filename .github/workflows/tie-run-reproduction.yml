@@ -1,0 +1,47 @@
+name: Complete-tie input regeneration and reproduction
+
+on:
+  push:
+    branches: [research/saturation-20261021]
+    paths:
+      - .github/workflows/tie-run-reproduction.yml
+      - experiments/reproduce_tie_runs.py
+      - docs/tie_run_replication_protocol_20261023.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regenerated-external:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMBA_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+      - name: Install pinned numerical environment
+        run: python -m pip install '.[accelerate,research]' numpy==1.26.4 numba==0.59.1 pandas==3.0.1 scipy==1.17.1 scikit-learn==1.8.0 threadpoolctl==3.6.0
+      - name: Regenerate fixed inputs, freeze, and run all 68 cases serially
+        run: |
+          replication_study="artifacts/tie-runs/linux-${GITHUB_RUN_ID}"
+          python experiments/reproduce_tie_runs.py prepare --output "$replication_study"
+          replication_hash=$(python -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1], "rb").read()).hexdigest())' "$replication_study/protocol.json")
+          python experiments/reproduce_tie_runs.py run --output "$replication_study" --protocol-sha256 "$replication_hash"
+          python experiments/benchmark_tie_runs.py report --output "$replication_study"
+          cp docs/saturation_data_licenses_20261021.md "$replication_study/ATTRIBUTION.md"
+      - name: Retain complete or interrupted public receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: regenerated-complete-tie-evidence
+          path: artifacts/tie-runs/linux-${{ github.run_id }}/
+          if-no-files-found: error
+      # Only constructed NPZ fixtures are under artifacts. Downloaded observations
+      # and regenerated real score arrays remain under ignored .cache.
