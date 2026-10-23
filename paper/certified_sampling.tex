@@ -22,7 +22,7 @@ be threshold-independent while a finite integration grid remains
 inaccurate. We analyze a specific failure of the original dynamic VUS-PR:
 soft-label mass admitted after exhaustive recall saturates can inflate
 the precision assigned to an earlier recall jump. We give a finite
-overestimation bound exceeding 0.98 and same-label, distinct-score
+worst-case overestimation bound exceeding 0.98 and same-label, distinct-score
 constructions at 250 thresholds with exact-score selection regret of
 0.507, 0.701 and 0.846 at maximum widths 30, 100 and 300.
 We derive bidirectional error enclosures and implement them with integer
@@ -208,6 +208,16 @@ exhaustive answer. This is a useful explicit tradeoff, not a hidden
 acceleration claim.
 
 \paragraph{Research assistance and reproducibility.}
+Code, tests, frozen protocols, outcome records, raw integer witnesses and
+input-reacquisition instructions are available through the
+\href{https://github.com/mandu5/sparse-vus/blob/60e68af3cb2534aa7a889b5a3e177633ce7d12b8/docs/certified_sampling_reproduction_20261023.md}{immutable reproduction guide (snapshot \texttt{60e68af3})}.
+After cloning, run \texttt{git checkout 60e68af3} before its installation
+and audit commands.
+Its standard-library audit verifies the public ledgers without the raw
+input cache; fresh metric execution and input acquisition are distinct
+reproduction steps. The raw third-party data retain their original
+attribution and are reacquired from their source.
+
 AI tools assisted literature search, mathematical derivation, code,
 experiment orchestration and drafting. Independent implementations,
 exact rational checks, unchanged upstream controls, frozen input/source

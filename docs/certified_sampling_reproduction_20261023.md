@@ -19,6 +19,7 @@ Use Python 3.11 or 3.12 and a virtual environment. The older `v0.3.0` tag predat
 ```sh
 git clone --branch research/saturation-20261021 https://github.com/mandu5/sparse-vus.git
 cd sparse-vus
+git checkout 60e68af3cb2534aa7a889b5a3e177633ce7d12b8
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install '.[accelerate,research]'
