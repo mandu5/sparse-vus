@@ -37,12 +37,19 @@ The continuous-integration workflow tests Python 3.11/3.12, installs the actual 
 ```sh
 python experiments/audit_certified_sampling_bundle.py \
   --output /tmp/certified-sampling-audit.json
-PYTHONPATH=src python experiments/msad_sampling_study.py report
+NPY_DISABLE_CPU_FEATURES=X86_V3,X86_V4 PYTHONPATH=src python experiments/msad_sampling_study.py report
 ```
 
 The first command uses only Python's standard library. It verifies repository-source/protocol/ledger commitments, all declared keys, eighteen sensitivity cells, exact integer winner/regret comparisons, the 2,976 saturation witnesses, the overlap subgroup and the 5,400-call certificate-cost coverage. It does not execute the original metrics or claim to reacquire the raw data. An ignored upstream-cache source is identified by its pinned digest as an external commitment; the second command verifies that fetched source and reconstructs the original report with the analysis implementation. Neither command appends metric/timing records.
 
 The primary report is [report-283ccfafa5b712e2.json](../artifacts/msad-sampling-20261023/report-283ccfafa5b712e2.json), bound by [completion.json](../artifacts/msad-sampling-20261023/completion.json). Original protocols and earlier partial reports remain immutable. The primary-first execution-order adjustment is documented; it changed no case, criterion, method or retained outcome.
+
+The replay command fixes NumPy CPU dispatch for the report's `log`/`exp`
+aggregates only. Native Linux X86_V4 dispatch produced five one-ULP differences
+in timing summaries; all scientific decisions and integer witnesses were
+identical. Fixing dispatch restores exact report bytes without a tolerance or
+any change to the original measurements. The diagnostic and retained receipts
+are described in [the portability audit](certified_sampling_report_portability_20261023.md).
 
 ## Reacquire and independently inspect the numerical inputs
 
@@ -95,3 +102,13 @@ tectonic certified_sampling.tex --keep-logs --keep-intermediates
 ```
 
 The vendored official TMLR template is pinned in `paper/tmlr-style/source.json`. The public manuscript uses its **preprint** mode. Local tests, integer proofs and internal agent reviews are evidence for the manuscript; editorial outcomes are tracked separately. AI assistance in derivation, implementation, orchestration and drafting is disclosed. A submission's author-review declarations must reflect the author's actual review and responsibility.
+
+The later submission-package checkout contains
+`experiments/build_certified_sampling_manuscript.py`, which generates the
+separate anonymous PDF and manuscript-source ZIP. This packaging script is
+not part of the earlier frozen scientific snapshot checked out above. Its default TMLR review
+header is a template convention, not a submission receipt. Scientific tables,
+proofs and figures are copied unchanged; the author block and current-work
+repository link are replaced for anonymous review. The first-page footnote
+discloses the actual LLM roles. The separate computational supplement records
+all privacy transformations and preserves the original numeric results.
