@@ -9,6 +9,35 @@ permissions:
   contents: read
 
 jobs:
+  sampling-report-portability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        dispatch: [default, baseline]
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+      - run: python -m pip install numpy
+      - name: Compare frozen report bytes and capture numerical dispatch
+        env:
+          NPY_DISABLE_CPU_FEATURES: ${{ matrix.dispatch == 'baseline' && 'X86_V3,X86_V4' || '' }}
+        run: |
+          python experiments/diagnose_sampling_report_portability.py \
+            --output "$RUNNER_TEMP/report-portability.json"
+      - name: Preserve exact differences even if replay fails
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: sampling-report-portability-${{ matrix.dispatch }}
+          path: ${{ runner.temp }}/report-portability.json
+          if-no-files-found: error
   parity:
     runs-on: ubuntu-latest
     timeout-minutes: 20
