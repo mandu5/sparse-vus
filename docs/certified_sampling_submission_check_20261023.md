@@ -104,6 +104,40 @@ matches the generated anonymous source. This source ZIP is not the computational
 evidence supplement. It can accompany that supplement inside the final single
 review ZIP rather than occupying the interactive `beyond_pdf` field.
 
+### Final computational ZIP receipt
+
+The completed upload candidate is `paper/certified-sampling-supplement.zip`:
+**5,162,442 bytes, 101 files**, SHA-256
+`898d1550a8aaba59fe655c48ecfdbeb86690b062cafc36f3eab24efe1ee84214`.
+This audit independently reread those ZIP bytes, reproduced the digest and
+member count, and checked every member's CRC; no CRC failure occurred.
+
+The fresh-extraction validation receipt
+`/tmp/certified-sampling-supplement-validation.json` has SHA-256
+`4af9cc25e0c2f29e917ccd033026fe112659fd59d1d5d945ac06fd5cbb183bcc`.
+The extracted-package audit
+`/tmp/certified-sampling-supplement-fresh-audit.json` has SHA-256
+`428ed0a0da6222938c41f31d2847e4022a2b3ebaacb688e6e2b7635c23132220`.
+Both receipts were read and their digests recomputed in this review.
+
+The recorded extraction checks pass for transport checksums, the SHA-only
+derived auditor, all 51 audited dependencies, eighteen sensitivity cells,
+integer winner/regret decisions, 2,976 saturation witnesses and all 5,400
+certificate-cost calls. Two hostname fields were redacted and eighteen metadata
+files were transparently rebound. The receipt confirms unchanged originals,
+byte-identical scientific code, and preserved numeric JSON lexemes, structure
+and integer endpoint strings. It records eight passing builder tests and
+2,682 passing included scientific tests with fetched reference implementations;
+tested source/configuration bytes match the final ZIP. Those executions were
+performed by the supplement builder agent, not repeated by this document audit.
+
+These checks close the computational-package inventory. Their scope is evidence
+transport and reproducibility validation: the extracted ledger audit does not
+reacquire raw inputs, rerun metric measurements or repeat the timing experiment.
+The final anonymous PDF, manuscript-source ZIP and computational ZIP are three
+distinct artifacts; only the computational ZIP is needed in the optional
+`supplementary_material` slot for this standard PDF submission.
+
 ## Actual initial OpenReview fields
 
 The following fields were read directly from the live
@@ -223,3 +257,8 @@ The existing [Korean author brief](certified_sampling_author_brief_ko_20261023.m
 provides the relevant definitions and results. A useful author response should
 identify an actual correction, decision, or interpretation where warranted;
 answering these prompts alone does not establish the origin of the research.
+
+
+## Final immutable-guide rebuild
+
+The public PDF now links to the reproduction guide at commit `55f2304ca5a8abdb8e3a4da7c5d8a1f596d72ebc`, which includes the exact-byte report replay instruction. Its scientific snapshot remains `60e68af3`. Extracted public PDF text is unchanged; the anonymous transformation and scientific dependencies are unchanged. Final PDF/ZIP hashes and generated-source checks are recorded in `artifacts/certified-sampling-validation-20261023/submission-artifacts.json`. Both PDFs have 12 pages; the computational ZIP above is unchanged.
