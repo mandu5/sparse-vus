@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "audit_source_sha256": "938430ab25d9e22e5e7eaf6931d6898edc0adac6e1f01139eeaf2dfc378f307e",
+  "scope": "Cache-independent public ledger, source-chain and integer-witness audit; no raw input loaded and no fresh metric execution",
+  "main_study": {
+    "calls": 46584,
+    "input_statistics": 1536,
+    "sensitivity_cells": {
+      "L30_H32": {
+        "series": 128,
+        "harmful": 21,
+        "harmful_families": 8,
+        "maximum_regret": 0.7249243474653275
+      },
+      "L30_H64": {
+        "series": 128,
+        "harmful": 16,
+        "harmful_families": 5,
+        "maximum_regret": 0.7249243474653275
+      },
+      "L30_H128": {
+        "series": 128,
+        "harmful": 11,
+        "harmful_families": 5,
+        "maximum_regret": 0.39857503023809177
+      },
+      "L30_H250": {
+        "series": 128,
+        "harmful": 8,
+        "harmful_families": 4,
+        "maximum_regret": 0.39857503023809177
+      },
+      "L30_H500": {
+        "series": 128,
+        "harmful": 1,
+        "harmful_families": 1,
+        "maximum_regret": 0.39857503023809177
+      },
+      "L30_H1000": {
+        "series": 128,
+        "harmful": 0,
+        "harmful_families": 0,
+        "maximum_regret": 0.0018926254395873476
+      },
+      "L100_H32": {
+        "series": 128,
+        "harmful": 20,
+        "harmful_families": 7,
+        "maximum_regret": 0.6970545253608832
+      },
+      "L100_H64": {
+        "series": 128,
+        "harmful": 15,
+        "harmful_families": 5,
+        "maximum_regret": 0.39249132904143685
+      },
+      "L100_H128": {
+        "series": 128,
+        "harmful": 12,
+        "harmful_families": 5,
+        "maximum_regret": 0.39249132904143685
+      },
+      "L100_H250": {
+        "series": 128,
+        "harmful": 7,
+        "harmful_families": 5,
+        "maximum_regret": 0.39249132904143685
+      },
+      "L100_H500": {
+        "series": 128,
+        "harmful": 2,
+        "harmful_families": 2,
+        "maximum_regret": 0.08804847491568757
+      },
+      "L100_H1000": {
+        "series": 128,
+        "harmful": 0,
+        "harmful_families": 0,
+        "maximum_regret": 0.004574456053444531
+      },
+      "L300_H32": {
+        "series": 128,
+        "harmful": 20,
+        "harmful_families": 8,
+        "maximum_regret": 0.41567057214612313
+      },
+      "L300_H64": {
+        "series": 128,
+        "harmful": 15,
+        "harmful_families": 5,
+        "maximum_regret": 0.4949048357180512
+      },
+      "L300_H128": {
+        "series": 128,
+        "harmful": 11,
+        "harmful_families": 5,
+        "maximum_regret": 0.41567057214612313
+      },
+      "L300_H250": {
+        "series": 128,
+        "harmful": 6,
+        "harmful_families": 3,
+        "maximum_regret": 0.39029092427162637
+      },
+      "L300_H500": {
+        "series": 128,
+        "harmful": 2,
+        "harmful_families": 2,
+        "maximum_regret": 0.09520197231034605
+      },
+      "L300_H1000": {
+        "series": 128,
+        "harmful": 1,
+        "harmful_families": 1,
+        "maximum_regret": 0.09520197231034605
+      }
+    },
+    "control_comparisons": 14328,
+    "maximum_control_difference": 4.440892098500626e-15
+  },
+  "integer_certificates": {
+    "250": {
+      "partial_certified_winners": 63,
+      "full_certified_winners": 128,
+      "provably_suboptimal_sampled_sets": 10,
+      "regret_at_least_0_01": 8,
+      "regret_below_0_01": 120,
+      "maximum_regret_upper_fraction": [
+        "28720357725250031",
+        "72057594037927936"
+      ]
+    },
+    "1000": {
+      "partial_certified_winners": 94,
+      "full_certified_winners": 128,
+      "provably_suboptimal_sampled_sets": 1,
+      "regret_at_least_0_01": 0,
+      "regret_below_0_01": 128,
+      "maximum_regret_upper_fraction": [
+        "68189022888369",
+        "36028797018963968"
+      ]
+    }
+  },
+  "saturation": {
+    "model_records": 96,
+    "integer_stopping_proofs": 2976,
+    "restored_winners": 3
+  },
+  "overlap_subgroup": {
+    "matched": 20,
+    "nonmatching": 108,
+    "nonmatching_harmful": 4,
+    "nonmatching_harmful_families": 2,
+    "maximum_nonmatching_regret": 0.23620847848121473
+  },
+  "certificate_cost": {
+    "calls": 5400,
+    "complete_cases": 360,
+    "integer_outputs_identical_to_accuracy": true
+  },
+  "verified_repository_sha256": {
+    "artifacts/msad-certificate-20261023/completion.json": "da274f35753408b77d4103747a2fffbfbf03914264b9e60606af09ddd525bcd2",
+    "artifacts/msad-certificate-20261023/protocol.json": "4b73c88d7f129f5d5fdfeb7b36e1efb71d753bc8351c55ea5815c3bb84897e04",
+    "artifacts/msad-certificate-20261023/records.jsonl": "4e557a2696ab92d35b2c433bdf98918de41afeb7e1a92172da62adfa52e185ab",
+    "artifacts/msad-certificate-20261023/report.json": "ac9b0b1244ee969d2ee51b88e42668b534a9200fe8bcc788ba1c5c8ec6c8d1fb",
+    "artifacts/msad-certificate-cost-20261023/protocol.json": "1a90576fad916235d1ae382dde3ebf3818543ef4fb9195fbd6d5f9f079a3065e",
+    "artifacts/msad-certificate-full-cost-20261023/protocol.json": "e3434a64ae88ca56a1b41829d17297289ff5c0646b0f7f458b12e2c7ee1cc116",
+    "artifacts/msad-certificate-full-cost-20261023/records.jsonl": "4213bc6bf200a9dbaa5025186bcc28a4ed65eaace271148e05a5a5466e3f185f",
+    "artifacts/msad-certificate-full-cost-20261023/report-4213bc6bf200a9db.json": "3795029a5907b1fbebcb20a4c5f526da4ea13e9647689502956e203945dcac2f",
+    "artifacts/msad-certificate-full-cost-20261023/run-inputs.json": "9236aefc542e81442c2c99b6bb581c04783f301df3ef1b4c8d301c021a39aab9",
+    "artifacts/msad-corpus-20261023/independent-input-audit.json": "cf9219a90121e188108bcfe6b6ca970d5b5de89c5680401fe8baff0badd0ef06",
+    "artifacts/msad-corpus-20261023/manifest.json": "5617e4fdc0bb082ac910144212546e05cc009622e45b07b672e562a999e6bc59",
+    "artifacts/msad-corpus-20261023/protocol.json": "9bf1a79b50d4070eff761c6c66e6de6644f33d9b71d8a4d928ba24b50f7c15e7",
+    "artifacts/msad-corpus-20261023/timing-subset-proposal.json": "287786d46a52d346bf91fd066c40148df4c819ff862f918181df1241373c852f",
+    "artifacts/msad-full-certificate-20261023/completion.json": "1c910a36b0bef64945cd7ac52e8629788eea55ec4ffe05159bb77f995cd5dde3",
+    "artifacts/msad-full-certificate-20261023/protocol.json": "fb1e1ba34bdcf6b4c21c098386fbd8e0efa46fe457c20a41d9c6905877d2ee66",
+    "artifacts/msad-full-certificate-20261023/records.jsonl": "604a96f3f5ef1c42326a8786ae349381d49f715fac347196cafc5dc307eb4a46",
+    "artifacts/msad-full-certificate-20261023/report.json": "7e47200822c26bb3c608a65f8c1c9128986e99662c98b188e5d5d7d804e9dce5",
+    "artifacts/msad-sampling-20261023/primary-signed-error-extraction.json": "f15685c63b0098aba70e205d915176369806e0909d3c163ef5f4527300b5fc6f",
+    "artifacts/msad-sampling-20261023/primary-validated-claim-table.json": "8eed985c14a4c69dad04a6a8341ffd78664e4be9d2f21da782cd411c84c3d73a",
+    "artifacts/msad-sampling-20261023/protocol.json": "c778699fe9393ba4f5a6bb9e54362bb9327bcdc1efb3aca4b2cad6deb3cdc2cb",
+    "artifacts/msad-sampling-20261023/records.jsonl": "c13039b429f48a8aed64b7898e6838fa5776e34d345c03aed9513c446e5405cb",
+    "artifacts/msad-sampling-20261023/report-c13039b429f48a8a.json": "d3211d29dad360d99830f0b31d605e99c977d0a415833d2d9bfac5ed307aeedd",
+    "artifacts/msad-sampling-20261023/source_manifest.json": "9f4673339587cdfe02117e2de54fc8fbb377704c855aafe5d97608271018a97c",
+    "artifacts/msad-saturation-diagnostic-20261023/integer-replay-protocol.json": "6a5310c7f8e365af4aa7ad70e0d3ada81109c51cbbe7600b5fd35ba78bc7ef1f",
+    "artifacts/msad-saturation-diagnostic-20261023/integer-replay-receipt.json": "f93e4065158e388232d51683412b829ccbbd8349d6aaa4396f628b8b57032d29",
+    "artifacts/msad-saturation-diagnostic-20261023/integer-replay-witnesses.jsonl": "cdd636a7ed855dee9effbdd2d0739baae344893e70be272c8afdf7a989db21ca",
+    "artifacts/msad-saturation-diagnostic-20261023/protocol.json": "dde896ee34588bc204f5399043520776abd89bec4674e6de8504b9da7b0d3635",
+    "artifacts/msad-saturation-diagnostic-20261023/records.jsonl": "98709c790ff7c767dc816d35fa47921ca577a102fc552b3ece68d27190b1e039",
+    "artifacts/msad-saturation-diagnostic-20261023/report.json": "0d4ab74d910ac92c26077277b9eedd810bc3ab8c1b91f092061b281fa2966a37",
+    "artifacts/msad-score-provenance-20261023/audit_one_point_overlap.py": "a5bafa10c7152032143e4a2c76900010243ffe17943b73855968a049e040c5a5",
+    "artifacts/msad-score-provenance-20261023/one-point-overlap-audit.json": "281c9af140cc9378ad993d35c637359ccc54eed637c190a36767be878c02b900",
+    "experiments/exploration/replay_msad_saturation_integers_20261023.py": "8abc75472a3fea5f6821a3b552ded08ada2e8c43d1b93da0358194733056a148",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "experiments/msad_certificate_cost.py": "64d9eb498a798521efa1907959443060e5d95a048c74c9efb9eb821e41563fca",
+    "experiments/msad_certificate_full_cost.py": "df190071d30e1fb36e506399560dad6ae914530e53422cd3fd59b36a0720e1d5",
+    "experiments/msad_certificate_study.py": "872ea39cdb0dc88a0027c89b731a741414e4cb8bf34e3d4fe053056160c8e8b3",
+    "experiments/msad_full_certificate_study.py": "59806d697570405ebed91cb0ace3a957f0b9ac1556d30117d0ec61a431425dcf",
+    "experiments/msad_sampling_study.py": "f190a4005bee4a9360e06f6719585e45093381eae33dde95486c20015eb36313",
+    "experiments/msad_saturation_diagnostic.py": "ad89bac9c4cf51230ec2e91d0e2aae10a58bfa8504350bfcb489e45961da3cd9",
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    "src/sparse_vus/sampling_bounds.py": "ec1511ff448373096bc3e6d253e3e748a8182bc04c4d20e2d5ca5391a8adb790",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "tests/test_msad_certificate_cost.py": "f76942cd3488dcb59c4edad083602f908cee04669e1854b52555a39a2c67d5ef",
+    "tests/test_msad_certificate_full_cost.py": "9406f18c774e2a59d17d98bb2c15498ccf51bd5ab974ade9c6c5c565bd7613b6",
+    "tests/test_msad_full_certificate.py": "4f49596b913715877b92e26d78499cfd8bcfec8eb1d15b78d5ebff8a83d3fb66",
+    "tests/test_msad_sampling_study.py": "0fe41f272b1afa1681779e7b08aeae8fc939c751ca3d3facd0b9af177e7d3095"
+  },
+  "external_source_commitments_not_rehashed": {
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "not_recomputed": [
+    "raw source parsing or input-array hashes",
+    "metric values from original score arrays",
+    "square-root mass brackets from raw labels",
+    "bootstrap RNG draws",
+    "cost ratio aggregation beyond per-case medians"
+  ]
+}

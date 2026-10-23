@@ -70,7 +70,7 @@
 - [x] Obtain independent adversarial review of proofs, implementation and significance, without requesting a favorable rating.
 - [x] Repair concrete defects and rerun only affected checks.
 - [x] Integrate defensible results with full counterevidence and compare current primary-source prior art/venue criteria.
-- [ ] Render and inspect the final manuscript; verify artifact hashes, tests and public reproducibility before any completion claim.
+- [x] Render and inspect the final manuscript; verify artifact hashes, tests and public reproducibility before any completion claim.
 
 ## Scientific promotion rule
 
@@ -78,4 +78,4 @@ The theory claim requires a valid proof and independent executed witnesses. A pr
 
 ## Executed evidence update
 
-The matched evaluator, integer certificates, frozen128-series study and adversarial assessments are complete. Primary H250/L30 has eight rigorous regret>=0.01 cases across four families; all128 full-grid winners are certified. Numerical/control/main-timing calls46,584 and certificate-cost calls5,400 complete; the full local suite passes3,517 tests. The20 physical-source overlaps and4/108 nonmatching sensitivity result remain visible. Final public snapshot/CI and rendered-PDF checks are the remaining packaging gate. See `docs/certified_sampling_reproduction_20261023.md`; no publication outcome is inferred from these checks.
+The matched evaluator, integer certificates, frozen128-series study and adversarial assessments are complete. Primary H250/L30 has eight rigorous regret>=0.01 cases across four families; all128 full-grid winners are certified. Numerical/control/main-timing calls46,584 and certificate-cost calls5,400 complete; the full local suite passes3,517 tests. The20 physical-source overlaps and4/108 nonmatching sensitivity result remain visible. The public scientific snapshot, full Linux CI, installed-wheel check and rendered public/anonymous PDFs are verified. A CPU-dispatch-dependent exact-report replay defect was isolated on the same Linux runner and repaired by pinning report-only NumPy dispatch; the original failed receipt and all frozen measurements are preserved. The anonymous computational supplement receives separate clean-extraction validation. See `docs/certified_sampling_reproduction_20261023.md`; no publication outcome is inferred from these checks.

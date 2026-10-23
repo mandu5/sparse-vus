@@ -77,6 +77,20 @@ jobs:
           name: verified-certified-sampling-evidence
           path: ${{ runner.temp }}/certified-sampling-audit.json
           if-no-files-found: error
+      - name: Verify the anonymous supplement after clean extraction
+        if: matrix.python == '3.12'
+        run: |
+          python -m zipfile -e paper/certified-sampling-supplement.zip "$RUNNER_TEMP/anonymous-sampling"
+          python -I -S "$RUNNER_TEMP/anonymous-sampling/experiments/verify_anonymous_transport.py"
+          python -I -S "$RUNNER_TEMP/anonymous-sampling/experiments/audit_certified_sampling_bundle_anonymous.py" \
+            --output "$RUNNER_TEMP/anonymous-sampling-audit.json"
+      - name: Upload the anonymous supplement audit
+        if: matrix.python == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: verified-anonymous-sampling-supplement
+          path: ${{ runner.temp }}/anonymous-sampling-audit.json
+          if-no-files-found: error
       - name: Reconstruct frozen active-prefix evidence without input caches
         if: matrix.python == '3.12'
         run: |

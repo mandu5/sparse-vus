@@ -61,6 +61,11 @@ threshold; this interval does not establish population prevalence above
 twelve with no practical winner error.
 
 \begin{table}[t]
+\caption{Primary setting on all 128 series. ``Errors'' counts sampled
+winner sets whose \emph{best} exhaustive value is at least 0.01 below the
+exhaustive maximum. Maximum regret includes all cases in each family.}
+\label{tab:primary-families}
+
 \centering\small
 \begin{tabular}{lrrr@{\qquad}lrrr}
 \toprule
@@ -76,10 +81,7 @@ KDD21 & 10 & 2 & .3986 & SensorScope & 10 & 0 & .0000\\
 MGAB & 10 & 1 & .2517 & YAHOO & 9 & 4 & .2362\\
 \bottomrule
 \end{tabular}
-\caption{Primary setting on all 128 series. ``Errors'' counts sampled
-winner sets whose \emph{best} exhaustive value is at least 0.01 below the
-exhaustive maximum. Maximum regret includes all cases in each family.}
-\label{tab:primary-families}
+
 \end{table}
 
 Errors have both signs. Across the 1,536 scalar evaluations, mean absolute
@@ -131,6 +133,11 @@ series; five selections remain wrong. Thus the mechanism occurs in real
 published scores, but correcting it alone is insufficient in general.
 
 \begin{table}[t]
+\caption{Two unchanged published score vectors on KDD21/005. The diagnostic
+inserts at most one threshold per width and isolates a particular error
+component; it does not remove all integration error.}
+\label{tab:real-mechanism}
+
 \centering\small
 \begin{tabular}{lrrr}
 \toprule
@@ -140,10 +147,7 @@ CNN & .500000 & .055416 & .500000\\
 LOF & .101425 & .263117 & .134024\\
 \bottomrule
 \end{tabular}
-\caption{Two unchanged published score vectors on KDD21/005. The diagnostic
-inserts at most one threshold per width and isolates a particular error
-component; it does not remove all integration error.}
-\label{tab:real-mechanism}
+
 \end{table}
 
 \subsection{Integer certificates and a full-grid control}
@@ -169,6 +173,11 @@ regret 0.0018926253; none reaches 0.01. These are exact integer-endpoint
 decisions, not comparisons to a floating-point reference with a tolerance.
 
 \begin{table}[t]
+\caption{Integer enclosures at $L=30$. State counts and interval widths
+are per score vector; winner guarantees compare all twelve models jointly.
+A small median interval width does not replace the all-competitor test.}
+\label{tab:certificates}
+
 \centering\small
 \begin{tabular}{lrrrr}
 \toprule
@@ -179,10 +188,7 @@ Retained grid & median states & certified winners & median width & max width\\
 All score classes & 96 & 128/128 & $2.766\times10^{-11}$ & $1.714\times10^{-9}$\\
 \bottomrule
 \end{tabular}
-\caption{Integer enclosures at $L=30$. State counts and interval widths
-are per score vector; winner guarantees compare all twelve models jointly.
-A small median interval width does not replace the all-competitor test.}
-\label{tab:certificates}
+
 \end{table}
 
 All prior certified winners are preserved, and no full-grid interval is
@@ -216,6 +222,10 @@ and three families respectively. Width 300's six cases fall below the
 prespecified 5\% fraction; neither width replaces the primary result.
 
 \begin{table}[t]
+\caption{Series with best-case exhaustive regret at least 0.01; all
+denominators are 128. These sensitivity cells are not independent studies.}
+\label{tab:budget-sensitivity}
+
 \centering\small
 \begin{tabular}{lrrrrrr}
 \toprule
@@ -226,9 +236,7 @@ Maximum width & $H=32$ & $64$ & $128$ & $250$ & $500$ & $1{,}000$\\
 300 & 20 & 15 & 11 & 6 & 2 & 1\\
 \bottomrule
 \end{tabular}
-\caption{Series with best-case exhaustive regret at least 0.01; all
-denominators are 128. These sensitivity cells are not independent studies.}
-\label{tab:budget-sensitivity}
+
 \end{table}
 
 Timings use the fixed 30-series validation subset, all twelve models,
@@ -253,6 +261,11 @@ speed claim. The saturation-exact interval includes one. These are warm,
 one-host measurements on the released quantized score panel.
 
 \begin{table}[t]
+\caption{360 paired series/model cases at $L=30$, five repetitions per
+method. Ratios above one favor exhaustive radix. The matched compiled
+row controls for preparation and implementation family.}
+\label{tab:matched-costs}
+
 \centering\small
 \begin{tabular}{lrrl}
 \toprule
@@ -264,10 +277,7 @@ Unchanged Klein, $H=250$ & 5.077 & [4.186, 6.403] & PR\\
 Independent dense exact & 13.481 & [12.505, 14.583] & ROC and PR\\
 \bottomrule
 \end{tabular}
-\caption{360 paired series/model cases at $L=30$, five repetitions per
-method. Ratios above one favor exhaustive radix. The matched compiled
-row controls for preparation and implementation family.}
-\label{tab:matched-costs}
+
 \end{table}
 
 % The separately frozen three-method certificate-cost collection follows.
@@ -284,6 +294,12 @@ with no missing records, failures, timeouts or output mismatch. Integer
 endpoints match the completed certificate studies exactly.
 
 \begin{table}[t]
+\caption{Separate three-way timing, same 360 score vectors and five
+repetitions at $L=30$. These ratios describe time, so values below one
+favor the numerator method. They are descriptive finite-panel summaries;
+no confidence interval was specified for this addendum.}
+\label{tab:certificate-cost}
+
 \centering\small
 \begin{tabular}{lrrr}
 \toprule
@@ -294,11 +310,7 @@ Cost ratio & median & geometric mean & equal-family geometric mean\\
 Full certificate / numerical exact & 2.713 & 3.290 & 3.254\\
 \bottomrule
 \end{tabular}
-\caption{Separate three-way timing, same 360 score vectors and five
-repetitions at $L=30$. These ratios describe time, so values below one
-favor the numerator method. They are descriptive finite-panel summaries;
-no confidence interval was specified for this addendum.}
-\label{tab:certificate-cost}
+
 \end{table}
 
 The partial certificate saves approximately 18.5\% in the geometric
