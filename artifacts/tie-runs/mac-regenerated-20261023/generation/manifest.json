@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "status": "INPUTS_VERIFIED_NO_METRIC_OUTCOMES",
+  "started_utc": "2026-10-23T04:13:49.864220+00:00",
+  "completed_utc": "2026-10-23T04:14:27.287241+00:00",
+  "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+    "executable": "/opt/anaconda3/bin/python",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "pandas": "3.0.1",
+      "threadpoolctl": "3.6.0"
+    }
+  },
+  "parameters": {
+    "seed": 20261021,
+    "preprocessing": "all rows, no labels; finite-column median imputation; population standardization",
+    "isolation_forest": {
+      "n_estimators": 100,
+      "max_samples": "min(256,n)",
+      "max_features": 1.0,
+      "contamination": "auto",
+      "bootstrap": false,
+      "random_state": 20261021,
+      "n_jobs": 1,
+      "score": "negative decision_function"
+    },
+    "pca_reconstruction": {
+      "n_components": "min(5,d-1)",
+      "svd_solver": "full",
+      "whiten": false,
+      "score": "mean squared reconstruction residual",
+      "rank_zero": "zero reconstruction"
+    },
+    "knn_distance": {
+      "reference": "np.linspace(0,n-1,min(2048,n),dtype=np.int64)",
+      "n_neighbors": "min(20,reference_count)",
+      "algorithm": "brute",
+      "metric": "euclidean",
+      "n_jobs": 1,
+      "query_batch_rows": 512,
+      "score": "distance to kth neighbor; self is included where present"
+    },
+    "robust_marginal_z": {
+      "center": "median",
+      "scale": "1.4826*MAD",
+      "zero_scale_fallback": "population std if positive, otherwise 1",
+      "score": "max absolute standardized deviation"
+    }
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libomp",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib",
+      "version": null
+    }
+  ],
+  "models": [
+    "isolation_forest",
+    "pca_reconstruction",
+    "knn_distance",
+    "robust_marginal_z"
+  ],
+  "series_count": 12,
+  "family_count": 9,
+  "score_vectors": 48,
+  "total_rows": 457171,
+  "metric_outcomes_computed": false,
+  "series": [
+    {
+      "series": "CalIt2_traffic_test",
+      "family": "CalIt2",
+      "canonical_family": "calit2",
+      "completed_utc": "2026-10-23T04:13:50.338147+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/CalIt2/CalIt2_traffic_test.csv",
+      "raw_bytes": 106245,
+      "raw_sha256": "5a625b8c7a6b6629f09ddca3161358b67f5331329fc86674d724ba8b9127c1ca",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/CalIt2_traffic_test.npz",
+      "npz_bytes": 24391,
+      "npz_sha256": "889cd5efb58b4323c550135d116272d427bbe696893b4d8c31433ef2cc398860",
+      "n": 4032,
+      "preprocessing": {
+        "feature_columns": [
+          "in_count",
+          "out_count"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "in_count": 0,
+          "out_count": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 2
+      },
+      "actual_parameters": {
+        "pca_rank": 1,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "d4240281fcc22fb06df17caa543d05ce3055d338ce4988951b4acf207b205180",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.09108416602248326,
+        "pca_reconstruction": 0.010642915964126587,
+        "knn_distance": 0.030281333019956946,
+        "robust_marginal_z": 0.0004194580251350999
+      },
+      "array_sha256": {
+        "labels": "1cb4448e42c8f6982f594312769e0632382a0a7ef0e58f3c026292e8710414bb",
+        "isolation_forest": "0199197582cd75133c0a16aebdd86a34f7e58075d940165b92a6284b684739bd",
+        "pca_reconstruction": "bfc84fb08767be72b9f693bbe3dac78b9ba1b07c2b8b9f3a5cd45b9d7dede96e",
+        "knn_distance": "538c5d5f6587472682eb1e025e97314da641afde75c49910da2b045aab818ea2",
+        "robust_marginal_z": "8911077701b17f9bf40b35fb0e7276990816a8aa82e9e3c9db7dcf0e1babf73b"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "GECCO_water_quality_test",
+      "family": "GECCO",
+      "canonical_family": "gecco",
+      "completed_utc": "2026-10-23T04:13:52.695367+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GECCO/GECCO_water_quality_test.csv",
+      "raw_bytes": 6114353,
+      "raw_sha256": "1540ae632c03828525c6ffde4dff12d27410c79ee38d69f6807ed8a4ff73941d",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/GECCO_water_quality_test.npz",
+      "npz_bytes": 1905309,
+      "npz_sha256": "681633af4c6e9f6511d15939b2d5e53d08a4c6f63caac979fd84ce5345abba4b",
+      "n": 83113,
+      "preprocessing": {
+        "feature_columns": [
+          "Tp",
+          "Cl",
+          "pH",
+          "Redox",
+          "Leit",
+          "Trueb",
+          "Cl_2",
+          "Fm",
+          "Fm_2"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "Tp": 0,
+          "Cl": 0,
+          "pH": 0,
+          "Redox": 0,
+          "Leit": 0,
+          "Trueb": 0,
+          "Cl_2": 0,
+          "Fm": 0,
+          "Fm_2": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 9
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "77890cb76440c71d8f45f0d87d1084df1cbe035f864b462833967b78b4adb722",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.27706137497443706,
+        "pca_reconstruction": 0.02044450002722442,
+        "knn_distance": 0.9198312909575179,
+        "robust_marginal_z": 0.01988154201535508
+      },
+      "array_sha256": {
+        "labels": "a5a23798814307777806b5b9203d76b88b9202975d2330a247818aaa8b12c61b",
+        "isolation_forest": "2aa7f901dd6135db096b17f56c1204c78353fb1b1c30a11673a73586ef265d01",
+        "pca_reconstruction": "d8272a8b56d24635ac3db1359ed0279331b5240e83dfa207177a60809b58dc08",
+        "knn_distance": "0ff6344fad562ca507e32ee89e113a511a32c181c9318fd1b0990aaa949ca728",
+        "robust_marginal_z": "b0e61ac2505f23c68c63d0d6aabb370972d541ae5f78082271207af624c657ce"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test",
+      "family": "GHL",
+      "canonical_family": "ghl",
+      "completed_utc": "2026-10-23T04:13:57.213317+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GHL/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.csv",
+      "raw_bytes": 12971751,
+      "raw_sha256": "1092c17a60e431a1c7e3521f402665a7f51559bd57003c2c69787cbbed95b425",
+      "raw_git_blob_verified": false,
+      "raw_lfs_verified": true,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/GHL_17_Lev_fault_Temp_corr_seed_57_vars_23_test.npz",
+      "npz_bytes": 1402805,
+      "npz_sha256": "716fac261d243133c223398886203d456ef85d4de12d6c0469fea59e5901ca7a",
+      "n": 80001,
+      "preprocessing": {
+        "feature_columns": [
+          "RT_level_ini",
+          "RT_temperature.T",
+          "C_temperature.T",
+          "RT_level",
+          "out_valve_act",
+          "inv_valve_act",
+          "limiter.y",
+          "inj_valve_act",
+          "Relaxing.active",
+          "boundary.m_flow_in",
+          "dir_valve_act",
+          "C_level",
+          "HT_temperature.T",
+          "heater_act",
+          "HT_level",
+          "limiter1.y"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "RT_level_ini": 0,
+          "RT_temperature.T": 0,
+          "C_temperature.T": 0,
+          "RT_level": 0,
+          "out_valve_act": 0,
+          "inv_valve_act": 0,
+          "limiter.y": 0,
+          "inj_valve_act": 0,
+          "Relaxing.active": 0,
+          "boundary.m_flow_in": 0,
+          "dir_valve_act": 0,
+          "C_level": 0,
+          "HT_temperature.T": 0,
+          "heater_act": 0,
+          "HT_level": 0,
+          "limiter1.y": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 16
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "e1da0c2eb204842c9452560627a7d4399dfe8ecda65cac1ddddd3fc3ef2ac0e4",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.28080408298410475,
+        "pca_reconstruction": 0.03313629102194682,
+        "knn_distance": 0.6530427079997025,
+        "robust_marginal_z": 0.026611999957822263
+      },
+      "array_sha256": {
+        "labels": "a189cadd92c539d11a8477ffd92f2b7ea6cf890f188dd3808729869516cf1147",
+        "isolation_forest": "0af712d4314d167a7327a60eb37831c452bf641f7f82cae73a4a6099eff7f0f8",
+        "pca_reconstruction": "3ca0aae631068b41dba85c9c0f9611902574d37a992bafbd91a9693a474f79e5",
+        "knn_distance": "a973cb2162ec4d4574cb2c573fd289b03db388a82565e274f32955de15c89d1e",
+        "robust_marginal_z": "ac7e675093e47940d36a09bdafac0f48c404e0192d19f21c9eb79b4c427ee078"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test",
+      "family": "GHL",
+      "canonical_family": "ghl",
+      "completed_utc": "2026-10-23T04:14:05.099348+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GHL/GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test.csv",
+      "raw_bytes": 12953089,
+      "raw_sha256": "226314df1414bdbf9b47123a6cfe8f87f453fc67f8153b04f6efd4e196217ab5",
+      "raw_git_blob_verified": false,
+      "raw_lfs_verified": true,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/GHL_18_Lev_fault_Temp_corr_seed_59_vars_23_test.npz",
+      "npz_bytes": 1423769,
+      "npz_sha256": "4ab491bcb955ab3169b8741f8d84870ed4c3c6443a1574d317872eecf82581fe",
+      "n": 80001,
+      "preprocessing": {
+        "feature_columns": [
+          "RT_level_ini",
+          "RT_temperature.T",
+          "C_temperature.T",
+          "RT_level",
+          "out_valve_act",
+          "inv_valve_act",
+          "limiter.y",
+          "inj_valve_act",
+          "Relaxing.active",
+          "boundary.m_flow_in",
+          "dir_valve_act",
+          "C_level",
+          "HT_temperature.T",
+          "heater_act",
+          "HT_level",
+          "limiter1.y"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "RT_level_ini": 0,
+          "RT_temperature.T": 0,
+          "C_temperature.T": 0,
+          "RT_level": 0,
+          "out_valve_act": 0,
+          "inv_valve_act": 0,
+          "limiter.y": 0,
+          "inj_valve_act": 0,
+          "Relaxing.active": 0,
+          "boundary.m_flow_in": 0,
+          "dir_valve_act": 0,
+          "C_level": 0,
+          "HT_temperature.T": 0,
+          "heater_act": 0,
+          "HT_level": 0,
+          "limiter1.y": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 16
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "e1da0c2eb204842c9452560627a7d4399dfe8ecda65cac1ddddd3fc3ef2ac0e4",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.24852608400397003,
+        "pca_reconstruction": 0.029934124962892383,
+        "knn_distance": 0.7223444579867646,
+        "robust_marginal_z": 0.02604854095261544
+      },
+      "array_sha256": {
+        "labels": "796eb8d324f4af7f15339e74c045fa22a47e56444d278e98735f0fb4f625db62",
+        "isolation_forest": "61cf59a98607ad6fd68853b971787ee27ed2f2e7292a5969a85b6ae225add651",
+        "pca_reconstruction": "01b7407b8dd638786a27533ed3a8ef59bfe25a3086260442bd42be9b89ff6078",
+        "knn_distance": "7f6d07164b969bbd5ac705315090b08ec7b162fab8e6611743b626d69c93689a",
+        "robust_marginal_z": "d64b8a76d108a410b2fa3805a8c461fb3d2b7131b40be55b16b35b136a54c8a8"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "Genesis_test",
+      "family": "Genesis",
+      "canonical_family": "genesis",
+      "completed_utc": "2026-10-23T04:14:05.906116+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/Genesis/Genesis_test.csv",
+      "raw_bytes": 743751,
+      "raw_sha256": "15c241d24776b14cae63ce477aa145e93f96ce67f287959981b0461467dd7bb2",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/Genesis_test.npz",
+      "npz_bytes": 149910,
+      "npz_sha256": "efc8da51957274ab8f06a213065caeccc8e32225b9e5f5ceb65b5771892aebd5",
+      "n": 9332,
+      "preprocessing": {
+        "feature_columns": [
+          "MotorData.ActCurrent",
+          "MotorData.ActPosition",
+          "MotorData.ActSpeed",
+          "MotorData.IsAcceleration",
+          "MotorData.IsForce",
+          "MotorData.Motor_Pos1reached",
+          "MotorData.Motor_Pos2reached",
+          "MotorData.Motor_Pos3reached",
+          "MotorData.Motor_Pos4reached",
+          "NVL_Recv_Ind.GL_Metall",
+          "NVL_Recv_Ind.GL_NonMetall",
+          "NVL_Recv_Storage.GL_I_ProcessStarted",
+          "NVL_Recv_Storage.GL_I_Slider_IN",
+          "NVL_Recv_Storage.GL_I_Slider_OUT",
+          "NVL_Recv_Storage.GL_LightBarrier",
+          "NVL_Send_Storage.ActivateStorage",
+          "PLC_PRG.Gripper",
+          "PLC_PRG.MaterialIsMetal"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "MotorData.ActCurrent": 0,
+          "MotorData.ActPosition": 0,
+          "MotorData.ActSpeed": 0,
+          "MotorData.IsAcceleration": 0,
+          "MotorData.IsForce": 0,
+          "MotorData.Motor_Pos1reached": 0,
+          "MotorData.Motor_Pos2reached": 0,
+          "MotorData.Motor_Pos3reached": 0,
+          "MotorData.Motor_Pos4reached": 0,
+          "NVL_Recv_Ind.GL_Metall": 0,
+          "NVL_Recv_Ind.GL_NonMetall": 0,
+          "NVL_Recv_Storage.GL_I_ProcessStarted": 0,
+          "NVL_Recv_Storage.GL_I_Slider_IN": 0,
+          "NVL_Recv_Storage.GL_I_Slider_OUT": 0,
+          "NVL_Recv_Storage.GL_LightBarrier": 0,
+          "NVL_Send_Storage.ActivateStorage": 0,
+          "PLC_PRG.Gripper": 0,
+          "PLC_PRG.MaterialIsMetal": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 18
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "5c7858409413747720fc58ad2a2659cee76f777b97276fe74294abf4453be00d",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.10283762495964766,
+        "pca_reconstruction": 0.004381040984299034,
+        "knn_distance": 0.070676791947335,
+        "robust_marginal_z": 0.0031853329855948687
+      },
+      "array_sha256": {
+        "labels": "0a7700fa551d91d3ab49d0d301183994bb4318a5ae1600c9d25a6728d145c454",
+        "isolation_forest": "806ca13835ea5f2446a1586ce974cf2253995385dbfd8452e64b3452144cbdc6",
+        "pca_reconstruction": "e52f5c7987b4461c47dcf5f07f6adc3334ccfb37dd76890016f937988b85b9d3",
+        "knn_distance": "3e00f0e7881ec790e05f19414b6928c3d643b6307a418015bf20c0cb60d72940",
+        "robust_marginal_z": "62a1230e29a0ee216a7a7b727c0fa295db2c3a933eacf24f997ef062b7780249"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "GutenTAG_0_test",
+      "family": "GutenTAG",
+      "canonical_family": "gutentag",
+      "completed_utc": "2026-10-23T04:14:07.114143+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GutenTAG/GutenTAG_0_test.csv",
+      "raw_bytes": 2914569,
+      "raw_sha256": "6b77dcec0d368f1b2738721cf7473c8fd115c506189f63eff1d02909864cacde",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/GutenTAG_0_test.npz",
+      "npz_bytes": 290973,
+      "npz_sha256": "e7ac7a740e8a4b13a480171190a2084fd22b6e9d2b7d96ddd036b51a127e36f3",
+      "n": 10000,
+      "preprocessing": {
+        "feature_columns": [
+          "feature_1",
+          "feature_2",
+          "feature_3",
+          "feature_4",
+          "feature_5",
+          "feature_6",
+          "feature_7",
+          "feature_8",
+          "feature_9",
+          "feature_10",
+          "feature_11",
+          "feature_12",
+          "feature_13",
+          "feature_14",
+          "feature_15",
+          "feature_16",
+          "feature_17",
+          "feature_18",
+          "feature_19",
+          "feature_20"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "feature_1": 0,
+          "feature_2": 0,
+          "feature_3": 0,
+          "feature_4": 0,
+          "feature_5": 0,
+          "feature_6": 0,
+          "feature_7": 0,
+          "feature_8": 0,
+          "feature_9": 0,
+          "feature_10": 0,
+          "feature_11": 0,
+          "feature_12": 0,
+          "feature_13": 0,
+          "feature_14": 0,
+          "feature_15": 0,
+          "feature_16": 0,
+          "feature_17": 0,
+          "feature_18": 0,
+          "feature_19": 0,
+          "feature_20": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 20
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "ca4b6beff1bd5176928ddf1df7bdd1465455686f217cfa67bbea29b45cfc5dff",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.12269975000526756,
+        "pca_reconstruction": 0.005437374988105148,
+        "knn_distance": 0.08608183299656957,
+        "robust_marginal_z": 0.0048820829833857715
+      },
+      "array_sha256": {
+        "labels": "91aff203dbcdc1a3e5d79a89082296a792325d031d3138333ff016ef08dc3e6f",
+        "isolation_forest": "23acf19f3be2c29a12b2c7cea896d84a84e38d3c90691e45172ceab2b1574172",
+        "pca_reconstruction": "b58d364dcb14ec49c0ab4df480b268d9a6ffffe4fb99b31326c907e2488b4e11",
+        "knn_distance": "61fe7eedf1a9600c46ed95d20f7f458baaf942519dbccb6f983bd2fb7797fc7f",
+        "robust_marginal_z": "07684c80cfda651c6b6a0e5d09ed8af20de6cd55fd8b8c4da960862c2becf5f3"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "GutenTAG_10_test",
+      "family": "GutenTAG",
+      "canonical_family": "gutentag",
+      "completed_utc": "2026-10-23T04:14:08.078050+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GutenTAG/GutenTAG_10_test.csv",
+      "raw_bytes": 3229880,
+      "raw_sha256": "94d7349e30f9e3993c9f43817c23cc4307deaa3910c7d9ea946a6999c234937c",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/GutenTAG_10_test.npz",
+      "npz_bytes": 291479,
+      "npz_sha256": "d6560ae5f601bc05316a2a5a0c0f82e011cb905fc78e69015fc66c936a2affa8",
+      "n": 10000,
+      "preprocessing": {
+        "feature_columns": [
+          "feature_1",
+          "feature_2",
+          "feature_3",
+          "feature_4",
+          "feature_5",
+          "feature_6",
+          "feature_7",
+          "feature_8",
+          "feature_9",
+          "feature_10",
+          "feature_11",
+          "feature_12",
+          "feature_13",
+          "feature_14",
+          "feature_15",
+          "feature_16",
+          "feature_17",
+          "feature_18",
+          "feature_19",
+          "feature_20"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "feature_1": 0,
+          "feature_2": 0,
+          "feature_3": 0,
+          "feature_4": 0,
+          "feature_5": 0,
+          "feature_6": 0,
+          "feature_7": 0,
+          "feature_8": 0,
+          "feature_9": 0,
+          "feature_10": 0,
+          "feature_11": 0,
+          "feature_12": 0,
+          "feature_13": 0,
+          "feature_14": 0,
+          "feature_15": 0,
+          "feature_16": 0,
+          "feature_17": 0,
+          "feature_18": 0,
+          "feature_19": 0,
+          "feature_20": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 20
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "ca4b6beff1bd5176928ddf1df7bdd1465455686f217cfa67bbea29b45cfc5dff",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.11195708299055696,
+        "pca_reconstruction": 0.005718457978218794,
+        "knn_distance": 0.09326033404795453,
+        "robust_marginal_z": 0.005434500053524971
+      },
+      "array_sha256": {
+        "labels": "4e5b890dae7f0c281a5c0b60fe5c77399c185ae798bfd271dc625a46829152bd",
+        "isolation_forest": "384429fcf483155fb93c95085a599dd459f2fc4eefeb3b09047cd75118169d73",
+        "pca_reconstruction": "2398bcc025f603dd7d15c2c30a531f9576efadb9e20be2d4328c7a03737bc01b",
+        "knn_distance": "a28d8b0ff6d5e125ad421b647d92f8a9058d0621ac42e55f041f08e74bb02efb",
+        "robust_marginal_z": "3bb045e1e842e14b95cde9c6f9d5b84568b7e82f3f6cb2b069d23740cac2ecd0"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "PSM_test",
+      "family": "PSM",
+      "canonical_family": "psm",
+      "completed_utc": "2026-10-23T04:14:15.619049+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/PSM/PSM_test.csv",
+      "raw_bytes": 33707365,
+      "raw_sha256": "4cac499f2eacf6a292eeb94cd5dfc49b9a0bbe02d71c89207e090bde6361ef25",
+      "raw_git_blob_verified": false,
+      "raw_lfs_verified": true,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/PSM_test.npz",
+      "npz_bytes": 1810225,
+      "npz_sha256": "9e08ff23ebdccc68b03a18520b06ad64ac1c6c727adfbd33675272be10375ef5",
+      "n": 70273,
+      "preprocessing": {
+        "feature_columns": [
+          "feature_1",
+          "feature_2",
+          "feature_3",
+          "feature_4",
+          "feature_5",
+          "feature_6",
+          "feature_7",
+          "feature_8",
+          "feature_9",
+          "feature_10",
+          "feature_11",
+          "feature_12",
+          "feature_13",
+          "feature_14",
+          "feature_15",
+          "feature_16",
+          "feature_17",
+          "feature_18",
+          "feature_19",
+          "feature_20",
+          "feature_21",
+          "feature_22",
+          "feature_23",
+          "feature_24",
+          "feature_25",
+          "feature_26"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "feature_1": 0,
+          "feature_2": 0,
+          "feature_3": 0,
+          "feature_4": 0,
+          "feature_5": 0,
+          "feature_6": 0,
+          "feature_7": 0,
+          "feature_8": 0,
+          "feature_9": 0,
+          "feature_10": 0,
+          "feature_11": 0,
+          "feature_12": 0,
+          "feature_13": 0,
+          "feature_14": 0,
+          "feature_15": 0,
+          "feature_16": 0,
+          "feature_17": 0,
+          "feature_18": 0,
+          "feature_19": 0,
+          "feature_20": 0,
+          "feature_21": 0,
+          "feature_22": 0,
+          "feature_23": 0,
+          "feature_24": 0,
+          "feature_25": 0,
+          "feature_26": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 26
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "0e34c587a94990e0fa3d7d4481ea54541d0ef3e740768c3c864d9a8d274a9f76",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.28251866600476205,
+        "pca_reconstruction": 0.062346208025701344,
+        "knn_distance": 0.7599135829950683,
+        "robust_marginal_z": 0.0665681249811314
+      },
+      "array_sha256": {
+        "labels": "cceaa1078c098ebd27f30cb8418ee8e46682c3b2d32355a036e794830c9a0aa7",
+        "isolation_forest": "eaf0601b8275d8f196687aec38a04590a28ae74987c329a55a531eed110b99f6",
+        "pca_reconstruction": "69d7d28d4bdf45cd223645145cc0ecace85ee7b9834d3c184a8c232c2716b290",
+        "knn_distance": "af8bdd5ff8f3e4f9276cc16329b12ca9ff066b136bc3272269338cebf45115ba",
+        "robust_marginal_z": "f00242c52923fe63ca6551d27b1406f536b5b6d574306f3b9638dcae84bad708"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "metro_traffic-volume_test",
+      "family": "metro",
+      "canonical_family": "metro",
+      "completed_utc": "2026-10-23T04:14:16.654893+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/metro/metro_traffic-volume_test.csv",
+      "raw_bytes": 1071536,
+      "raw_sha256": "9616e80a29c09870f2251e5f9c8d8cb1ec0063800aa83e15324cd1da22aa4835",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/metro_traffic-volume_test.npz",
+      "npz_bytes": 467801,
+      "npz_sha256": "0c274064d34020aec8a61124aa8ff9ebd55c65b361e1377633997dab60f0028f",
+      "n": 24102,
+      "preprocessing": {
+        "feature_columns": [
+          "traffic_volume",
+          "temp",
+          "rain_1h",
+          "snow_1h",
+          "clouds_all"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "traffic_volume": 0,
+          "temp": 0,
+          "rain_1h": 0,
+          "snow_1h": 0,
+          "clouds_all": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 5
+      },
+      "actual_parameters": {
+        "pca_rank": 4,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "9621a4c59c0a5db9bc60a89fbee25b5199ac936a277ce202ae670d4c500f4af2",
+        "knn_k": 20,
+        "constant_feature_count": 1
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.20380466600181535,
+        "pca_reconstruction": 0.00312308402499184,
+        "knn_distance": 0.21314124995842576,
+        "robust_marginal_z": 0.003390458005014807
+      },
+      "array_sha256": {
+        "labels": "1f1fef7e4505366de331a25855876b06c560c55d7202c4d7a508a33bdce00ae3",
+        "isolation_forest": "71f280d28eafe70a94e0836fadc9c53d7e41b4dfb3aac6a0c1ba0e4cca7c6130",
+        "pca_reconstruction": "2e672099dda43137c4f5e244ed78a3f48194f541cdbc054bf09c233508efbf52",
+        "knn_distance": "b8542dc9c7c3927a14b50f11131b6fb7241cc90dabdf30b84af1c7994c5c2387",
+        "robust_marginal_z": "53a572547f3fc04cde36968b03385445bcf0568283ef3318844de01644ec7e38"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "room-occupancy_1_test",
+      "family": "room-occupancy",
+      "canonical_family": "occupancy",
+      "completed_utc": "2026-10-23T04:14:17.435520+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/room-occupancy/room-occupancy_1_test.csv",
+      "raw_bytes": 522031,
+      "raw_sha256": "b3eafec6d15a5d257a22cc602490be79e96e16b233c5971b500e38b4944e5df7",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/room-occupancy_1_test.npz",
+      "npz_bytes": 185026,
+      "npz_sha256": "afffcd977625d41d6f86ba3b30ed26745b82c2830da3d05760d75af9ba53a832",
+      "n": 7802,
+      "preprocessing": {
+        "feature_columns": [
+          "Temperature",
+          "Humidity",
+          "Light",
+          "CO2",
+          "HumidityRatio"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "Temperature": 0,
+          "Humidity": 0,
+          "Light": 0,
+          "CO2": 0,
+          "HumidityRatio": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 5
+      },
+      "actual_parameters": {
+        "pca_rank": 4,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "a184172aef64235efb5764487372d446cfc79e1ae177444edcae239b95be8d73",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.09014074999140576,
+        "pca_reconstruction": 0.0012467500055208802,
+        "knn_distance": 0.06572912499541417,
+        "robust_marginal_z": 0.0012501250021159649
+      },
+      "array_sha256": {
+        "labels": "8359411f982e27ed67dd3c178e57a5282ed3b4c79d48554e29ea849ee3d7793c",
+        "isolation_forest": "8b0ba634249ad1dfc3efa5154576a87066a56df600b619eacb24d6b524d182f0",
+        "pca_reconstruction": "a451546fb645d0f9004292a192f147e83c8c51b84d13c1019b5527243440522f",
+        "knn_distance": "b9e1f04088105f5c35f26d2d8296c7ba208b4ff92113233bcc0ad1b9f80fd6a7",
+        "robust_marginal_z": "5d8dff563160fed24297cce3e3926043b79319d870db54085a2c1c176214ec37"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "room-occupancy_test",
+      "family": "room-occupancy",
+      "canonical_family": "occupancy",
+      "completed_utc": "2026-10-23T04:14:18.038800+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/room-occupancy/room-occupancy_test.csv",
+      "raw_bytes": 432656,
+      "raw_sha256": "0a48b2c532241e33e00bf7662300b8a821fdd43905ef5c8e72fdc518effbc94b",
+      "raw_git_blob_verified": true,
+      "raw_lfs_verified": false,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/room-occupancy_test.npz",
+      "npz_bytes": 151757,
+      "npz_sha256": "690b7fd26b0898251ca9668da773044afca62a0c984a96f3021ca40c4963f257",
+      "n": 6515,
+      "preprocessing": {
+        "feature_columns": [
+          "Temperature",
+          "Humidity",
+          "Light",
+          "CO2",
+          "HumidityRatio"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "Temperature": 0,
+          "Humidity": 0,
+          "Light": 0,
+          "CO2": 0,
+          "HumidityRatio": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 5
+      },
+      "actual_parameters": {
+        "pca_rank": 4,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "6165274da48bc025cf8287a759a97a9783265a9eff73a4fa3a962cc44cacf320",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.09439841698622331,
+        "pca_reconstruction": 0.002197332971263677,
+        "knn_distance": 0.05706554197240621,
+        "robust_marginal_z": 0.0008457080111838877
+      },
+      "array_sha256": {
+        "labels": "bd0c523394476667c43038cb739b1a096db2eed9875b1ca9e72c752dcb9af975",
+        "isolation_forest": "8db0d64003a8848f67cb6be54923b974e1b362b7563ad6222f684bfc7a9c851a",
+        "pca_reconstruction": "bba4ddf5d48ff2a84144256371cd430da70d29ce1cc1666db921f428a850521f",
+        "knn_distance": "34d9f0d0bf375011bbf1052d7b5386be9ddbde4fc670fa344671d700f26624ec",
+        "robust_marginal_z": "c49da8a3e75d703b7981c982fd22f45d744a906d4e4cefd392a514451fbdf39a"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    },
+    {
+      "series": "swan_sf_test",
+      "family": "swan",
+      "canonical_family": "swan",
+      "completed_utc": "2026-10-23T04:14:27.240220+00:00",
+      "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/swan/swan_sf_test.csv",
+      "raw_bytes": 42278063,
+      "raw_sha256": "564a3a69292b4a5cfd678fe2c6984aa49f6dabaeadedd44bfccccaec5239484a",
+      "raw_git_blob_verified": false,
+      "raw_lfs_verified": true,
+      "npz_path": ".cache/tie-replication/mac-regenerated-20261023/generation/arrays/swan_sf_test.npz",
+      "npz_bytes": 1454910,
+      "npz_sha256": "e4263fbbc778ef3a1bf599087221d3a65325b9bd0aa0333c3e87892530f5a484",
+      "n": 72000,
+      "preprocessing": {
+        "feature_columns": [
+          "TOTUSJH",
+          "TOTBSQ",
+          "TOTPOT",
+          "TOTUSJZ",
+          "ABSNJZH",
+          "SAVNCPP",
+          "USFLUX",
+          "TOTFZ",
+          "MEANPOT",
+          "EPSZ",
+          "MEANSHR",
+          "SHRGT45",
+          "MEANGAM",
+          "MEANGBT",
+          "MEANGBZ",
+          "MEANGBH",
+          "MEANJZH",
+          "TOTFY",
+          "MEANJZD",
+          "MEANALP",
+          "TOTFX",
+          "EPSY",
+          "EPSX",
+          "R_VALUE",
+          "CRVAL1",
+          "CRLN_OBS",
+          "LAT_MIN",
+          "LON_MIN",
+          "LAT_MAX",
+          "LON_MAX",
+          "QUALITY",
+          "IS_TMFI",
+          "BFLARE",
+          "CFLARE",
+          "MFLARE",
+          "XFLARE",
+          "XR_MAX",
+          "XR_QUAL"
+        ],
+        "dropped_columns": [
+          {
+            "column": "timestamp",
+            "reason": "declared timestamp/index name"
+          }
+        ],
+        "nonfinite_replacements": {
+          "TOTUSJH": 0,
+          "TOTBSQ": 0,
+          "TOTPOT": 0,
+          "TOTUSJZ": 0,
+          "ABSNJZH": 0,
+          "SAVNCPP": 0,
+          "USFLUX": 0,
+          "TOTFZ": 0,
+          "MEANPOT": 0,
+          "EPSZ": 0,
+          "MEANSHR": 0,
+          "SHRGT45": 0,
+          "MEANGAM": 0,
+          "MEANGBT": 0,
+          "MEANGBZ": 0,
+          "MEANGBH": 0,
+          "MEANJZH": 0,
+          "TOTFY": 0,
+          "MEANJZD": 0,
+          "MEANALP": 0,
+          "TOTFX": 0,
+          "EPSY": 0,
+          "EPSX": 0,
+          "R_VALUE": 0,
+          "CRVAL1": 0,
+          "CRLN_OBS": 0,
+          "LAT_MIN": 0,
+          "LON_MIN": 0,
+          "LAT_MAX": 0,
+          "LON_MAX": 0,
+          "QUALITY": 0,
+          "IS_TMFI": 0,
+          "BFLARE": 0,
+          "CFLARE": 0,
+          "MFLARE": 0,
+          "XFLARE": 0,
+          "XR_MAX": 0,
+          "XR_QUAL": 0
+        },
+        "row_order": "unchanged",
+        "feature_count": 38
+      },
+      "actual_parameters": {
+        "pca_rank": 5,
+        "knn_reference_count": 2048,
+        "knn_reference_indices_sha256": "f2f43a3660d66e93102669b048a2c3bb77ea67f00433d4ed8aafbda427c1ef42",
+        "knn_k": 20,
+        "constant_feature_count": 0
+      },
+      "score_generation_seconds": {
+        "isolation_forest": 0.3554838339914568,
+        "pca_reconstruction": 0.10143370798323303,
+        "knn_distance": 0.6566349579952657,
+        "robust_marginal_z": 0.09719937498448417
+      },
+      "array_sha256": {
+        "labels": "6d6a5af8e91b933060ef386145c26cce07b2c4d9861b16b83785af803425ae68",
+        "isolation_forest": "16c5e1db52e99ba7446acc98a93bf0f3c9a65d744144f5072ba396d26a4905a3",
+        "pca_reconstruction": "55c4c773d2f6f5ab01d334185c341162f537fd673f358fa4dfa41d009676fdcb",
+        "knn_distance": "6a801b0bb8f3765c23f4a8d5219b98b8a3fcca026afe87299da4ccd9d7f395b6",
+        "robust_marginal_z": "56f060becdf72fe87a753edec34f6779cff62916c4f977c44cfc9a189ce258f4"
+      },
+      "selection_sha256": "f616f3a9a21a7b39e91fe875ec65476b2dc19d2174da04bedd37d89b0da900aa",
+      "metric_outcomes_computed": false
+    }
+  ]
+}

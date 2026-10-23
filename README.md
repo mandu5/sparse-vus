@@ -45,6 +45,16 @@ Alternating ties are a negative control, and real-score results do not support
 replacing active prefix broadly. Full timings and losses are retained in
 [the frozen report](artifacts/tie-runs/mac-20261023/report.json).
 
+The portable regeneration route also completed **68 cases and 1,360 timed
+calls per host** on Mac and a fresh Linux runner. Both pass parity and work
+checks; maximum discrepancy from radix is `2.23e-16`. This is procedural
+replication on previously studied data: all 48 generated Mac score vectors
+match historical bytes, but only 9 of 48 Linux vectors do. See the
+[Mac report](artifacts/tie-runs/mac-regenerated-20261023-retry1/report.json),
+[Linux report](artifacts/tie-runs/linux-39900063718/report.json), and
+[executed Linux workflow](https://github.com/mandu5/sparse-vus/actions/runs/39900063718).
+The 63 historical development cases are outside this portable subset.
+
 ## Active-prefix research branch (21 October 2026)
 
 This branch adds an evaluator whose complete-call bound is

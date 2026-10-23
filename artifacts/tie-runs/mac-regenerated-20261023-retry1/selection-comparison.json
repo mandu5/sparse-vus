@@ -1,0 +1,35 @@
+{
+  "status": "SELECTION_IDENTICAL",
+  "ignored_fields": [
+    "environment",
+    "frozen_utc"
+  ],
+  "compared_fields": [
+    "expected_download_bytes",
+    "family_aliases",
+    "family_count",
+    "file_tree_sha256",
+    "file_tree_url",
+    "metadata_sha256",
+    "metadata_url",
+    "metric_outcomes_computed",
+    "models",
+    "parameters",
+    "previous_canonical_families",
+    "previous_families",
+    "previous_manifest_sha256",
+    "rule",
+    "schema_version",
+    "scope",
+    "selected_count",
+    "series",
+    "source",
+    "source_code_revision",
+    "source_data_revision",
+    "source_sha256",
+    "stage"
+  ],
+  "scope": "Same fixed source selection and generation procedure; environment/time may differ.",
+  "reference_sha256": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+  "regenerated_sha256": "b73565043c9bf99c99bd5d5f473f766ae2213de0e02bf698a9a8cc54ae48d789"
+}

@@ -11,8 +11,9 @@ released implementation and exhaustive thresholds. All validation and
 preparation inside the public calls are timed.
 
 The whole monotonic clock runs from before the first NPZ open until the
-result file is closed. Imports, synthetic dtype-matched JIT warmup, hashing
-and explicit filesystem-cache warming precede each pass. Every measured
+result file is closed. Imports and synthetic dtype-matched JIT warmup occur
+once before timing; input hashing and explicit filesystem-cache warming
+precede every pass. Every measured
 pass rereads and decodes the files; it is a warm-filesystem workflow, not a
 cold-disk or durable-write benchmark (no \texttt{fsync}). Three replications
 run serially with one numerical thread on the M1 Pro. Seeded method order
@@ -47,5 +48,6 @@ per method do not establish a confidence interval or timing significance.
 This directly demonstrates savings for the specified stored-score operation;
 it does not measure a full training/inference pipeline, production deployment,
 or a new-domain evaluation. An independent standard-library auditor
-reconstructs the decisions, order, counts, clocks and numeric comparisons
-from the public hash-bound output receipts without raw input arrays.
+checks recorded order, counts and clock consistency and recomputes
+numeric comparisons and decisions from public hash-bound receipts,
+without raw input arrays or a new timing measurement.

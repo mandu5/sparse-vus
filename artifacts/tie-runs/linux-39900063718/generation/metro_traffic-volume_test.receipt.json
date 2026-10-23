@@ -1,0 +1,61 @@
+{
+  "series": "metro_traffic-volume_test",
+  "family": "metro",
+  "canonical_family": "metro",
+  "completed_utc": "2026-10-23T04:24:23.052554+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/metro/metro_traffic-volume_test.csv",
+  "raw_bytes": 1071536,
+  "raw_sha256": "9616e80a29c09870f2251e5f9c8d8cb1ec0063800aa83e15324cd1da22aa4835",
+  "raw_git_blob_verified": true,
+  "raw_lfs_verified": false,
+  "npz_path": ".cache/tie-replication/linux-39900063718/generation/arrays/metro_traffic-volume_test.npz",
+  "npz_bytes": 467613,
+  "npz_sha256": "67586046e5b8f42ce39708c409ef29f653244ada3a3d70c2923b9e66b7cc1308",
+  "n": 24102,
+  "preprocessing": {
+    "feature_columns": [
+      "traffic_volume",
+      "temp",
+      "rain_1h",
+      "snow_1h",
+      "clouds_all"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "traffic_volume": 0,
+      "temp": 0,
+      "rain_1h": 0,
+      "snow_1h": 0,
+      "clouds_all": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 5
+  },
+  "actual_parameters": {
+    "pca_rank": 4,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "9621a4c59c0a5db9bc60a89fbee25b5199ac936a277ce202ae670d4c500f4af2",
+    "knn_k": 20,
+    "constant_feature_count": 1
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.1663607280000008,
+    "pca_reconstruction": 0.0028313899999972136,
+    "knn_distance": 0.2167300090000026,
+    "robust_marginal_z": 0.002878189000000475
+  },
+  "array_sha256": {
+    "labels": "1f1fef7e4505366de331a25855876b06c560c55d7202c4d7a508a33bdce00ae3",
+    "isolation_forest": "9d4dc6453f54312d06dbab1472e1268c6b292b410fb5d7c0d445fd73c1ef5407",
+    "pca_reconstruction": "dedb43d6398087253975e9b26b0678f8e863d143e97c6ebd5c124c61a7e65905",
+    "knn_distance": "849a504b6c895b50380b8899c7472c39b16527accfbb2fea0e8d7395fc6638ba",
+    "robust_marginal_z": "53a572547f3fc04cde36968b03385445bcf0568283ef3318844de01644ec7e38"
+  },
+  "selection_sha256": "f6bef8a4ba9e0aee16a1afc11231533ca2c545ab0ee93fc2631a7de40ee749fe",
+  "metric_outcomes_computed": false
+}

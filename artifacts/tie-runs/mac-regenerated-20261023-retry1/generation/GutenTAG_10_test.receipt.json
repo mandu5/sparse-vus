@@ -1,0 +1,91 @@
+{
+  "series": "GutenTAG_10_test",
+  "family": "GutenTAG",
+  "canonical_family": "gutentag",
+  "completed_utc": "2026-10-23T04:17:22.638883+00:00",
+  "url": "https://huggingface.co/datasets/PLAN-Lab/mTSBench/resolve/8dea9af65a9895f39e9e76f118cf23a94d2d4d0a/GutenTAG/GutenTAG_10_test.csv",
+  "raw_bytes": 3229880,
+  "raw_sha256": "94d7349e30f9e3993c9f43817c23cc4307deaa3910c7d9ea946a6999c234937c",
+  "raw_git_blob_verified": true,
+  "raw_lfs_verified": false,
+  "npz_path": ".cache/tie-replication/mac-regenerated-20261023-retry1/generation/arrays/GutenTAG_10_test.npz",
+  "npz_bytes": 291479,
+  "npz_sha256": "d6560ae5f601bc05316a2a5a0c0f82e011cb905fc78e69015fc66c936a2affa8",
+  "n": 10000,
+  "preprocessing": {
+    "feature_columns": [
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4",
+      "feature_5",
+      "feature_6",
+      "feature_7",
+      "feature_8",
+      "feature_9",
+      "feature_10",
+      "feature_11",
+      "feature_12",
+      "feature_13",
+      "feature_14",
+      "feature_15",
+      "feature_16",
+      "feature_17",
+      "feature_18",
+      "feature_19",
+      "feature_20"
+    ],
+    "dropped_columns": [
+      {
+        "column": "timestamp",
+        "reason": "declared timestamp/index name"
+      }
+    ],
+    "nonfinite_replacements": {
+      "feature_1": 0,
+      "feature_2": 0,
+      "feature_3": 0,
+      "feature_4": 0,
+      "feature_5": 0,
+      "feature_6": 0,
+      "feature_7": 0,
+      "feature_8": 0,
+      "feature_9": 0,
+      "feature_10": 0,
+      "feature_11": 0,
+      "feature_12": 0,
+      "feature_13": 0,
+      "feature_14": 0,
+      "feature_15": 0,
+      "feature_16": 0,
+      "feature_17": 0,
+      "feature_18": 0,
+      "feature_19": 0,
+      "feature_20": 0
+    },
+    "row_order": "unchanged",
+    "feature_count": 20
+  },
+  "actual_parameters": {
+    "pca_rank": 5,
+    "knn_reference_count": 2048,
+    "knn_reference_indices_sha256": "ca4b6beff1bd5176928ddf1df7bdd1465455686f217cfa67bbea29b45cfc5dff",
+    "knn_k": 20,
+    "constant_feature_count": 0
+  },
+  "score_generation_seconds": {
+    "isolation_forest": 0.10981520800851285,
+    "pca_reconstruction": 0.005543750012293458,
+    "knn_distance": 0.08637604204704985,
+    "robust_marginal_z": 0.005432082980405539
+  },
+  "array_sha256": {
+    "labels": "4e5b890dae7f0c281a5c0b60fe5c77399c185ae798bfd271dc625a46829152bd",
+    "isolation_forest": "384429fcf483155fb93c95085a599dd459f2fc4eefeb3b09047cd75118169d73",
+    "pca_reconstruction": "2398bcc025f603dd7d15c2c30a531f9576efadb9e20be2d4328c7a03737bc01b",
+    "knn_distance": "a28d8b0ff6d5e125ad421b647d92f8a9058d0621ac42e55f041f08e74bb02efb",
+    "robust_marginal_z": "3bb045e1e842e14b95cde9c6f9d5b84568b7e82f3f6cb2b069d23740cac2ecd0"
+  },
+  "selection_sha256": "b73565043c9bf99c99bd5d5f473f766ae2213de0e02bf698a9a8cc54ae48d789",
+  "metric_outcomes_computed": false
+}

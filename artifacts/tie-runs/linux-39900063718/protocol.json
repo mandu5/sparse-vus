@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "methods": [
+    "tie_runs",
+    "saturation",
+    "radix",
+    "klein"
+  ],
+  "repetitions": 5,
+  "seed": 202610234,
+  "parity_atol": 1e-11,
+  "cases": 68,
+  "source_sha256": {
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "docs/tie_run_protocol_20261023.md": "d5ea4a7cda548884131943f37520ad5dd8870a178792cdd53e800cce01591058",
+    "experiments/benchmark_advancement.py": "6a3214709b45ad4fd309a4a235aadcc4ab95de33bdb41eabbdc22975d41849a4",
+    "experiments/benchmark_saturation.py": "902d9f83bfedb0063f0d21f82fa40f28f71a0bc6f4957392053fd034804f511e",
+    "experiments/benchmark_saturation_structural.py": "55d97b5c0973ce3281bf560b6f94ad5d6d31f88676e9cd17657255aa95159873",
+    "experiments/benchmark_tie_runs.py": "bd62f643f6eee95d346caf6fcf96c6b4a6d10476c652c1789ee0a3db7e3b5f83",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+    "src/sparse_vus/certified.py": "31135f790070a49d7480f0aa98f9696246cde13aad1410a1daeeb003fe214619",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/fast_racing.py": "0408541b48b5306af7283c5d39df8c84ec0eec5d5b9713733112d71d1be2e4f5",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/racing.py": "71ea48e7a212fcc861eee49f9aaa352ef793054ffb61479ade155c63add4d39b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/selection.py": "168bf85a735a44f4c12096b20fef4e024b0bb2053ded2c287dd9feeb46237a5f",
+    "src/sparse_vus/tie_runs.py": "8058994f4f7a7745326218bfa9b7c39444acde2d38dfc07e65e9455a50ba7436",
+    "experiments/reproduce_tie_runs.py": "58475f93d9316ac33cfff3d90c022790f23ab350c09fa1b48caa9c957e25951e",
+    "docs/tie_run_replication_protocol_20261023.md": "3e7b555df35091b3e4144b052b6f9fa933b2460248bd16ed7856fb3a4ee1d445",
+    "experiments/fetch_saturation_external.py": "6c946f2c61ac0efaa42c881caee51a2526fa0236000e199636b61d3e67d63a6f",
+    "docs/saturation_external_design_20261021.md": "66899dddf2533ba74af891f99fe9dce559cb349294c9bf5d95d9a3b9f53604f8"
+  },
+  "manifest_sha256": {
+    "artifacts/tie-runs/mac-20261023/protocol.json": "22422666d07dd30f05980d759f452b3afb962c5265a18659f8e352e421d16f8e",
+    "artifacts/tie-runs/mac-20261023/inputs.json": "1243f5d3f2952ae7c0b61f8eecaa600cca99416602ca1c4d762d04aa40e51f7f",
+    "artifacts/saturation/external-inputs/selection.json": "1ddfced3801a80d788c4697d7338b13e68ecce3293f5c8c85bfb7f6f6954b451",
+    "artifacts/saturation/external-inputs/manifest.json": "f8785501739190fda771c2c2e8a469e65b22812f10cb46d24ff3ffe57edfca47",
+    "artifacts/tie-runs/linux-39900063718/generation/selection.json": "f6bef8a4ba9e0aee16a1afc11231533ca2c545ab0ee93fc2631a7de40ee749fe",
+    "artifacts/tie-runs/linux-39900063718/generation/manifest.json": "c4331ead6b110557e17f52444691bae0574715cdb2545db55cb8086138773340",
+    "artifacts/tie-runs/linux-39900063718/selection-comparison.json": "d85b81c526e4641f6fc8f7a99cfc49bc030c6dc775703d377bd406bcd23a5ebf",
+    "artifacts/tie-runs/linux-39900063718/input-comparison.json": "4a49ba6c3c4f99ddee8e34e4c7914871cee849c57fe122c79c66a1ec100a8a4f"
+  },
+  "inputs_sha256": "96bfe2ea493e61d27912b64f6da05499b3080c91b8104e670cc71e848e387bb9",
+  "replication": {
+    "orchestrator": "experiments/reproduce_tie_runs.py",
+    "structural_cases": 20,
+    "regenerated_external_cases": 48,
+    "excluded_historical_development_cases": 63
+  },
+  "history": "Same 12 fixed external series, regenerated scores; previously studied data. Only one-interval vectors enter timing. Historical development archives are excluded.",
+  "decision": "Numerical/work checks only; all timing ratios and losses descriptive. Not the original 131-case study or a new primary runtime criterion."
+}

@@ -42,8 +42,9 @@ released implementation and exhaustive thresholds. All validation and
 preparation inside the public calls are timed.
 
 The whole monotonic clock runs from before the first NPZ open until the
-result file is closed. Imports, synthetic dtype-matched JIT warmup, hashing
-and explicit filesystem-cache warming precede each pass. Every measured
+result file is closed. Imports and synthetic dtype-matched JIT warmup occur
+once before timing; input hashing and explicit filesystem-cache warming
+precede every pass. Every measured
 pass rereads and decodes the files; it is a warm-filesystem workflow, not a
 cold-disk or durable-write benchmark (no \texttt{fsync}). Three replications
 run serially with one numerical thread on the M1 Pro. Seeded method order
@@ -84,8 +85,9 @@ Method & Run 1 & Run 2 & Run 3 & Whole median & Metric median & Read median\\
         + 'This directly demonstrates savings for the specified stored-score operation;\n'
         + 'it does not measure a full training/inference pipeline, production deployment,\n'
         + 'or a new-domain evaluation. An independent standard-library auditor\n'
-        + 'reconstructs the decisions, order, counts, clocks and numeric comparisons\n'
-        + 'from the public hash-bound output receipts without raw input arrays.\n')
+        + 'checks recorded order, counts and clock consistency and recomputes\n'
+        + 'numeric comparisons and decisions from public hash-bound receipts,\n'
+        + 'without raw input arrays or a new timing measurement.\n')
     target = ROOT / 'paper/sparse_vus_collection_results.tex'
     target.write_text('\n'.join(lines).rstrip() + '\n')
     receipt = {'protocol_sha256': PROTOCOL,

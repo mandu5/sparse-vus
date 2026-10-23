@@ -153,7 +153,7 @@ Fresh timing uses new output directories, frozen protocols, serial methods, warm
 
 The new tie runner currently reads the original development and Mac-external manifests. Development loading needs `cache/TSB-AD-U.zip`, the three `cache/*.score-range.zip` archives, and their retained download receipts. External loading requires the exact NPZ files bound by `artifacts/saturation/mac-external/inputs.json`, including container and array hashes. Those observational caches are not bundled with the artifact.
 
-**Important current limit:** regenerated external scores on another host generally do not reproduce the historical Mac NPZ bytes. The runner has no CLI option to substitute a new external manifest. Therefore the following full 131-case timing sequence is usable only when the historically bound caches are present. It is not a complete cross-platform fresh-data reproduction recipe:
+**Historical 131-case replay:** regenerated external scores on another host generally do not reproduce the historical Mac NPZ bytes. The unchanged original runner reads its original manifests. Therefore the following full 131-case sequence requires the historically bound caches. A separate 68-case regeneration path is provided below; it does not relabel new measurements as the original 131-case run:
 
 ```sh
 python experiments/fast_vus_adapter.py --fetch
@@ -189,7 +189,17 @@ The current `.github/workflows/tests.yml` defines:
 - On Python 3.12, recorded saturation/supplement/tie-report reconstruction and the new independent tie arithmetic/metric audit, plus older PR-engine report checks.
 - A separate wheel job that builds distributions, checks the base installation without Numba, and checks accelerated radix/active-prefix and complete-tie APIs with source-byte identity through `check_installed_package.py`, `check_installed_accelerated_package.py`, and `check_installed_tie_runs.py`.
 
-This describes checked-in workflow coverage. It does not assert that a remote run has completed successfully for the final revision. Ordinary parity CI does not rerun the large datasets or timed 131-case study, reconstruct all excluded input archives, build this PDF, or independently replicate performance. Benchmark workflows are explicit separate jobs and produce new run-specific evidence.
+At code checkpoint `ac7f5f4f4314340c5204ffc3504243d1ad001148`,
+[remote run 39900069998](https://github.com/mandu5/sparse-vus/actions/runs/39900069998)
+completed successfully: Python 3.11 and 3.12 each reported **3,363 passed and
+2 optional skips**. Base and accelerated installed-wheel checks, including
+complete-tie source identity, passed. Recorded-report reconstruction and
+independent numerical audits also passed. This identifies the tested code
+checkpoint; consult the PR checks for any later document/artifact revision.
+Ordinary parity CI does not rerun the large datasets or timed 131-case study,
+reconstruct all excluded input archives, build this PDF, or independently
+replicate performance. Benchmark workflows are explicit separate jobs and
+produce new run-specific evidence.
 
 The source/hash manifests for older releases describe their own snapshots. For example, the historical active-prefix checksum list includes files that the unified revision extends; a whole-list check on a later modified checkout is not an appropriate claim of unchanged historical-release identity. Use each experiment's source bindings and the exact released snapshot when checking its historical manifest.
 
@@ -216,3 +226,60 @@ new output/cache paths with the `freeze`, `run`, and `report` commands in
 Every run includes disk input, 924 full metric calls, 308 selections and one
 JSON output; imports, synthetic JIT warmup and filesystem warming are untimed.
 Do not replace historical outputs or call a warm-filesystem run a cold-disk run.
+
+## Portable structural and regenerated-external replication
+
+`experiments/reproduce_tie_runs.py` provides a separate acquisition-to-timing
+path without the historical development score archives. It regenerates all
+48 score vectors for the original 12 external series using the frozen input
+procedure, verifies raw observations and labels, records every score-byte
+comparison, and selects all 48 one-interval series/model/width cases. It also
+copies the 20 source-bound constructed fixtures. The 63 historical development
+cases are explicitly excluded. This is a 68-case procedural replication on
+previously studied data, not a new domain or a replacement for the original run.
+
+Use fresh paths and the actual protocol digest printed after preparation:
+
+```sh
+python experiments/reproduce_tie_runs.py prepare --output artifacts/tie-runs/local-regenerated-new
+python experiments/reproduce_tie_runs.py run --output artifacts/tie-runs/local-regenerated-new --protocol-sha256 HASH_FROM_PREPARATION
+python experiments/benchmark_tie_runs.py report --output artifacts/tie-runs/local-regenerated-new
+```
+
+Preparation downloads pinned external sources and generates scores without
+metric calls. Run timing only when other local computational work is stopped.
+Inputs are preserved under ignored `.cache`; public receipts contain hashes,
+scalar results and constructed fixtures, never the observational arrays.
+The original timing/report functions are reused unchanged and validate the new
+protocol's own source and input identities. Interrupted preparations or timings
+are preserved; retries require a new path.
+
+The dedicated `Complete-tie input regeneration and reproduction` GitHub Actions
+workflow installs Python 3.12 with NumPy 1.26.4, Numba 0.59.1, pandas 3.0.1,
+SciPy 1.17.1, scikit-learn 1.8.0 and threadpoolctl 3.6.0. Its serial job runs
+preparation, all 68 cases and report reconstruction, retaining public receipts
+on success or failure. Actual execution outcomes must be read from the
+run-specific completion/report and CI receipts.
+
+Executed on 23 October 2026:
+
+| Host and public evidence | Cases / timed calls | Status | Maximum absolute difference from radix | Score vectors byte-identical to historical Mac |
+|---|---:|---|---:|---:|
+| [Mac](../artifacts/tie-runs/mac-regenerated-20261023-retry1/report.json) | 68 / 1,360 | PASS_PARITY_AND_WORK | 2.220446049250313e-16 | 48/48 |
+| [Fresh Linux runner](../artifacts/tie-runs/linux-39900063718/report.json) | 68 / 1,360 | PASS_PARITY_AND_WORK | 2.220446049250313e-16 | 9/48 |
+
+The executed Linux job is
+[39900063718](https://github.com/mandu5/sparse-vus/actions/runs/39900063718),
+on code revision `ac7f5f4f4314340c5204ffc3504243d1ad001148`.
+Raw observations and labels matched their frozen identities. The different
+score bytes make the Linux run a procedural replication, not an identical-input
+replay. Neither run is new-domain confirmation or a substitute for the
+historical 131-case study. Every slower case remains in each report.
+
+The first Mac preparation failed before protocol freeze or timing because
+two existing array-hash conventions had been conflated. Its
+[failure receipt](../artifacts/tie-runs/mac-regenerated-20261023/preparation-failure.json)
+is preserved. The corrected driver has separate raw-array and dtype/shape-bound
+hash functions and regression coverage against the unchanged timing runner;
+the completed retry uses a new directory. A shared-cache symlink integration
+fix preserves containment checks and the repository-relative input paths.

@@ -41,9 +41,8 @@ from a theorem.
 A preliminary support-event implementation and working manuscript were
 publicly released as Sparse VUS~0.3.0 on 21 October
 2026~\cite{sparsevus03}. This paper presents that evaluator together with
-its prefix and complete-tie extensions. The public precursor is an
-unsubmitted research artifact, not an earlier refereed publication. We
-retain its versioned evidence and distinguish whole-evaluator improvements
+its prefix and complete-tie extensions. We retain the precursor's
+versioned evidence and distinguish whole-evaluator improvements
 from incremental improvements over that precursor.
 
 The empirical distinction matters. A frozen 308-series study evaluates
@@ -481,6 +480,18 @@ input-generation procedure and evaluator experiment, not an identical-array
 replay or an independent laboratory study.
 
 \input{tie_run_results.tex}
+
+\paragraph{Separate acquisition-to-timing replication.}
+A new portable entry point downloads the pinned external data and regenerates
+scores before freezing inputs. Mac and a fresh Linux runner each complete
+20 constructed and 48 regenerated one-interval cases, with five repetitions
+of four methods (1,360 timed calls per host). Both pass the original parity
+and work checks; maximum discrepancy from radix is $2.23\times10^{-16}$.
+Raw observations and labels match their recorded source identities. Of 48
+regenerated score vectors, 48 on Mac and nine on Linux match the historical
+Mac bytes. These are procedural replications on previously studied data,
+not identical-score cross-host replays or additional unseen cases. Their
+separate reports retain all losses and do not replace the 131-case study.
 
 \section{Limitations and reproducibility}
 The computational target is a pinned scalar metric, not every historical

@@ -1,0 +1,7 @@
+{
+  "status": "PREPARED_NO_METRIC_OUTCOMES",
+  "cases": 68,
+  "protocol_sha256": "978dc5e452e32729be51250a5dd03d39a7392038a8e66223a6333f840fcb0889",
+  "score_vectors_equal_to_mac": 9,
+  "score_vectors_compared": 48
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Final manuscript and numerical code checkpoint; public-download verification is recorded after publishing this snapshot.",
+  "code_checkpoint": "ac7f5f4f4314340c5204ffc3504243d1ad001148",
+  "pdf_pages": 13,
+  "nonreference_content_last_page": 12,
+  "references_only_page_13": true,
+  "fonts_embedded": true,
+  "overfull_or_undefined_or_missing_characters": false,
+  "source_sha256": {
+    "paper/sparse_vus.pdf": "4ce84a495efffde4910ffd42ce4b8b08f8839b9ad0bcde63165605ca2f298f4b",
+    "paper/sparse_vus.tex": "6aad5f373aa90390939e7a83262a61e2b4a4992d9db90eb1d97ef31162b4a9d2",
+    "paper/sparse_vus_body.tex": "c551cae8bc76387735ce665e156d487e68a657469de9ae3a8e96308e32201891",
+    "paper/sparse_vus_references.bib": "7ee7f574b532f9640bd6362781aa6964a102b02b22fb04c0f6f749262eafa1e4",
+    "paper/acmart.cls": "2f949e6e3f2a79f2cdc218b9dcdbaa7dd451adb4ee0be1af6dc7ebe00b318ea7",
+    "paper/pvldb.sty": "52ad3948f3231b31d2ac90f470c1759e7f96add7b577ec4e267dfbdc87fc4eb2",
+    "paper/ACM-Reference-Format.bst": "0590db3b8d255a3af91982ab710f3ace5fcaa52434020c9af8a4f141b00b68f3",
+    "src/sparse_vus/tie_runs.py": "8058994f4f7a7745326218bfa9b7c39444acde2d38dfc07e65e9455a50ba7436",
+    "experiments/reproduce_tie_runs.py": "58475f93d9316ac33cfff3d90c022790f23ab350c09fa1b48caa9c957e25951e",
+    "experiments/render_collection_results.py": "30a7265fecfc17db245c5ff2b014aac8938c9d9eda6e99d7f4beff54ccd54a55"
+  },
+  "ci_url": "https://github.com/mandu5/sparse-vus/actions/runs/39900069998",
+  "linux_replication_url": "https://github.com/mandu5/sparse-vus/actions/runs/39900063718",
+  "scientific_recommendation": "Defensible PVLDB Regular Research / Foundations and Algorithms submission; borderline positive on significance; internal assessment."
+}
