@@ -1,0 +1,587 @@
+{
+  "status": "SAVED_GENERATION_HASH_METADATA_COMPARED",
+  "local_score_bytes_verified": false,
+  "same_profile_ids": true,
+  "same_case_ids": true,
+  "profiles": 52,
+  "cases": 26,
+  "same_length_count": 26,
+  "same_label_hash_count": 26,
+  "source_generation_receipts": {
+    "mac": {
+      "path": "artifacts/pvldb-research-20261024/strengthening/workload-generation.json",
+      "sha256": "4177f82b6bfe404f82439d75b749adb16b21a416321425326da2611115f02568"
+    },
+    "linux": {
+      "path": "artifacts/pvldb-research-20261024/strengthening/linux-interval-replay/workload-generation.json",
+      "sha256": "fb08cbd29c81b70caeed010e0321316c61dfa06f5a0ec26d42263b29acb15b39"
+    }
+  },
+  "changed_counts": {
+    "score_sha256": 25,
+    "score_array_sha256": 25,
+    "native_score_sha256": 25
+  },
+  "changes": {
+    "score_sha256": [
+      {
+        "case_id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "120005f8a016069c855ff88afd353d45488e080dbce18878d5a9736bced2b75a",
+        "linux": "401b58789cf15f8d7800a8ea6276f08fcbe6554e690fc1f4cd85820de820fe07"
+      },
+      {
+        "case_id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "bc4d3809ac7d9a1089cbafd4e1435441abf3d81e690d44b3eb2e5bf4fbfa7f9f",
+        "linux": "63f4f9863b906cae6780290c6b474c73f6cd0f4bc0709f2f8dce0e77e7c5e9f2"
+      },
+      {
+        "case_id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "50bc7877b5b722ac3fadca30d72bb9e0d74065400806769f79024f5ee7d8a61d",
+        "linux": "9fb4b12a680d0c3b2205a253047edbf1e3dd2d2e21d5f073fdd016cd4280b5c3"
+      },
+      {
+        "case_id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "015d985cd9b06cf9ebd4218ffdba2dc32654202baae78632a466cc1f4fe76ab5",
+        "linux": "e7b210155ae39b612f18eada3f3528aa16970a06050eba2d6846506012bdb2b1"
+      },
+      {
+        "case_id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "56ac02a524615ac6555b79bbef37f6bba72a9ed27d6a54ea6afeb5576784cec7",
+        "linux": "06e84c7ca136d635364c42d196e462273d7869bffc7a2bb801586ba330d5e5d3"
+      },
+      {
+        "case_id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "bad0bc28b02baa715369196cba50a5cc2586c5d128d3a4a2ced095171ff45db4",
+        "linux": "4538111f8ddfc9d7f922beef300a578b2aa0dfc724771a083db0d543bd8effa4"
+      },
+      {
+        "case_id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "b2acaae6a662829cb79b0fcb84e4eee9aa7ac2cac66686b3c007f83320bc0774",
+        "linux": "d1333e98d1b824adc322cfd4c41bab7fc50de431af410817aa849462c225fde7"
+      },
+      {
+        "case_id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "becb1f83f796f424501e46617d23ee5e7e742c5223b3a61ec57a6707977659a6",
+        "linux": "02a07c2258ded287ed587e33d7b0f2b6bc2abcea7ad82aacd3dad8a4b7576799"
+      },
+      {
+        "case_id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "411e2e2be06988591617e92f3cf97b87b3adc2157a0a3854ffbd40509a48b38a",
+        "linux": "69b20c53418732c32f8ebb16c579c662a8efdad1daa89fe6aec517241f7d74ff"
+      },
+      {
+        "case_id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "b68a1887764a58d0813e2d8943283db4f30b46acbab092c89645e5dba79133b0",
+        "linux": "7df67385f3ce83d47e383802d70698d92b817fd6849633567306d446155037dd"
+      },
+      {
+        "case_id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "2f323d7989c1d895289ada030a8dbb3db191b0f986dfdb137d76a910253ec265",
+        "linux": "d127deee3d28f300b56f694aba3f6a87c5babfda0e6836af471b25d3af595e97"
+      },
+      {
+        "case_id": "126_WSD_id_98_WebService_tr_657_1st_757",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "a36f660fade45b05b25710af73f315aa95ff3e3d183538a8f10f2e493c66b815",
+        "linux": "025c35ed1e0692701bde449c58ba47a485d6bac343295b2432d9d5a1e32d60b4"
+      },
+      {
+        "case_id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "model": "COPOD",
+        "family": "MSL",
+        "mac": "15a570f954bd67dc5ac851ff51b1ef47db92cf933e86e842d32c0b60287ca5eb",
+        "linux": "0282b15a8fb46b98d154375765f575596563ad294c0d2add88b657807ea6a8ab"
+      },
+      {
+        "case_id": "150_Stock_id_2_Finance_tr_500_1st_7",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "1f603b2ef2edad0dfe257cd04ca2925c1767a44e0a4f2476715246ece4ee9940",
+        "linux": "185c1f368be1d8e8919b7b7ca99cd99d829d7ceaff1d9b95dc7590bb7aa5458c"
+      },
+      {
+        "case_id": "152_Stock_id_4_Finance_tr_500_1st_2",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "e1307b16047e3f117e7d5ffd1193a7ae02aae3c29d4b18edbba84007444bcfb5",
+        "linux": "1ed5258c3c74ee340c34eba9463c26897a32cf9566f4a8222d0ae4a624be84e0"
+      },
+      {
+        "case_id": "153_Stock_id_5_Finance_tr_500_1st_1",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "756acdca07f9ed63797c37922d8d6b684a922f73c806b1e456672ee5206ad2fc",
+        "linux": "efbfecc3a7208665fd72304ab089667922cbeef002bea9fc73d9e785616ad182"
+      },
+      {
+        "case_id": "154_Stock_id_6_Finance_tr_500_1st_38",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "8231e994eb8b5bf5a7ced2d09bc18e5f433ded9e168d1cf44d29138c42803003",
+        "linux": "eb0e480da286189ba5555399664298f604899fc42899d806cd0949d15a3749c9"
+      },
+      {
+        "case_id": "157_Stock_id_9_Finance_tr_500_1st_19",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "8ccc4d7a6a24a237bd3b648d28324853408187c8112b742b820d79e3af0f6c5d",
+        "linux": "6b4fa3546a9a64c4729dae8e9ed62461134c056df38a65772c931800da6ea44d"
+      },
+      {
+        "case_id": "158_Stock_id_10_Finance_tr_500_1st_2",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "0d8eae69f102c753ef4261d0f2b33ec54944610c469ffc6ba64c0e8605c028dc",
+        "linux": "d88fa62a14c42ffb09c5cb34ff9c800690866f1669d401a1964d1297fba8d28b"
+      },
+      {
+        "case_id": "159_Stock_id_11_Finance_tr_500_1st_5",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "6c7cf22eb11451b8c7f340208498c64b727ecee4c2d9f5ea25065354a87d11ba",
+        "linux": "fc9b2182190fbe855b55dfed5cfff9119a07f2f3c5f1d80d87125ff2ac16b490"
+      },
+      {
+        "case_id": "161_Stock_id_13_Finance_tr_500_1st_3",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "e01669c97949de1e9ed794e8e77075fc3126fa292f91f29867cd09300fa84f92",
+        "linux": "fe8cbf04c3141484a09a7157623051a52c865f3710157c9acb53da6c939fc584"
+      },
+      {
+        "case_id": "163_Stock_id_15_Finance_tr_500_1st_3",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "dab0af53f461b113aa92c8771ac3723455ab654e37b0380f099424a9468462aa",
+        "linux": "0c953500995f17516bdd15922c5c6d9aef2d928269a9ea2cebd45b44ca9c013e"
+      },
+      {
+        "case_id": "164_Stock_id_16_Finance_tr_500_1st_8",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "26f7c02b34d45ba1bcc4840e60fa60a4f223b138fa0340e05fa06fba6d91aa33",
+        "linux": "794476f99f57135987e4dae2f8a82acbda5eaa0cd223c3471a9883719bee6f81"
+      },
+      {
+        "case_id": "167_Stock_id_19_Finance_tr_500_1st_7",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "cdc3184330ca429dd9d8a3a0b50f23d4dd66f5d7ec3adf1397149796be28f253",
+        "linux": "2e4ed84cccc365492b74d3a88b568a6261ec886d52c74f4e3f0c7c60f70943ba"
+      },
+      {
+        "case_id": "168_Stock_id_20_Finance_tr_500_1st_1",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "0c61192a6ee21b84bb6a3586a33505e2c0975fdb0b84ecd2bfd7786a5fe8394b",
+        "linux": "f017dba789fa559b45564d1246ee9a472e0f7b47e1267716f332a17456acf392"
+      }
+    ],
+    "score_array_sha256": [
+      {
+        "case_id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "6f27a84a27d94bdf7b97e15454b02fcad0ae248d807d79c6aa1a12fcdb06b374",
+        "linux": "6f9d5aa28ce40c504e84085fa978d8b17003032a4f920daa063da4411e015a54"
+      },
+      {
+        "case_id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "06a8fd80b074eac3f29241fdb059ddbb414775f80b9e5f006bb19fc80f85ffb3",
+        "linux": "22be652e46f87784bc39d850edd8dcb8a71cb68176b911ef2cd0cc59d6c15288"
+      },
+      {
+        "case_id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "2f1d1efa1a708658d8d0603df32e28889e35b7431cf166b67d599e018ddd78b8",
+        "linux": "e323c0b6258d87fee59fc0dabbdfd0f47a1f7b58098b02c1475826e55678e68f"
+      },
+      {
+        "case_id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "b9c8e86051322e73ae7df99c7868c0ac9750b19289dcab8ebb3b1e6dade85ae9",
+        "linux": "777985f7e64618c98265fca480f0c19a777e3be95e6a737e3667e0320b48876b"
+      },
+      {
+        "case_id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "fbbbf78fbf662fc63280f3e84a623685423d7122a2b47e9a6d5e545ecf803fba",
+        "linux": "77957cbbbb2e58895fb43fcaf6d8458c80560ac2638371949347cd5029d42925"
+      },
+      {
+        "case_id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "ad2c7157baaace5a96b8c26c7b85bd1d60204049dbacc7a13e69cb9d0e2e2ca5",
+        "linux": "dc8c96de6d5cd2a0b56c9a50a0ecfdca625613ea38ddd02166abfcc0fbd69106"
+      },
+      {
+        "case_id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "ac306ecf43add72161bcba1f9d259afc150cd0ccec0eabed278b2ab0853a5b5c",
+        "linux": "d1fac4ab5113e9dffc11cee5e95c493558b41eed1d9b6c9df479412f040bd401"
+      },
+      {
+        "case_id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "c180a6b09fbf790b216a633c7646bc26dad7c2940736198505ed141593d73d18",
+        "linux": "26e64442046105521fa0f07682e68c963a838fe64419cf47d4150dec5abc9970"
+      },
+      {
+        "case_id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "faeb5ff00450081e72c1fc4affb0346438d7ff58564c84b8e249e88f682222b4",
+        "linux": "62f5fc03b186dc69044b902780d75b18f2601a1d601b1d76bb22e2dea27b48d3"
+      },
+      {
+        "case_id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "aef71ad3264d3ebddd85fc32b78110061ab9132089902fc5df13f5a8fd64cdd2",
+        "linux": "f4320502b90eef7ce3696aeecb6f2b87daa69d618f160e97635d4ba2447799a9"
+      },
+      {
+        "case_id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "aab63298eb96973eaa46d7d54686b210a21cb21ac926cdbb7c0dbbe4b665b699",
+        "linux": "7df122c8c92c806ccda8fde3e28a10cba2a8e1cdd4cb4e27cab364920e42cf65"
+      },
+      {
+        "case_id": "126_WSD_id_98_WebService_tr_657_1st_757",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "705cb4d28a4a7bbef55ee1c3d1a5ce78d35d2e5fbd6c779d062ae4d85152376e",
+        "linux": "494015bc95864bce46fd4b972b62cecb80afa048d05368c2fbb577b5ff180d07"
+      },
+      {
+        "case_id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "model": "COPOD",
+        "family": "MSL",
+        "mac": "72af3b16acab0958c1fc34e8a823ce6a783609512ee2d6924ac747309172fb55",
+        "linux": "09514e349088d4f3bda9d52d8f1f2a10f881849186c6169dd19355dcba9dc72c"
+      },
+      {
+        "case_id": "150_Stock_id_2_Finance_tr_500_1st_7",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "836c97b0fb6ea1d8a71ce93c6bfa473496ea29a2c503416b097826060e374c40",
+        "linux": "fa3d3e6f74fdef22f5a5270c2b649ab385c36ff782a8fca8f61ea23674c629be"
+      },
+      {
+        "case_id": "152_Stock_id_4_Finance_tr_500_1st_2",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "e499a408020147b372d49162bb0eb903ba550830cca5d5c9035438bc43393531",
+        "linux": "a69be2dba09f68a7b0f24f04a5d94d728e3e566178e2b31923bec35446ac8476"
+      },
+      {
+        "case_id": "153_Stock_id_5_Finance_tr_500_1st_1",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "64a0874ceba9de1d48ca1ef64470a3c7e4df9b2e77496e500c8be6b4a0122fb5",
+        "linux": "3e7b8b180fb49295d3a37d2bf0ec4bb4b8ac7b9e297145e393e2ffebbc1ef58e"
+      },
+      {
+        "case_id": "154_Stock_id_6_Finance_tr_500_1st_38",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "939bf1f97d958932a5807fa6064896a284bf0fe8a7e4287f82acbde3a5973434",
+        "linux": "3b401346765fc1484db8db8c815bff863025eb94bf0427272347d219c6ba26df"
+      },
+      {
+        "case_id": "157_Stock_id_9_Finance_tr_500_1st_19",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "0b91124a3496b99bc648ff3243919fd54f331cb3b07500cf236927e82c67fa70",
+        "linux": "863d99337d00a410874b1382438cc02d7f07ad400380e3bdf3f41ea687c26e93"
+      },
+      {
+        "case_id": "158_Stock_id_10_Finance_tr_500_1st_2",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "0cffb16e9f8f9903548519d9771d79b87bb2adc482b24c6076f3b4b7c64493d0",
+        "linux": "b9c0862f479a507a56f3f77fa850046dbd282b2f759c95528507f5eae2c325de"
+      },
+      {
+        "case_id": "159_Stock_id_11_Finance_tr_500_1st_5",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "13213badb7bef0dddf7528b83ca0c9ce832a81d9ab711d317cd2eb24ffe8ee99",
+        "linux": "560e43a5388f48e7c9e526e7a8b9b6eed095d1db76c29add4721f6e234a82c84"
+      },
+      {
+        "case_id": "161_Stock_id_13_Finance_tr_500_1st_3",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "67957b32966c7023a15a4729d453d7b51cc09c3e4dd6d026a50e24a3e63e8230",
+        "linux": "632b7cfab7f5769838cad1f3e843f80ad9e5bd32f80329e608f5dfe9e3c79bad"
+      },
+      {
+        "case_id": "163_Stock_id_15_Finance_tr_500_1st_3",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "0be3db1f71811f308c6684490ce7700ad38bb3ef06f161b54ac452a95e6787ff",
+        "linux": "daca3db6513be9acc0892a767c610997db9b53c6b353a790e3764397117b7f4b"
+      },
+      {
+        "case_id": "164_Stock_id_16_Finance_tr_500_1st_8",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "377a85c4d54be70813a4c3b6890f82e392cef5339aa4121d278c2ff6d51ff187",
+        "linux": "10e457fdb7af6dfd8e0d757a7a905bc468f01bf197222b8ceac38cdc770b5825"
+      },
+      {
+        "case_id": "167_Stock_id_19_Finance_tr_500_1st_7",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "09aab1ebf0699fd9b07afe4969723c098279ba700b777e02ab50ccbec40e8769",
+        "linux": "6743db04d6ec7919215921757f96fa7632029c60a0f2c40713cc42677136fabe"
+      },
+      {
+        "case_id": "168_Stock_id_20_Finance_tr_500_1st_1",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "5599396bc403936b9b918f6feb4cffc4e8587f3b6b4a69efc834f3024e55667e",
+        "linux": "1c317d062f808f097fc7b75c2db21e8fd9cee2af9855ee29255f17082e08e014"
+      }
+    ],
+    "native_score_sha256": [
+      {
+        "case_id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "a12f8a67f3bc76b649c056437e90f395032e7b7ddbbdd59120112afd6f6471f5",
+        "linux": "695e10a9beac337a9031c223f2dcadcaca33dd0fd39fbec3a5161efb489c1900"
+      },
+      {
+        "case_id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "28c8a76b523f592d41a62da47eb4a495ff45a504dde575f549c44ab04a2d052b",
+        "linux": "720f6ce697fa3eaa1f0f95005a6b1b6a23c6f213caae798d3b5fb1fd8935fd4e"
+      },
+      {
+        "case_id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "b688d0daebe0d6a2721e2de48fb9cffc78fe5dc3ba721f58e44bc90e634656a6",
+        "linux": "ee39c6d8f9ab57cbf6655442fc7bab228e60aadb997bc5ecd71595bd3814d454"
+      },
+      {
+        "case_id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "3aadd6d2c5f877c1ffa7bcecc4e790f6ccfdc91a6a6918d0e9e1b6e01a242d64",
+        "linux": "fbd04dda2f05715da9994c48ab765e4081cd146746db9e8f734988adb6ec64d7"
+      },
+      {
+        "case_id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "39f3b9593d0bba7e5de4a846c2d0f4f241ee8653351880f7d2e9ec538947e784",
+        "linux": "8108041bce05d02adcd8bd1e2ba248c21665ea146d78bb96e1e15ed328b4e3ee"
+      },
+      {
+        "case_id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "1e93fcb67fee64f35b3338f47d63f6ff46bcb81a2ae5ccc0e3af7bdbda5d156a",
+        "linux": "96384f0fb67ec0095fcb3187d78d79061ca4252c4bf74a32d96f0fa6df3b8be8"
+      },
+      {
+        "case_id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "d5b9777847c8d17d42a93833b966019242c87a697bc37541d134a6854f520a8e",
+        "linux": "98f66bb67e3df4ed69d94f0deccbb9f2d4b43c2cacca0a70ce4179e8f348cfbb"
+      },
+      {
+        "case_id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "f4a4fbabe8fdb515d7682b143bb76398678d31225c570ee2fdc2210ae0f48a6c",
+        "linux": "58e5f557d209c3ec2727052ecc982803bb9cde24547899d81132fed226fa7704"
+      },
+      {
+        "case_id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "1985da5fd03b9d17702426041eadf29161755041f8d2be9beabd768a6b596486",
+        "linux": "4097daaf33b81f94785a29118aede4c167ef3af5c14597557c3a88464725ee0c"
+      },
+      {
+        "case_id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "30e67a9b07366d220d0626249e2e5432eae7dee98e1add961dca6a490679d4d0",
+        "linux": "57ec72c9c08b333644419dce4234e5a8335021e6219fd265899d873523e155ad"
+      },
+      {
+        "case_id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "6c73df82f2a159c83f0d6c48045a1ef116b58676dce9252b8f3031896f28bffd",
+        "linux": "14fee315d69b4a55376c7483ebfb0503f0077b91aedc8eafc533413c3254572c"
+      },
+      {
+        "case_id": "126_WSD_id_98_WebService_tr_657_1st_757",
+        "model": "COPOD",
+        "family": "WSD",
+        "mac": "77fd761eb82d8b9f0a7150053ce37046eb04d6f49c71a5a9f4a028adb207207e",
+        "linux": "7e25470367325210960b3785a8819e650202aee307fe9954f2324c1d451b989b"
+      },
+      {
+        "case_id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "model": "COPOD",
+        "family": "MSL",
+        "mac": "dfafe20f8def04f460b8240b9cff770c754a98fbd9a33ef96fe931f84291b0da",
+        "linux": "1c4e1ffdade8bfa6ff1b2666e85859e365e4823601ea35d910d76647fe491a60"
+      },
+      {
+        "case_id": "150_Stock_id_2_Finance_tr_500_1st_7",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "1d7f5c7027fb0cbe2a32e1e8a0be0d634774228334173f4300e8e2623bd04b29",
+        "linux": "5fcf289fe68cc5b0433464f3ef48f14bd3c5b45f8747f0d7bfa92441bf02a205"
+      },
+      {
+        "case_id": "152_Stock_id_4_Finance_tr_500_1st_2",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "3072379edb032ad004f4fa44f4e7c76c19f93a98c21dc05e6914f5ddc992a058",
+        "linux": "b82191cfcc024136b85dab626264f1edd3e2ac7f35382c1b20ccf4e8d06c2219"
+      },
+      {
+        "case_id": "153_Stock_id_5_Finance_tr_500_1st_1",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "396d9ff2b4c61fa36f794f65db0f989eabc2dc8fa92574edf37ea5b241a338eb",
+        "linux": "5030ef23e6a6285d93660516476e9a3a5bdaa4539ba9a957237aa6cfcbeed9d3"
+      },
+      {
+        "case_id": "154_Stock_id_6_Finance_tr_500_1st_38",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "a9d249811386f469e9e0dcb9c920781ceac79f22acf216adb16cb5e56048562f",
+        "linux": "89b32ef99f7aed1a094836194cbe0a030c57ed1f448f159d1015f637ec5c5f50"
+      },
+      {
+        "case_id": "157_Stock_id_9_Finance_tr_500_1st_19",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "ad0c602b038397e32df8a01fff57d88b28198e0879fc014c1ed0eb3d798bc003",
+        "linux": "fd51d657cf284069e0de8c1fd6c55f89cdb3c7eab94a3cb14fcff794fb134915"
+      },
+      {
+        "case_id": "158_Stock_id_10_Finance_tr_500_1st_2",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "e94eca113aafa249c3f3fb59030be196718de7597af25d868e1a30c8a505792e",
+        "linux": "b8d230830590cc8a96712649373a514d7c198844430cc842c01ff7a555b102c2"
+      },
+      {
+        "case_id": "159_Stock_id_11_Finance_tr_500_1st_5",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "80a0420b7c316e928eb3c268906d05a6096641fe47114702ad22121afba2fcc9",
+        "linux": "83e9bd2198319ebfd9ad8f89d70df00da5bb2f610d13d2144fa7e26b732f22ef"
+      },
+      {
+        "case_id": "161_Stock_id_13_Finance_tr_500_1st_3",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "bee790bef386b68e0e37e7c7d68ab5bd922e378f03205ded9814ddc91cc274e9",
+        "linux": "df3d2266b45f3490a44c3d6a15df90ca9d62390c21b43271a8b3433436328b10"
+      },
+      {
+        "case_id": "163_Stock_id_15_Finance_tr_500_1st_3",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "7ba4d71a288f8b7d682572274db19d9826551e5462ffb0a425a8e641c01f8594",
+        "linux": "8bf9d5aa65fbc18733e1e9e2b311474606e0ae0c8dff6f165a6b01e708e78a30"
+      },
+      {
+        "case_id": "164_Stock_id_16_Finance_tr_500_1st_8",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "a7914ba0c3794b9245033094eac81d0b24914e3a388584105facd58fa3926a17",
+        "linux": "40cd9da780839041078bd712f2f7d2d956748f0561d5bb2c4ef2295e43a58295"
+      },
+      {
+        "case_id": "167_Stock_id_19_Finance_tr_500_1st_7",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "453adc943475e57d707072405037c27942470e2ea91211619033f01658d24ed2",
+        "linux": "ba0ba5cd45f449a980bd6d93136210d1c9812eb5920606b6c508e3a006a1da91"
+      },
+      {
+        "case_id": "168_Stock_id_20_Finance_tr_500_1st_1",
+        "model": "COPOD",
+        "family": "Stock",
+        "mac": "61414e01a32355675fb263e9a1016a647ffaec215214000fa756bf477a54e7a4",
+        "linux": "c4a2ea969a5bd511b58cc3af12af1eb3e0d896bca095f36731614a8fa9c75d68"
+      }
+    ]
+  },
+  "native_query_counts": {
+    "mac": {
+      "native_default50": {
+        "total": 2776,
+        "minimum": 2,
+        "maximum": 90
+      },
+      "all_observed": {
+        "total": 71749,
+        "minimum": 2,
+        "maximum": 5819
+      }
+    },
+    "linux": {
+      "native_default50": {
+        "total": 2776,
+        "minimum": 2,
+        "maximum": 90
+      },
+      "all_observed": {
+        "total": 71750,
+        "minimum": 2,
+        "maximum": 5819
+      }
+    }
+  },
+  "native_source_hash_declarations_equal": true,
+  "project_hash_declarations_equal": true,
+  "scope": "Comparison of archived generation and manifest declarations only. Do not pool host timing observations or claim local raw/score byte verification."
+}

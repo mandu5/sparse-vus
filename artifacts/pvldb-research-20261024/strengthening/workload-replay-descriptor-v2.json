@@ -1,0 +1,59 @@
+{
+  "status": "AUXILIARY_REPLAY_ENTRYPOINT_NOT_AN_EXPERIMENT_PROTOCOL",
+  "definition_source_commit": "f7c900b0c1a22f965eacd859f83da2f58efd8b40",
+  "purpose": "Run the current clean acquisition-to-table pipeline with the explicitly declared original binary64 input reconstruction. This descriptor supersedes the packaging-only entry point without modifying its bytes.",
+  "working_directory": "repository root",
+  "supersedes": {
+    "path": "artifacts/pvldb-research-20261024/strengthening/workload-replay-descriptor.json",
+    "sha256": "fae3960bde11d51490ed90ce5ff5e56b17d185634e1334a7470bbb8205b56676",
+    "reason": "The earlier descriptor pins producer 0e544883 and predates the independently diagnosed one-ULP decoding replay. Keep it as historical packaging provenance; its current-producer assertion is no longer the active command."
+  },
+  "source_sha256": {
+    "experiments/reproduce_strengthening.py": "9fc030f5c9bd303a9fbc5ae98e41bb2ee8650eb83558edf8d71b09d9de99c369",
+    "scripts/prepare_strengthening_workload.py": "09da5fc196b2f8f11280c307a4ee81cbe62a3f61d860a2b282ed203ab26dd20c",
+    "experiments/audit_strengthening_inputs.py": "d04bf41823bce860b2f94491adfc3bf1d9a4ef109730e2d93b4abbf07939480c",
+    "requirements-strengthening.txt": "6ec99df9ae7870977f00f6d565850d0baad5cdd23edd27af0f271a7e5a143872",
+    ".github/workflows/weighted-range-reproduce.yml": "139b7a5f7f0f2071dc1f2d370692fca0450fca5d12a083b5e601171ccc768109",
+    "artifacts/pvldb-research-20261024/strengthening/source-discovery.json": "3323712337117428e497655b7e0e3b1bafd2285938466de71e842c5375f76b26",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/source-manifest.json": "3bcfea0e80ae82cc20d6e556058f4ca35bad99a069edb89391630064e0e0cd6e",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/float-decoding-contract.json": "514614e9711e87d12ab978a60316f40532324d6bf15f7a64ba7eed7d86ad08d8",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/prepare_strengthening_workload.packaging-fixed.py": "0e54488367e7e9d71e75bd9eeaf16ad7b5eaac37177012de871e6c811bf5b526",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/prepare_strengthening_workload.frozen.py": "ddd84a1fa99db2f9aa240acfc1292abc31bd668f8a522e68e66ef9947deb7b65",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/assemble_existing_scores.py": "48a17309d29f01b48e72d64ff896a21d71d9f0fd6482b56640bd8ab6c7b5e2b7",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/mapping.json": "1041db4e8c74a8f55b844d5f591a2d0388084de3ca40c0910c96f22ffb31c923"
+  },
+  "prerequisites": [
+    "Use the full source checkout with its committed strengthening artifacts, not just a downloaded research-output artifact.",
+    "Match CI Python 3.11.9 and install requirements-strengthening.txt plus torch==2.10.0 from https://download.pytorch.org/whl/cpu in the active interpreter.",
+    "Network access is required for the public detector source closure, canonical raw archive and pinned TimeEval source archive. No paid resources are required.",
+    "The output directory must not exist. The driver creates fresh protocols, generated scores and study outputs without overwriting historical receipts."
+  ],
+  "ordered_commands": [
+    {
+      "purpose": "Verify current source and preserved historical identities; this command does not import detectors or metrics",
+      "argv": [
+        "python",
+        "-c",
+        "import hashlib,json;from pathlib import Path;r=Path.cwd();d=json.loads((r/'artifacts/pvldb-research-20261024/strengthening/workload-replay-descriptor-v2.json').read_text());assert all(hashlib.sha256((r/p).read_bytes()).hexdigest()==h for p,h in d['source_sha256'].items());old=d['supersedes'];assert hashlib.sha256((r/old['path']).read_bytes()).hexdigest()==old['sha256'];print('CURRENT_REPLAY_AND_PRESERVED_HISTORY_VERIFIED')"
+      ]
+    },
+    {
+      "purpose": "Acquire exact sources/raw data, generate fresh profiles, audit inputs, and execute both measured studies with fresh per-host protocols",
+      "argv": [
+        "python",
+        "experiments/reproduce_strengthening.py",
+        "--output",
+        ".cache/strengthening-clean-replay"
+      ]
+    }
+  ],
+  "optional_archive_argument": "Append --archive cache/TSB-AD-U.zip to reuse only the checksum-bound raw archive; all detector scores are still generated afresh.",
+  "selection_sha256": "ed9eb0e9d906c3bd321bf6446cb4bfbbabdeddef154e17fa8ef1fb2f9e5e196c",
+  "raw_archive_sha256": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+  "timeeval_revision": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+  "tsb_ad_revision": "ed74348e7876c9268b7a737c77f2f5f56f7fa458",
+  "decoding_disclosure": "The one-ULP rule was added after the failed Linux input replay and remote diagnostic, before fresh Linux fits. It reconstructs the original frozen Mac binary64 input while retaining all original raw/label/exact-observation/normalized-observation hashes; it was not an original Mac preregistration and does not change historical scores or timings.",
+  "historical_recovery": "The original Mac generator and metadata-only recovery remain hash-bound in the source checkout and mapping.json. New runs execute neither historical file. The current producer includes the cache-symlink packaging fix and pins itself plus the decoding descriptor before its first detector fit.",
+  "fresh_outputs": ".cache/strengthening-clean-replay/artifacts/pvldb-research-20261024/strengthening contains new generation, input audit, weighted study, native consumer and output audit receipts; raw data and scores remain under the private fresh cache.",
+  "limits": "This descriptor is a reviewable entry point, not an outcome or experiment receipt. Fresh host scores may differ through numerical libraries and are independently hash-bound. Host timings are not pooled. The CI research artifact excludes original observations and detector score vectors, and does not constitute a self-contained historical raw-data archive."
+}

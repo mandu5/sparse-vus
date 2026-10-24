@@ -1,0 +1,306 @@
+{
+  "status": "INDEPENDENT_NATIVE_INTERVAL_CONTROL_AUDIT_PASSED",
+  "protocol_sha256": "7d1b8bd0528bec0d10750ba823f3f0b503dc9790959283fbe55c297cea2811be",
+  "planned_trials": 144,
+  "status_counts": {
+    "COMPLETE": 144,
+    "TIMEOUT": 0,
+    "notrun_due_to_prespecified_censor": 0
+  },
+  "max_absolute_scalar_error": 3.3306690738754696e-16,
+  "metric_outputs_recomputed": false,
+  "runner_or_candidate_imported": false,
+  "public_reference_evaluated": false,
+  "public_parity_available": {
+    "native_default50/combined": false,
+    "native_default50/family-0-MSL": false,
+    "native_default50/family-1-Stock": false,
+    "native_default50/family-2-WSD": false,
+    "all_observed/combined": false,
+    "all_observed/family-0-MSL": false,
+    "all_observed/family-1-Stock": false,
+    "all_observed/family-2-WSD": false
+  },
+  "per_profile_compiled_output_coverage": {
+    "native_default50": {
+      "raster": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "interval": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "bucket": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      }
+    },
+    "all_observed": {
+      "raster": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "interval": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "bucket": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      }
+    }
+  },
+  "reconstructed_comparisons": {
+    "native_default50": {
+      "combined": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.0434057324350576,
+          "approximate_paired_order_ci95": [
+            1.016267649703246,
+            1.0674782060588246
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.0264153776195493,
+          "approximate_paired_order_ci95": [
+            0.997962690575131,
+            1.0492829382014903
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.9837164448235713,
+          "approximate_paired_order_ci95": [
+            0.9733723214583624,
+            0.9996635349655228
+          ]
+        }
+      },
+      "family-0-MSL": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.027383374041427,
+          "approximate_paired_order_ci95": [
+            0.9700936494437112,
+            1.1341465725996147
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.9797133744597832,
+          "approximate_paired_order_ci95": [
+            0.9524112584857252,
+            1.0130216504644463
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.9536005732756566,
+          "approximate_paired_order_ci95": [
+            0.8883790340898644,
+            0.9985707265001765
+          ]
+        }
+      },
+      "family-1-Stock": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.050581627786246,
+          "approximate_paired_order_ci95": [
+            1.0217433635309958,
+            1.0769436110906998
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.9983614201566685,
+          "approximate_paired_order_ci95": [
+            0.9767914171403952,
+            1.0178986353374293
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.9502940026282255,
+          "approximate_paired_order_ci95": [
+            0.9403329022674549,
+            0.9593325601455249
+          ]
+        }
+      },
+      "family-2-WSD": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.031822006153344,
+          "approximate_paired_order_ci95": [
+            1.0108548478076764,
+            1.0557920318888476
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.0153796622415703,
+          "approximate_paired_order_ci95": [
+            0.9959672054839006,
+            1.0368641653743251
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.9840647477823514,
+          "approximate_paired_order_ci95": [
+            0.9670910153734501,
+            1.001148371102669
+          ]
+        }
+      }
+    },
+    "all_observed": {
+      "combined": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 3.0340833226480304,
+          "approximate_paired_order_ci95": [
+            2.989740984367956,
+            3.0754130687098042
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 2.731694538744486,
+          "approximate_paired_order_ci95": [
+            2.655800919773392,
+            2.811953165012951
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.9003360317607789,
+          "approximate_paired_order_ci95": [
+            0.8860161344734939,
+            0.9152695036412569
+          ]
+        }
+      },
+      "family-0-MSL": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.2409078787409031,
+          "approximate_paired_order_ci95": [
+            1.0632898028165694,
+            1.6316410133359904
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.1002806999842611,
+          "approximate_paired_order_ci95": [
+            1.0552101748232696,
+            1.1403733969146042
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.8866739576999622,
+          "approximate_paired_order_ci95": [
+            0.6819276442199002,
+            1.0369553236283557
+          ]
+        }
+      },
+      "family-1-Stock": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 4.45168419390218,
+          "approximate_paired_order_ci95": [
+            4.3488470674237485,
+            4.567335188625207
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 3.7425267627518095,
+          "approximate_paired_order_ci95": [
+            3.6502427398272466,
+            3.8559135345903526
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.8406990702256556,
+          "approximate_paired_order_ci95": [
+            0.829812404606918,
+            0.8535163150866302
+          ]
+        }
+      },
+      "family-2-WSD": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.7391695974268673,
+          "approximate_paired_order_ci95": [
+            1.7061040218678163,
+            1.7658757650059884
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.8656850139151244,
+          "approximate_paired_order_ci95": [
+            1.8098412945733302,
+            1.907169460513733
+          ]
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.0727447263771392,
+          "approximate_paired_order_ci95": [
+            1.0583084381408852,
+            1.0837263842399325
+          ]
+        }
+      }
+    }
+  },
+  "auditor_sha256": "d551bbdde42558e428d306c684710bc52b195c530bf3dbbaa9e34015778fc0e8",
+  "complete_sha256": "931300f2e26365e0ce861b7db11204c2d052f7152bbc5ad292f8f33e56c9a740"
+}

@@ -1,0 +1,1381 @@
+{
+  "status": "ARCHIVED_NATIVE_OUTPUT_RECONSTRUCTION_PASSED",
+  "study_kind": "compiled_interval_control",
+  "local_input_bytes_verified": false,
+  "local_source_bytes_verified": false,
+  "metric_outputs_recomputed": false,
+  "detector_fitting_repeated": false,
+  "runner_or_candidate_imported": false,
+  "completed_result_csv_bytes_verified": true,
+  "verification_scope": "Saved protocol/manifest/run/record bindings, declared query metadata, complete result CSVs, identities, parity, censors and matched summaries only. No raw data, label, detector-score or source byte verification; censored CSV metric values are never used.",
+  "protocol_sha256": "7af0107e80cf6dd0757cce190495489adae429e808b27f0da50eb3e5e22f6d0d",
+  "manifest_sha256": "6c17b5f89507145fca9aa0402abb74ea9c25c97f2e9f383782f21c361c9a27f9",
+  "standalone_manifest_matches_embedded_payload": true,
+  "manifest_sha256_recorded_in_global_protocol": false,
+  "archived_workload_receipts": {
+    "generation": {
+      "saved_receipt_bytes_verified": true,
+      "sha256": "fb08cbd29c81b70caeed010e0321316c61dfa06f5a0ec26d42263b29acb15b39"
+    },
+    "native_input_audit": {
+      "saved_receipt_bytes_verified": true,
+      "sha256": "d14bef422cb24519b31d64f2b5b931d8a37d77872c64e469ccd54df6ae50e3c0"
+    }
+  },
+  "planned_trials": 144,
+  "status_counts": {
+    "COMPLETE": 144,
+    "TIMEOUT": 0,
+    "notrun_due_to_prespecified_censor": 0
+  },
+  "max_absolute_scalar_error": 3.3306690738754696e-16,
+  "public_reference_evaluated": false,
+  "public_parity_available": {
+    "native_default50/combined": false,
+    "native_default50/family-0-MSL": false,
+    "native_default50/family-1-Stock": false,
+    "native_default50/family-2-WSD": false,
+    "all_observed/combined": false,
+    "all_observed/family-0-MSL": false,
+    "all_observed/family-1-Stock": false,
+    "all_observed/family-2-WSD": false
+  },
+  "per_profile_public_reference_coverage": {
+    "native_default50": {
+      "available": 0,
+      "total": 52,
+      "complete": false,
+      "missing_row_ids": [
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "126_WSD_id_98_WebService_tr_657_1st_757",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "126_WSD_id_98_WebService_tr_657_1st_757",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "MSL",
+          "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "MSL",
+          "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "MSL",
+          "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "MSL",
+          "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "1"
+        ]
+      ],
+      "scope": "Saved completed public outputs at the same contract only; no input re-evaluation or recovered censored timing."
+    },
+    "all_observed": {
+      "available": 0,
+      "total": 52,
+      "complete": false,
+      "missing_row_ids": [
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "WSD",
+          "126_WSD_id_98_WebService_tr_657_1st_757",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "WSD",
+          "126_WSD_id_98_WebService_tr_657_1st_757",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "MSL",
+          "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "MSL",
+          "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "MSL",
+          "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "MSL",
+          "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "1"
+        ]
+      ],
+      "scope": "Saved completed public outputs at the same contract only; no input re-evaluation or recovered censored timing."
+    }
+  },
+  "per_profile_compiled_output_coverage": {
+    "native_default50": {
+      "raster": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "interval": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "bucket": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      }
+    },
+    "all_observed": {
+      "raster": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "interval": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "bucket": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      }
+    }
+  },
+  "absolute_workflow_times": {
+    "native_default50": {
+      "combined": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 1.4616913865
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 1.4880453130000002
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 1.4380566885000001
+        }
+      },
+      "family-0-MSL": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.0461743575
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 0.04701657
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.047267827000000005
+        }
+      },
+      "family-1-Stock": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.677699546
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 0.712779729
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.6722585745
+        }
+      },
+      "family-2-WSD": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.7798864355000001
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 0.7904291065
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.764779648
+        }
+      }
+    },
+    "all_observed": {
+      "combined": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 4.112593797500001
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 4.7551050185
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 1.4990302555000001
+        }
+      },
+      "family-0-MSL": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.0494076965
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 0.05148206650000001
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.046402373000000004
+        }
+      },
+      "family-1-Stock": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 2.647435896
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 3.2157546885000006
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.692551585
+        }
+      },
+      "family-2-WSD": {
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 1.42598917
+        },
+        "interval": {
+          "completed_orders": 6,
+          "median_seconds": 1.4936593575000001
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.77871197
+        }
+      }
+    }
+  },
+  "reconstructed_comparisons": {
+    "native_default50": {
+      "combined": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.033861203941782,
+            0.9903480524453101,
+            1.049934883233347,
+            1.0360934058732438,
+            1.0509089397138915,
+            1.043367936873343
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.015205487677952,
+            1.046969828180069
+          ],
+          "geometric_speedup": 1.0338772754961283
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.014228149205311,
+            0.97479020638767,
+            1.0292422167380462,
+            1.0146831720786469,
+            1.0491078680499837,
+            1.012946177273638
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9966162905622891,
+            1.0330703698052233
+          ],
+          "geometric_speedup": 1.0155864473981846
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9810099705244604,
+            0.9842905269321978,
+            0.9802914763327263,
+            0.9793356142667929,
+            0.9982861772358713,
+            0.9708427310016159
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9762178281339329,
+            0.9893687177707403
+          ],
+          "geometric_speedup": 0.9823085113374153
+        }
+      },
+      "family-0-MSL": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9924613698480272,
+            0.9946191304985859,
+            1.0082986091710584,
+            0.9956511485699313,
+            0.9840336207455765,
+            1.0030292516452932
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9903608232903547,
+            1.002312904831632
+          ],
+          "geometric_speedup": 0.9963189417167587
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9915036645398057,
+            0.9914744578159849,
+            0.9648789389513279,
+            0.9829157637812912,
+            0.9783823305081637,
+            0.9753479443509261
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9732542944740824,
+            0.9878567446152186
+          ],
+          "geometric_speedup": 0.9807060605882014
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9990350200649438,
+            0.9968383147014026,
+            0.9569376870851516,
+            0.9872089890049018,
+            0.9942570150874205,
+            0.972402293104652
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9714365970005473,
+            0.9954621711452734
+          ],
+          "geometric_speedup": 0.9843294346068994
+        }
+      },
+      "family-1-Stock": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9752239812305956,
+            1.087110195425882,
+            1.0760032240930508,
+            1.0568792732128882,
+            1.0506393893527854,
+            1.0622463533216604
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.0180028812909492,
+            1.0741645580172154
+          ],
+          "geometric_speedup": 1.0507094469851466
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9283017878437787,
+            1.0270303557315519,
+            1.0133053314453533,
+            1.0128039017191852,
+            0.9926126884676539,
+            1.0126507003220337
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9665433557577281,
+            1.017640599334331
+          ],
+          "geometric_speedup": 0.997232158418465
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9518857264691054,
+            0.944734360925763,
+            0.9417307576373252,
+            0.9582966828749371,
+            0.9447701071621948,
+            0.9533105923644357
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9446590504951987,
+            0.9539019698255453
+          ],
+          "geometric_speedup": 0.9491036378133587
+        }
+      },
+      "family-2-WSD": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.1226639142708583,
+            1.0273268224223213,
+            1.0340908651071998,
+            1.0213000783160404,
+            1.0352656913835885,
+            1.0333052925942694
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.026935908004946,
+            1.0763571468817177
+          ],
+          "geometric_speedup": 1.0451015428019046
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.0470401851299285,
+            1.012630925999174,
+            1.0245021920557382,
+            1.0196978113998412,
+            1.0153481013188603,
+            1.0195415394264877
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.0158621625504805,
+            1.0333254790396937
+          ],
+          "geometric_speedup": 1.0230647794301408
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9326390309872519,
+            0.9856950134052802,
+            0.9907274366547395,
+            0.9984311497176803,
+            0.9807608904356627,
+            0.9866798774123903
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9591193297151961,
+            0.9920549059640351
+          ],
+          "geometric_speedup": 0.9789142370676409
+        }
+      }
+    },
+    "all_observed": {
+      "combined": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            3.162163612185488,
+            3.184004475090519,
+            3.1598446769186226,
+            3.27023816925404,
+            3.1978419937093734,
+            3.168359853065301
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            3.166439195737055,
+            3.2238687982931857
+          ],
+          "geometric_speedup": 3.190184284519322
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            2.7688081290747126,
+            2.7576326262747317,
+            2.7398642925379932,
+            2.7922615230577548,
+            2.7408276309916197,
+            2.7378083107575173
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            2.7421314733186355,
+            2.7734271573785803
+          ],
+          "geometric_speedup": 2.7561310425095216
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.8756055880236655,
+            0.8660894316727787,
+            0.8670882820765164,
+            0.8538404172851684,
+            0.8570866341686775,
+            0.8641090146716645
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.8584468034929329,
+            0.8694169388809603
+          ],
+          "geometric_speedup": 0.8639410130267128
+        }
+      },
+      "family-0-MSL": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            2.445622792515579,
+            1.109415931355463,
+            1.0717943026705206,
+            1.1014450979134887,
+            1.1132874025298312,
+            1.0983556886530665
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.0898882929329563,
+            1.6434137972692402
+          ],
+          "geometric_speedup": 1.2555039345600416
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.0561705548369442,
+            1.0587057396884165,
+            1.0661265648479645,
+            1.0760454280029144,
+            1.061061375021805,
+            1.0694743523623365
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.0594846105305276,
+            1.0702247144886863
+          ],
+          "geometric_speedup": 1.0645758150536302
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.4318615929117026,
+            0.9542910911644384,
+            0.9947119164484883,
+            0.976939685910183,
+            0.9530884591082699,
+            0.9737049331203923
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.6462851712256782,
+            0.9787968273539964
+          ],
+          "geometric_speedup": 0.8479271038100593
+        }
+      },
+      "family-1-Stock": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            4.629294024114752,
+            4.678801750374964,
+            4.667693136762083,
+            4.624381151234938,
+            4.625716640529501,
+            4.666507279591762
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            4.632418289358052,
+            4.666015747779301
+          ],
+          "geometric_speedup": 4.648677129094019
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            3.805189189950518,
+            3.8535345348073937,
+            3.8149495385997736,
+            3.8955431754513543,
+            3.802736139329927,
+            3.8465684023171485
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            3.8124531428055546,
+            3.865172129398294
+          ],
+          "geometric_speedup": 3.836280287727567
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.8219804510425701,
+            0.8236156905982537,
+            0.8173094131989477,
+            0.8423923219242109,
+            0.8220858376864674,
+            0.8242928108436715
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.8203142076549356,
+            0.8325312824668701
+          ],
+          "geometric_speedup": 0.825241285035259
+        }
+      },
+      "family-2-WSD": {
+        "interval_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.9182929756435767,
+            1.9284991569716845,
+            1.9382202414718728,
+            1.789731995247838,
+            1.9351190451565567,
+            1.8750981207946684
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.849060030843086,
+            1.9318062654480317
+          ],
+          "geometric_speedup": 1.896747558662252
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.8590932642254794,
+            1.8802933565678004,
+            1.8425545414137618,
+            1.7070896993593465,
+            1.8612737719380723,
+            1.79240618152293
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.7710037558504947,
+            1.8637201382089383
+          ],
+          "geometric_speedup": 1.8228112302967314
+        },
+        "raster_over_interval": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            0.9691393795578925,
+            0.9750034630662834,
+            0.9506425028429881,
+            0.9538242060219483,
+            0.9618394158213093,
+            0.9558999401926266
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9544379293678952,
+            0.9677297348826557
+          ],
+          "geometric_speedup": 0.9610194155633094
+        }
+      }
+    }
+  },
+  "complete_sha256": "4d8e00814cf035a705b96c4a4a7623a6bcd0b57cc0a35dc4d37bc717705c4e5b",
+  "auditor_sha256": "b8a79cb122d9e6cd2bd9bd3af41cc8caa1ce9b31b03a6130dc870c266016c5db"
+}

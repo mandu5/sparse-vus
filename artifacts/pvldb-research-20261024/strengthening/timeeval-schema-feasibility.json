@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/TimeEval/TimeEval",
+  "revision": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+  "files": [
+    {
+      "file": "timeeval/datasets/datasets.py",
+      "sha256": "a38965f2ca2d787bcc1db6d14b5a11ed5720d19132e8289337a5a9aa3328dd98",
+      "bytes": 23351
+    },
+    {
+      "file": "timeeval/datasets/dataset.py",
+      "sha256": "64130d9eada0e2d07949e5635dde59b8464dcf83858bb900d355e1a2a708f380",
+      "bytes": 1170
+    },
+    {
+      "file": "timeeval/datasets/dataset_manager.py",
+      "sha256": "c693279995e8aaba9544e1ec9ee3e31c23a61ff32c5a5c9f3e285d0a644a9d29",
+      "bytes": 8399
+    },
+    {
+      "file": "timeeval/datasets/multi_dataset_manager.py",
+      "sha256": "a8bb571d99e658d4c00e007881ba5d422cd20161e81d9e96d34d5d67e25ff581",
+      "bytes": 3315
+    },
+    {
+      "file": "tests/example_data/datasets.csv",
+      "sha256": "4f6ae783ccdab760d4814eca02ff8b9e70f2668c8efa70711cf08f5f47ef5f1e",
+      "bytes": 570
+    }
+  ]
+}

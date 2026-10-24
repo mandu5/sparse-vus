@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-24T09:34:37.821957+00:00",
+  "weighted_report_sha256": "12e16b3f2f0715b8a6dcc64cbfe526e58c3c8651cffe5137287e4152e749a050",
+  "native_complete_sha256": "4d8e00814cf035a705b96c4a4a7623a6bcd0b57cc0a35dc4d37bc717705c4e5b",
+  "generation_sha256": "fb08cbd29c81b70caeed010e0321316c61dfa06f5a0ec26d42263b29acb15b39",
+  "native_input_audit_sha256": "d14bef422cb24519b31d64f2b5b931d8a37d77872c64e469ccd54df6ae50e3c0",
+  "native_output_audit_sha256": "867af4010bf803a7b1ba946167a59f3d238fb3f0814f67ae79b13f5050635f24",
+  "scope": "Supplemental interval control; unchanged cohort and semantic design; fresh host-dependent scores; no host pooling."
+}

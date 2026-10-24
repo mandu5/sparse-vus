@@ -1,0 +1,603 @@
+{
+  "status": "PASS_EXPLORATORY_POST_HOC_DIRECT_COMPARISON",
+  "analysis_phase": "EXPLORATORY_POST_HOC_AFTER_SUPPLEMENTAL_RESULTS",
+  "created_utc": "2026-10-24T09:50:49.981530+00:00",
+  "metric_evaluation_performed": false,
+  "new_timing_performed": false,
+  "candidate_metric_code_imported": false,
+  "bootstrap_source_sha256": "2285fbb8b79aab3a9d365ac0cf7097b9b33098abc1fa78424a3ceaf138724923",
+  "analysis_source_sha256": "c85176b3e88d33a32e2fe674f25d44666ea59dc0e3e203decebbb2aca53912fc",
+  "presentation_helper_sha256": "c95377a11c6b7d2f565fe34d58f9e142906a0f42b3ab79af20603bd8fbc20214",
+  "presentation_csv_sha256": "f5363d4ad01bfc7cadaa8b44b42bbe62aa8bba8df7e1085205dc5491da67ab46",
+  "presentation_receipt_sha256": "e43022a623fc906469b18391efd81625680000c5e8dc106d23b10ee766f09c58",
+  "bootstrap_seed": 20261024,
+  "bootstrap_resamples": 10000,
+  "numpy_version": "1.26.4",
+  "multiplicity": "Six collection/query estimates per host; not across hosts or other comparisons.",
+  "uncertainty": "Fixed-panel paired-order bootstrap, shared indices across methods and semantic settings within each recording; no recording resampling.",
+  "limits": "Exploratory post-hoc contrast; approximate timing interval from six balanced orders, not population coverage or selection-adjusted inference. No minimum-control interval.",
+  "sources": [
+    {
+      "host": "Mac (arm64)",
+      "archive": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/pvldb-research-20261024/strengthening/weighted-control-mac-v1",
+      "sha256": {
+        "protocol.json": "5c7e404b8005670b3c78b6a3480faa6ac51447b79b4a78203bccd0109a18495b",
+        "records.jsonl": "55f564fbbdcff56c1939b46bf79f9a8ec375a35a382b9be82e53794bf0ce11d1",
+        "complete.json": "e412e0809d54bc29f36b465fa917d11318efb8135719e004ec21cb59e9ff26fa",
+        "independent-report.json": "4dfce10ea4f3528caa9580ee5427f93eeda34fb0255f3b151fd306427682ca4b"
+      },
+      "case_order": [
+        {
+          "id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "family": "WSD",
+          "n": 10744
+        },
+        {
+          "id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "family": "WSD",
+          "n": 15285
+        },
+        {
+          "id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "family": "WSD",
+          "n": 17438
+        },
+        {
+          "id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "family": "WSD",
+          "n": 18084
+        },
+        {
+          "id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "family": "WSD",
+          "n": 18214
+        },
+        {
+          "id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "family": "WSD",
+          "n": 18302
+        },
+        {
+          "id": "126_WSD_id_98_WebService_tr_657_1st_757",
+          "family": "WSD",
+          "n": 18883
+        },
+        {
+          "id": "150_Stock_id_2_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "153_Stock_id_5_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "157_Stock_id_9_Finance_tr_500_1st_19",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "161_Stock_id_13_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "163_Stock_id_15_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "167_Stock_id_19_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "168_Stock_id_20_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "152_Stock_id_4_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "154_Stock_id_6_Finance_tr_500_1st_38",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "158_Stock_id_10_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "159_Stock_id_11_Finance_tr_500_1st_5",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "164_Stock_id_16_Finance_tr_500_1st_8",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "family": "MSL",
+          "n": 2217
+        },
+        {
+          "id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "family": "MSL",
+          "n": 6100
+        }
+      ],
+      "independent_audit_local_input_bytes_verified": true,
+      "audited_semantic_rows_reconstructed": 144,
+      "audited_aggregate_rows_reconstructed": 12,
+      "direct_indirect_ratio_checks": "all recording/settings and collection/settings/aggregates agree within 1e-12"
+    },
+    {
+      "host": "Linux (x86_64)",
+      "archive": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/pvldb-research-20261024/strengthening/linux-interval-replay/weighted-control-linux-v1",
+      "sha256": {
+        "protocol.json": "908ae61ec0f724c691ffe8a9b600599ec5b46f01f2ccd4b0bb699c28b8518367",
+        "records.jsonl": "00d131297a3c0ded163d2bae3100807ae03efb3856e7adb073d434e66e0168f4",
+        "complete.json": "e075913c0cd974241a9d91d6e78d57b620a765f098075de77e5cc97f2c8a27d3",
+        "independent-report.json": "12e16b3f2f0715b8a6dcc64cbfe526e58c3c8651cffe5137287e4152e749a050"
+      },
+      "case_order": [
+        {
+          "id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "family": "WSD",
+          "n": 10744
+        },
+        {
+          "id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "family": "WSD",
+          "n": 15285
+        },
+        {
+          "id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "family": "WSD",
+          "n": 17438
+        },
+        {
+          "id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "family": "WSD",
+          "n": 18084
+        },
+        {
+          "id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "family": "WSD",
+          "n": 18214
+        },
+        {
+          "id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "family": "WSD",
+          "n": 18302
+        },
+        {
+          "id": "126_WSD_id_98_WebService_tr_657_1st_757",
+          "family": "WSD",
+          "n": 18883
+        },
+        {
+          "id": "150_Stock_id_2_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "153_Stock_id_5_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "157_Stock_id_9_Finance_tr_500_1st_19",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "161_Stock_id_13_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "163_Stock_id_15_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "167_Stock_id_19_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "168_Stock_id_20_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "152_Stock_id_4_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "154_Stock_id_6_Finance_tr_500_1st_38",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "158_Stock_id_10_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "159_Stock_id_11_Finance_tr_500_1st_5",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "164_Stock_id_16_Finance_tr_500_1st_8",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "family": "MSL",
+          "n": 2217
+        },
+        {
+          "id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "family": "MSL",
+          "n": 6100
+        }
+      ],
+      "independent_audit_local_input_bytes_verified": true,
+      "audited_semantic_rows_reconstructed": 144,
+      "audited_aggregate_rows_reconstructed": 12,
+      "direct_indirect_ratio_checks": "all recording/settings and collection/settings/aggregates agree within 1e-12"
+    }
+  ],
+  "estimates": [
+    {
+      "host": "Mac (arm64)",
+      "family": "WSD",
+      "query": "grid100",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.526173516993326,
+      "paired_order95_interval": [
+        1.5177417104236703,
+        1.5310870907254426
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 1.3790961098628134,
+      "max_recording_ratio": 1.6804363714643653,
+      "semantic_ratio_range": [
+        1.4884143023043783,
+        1.5494760192794537
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Mac (arm64)",
+      "family": "WSD",
+      "query": "distinct",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 8.607985364274144,
+      "paired_order95_interval": [
+        8.549062690737106,
+        8.639121104652508
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 2.137027769094717,
+      "max_recording_ratio": 29.43153076659754,
+      "semantic_ratio_range": [
+        8.18921086039049,
+        8.828591407449588
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Mac (arm64)",
+      "family": "Stock",
+      "query": "grid100",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.611084066026885,
+      "paired_order95_interval": [
+        1.6015019482086745,
+        1.6178918240248235
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 1.4946028052833036,
+      "max_recording_ratio": 1.7442878246316116,
+      "semantic_ratio_range": [
+        1.4789806255084996,
+        1.699886485577816
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Mac (arm64)",
+      "family": "Stock",
+      "query": "distinct",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 21.99071867214263,
+      "paired_order95_interval": [
+        21.907944478155112,
+        22.050494234736085
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 12.374100823919697,
+      "max_recording_ratio": 39.89909055102936,
+      "semantic_ratio_range": [
+        20.377660446188994,
+        22.79923076507509
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Mac (arm64)",
+      "family": "MSL",
+      "query": "grid100",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.5705810098454938,
+      "paired_order95_interval": [
+        1.552191346483012,
+        1.5840473046319155
+      ],
+      "correction_comparisons": 6,
+      "recordings": 2,
+      "recording_wins": 2,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 1.5255449739791496,
+      "max_recording_ratio": 1.616946567004982,
+      "semantic_ratio_range": [
+        1.5316953989314537,
+        1.5938663487875004
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Mac (arm64)",
+      "family": "MSL",
+      "query": "distinct",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.4205215883782076,
+      "paired_order95_interval": [
+        1.4025404083936408,
+        1.461000714804638
+      ],
+      "correction_comparisons": 6,
+      "recordings": 2,
+      "recording_wins": 1,
+      "recording_losses": 1,
+      "recording_ties": 0,
+      "min_recording_ratio": 0.5628712048211318,
+      "max_recording_ratio": 3.584979238171874,
+      "semantic_ratio_range": [
+        1.3567347373821064,
+        1.4618407629587717
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Linux (x86_64)",
+      "family": "WSD",
+      "query": "grid100",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.6720505345589909,
+      "paired_order95_interval": [
+        1.6612465101397476,
+        1.6797908543603899
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 1.2977258299708039,
+      "max_recording_ratio": 1.8619414838980997,
+      "semantic_ratio_range": [
+        1.6571869644702133,
+        1.6844815624990066
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Linux (x86_64)",
+      "family": "WSD",
+      "query": "distinct",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 11.621357323067988,
+      "paired_order95_interval": [
+        11.111286485583856,
+        11.667513751585828
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 3.002527271550516,
+      "max_recording_ratio": 42.01321462750973,
+      "semantic_ratio_range": [
+        11.313475369084378,
+        11.900747167874533
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Linux (x86_64)",
+      "family": "Stock",
+      "query": "grid100",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.548118285038221,
+      "paired_order95_interval": [
+        1.5426858177599951,
+        1.555339055294726
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 1.4563619421825449,
+      "max_recording_ratio": 1.670413534892054,
+      "semantic_ratio_range": [
+        1.494809794817083,
+        1.5936628618342
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Linux (x86_64)",
+      "family": "Stock",
+      "query": "distinct",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 26.716849860245574,
+      "paired_order95_interval": [
+        26.57905544974969,
+        26.786262605770748
+      ],
+      "correction_comparisons": 6,
+      "recordings": 12,
+      "recording_wins": 12,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 15.919327044319989,
+      "max_recording_ratio": 48.166382951940214,
+      "semantic_ratio_range": [
+        25.569050446095407,
+        28.4404255754191
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Linux (x86_64)",
+      "family": "MSL",
+      "query": "grid100",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.6648495248786845,
+      "paired_order95_interval": [
+        1.6537802299520228,
+        1.6898781950592499
+      ],
+      "correction_comparisons": 6,
+      "recordings": 2,
+      "recording_wins": 2,
+      "recording_losses": 0,
+      "recording_ties": 0,
+      "min_recording_ratio": 1.546214090227775,
+      "max_recording_ratio": 1.7925874288731092,
+      "semantic_ratio_range": [
+        1.6096993112683877,
+        1.6973844087660475
+      ],
+      "center_matches_direct_saved_median_csv": true
+    },
+    {
+      "host": "Linux (x86_64)",
+      "family": "MSL",
+      "query": "distinct",
+      "control": "raster",
+      "candidate": "incremental",
+      "geometric_ratio": 1.7262432354186987,
+      "paired_order95_interval": [
+        1.6952394307586653,
+        1.776057777128044
+      ],
+      "correction_comparisons": 6,
+      "recordings": 2,
+      "recording_wins": 1,
+      "recording_losses": 1,
+      "recording_ties": 0,
+      "min_recording_ratio": 0.6839344065458816,
+      "max_recording_ratio": 4.3570197365540935,
+      "semantic_ratio_range": [
+        1.706402806075253,
+        1.7518592566633833
+      ],
+      "center_matches_direct_saved_median_csv": true
+    }
+  ]
+}

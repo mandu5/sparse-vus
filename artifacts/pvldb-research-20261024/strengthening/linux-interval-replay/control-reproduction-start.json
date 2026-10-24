@@ -1,0 +1,8 @@
+{
+  "status": "RUNNING",
+  "utc": "2026-10-24T09:20:52.174352+00:00",
+  "source_script_sha256": "0c7ad10788ae4c320b36183124f977b6817636897c4981cf5e6f1434550ad88e",
+  "imported_reproduction_sha256": "9fc030f5c9bd303a9fbc5ae98e41bb2ee8650eb83558edf8d71b09d9de99c369",
+  "source_commit": "b0063f59b88abff9da646af8b218c8821a629aae",
+  "scope": "Fresh same-panel public-detector generation, conventional interval control and compiled native workflow ablation. No reused score vectors or public timing reruns."
+}

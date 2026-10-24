@@ -98,3 +98,13 @@ Calibrate objections using the four cases above, but inspect our actual sources
 and results. Record precisely which analogous objections are resolved and which
 remain. Do not raise a score just because the goal is a higher score. Preserve
 initial reviews and append clearly dated assessments of genuinely new evidence.
+
+## Later form-calibration addendum, 24 October 2026
+
+After the initial internal reviews, a university-hosted set of actual PVLDB
+initial/revision reviews was located and read. The
+[historical PVLDB form addendum](public-pvldb-form-calibration.md) supplies its
+fields, editorial history and specific limits. Final reviews should adapt that
+published form and the current 2027 criteria. This is still not a claim to have
+retrieved the current private CMT form. The original OpenReview provenance and
+accepted/rejected comparisons above remain unchanged.

@@ -1,0 +1,88 @@
+# Strengthened manuscript — independent reviewer A, initial static read
+
+Date: 24 October 2026. **Independent AI simulation, not external human peer review.**
+
+**Initial disposition: revise before a complete-paper decision.** I found no demonstrated mathematical counterexample in the two principal derivations or the inspected canonical weighted implementation. The remaining research question is the significance of the metric-specific state relative to established component-tree/attribute machinery; the new weighted and native-consumer evidence is explicitly unfinished. I do not assign an overall numerical score to this incomplete version. An independently audited complete paper may change this assessment.
+
+## Review boundary and evidence
+
+I read `paper/exact_metrics_strengthened20261024.tex`, its body, `support_events_method.tex`, `weighted_range_method.tex`, the bibliography and pending `strengthening_results.tex`; I inspected `src/sparse_vus/weighted_range.py` and its `_bucket_order` dependency. I did not read other internal/mock reviews or their scores. I read the requested `public-calibration.md`. CodeGraph was not exposed in the available tool inventory, so source inspection used the supplied paths and narrowly targeted text reads.
+
+No local numerical execution, test, benchmark, import of producer code, or TeX compilation was performed. Reported experimental numbers below are manuscript claims, not newly verified measurements. Primary literature and pinned upstream source were read independently. A memory registry was consulted only for the convention of distinguishing validation from publication; its historical results did not enter the scientific assessment.
+
+The [PVLDB 2027 research call](https://vldb.org/2027/call-for-research-track.html) makes formal or algorithmic contribution central to Foundations and Algorithms papers, while encouraging prototypes and experiments. Its [submission guidelines](https://vldb.org/2027/submission-guidelines.html) assess a concrete data-management contribution, substantive engagement with database literature, and evaluation in a relevant application. Thus neither an absent database engine nor the use of a specialized metric is by itself a rejection reason. Conversely, large speed ratios alone do not establish a sufficiently novel algorithm.
+
+## Summary and strengths
+
+The manuscript accelerates two existing evaluation operators without intentionally changing their query contracts. For dynamic VUS, support-event compression retains global tie counts and the ROC area of omitted horizontal transitions. For range precision/recall, an activation updates the fragmentation and overlap of one true interval and replaces at most two predicted components by one. Fixed-label feature prefixes permit endpoint-dependent precision weights.
+
+The strongest aspects are the precise operator definitions, explicit arithmetic assumptions, and unusually candid attribution of the speedup. The VUS section admits that a conventional compiled support control beats the proposed nearest-geometry implementation on the main single-model panel, and that sharing supplies much of the remaining gain. The range section identifies small-query losses. The retained nine-metric consumer result limits the application speedup to 1.031 times in that particular workload. These disclosures make the remaining claims more credible; they are not themselves evidence of novelty.
+
+The paper is substantively connected to database research through the VUS computation problem and the optimized VLDB Journal antecedent. Repeated evaluation over stored score columns is a reasonable analytical workload. The native TimeEval loader-to-result experiment, if completed with the stated contracts, can support application relevance without measuring detector training. The current scope is therefore plausible rather than a demonstrated scope failure.
+
+## Mathematical and source audit
+
+### Dynamic VUS
+
+The inactive-run lemma and predecessor correction in `support_events_method.tex:44–67` appear correct. At fixed support state, only the predicted count changes, so omitted ROC increments telescope at fixed recall; PR contributes zero. An active tied event must use both the strict global count before the event and the inclusive global count after it. The displayed recurrence accounts for both. The four-point witness is internally consistent: the omitted horizontal segment cannot be replaced by a diagonal between retained endpoints.
+
+The two-distance lemma at lines 69–80 follows from the pinned ramp: each active off-label ramp is at least `1/sqrt(2)`, so two contributing intervals saturate the clipped weight. This is specific to this ramp and clipping rule. The complexity proof reasonably charges sorting/global ranks, geometry, per-width weights, grouped masses and component-hit events. Its word-RAM and exact-arithmetic qualifications avoid claiming comparison-linear sorting of arbitrary real numbers or exact floating-point output.
+
+I checked the pinned [official implementation](https://github.com/TheDatumOrg/VUS/blob/467bace0c103f5c2bdb4900306d82939bcac8ff9/vus/utils/metrics.py), specifically `new_sequence`, `sequencing`, and `RangeAUC_volume_opt`. They support overlap-only merging of expanded intervals, clipped square-root ramps, a prediction-dependent positive denominator, complete `>=` score ties, the explicit ROC terminal point, and the right-step PR sum. I would not raise an objection based on substituting a fixed-denominator or trapezoidal-PR definition from another VUS variant.
+
+### Weighted range trajectory
+
+The recurrence in `weighted_range_method.tex:69–79` is sound in one dimension: intersections of predicted components with a contiguous true interval are precisely the active runs inside it. Activating a true point changes its run count by one minus the number of active same-interval neighbors. Activating outside a true interval cannot join two fragments of that interval, since the unique connecting path would lie inside it.
+
+The precision update at lines 81–96 also has a valid invariant. An active neighbor of an inactive point is necessarily a component endpoint. Thus stale interior boundary entries are irrelevant. The formula
+
+`h([a,b]) = D(b+1) - D(a) + y_a - sigma_a`
+
+counts true starts inside the component plus a true interval already open at its left boundary. At most three component contributions are evaluated. Fixed-label feature-prefix queries give the asserted `O(qd)` cost under the stated coefficient/piece assumptions. No claim of arbitrary constant-time callback evaluation is needed or made.
+
+The canonical implementation matches this mechanism. `_weighted_overlap` splits middle weights at the moving midpoint; front/back offsets are consistent with zero-based coordinates and one-based relative weights. `_normalizer` matches the four table entries. Recall existence is tracked by first hit, separately from overlap mass. The implementation restricts its family to positive canonical weights, one shared cardinality choice, and macro/length-weighted aggregation; the manuscript correctly marks the broader interface theorem-only.
+
+The int64 claim at the stated `n <= 2**31 - 1` bound looks defensible: the prefix first moment is at most `n(n-1)/2`; the endpoint-times-count products are below `n^2`; even a conservative sum of two such products remains below `2^63` at that bound. This is a static argument, not an overflow execution test. The compensated floating accumulation and nonnegative clipping still do not supply an all-input rounding certificate, which the paper explicitly acknowledges.
+
+The bucket ordering is consistent with the strict contract: all members of a bucket have the same first eligible descending query. Their internal score order does not affect the mathematical queried mask. Complete query buckets must finish before emission, as the implementation does. Floating accumulation order can differ; this is covered by the paper's distinction between real equality and observed numerical parity.
+
+### Source-contract clarifications
+
+The pinned [TimeSeAD evaluator](https://github.com/wagner-d/TimeSeAD/blob/bb8efa9ce17f9cfb0bab77df08c32d986de8429e/timesead/evaluation/evaluator.py) already enumerates unique thresholds and reruns range metrics. Therefore exhaustive threshold enumeration is not new. Its best-F routine uses strict `>` observed-score queries, supporting the deliberately restricted query contract in this paper.
+
+I also checked [TimeEval's configured defaults](https://github.com/TimeEval/TimeEval/blob/7c3622757b1a3afa9a84cbc97ce132d9e379f715/timeeval/metrics/__init__.py) and [range-curve callback](https://github.com/TimeEval/TimeEval/blob/7c3622757b1a3afa9a84cbc97ce132d9e379f715/timeeval/metrics/range_metrics.py). `DefaultMetrics.RANGE_PR_AUC` is indeed configured with `r_alpha=0`, cardinality `one`, and flat bias. The class constructor has different defaults, so the manuscript should name the configured constant to remove ambiguity. The callback can exceed its nominal sample count, uses `>=`, supplies synthetic endpoints and sorts by recall/precision. Preserving those choices is necessary for an equal-output native comparison.
+
+## Novelty assessment and the closest challenge
+
+The prior-work boundary is substantially better specified than a generic claim of fast exact metrics. [Boniol et al. 2025, Section 4.3](https://www.paparrizos.org/papers/BoniolVLDBJ25.pdf) already separate static and dynamic regions and reuse static work. The inspected [Klein source](https://github.com/tomlouisklein/fast-VUS/blob/1bae859f/fast_vus.py) already sorts support scores, uses cumulative sums and evaluates component maxima; it still builds full-length coverage arrays by width. The defensible VUS addition is therefore the exact support-event representation, including its ROC correction and specified preparation bounds, rather than support restriction, cumulative sums or caching alone.
+
+[Tatbul et al., Section 5.5, p. 9](https://papers.neurips.cc/paper_files/paper/2018/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf) already give linear ordered-range overlap traversal and closed-form positional-bias calculations for one prediction mask. [Menotti et al. 2007, Sections 3.1 and 3.4](https://www.researchgate.net/publication/228747458_1D_Component_tree_in_linear_time_and_space_and_its_application_to_gray-level_image_multithresholding) already construct the one-dimensional component tree and maintain attributes without increasing the linear construction cost. I read the author-uploaded full text after the HAL endpoint was inaccessible. Thus the new range result is a specialized metric-state recurrence over familiar structures; it is not a new connected-component algorithm.
+
+An additional antecedent deserves one explicit sentence: [Ranefall and Wählby 2016, Methods, pp. 386–387](https://onlinelibrary.wiley.com/doi/full/10.1002/cyto.a.22806) use component-size attributes for per-threshold precision and estimated recall. Their target depends on a prescribed object-size interval, not ground-truth overlap; it does not supply `c_j`, `h(C)` or moving-weight normalization. The state can inspire an augmentation but does not establish an identical published Tatbul recurrence. Publisher HTML was readable; PDF/supplement downloads returned 403, and page 387 was confirmed by indexed publisher-PDF text.
+
+My inference is that the strongest surviving contribution is the **joint maintenance of label-conditioned fragmentation and endpoint-dependent overlap through the entire threshold trajectory**, with an explicit finite-feature sufficient condition. This is a plausible algorithmic contribution, but the degree of originality and significance remains the weakest part of the case. Changing weights to four canonical choices does not automatically make a standard attribute-maintenance pattern a deep theorem. Conversely, the existence of component trees does not refute the metric-specific result.
+
+## Major issues and precise repair
+
+1. **The conceptual increment needs a sharper constructive comparison.** The related-work text lists what is not new but does not yet make the delta from a straightforward component-tree evaluator easy to assess. Add a compact comparison of the state required for a one-mask Tatbul evaluator, a classical threshold component tree, and this joint trajectory. Show which maintained quantities recover precision and which additionally recover recall fragmentation. A short pseudocode block with invariants would make the conceptual claim reviewable. Do not suggest that component trees cannot support these attributes; state precisely which metric-specific identities are supplied here. If the straightforward augmentation is identical, acknowledge that equivalence and argue the result as a useful exact specialization, not a stronger generic algorithmic advance.
+
+2. **The weighted/native practical claim has no complete evidence in this version.** `strengthening_results.tex` is a pending placeholder. The new consumer must show completed whole-workflow latency against both the unmodified callback and the same-compiler raster, per collection and contract, with actual query counts, numerical agreement, censoring and matched outputs. Weighted results must retain per-semantics outcomes rather than letting an average hide a poor middle-weight/cardinality case. This is a completion requirement, not an instruction to rerun favorable experiments or enlarge the panel after seeing the results. Only after the frozen Linux/native audit is available can I judge whether the specialized algorithm's usefulness compensates for modest conceptual breadth.
+
+3. **The contribution emphasis should follow the ablation evidence.** The main text reports no independent speed advantage for nearest geometry over the conventional compiled support control, and only small extra gains from loop interchange after geometry sharing. Those findings prevent nearest geometry or batch loop order from carrying a strong novelty/significance claim. Keep those lemmas as enabling analysis and implementation choices; foreground exact support-event accounting and the weighted trajectory. For every headline ratio, identify whether the comparison measures the entire evaluator, component reuse, or the new recurrence. The manuscript largely does this already; the final abstract/contribution paragraph should retain the same restraint.
+
+These are research-value and evidence issues. I found no basis in this static read to require a redesigned core algorithm for correctness, to reject the paper solely because it lacks a DBMS, or to require a GPU baseline that computes a different metric. A source-verified equal-output GPU evaluator, if available, would be relevant; its superiority cannot be asserted or dismissed without measurement.
+
+## Smaller issues and final-review checks
+
+- Name `DefaultMetrics.RANGE_PR_AUC` in the native protocol and distinguish it from `RangePrecisionRangeRecallAUC` constructor defaults and TimeEval's VUS `RangePrAUC` class.
+- Keep “exhaustive” attached to the strict observed-score query set. That set omits the all-active mask and is not the maximum over every possible real threshold. For example, a constant-score two-point vector with labels `(1,0)` has zero F1 at its sole observed strict cut, but `2/3` at a lower sentinel. This hand-derived observation does not invalidate the defined experiment; it limits wording about global optimality.
+- Include either the optimized Tatbul ordered-interval implementation in the comparator discussion or explain why the fused compiled raster already removes the relevant per-mask complexity. Do not characterize all old range evaluation as the naive all-pairs range algorithm.
+- An explicit moving-middle example would explain why an unsplit count/first moment is insufficient and why fixed-label prefixes solve the changing endpoint problem. This would improve the algorithmic argument more than another broad recent-work citation.
+- The finite-feature theorem covers more than the public implementation. Preserve that separation in the abstract and API claims; unimplemented generic polynomial weights cannot inherit empirical parity from the four canonical cases.
+- Raw-data retrieval, public artifact availability, exact producer versions, the one-command native/Linux run and the final 12-page limit remain unverified in this read. A branch URL and a command in the paper are not themselves proof of public reproducibility. No compilation was attempted because of the explicit resource constraint.
+
+## Calibration and provisional recommendation
+
+I used the supplied adjacent OpenReview cases only as examples of objections, not as a numerical mapping to PVLDB or an acceptance predictor. The calibration file discloses a public mirror and failure to compare its bytes with live OpenReview; those provenance limits remain. The objections about unqualified generalization, ignoring strong comparators and assigning all gains to the highlighted component are substantially answered in this draft. The objections about modest novelty and weak connection between a formal result and its practical significance remain live.
+
+**Provisional recommendation: revise; final complete-paper recommendation deferred.** Correctness is provisionally credible for the stated real-arithmetic targets, and scope is plausible. Novelty is specialized and needs the constructive boundary above. Experimental support for the new weighted/native part is pending. I would reassess based on the completed frozen evidence and clarified conceptual comparison, not a desired score or the magnitude of an isolated public-library speedup.

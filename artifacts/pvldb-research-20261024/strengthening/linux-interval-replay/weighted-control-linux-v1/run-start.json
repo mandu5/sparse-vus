@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-24T09:23:11.078611+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "python": "3.11.9 (main, Jul 15 2024, 21:50:42) [GCC 13.2.0]",
+  "processor": "x86_64",
+  "packages": {
+    "numpy": "1.26.4",
+    "numba": "0.59.1",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2"
+  },
+  "protocol_sha256": "908ae61ec0f724c691ffe8a9b600599ec5b46f01f2ccd4b0bb699c28b8518367"
+}

@@ -1,0 +1,139 @@
+{
+  "repository": "https://github.com/TimeEval/TimeEval",
+  "revision": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+  "retrieved_source_only": true,
+  "files": [
+    {
+      "file": "LICENSE",
+      "bytes": 1097,
+      "sha256": "f047d8cf14baad94ec3d585efc35ec17ec9cecd4f95d2d95721d9bfcb91cf453"
+    },
+    {
+      "file": "pyproject.toml",
+      "bytes": 3346,
+      "sha256": "07ccf4ff8bb49b852f5451673d44239178c0efaa4a8c29e43872b92cce9f3c1a"
+    },
+    {
+      "file": "README.md",
+      "bytes": 6328,
+      "sha256": "711256c236789de80d72272f6aaf4f5dce37e36013b0b5441d5ce986479507b0"
+    },
+    {
+      "file": "timeeval/__init__.py",
+      "bytes": 986,
+      "sha256": "0cc7aad04343ee88a26f5bdccdff2afbbb78e249e9896be9d32d2e8398e2785b"
+    },
+    {
+      "file": "timeeval/metrics/__init__.py",
+      "bytes": 5366,
+      "sha256": "3d79e78d897e4b027f5b6c070a36a77e148bc2e08c429f929d14859df2513ced"
+    },
+    {
+      "file": "timeeval/metrics/metric.py",
+      "bytes": 5543,
+      "sha256": "2333740807f8573784210b0796da16cae8d7b0aa81f391a0e43af0f3daf1f320"
+    },
+    {
+      "file": "timeeval/metrics/auc_metrics.py",
+      "bytes": 3136,
+      "sha256": "dcf1c0cfe11cfed7b7b6acb1fc32e5d1041145da0bfb361768fc1d3b291b0feb"
+    },
+    {
+      "file": "timeeval/metrics/range_metrics.py",
+      "bytes": 11754,
+      "sha256": "ba45a0cd3994c075de1026bbbe086ba7a03d0c7a86ca894d1d0cfe854521f5c4"
+    },
+    {
+      "file": "timeeval/metrics/other_metrics.py",
+      "bytes": 3573,
+      "sha256": "1978f603961ca674ff5c1aeed76f0c9f6bcc6fba39c8e226d0725b5760f236b3"
+    },
+    {
+      "file": "timeeval/metrics/vus_metrics.py",
+      "bytes": 19351,
+      "sha256": "609142dbcf7d537e98b130390abaa015cadbbffeee39b416c43f63fa224b4a08"
+    },
+    {
+      "file": "timeeval/metrics/thresholding.py",
+      "bytes": 18174,
+      "sha256": "fbd56d6bc35f8a70f5884cb0e34aed7d23dcb7873bf2a2b92ace55287667a311"
+    },
+    {
+      "file": "timeeval/utils/datasets.py",
+      "bytes": 613,
+      "sha256": "e47bb6acf4d6631d965957440c152a921a11cd41a5c6e0064915fef298ad09a1"
+    },
+    {
+      "file": "scripts/recalculate_metrics.py",
+      "bytes": 9836,
+      "sha256": "f374fed35411a0b54afef844b9ff60139e607e88034c7768c3396fbae35564e5"
+    },
+    {
+      "file": "timeeval/constants.py",
+      "bytes": 3112,
+      "sha256": "1050d9e366a841bb5b4b17833ea9b85d33ec8fb73ef35676aff83db4e0f43355"
+    }
+  ],
+  "prts": {
+    "name": "prts",
+    "version": "1.0.0.3",
+    "url": "https://files.pythonhosted.org/packages/15/f7/2ba5af48ac7df243840dc36212690800b5eb360ad2545fe511ff1a095439/prts-1.0.0.3.tar.gz",
+    "sha256": "82baa65f3f121688e2b838b8512e6bd5d3b854bb1dcfae7dced7d78cffc095db",
+    "license": "LICENSE",
+    "requires_dist": [
+      "numpy (>=1.19.4,<2.0.0)"
+    ],
+    "project_urls": null
+  },
+  "source_contract": {
+    "consumer": "scripts/recalculate_metrics.py::MetricComputor.recompute",
+    "native_cli_default_metrics": [
+      "ROC_AUC",
+      "PR_AUC",
+      "RANGE_PR_AUC"
+    ],
+    "native_library_default_metrics": [
+      "ROC_AUC"
+    ],
+    "range_default": {
+      "r_alpha": 0,
+      "p_alpha": 0,
+      "cardinality": "one",
+      "bias": "flat",
+      "max_samples": 50
+    },
+    "native_default_in_published_evaluation": true,
+    "native_default_reference": "https://timeeval.github.io/evaluation-paper/#evaluation-metrics",
+    "output_file": "results.csv",
+    "score_path": "<algorithm>/<hyper_params_id>/<collection>/<dataset>/<repetition>/anomaly_scores.ts",
+    "labels_via": "MultiDatasetManager(data_paths), datasets.csv",
+    "edge_behavior": "all-positive labels allowed; no-positive labels with nonconstant scores cause AssertionError; constant scores return 0 before curve; sampler may retain more than max_samples"
+  },
+  "validation": {
+    "tiny_contract_receipt": "tmp/strengthening-consumer/timeeval-tiny-correctness.json",
+    "full_consumer_executed": false,
+    "timing_executed": false,
+    "source_cache_is_full_install": false,
+    "source_license": "MIT",
+    "prts_license": "Apache-2.0"
+  },
+  "workload_candidate": {
+    "source": "TimeEval published benchmark real recordings + metric recalculation default three",
+    "raw_and_summary_share_reference": "https://timeeval.github.io/evaluation-paper/notebooks/Datasets.html",
+    "native_published_score_archive_verified": false,
+    "gate": "Need original anomaly_scores.ts archive or explicitly label newly produced/imported scores; do not claim historical TimeEval run replay without scores. External workload agent owns input pin."
+  },
+  "prototype_interface": {
+    "file": "tmp/strengthening-consumer/timeeval_adapter.py",
+    "factory": "make_curve(kernel)",
+    "kernel_signature": "kernel(labels, scores, strict_thresholds, *, cardinality=\"one\", alpha=0) -> Hx3 precision,recall,F1",
+    "threshold_conversion": "np.nextafter(thresholds.astype(np.float64), -np.inf)",
+    "binding": "types.MethodType(make_curve(kernel), native_range_metric_object)",
+    "preserve_method_name": "_range_precision_recall_curve"
+  },
+  "prototype_sha256": {
+    "tmp/strengthening-consumer/timeeval_adapter.py": "3e9aea1a17958158d486ee5b62a152bb34f0889f18c9927c8ec67bb209748de8",
+    "tmp/strengthening-consumer/check_timeeval_tiny.py": "355e75f7eddbd81d89de720fbfa3c93debf3e19b5380aefd92f0566b8dcb9f0c",
+    "tmp/strengthening-consumer/timeeval-tiny-correctness.json": "4cdec0ec88d2a92cdfc48d88abef11d73ced8d21ee502e6769080a5b99e3d3ca"
+  }
+}

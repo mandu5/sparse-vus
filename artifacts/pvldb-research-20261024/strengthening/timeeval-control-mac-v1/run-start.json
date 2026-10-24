@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-24T09:26:22.313413+00:00",
+  "global_protocol_sha256": "7d1b8bd0528bec0d10750ba823f3f0b503dc9790959283fbe55c297cea2811be",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "dependencies": {
+    "timeeval": "1.5.0",
+    "prts": "1.0.0.3",
+    "numpy": "1.26.4",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2",
+    "pandas": "2.2.3",
+    "numba": "0.59.1",
+    "llvmlite": "0.42.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "dask": "2022.12.1",
+    "distributed": "2022.12.1",
+    "multiprocessing_logging": "0.4.0",
+    "tqdm": "4.70.1"
+  },
+  "warmup_completed": true
+}

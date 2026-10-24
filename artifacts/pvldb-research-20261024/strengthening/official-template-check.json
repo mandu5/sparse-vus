@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-10-24T10:21:37.921859+00:00",
+  "official_repository": "https://github.com/vldbproceedings/VLDB-Template",
+  "official_commit": "39c95f5c6fcbe652a83be24e4eff8f2134cd3fbc",
+  "status": "ALL_THREE_TEMPLATE_FILES_BYTE_IDENTICAL",
+  "files": [
+    {
+      "file": "paper/acmart.cls",
+      "official_git_blob": "82b5c91b4ac4aa302fa5313e98f60d1e75c5e8f4",
+      "local_git_blob": "82b5c91b4ac4aa302fa5313e98f60d1e75c5e8f4",
+      "equal": true,
+      "sha256": "2f949e6e3f2a79f2cdc218b9dcdbaa7dd451adb4ee0be1af6dc7ebe00b318ea7"
+    },
+    {
+      "file": "paper/pvldb.sty",
+      "official_git_blob": "39c446c8511190030cffc03de0bbc5f26519516d",
+      "local_git_blob": "39c446c8511190030cffc03de0bbc5f26519516d",
+      "equal": true,
+      "sha256": "52ad3948f3231b31d2ac90f470c1759e7f96add7b577ec4e267dfbdc87fc4eb2"
+    },
+    {
+      "file": "paper/ACM-Reference-Format.bst",
+      "official_git_blob": "80ed3bb23f54f6658c93f238d92e55deedfe753e",
+      "local_git_blob": "80ed3bb23f54f6658c93f238d92e55deedfe753e",
+      "equal": true,
+      "sha256": "0590db3b8d255a3af91982ab710f3ace5fcaa52434020c9af8a4f141b00b68f3"
+    }
+  ]
+}

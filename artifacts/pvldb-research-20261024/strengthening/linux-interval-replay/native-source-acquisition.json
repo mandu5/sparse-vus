@@ -1,0 +1,8 @@
+{
+  "revision": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+  "transport_sha256": "13d11ee6da9a282327dff142a387103833a79e6700ac144e17cbaa1b9efebe99",
+  "transport_bytes": 16141441,
+  "frozen_manifest_sha256": "aefba85eea77cc3e50ce33e9f9f640881f38909e82cb342820e366ffa741f6bb",
+  "source_files_verified": 425,
+  "source_tree_equals_frozen_mac": true
+}

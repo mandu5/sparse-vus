@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-24T07:58:50.522835+00:00",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "processor": "arm",
+  "packages": {
+    "numpy": "1.26.4",
+    "numba": "0.59.1",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2"
+  },
+  "protocol_sha256": "e0bdfd44d4a121bc4e354ea0cbb986a4b7224b8f82f69baa883ef43be707ee7a"
+}

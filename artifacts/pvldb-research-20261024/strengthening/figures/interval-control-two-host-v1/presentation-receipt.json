@@ -1,0 +1,322 @@
+{
+  "status": "PASS_AUDITED_SAVED_DATA_PRESENTATION",
+  "created_utc": "2026-10-24T09:46:34.979912+00:00",
+  "scope": "Saved-data presentation and cross-checking; no new fits, metrics, timings or intervals.",
+  "sources": [
+    {
+      "host": "Mac (arm64)",
+      "archive": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/pvldb-research-20261024/strengthening/weighted-control-mac-v1",
+      "sha256": {
+        "protocol.json": "5c7e404b8005670b3c78b6a3480faa6ac51447b79b4a78203bccd0109a18495b",
+        "records.jsonl": "55f564fbbdcff56c1939b46bf79f9a8ec375a35a382b9be82e53794bf0ce11d1",
+        "complete.json": "e412e0809d54bc29f36b465fa917d11318efb8135719e004ec21cb59e9ff26fa",
+        "independent-report.json": "4dfce10ea4f3528caa9580ee5427f93eeda34fb0255f3b151fd306427682ca4b"
+      },
+      "case_order": [
+        {
+          "id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "family": "WSD",
+          "n": 10744
+        },
+        {
+          "id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "family": "WSD",
+          "n": 15285
+        },
+        {
+          "id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "family": "WSD",
+          "n": 17438
+        },
+        {
+          "id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "family": "WSD",
+          "n": 18084
+        },
+        {
+          "id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "family": "WSD",
+          "n": 18214
+        },
+        {
+          "id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "family": "WSD",
+          "n": 18302
+        },
+        {
+          "id": "126_WSD_id_98_WebService_tr_657_1st_757",
+          "family": "WSD",
+          "n": 18883
+        },
+        {
+          "id": "150_Stock_id_2_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "153_Stock_id_5_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "157_Stock_id_9_Finance_tr_500_1st_19",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "161_Stock_id_13_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "163_Stock_id_15_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "167_Stock_id_19_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "168_Stock_id_20_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "152_Stock_id_4_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "154_Stock_id_6_Finance_tr_500_1st_38",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "158_Stock_id_10_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "159_Stock_id_11_Finance_tr_500_1st_5",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "164_Stock_id_16_Finance_tr_500_1st_8",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "family": "MSL",
+          "n": 2217
+        },
+        {
+          "id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "family": "MSL",
+          "n": 6100
+        }
+      ],
+      "independent_audit_local_input_bytes_verified": true,
+      "audited_semantic_rows_reconstructed": 144,
+      "audited_aggregate_rows_reconstructed": 12,
+      "direct_indirect_ratio_checks": "all recording/settings and collection/settings/aggregates agree within 1e-12"
+    },
+    {
+      "host": "Linux (x86_64)",
+      "archive": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/pvldb-research-20261024/strengthening/linux-interval-replay/weighted-control-linux-v1",
+      "sha256": {
+        "protocol.json": "908ae61ec0f724c691ffe8a9b600599ec5b46f01f2ccd4b0bb699c28b8518367",
+        "records.jsonl": "00d131297a3c0ded163d2bae3100807ae03efb3856e7adb073d434e66e0168f4",
+        "complete.json": "e075913c0cd974241a9d91d6e78d57b620a765f098075de77e5cc97f2c8a27d3",
+        "independent-report.json": "12e16b3f2f0715b8a6dcc64cbfe526e58c3c8651cffe5137287e4152e749a050"
+      },
+      "case_order": [
+        {
+          "id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+          "family": "WSD",
+          "n": 10744
+        },
+        {
+          "id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+          "family": "WSD",
+          "n": 15285
+        },
+        {
+          "id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+          "family": "WSD",
+          "n": 17438
+        },
+        {
+          "id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+          "family": "WSD",
+          "n": 18084
+        },
+        {
+          "id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+          "family": "WSD",
+          "n": 18214
+        },
+        {
+          "id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+          "family": "WSD",
+          "n": 18236
+        },
+        {
+          "id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+          "family": "WSD",
+          "n": 18302
+        },
+        {
+          "id": "126_WSD_id_98_WebService_tr_657_1st_757",
+          "family": "WSD",
+          "n": 18883
+        },
+        {
+          "id": "150_Stock_id_2_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "153_Stock_id_5_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "157_Stock_id_9_Finance_tr_500_1st_19",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "161_Stock_id_13_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "163_Stock_id_15_Finance_tr_500_1st_3",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "167_Stock_id_19_Finance_tr_500_1st_7",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "168_Stock_id_20_Finance_tr_500_1st_1",
+          "family": "Stock",
+          "n": 10000
+        },
+        {
+          "id": "152_Stock_id_4_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "154_Stock_id_6_Finance_tr_500_1st_38",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "158_Stock_id_10_Finance_tr_500_1st_2",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "159_Stock_id_11_Finance_tr_500_1st_5",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "164_Stock_id_16_Finance_tr_500_1st_8",
+          "family": "Stock",
+          "n": 20000
+        },
+        {
+          "id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+          "family": "MSL",
+          "n": 2217
+        },
+        {
+          "id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+          "family": "MSL",
+          "n": 6100
+        }
+      ],
+      "independent_audit_local_input_bytes_verified": true,
+      "audited_semantic_rows_reconstructed": 144,
+      "audited_aggregate_rows_reconstructed": 12,
+      "direct_indirect_ratio_checks": "all recording/settings and collection/settings/aggregates agree within 1e-12"
+    }
+  ],
+  "recording_query_rows": 104,
+  "plotted_recordings": 52,
+  "recording_semantic_rows": 1248,
+  "collection_semantic_rows": 432,
+  "aggregate_rows": 36,
+  "x_definition": "Sum of distinct query counts across FFT and COPOD, matching the two-profile timed workflow; CSV also contains their mean and individual counts.",
+  "y_definition": "min(GM_semantics median_trials raster/incremental time, GM_semantics median_trials interval/incremental time), selecting one control per recording after equal-log aggregation across all 12 settings.",
+  "scatter_inference": "Post-hoc descriptive control choice; no CI, preregistration or population inference.",
+  "csv_intervals": "Existing intervals only for audited prespecified contrasts. Direct raster/incremental contrasts use raw medians and agree with products of original contrasts; their interval fields are blank.",
+  "host_policy": "Separate host panels and source-specific generated score/query identities; timings never pooled.",
+  "renderer_sha256": "c95377a11c6b7d2f565fe34d58f9e142906a0f42b3ab79af20603bd8fbc20214",
+  "render_packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "1.26.4"
+  },
+  "outputs": {
+    "interval-control-query-regime.pdf": "935f6308b8605500a541d1ec1ac6280547fe2e457a843b397206ff0b26ab90e1",
+    "interval-control-query-regime.png": "beb5c1196904a7356a29748eb14ff78d42e1edf3c7e2cc7dc8a32315018ae2ca",
+    "weighted-aggregates.csv": "f5363d4ad01bfc7cadaa8b44b42bbe62aa8bba8df7e1085205dc5491da67ab46",
+    "weighted-recording-semantics.csv": "fd2dc1942b261c220137ba3f1dd64ffadd126bc7c6b1db15b47656d014a16479",
+    "weighted-recordings.csv": "bb3e77f89ded31bc562f8223e6acc017a557b5233ecd06d2c6ac42380123bee0",
+    "weighted-semantics.csv": "4b9444cc6ccfbaaa9220502ecad0aab7957306de4474f40192cd14acd5b198a7"
+  }
+}

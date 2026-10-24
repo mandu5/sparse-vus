@@ -1,0 +1,617 @@
+{
+  "status": "INDEPENDENT_NATIVE_CONSUMER_OUTPUT_AUDIT_PASSED",
+  "protocol_sha256": "aefba85eea77cc3e50ce33e9f9f640881f38909e82cb342820e366ffa741f6bb",
+  "planned_trials": 144,
+  "status_counts": {
+    "COMPLETE": 120,
+    "TIMEOUT": 4,
+    "notrun_due_to_prespecified_censor": 20
+  },
+  "max_absolute_scalar_error": 3.3306690738754696e-16,
+  "metric_outputs_recomputed": false,
+  "runner_or_candidate_imported": false,
+  "public_parity_available": {
+    "native_default50/combined": false,
+    "native_default50/family-0-MSL": true,
+    "native_default50/family-1-Stock": false,
+    "native_default50/family-2-WSD": true,
+    "all_observed/combined": false,
+    "all_observed/family-0-MSL": true,
+    "all_observed/family-1-Stock": false,
+    "all_observed/family-2-WSD": true
+  },
+  "per_profile_public_reference_coverage": {
+    "native_default50": {
+      "available": 28,
+      "total": 52,
+      "complete": false,
+      "missing_row_ids": [
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ]
+      ],
+      "scope": "Completed public outputs from any native batch at the same contract; this does not recover censored workflow timing or its interval."
+    },
+    "all_observed": {
+      "available": 28,
+      "total": 52,
+      "complete": false,
+      "missing_row_ids": [
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ]
+      ],
+      "scope": "Completed public outputs from any native batch at the same contract; this does not recover censored workflow timing or its interval."
+    }
+  },
+  "reconstructed_comparisons": {
+    "native_default50": {
+      "combined": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 553.1929606195761
+            }
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.0168413522245052,
+          "approximate_paired_order_ci95": [
+            0.9981660527407759,
+            1.039189965042638
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 552.3972371391853
+            }
+          ]
+        }
+      },
+      "family-0-MSL": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 2.21883767792976,
+          "approximate_paired_order_ci95": [
+            1.7074887176716829,
+            2.5759816248806127
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 0.8603343850735475,
+          "approximate_paired_order_ci95": [
+            0.6393929604571188,
+            1.014244876670521
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 2.5790410291924784,
+          "approximate_paired_order_ci95": [
+            2.474506627014227,
+            2.701729206222826
+          ]
+        }
+      },
+      "family-1-Stock": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 1239.8889843079899
+            }
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.0426399748248014,
+          "approximate_paired_order_ci95": [
+            1.0129648095863963,
+            1.0830892264200453
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 1166.631896499249
+            }
+          ]
+        }
+      },
+      "family-2-WSD": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 9.598183981324036,
+          "approximate_paired_order_ci95": [
+            9.437752049822006,
+            9.773838729832713
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.019416895470852,
+          "approximate_paired_order_ci95": [
+            1.0033087746121199,
+            1.0367601878773205
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 9.415366788570626,
+          "approximate_paired_order_ci95": [
+            9.154113618593925,
+            9.672461014821334
+          ]
+        }
+      }
+    },
+    "all_observed": {
+      "combined": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 563.2613933409666
+            }
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 2.7281429238714843,
+          "approximate_paired_order_ci95": [
+            2.6486845605584057,
+            2.801481398157265
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 201.79225721467822
+            }
+          ]
+        }
+      },
+      "family-0-MSL": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 15.740584025686433,
+          "approximate_paired_order_ci95": [
+            14.903778316578032,
+            16.575152601312027
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.0881804981651226,
+          "approximate_paired_order_ci95": [
+            1.044522809121568,
+            1.1358707333807576
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 14.465048815180964,
+          "approximate_paired_order_ci95": [
+            14.037578469287295,
+            15.066861468842658
+          ]
+        }
+      },
+      "family-1-Stock": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 1107.0931155150754
+            }
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 3.5567710514395725,
+          "approximate_paired_order_ci95": [
+            3.3540242630524375,
+            3.714737552779097
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 315.8303168607869
+            }
+          ]
+        }
+      },
+      "family-2-WSD": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 407.09857658939586,
+          "approximate_paired_order_ci95": [
+            398.6492227854768,
+            416.71253234491235
+          ]
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 1.865724688380655,
+          "approximate_paired_order_ci95": [
+            1.8319951206110634,
+            1.901421171341476
+          ]
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "censored_bounds": [],
+          "geometric_speedup": 218.1986330162864,
+          "approximate_paired_order_ci95": [
+            216.6116695704286,
+            219.69022023611797
+          ]
+        }
+      }
+    }
+  },
+  "auditor_sha256": "71541c663d62052bb781d84825ce3002ea9e9d9214c81a3cf764eb5419a31f78",
+  "complete_sha256": "a33bf3fc248499f17a890d336dd443fd605ebf197ad86ddd9b0b5075edd8ca18"
+}
