@@ -19,7 +19,6 @@ import tarfile
 ROOT=Path(__file__).resolve().parents[1]
 REL=Path('artifacts/pvldb-research-20261024/strengthening')
 TIMEVAL_COMMIT='7c3622757b1a3afa9a84cbc97ce132d9e379f715'
-TIMEVAL_TAR_SHA='054a287eb78422ca4e80461a762905432af1992c0289ca0b72a4737541520470'
 RAW_SHA='0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961'
 
 
@@ -35,10 +34,12 @@ def write(path,value):
         json.dump(value,f,indent=2,allow_nan=False);f.write('\n')
 
 
-def download(url,path,expected):
+def download(url,path,expected=None):
     path.parent.mkdir(parents=True,exist_ok=True)
     subprocess.run(['curl','-fL','--retry','2','--max-time','900',url,'-o',str(path)],check=True)
-    if sha(path)!=expected:raise ValueError('download identity '+url)
+    actual=sha(path)
+    if expected is not None and actual!=expected:raise ValueError('download identity '+url)
+    return actual
 
 
 def extract_native(archive,dest):
@@ -51,6 +52,12 @@ def extract_native(archive,dest):
             member.name=parts[1]
             members.append(member)
         tf.extractall(dest,members=members,filter='data')
+
+
+def verify_source_tree(root,expected):
+    actual={str(p.relative_to(root)):sha(p) for p in sorted(root.rglob('*')) if p.is_file()}
+    if actual!=expected:raise ValueError('native complete source tree identity differs')
+    return len(actual)
 
 
 def check_weighted_design(previous,current):
@@ -92,8 +99,16 @@ def run(args):
         if sha(archive)!=RAW_SHA:raise ValueError('raw archive identity')
     else:download('https://www.thedatum.org/datasets/TSB-AD-U.zip',archive,RAW_SHA)
     tar=dest/'.cache/strengthening-timeeval-full.tar.gz'
-    download(f'https://codeload.github.com/TimeEval/TimeEval/tar.gz/{TIMEVAL_COMMIT}',tar,TIMEVAL_TAR_SHA)
+    transport_sha=download(f'https://codeload.github.com/TimeEval/TimeEval/tar.gz/{TIMEVAL_COMMIT}',tar)
     native=dest/'.cache/strengthening-timeeval-full';extract_native(tar,native)
+    mac_native=json.loads((ROOT/REL/'timeeval-consumer-global-v1.json').read_text())['timeeval_consumer']
+    # GitHub may regenerate compression/container bytes for the same commit.
+    # Verify every extracted file, including an exact file set, before execution.
+    count=verify_source_tree(native,mac_native['source_sha256'])
+    write(out/'native-source-acquisition.json',{'revision':TIMEVAL_COMMIT,
+        'transport_sha256':transport_sha,'transport_bytes':tar.stat().st_size,
+        'source_files_verified':count,'source_tree_equals_frozen_mac':True,
+        'frozen_manifest_sha256':sha(ROOT/REL/'timeeval-consumer-global-v1.json')})
     if importlib.util.find_spec('pip'):
         install=[sys.executable,'-m','pip','install','--no-deps',str(native)]
         freeze=[sys.executable,'-m','pip','freeze']
@@ -106,7 +121,7 @@ def run(args):
     subprocess.run([sys.executable,'-m','pytest','tests/test_weighted_range.py',
         'tests/test_weighted_study_audit.py','tests/test_strengthening_input_audit.py',
         'tests/test_strengthening_workload.py','tests/test_timeeval_adapter.py',
-        'tests/test_timeeval_audit.py','-q'],
+        'tests/test_timeeval_audit.py','tests/test_strengthening_reproduce.py','-q'],
         cwd=dest,env=env,check=True)
     workload=dest/'.cache/strengthening-workload'
     generation=out/'workload-generation.json'
