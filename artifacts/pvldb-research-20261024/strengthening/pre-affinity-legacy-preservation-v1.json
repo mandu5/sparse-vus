@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-10-24T11:54:19.815718+00:00",
+  "status": "ALL_FROZEN_V2_ARTIFACTS_UNCHANGED_BEFORE_AFFINITY_RESULTS",
+  "inventory_path": "artifacts/pvldb-research-20261024/strengthening/publication-inventory-v2.json",
+  "inventory_sha256": "37a6ae44711cb5fb8ae7e3572d6e6082ef8150595f2827711988f8475c17a8d5",
+  "files_checked": 2423,
+  "mismatches": [],
+  "scope": "Hash/size checks of all previously published original and supplemental artifacts; no metric execution or new performance conclusion."
+}

@@ -60,9 +60,17 @@ protocols, not guessed in this planning document.
 ### Task4: Final judgment and submission
 
 - [x] Assemble revised paper with theory, result, negative findings and bounded scope, including all original public-reference Linux outcomes.
-- [ ] Three independent calibrated reviews; preserve dissent without score bargaining.
+- [x] Three independent calibrated reviews; preserve dissent without score bargaining. All three reviewed the same immutable v1 PDF and recommend Accept, internal 7/10, with scoped novelty/importance limitations.
 - [x] Render every PDF page, verify content limit, artifact/source identities and CI. The final review snapshot has 13 total pages with references starting on page 12; all non-reference content fits the 12-page limit.
 - [ ] Inspect logged-in CMT, complete factual submission fields and preserve actual abstract/full-paper receipts when submission requirements are satisfied.
+
+### Task5: Finite session-block robustness follow-up
+
+- [x] Freeze and independently audit the strict prior-score v1 design. Its single tagged execution failed before any metric/warm-up/timing because 25 COPOD score identities differed; retain that failure unchanged.
+- [x] Independently audit and freeze separate v2: same 26 recordings, exactly one fresh 52-profile generation attempt, score/query differences diagnostic, strict raw/label/layout identity, five processes sharing one newly frozen realization.
+- [x] Retain every block and trial; reconstruct output parity and resample the five process blocks, not the 180 individual workflows as independent sessions.
+- [x] Independently audit new code/protocol and completed result; integrate the finite result without replacing the four prior executions or their uncertainty.
+- [ ] Freeze the final PDF, obtain all three reviewers' delta acknowledgments, and submit the verified final file in the prepared CMT form.
 
 ## Execution ledger
 
@@ -128,9 +136,24 @@ exhaustive ratio is1.932, below the supplemental2.756; the abstract and results
 now retain the full1.93--2.76 range across all four executions. All original
 MSL losses, censored public outputs and between-run variability remain visible.
 
-Final preparation: the author confirmed no additional conflicts beyond PSU and
-KRAFTON. Saved domain conflicts are psu.edu and krafton.com; KRAFTON is the
-current employer conflict, while the paper affiliation remains Independent
-Researcher. CMT currently disables individual-conflict editing; no additional
-individual conflicts were reported. The final same-snapshot reviews can now
-proceed without a pending author-metadata question.
+Final preparation: the author supplied the required conflict declaration,
+recorded in the private submission packet and verified in the live CMT profile.
+The manuscript affiliation remains Independent Researcher. CMT currently
+disables individual-conflict editing; no additional individual conflicts were
+reported. The final same-snapshot reviews proceed without a pending author
+metadata question.
+
+11:00 UTC: all three independent reviews of snapshot ca8761c and PDF
+38ad66e21f7a21ab9d58f80f9b8d8499f92e55014e714c064cd467bd1cc05e54
+recommend Accept, internal 7/10. They impose no additional scientific blocker.
+The root nevertheless accepts one finite robustness suggestion because the
+user requested substantive methods through a defensible stopping point: five
+fresh process blocks on one Linux runner, fixed affinity and warm-up, same
+52 profiles and both native contracts, no optional stopping or dropped block.
+This tests controlled process-session variability, not independent hosts or
+population generalization. New source and protocol will be frozen before
+measurements and audited by a different agent. Presentation changes expose
+both conventional controls and all four native executions together, state the
+native weighted-family scope, and map manuscript tables to existing drivers.
+
+11:34 UTC: the single frozen strict-score affinity v1 stopped during preparation, after all 52 detector fits and the independent 26-recording input audit but before every metric/warm-up/timing. Exactly 25 COPOD score identities differed against each prior Linux run; WSD id6 COPOD distinct count was 1686 rather than 1687. Preserve source/tag/run40090142426 and its zero measured blocks. Independent readers approved a separate prospective v2 question: same recordings with one newly generated frozen score realization, strict raw/label/template identity, full prior score/query diagnostics, unchanged five-block schedule and analysis. No timing outcomes informed this change. Root implementation awaits independent premeasurement code audit before any v2 generation or metric execution.

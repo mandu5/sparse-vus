@@ -10,14 +10,15 @@ under the stated arithmetic-cost assumptions. Component trees, sorting, prefix
 sums and offline bucketing are credited prior techniques.
 
 A separately selected panel contains **26 real WSD/Stock/MSL recordings and
-52 unchanged public FFT/COPOD profiles**. A prospective closed-form interval
+52 profiles generated through unchanged public FFT/COPOD APIs**. A prospective closed-form interval
 control and a remeasured raster control separate conventional per-query
 optimization from the incremental state. The complete
 [fresh Linux control replay](https://github.com/mandu5/sparse-vus/actions/runs/40081512476)
 regenerates every profile from source-bound raw inputs.
 
-The unchanged native TimeEval read-to-result-write workflow, requesting three
-metrics on all 52 profiles, improves **2.732× [2.656,2.812] on Apple** and
+The unchanged native TimeEval read-to-result-write workflow requests ROC-AUC,
+PR-AUC and flat/cardinality-one range PR-AUC on all 52 profiles. It improves
+**2.732× [2.656,2.812] on Apple** and
 **2.756× [2.742,2.773] on Linux** over the faster combined compiled raster
 control at all native observed queries. In this supplemental study, default
 sampling has no supported combined improvement over raster on either host.
@@ -36,6 +37,18 @@ The original Linux default ratio is a small 1.014× [1.007,1.027]; the other
 three default combined-workflow intervals cross one. Default gains are thus
 not consistently reproduced. Original Linux MSL also has an exhaustive
 whole-workflow interval crossing one, with its slower trial retained.
+
+A separately frozen [five-process follow-up](https://github.com/mandu5/sparse-vus/actions/runs/40091476529)
+on one AMD EPYC 9V74 runner gives **1.919×** exhaustive raster/bucket speedup:
+the five session estimates are **1.907, 1.905, 1.931, 1.933, 1.919×**.
+Interval/bucket is 2.216×; nominal-default raster/bucket remains small at
+1.017×. Descriptive five-block intervals are [1.906,1.932], [2.201,2.227]
+and [1.011,1.025], respectively, with four-contrast adjusted tails and no
+guaranteed coverage or new-host inference. All 180 workflows complete and
+saved scalar outputs agree within 3.33e-16. Its first regenerated workload
+happened to match both prior Linux score/query identities. The preceding
+strict-score attempt failed before timing and remains separately archived;
+v2 neither replaces that failure nor explains the older timing difference.
 
 The research API returns precision, recall and F1 for each strict
 `score > threshold` query, retaining complete ties:

@@ -1,0 +1,131 @@
+{
+  "block": 2,
+  "status": "COMPLETE",
+  "recorded_trials": 36,
+  "protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "native_cpu": {
+    "pid": 2498,
+    "ppid": 2464,
+    "process_start_ticks": "59039",
+    "cpu_models": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "permitted_affinity": [
+      0
+    ],
+    "chosen_affinity": 0,
+    "hostname": "runnervmtai0g",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "2e7be4f3-827c-4c5a-9892-232263930898",
+    "cpuinfo_sha256": "7cf1afac356fe2adf7cc3ab9c44205541c414d37f45f7250f0012e3e6ced9c3e"
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+      "version": "0.3.27.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Cooperlake"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Cooperlake"
+    }
+  ],
+  "thread_contract": {
+    "affinities_by_tid": {
+      "2498": [
+        0
+      ],
+      "2500": [
+        0
+      ]
+    },
+    "vanished_during_inspection": [],
+    "numerical_pools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+        "version": "0.3.27.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Cooperlake"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+        "version": "0.3.23.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Cooperlake"
+      }
+    ],
+    "utc": "2026-10-24T11:57:57.833312+00:00"
+  },
+  "input_bindings_verified_after_block": true,
+  "pairwise_output_parity": {
+    "native_default50": {
+      "completed_outputs_including_warmup": 21,
+      "maximum_absolute_error": 3.3306690738754696e-16,
+      "tolerance": 1e-10
+    },
+    "all_observed": {
+      "completed_outputs_including_warmup": 21,
+      "maximum_absolute_error": 2.7755575615628914e-16,
+      "tolerance": 1e-10
+    }
+  },
+  "trials_sha256": "49fc2c8d528b02f3d7775f5b319fa57a66c213170898b088f73cf70715066395",
+  "metrics_sha256": "a08a23e67437c0e1deab045eba251df5bde18ba31b8ed7b62b4793610345b56e",
+  "evidence_sha256": {
+    "child-initial.json": "63d6efe4b14815a653e895feac0a48c78408d01859a361df4abd4402539f1bfe",
+    "block-start.json": "8b11521325cd78435968b679046c4ce256c501314129e39a21b9f8ab8606a311",
+    "trials.jsonl": "49fc2c8d528b02f3d7775f5b319fa57a66c213170898b088f73cf70715066395",
+    "metrics.jsonl": "a08a23e67437c0e1deab045eba251df5bde18ba31b8ed7b62b4793610345b56e"
+  }
+}

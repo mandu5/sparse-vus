@@ -1,0 +1,12 @@
+{
+  "matches": true,
+  "profiles": 52,
+  "references": 2,
+  "mismatches": [],
+  "scope": "Prior scores/queries are diagnostics; raw/native data, labels, selection, model and row layout must match. The new exact score/query realization is frozen before every metric block.",
+  "prior_score_identity_required": false,
+  "hard_inputs_match": true,
+  "hard_input_differences": [],
+  "native_score_file_differences": [],
+  "query_plan_differences": []
+}

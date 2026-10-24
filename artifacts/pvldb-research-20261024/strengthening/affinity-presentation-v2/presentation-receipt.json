@@ -1,0 +1,84 @@
+{
+  "checked_utc": "2026-10-24T12:05:55.442752+00:00",
+  "scope": "Root saved-duration reconstruction and presentation; not an independent external audit or new timing study",
+  "status": "MATCHES_FROZEN_SUMMARY",
+  "source_protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "source_trial_sha256": {
+    "artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay/affinity-blocks-linux-v2/blocks/00/trials.jsonl": "678655918efd068f2793836876597f98054f293ca22aa9103df202f07b0c8b87",
+    "artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay/affinity-blocks-linux-v2/blocks/01/trials.jsonl": "1e2de0fa6537610e76dec6764fbc3efc846bafdbb308c9e2ca767c41292ab27c",
+    "artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay/affinity-blocks-linux-v2/blocks/02/trials.jsonl": "49fc2c8d528b02f3d7775f5b319fa57a66c213170898b088f73cf70715066395",
+    "artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay/affinity-blocks-linux-v2/blocks/03/trials.jsonl": "b6a78a04ebd0a40c8ba88746b834d01269892a43472a1d5bacdd5dc7e5c8dd74",
+    "artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay/affinity-blocks-linux-v2/blocks/04/trials.jsonl": "7010ef344eae93629aff430b31a5926549e5fc86abd5ba24abc9a3f049d1ccdc"
+  },
+  "comparisons": {
+    "native_default50/raster_over_bucket": {
+      "blocks": [
+        1.0099969195110623,
+        1.0125265077789596,
+        1.0168649984330667,
+        1.0162053210498239,
+        1.028369460027659
+      ],
+      "geometric_ratio": 1.0167731681591337,
+      "descriptive_interval": [
+        1.0112355580114585,
+        1.024668407809565
+      ]
+    },
+    "native_default50/interval_over_bucket": {
+      "blocks": [
+        1.019485226344158,
+        1.0182269140082327,
+        1.016767378528492,
+        1.0250879615906667,
+        1.0335376905938771
+      ],
+      "geometric_ratio": 1.0226026481166206,
+      "descriptive_interval": [
+        1.0173509414989776,
+        1.0301616444291055
+      ]
+    },
+    "all_observed/raster_over_bucket": {
+      "blocks": [
+        1.906602686582623,
+        1.904621212426287,
+        1.931485112507476,
+        1.9331654893611931,
+        1.9194371038226443
+      ],
+      "geometric_ratio": 1.9190249463255238,
+      "descriptive_interval": [
+        1.9058098496687306,
+        1.9321570879005583
+      ]
+    },
+    "all_observed/interval_over_bucket": {
+      "blocks": [
+        2.195395269607408,
+        2.208974037887746,
+        2.2260938306632583,
+        2.228829597483098,
+        2.2209600030267804
+      ],
+      "geometric_ratio": 2.2160159457179582,
+      "descriptive_interval": [
+        2.200816731685905,
+        2.2272534509817414
+      ]
+    }
+  },
+  "descriptive_all_30_trial_medians_seconds": {
+    "native_default50": {
+      "raster": 1.601169992,
+      "interval": 1.6153769825,
+      "bucket": 1.5715084715
+    },
+    "all_observed": {
+      "raster": 3.0705868265,
+      "interval": 3.5381534655,
+      "bucket": 1.595389168
+    }
+  },
+  "interval_semantics": "Five process units, four contrasts, complete exact empirical 3125-sequence enumeration, descriptive Bonferroni4 tails without guaranteed finite-sample coverage."
+}

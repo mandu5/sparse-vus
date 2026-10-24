@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-24T12:01:05.118353+00:00",
+  "protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "sessions_complete_sha256": "23c587d1b4c7361b03f354e9da4cf443324a52186091dcb3b3718bad8eebbf90",
+  "scope": "five newly started Python processes on ONE Linux runner and ONE frozen 52-profile input; not five hosts or independent workload populations",
+  "public_reference_evaluated": false,
+  "raw_data_and_detector_scores_redistributed": false
+}

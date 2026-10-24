@@ -1,0 +1,24 @@
+{
+  "block": 0,
+  "pid": 2466,
+  "returncode": 0,
+  "command": [
+    "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+    "/home/runner/work/_temp/affinity-blocks-v2-replica/scripts/run_timeeval_affinity_blocks_v2.py",
+    "block",
+    "--protocol",
+    "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-protocol-v2.json",
+    "--protocol-sha256",
+    "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+    "--block",
+    "0",
+    "--out",
+    "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/00"
+  ],
+  "started_utc": "2026-10-24T11:53:13.344835+00:00",
+  "launch_error": null,
+  "trace_parse_issues": [],
+  "raw_trials_sha256": "678655918efd068f2793836876597f98054f293ca22aa9103df202f07b0c8b87",
+  "block_complete_sha256": "e7b28bd3604776219866cc6b20f80c577ee9399736ce4f8322acc982fa284ce7",
+  "completed_utc": "2026-10-24T11:54:50.469921+00:00"
+}

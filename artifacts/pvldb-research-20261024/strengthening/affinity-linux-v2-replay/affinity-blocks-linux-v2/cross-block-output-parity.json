@@ -1,0 +1,1279 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "compared_cross_block_pairs": 8820,
+  "maximum_passing_absolute_error": 3.3306690738754696e-16,
+  "tolerance": 1e-10,
+  "scalar_columns": [
+    "ROC_AUC",
+    "PR_AUC",
+    "RANGE_PR_AUC"
+  ],
+  "saved_csvs": [
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/000-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/001-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/002-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/003-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/004-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/005-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/006-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/007-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/008-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/009-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/010-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/011-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/012-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/013-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/014-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/015-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/016-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/017-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/018-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/019-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/020-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/021-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/022-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/023-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/024-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/025-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/026-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/027-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/028-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/029-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/030-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/031-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "path": "blocks/00/trials/032-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/033-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/034-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "path": "blocks/00/trials/035-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/000-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/001-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/002-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/003-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/004-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/005-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/006-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/007-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/008-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/009-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/010-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/012-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/013-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/014-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/015-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/016-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/017-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/018-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/019-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/020-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/021-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/022-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/023-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/024-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/025-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/026-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/027-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/028-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/029-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/030-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/031-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "path": "blocks/01/trials/032-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/033-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/034-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "path": "blocks/01/trials/035-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/000-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/001-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/002-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/003-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/004-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/005-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/006-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/007-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/008-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/009-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/010-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/012-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/013-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/014-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/015-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/016-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/017-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/018-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/019-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/020-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/021-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/022-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/023-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/024-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/025-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/026-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/027-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/028-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/029-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/030-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/031-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "path": "blocks/02/trials/032-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/033-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/034-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "path": "blocks/02/trials/035-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/000-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/001-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/002-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/003-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/004-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/005-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/006-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/007-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/008-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/009-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/010-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/012-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/013-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/014-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/015-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/016-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/017-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/018-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/019-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/020-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/021-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/022-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/023-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/024-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/025-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/026-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/027-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/028-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/029-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/030-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/031-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "path": "blocks/03/trials/032-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/033-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/034-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "path": "blocks/03/trials/035-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/000-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/001-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/002-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/003-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/004-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/005-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/006-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/007-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/008-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/009-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/010-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/012-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/013-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/014-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/015-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/016-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/017-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/018-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/019-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/020-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/021-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/022-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/023-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/024-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/025-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/026-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/027-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/028-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/029-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/030-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/031-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2"
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "path": "blocks/04/trials/032-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/033-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/034-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85"
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "path": "blocks/04/trials/035-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1"
+    }
+  ],
+  "saved_csv_errors": [],
+  "saved_completed_outputs": 210,
+  "full_planned_outputs_including_warmups": 210,
+  "complete_output_coverage": true,
+  "metric_execution_performed": false
+}

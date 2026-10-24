@@ -1,0 +1,8 @@
+{
+  "ci_status": "SUCCESS",
+  "run_id": 40091476433,
+  "run_url": "https://github.com/mandu5/sparse-vus/actions/runs/40091476433",
+  "head_sha": "d8494c25a8c6fe44616a34bdded375dc3993d048",
+  "completed_at": "2026-10-24T11:53:39Z",
+  "scope": "Numerical parity CI on the immutable v2 execution source. The separate affinity result is not inferred from CI."
+}

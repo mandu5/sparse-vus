@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-24T11:53:13.344490+00:00",
+  "protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "native_cpu": {
+    "pid": 2464,
+    "ppid": 2245,
+    "process_start_ticks": "39887",
+    "cpu_models": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "permitted_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen_affinity": 0,
+    "hostname": "runnervmtai0g",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "2e7be4f3-827c-4c5a-9892-232263930898",
+    "cpuinfo_sha256": "16bab37f1ed783907d2ca7fa3aca2fad4df7783506e10cc880470c60b2496c1e"
+  },
+  "scope": "five newly started Python processes on ONE Linux runner and ONE frozen 52-profile input; not five hosts or independent workload populations"
+}

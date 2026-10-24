@@ -1,0 +1,122 @@
+[
+  {
+    "block": 0,
+    "pid": 2466,
+    "returncode": 0,
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/scripts/run_timeeval_affinity_blocks_v2.py",
+      "block",
+      "--protocol",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-protocol-v2.json",
+      "--protocol-sha256",
+      "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+      "--block",
+      "0",
+      "--out",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/00"
+    ],
+    "started_utc": "2026-10-24T11:53:13.344835+00:00",
+    "launch_error": null,
+    "trace_parse_issues": [],
+    "raw_trials_sha256": "678655918efd068f2793836876597f98054f293ca22aa9103df202f07b0c8b87",
+    "block_complete_sha256": "e7b28bd3604776219866cc6b20f80c577ee9399736ce4f8322acc982fa284ce7",
+    "completed_utc": "2026-10-24T11:54:50.469921+00:00"
+  },
+  {
+    "block": 1,
+    "pid": 2478,
+    "returncode": 0,
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/scripts/run_timeeval_affinity_blocks_v2.py",
+      "block",
+      "--protocol",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-protocol-v2.json",
+      "--protocol-sha256",
+      "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+      "--block",
+      "1",
+      "--out",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/01"
+    ],
+    "started_utc": "2026-10-24T11:54:50.471541+00:00",
+    "launch_error": null,
+    "trace_parse_issues": [],
+    "raw_trials_sha256": "1e2de0fa6537610e76dec6764fbc3efc846bafdbb308c9e2ca767c41292ab27c",
+    "block_complete_sha256": "be2dde1f58dc937645e235fb2700d47165a2d3922c70009cf0d8988b797757b7",
+    "completed_utc": "2026-10-24T11:56:24.824647+00:00"
+  },
+  {
+    "block": 2,
+    "pid": 2498,
+    "returncode": 0,
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/scripts/run_timeeval_affinity_blocks_v2.py",
+      "block",
+      "--protocol",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-protocol-v2.json",
+      "--protocol-sha256",
+      "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+      "--block",
+      "2",
+      "--out",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/02"
+    ],
+    "started_utc": "2026-10-24T11:56:24.826238+00:00",
+    "launch_error": null,
+    "trace_parse_issues": [],
+    "raw_trials_sha256": "49fc2c8d528b02f3d7775f5b319fa57a66c213170898b088f73cf70715066395",
+    "block_complete_sha256": "10d68aafbfab0151699f544e8fb2ad4beea340ebeeffddd7ffa7c7e2c8248c0a",
+    "completed_utc": "2026-10-24T11:57:58.089756+00:00"
+  },
+  {
+    "block": 3,
+    "pid": 2521,
+    "returncode": 0,
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/scripts/run_timeeval_affinity_blocks_v2.py",
+      "block",
+      "--protocol",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-protocol-v2.json",
+      "--protocol-sha256",
+      "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+      "--block",
+      "3",
+      "--out",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/03"
+    ],
+    "started_utc": "2026-10-24T11:57:58.091068+00:00",
+    "launch_error": null,
+    "trace_parse_issues": [],
+    "raw_trials_sha256": "b6a78a04ebd0a40c8ba88746b834d01269892a43472a1d5bacdd5dc7e5c8dd74",
+    "block_complete_sha256": "ab8781ef5da01c3dca7b51535b2ec70e67f5683bf677c6ae17ba4684ec33125e",
+    "completed_utc": "2026-10-24T11:59:31.268428+00:00"
+  },
+  {
+    "block": 4,
+    "pid": 2530,
+    "returncode": 0,
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/scripts/run_timeeval_affinity_blocks_v2.py",
+      "block",
+      "--protocol",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-protocol-v2.json",
+      "--protocol-sha256",
+      "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+      "--block",
+      "4",
+      "--out",
+      "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/04"
+    ],
+    "started_utc": "2026-10-24T11:59:31.269760+00:00",
+    "launch_error": null,
+    "trace_parse_issues": [],
+    "raw_trials_sha256": "7010ef344eae93629aff430b31a5926549e5fc86abd5ba24abc9a3f049d1ccdc",
+    "block_complete_sha256": "ff7f5174c6d9eb64c21930cb2cf820f9ee1beb36c4ea9e62403e9f1810bd84a8",
+    "completed_utc": "2026-10-24T12:01:04.466027+00:00"
+  }
+]

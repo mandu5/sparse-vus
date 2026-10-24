@@ -1,9 +1,14 @@
 # Strengthened exact-metric research decision — 24 October 2026
 
-Working decision: **five of six evidence gates are supported; the final three
-independent manuscript reviews remain pending.** This file will record the
-immutable review snapshot and actual submission receipt separately. Earlier
-review scores belong to the earlier manuscript.
+Decision on immutable manuscript `ca8761cc40d493141511cad4bc3c184c48a681dc`:
+**six of six evidence gates are supported. Three independent AI-simulated
+reviews recommend Accept, each internal 7/10.** Their reports define the scale,
+preserve the remaining specialized-novelty concern, and are not an official
+venue score or an acceptance probability. Earlier weak-accept reports concern
+an earlier manuscript. The final finite five-session Linux robustness follow-up is complete and
+independently reconstructed below. Presentation improvements and the identical
+final-PDF reviews are being frozen before submission. The actual portal receipt
+will be recorded separately.
 
 ## Research contribution
 
@@ -114,15 +119,48 @@ sets are also singleton, with maximum regret .001412 and none at .01.
   does not measure an uninspected GPU evaluator or establish detector-accuracy
   SOTA. More repeats of the same panel cannot resolve conceptual significance.
 
+## Final finite process-session result
+
+The single [prospective v2 execution](https://github.com/mandu5/sparse-vus/actions/runs/40091476529)
+completed five fresh processes on one AMD EPYC 9V74 runner, with the same
+permitted logical CPU, 180 measured workflows and 30 untimed full warm-ups.
+All scalar result files agree within 3.33e-16. Exact empirical intervals use
+five process blocks, not 180 independent observations; their four-contrast
+adjustment is descriptive and does not guarantee finite-sample coverage.
+
+| Contrast | Five session ratios | Equal-block geometric ratio | Descriptive adjusted interval |
+|---|---|---:|---|
+| Exhaustive raster/bucket | 1.907, 1.905, 1.931, 1.933, 1.919 | 1.919 | [1.906,1.932] |
+| Exhaustive interval/bucket | 2.195, 2.209, 2.226, 2.229, 2.221 | 2.216 | [2.201,2.227] |
+| Default raster/bucket | 1.010, 1.013, 1.017, 1.016, 1.028 | 1.017 | [1.011,1.025] |
+| Default interval/bucket | 1.019, 1.018, 1.017, 1.025, 1.034 | 1.023 | [1.017,1.030] |
+
+The first strict-score v1 execution failed preparation before any metric,
+warm-up or timing: 25 COPOD hashes differed and one distinct count changed.
+Its tag, archive and zero measured blocks remain intact. V2 was separately
+designed and audited before its one generation attempt, allowing prior score
+and query differences only as retained diagnostics while keeping exact raw,
+label, template and row identity. Its first generation happened to match all
+52 prior Linux score profiles and every realized query plan. This was not an
+inclusion criterion or a retry-until-match procedure. It provides fixed-input
+process repeatability, not a causal explanation of prior timing differences,
+new-host generalization, public-reference coverage or greater conceptual novelty.
+
+The exhaustive benefit survives at a more conservative roughly 1.92-fold
+ratio; default gains remain small. All four earlier executions and the low-query
+MSL losses remain in the manuscript. See the [finite stopping rationale](PVLDB_STRENGTHENING_STOPPING_DECISION_20261024.md),
+[full archive](../artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay/),
+and [independent D reconstruction](reviews/20261024/strengthened-independent-d-affinity-audit.md).
+
 ## Six evidence gates
 
 | Gate | Current decision | Evidence |
 |---|---|---|
-| 1. Novelty | Supported, scoped | Fourteen 2024–2026 primary-paper comparisons plus direct Tatbul, component-tree, Klein, Benchopt and TimeEval antecedents. The closest algorithmic differences are explicit; absence from this bounded search is not universal precedence. |
+| 1. Novelty | Supported, scoped | Fourteen recent-paper discussions, now cross-referenced in a separate structured inventory, plus direct older Tatbul/component-tree mechanics and Klein, Benchopt and TimeEval implementations. Some recent papers supply context rather than the closest computational mechanism; absence from this bounded search is not universal precedence. |
 | 2. Main result | Supported, scoped | Three public collections, same-output public-reference checks, stronger compiler-matched raster/closed-form interval controls, paired uncertainty and ablations; all losses and censors retained. |
 | 3. Generality | Supported, scoped | Original 73-series panel plus 26 separately selected real recordings, public detector APIs, two environments and complete native workflows. Dependence, only two MSL recordings and negative selection findings are disclosed. |
 | 4. Reproduction | Supported | Fresh raw-data-to-profile-to-table Linux interval-control execution, source/input identities, independent reconstruction, and documented one-command drivers. Archived-only audits explicitly distinguish unavailable raw bytes. |
-| 5. Independent review | Pending final snapshot | Initial reviews and substantive follow-ups are preserved. Final reviews must assess the identical PDF/evidence snapshot and use disclosed public-review calibration without reading each other's scores. |
+| 5. Independent review | Supported on immutable v1 | Three independent final AI reviews assess the identical `ca8761c` manuscript and PDF SHA-256 `38ad66e21f7a21ab9d58f80f9b8d8499f92e55014e714c064cd467bd1cc05e54`, using disclosed historical PVLDB forms and public-review calibration. All recommend Accept, internal 7/10, with no required scientific blocker for the scoped claim. Final presentation/new-robustness deltas require separate acknowledgment. |
 | 6. Venue | Supported | PVLDB Volume 20 Regular Research, Foundations and Algorithms. Core contribution is an analytical operator, formal state and measured data-processing cost, with direct VUS database antecedents. |
 
 The target is the **November 2026 cycle**: abstract 26 October 09:00 KST,
@@ -142,7 +180,11 @@ decisions require their own receipts; this evidence decision is not one.
 - [Exploratory direct raster reconstruction](../artifacts/pvldb-research-20261024/strengthening/posthoc-direct-raster-incremental-v1/posthoc-direct-raster-incremental.md).
 - [Public review calibration and its provenance limits](reviews/20261024/public-calibration.md).
 - [Historical actual PVLDB form and revision comparison](reviews/20261024/public-pvldb-form-calibration.md).
+- [Independent final review A](reviews/20261024/strengthened-independent-a-final.md), [B](reviews/20261024/strengthened-independent-b-final.md), [C](reviews/20261024/strengthened-independent-c-final.md).
+- [Fourteen recent-paper comparison inventory](../artifacts/pvldb-research-20261024/strengthening/literature-strengthened-14-v1.json), separately preserving the earlier twelve-entry inventory.
 - [Reproduction failure and repair history](reviews/20261024/strengthening-reproduction-provenance.md).
 
-Both fresh Linux executions are complete. Final immutable PDF, source snapshot,
-three review reports and submission status will be added after final review.
+Both original fresh Linux executions and the three v1 manuscript reviews are
+complete. The final session-block follow-up is complete. It tests process variability
+on one runner; it is not a new dataset sample, a new-host study, or a search for
+a higher review score through repeated favorable timings.

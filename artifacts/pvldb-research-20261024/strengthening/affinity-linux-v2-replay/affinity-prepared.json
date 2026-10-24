@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_READY_NOT_MEASURED",
+  "utc": "2026-10-24T11:53:13.297321+00:00",
+  "protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "generation_sha256": "6552b3b7f5ea201361c7659a8765a917e26ea589202623afd907389799ae8ef2",
+  "native_input_audit_sha256": "c72c1a7391ae1b9bdaf9e5f3c237270bd838032ce498e3efd29b9bb125bcc92e",
+  "design_sha256": "551663552036d4aa577000d3ed0ce3a391a806c52fa86f652e2eb6e44e6181b1",
+  "source_commit": "d8494c25a8c6fe44616a34bdded375dc3993d048",
+  "measurement_command": [
+    "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+    "/home/runner/work/_temp/affinity-blocks-v2-replica/scripts/run_timeeval_affinity_blocks_v2.py",
+    "run",
+    "--protocol",
+    "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-protocol-v2.json",
+    "--protocol-sha256",
+    "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+    "--out",
+    "/home/runner/work/_temp/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2"
+  ],
+  "metric_evaluation_performed": false
+}

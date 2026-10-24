@@ -1,0 +1,2131 @@
+{
+  "status": "PASS_COMPLETE_SAVED_ARTIFACT_RECONSTRUCTION",
+  "auditor": "Independent AI-simulated reviewer A; stdlib-only saved-output reconstruction",
+  "audit_utc": "2026-10-24T12:12:22.808914+00:00",
+  "auditor_script_sha256": "1925239ba3ccf4cbbc4c03b354b7c42dc5588de5fb1126329a5e757c5102652b",
+  "source_commit": "d8494c25a8c6fe44616a34bdded375dc3993d048",
+  "workflow_run": "40091476529",
+  "zip_sha256": "8d1fd2e2715c8eb4b28c5f1861143766498686aa072a3c72b9d539ca57b6b595",
+  "archive": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay",
+  "archive_files_verified": 697,
+  "protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "committed_source_bindings_verified": 11,
+  "protocol_file_bindings_verified": 15,
+  "native_project_source_bindings_verified": 11,
+  "native_cpu": {
+    "pid": 2462,
+    "ppid": 2245,
+    "process_start_ticks": "39779",
+    "cpu_models": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "permitted_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen_affinity": null,
+    "hostname": "runnervmtai0g",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "2e7be4f3-827c-4c5a-9892-232263930898",
+    "cpuinfo_sha256": "1b728da9ad8dc9b2f5bc019a1d50e05939e3d37f509eb3a039e3c904cb3a6ef1"
+  },
+  "chosen_logical_cpu": 0,
+  "child_processes": [
+    {
+      "pid": 2466,
+      "start_ticks": "39891"
+    },
+    {
+      "pid": 2478,
+      "start_ticks": "49604"
+    },
+    {
+      "pid": 2498,
+      "start_ticks": "59039"
+    },
+    {
+      "pid": 2521,
+      "start_ticks": "68366"
+    },
+    {
+      "pid": 2530,
+      "start_ticks": "77684"
+    }
+  ],
+  "thread_affinity_snapshots_verified": 190,
+  "live_threads_per_snapshot_range": [
+    2,
+    2
+  ],
+  "status_counts": {
+    "COMPLETE": 180
+  },
+  "warmup_outputs": 30,
+  "timed_scalar_outputs": 180,
+  "csv_outputs": 210,
+  "scalar_values_checked": 32760,
+  "scalar_parity_pair_counts": {
+    "within_block": 2100,
+    "cross_block": 8820
+  },
+  "maximum_scalar_error": {
+    "within_block": 3.3306690738754696e-16,
+    "cross_block": 3.3306690738754696e-16
+  },
+  "maximum_metric_trace_csv_difference": 1.1102230246251565e-16,
+  "realized_query_totals": {
+    "native_default50": 2776,
+    "all_observed": 71750
+  },
+  "prior_score_query_relations": [
+    {
+      "reference": "linux-original-replay",
+      "profile_hash_differences": [],
+      "native_score_file_differences": [],
+      "full_native_input_map_identical": true,
+      "full_realized_query_plan_identical": true
+    },
+    {
+      "reference": "linux-interval-replay",
+      "profile_hash_differences": [],
+      "native_score_file_differences": [],
+      "full_native_input_map_identical": true,
+      "full_realized_query_plan_identical": true
+    }
+  ],
+  "comparisons": {
+    "native_default50/raster_over_bucket": {
+      "block_ratios": [
+        1.0099969195110623,
+        1.0125265077789596,
+        1.0168649984330667,
+        1.0162053210498239,
+        1.028369460027659
+      ],
+      "geometric_ratio": 1.0167731681591337,
+      "block_range": [
+        1.0099969195110623,
+        1.028369460027659
+      ],
+      "paired_order_ratios_by_block": [
+        [
+          1.0077042830160583,
+          1.0187617496854753,
+          1.0227560472332253,
+          1.0398977757417538,
+          1.0156705501431864,
+          0.9571918555870987
+        ],
+        [
+          1.0187270804684878,
+          1.0299709039171707,
+          1.00086064464101,
+          1.0066160647172304,
+          0.9698581151570439,
+          1.0510174577143032
+        ],
+        [
+          0.9926156691390251,
+          1.0185063016832583,
+          1.012850460097125,
+          1.0122641760198947,
+          1.0543620093687731,
+          1.0115934276811755
+        ],
+        [
+          1.009948235242186,
+          1.022440514992175,
+          1.0639538768446142,
+          1.014431945020791,
+          1.0201858654513696,
+          0.9685601625045653
+        ],
+        [
+          1.0133650939424872,
+          1.0282708956017603,
+          1.0447695672189303,
+          1.0133532437891564,
+          1.0265498951761947,
+          1.0443837391822006
+        ]
+      ],
+      "control_and_bucket_geometric_seconds_by_block": [
+        {
+          "raster": 1.6151307899549052,
+          "bucket": 1.5991442733674743
+        },
+        {
+          "raster": 1.619049731621092,
+          "bucket": 1.599019600160967
+        },
+        {
+          "raster": 1.5962060545759231,
+          "bucket": 1.569732518117537
+        },
+        {
+          "raster": 1.5976370412043321,
+          "bucket": 1.5721596887072402
+        },
+        {
+          "raster": 1.5978248507385986,
+          "bucket": 1.5537459180240765
+        }
+      ],
+      "descriptive_block_bootstrap95_bonferroni4": [
+        1.0112355580114585,
+        1.024668407809565
+      ],
+      "multinomial_configurations": 126,
+      "exact_empirical_samples": 3125,
+      "resampling_units": 5
+    },
+    "native_default50/interval_over_bucket": {
+      "block_ratios": [
+        1.019485226344158,
+        1.0182269140082327,
+        1.016767378528492,
+        1.0250879615906667,
+        1.0335376905938771
+      ],
+      "geometric_ratio": 1.0226026481166206,
+      "block_range": [
+        1.016767378528492,
+        1.0335376905938771
+      ],
+      "paired_order_ratios_by_block": [
+        [
+          1.0075607809379719,
+          1.0396357432756331,
+          1.0380853745166554,
+          1.0445393173544106,
+          1.0191184747413635,
+          0.9699528523130231
+        ],
+        [
+          1.032384214844741,
+          1.045130699476495,
+          1.0226934016371894,
+          1.0114781002957687,
+          0.9699212936552403,
+          1.0294779306679593
+        ],
+        [
+          1.0129811093441565,
+          1.0248376329363817,
+          1.0213916549030617,
+          1.0274310640351643,
+          0.9992932043503209,
+          1.0149281113911648
+        ],
+        [
+          1.0120055707726292,
+          1.012997492236945,
+          1.0362004648722534,
+          1.0263921220765577,
+          1.080036813525225,
+          0.9853258455401611
+        ],
+        [
+          1.0245111429697997,
+          1.0311218349063642,
+          1.0444178760897562,
+          1.014082654365377,
+          1.0451995400767222,
+          1.0422799485720171
+        ]
+      ],
+      "control_and_bucket_geometric_seconds_by_block": [
+        {
+          "interval": 1.6303039614910038,
+          "bucket": 1.5991442733674743
+        },
+        {
+          "interval": 1.6281647929105794,
+          "bucket": 1.599019600160967
+        },
+        {
+          "interval": 1.596052817437297,
+          "bucket": 1.569732518117537
+        },
+        {
+          "interval": 1.6116019705919218,
+          "bucket": 1.5721596887072402
+        },
+        {
+          "interval": 1.6058549678842675,
+          "bucket": 1.5537459180240765
+        }
+      ],
+      "descriptive_block_bootstrap95_bonferroni4": [
+        1.0173509414989776,
+        1.0301616444291055
+      ],
+      "multinomial_configurations": 126,
+      "exact_empirical_samples": 3125,
+      "resampling_units": 5
+    },
+    "all_observed/raster_over_bucket": {
+      "block_ratios": [
+        1.906602686582623,
+        1.904621212426287,
+        1.931485112507476,
+        1.933165489361193,
+        1.9194371038226443
+      ],
+      "geometric_ratio": 1.9190249463255236,
+      "block_range": [
+        1.904621212426287,
+        1.933165489361193
+      ],
+      "paired_order_ratios_by_block": [
+        [
+          1.9206015598129555,
+          1.8043431339315341,
+          1.9221791681994578,
+          1.9753489185941122,
+          1.918227647602448,
+          1.903123464446584
+        ],
+        [
+          1.912288955519849,
+          1.9154703538673572,
+          1.9267207392608388,
+          1.8988878182365079,
+          1.8728788830776675,
+          1.901931960406071
+        ],
+        [
+          1.9322983017850215,
+          1.9109950072747435,
+          1.850932677928782,
+          1.958043541979175,
+          1.9565567726239308,
+          1.9829375796761297
+        ],
+        [
+          1.9104417048930422,
+          1.9619855216655147,
+          1.9437299325031068,
+          1.9400555344836985,
+          1.9232184801892473,
+          1.920020673781379
+        ],
+        [
+          1.9089675699684379,
+          1.9320312052254969,
+          1.9406757842191633,
+          1.9370188464685536,
+          1.8603127764650564,
+          1.938910780091058
+        ]
+      ],
+      "control_and_bucket_geometric_seconds_by_block": [
+        {
+          "raster": 3.0934053333800042,
+          "bucket": 1.622469828218167
+        },
+        {
+          "raster": 3.075693257491527,
+          "bucket": 1.6148582392261701
+        },
+        {
+          "raster": 3.0640261182158257,
+          "bucket": 1.5863576158959218
+        },
+        {
+          "raster": 3.0505413627379903,
+          "bucket": 1.5780032177928178
+        },
+        {
+          "raster": 3.0545254840713083,
+          "bucket": 1.591365238271202
+        }
+      ],
+      "descriptive_block_bootstrap95_bonferroni4": [
+        1.9058098496687306,
+        1.932157087900558
+      ],
+      "multinomial_configurations": 126,
+      "exact_empirical_samples": 3125,
+      "resampling_units": 5
+    },
+    "all_observed/interval_over_bucket": {
+      "block_ratios": [
+        2.195395269607408,
+        2.208974037887746,
+        2.226093830663258,
+        2.2288295974830974,
+        2.2209600030267804
+      ],
+      "geometric_ratio": 2.2160159457179582,
+      "block_range": [
+        2.195395269607408,
+        2.2288295974830974
+      ],
+      "paired_order_ratios_by_block": [
+        [
+          2.266502786258882,
+          2.072189658400797,
+          2.2237902695808085,
+          2.213843666281442,
+          2.2181909157771043,
+          2.182985686369955
+        ],
+        [
+          2.199700694750675,
+          2.24125329702121,
+          2.2702421682023184,
+          2.1816951537353213,
+          2.1753945285288463,
+          2.187181639057751
+        ],
+        [
+          2.205143668105177,
+          2.2649808868082366,
+          2.1341402309321786,
+          2.2681510395797373,
+          2.2496446634893763,
+          2.2374354518626136
+        ],
+        [
+          2.1853228470171553,
+          2.2434830815025055,
+          2.2463947180317363,
+          2.2420264949369377,
+          2.224056677569745,
+          2.2322875254024983
+        ],
+        [
+          2.2155616526667172,
+          2.2606837171548886,
+          2.265727253276724,
+          2.2252398276656704,
+          2.1445550271208647,
+          2.216149894468432
+        ]
+      ],
+      "control_and_bucket_geometric_seconds_by_block": [
+        {
+          "interval": 3.5619625859509076,
+          "bucket": 1.622469828218167
+        },
+        {
+          "interval": 3.5671799253197283,
+          "bucket": 1.6148582392261701
+        },
+        {
+          "interval": 3.5313809019715867,
+          "bucket": 1.5863576158959218
+        },
+        {
+          "interval": 3.5171002767401984,
+          "bucket": 1.5780032177928178
+        },
+        {
+          "interval": 3.5343585444075223,
+          "bucket": 1.591365238271202
+        }
+      ],
+      "descriptive_block_bootstrap95_bonferroni4": [
+        2.200816731685905,
+        2.2272534509817414
+      ],
+      "multinomial_configurations": 126,
+      "exact_empirical_samples": 3125,
+      "resampling_units": 5
+    }
+  },
+  "maximum_producer_statistics_difference": 4.440892098500626e-16,
+  "independent_statistics_computed_before_producer_summary_read": true,
+  "csv_file_bindings": [
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/000-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/001-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/002-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/003-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/004-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/005-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/006-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/007-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/008-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/009-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/010-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/011-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/012-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/013-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/014-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/015-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/016-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/017-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/018-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/019-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/020-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/021-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/022-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/023-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/024-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/025-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/026-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/027-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/028-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/029-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/030-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/031-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/032-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/033-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/034-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 0,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/00/trials/035-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/000-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/001-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/002-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/003-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/004-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/005-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/006-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/007-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/008-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/009-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/010-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/012-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/013-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/014-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/015-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/016-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/017-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/018-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/019-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/020-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/021-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/022-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/023-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/024-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/025-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/026-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/027-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/028-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/029-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/030-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/031-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/032-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/033-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/034-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 1,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/01/trials/035-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/000-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/001-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/002-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/003-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/004-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/005-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/006-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/007-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/008-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/009-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/010-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/012-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/013-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/014-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/015-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/016-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/017-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/018-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/019-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/020-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/021-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/022-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/023-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/024-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/025-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/026-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/027-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/028-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/029-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/030-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/031-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/032-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/033-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/034-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 2,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/02/trials/035-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/000-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/001-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/002-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/003-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/004-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/005-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/006-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/007-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/008-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/009-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/010-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/012-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/013-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/014-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/015-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/016-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/017-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/018-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/019-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/020-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/021-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/022-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/023-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/024-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/025-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/026-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/027-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/028-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/029-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/030-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/031-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/032-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/033-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/034-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 3,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/03/trials/035-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/warmup/00-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/warmup/01-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/warmup/02-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/warmup/03-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/warmup/04-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/warmup/05-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/000-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/001-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/002-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/003-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/004-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/005-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/006-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/007-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/008-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/009-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/010-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/011-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/012-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/013-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/014-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/015-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/016-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/017-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/018-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/019-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/020-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/021-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/022-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/023-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/024-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/025-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/026-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/027-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/028-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/029-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/030-all_observed-interval/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/031-all_observed-raster/results/results.csv",
+      "sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "all_observed",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/032-all_observed-bucket/results/results.csv",
+      "sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "interval",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/033-native_default50-interval/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "raster",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/034-native_default50-raster/results/results.csv",
+      "sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "rows": 52
+    },
+    {
+      "block": 4,
+      "contract": "native_default50",
+      "method": "bucket",
+      "path": "affinity-blocks-linux-v2/blocks/04/trials/035-native_default50-bucket/results/results.csv",
+      "sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "rows": 52
+    }
+  ],
+  "metric_execution_performed": false,
+  "detector_fitting_performed": false,
+  "limits": [
+    "Raw observations and score vectors are unarchived: their recorded hash/receipt consistency, profile cardinalities and sampler counts were checked; nonempty threshold-vector hashes were compared with bound references, not rederived from unavailable vectors.",
+    "Five processes share one host, logical CPU, workload and environment; bootstrap intervals are descriptive and do not guarantee coverage or support host/workload-population inference.",
+    "V1 remains failed preparation with zero measured blocks. Actual v2 score/query equality does not retroactively complete v1 or establish a cause of prior timing differences."
+  ]
+}

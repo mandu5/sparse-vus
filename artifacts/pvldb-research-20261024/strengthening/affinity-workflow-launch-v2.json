@@ -1,0 +1,11 @@
+{
+  "status": "WORKFLOW_STARTED_NOT_COMPLETED",
+  "created_at": "2026-10-24T11:50:05Z",
+  "run_id": 40091476529,
+  "run_url": "https://github.com/mandu5/sparse-vus/actions/runs/40091476529",
+  "source_commit": "d8494c25a8c6fe44616a34bdded375dc3993d048",
+  "tag": "strength/affinity-blocks-linux-v2",
+  "premeasurement_audit": "docs/reviews/20261024/affinity-v2-premeasurement-audit.md",
+  "failed_predecessor": "affinity-failed-v1-archive-receipt.json",
+  "scope": "One new fixed score realization on the same 26 recordings; strict raw/label/template identity; exactly five process blocks on one runner. No outcome inferred from launch."
+}

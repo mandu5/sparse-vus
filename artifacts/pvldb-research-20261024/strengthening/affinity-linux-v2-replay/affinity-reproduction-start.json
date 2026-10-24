@@ -1,0 +1,57 @@
+{
+  "status": "PREPARING_WITHOUT_METRIC_EVALUATION",
+  "utc": "2026-10-24T11:51:07.572146+00:00",
+  "source_commit": "d8494c25a8c6fe44616a34bdded375dc3993d048",
+  "committed_source_sha256": {
+    "scripts/run_timeeval_affinity_blocks_v2.py": "db3aefe52324840d1c05c66e41bec0394197469e097cbeaa8fe5a04bf3b556fd",
+    "experiments/reproduce_affinity_blocks_v2.py": "2a520c4cf217f5fe1c322663e540065b4f8615d1e5c6b799da67874295ae27b8",
+    "experiments/reproduce_strengthening.py": "9fc030f5c9bd303a9fbc5ae98e41bb2ee8650eb83558edf8d71b09d9de99c369",
+    "scripts/prepare_strengthening_workload.py": "09da5fc196b2f8f11280c307a4ee81cbe62a3f61d860a2b282ed203ab26dd20c",
+    "experiments/audit_strengthening_inputs.py": "d04bf41823bce860b2f94491adfc3bf1d9a4ef109730e2d93b4abbf07939480c",
+    "requirements-strengthening.txt": "6ec99df9ae7870977f00f6d565850d0baad5cdd23edd27af0f271a7e5a143872",
+    ".github/workflows/affinity-blocks-v2-reproduce.yml": "f89ac8981b5a61c88786b87facf03ad37556b3a449c6cb71574f0e07f4d0f8b3",
+    "tests/test_timeeval_affinity_blocks_v2.py": "145d11ba84f8732dc36a55b326600363b01d572aebced922db7e69fa94a2bf99",
+    "tests/test_timeeval_affinity_realization.py": "b7d3fbda9ade54aed2b70899e5108adea364cb30e70c48abd2829c59917d83a2",
+    "scripts/run_timeeval_affinity_blocks.py": "91fcbb62de679f983659640fedf847a310949365a177976bdebfd6f2e5cfedeb",
+    "docs/superpowers/specs/2026-10-24-affinity-realization-v2.md": "f7ea1638e841cf73105da813abaf1730dafe01b10881b588632b42c512e5051e"
+  },
+  "requested_measurement": true,
+  "native_cpu": {
+    "pid": 2245,
+    "ppid": 2244,
+    "process_start_ticks": "27306",
+    "cpu_models": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "permitted_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen_affinity": null,
+    "hostname": "runnervmtai0g",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "2e7be4f3-827c-4c5a-9892-232263930898",
+    "cpuinfo_sha256": "84bed38dcccd10a05378e2737ecb4717e18fd5c4d63c1d7db39d15a452ca2ef1"
+  },
+  "ci_environment": {
+    "GITHUB_SHA": "d8494c25a8c6fe44616a34bdded375dc3993d048",
+    "GITHUB_REF": "refs/tags/strength/affinity-blocks-linux-v2",
+    "GITHUB_RUN_ID": "40091476529",
+    "GITHUB_RUN_ATTEMPT": "1",
+    "RUNNER_OS": "Linux",
+    "RUNNER_ARCH": "X64",
+    "ImageOS": "ubuntu24",
+    "ImageVersion": "20261023.334.3"
+  },
+  "thread_environment_for_children": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "scope": "five newly started Python processes on ONE Linux runner and ONE frozen 52-profile input; not five hosts or independent workload populations",
+  "raw_data_and_detector_scores_redistributed": false
+}

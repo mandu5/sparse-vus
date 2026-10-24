@@ -1,0 +1,14 @@
+{
+  "status": "PASS_DOCUMENTED_PRESENTATION_COMMANDS",
+  "created_utc": "2026-10-24T11:10:30.864427+00:00",
+  "scope": "Saved-output analysis only; no new fits, metric evaluations or timing measurements.",
+  "commands": [
+    "python experiments/render_strengthening_evidence.py --mac artifacts/pvldb-research-20261024/strengthening/weighted-control-mac-v1 --linux artifacts/pvldb-research-20261024/strengthening/linux-interval-replay/weighted-control-linux-v1 --output /tmp/interval-control-presentation",
+    "python experiments/audit_weighted_direct_comparison.py --mac artifacts/pvldb-research-20261024/strengthening/weighted-control-mac-v1 --linux artifacts/pvldb-research-20261024/strengthening/linux-interval-replay/weighted-control-linux-v1 --presentation /tmp/interval-control-presentation --out /tmp/interval-control-raster-posthoc"
+  ],
+  "estimate_count": 12,
+  "all_estimates_exact_equal_to_frozen_report": true,
+  "frozen_report": "artifacts/pvldb-research-20261024/strengthening/posthoc-direct-raster-incremental-v1/posthoc-direct-raster-incremental.json",
+  "frozen_report_sha256": "e16e6dd7e8296ab557c46ed7f2e2c95aae4d05b656873eebdb391ecf8d15ce66",
+  "new_report_sha256": "39c404bab94b2d0b8966c9d94a73397ff7ce08f1545cd4afc0639e76991318f1"
+}

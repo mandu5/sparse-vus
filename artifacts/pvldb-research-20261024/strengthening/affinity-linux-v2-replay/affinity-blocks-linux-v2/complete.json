@@ -1,0 +1,75 @@
+{
+  "status": "COMPLETE",
+  "planned_blocks": 5,
+  "attempted_blocks": 5,
+  "planned_trials": 180,
+  "observed_trials": 180,
+  "protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "native_cpu": {
+    "pid": 2464,
+    "ppid": 2245,
+    "process_start_ticks": "39887",
+    "cpu_models": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "permitted_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen_affinity": 0,
+    "hostname": "runnervmtai0g",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "2e7be4f3-827c-4c5a-9892-232263930898",
+    "cpuinfo_sha256": "ae93c19e4b89f79759abca6c5e30155f7b357f59d9363a752cfab2b497c55102"
+  },
+  "process_receipts_sha256": "34082c4f6aee28be8b2457114e34ae8ce2f2fcaff7f00662f8f4a9053db58c62",
+  "block_eligibility_sha256": "92865d024c6cf9c66a78640798e3a9f7c8e1cfb0afceec52fdd679aa07552057",
+  "cross_block_output_parity_sha256": "818e7bf7be73b40652132844c1cc9aec8cd30761623d5439b07b1558ce79f760",
+  "summary_receipts_sha256": {
+    "summary.json": "667f38a948f07db03f1d9abba429afc0949fe8d0f0e47fe14f69ab48c4fc0d30"
+  },
+  "blocks": {
+    "0": {
+      "block-complete.json": "e7b28bd3604776219866cc6b20f80c577ee9399736ce4f8322acc982fa284ce7",
+      "process-receipt.json": "51e1ef6aa3e03e42611b3d91c1f99f790ccad794768c33756e06f7f1fed534c2",
+      "trials.jsonl": "678655918efd068f2793836876597f98054f293ca22aa9103df202f07b0c8b87",
+      "metrics.jsonl": "1ff4dbe710b57dd62ec45b8c2fd84040297f92bcb6edb3e15e0bfc3e7c43dd0d",
+      "child-initial.json": "838ed1c2bfebc5be31f502861a91ab3c907f2a5dadb24b83ceb3de9aaf57188f",
+      "block-start.json": "d32129dee19bd55a6ee077edb544200228371c5ba853663713de3e9f33799f9c"
+    },
+    "1": {
+      "block-complete.json": "be2dde1f58dc937645e235fb2700d47165a2d3922c70009cf0d8988b797757b7",
+      "process-receipt.json": "d97ac9c2552dbc6fd86a57852efe3b2366c141bdec5f7a4ff053fad6a40f8431",
+      "trials.jsonl": "1e2de0fa6537610e76dec6764fbc3efc846bafdbb308c9e2ca767c41292ab27c",
+      "metrics.jsonl": "8e9cfeff484e3025da2e4b9340a4b406bd1425f68d73a79a5ffdf2bdbbabcd25",
+      "child-initial.json": "80304bec37283d39f5bfd82901712371f0097115c6202ae999cf9e3c8438cafd",
+      "block-start.json": "7d9c74938d5501bce1576a23ff961f5d16ce206202d37d44c91ab6ecef035856"
+    },
+    "2": {
+      "block-complete.json": "10d68aafbfab0151699f544e8fb2ad4beea340ebeeffddd7ffa7c7e2c8248c0a",
+      "process-receipt.json": "804c17569a975409cd5513a78bf13114295f06b05dd67ae625a15b6c904211ea",
+      "trials.jsonl": "49fc2c8d528b02f3d7775f5b319fa57a66c213170898b088f73cf70715066395",
+      "metrics.jsonl": "a08a23e67437c0e1deab045eba251df5bde18ba31b8ed7b62b4793610345b56e",
+      "child-initial.json": "63d6efe4b14815a653e895feac0a48c78408d01859a361df4abd4402539f1bfe",
+      "block-start.json": "8b11521325cd78435968b679046c4ce256c501314129e39a21b9f8ab8606a311"
+    },
+    "3": {
+      "block-complete.json": "ab8781ef5da01c3dca7b51535b2ec70e67f5683bf677c6ae17ba4684ec33125e",
+      "process-receipt.json": "a052cbbb2d50d3cc5a3023510018f662207205b395810174c977ad768367335e",
+      "trials.jsonl": "b6a78a04ebd0a40c8ba88746b834d01269892a43472a1d5bacdd5dc7e5c8dd74",
+      "metrics.jsonl": "754e3291590a6e1d93d604e8dda985445f6cdc2c65d59990fb15ea2dd8a94b2e",
+      "child-initial.json": "9c25797adad35f10ed7d4e638cd2d77d78e7bc0072e8b96b37233295cc65883b",
+      "block-start.json": "39271fef22973bbcfdd583a0ba1c05e3baddbaa197fe48338b880e4b2d1f2ef0"
+    },
+    "4": {
+      "block-complete.json": "ff7f5174c6d9eb64c21930cb2cf820f9ee1beb36c4ea9e62403e9f1810bd84a8",
+      "process-receipt.json": "69fe641f58b2e4b2ff7e5be9002e9641c0bc38d8efaa8d547c67886972b60716",
+      "trials.jsonl": "7010ef344eae93629aff430b31a5926549e5fc86abd5ba24abc9a3f049d1ccdc",
+      "metrics.jsonl": "b7750a92debbd29aa4830c05439cedaf11cc7a8ae3e6e0e8d2a073dd4cd5650a",
+      "child-initial.json": "d62139db263bb33c30490a0af74230ef27c8b80423af315822c92be922596c42",
+      "block-start.json": "276bf38b33380619cb1e22811492110cfa750be94d0e3300ed09aa4d464fd499"
+    }
+  }
+}

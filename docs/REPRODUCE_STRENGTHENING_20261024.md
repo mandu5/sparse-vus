@@ -5,6 +5,57 @@ This guide covers the separately selected 26-recording follow-up. The earlier
 [the original reproduction guide](REPRODUCE_PVLDB_20261024.md). The new workload
 does not replace those observations or their unfavorable controls.
 
+## Main table to fresh-execution map
+
+The unified manuscript is `paper/exact_metrics_strengthened20261024.pdf`.
+The following are separate, complete drivers for separate frozen studies;
+none silently fills missing timings from the archived results. Each command
+needs a new output directory and the corresponding pinned dependencies.
+
+| Manuscript table | Operator and reported output | Fresh driver from repository root |
+|---|---|---|
+| 1, original VUS | Integrated dynamic VUS-PR values and same-output complete-call ratios; the operator also supports ROC | `python experiments/reproduce_range_sweep.py --include-vus --output /tmp/exact-metrics-replica` |
+| 2, original range | Flat/reciprocal strict-query trajectories and F1 selection, grid100 and all observed scores | Same combined driver above |
+| 3, weighted original | Twelve weighted/cardinality strict-query contracts, curves and selection, grid100 and all observed scores | `python experiments/reproduce_strengthening.py --output /tmp/weighted-native-replica` |
+| 4–5, native original | Native ROC-AUC, PR-AUC and flat/cardinality-one range PR-AUC, nominal 50 and inclusive all-observed queries | Same weighted/native driver above |
+| 6, conventional controls | Weighted raster/closed-form interval/incremental comparisons on the fixed separate panel | `python experiments/reproduce_interval_control.py --output /tmp/interval-control-replica`; the dagger-marked exploratory raster intervals additionally require the saved-output analysis below |
+| 7, combined native executions | Original rows: weighted/native driver; control rows: interval-control driver | Both corresponding drivers, run serially |
+
+A new execution supplies measurements for its own host only. It does not
+recreate the historical Apple/Linux numbers or concatenate two hosts into
+one inferential sample. The primary JSON reports reconstruct the prospective
+contrasts; the post-hoc raster intervals have a separate analysis. Compiling
+the paper and rendering its table layout are
+separate operations. The original VUS/range guide gives the first driver's
+requirements and complete auxiliary-study outputs.
+
+### Reconstruct the exploratory Table 6 raster intervals and Figure 1
+
+These two commands analyze the saved, separately audited Apple/Linux control
+archives. They do not refit detectors, evaluate metrics, or acquire new timing
+observations. The first exports the directly reconstructed median-ratio CSVs
+and descriptive figure; the second checks those CSVs and resamples the saved
+paired trials for the dagger-marked Table 6 contrasts. Both destinations must
+be new. NumPy and Matplotlib are required for this analysis/presentation step.
+
+```sh
+python experiments/render_strengthening_evidence.py \
+  --mac artifacts/pvldb-research-20261024/strengthening/weighted-control-mac-v1 \
+  --linux artifacts/pvldb-research-20261024/strengthening/linux-interval-replay/weighted-control-linux-v1 \
+  --output /tmp/interval-control-presentation
+python experiments/audit_weighted_direct_comparison.py \
+  --mac artifacts/pvldb-research-20261024/strengthening/weighted-control-mac-v1 \
+  --linux artifacts/pvldb-research-20261024/strengthening/linux-interval-replay/weighted-control-linux-v1 \
+  --presentation /tmp/interval-control-presentation \
+  --out /tmp/interval-control-raster-posthoc
+```
+
+The resulting `posthoc-direct-raster-incremental.json` contains the twelve
+host/collection/query estimates. Adjustment covers six contrasts per host,
+not post-hoc comparator selection. These commands reconstruct the two
+historical archives; they are explicitly additional to the fresh single-host
+drivers and do not merge their workloads or timing uncertainty.
+
 ## Fresh execution
 
 Use a fresh Python 3.11.9 environment. Install the pinned core requirements and
@@ -45,6 +96,99 @@ It regenerates the same selected profiles and compares the compiled raster,
 conventional interval, and incremental methods under a separate frozen protocol.
 It does not repeat public range-callback timings or replace the original study.
 Run the two drivers serially; do not pool their timings or their hosts.
+
+## Finite five-process Linux follow-up
+
+The strict prior-score v1 stopped during preparation, before any warm-up or
+metric call: 25 COPOD profiles differed from both earlier Linux score
+realizations, including one changed distinct-score count. The immutable
+failed archive and its SHA receipt are under `strengthening/affinity-failed-v1`
+and `strengthening/affinity-failed-v1-archive-receipt.json`. The v1 command and
+protocol below remain available as historical evidence; a successful v2 must
+not be described as completing v1's failed same-score requirement.
+
+The separately declared v2 tests one newly generated, fixed score realization
+on the same 26 recordings. It retains strict raw/label/template/row identity
+and preserves all prior score/query differences as diagnostics. It makes
+exactly one generation attempt; a failed or missing fit aborts preparation.
+It does not retry to find a matching or favorable realization. See the
+[prospective v2 specification](superpowers/specs/2026-10-24-affinity-realization-v2.md).
+
+```sh
+python experiments/reproduce_affinity_blocks_v2.py --output /tmp/affinity-blocks-v2-replica --run
+```
+
+The v2 command uses the same 180-workflow/five-process schedule and statistics
+below, under distinct `affinity-design-v2.json`, `affinity-blocks-protocol-v2.json`
+and `affinity-blocks-linux-v2/` names. Its complete identity diagnostic lists
+old/new score and threshold hashes; the fresh current hashes remain mandatory
+through all five processes. The dedicated tag is `strength/affinity-blocks-linux-v2`, source commit
+`d8494c25a8c6fe44616a34bdded375dc3993d048`. Its independent premeasurement
+audit is [retained here](reviews/20261024/affinity-v2-premeasurement-audit.md).
+The [single v2 execution](https://github.com/mandu5/sparse-vus/actions/runs/40091476529)
+completed all five blocks, 180 timed workflows and 30 full warm-ups. Its saved
+archive is `strengthening/affinity-linux-v2-replay`; the ZIP and every extracted
+file are bound by `strengthening/affinity-linux-v2-archive-receipt.json`.
+The separately authored, standard-library-only saved-output audit can be run
+after downloading that run's artifact ZIP:
+
+```bash
+python experiments/audit_affinity_v2_saved_a.py \
+  --archive artifacts/pvldb-research-20261024/strengthening/affinity-linux-v2-replay \
+  --zip /path/to/affinity-blocks-linux-v2.zip \
+  --out /tmp/affinity-v2-independent-reconstruction.json
+```
+
+The output path must be new. This checks the exact published ZIP and saved
+records without fitting detectors or running metric timings; it does not
+independently reread unredistributed raw observations or score vectors.
+The first new generation happened to match both prior Linux score/query
+identities; this was not a v2 inclusion criterion. Exhaustive raster/bucket is
+1.919 [1.906,1.932] and interval/bucket 2.216 [2.201,2.227]. These are the
+specified descriptive process-block intervals, not guaranteed coverage or
+an explanation of prior host/run differences. All raw results are retained.
+
+The additional same-runner robustness study has a separate driver. It needs
+Linux CPU-affinity APIs, Python 3.11.9, the same pinned dependencies above,
+committed study source files, and a new destination:
+
+```sh
+python experiments/reproduce_affinity_blocks.py --output /tmp/affinity-blocks-replica --run
+```
+
+The command generates the fixed 52 profiles once and verifies both prior
+Linux array/native-CSV hash sets before any metric measurement. A mismatch
+stops preparation and is recorded; there is no replacement fit or rounding of
+the score outputs. Omitting `--run` still downloads sources and fits detectors,
+but stops after freezing the protocol and printing the later run command.
+
+The full run starts exactly five new processes on one permitted logical CPU,
+with fixed warm-up and balanced method orders. It schedules 180 measured
+workflows and 30 full-workflow warm-ups, retaining every actual observation
+and incomplete attempt. It measures the combined batch only;
+it adds neither recordings nor public-reference coverage. The analysis unit
+is the process block, with all five block estimates retained. Its exact
+empirical block-bootstrap enumeration describes this small fixed-runner
+sample and does not guarantee statistical coverage or host generalization.
+
+Under the new output's `artifacts/pvldb-research-20261024/strengthening/`:
+
+| Receipt | Meaning |
+|---|---|
+| `affinity-design-v1.json`, `affinity-blocks-protocol-v1.json` | Frozen schedule, source/input identities, logical-CPU policy and analysis |
+| `native-input-audit.json`, `affinity-blocks-protocol-v1.input-identity.json` | Fresh input checks and matches to both prior Linux profile sets |
+| `affinity-blocks-linux-v1/blocks/` | Child process receipts, every actual trial, scalar result CSVs, warm-ups, affinity/pool checks and logs |
+| `affinity-blocks-linux-v1/cross-block-output-parity.json` | Saved CSV/hash/coverage and across-process scalar checks |
+| `affinity-blocks-linux-v1/block-eligibility.json`, `summary.json` | Explicit block eligibility and the four block-level timing contrasts |
+| `affinity-blocks-linux-v1/complete.json`, `affinity-reproduction-complete.json` | Successful execution only if all required blocks, bindings and output checks complete |
+
+The frozen source tag is `strength/affinity-blocks-linux-v1`, commit
+`ee3031aafb5cc30c7928d36e965d2156cf3ac2ca`. Its workflow responds only to that
+explicit tag or an explicit dispatch at that tag. The
+[prospective scope and stopping rule](superpowers/specs/2026-10-24-affinity-blocks-followup.md)
+and [independent pre-measurement audit](reviews/20261024/affinity-blocks-premeasurement-audit.md)
+state the failure policy and verified bounds. A launched workflow or prepared
+protocol is not a completion receipt.
 
 ## What is frozen and checked
 

@@ -1,0 +1,198 @@
+{
+  "block": 0,
+  "utc": "2026-10-24T11:53:30.418689+00:00",
+  "protocol_sha256": "fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a",
+  "before_affinity": {
+    "pid": 2466,
+    "ppid": 2464,
+    "process_start_ticks": "39891",
+    "cpu_models": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "permitted_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen_affinity": 0,
+    "hostname": "runnervmtai0g",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "2e7be4f3-827c-4c5a-9892-232263930898",
+    "cpuinfo_sha256": "63ad264c9311bde63554305c284b818b44aad32329ac8311fb77cae797b71539"
+  },
+  "native_cpu": {
+    "pid": 2466,
+    "ppid": 2464,
+    "process_start_ticks": "39891",
+    "cpu_models": [
+      "AMD EPYC 9V74 80-Core Processor"
+    ],
+    "permitted_affinity": [
+      0
+    ],
+    "chosen_affinity": 0,
+    "hostname": "runnervmtai0g",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "2e7be4f3-827c-4c5a-9892-232263930898",
+    "cpuinfo_sha256": "c3597f9044745d19c8c90b76552c052836856e51759762a03f25fd0e20084ee0"
+  },
+  "dependencies": {
+    "timeeval": "1.5.0",
+    "prts": "1.0.0.3",
+    "numpy": "1.26.4",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2",
+    "pandas": "2.2.3",
+    "numba": "0.59.1",
+    "llvmlite": "0.42.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "dask": "2022.12.1",
+    "distributed": "2022.12.1",
+    "multiprocessing_logging": "0.4.0",
+    "tqdm": "4.70.1"
+  },
+  "threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+      "version": "0.3.27.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Cooperlake"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Cooperlake"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+      "version": null
+    }
+  ],
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "thread_contract": {
+    "affinities_by_tid": {
+      "2466": [
+        0
+      ],
+      "2468": [
+        0
+      ]
+    },
+    "vanished_during_inspection": [],
+    "numerical_pools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+        "version": "0.3.27.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Cooperlake"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+        "version": "0.3.23.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Cooperlake"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+        "version": null
+      }
+    ],
+    "utc": "2026-10-24T11:53:30.418660+00:00"
+  },
+  "fixed_warmup_completed": true,
+  "warmup_workflows": 6,
+  "warmup_results": [
+    {
+      "contract": "native_default50",
+      "method": "raster",
+      "directory": "warmup/00-native_default50-raster",
+      "results_sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "max_pairwise_scalar_error": 0.0
+    },
+    {
+      "contract": "native_default50",
+      "method": "interval",
+      "directory": "warmup/01-native_default50-interval",
+      "results_sha256": "53843333a274e7298edbe555b73ba5668d4910b15a0877f5167b48d2e3e47b85",
+      "max_pairwise_scalar_error": 0.0
+    },
+    {
+      "contract": "native_default50",
+      "method": "bucket",
+      "directory": "warmup/02-native_default50-bucket",
+      "results_sha256": "c7874c621efd2911d56c025e57814b17b88ccecb4efa7bc0902a8442cf520ee1",
+      "max_pairwise_scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "contract": "all_observed",
+      "method": "raster",
+      "directory": "warmup/03-all_observed-raster",
+      "results_sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "max_pairwise_scalar_error": 0.0
+    },
+    {
+      "contract": "all_observed",
+      "method": "interval",
+      "directory": "warmup/04-all_observed-interval",
+      "results_sha256": "774dda6648be6477b0be900d9563e7a207fe440089d922fd2bef4b8b8e0813f2",
+      "max_pairwise_scalar_error": 0.0
+    },
+    {
+      "contract": "all_observed",
+      "method": "bucket",
+      "directory": "warmup/05-all_observed-bucket",
+      "results_sha256": "f97b24735b9999624d65555bb5157d54175f0cf84b251c2436aea62ea1af0c5a",
+      "max_pairwise_scalar_error": 2.7755575615628914e-16
+    }
+  ],
+  "input_bindings_verified_before_timing": true
+}

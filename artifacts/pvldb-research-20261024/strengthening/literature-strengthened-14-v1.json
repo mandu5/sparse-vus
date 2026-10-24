@@ -1,0 +1,208 @@
+{
+  "checked_date": "2026-10-24",
+  "kind": "Fourteen recent-paper discussions crosswalk for the strengthened manuscript; bounded comparison, not a universal novelty proof",
+  "historical_inventory": {
+    "path": "artifacts/pvldb-research-20261024/literature.json",
+    "sha256": "a8d043c2fc1e4c2f2c2868a76ffa571db3642e99ae0df7e481d4f68fb3ec8e04",
+    "entries": 12,
+    "preserved_unchanged": true
+  },
+  "paper_count": 14,
+  "papers": [
+    {
+      "title": "VUS: effective and efficient accuracy measures for time-series anomaly detection",
+      "year": 2025,
+      "venue": "VLDB Journal",
+      "url": "https://www.paparrizos.org/papers/BoniolVLDBJ25.pdf",
+      "relevance": "Closest operator and optimized algorithms",
+      "already_established": "Defines and optimizes VUS with static/dynamic work reuse and threshold/runtime sensitivity.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "Preserve the operator while compressing exhaustive complete-tie support events and sharing label work across model scores; fast VUS and reuse themselves are not new.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "PATE: Proximity-Aware Time series anomaly Evaluation",
+      "year": 2024,
+      "venue": "KDD research",
+      "url": "https://arxiv.org/html/2405.12096",
+      "relevance": "Weighted PR and temporal buffers",
+      "already_established": "Introduces proximity-weighted PR evaluation and analyzes buffer-size/complexity effects.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "Computing a fixed existing VUS target more cheaply differs from proposing a different utility metric; do not claim novel weighted PR.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "The Elephant in the Room: Towards A Reliable Time-Series Anomaly Detection Benchmark",
+      "year": 2024,
+      "venue": "NeurIPS Datasets and Benchmarks",
+      "url": "https://papers.neurips.cc/paper_files/paper/2024/file/c3f3c690b7a99fba16d0efd35cb83b2c-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "relevance": "Primary workload and metric reliability",
+      "already_established": "TSB-AD evaluates 40 algorithms and 1070 series, studies metric reliability and recommends VUS-PR.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "This work studies exact computational fidelity/cost of that evaluator, not a new detector benchmark or another general ranking audit.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "TAB: Unified Benchmarking of Time Series Anomaly Detection Methods",
+      "year": 2025,
+      "venue": "PVLDB",
+      "url": "https://arxiv.org/html/2506.18046",
+      "relevance": "Evaluation pipeline and scalability",
+      "already_established": "Unified data, method, evaluation layers; diverse metrics and standardized preprocessing and strategies.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "A shared-label exact operator is a component optimization; the pipeline concept and scalable benchmarking are prior work.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "TSB-AutoAD: Towards Automated Solutions for Time-Series Anomaly Detection",
+      "year": 2025,
+      "venue": "PVLDB EA&B",
+      "url": "https://www.vldb.org/pvldb/vol18/p4364-liu.pdf",
+      "relevance": "Model-selection use case",
+      "already_established": "Evaluates selection, ensembling and generation methods, including their accuracy/efficiency trade-offs.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "Labeled offline selection cost and numerical fidelity are distinct from learning an unlabeled deployment selector; no AutoML superiority is asserted.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "Formally Exploring Time-Series Anomaly Detection Evaluation Metrics",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/html/2510.17562",
+      "relevance": "Formal properties of metrics",
+      "already_established": "Analyzes 37 metrics and proposes LARM/ALARM; section3 explicitly excludes score-based volume-under-surface metrics from the formal analysis.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "The target here is an existing score-integrated dynamic metric, with complete-tie computation rather than new metric axioms.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "CCE: Confidence-Consistency Evaluation for Time Series Anomaly Detection",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/html/2509.01098",
+      "relevance": "Fast alternative metric and ranking evaluation",
+      "already_established": "Proposes confidence/consistency scores, an O(n) computation and RankEval.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "A different O(n) metric cannot be treated as a same-output baseline; preserve the existing VUS target and compare matched operators.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "A Problem-Oriented Taxonomy of Evaluation Metrics for Time Series Anomaly Detection",
+      "year": 2025,
+      "venue": "arXiv, inspected v2",
+      "url": "https://arxiv.org/html/2511.18739v2",
+      "relevance": "Metric semantics and application fit",
+      "already_established": "Organizes metrics by application needs including tolerance, timeliness, random-score robustness and audit costs.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "Separate semantic choice from approximation of one declared target; do not rebrand a metric taxonomy or ranking change as novel.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "Did We Actually Fix It? An Independent Adversarial Stress-Test of Post-Point-Adjustment Evaluation Metrics for Time-Series Anomaly Detection",
+      "year": 2026,
+      "venue": "arXiv v2",
+      "url": "https://arxiv.org/html/2607.11969v2",
+      "relevance": "Adversarial evaluation and rank changes",
+      "already_established": "Studies best-of-N no-skill reporting on six benchmarks and inter-metric rank agreement with VUS resolution250.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "Our discrepancy holds scores/labels/metric fixed and changes numerical threshold integration; not a new seed-shopping or general metric-robustness result.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "Retrieval Over Training: Similarity search-based Model Selection for Time Series Anomaly Detection",
+      "year": 2026,
+      "venue": "arXiv v2",
+      "url": "https://arxiv.org/html/2610.20243v2",
+      "relevance": "Recent selection scalability",
+      "already_established": "RAMSAD uses retrieval of historical detector profiles for model selection and reports OOD/runtime trade-offs.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "The new workload computes exact labeled profile scores; it does not replace the retrieval selector or claim better deployment accuracy.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "Fast or Accurate? Rethinking Time Series Anomaly Detection",
+      "year": 2025,
+      "venue": "VLDB PhD Workshop",
+      "url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/PhD/PhD25_17.pdf",
+      "relevance": "Efficient metric implementation",
+      "already_established": "Discusses fast CPU/GPU evaluation and model-selection cost.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "Credit efficient VUS as established; compare the actual pinned FF-VUS native contract separately rather than claiming it computes the original square-root target.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "mTSBench: Benchmarking Multivariate Time Series Anomaly Detection and Model Selection at Scale",
+      "year": 2026,
+      "venue": "TMLR; primary project page inspected",
+      "url": "https://plan-lab.github.io/projects/mtsbench/",
+      "relevance": "Broader model-selection workload",
+      "already_established": "Public benchmark spans 344 multivariate series, 19 datasets, 24 detectors and model selection.",
+      "comparison_scope": "Recent operator or neighboring evaluation/benchmark/selection literature; not necessarily a computational predecessor.",
+      "original_inventory_distinction": "Eight CPU detectors on univariate components are a targeted operator workload, not broader coverage than mTSBench; future claims need broader panels.",
+      "weighted_followup_boundary": "The new range claim is coupled fixed-label overlap/fragmentation and moving-normalization state over a threshold trajectory; it does not introduce metric semantics, detectors, or a benchmark."
+    },
+    {
+      "title": "European Space Agency Benchmark for Anomaly Detection in Satellite Telemetry",
+      "year": 2024,
+      "venue": "arXiv:2406.17826, revised 17 August 2025",
+      "url": "https://arxiv.org/abs/2406.17826",
+      "relevance": "Real telemetry workloads and application-specific evaluation",
+      "already_established": "Provides satellite-telemetry anomaly-detection benchmark conditions and evaluation protocols.",
+      "weighted_followup_boundary": "A telemetry benchmark motivates real evaluation workloads; it does not establish the coupled overlap/fragmentation update identities studied here.",
+      "comparison_scope": "Workload/evaluation context; not a claimed closest computational mechanism."
+    },
+    {
+      "title": "When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection",
+      "year": 2026,
+      "venue": "ICLR",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/cf70320e93c08b39b1b29a348097a376-Abstract-Conference.html",
+      "relevance": "Detector-pipeline and baseline attribution",
+      "already_established": "Analyzes foundation-model anomaly-detection pipelines and the strength of simple detector baselines.",
+      "weighted_followup_boundary": "Detection-pipeline attribution is distinct from maintaining the exact existing metric across threshold events; no detector-accuracy improvement is asserted here.",
+      "comparison_scope": "Pipeline/evaluation context; not a claimed closest computational mechanism."
+    }
+  ],
+  "older_closest_mechanical_antecedents": [
+    {
+      "title": "Precision and Recall for Time Series",
+      "authors": "Tatbul et al.",
+      "year": 2018,
+      "url": "https://papers.neurips.cc/paper_files/paper/2018/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf",
+      "already_established": "Positional weights, cardinality penalties, ordered range overlaps and closed forms.",
+      "distinction": "Maintain the coupled fixed-label recall and predicted-component precision reducers across all activations/merges, including moving weights, rather than recomputing a mask per threshold."
+    },
+    {
+      "title": "1D Component Tree in Linear Time and Space and Its Application to Gray-Level Image Multithresholding",
+      "authors": "Menotti, Najman and Araujo",
+      "year": 2007,
+      "already_established": "One-dimensional component hierarchies and component attributes.",
+      "distinction": "The component tree is prior infrastructure; label-conditioned overlap/fragmentation and moving-normalization identities are the specialized additional state."
+    },
+    {
+      "title": "Global gray-level thresholding based on object size",
+      "authors": "Ranefall and Wahlby",
+      "year": 2016,
+      "url": "https://doi.org/10.1002/cyto.a.22806",
+      "already_established": "Per-threshold precision/recall constructed from component-size attributes.",
+      "distinction": "Their positive mass and recall denominator depend on object size; this work preserves fixed labeled intervals with overlap/cardinality and positional-normalization semantics."
+    },
+    {
+      "title": "Interactive Segmentation Based on Component-trees",
+      "authors": "Benoit Naegel and Nicolas Passat",
+      "year": 2014,
+      "url": "https://www.ipol.im/pub/art/2014/71/",
+      "primary_text_inspected": "Sections 1.1.3 and 3.2, Algorithm 1; fixed binary target G, incrementally computed ps(N,G) and n(N,G).",
+      "already_established": "Component attributes conditioned on a fixed binary target and dynamic-programming optimization of false-positive/false-negative distance.",
+      "distinction": "Generic label-conditioned attributes are established; the present specific state couples Tatbul fixed-label overlap/cardinality fragmentation with moving predicted-window positional normalization across the complete threshold trajectory."
+    }
+  ],
+  "software_not_counted_as_papers": [
+    "official VUS467bace0",
+    "Klein fast-VUS1bae859f",
+    "FF-VUS facf4362",
+    "TimeEval metrics",
+    "Sparse VUS v0.3.0 public unrefereed precursor",
+    "Weighted range closed-form interval control; author-created conventional baseline"
+  ],
+  "surviving_weighted_claim": "A metric-specific coupled state yields exact canonical weighted range trajectories with explicit cardinality cost and O(n log n) complete-query comparison complexity under stated assumptions. The underlying component tree, positional weighting, prefix moments, sorting and bucketing are established."
+}

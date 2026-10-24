@@ -1,0 +1,11 @@
+\begin{table*}[t]\centering\small
+\begin{tabular}{llrrrrrr}\toprule
+Query contract & Control / bucket & Session 1 & 2 & 3 & 4 & 5 & Geometric ratio [descriptive interval]\\\midrule
+Nominal 50 & Raster & 1.010 & 1.013 & 1.017 & 1.016 & 1.028 & 1.017 [1.011,1.025]\\
+Nominal 50 & Interval & 1.019 & 1.018 & 1.017 & 1.025 & 1.034 & 1.023 [1.017,1.030]\\
+All observed & Raster & 1.907 & 1.905 & 1.931 & 1.933 & 1.919 & 1.919 [1.906,1.932]\\
+All observed & Interval & 2.195 & 2.209 & 2.226 & 2.229 & 2.221 & 2.216 [2.201,2.227]\\
+\bottomrule\end{tabular}
+\caption{Prospectively frozen v2 follow-up: five fresh processes on one AMD EPYC 9V74 runner, pinned to the same permitted logical CPU. Each session estimate averages six paired log ratios; the final estimate equally weights the five sessions. Intervals enumerate all $5^5$ empirical resamples with tails adjusted over four contrasts. They describe this fixed-input, shared-runner experiment, without guaranteed coverage or new-host inference. All 180 timed workflows and 30 full untimed warm-ups are retained.}
+\label{tab:affinity-blocks}
+\end{table*}

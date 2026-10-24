@@ -1,0 +1,27 @@
+{
+  "0": {
+    "eligible": true,
+    "reasons": [],
+    "block_complete_sha256": "e7b28bd3604776219866cc6b20f80c577ee9399736ce4f8322acc982fa284ce7"
+  },
+  "1": {
+    "eligible": true,
+    "reasons": [],
+    "block_complete_sha256": "be2dde1f58dc937645e235fb2700d47165a2d3922c70009cf0d8988b797757b7"
+  },
+  "2": {
+    "eligible": true,
+    "reasons": [],
+    "block_complete_sha256": "10d68aafbfab0151699f544e8fb2ad4beea340ebeeffddd7ffa7c7e2c8248c0a"
+  },
+  "3": {
+    "eligible": true,
+    "reasons": [],
+    "block_complete_sha256": "ab8781ef5da01c3dca7b51535b2ec70e67f5683bf677c6ae17ba4684ec33125e"
+  },
+  "4": {
+    "eligible": true,
+    "reasons": [],
+    "block_complete_sha256": "ff7f5174c6d9eb64c21930cb2cf820f9ee1beb36c4ea9e62403e9f1810bd84a8"
+  }
+}
