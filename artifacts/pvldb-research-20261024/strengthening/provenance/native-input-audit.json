@@ -1,0 +1,20 @@
+{
+  "status": "NATIVE_INPUTS_VERIFIED_WITHOUT_METRIC_EVALUATION",
+  "verified_utc": "2026-10-24T07:53:27.900069+00:00",
+  "generation_path": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/pvldb-research-20261024/strengthening/workload-generation.json",
+  "generation_sha256": "4177f82b6bfe404f82439d75b749adb16b21a416321425326da2611115f02568",
+  "protocol_sha256": "b1134f125ab7eba4c5acb6b8c2f1450f44b215de3b5860456592d79a99708a71",
+  "timeeval_module_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-env/lib/python3.11/site-packages/timeeval/__init__.py",
+  "datasets_verified": 26,
+  "profiles_verified": 52,
+  "total_rows": 386447,
+  "checks": [
+    "all case NPZ hashes and portable cache paths",
+    "labels int8(n) and scores float64(2,n), finite",
+    "actual TimeEval MultiDatasetManager and load_labels_only on every native dataset",
+    "all native results rows and paths, Status.OK",
+    "all native score file hashes and float64 bit roundtrip versus combined NPZ",
+    "frozen protocol and native template hashes"
+  ],
+  "metric_evaluation_performed": false
+}

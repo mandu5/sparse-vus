@@ -1,0 +1,83 @@
+{
+  "upstream_commit": "ed74348e7876c9268b7a737c77f2f5f56f7fa458",
+  "scope": "Source dependency closure for FFT and COPOD public APIs; all other lazy detector imports remain unavailable",
+  "files": [
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/__init__.py",
+      "upstream_path": "TSB_AD/__init__.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/model_wrapper.py",
+      "upstream_path": "TSB_AD/model_wrapper.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/model_wrapper.py",
+      "bytes": 24424,
+      "sha256": "469b7e35f675cadf78c4fb99a03503d98f13404b9bca0b5583c32f892fe16d25"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/models/__init__.py",
+      "upstream_path": "TSB_AD/models/__init__.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/models/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/models/base.py",
+      "upstream_path": "TSB_AD/models/base.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/models/base.py",
+      "bytes": 20417,
+      "sha256": "e81c2ee8e4b66ed3daf108eecd0efe220a0a4bbf7c36f3bc7f38da942746d745"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/models/FFT.py",
+      "upstream_path": "TSB_AD/models/FFT.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/models/FFT.py",
+      "bytes": 4736,
+      "sha256": "127a077f3e050e93730fba212aefc0a18840faeedf1665744b1555460e5546e8"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/models/COPOD.py",
+      "upstream_path": "TSB_AD/models/COPOD.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/models/COPOD.py",
+      "bytes": 7307,
+      "sha256": "39af77006e5b68c5e8556aeeb33b6e25986cadfa853d2f0286c076011e19f02b"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/utils/__init__.py",
+      "upstream_path": "TSB_AD/utils/__init__.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/utils/slidingWindows.py",
+      "upstream_path": "TSB_AD/utils/slidingWindows.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/utils/slidingWindows.py",
+      "bytes": 2492,
+      "sha256": "0ba65735c6572cd80e586409d4f653253d847e08fbae8e1da6e474e142e74af6"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/utils/utility.py",
+      "upstream_path": "TSB_AD/utils/utility.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/utils/utility.py",
+      "bytes": 25012,
+      "sha256": "58d5906ce8b5f2ccd350d9a04eeb3c7b636c473e64967ca36945f76e70eb5f03"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/TSB_AD/utils/stat_models.py",
+      "upstream_path": "TSB_AD/utils/stat_models.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/TSB_AD/utils/stat_models.py",
+      "bytes": 7554,
+      "sha256": "3dcd486293fe194c425176a2146270b4b24bdfe4635dc961e1ebebfc67b32e1c"
+    },
+    {
+      "path": ".cache/strengthening-tsbad/LICENSE",
+      "upstream_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/ed74348e7876c9268b7a737c77f2f5f56f7fa458/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "purpose": "Preserve frozen producer and metadata-only recovery without modifying upstream manifests. Acquisition raw arrays are excluded.",
+  "entries": [
+    {
+      "historical_cache_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/provenance/prepare_strengthening_workload.frozen.py",
+      "archive_path": "artifacts/pvldb-research-20261024/strengthening/provenance/prepare_strengthening_workload.frozen.py",
+      "sha256": "ddd84a1fa99db2f9aa240acfc1292abc31bd668f8a522e68e66ef9947deb7b65"
+    },
+    {
+      "historical_cache_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/provenance/assemble_existing_scores.py",
+      "archive_path": "artifacts/pvldb-research-20261024/strengthening/provenance/assemble_existing_scores.py",
+      "sha256": "48a17309d29f01b48e72d64ff896a21d71d9f0fd6482b56640bd8ab6c7b5e2b7"
+    },
+    {
+      "historical_cache_path": ".cache/strengthening-tsbad/source-manifest.json",
+      "archive_path": "artifacts/pvldb-research-20261024/strengthening/provenance/source-manifest.json",
+      "sha256": "3bcfea0e80ae82cc20d6e556058f4ca35bad99a069edb89391630064e0e0cd6e"
+    },
+    {
+      "historical_cache_path": ".cache/strengthening-workload/native-input-audit.json",
+      "archive_path": "artifacts/pvldb-research-20261024/strengthening/provenance/native-input-audit.json",
+      "sha256": "f906252900d53e74b3479a04fd600f0475a7061dda07c3f366bb64ff273069c6"
+    }
+  ]
+}
