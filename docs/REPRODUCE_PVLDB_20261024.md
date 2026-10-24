@@ -180,3 +180,65 @@ cp experiments/pvldb_resources.py /tmp/pvldb-independent-replica/experiments/
 python /tmp/pvldb-independent-replica/experiments/pvldb_resources.py freeze
 python /tmp/pvldb-independent-replica/experiments/pvldb_resources.py run
 ```
+
+## Compiled conventional-support attribution control
+
+This author-created control shares the public validation/radix/tie-count path,
+but uses direct per-width ramps, cached original-positive mass and component
+scans. It is not a literal JIT or a new release of public Klein. In the recorded
+primary-width study it beats released scalar evaluation on all 73 cases; the
+stream implementation retains a smaller gain. From a fresh primary workspace:
+
+```sh
+cp experiments/support_cumsum_control.py experiments/pvldb_compiled_control.py experiments/audit_pvldb_compiled_control.py experiments/audit_pvldb_klein_control.py /tmp/pvldb-independent-replica/experiments/
+python /tmp/pvldb-independent-replica/experiments/pvldb_compiled_control.py freeze
+python /tmp/pvldb-independent-replica/experiments/pvldb_compiled_control.py run
+python /tmp/pvldb-independent-replica/experiments/audit_pvldb_compiled_control.py --root /tmp/pvldb-independent-replica --output /tmp/compiled-control-audit.json
+```
+
+## Public nine-metric consumer
+
+The fourteen TSB-AD source/license files are downloaded at a fixed revision and
+verified against hardcoded hashes, including cache hits. Both backends supply
+exact VUS-ROC and VUS-PR; seven other metrics execute unchanged. This is a stored
+profile consumer, not detector training. The experiment chooses the largest
+primary recording and the upstream data-dependent width before outcomes.
+
+Use a compatible statsmodels build without changing the primary numerical
+environment. An initial import-only failure with statsmodels 0.14.2 and pandas
+3.0.1 is preserved; statsmodels 0.14.6 is the recorded local overlay.
+
+```sh
+cp experiments/pvldb_consumer.py experiments/audit_pvldb_consumer.py /tmp/pvldb-independent-replica/experiments/
+python -m pip install --no-deps --target /tmp/pvldb-independent-replica/.cache/consumer-deps statsmodels==0.14.6
+python /tmp/pvldb-independent-replica/experiments/pvldb_consumer.py fetch
+python /tmp/pvldb-independent-replica/experiments/pvldb_consumer.py freeze
+PYTHONPATH=/tmp/pvldb-independent-replica/.cache/consumer-deps python /tmp/pvldb-independent-replica/experiments/pvldb_consumer.py run
+PYTHONPATH=/tmp/pvldb-independent-replica/.cache/consumer-deps python /tmp/pvldb-independent-replica/experiments/audit_pvldb_consumer.py --root /tmp/pvldb-independent-replica --output /tmp/public-consumer-audit.json
+```
+
+Four ABBA passes provide descriptive timing on fixed inputs, not a population
+confidence interval. The auditor checks source/input bindings, independently
+executes the width estimator, enforces eight profiles and the order, checks all
+nine paired outputs and nested timing sums. It does not independently implement
+the seven non-VUS metrics. These follow-ups are outside the original principal
+one-command reproduction scope.
+
+## Inspectable host diagnostic
+
+The two-host NPZ arrays and fitted SVM states are archived in
+`artifacts/pvldb-research-20261024/score-host-probe/`. The Mac score bytes match
+the first run; the new Linux full-score bytes differ from the first runner,
+while reproducing the diagnosed SVM metric and approximate winner difference.
+Do not call the new arrays a recovery of the missing first-run Linux arrays.
+
+```sh
+python experiments/pvldb_score_probe.py --output /tmp/new-host-score-probe
+python experiments/analyze_pvldb_score_probe.py --output /tmp/host-array-comparison.json
+```
+
+The first command creates a new diagnostic in an unused directory. The second
+inspects the two already archived host arrays and evaluates both on one host
+against unchanged exact Klein. The completed Linux diagnostic is linked in
+`score-host-probe/github-run.json`; source hashes and backend details accompany
+the actual arrays.

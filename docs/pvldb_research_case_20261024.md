@@ -203,5 +203,18 @@ include one on both collections. At 90% positive density, dense/released is
 0.980 under the paired-geometric estimator, so support compression itself
 loses its runtime advantage. These retained limits distinguish a measured
 operating range from universal superiority. Synthetic cases are not counted
-as public datasets. Final independent review and the minimal Klein
-support-threshold ablation determine the final score band.
+as public datasets. The minimal Klein patch and optimized compiled direct-ramp controls are now complete.
+The latter is faster than released scalar on all73 primary cases; nearest geometry
+has no demonstrated isolated runtime win there. Stream's compiled-control workflow
+gain is only 13–18%. A pinned actual nine-metric consumer gains 1.031x overall.
+Three independent final reviewers give Accept7, Revise5, Reject5. The frozen
+investment-5 conditions are met, investment6 is not, and significant PVLDB merit
+remains disputed. See RESEARCH_DECISION_20261024.md for the current decision and
+separate range-metric generalization experiment.
+
+
+The separate host probe now archives Mac and Linux standardized inputs and SVM
+state. Inputs match byte-for-byte, support-vector counts differ104/105, and applying
+one evaluator to both saved score arrays reproduces the discrepancy. This localizes
+it to score generation, not one proven BLAS cause; the original Linux NPZ bytes
+remain unavailable and are not replaced by the new diagnostic arrays.

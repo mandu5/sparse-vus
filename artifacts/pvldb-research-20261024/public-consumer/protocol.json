@@ -1,0 +1,109 @@
+{
+  "status": "FROZEN_AFTER_REVIEW_AND_COMPILED_CONTROL_BEFORE_CONSUMER_OUTCOMES",
+  "created_utc": "2026-10-24T03:22:05.998350+00:00",
+  "source_sha256": {
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "experiments/pvldb_supplement.py": "4e2a8e4140c0a0f662ca4e97c52bde52acaf728df6872318c07e2da73deba318",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+    "experiments/pvldb_consumer.py": "287eb7c3a1f94144a0894e700ae61926059b48bfd0910a690d7c0d7926df71cf",
+    ".cache/tsbad-consumer/pkg/TSB_AD/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/metrics.py": "13957d15d3ebb2b743a4bebfa3a68af31e82a58ecc568557b4081ad90e38094d",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/basic_metrics.py": "1fcddedf5ada1d5221f39ee568c7fddb9e7181bd7e1c19636c2cbecf40c97707",
+    ".cache/tsbad-consumer/pkg/TSB_AD/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/tsbad-consumer/pkg/TSB_AD/utils/slidingWindows.py": "0ba65735c6572cd80e586409d4f653253d847e08fbae8e1da6e474e142e74af6",
+    ".cache/tsbad-consumer/pkg/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    ".cache/tsbad-consumer/pkg/benchmark_exp/HP_Tuning_U.py": "3c809dd6dbf868da9698112487909d128947f25c2af9cfb3f065b588f478bb9c",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_affiliation_zone.py": "3b289bf11cebe614afabe353c873de90ba9debf8831aef8f73532870dce01ba2",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_integral_interval.py": "8177e69eccb0ae4ea76b2f54f6799ae61758b5a103603fae3d1a3a8d331e7cda",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_single_ground_truth_event.py": "a04b5daa0fb0ef68893807c7ab5d4353b43f0d5231ae06ef0006b2e6cf939165",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/generics.py": "16743b204d24feb8ba9deaabceb7b0cf900520136e8a3b77e499448fcaafbfc9",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/metrics.py": "9fe83cd2cb1cd4b1b3c7869971e94a18d5ea71b4103f88e347de70c8330cc060"
+  },
+  "primary_protocol_sha256": "307e0498f441901dbe0d686064ffd8f9ff4c683e5e5f1197a2297921561a3579",
+  "inputs_sha256": "9b1dc600e9f13052408c69a796064742236a12de8435ec32d897f7d9a04117b0",
+  "case": {
+    "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+    "family": "SMD",
+    "member": "TSB-AD-U/182_SMD_id_5_Facility_tr_7174_1st_21230.csv",
+    "n": 28696,
+    "positive_points": 198,
+    "raw_sha256": "8eebd0659e9057cd91e5ae6e6d252337d4a21e8ca680372d087f95c5fbdf75df",
+    "observation_label_identity": "7a65ff6d06294424af80d9b6392954c330d1c9c7fa3d9cee34a8aa899a24e70c",
+    "raw_recording_previously_measured_by_name": false,
+    "file": "0022.npz",
+    "npz_sha256": "e48341a282c369272cb240c2c799a02151dc9ff24dddc7f3fe8f142a57e8a662",
+    "bytes": 2095574,
+    "score_sha256": "b2ff8fb37d4ce45519f54316a66d8b191642b054308163ec87e1bb7ea80ba223",
+    "models": {
+      "isolation_forest": {
+        "seconds": 0.14009862503735349,
+        "distinct": 28498,
+        "warnings": []
+      },
+      "local_outlier_factor": {
+        "seconds": 0.2265783330076374,
+        "distinct": 27335,
+        "warnings": []
+      },
+      "knn_distance": {
+        "seconds": 0.20761254196986556,
+        "distinct": 28648,
+        "warnings": []
+      },
+      "one_class_svm": {
+        "seconds": 0.13129541702801362,
+        "distinct": 28696,
+        "warnings": []
+      },
+      "pca_reconstruction": {
+        "seconds": 0.005447167030069977,
+        "distinct": 28696,
+        "warnings": []
+      },
+      "kmeans_distance": {
+        "seconds": 0.0068211249890737236,
+        "distinct": 28696,
+        "warnings": []
+      },
+      "histogram_density": {
+        "seconds": 0.025575958017725497,
+        "distinct": 6713,
+        "warnings": []
+      },
+      "shrinkage_mahalanobis": {
+        "seconds": 0.005120540969073772,
+        "distinct": 28696,
+        "warnings": []
+      }
+    }
+  },
+  "model_count": 8,
+  "order": [
+    "benchopt_pair",
+    "radix_pair",
+    "radix_pair",
+    "benchopt_pair"
+  ],
+  "public_repository": "https://github.com/TheDatumOrg/TSB-AD",
+  "public_revision": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+  "consumer": "Unchanged get_metrics with an injected exact ROC+PR scalar pair; all nine metric outputs including upstream oracle-threshold loops. Unchanged find_length_rank(rank=1) selects width from observations.",
+  "workload": "Largest n in the fixed 73-case primary panel, lexicographic tie break. Eight stored float64 profiles, no fitting. Four complete read-to-CSV-close passes in ABBA order, two per method.",
+  "hypothesis": "Measure actual evaluator share and end-to-end benefit inside a public multi-metric consumer; retain Amdahl-limited or negative outcomes.",
+  "parity_atol": 1e-11,
+  "timing": "Serial one numerical thread, warm imports/JIT. Workflow includes NPZ reads, width selection, all nine metrics and CSV close. No cold-disk/fsync/training/production-service claim.",
+  "uncertainty": "Two fixed-input repetitions per method are descriptive timing evidence, not population or deployment uncertainty.",
+  "failure_policy": "No replacement; invalid/nonfinite public output, different metric keys or parity above tolerance halts and preserves partial trace."
+}

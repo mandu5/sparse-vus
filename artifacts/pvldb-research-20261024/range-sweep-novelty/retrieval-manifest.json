@@ -1,0 +1,553 @@
+{
+  "audit_date": "2026-10-24",
+  "purpose": "Independent public-source novelty and baseline feasibility review for Tatbul range-metric sweep",
+  "scope": "No timing; no candidate implementation; no other internal reviews or scores inspected. Negative source findings cover only explicitly inspected paths.",
+  "files": [
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "prts/base/time_series_metrics.py",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/prts/base/time_series_metrics.py",
+      "sha256": "9e029a3fff08c2603a1b30e5198484df6c833688fbc2637dae007e11e2b0bc6d"
+    },
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "prts/time_series_metrics/precision.py",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/prts/time_series_metrics/precision.py",
+      "sha256": "95b774bc8d79c8a9076a8be15c9f697eb0e1524343d3678ee60d2ab9559aff12"
+    },
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "prts/time_series_metrics/recall.py",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/prts/time_series_metrics/recall.py",
+      "sha256": "0f9864a1c24ab1567453be0e09dec263797a1b8b98aff2c6881cc1a95061da26"
+    },
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "prts/time_series_metrics/precision_recall.py",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/prts/time_series_metrics/precision_recall.py",
+      "sha256": "3a15094a6fc8ed567f817fd24a0f00614ab7fcd5bdacc232ee5015b27385c384"
+    },
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "prts/time_series_metrics/fscore.py",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/prts/time_series_metrics/fscore.py",
+      "sha256": "727cd48337c66eb08895c2788bed4a64b76ad974a97e6f420a531a8e6db04612"
+    },
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "prts/__init__.py",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/prts/__init__.py",
+      "sha256": "97b2d1c0dde851f875171fd304923e7914ff64c9be2c4af3d7752bc5ece914ed"
+    },
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/pyproject.toml",
+      "sha256": "ac0e078f3bcaf0b936226596924ee05da29aef5ce723740ca28fe2923d11b70a"
+    },
+    {
+      "repo": "aeon-toolkit/aeon",
+      "sha": "ac9abc36b1bd53aa98dc5c89062561cc7638f40b",
+      "path": "aeon/benchmarking/metrics/anomaly_detection/_range_metrics.py",
+      "url": "https://raw.githubusercontent.com/aeon-toolkit/aeon/ac9abc36b1bd53aa98dc5c89062561cc7638f40b/aeon/benchmarking/metrics/anomaly_detection/_range_metrics.py",
+      "sha256": "2d1158c4fe18a4c8cbe319b6fd2cd0ce1c8eae4e7511ad473e6cbbf138669b31"
+    },
+    {
+      "repo": "aeon-toolkit/aeon",
+      "sha": "ac9abc36b1bd53aa98dc5c89062561cc7638f40b",
+      "path": "aeon/benchmarking/metrics/anomaly_detection/_continuous.py",
+      "url": "https://raw.githubusercontent.com/aeon-toolkit/aeon/ac9abc36b1bd53aa98dc5c89062561cc7638f40b/aeon/benchmarking/metrics/anomaly_detection/_continuous.py",
+      "sha256": "5544ac632bf192e5d2a9b60909ed10859708e426476349b3e58a5e83977d6ed6"
+    },
+    {
+      "repo": "aeon-toolkit/aeon",
+      "sha": "ac9abc36b1bd53aa98dc5c89062561cc7638f40b",
+      "path": "aeon/benchmarking/metrics/anomaly_detection/_util.py",
+      "url": "https://raw.githubusercontent.com/aeon-toolkit/aeon/ac9abc36b1bd53aa98dc5c89062561cc7638f40b/aeon/benchmarking/metrics/anomaly_detection/_util.py",
+      "sha256": "38e34a615234fba249280d682c6057e68f38e3916b79493b80ebd52260ab56c8"
+    },
+    {
+      "repo": "aeon-toolkit/aeon",
+      "sha": "ac9abc36b1bd53aa98dc5c89062561cc7638f40b",
+      "path": "aeon/benchmarking/metrics/anomaly_detection/thresholding.py",
+      "url": "https://raw.githubusercontent.com/aeon-toolkit/aeon/ac9abc36b1bd53aa98dc5c89062561cc7638f40b/aeon/benchmarking/metrics/anomaly_detection/thresholding.py",
+      "sha256": "d1d4a6f4412b9455bf758badc32035f551ae9b5303a722312e592139b626fde3"
+    },
+    {
+      "repo": "TimeEval/TimeEval",
+      "sha": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+      "path": "timeeval/metrics/range_metrics.py",
+      "url": "https://raw.githubusercontent.com/TimeEval/TimeEval/7c3622757b1a3afa9a84cbc97ce132d9e379f715/timeeval/metrics/range_metrics.py",
+      "sha256": "ba45a0cd3994c075de1026bbbe086ba7a03d0c7a86ca894d1d0cfe854521f5c4"
+    },
+    {
+      "repo": "TimeEval/TimeEval",
+      "sha": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+      "path": "timeeval/metrics/auc_metrics.py",
+      "url": "https://raw.githubusercontent.com/TimeEval/TimeEval/7c3622757b1a3afa9a84cbc97ce132d9e379f715/timeeval/metrics/auc_metrics.py",
+      "sha256": "dcf1c0cfe11cfed7b7b6acb1fc32e5d1041145da0bfb361768fc1d3b291b0feb"
+    },
+    {
+      "repo": "TimeEval/TimeEval",
+      "sha": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+      "path": "timeeval/metrics/__init__.py",
+      "url": "https://raw.githubusercontent.com/TimeEval/TimeEval/7c3622757b1a3afa9a84cbc97ce132d9e379f715/timeeval/metrics/__init__.py",
+      "sha256": "3d79e78d897e4b027f5b6c070a36a77e148bc2e08c429f929d14859df2513ced"
+    },
+    {
+      "repo": "TimeEval/TimeEval",
+      "sha": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+      "path": "setup.py",
+      "url": "https://raw.githubusercontent.com/TimeEval/TimeEval/7c3622757b1a3afa9a84cbc97ce132d9e379f715/setup.py",
+      "sha256": "72c71b834ec9b27eff8d3391c45aff7c15edb391ab9461b464842a939aa3aa7b"
+    },
+    {
+      "repo": "TimeEval/TimeEval",
+      "path": "requirements.txt",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "wagner-d/tsadm",
+      "sha": "05491ba0e7180d1c1b902857ea102ee18fbb2008",
+      "path": "src/tsadm/alarm.py",
+      "url": "https://raw.githubusercontent.com/wagner-d/tsadm/05491ba0e7180d1c1b902857ea102ee18fbb2008/src/tsadm/alarm.py",
+      "sha256": "ddcbdde43e39f5401b0dd9f3394296b9bbba821dfb8a006434a8b651938f41e0"
+    },
+    {
+      "repo": "wagner-d/tsadm",
+      "sha": "05491ba0e7180d1c1b902857ea102ee18fbb2008",
+      "path": "src/tsadm/utils.py",
+      "url": "https://raw.githubusercontent.com/wagner-d/tsadm/05491ba0e7180d1c1b902857ea102ee18fbb2008/src/tsadm/utils.py",
+      "sha256": "d97e93bc8640e229277466df6764a31dab9d8aa817724ea7f2b5ce25b8e90134"
+    },
+    {
+      "repo": "wagner-d/tsadm",
+      "path": "README.md",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "locussam/TSAD-Evaluator",
+      "sha": "3d88d30cb436c5c3270580f030fb091a542327f3",
+      "path": "src/evaluator.cpp",
+      "url": "https://raw.githubusercontent.com/locussam/TSAD-Evaluator/3d88d30cb436c5c3270580f030fb091a542327f3/src/evaluator.cpp",
+      "sha256": "2afd13f12a352656b5009c12cc0470ba4e64d43be72efb84827a13cba05d3eea"
+    },
+    {
+      "repo": "locussam/TSAD-Evaluator",
+      "sha": "3d88d30cb436c5c3270580f030fb091a542327f3",
+      "path": "src/evaluator.h",
+      "url": "https://raw.githubusercontent.com/locussam/TSAD-Evaluator/3d88d30cb436c5c3270580f030fb091a542327f3/src/evaluator.h",
+      "sha256": "2314c4cebc09e2868da47c4e060ca1efb0586f3bf2e44901f427a22e8057a19e"
+    },
+    {
+      "repo": "locussam/TSAD-Evaluator",
+      "sha": "3d88d30cb436c5c3270580f030fb091a542327f3",
+      "path": "src/main.cpp",
+      "url": "https://raw.githubusercontent.com/locussam/TSAD-Evaluator/3d88d30cb436c5c3270580f030fb091a542327f3/src/main.cpp",
+      "sha256": "57b98e20191189a1f857465328126baecf3a1983988724ed67512336b49533f4"
+    },
+    {
+      "repo": "locussam/TSAD-Evaluator",
+      "sha": "3d88d30cb436c5c3270580f030fb091a542327f3",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/locussam/TSAD-Evaluator/3d88d30cb436c5c3270580f030fb091a542327f3/README.md",
+      "sha256": "98b52488b33cf9a5e2469c7539d6b54d5a4c52675049db02810b7e7267b0a39e"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "dqe/dqe_metric.py",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/dqe/dqe_metric.py",
+      "sha256": "faf57952fb933113a01d7603144253b96d912808d1349ee2d24e5e00cd1019b4"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "metrics/Range_Based_PR.py",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/metrics/Range_Based_PR.py",
+      "sha256": "cf1d502f46345531e6de05aded2d68a49eb15f919ba337eff234ed08a16741d1"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "evaluation/basic_metrics.py",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/evaluation/basic_metrics.py",
+      "sha256": "6de9fb2dabe57d3300d7c9e79453f183c442e7f63cc417394847d9d261ec8aa2"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "evaluation/metrics.py",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/evaluation/metrics.py",
+      "sha256": "12207b4d0e06b75ad0d9ca5f48665fc5ee23cfe7d0bea48d65c16644f909d090"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "metrics/evaluator.py",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/metrics/evaluator.py",
+      "sha256": "a59fc510fe4017096861701ac06c25c1ce148f86974ea32e230ad2176c137036"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "metrics/metrics_pa.py",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/metrics/metrics_pa.py",
+      "sha256": "9986124f59d65116d400cca2aacf16fb6fb389d37f5b5fd88e3deffbb77f09e1"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "metrics/pate/PATE_metric.py",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/metrics/pate/PATE_metric.py",
+      "sha256": "04de99ffc66db556a4213a4290851c74038147f1bf4997f0844653df950a93ed"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/README.md",
+      "sha256": "17ce3c0211adcc2e80c92561122d9a505cb6b135fc93a12ebea9b6da6598fbc6"
+    },
+    {
+      "repo": "dawnvince/EasyTSAD",
+      "sha": "a13519014c0334a26b0e74480881db503e6a8e0b",
+      "path": "EasyTSAD/Evaluations/Protocols/EventF1PA.py",
+      "url": "https://raw.githubusercontent.com/dawnvince/EasyTSAD/a13519014c0334a26b0e74480881db503e6a8e0b/EasyTSAD/Evaluations/Protocols/EventF1PA.py",
+      "sha256": "d2b75841cdf2216d0dc88b923ce9170c53f6a2694ecf1eb0ec8cc1c1f672c178"
+    },
+    {
+      "repo": "dawnvince/EasyTSAD",
+      "sha": "a13519014c0334a26b0e74480881db503e6a8e0b",
+      "path": "EasyTSAD/Evaluations/utils.py",
+      "url": "https://raw.githubusercontent.com/dawnvince/EasyTSAD/a13519014c0334a26b0e74480881db503e6a8e0b/EasyTSAD/Evaluations/utils.py",
+      "sha256": "f5c030e30c1fce8b1428a3ffda46a0366b48fd477e44742c58728eb0b608a00d"
+    },
+    {
+      "repo": "dawnvince/EasyTSAD",
+      "sha": "a13519014c0334a26b0e74480881db503e6a8e0b",
+      "path": "EasyTSAD/Evaluations/Protocols/PointF1.py",
+      "url": "https://raw.githubusercontent.com/dawnvince/EasyTSAD/a13519014c0334a26b0e74480881db503e6a8e0b/EasyTSAD/Evaluations/Protocols/PointF1.py",
+      "sha256": "4be93daf58ff0f2ef0dd9837a092cb9069b7a5192bb6c7008dcb814354e9b91a"
+    },
+    {
+      "repo": "Raminghorbanii/PATE",
+      "sha": "2d358ce1b065674fcdadda115a08bbe6376273d0",
+      "path": "pate/PATE_metric.py",
+      "url": "https://raw.githubusercontent.com/Raminghorbanii/PATE/2d358ce1b065674fcdadda115a08bbe6376273d0/pate/PATE_metric.py",
+      "sha256": "b7b662ee8fa7deba810a146be56e05009d3b958e2a163da1826fc7810299da94"
+    },
+    {
+      "repo": "Raminghorbanii/PATE",
+      "sha": "2d358ce1b065674fcdadda115a08bbe6376273d0",
+      "path": "metrics/Range_Based_PR.py",
+      "url": "https://raw.githubusercontent.com/Raminghorbanii/PATE/2d358ce1b065674fcdadda115a08bbe6376273d0/metrics/Range_Based_PR.py",
+      "sha256": "c07b8269865239e387b33fe0533978f347fd19441079c92e3ed3fb150c30ad05"
+    },
+    {
+      "repo": "Raminghorbanii/PATE",
+      "sha": "2d358ce1b065674fcdadda115a08bbe6376273d0",
+      "path": "metrics/evaluator.py",
+      "url": "https://raw.githubusercontent.com/Raminghorbanii/PATE/2d358ce1b065674fcdadda115a08bbe6376273d0/metrics/evaluator.py",
+      "sha256": "a59fc510fe4017096861701ac06c25c1ce148f86974ea32e230ad2176c137036"
+    },
+    {
+      "repo": "Higashiguchi-Shingo/TSADmetrics",
+      "sha": "a24276e5fc65bd3d7e0c9565932cc9b21412886a",
+      "path": "src/TSADmetrics/metrics.py",
+      "url": "https://raw.githubusercontent.com/Higashiguchi-Shingo/TSADmetrics/a24276e5fc65bd3d7e0c9565932cc9b21412886a/src/TSADmetrics/metrics.py",
+      "sha256": "2da5b0080978accb04ff469f3f0cd615525523a3a24cb18f061d8a9d76067b67"
+    },
+    {
+      "repo": "TheDatumOrg/TSB-AD",
+      "sha": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+      "path": "TSB_AD/evaluation/basic_metrics.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/303dffbfc11612995b17b06633f8c9d0ea0e38e5/TSB_AD/evaluation/basic_metrics.py",
+      "sha256": "1fcddedf5ada1d5221f39ee568c7fddb9e7181bd7e1c19636c2cbecf40c97707"
+    },
+    {
+      "repo": "TheDatumOrg/TSB-AD",
+      "sha": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+      "path": "TSB_AD/evaluation/metrics.py",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/303dffbfc11612995b17b06633f8c9d0ea0e38e5/TSB_AD/evaluation/metrics.py",
+      "sha256": "13957d15d3ebb2b743a4bebfa3a68af31e82a58ecc568557b4081ad90e38094d"
+    },
+    {
+      "repo": "dihi/clinical-ts-metrics",
+      "sha": "2b776e11a296ec1762455151b0927612d2a3d673",
+      "path": "src/process_trajectories.nim",
+      "url": "https://raw.githubusercontent.com/dihi/clinical-ts-metrics/2b776e11a296ec1762455151b0927612d2a3d673/src/process_trajectories.nim",
+      "sha256": "538c7728bc8d4a1f1bd5d46a93fc839e8785a22ee1d368e8b199d1ce05c18225"
+    },
+    {
+      "repo": "dihi/clinical-ts-metrics",
+      "sha": "2b776e11a296ec1762455151b0927612d2a3d673",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/dihi/clinical-ts-metrics/2b776e11a296ec1762455151b0927612d2a3d673/README.md",
+      "sha256": "3b514ee66651228098b1d8df798eebfb93b90a7c609146892f61749e09e9b0c1"
+    },
+    {
+      "repo": "KurochkinAlexey/TSPrecisionRecall",
+      "sha": "9140bd3785796c513d2d93bab21f618ec6d9792c",
+      "path": "TSMetric.ipynb",
+      "url": "https://raw.githubusercontent.com/KurochkinAlexey/TSPrecisionRecall/9140bd3785796c513d2d93bab21f618ec6d9792c/TSMetric.ipynb",
+      "sha256": "445befc345f0c3b3f453bbd40797e61b99ceaf320de9f6c9d7d1ee2c448669d1"
+    },
+    {
+      "repo": "wagner-d/tsadm",
+      "sha": "05491ba0e7180d1c1b902857ea102ee18fbb2008",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/wagner-d/tsadm/05491ba0e7180d1c1b902857ea102ee18fbb2008/LICENSE",
+      "sha256": "de33aa86488430a04c80137199429e3e211deca1e8a6dbb384d614d57ac4a8d3"
+    },
+    {
+      "repo": "TheDatumOrg/TSB-AD",
+      "sha": "303dffbfc11612995b17b06633f8c9d0ea0e38e5",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/303dffbfc11612995b17b06633f8c9d0ea0e38e5/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "repo": "aeon-toolkit/aeon",
+      "sha": "ac9abc36b1bd53aa98dc5c89062561cc7638f40b",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/aeon-toolkit/aeon/ac9abc36b1bd53aa98dc5c89062561cc7638f40b/LICENSE",
+      "sha256": "dc3459a1fd14b6bcd10d13172dde23dd8c296660320dcb2b784efee5cd27c329"
+    },
+    {
+      "repo": "Yueweilirepo/DQE",
+      "sha": "055c23eb6e061284021b7c37ecd6615c85d61837",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Yueweilirepo/DQE/055c23eb6e061284021b7c37ecd6615c85d61837/LICENSE",
+      "sha256": "5dfc76834c7c2a806685f0ec527cdea23ad2b76dd760c61ded22c2b887ed81a2"
+    },
+    {
+      "repo": "locussam/TSAD-Evaluator",
+      "sha": "3d88d30cb436c5c3270580f030fb091a542327f3",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/locussam/TSAD-Evaluator/3d88d30cb436c5c3270580f030fb091a542327f3/LICENSE",
+      "sha256": "e3482601971706724254c616a5d13edaeeab57ba774ef6cbb24c67413ade242d"
+    },
+    {
+      "repo": "Raminghorbanii/PATE",
+      "sha": "2d358ce1b065674fcdadda115a08bbe6376273d0",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Raminghorbanii/PATE/2d358ce1b065674fcdadda115a08bbe6376273d0/LICENSE",
+      "sha256": "ef092a364bb0e57eeab740c187e2543d685613bc85adcb112717c31b87126ded"
+    },
+    {
+      "repo": "wagner-d/TimeSeAD",
+      "sha": "bb8efa9ce17f9cfb0bab77df08c32d986de8429e",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/wagner-d/TimeSeAD/bb8efa9ce17f9cfb0bab77df08c32d986de8429e/LICENSE",
+      "sha256": "3e3ed418d1b09a2917f4045cc49371554958fcc3337105a299adddb5805b87e2"
+    },
+    {
+      "repo": "CompML/PRTS",
+      "sha": "66db2ac5f83ac9182ce29dcd7afc0f678a678eed",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/CompML/PRTS/66db2ac5f83ac9182ce29dcd7afc0f678a678eed/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "repo": "TimeEval/TimeEval",
+      "sha": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/TimeEval/TimeEval/7c3622757b1a3afa9a84cbc97ce132d9e379f715/LICENSE",
+      "sha256": "f047d8cf14baad94ec3d585efc35ec17ec9cecd4f95d2d95721d9bfcb91cf453"
+    },
+    {
+      "repo": "dawnvince/EasyTSAD",
+      "sha": "a13519014c0334a26b0e74480881db503e6a8e0b",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/dawnvince/EasyTSAD/a13519014c0334a26b0e74480881db503e6a8e0b/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "repo": "wagner-d/TimeSeAD",
+      "sha": "bb8efa9ce17f9cfb0bab77df08c32d986de8429e",
+      "path": "timesead/evaluation/__init__.py",
+      "url": "https://raw.githubusercontent.com/wagner-d/TimeSeAD/bb8efa9ce17f9cfb0bab77df08c32d986de8429e/timesead/evaluation/__init__.py",
+      "sha256": "a17a3a444959adcafaf937bd7e769b817492f1412468f704a9ed223348ae4f16"
+    },
+    {
+      "repo": "wagner-d/TimeSeAD",
+      "sha": "bb8efa9ce17f9cfb0bab77df08c32d986de8429e",
+      "path": "timesead/evaluation/ts_precision_recall.py",
+      "url": "https://raw.githubusercontent.com/wagner-d/TimeSeAD/bb8efa9ce17f9cfb0bab77df08c32d986de8429e/timesead/evaluation/ts_precision_recall.py",
+      "sha256": "d5bb774b4aab9e441e4119e957ce5fe52a4abed965d6286705836e002dd162c8"
+    },
+    {
+      "repo": "wagner-d/TimeSeAD",
+      "sha": "bb8efa9ce17f9cfb0bab77df08c32d986de8429e",
+      "path": "timesead/evaluation/evaluator.py",
+      "url": "https://raw.githubusercontent.com/wagner-d/TimeSeAD/bb8efa9ce17f9cfb0bab77df08c32d986de8429e/timesead/evaluation/evaluator.py",
+      "sha256": "f84495ccc62eeba905c515c8ac2d709b10302a6e20220692348ef73b6a633cea"
+    },
+    {
+      "repo": "sondsorb/TSAD_eval",
+      "sha": "e34a70968b8eb46940f92b54800e861b079ee646",
+      "path": "metrics.py",
+      "url": "https://raw.githubusercontent.com/sondsorb/TSAD_eval/e34a70968b8eb46940f92b54800e861b079ee646/metrics.py",
+      "sha256": "a74346423f0c8923fe76578e0bb2fc96c93635c25e00bff89cdffac487ece58d"
+    },
+    {
+      "repo": "sondsorb/TSAD_eval",
+      "sha": "e34a70968b8eb46940f92b54800e861b079ee646",
+      "path": "threshold_plt.py",
+      "url": "https://raw.githubusercontent.com/sondsorb/TSAD_eval/e34a70968b8eb46940f92b54800e861b079ee646/threshold_plt.py",
+      "sha256": "804ef3cffdffa13eadd2c590261ba739d42efe005a0d0f290afb91f45f7bceb8"
+    },
+    {
+      "repo": "sondsorb/TSAD_eval",
+      "sha": "e34a70968b8eb46940f92b54800e861b079ee646",
+      "path": "prts/base/time_series_metrics.py",
+      "url": "https://raw.githubusercontent.com/sondsorb/TSAD_eval/e34a70968b8eb46940f92b54800e861b079ee646/prts/base/time_series_metrics.py",
+      "sha256": "9e029a3fff08c2603a1b30e5198484df6c833688fbc2637dae007e11e2b0bc6d"
+    }
+  ],
+  "public_prts_sdist": {
+    "version": "1.0.0.3",
+    "url": "https://files.pythonhosted.org/packages/15/f7/2ba5af48ac7df243840dc36212690800b5eb360ad2545fe511ff1a095439/prts-1.0.0.3.tar.gz",
+    "sha256": "82baa65f3f121688e2b838b8512e6bd5d3b854bb1dcfae7dced7d78cffc095db"
+  },
+  "prts_sdist_github_agreement": [
+    {
+      "path": "prts/base/time_series_metrics.py",
+      "pypi_github_byte_equal": true,
+      "sha256": "9e029a3fff08c2603a1b30e5198484df6c833688fbc2637dae007e11e2b0bc6d"
+    },
+    {
+      "path": "prts/time_series_metrics/precision.py",
+      "pypi_github_byte_equal": true,
+      "sha256": "95b774bc8d79c8a9076a8be15c9f697eb0e1524343d3678ee60d2ab9559aff12"
+    },
+    {
+      "path": "prts/time_series_metrics/recall.py",
+      "pypi_github_byte_equal": true,
+      "sha256": "0f9864a1c24ab1567453be0e09dec263797a1b8b98aff2c6881cc1a95061da26"
+    },
+    {
+      "path": "prts/time_series_metrics/fscore.py",
+      "pypi_github_byte_equal": true,
+      "sha256": "727cd48337c66eb08895c2788bed4a64b76ad974a97e6f420a531a8e6db04612"
+    }
+  ],
+  "timesead_scalar_semantic_checks": [
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pred": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "precision": 1.0,
+      "recall": 0.5
+    },
+    {
+      "labels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "pred": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "precision": 1.0,
+      "recall": 0.375
+    },
+    {
+      "labels": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "pred": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "precision": 0.2,
+      "recall": 1.0
+    },
+    {
+      "labels": [
+        0,
+        0,
+        0
+      ],
+      "pred": [
+        0,
+        0,
+        0
+      ],
+      "precision": 1,
+      "recall": 1
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "pred": [
+        0,
+        0,
+        0
+      ],
+      "precision": 0,
+      "recall": 0
+    },
+    {
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "pred": [
+        1,
+        1,
+        1
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  ],
+  "original_intel_repository_status": "https://github.com/IntelLabs/TSAD-Evaluator and its GitHub repository API returned 404. The locussam preserved copy is fork=false and byte identity to the lost original was not established.",
+  "search_limits": [
+    "Firecrawl account out of credits; alternative web and direct public retrieval used.",
+    "No exhaustive global GitHub code search.",
+    "Kurochkin notebook retrieved but not fully audited.",
+    "Some recent papers were screened only at abstract or relevant-section level, as stated in the memo."
+  ],
+  "prior_review_sha256": "bcac317c06f758190a382bdd740812c13feed1a936b7f05f7d82654fcd00e114"
+}

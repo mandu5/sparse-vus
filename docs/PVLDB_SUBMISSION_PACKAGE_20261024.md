@@ -60,9 +60,7 @@ global ties, merged anomaly components, and the dynamic ROC contribution.
 The technical development builds directly on VUS and its optimized evaluators
 in the PVLDB/VLDB Journal literature. The formal target and support-event
 identities are in Section 2; comparisons to existing evaluators and the exact
-algorithm are in the subsequent algorithm sections. The prototype includes a
-compiled dense control and shared-label preparation/streaming ablations, so the
-operator-level gain is distinguished from compilation and conventional batching.
+algorithm are in the subsequent algorithm sections. The prototype includes compiled dense, optimized conventional direct-ramp and shared-label controls. The conventional compiled scalar wins on all 73 primary cases, so the paper does not attribute the public-library gap to a separately demonstrated runtime superiority of nearest geometry. Stream adds 13–18% over that control in complete VUS workflows. In an actual nine-metric public consumer, whole-workflow speedup is only 1.031x; the paper states this application limit prominently.
 The evaluation measures complete public calls and collection workflows from
 score-file reads through decision-file writes, with public raw-data provenance,
 fixed full-precision inputs, paired uncertainty and a fresh second-CPU execution.
@@ -87,3 +85,7 @@ final immutable commit. The abstract should match the compiled manuscript.
 The source, numerical tables, raw timing records, hashes, review-response
 ledger and reproduction commands remain in the artifact. Internal reviews are
 research-quality checks, not external decision letters or acceptance receipts.
+
+## Current internal decision
+
+Three independent final mock assessments of the 11-page revision are Accept 7, Revise 5 and Reject 5 on explicitly internal surrogate scales. This package is reviewable preparation, not a claim of strong consensus for submission. A separately frozen range-metric generalization study is ongoing; its results are not part of this PDF or pre-attested here.

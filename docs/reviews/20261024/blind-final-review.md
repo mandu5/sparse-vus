@@ -183,3 +183,133 @@ c431080f976b6937bcba83c0ce06905745831c79936acef44f29315ae05af037  experiments/re
 23c6e6e4ce235a12df2d9bc5e93753f970a151b59adb3acaaf09dafd81036e2f  /tmp/pvldb-blind-final-oct24/independent_operator_check.py
 ed80531a843d58fe2e7c7a631520bb54cb8d9732781d7cba838ca4ee838e3a36  /tmp/pvldb-blind-final-oct24/independent-operator-result.json
 ```
+
+---
+
+# Addendum: independent reassessment after the three requested additions
+
+Date: 24 October 2026. Five evidence gates remain directly supported; the aggregate count/independence requirement in gate 5 remains deliberately unverified by this reviewer. Next: retain the exact-operator result and adverse controls as a bounded research artifact; further investment in this PVLDB Foundations and Algorithms claim requires a new, discriminating scientific question rather than another timing round on the same panel.
+
+**Updated recommendation: Reject for the current PVLDB Regular Research / Foundations and Algorithms submission. Internal surrogate score: 5/10. Confidence: 4/5.** The earlier **Revise, 6/10** assessment above is preserved verbatim. The same surrogate definitions and public venue criteria apply; this is not a confidential CMT score or an external decision. This change follows substantive new evidence, rather than a change in the requested experimental requirements.
+
+The requested additions are complete. Their missing-evidence objections are closed. The new evidence makes the implementation and its limitations more credible, while reducing my assessment of the remaining algorithmic contribution and demonstrated application significance. A technically sound, useful evaluator can satisfy the prospective internal 5-point gate while falling below this reviewer's publication threshold for the chosen category.
+
+## What was newly reviewed and verified
+
+The reviewed manuscript is now 11 pages: PDF SHA-256 `fb81365502f290ae06ae7662019cc9a232a00dc00fd3d50140d95b3b87601633`, body SHA-256 `91e638315c79c0094bffe1c4fecbfc9436f01f4e4dbc76a762c44a7cc0fc8dc3`. I read the permitted common `post-review-additions.md`, the new manuscript passages/table, the three new evidence directories, reproduction instructions, and the relevant producer/control/auditor sources. I inspected the rendered new results and closing pages. No other internal reviews, scores or agent listings were consulted.
+
+I reran `audit_pvldb_compiled_control.py` and `audit_pvldb_consumer.py` into new temporary outputs, using the documented statsmodels overlay for the consumer. Both passed and their parsed JSON exactly matched the supplied independent reports. I reran `analyze_pvldb_score_probe.py`; its parsed output exactly matched the archived comparison. This replay evaluates saved arrays but does not regenerate detector fits or rerun timing. I separately checked dtype, shape and raw bytes for the six input/standardization arrays, confirming actual byte equality rather than relying only on numerical equality. A further 120 small tied/untied direct-definition cases checked the new compiled control at widths 0, 1, 2, 3, 30 and 100; maximum discrepancy was `2.22e-16`.
+
+No new timing experiment was performed in this review. All earlier numerical, dependence, memory, approximation, frozen-protocol and host-scope qualifications remain applicable.
+
+## 1. The matched control resolves attribution uncertainty with an unfavorable result
+
+The new control is a legitimate optimized author-created comparator. Source inspection confirms common validation, radix ranking, complete global tie counts and support enumeration, followed by direct width-specific summed/clipped ramps and component scans. Original-positive grouped mass is hoisted across widths, and scratch is support-local. It does not use the two-nearest-distance construction. The implementation and manuscript correctly identify it as a reimplementation, not unchanged upstream Klein or a literal compilation of that code.
+
+The six balanced orders, all 73 cases, eight unchanged profiles per case and six workflow passes per collection are adequate for the stated fixed-panel comparison. Maximum recorded PR difference is `4.44e-16`. The important numbers are:
+
+| Collection | Control / released, case geometric ratio with adjusted 95% CI | Control / stream, case geometric ratio with adjusted 95% CI | Control / stream, workflow median ratio |
+| --- | --- | --- | ---: |
+| NAB | 0.910 [0.905, 0.915] | 1.357 [1.291, 1.427] | 1.177 |
+| SMAP | 0.960 [0.945, 0.973] | 1.201 [1.180, 1.224] | 1.126 |
+| SMD | 0.978 [0.969, 0.985] | 1.166 [1.158, 1.174] | 1.152 |
+
+The conventional control is faster than released scalar evaluation in every case; the adjusted intervals all remain below one. The smaller stream gain is also real on this panel. This contradicts a separate empirical superiority claim for nearest-distance scalar geometry at the primary width. The large unchanged-public-API ratios remain correct but are poor measures of the distinctive contribution relative to an optimized conventional implementation.
+
+Two boundaries matter. First, the control itself reuses the candidate's support-event/global-tie machinery, and it implements only PR. It is therefore not evidence that an independent prior public algorithm already contains the entire ROC identity, or that the support-event theorem is false. Second, the control also hoists mass and changes scratch handling; this is not an isolated intervention proving that nearest-distance arithmetic is intrinsically slower. Direct ramp construction can have different costs at larger widths or more overlapping components. The supported conclusion is narrower: the primary data no longer provide a compelling independent runtime justification for this geometric construction over a well-optimized conventional support approach.
+
+This outcome weakens the strongest performance-based argument for algorithmic significance. What survives is the exact dynamic scalar representation, correct ROC predecessor bookkeeping, a support-sensitive bound, and modest work-sharing gains. These remain useful. In my assessment the conceptual advance over support cumsums, ordinary rank-event compression and standard reuse is too limited to carry the present Foundations and Algorithms paper by itself.
+
+## 2. The public consumer establishes a small benefit and an explicit bottleneck
+
+The source-level consumer is appropriate: pinned TSB-AD `get_metrics`, all nine outputs, an unchanged public width estimator, and an injection only at the scalar ROC+PR callback. Both timed backends are exact and return both VUS outputs. This is not a comparison to TSB-AD's original sampled default or a claim to replay its detector-training script. The largest primary recording was selected by length, with a fixed tie break, before consumer outcomes; it has 28,696 points and the public estimator chooses width 125.
+
+The full trace contains four ABBA passes, eight profiles per pass and all 32 nine-metric calls. The independent audit validates the selected case, width, order, input/source binding, complete metric keys, nested timings and output agreement (`3.44e-15`). The initial statsmodels 0.14.2/pandas import failure precedes measurement and is retained; the separate 0.14.6 overlay is documented. I found no measurement-invalidity defect in this experiment.
+
+The outcome is adverse to broad application-impact claims:
+
+- Median VUS time: `0.928865 s -> 0.014060 s`, ratio **66.067**.
+- Median complete consumer time: `34.260309 s -> 33.233999 s`, ratio **1.030881**.
+- VUS is only **2.70-2.72%** of baseline time.
+
+At the baseline median, setting VUS cost to zero while holding other work fixed yields an Amdahl ceiling of about **1.027868**. Substituting the measured faster VUS cost gives **1.027434**. The slightly larger observed whole-workflow ratio includes approximately **0.1115 seconds** less non-VUS/other work; with two observations per backend, that difference should not be assigned causally to the evaluator. The manuscript's descriptive interpretation is appropriate.
+
+This is one fixed consumer, not proof that VUS is unimportant in every application. VUS-only profile selection and the previously reported long-recording workloads still have valid absolute savings. Nevertheless, the concrete public consumer requested in the initial review supplies no strong positive application-impact evidence: most of its runtime lies elsewhere. Seeking a different workload solely because this one is unfavorable would not improve the scientific case. A new workload would need an independent, documented usage reason.
+
+## 3. The two-host diagnosis resolves the evaluator-versus-score ambiguity
+
+The archived arrays make the previously opaque discrepancy inspectable. Observations, labels, standardized matrices, fit indices, feature means and feature standard deviations have identical dtype, shape and bytes. SVM fitted states differ: 104 versus 105 support vectors, both fit status 0 and 133 iterations; maximum SVM score difference is about `0.000119587`.
+
+Both score sets, evaluated on the same reviewer host, reproduce SVM VUS-PR values **0.3092648648** and **0.3329318469**, and agree with unchanged exact Klein to at most `5.56e-17`. The difference is localized after standardization to model fitting/score generation, rather than a disagreement between these VUS implementations on identical input arrays. The receipts preserve differing loaded backend configurations, but there is no causal intervention establishing which library, compiler or instruction caused the fitted-state difference.
+
+The Mac complete score bytes match the original experiment. The new Linux complete eight-model score bytes do not match its earlier runner, and other original-versus-repeat metric differences reach `0.000582135`. The new diagnostic reproduces the SVM metric discrepancy and the 250-threshold winner switch but is not recovery of the missing original Linux arrays. Non-SVM scores also differ between hosts. This qualification is correctly preserved. I consider the requested diagnostic issue resolved to a scientifically useful, bounded extent; recovering the unavailable original arrays is not an outstanding revision request.
+
+## Why the recommendation changes
+
+The previous Revise recommendation asked for three specific additions to discriminate between a substantial method and a primarily implementation-driven improvement. They have now been supplied, including the negative outcomes. The new control shows that the conventional compiled scalar method is already faster on the complete primary panel, and the actual public consumer shows a small total benefit despite a very large VUS-kernel speedup. The host analysis closes a reproducibility concern without adding algorithmic novelty.
+
+The resulting paper is more reliable and more useful as an exact-operator reference, but the evidence does not establish enough remaining algorithmic novelty or practical significance for my acceptance recommendation at PVLDB Foundations and Algorithms. This is a substantive threshold judgment, not a correctness rejection, a complaint about the number of tests, or a penalty for reporting negative results. The disclosed public unrefereed precursor remains eligible to be part of the first archival contribution; the whole-method rather than batch-only framing was used throughout.
+
+The same public calibration supports this distinction. The accepted specialized-combination example prevents an automatic rejection merely for using known components, but usefulness and contribution must still be demonstrated in the particular paper. The rejected component-attribution examples are relevant because the new measurements substantially narrow which mechanism is responsible for speed. The rejected theory/system example does not imply the theorem here is wrong: its algebra and sparse-support trend remain supported. Negative findings can themselves be valuable research, but a single Amdahl-limited consumer plus this fixed-panel attribution result is not yet a broad EA&B contribution either. I do not infer that changing the category name would produce acceptance.
+
+The abstract remains numerically accurate about public API speedups. A future version should also foreground the compiled-control and consumer boundaries, because they now materially affect interpretation of those headline ratios. Editorial clarification alone would not change this recommendation.
+
+## Updated six-gate assessment
+
+| Gate | Reassessment | Consequence of the additions |
+| --- | --- | --- |
+| 1. Recent primary literature and a surviving distinction | **Pass for the scoped evidence requirement; significance objection remains** | The earlier twelve-plus-paper comparison and exact dynamic ROC distinction still stand. The new control shares candidate event machinery, so it is not a proof of independent prior anticipation. The size/depth of the surviving advance is now less persuasive. |
+| 2. Strong same-contract baselines, three collections and ablations | **Pass for the declared CPU operator comparison** | Unchanged public comparisons remain valid. The stronger author-created internal control is included with all unfavorable scalar results, and stream still improves all three collection workflows modestly. Its smaller ratios must accompany the much larger public-library ratios. |
+| 3. Real-data scope and failures | **Pass within the limited claim** | Existing real inputs and failure cases remain; the public consumer adds a measured application limitation rather than proving broad end-to-end benefit. No new population-independence claim is justified. |
+| 4. Reproduction/reconstruction | **Pass for the stated primary/supplement numerical scope** | New independent audit replays agree exactly; the host diagnostic is now inspectable. Follow-ups retain separate commands, and original missing Linux arrays remain missing. This is not one command reproducing every later figure/experiment. |
+| 5. At least three independent calibrated reviews | **Aggregate unverified by this reviewer** | This addendum is a reassessment by the same reviewer, not an additional independent review. Other reviews remain unread. The coordinator must verify their count and independence. |
+| 6. Venue, category, scope and deadline | **Pass as a target declaration** | PVLDB Vol. 20 Regular Research / Foundations and Algorithms and the 25 November/1 December cycle remain explicit. Naming the venue and having an in-scope operator do not settle the contribution threshold. |
+
+Thus five gates are directly supported here, with gate 5's aggregate intentionally unverified. Passing these operational evidence requirements is not identical to a positive referee recommendation.
+
+## Prospective project 5-point versus 6-point gates
+
+**5-point candidate: substantive/numeric conditions still supported, conditional on the coordinator's three-independent-review check.** The frozen gate compares whole-workflow speed to the strongest eligible *external* same-contract baseline and separately requires internal controls. Those external ratios still far exceed 1.5 with lower paired bounds above one on all three collections. An identifiable exact-operator result survives; no unresolved mathematical or measurement-invalidity defect was found. Replacing that prospective external-baseline rule after seeing the new internal control would change the gate, so I do not do so. The new internal ratios nevertheless matter greatly to scientific significance.
+
+**6-point candidate: not established.** The original primary SMD sharing increment remains 1.207, with its adjusted upper confidence bound 1.221. The new control study also gives only 1.193 released/stream on SMD; neither result supports a uniform 1.25 primary-collection increment. Against the new internal control, SMAP/SMD case gains are 1.201/1.166 and workflow gains are 1.126/1.152. These new comparisons are supporting context, not substituted prospective thresholds. The same earlier wording qualification about pooled versus per-collection interpretation remains, and the gate fails to be established even under a pooled reading because a major substantive-novelty objection persists and a qualifying new generalization has not been demonstrated. The fresh host diagnostic and public consumer are valuable validation, not such a generalization. Two CPU environments and the external-workflow condition remain satisfied.
+
+## Is further scientific work justified?
+
+The current three requested investigations are complete; repeating them more often is not the next useful step. The evidence justifies retaining and sharing a careful exact VUS implementation, its derivation, strong public-API gains, and its negative controls. It does not justify open-ended additional optimization or reviewer rounds solely to obtain a higher score for this same claim.
+
+A **bounded new investigation** could be scientifically worthwhile if it is explicitly a different, falsifiable question: for example, whether the two-distance construction has a predictable advantage over direct ramps in high-overlap/high-width real workloads, using the current conventional control and a workload rule fixed independently of outcomes; or whether a documented real consumer is actually dominated by repeated exact VUS queries. Such a study should start from the mechanism or usage evidence and retain failures. It is not required to complete the current review, and synthetic favorable cases alone would not establish application importance.
+
+My present investment recommendation is to close this evidence cycle at the supported 5-point level, preserve the full artifact and consider a narrower software/technical contribution. Reopen the PVLDB main-track investment only when a distinct mechanism or independently motivated bottleneck can be stated before further measurement. Neither broad rejection of the research topic nor a promise that another venue would accept follows from this assessment.
+
+## Addendum verification and exact identities
+
+The original review prefix before this addendum has SHA-256 `2253faa873bdad3297722c2e6c635a925584275cd671c8ef753d95e55def174d` and was preserved byte-for-byte. New reviewer audit outputs are in `/tmp/pvldb-blind-final-oct24/`; their parsed contents exactly match the supplied three reports. The following full digests identify the revised manuscript and new evidence actually assessed.
+
+```text
+fb81365502f290ae06ae7662019cc9a232a00dc00fd3d50140d95b3b87601633  paper/sparse_vus_pvldb20261024.pdf
+91e638315c79c0094bffe1c4fecbfc9436f01f4e4dbc76a762c44a7cc0fc8dc3  paper/sparse_vus_pvldb20261024_body.tex
+207009804ae15ae6e3efd3cac83bab79f215528b239a3146e919d15c1532cce3  paper/sparse_vus_pvldb20261024.tex
+6e41e18f56568848453e91d53599799a2f93ebd73f2fb0ea14b8427585d24b84  paper/pvldb20261024_tables.tex
+6e0c54f33a7ab0b2c74c040ce463bbdf863526bdbdf2f3cadc192340a9d4850d  docs/REPRODUCE_PVLDB_20261024.md
+518b837cd6f3855d334b4d0a13abb82010fa1a767dabdd84ccdd25d453718f5c  docs/reviews/20261024/post-review-additions.md
+c2a985dd93c97aed7899e75d8ae3657ee806f5c29bcaa54b72c519efb928ea7d  experiments/support_cumsum_control.py
+9276086f38021b236a26dc17548872da707e574de82918380068818456397d03  experiments/pvldb_compiled_control.py
+5ddbb19e4c76a5768a6a966da22dbce1c6c7c8c8d694473805ffb45b318ef5c8  experiments/audit_pvldb_compiled_control.py
+287eb7c3a1f94144a0894e700ae61926059b48bfd0910a690d7c0d7926df71cf  experiments/pvldb_consumer.py
+13ddbb522cd709d856bee2a8888a8f41952da0b101d59004a1a35cc647c3e350  experiments/audit_pvldb_consumer.py
+0b7ab5216989fa03e336dc82718797003fe2bc398e2a49badcb83162df34821b  experiments/pvldb_score_probe.py
+a2d034bbc4c080580d7ad8aeb3ca5ef177f6cf1aed9b207d1560545503951668  experiments/analyze_pvldb_score_probe.py
+13dd166e907be1756c07d9f2216e86bf61016409901408aa94cc4068adb828b5  artifacts/pvldb-research-20261024/compiled-support-control/protocol.json
+ba8ea76283d68aa0d888673006c7a10743704137ceb4f700d6f9724ddc339330  artifacts/pvldb-research-20261024/compiled-support-control/independent-report.json
+846e9147300a3d49c5cb756b5ebce18d2c6a6c7580ac98243d3bfdf552f5d950  artifacts/pvldb-research-20261024/compiled-support-control/records.jsonl
+bd082af600f885de1e833e5312328e319b88bd27ff32bd9812429dfa4681c4d6  artifacts/pvldb-research-20261024/compiled-support-control/workflows.jsonl
+4811c90e71adf7681834818237fd2fa9587e3806b60ff05d4aac68a4c7f73354  artifacts/pvldb-research-20261024/public-consumer/protocol.json
+ad2cb5ee149283e1ebb37e3d4cbfc8b0ba733f4be3a23e8852e8e1b1d15d5612  artifacts/pvldb-research-20261024/public-consumer/independent-report.json
+c71985a9b3564007b3c1760be353ec8ba7cbb07fb6cbe0449e9d311c8c551633  artifacts/pvldb-research-20261024/public-consumer/profiles.jsonl
+f767ca0dd210c3c6b6ad502075551b20514975be2e98bb1f7e71bd19ddf7def8  artifacts/pvldb-research-20261024/public-consumer/workflows.jsonl
+ee0870d5dae4ab331fa1565785a16b4718e5be8ceb4fbd9d6fe365a90abc10df  artifacts/pvldb-research-20261024/score-host-probe/comparison.json
+31d74c80c82d03529a9822e67da88e1469e9901d306d8aa326f791d6b6c2094e  artifacts/pvldb-research-20261024/score-host-probe/mac/receipt.json
+2fef454c4712615b5711143fa4af4beb9a442d20abace73349ad8553c2393ae5  artifacts/pvldb-research-20261024/score-host-probe/mac/arrays.npz
+9d140e3fce5186f69a80e875a36ee6b3bcff0f7db4caff4016ee13f395172967  artifacts/pvldb-research-20261024/score-host-probe/linux/receipt.json
+0f602e4889d22e5a878cb7c24bc5c4f2911cc2f359073a27e9b30ca6c3dc1f01  artifacts/pvldb-research-20261024/score-host-probe/linux/arrays.npz
+```

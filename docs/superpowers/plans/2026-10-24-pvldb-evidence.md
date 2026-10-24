@@ -56,11 +56,11 @@ Files: `experiments/pvldb_full_precision.py`, `tests/test_pvldb_full_precision.p
 
 ## Task 4: Scientific decision and review
 
-- [ ] Update all six gates with evidence; never count a prepared artifact as a result.
+- [x] Update all six gates with evidence; never count a prepared artifact as a result.
 - [x] Obtain three independent reviews using verified venue criteria and public-review calibration.
-- [ ] For each remaining scientific failure, try three materially different remedies before changing the claim or target.
-- [ ] Select the supported research-score band and venue; only supported results enter the manuscript.
-- [ ] Prepare the final submission path if gates pass; preserve actual submission/acceptance receipts separately.
+- [x] For each remaining scientific failure, try three materially different remedies before changing the claim or target.
+- [x] Select the supported research-score band and venue; only supported results enter the manuscript.
+- [x] Prepare the final submission path if gates pass; preserve actual submission/acceptance receipts separately.
 
 ## Execution ledger
 
@@ -71,3 +71,31 @@ Files: `experiments/pvldb_full_precision.py`, `tests/test_pvldb_full_precision.p
 Independent reviews identified nine shared-label SMD blocks (18 cases also share a development label sequence), a public-call `Mn` memory temporary, and missing strongest-baseline/current-paper integration. These are explicit revision conditions. The initial label-block sensitivity is positive, but does not establish physical-recording independence.
 
 Reproduction code review found four verification gaps: unverified principal-table intervals/tails/workflows, missing immutable input/run bindings, absent supplement-design comparison, and no independent supplement report. A tiny adversarial fixture reproduces them. Preserve audit v1 as history, fix outside frozen producers, add corruption regression tests, and require a new audit receipt before promoting the result.
+
+## Post-review closure (03:00 UTC onward)
+
+The fourth, unexposed review requests three concrete additions. They do not change
+the primary panel, width, score thresholds or five/six-point investment rules.
+
+- [x] Compiled conventional-support attribution control: same validation/radix/global
+  ties, direct ramps, all 73 cases, six balanced orders. Frozen before own timings.
+  Result: control/released 0.910/0.960/0.978; control/stream 1.357/1.201/1.166.
+  This falsifies an isolated nearest-geometry runtime advantage at width 30.
+- [x] Run a pinned public nine-metric consumer with both exact ROC and PR backends.
+  Select the largest primary recording by length, eight profiles, ABBA order;
+  retain total-time and VUS-time traces, including small or negative total gains.
+- [x] Archive an inspectable Mac/Linux pair for the diagnosed SMAP SVM difference,
+  including standardized inputs, support vectors, coefficients and backend metadata.
+- [x] Revise manuscript and all score decisions using these results, then ask the
+  existing independent reviewers to reassess without reading each other's scores.
+
+Final closure of this fixed-evidence phase: three unexposed independent reviewers
+read the same 11-page PDF and returned Accept 7 / Revise 5 / Reject 5. Six evidence
+items are addressed and the frozen project-5 definition is met. Project-6 and
+strong PVLDB merit are not established. Three substantive post-review remedies
+were completed, including adverse findings: compiled control wins all73 scalar
+cases, public nine-metric total gain is 1.031x, and host fitting diagnostics explain
+the observed score difference without claiming its precise backend cause.
+The submission package is prepared, not submitted. The separate range-sweep
+plan pursues a new falsifiable generalization; it does not erase these decisions
+or complete the historical broader SOTA/external-acceptance goal.

@@ -501,6 +501,50 @@ does not supply the ROC correction. Accordingly, we claim the complete exact
 operator representation and elimination of repeated width-dependent work,
 not that PR threshold restriction alone is a deep new primitive.
 
+\paragraph{Compilation-matched conventional support control.}
+A second, post-review control uses the same validation, binary64 radix ordering
+and complete global tie counts as our implementation, but reconstructs each
+width with direct sum-and-clip ramps and component support scans. It caches
+original-positive group mass across widths and uses support-local scratch.
+This is an optimized author reimplementation of the support-cumsum approach,
+not an unchanged public release or a literal compilation of Klein. It shares
+no nearest-distance geometry. Six balanced orders measure all 73 fixed cases
+and six complete workflow passes per collection; maximum PR discrepancy is
+$4.44\cdot10^{-16}$.
+
+The result limits attribution (Table~\ref{tab:compiled-control}). Conventional
+control/released case ratios are 0.910, 0.960 and 0.978, with every adjusted
+interval below one and the control faster on all 73 cases. Thus this panel
+does not establish a separate runtime advantage for nearest geometry over an
+optimized compiled direct-ramp method. Control/stream ratios are 1.357, 1.201
+and 1.166, and complete-workflow ratios are 1.177, 1.126 and 1.152. These
+remaining gains include shared preparation and width work. They are much
+smaller than the public NumPy-library comparisons. The direct-ramp control
+does not refute the exact support-event identity or the stated bound, but it
+precludes attributing the public-library gap to that geometric lemma alone.
+
+\paragraph{A public multi-metric consumer and its bottleneck.}
+To test an existing consumer rather than only our VUS-specific selection loop,
+we pin TSB-AD's unchanged \texttt{get\_metrics} function at revision
+\texttt{303dffbf}~\cite{tsbad}. Its scalar VUS callback receives either exact
+Benchopt ROC+PR or our exact radix pair; all seven other metric outputs and
+their upstream oracle-threshold searches remain unchanged. The recording is
+the largest primary input by length (SMD id 5, $n=28{,}696$), selected before
+consumer outcomes. Its eight stored profiles are evaluated in four complete
+read-to-CSV-close passes in ABBA order, two per backend. The unchanged public
+autocorrelation rule selects width 125. This is a stored-profile consumer,
+not the upstream detector-training script or a deployed service. Source hashes
+are checked against the pinned revision even on cache hits.
+
+The trace finds a strong Amdahl limit. Median VUS time falls from 0.9289 to
+0.01406 seconds ($66.07\times$), but the complete nine-metric workflow falls
+only from 34.260 to 33.234 seconds ($1.031\times$). VUS accounts for
+2.70--2.72\% of baseline time; the remaining metric work dominates this
+consumer. All nine outputs agree to $3.45\cdot10^{-15}$. Two fixed-input
+repetitions per backend provide descriptive timing, not a population interval.
+The large VUS-specific workflow ratios therefore must not be advertised as a
+similar end-to-end speedup for this multi-metric benchmark.
+
 \paragraph{Long recordings and controlled operating range.}
 A follow-up frozen after the primary study and review, but before its own
 score generation and timings, includes every MITDB and SWaT recording in the
@@ -573,9 +617,17 @@ Fresh detector scores differ across hosts, and so does the approximation result:
 change 13/73 winner sets on Linux, including three losses of at least 0.01,
 versus 14/73 and four on the Mac. The difference is one SMAP case whose
 approximate selected model changes, while its exact winner remains the same.
-Its SVM exact VUS-PR changes from 0.3093 to 0.3329; we do not attribute this
-observed difference to a particular numerical library operation without the
-runner's generated arrays.
+Its SVM exact VUS-PR changes from 0.3093 to 0.3329. A post-review diagnostic
+archives fresh Mac/Linux score arrays, standardized inputs, fitted SVM state
+and numerical-backend metadata. Raw inputs and standardized matrices are
+byte-identical, but the fitted support-vector counts are 104 and 105. Both
+arrays reproduce the two SVM metric values on one evaluator host and agree
+with unchanged Klein to $5.56\cdot10^{-17}$. This localizes the difference
+after standardization to fitted-state/score generation; it does not identify
+a particular compiler or numerical instruction as causal. The new Linux
+eight-model score hash differs from the first runner (other metric differences
+reach 0.000583), so these arrays are a diagnostic repeat, not recovered
+original-run arrays. The Mac score hash exactly matches its first run.
 The 1,000-threshold counts remain three changed sets and zero losses of 0.01.
 This sensitivity reinforces the distinction between a fixed-input numerical
 comparison and a cross-platform detector-selection claim.
@@ -649,16 +701,20 @@ remain in the artifact. Fresh execution on the second CPU additionally checks
 the full pipeline beyond reconstruction of recorded outputs.
 
 The recorded environment is Python 3.12.4, NumPy 1.26.4, Numba 0.59.1,
-pandas 3.0.1, scikit-learn 1.8.0 and SciPy 1.17.1. Detector scores can differ
-across platforms even with these package pins; the cause of the observed
-difference is undiagnosed. Each execution workspace retains its CPU, platform,
+pandas 3.0.1, scikit-learn 1.8.0 and SciPy 1.17.1. The public consumer uses
+a separate statsmodels 0.14.6 overlay; an earlier 0.14.2/pandas import failure
+is retained and occurred before any measurements. Detector scores can differ
+across platforms even with these package pins; the diagnosed SVM fitted states
+differ despite identical standardized inputs. Each execution workspace retains its CPU, platform,
 package versions and independently generated arrays. The archived Linux output
-contains records and input hashes but omits the generated NPZ arrays. We do not
+contains records and input hashes but omits the generated NPZ arrays; a later
+inspectable two-host diagnostic pair is archived separately. We do not
 pool hosts into a single interval. Our CPU measurements do not establish GPU superiority;
 the literature comparison is a bounded search of the stated sources.
 
 The principal one-command execution covers the primary and public-comparator
-supplement only. Long-recording/controlled, resource and minimal-Klein studies
+supplement only. Long-recording/controlled, resource, minimal-Klein and
+compiled conventional-support and public-consumer studies
 have separate frozen protocols and commands in the artifact instructions.
 The operating-range wrapper regenerates its inputs and checks its full design
 before timing; its stages were executed in the recorded run, while the wrapper
@@ -671,7 +727,9 @@ anomalies and shared labels; the separate follow-up reaches 650,000 points on
 real data and one million synthetically. Dense support and numerous fragments
 are covered by controlled cases, not broad real-domain samples. Different
 component-merging conventions, other VUS ramps, cold compilation and
-training-dominated pipelines remain separate regimes. Whole-operator speed can
+training-dominated pipelines remain separate regimes. The conventional compiled
+control is faster than our released single-model method at the primary width,
+so separate geometric superiority is not claimed. Whole-operator speed can
 matter for repeated stored-profile queries even when the absolute savings on
 one small collection are seconds. That use case must not be generalized to
 end-to-end detector training. The mathematical statements use unit-cost metric

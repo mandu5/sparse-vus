@@ -1,0 +1,128 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-24T03:14:51.947042+00:00",
+  "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "python": "3.12.4 (main, Jul 15 2024, 21:50:43) [GCC 13.2.0]",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "numba": "0.59.1",
+    "pandas": "3.0.1",
+    "threadpoolctl": "3.6.0"
+  },
+  "threadpools_with_limit_one": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Prescott"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    }
+  ],
+  "numpy_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"10.2.1\",\n      \"commands\": \"cc\",\n      \"args\": \"-fno-strict-aliasing\",\n      \"linker args\": \"-Wl,--strip-debug, -fno-strict-aliasing\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.0.8\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"10.2.1\",\n      \"commands\": \"c++\",\n      \"linker args\": \"-Wl,--strip-debug\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"build\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    }\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"openblas64\",\n      \"found\": true,\n      \"version\": \"0.3.23.dev\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/usr/local/include\",\n      \"lib directory\": \"/usr/local/lib\",\n      \"openblas configuration\": \"USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS= NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= HASWELL MAX_THREADS=2\",\n      \"pc file directory\": \"/usr/local/lib/pkgconfig\"\n    },\n    \"lapack\": {\n      \"name\": \"dep140551260102944\",\n      \"found\": true,\n      \"version\": \"1.26.4\",\n      \"detection method\": \"internal\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/opt/python/cp312-cp312/bin/python\",\n    \"version\": \"3.12\"\n  },\n  \"SIMD Extensions\": {\n    \"baseline\": [\n      \"SSE\",\n      \"SSE2\",\n      \"SSE3\"\n    ],\n    \"found\": [\n      \"SSSE3\",\n      \"SSE41\",\n      \"POPCNT\",\n      \"SSE42\",\n      \"AVX\",\n      \"F16C\",\n      \"FMA3\",\n      \"AVX2\",\n      \"AVX512F\",\n      \"AVX512CD\",\n      \"AVX512_SKX\",\n      \"AVX512_CLX\",\n      \"AVX512_CNL\",\n      \"AVX512_ICL\"\n    ],\n    \"not found\": [\n      \"AVX512_KNL\",\n      \"AVX512_KNM\"\n    ]\n  }\n}\n",
+  "source_sha256": {
+    "experiments/pvldb_score_probe.py": "0b7ab5216989fa03e336dc82718797003fe2bc398e2a49badcb83162df34821b",
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5"
+  },
+  "archive_sha256": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+  "arrays_sha256": "0f602e4889d22e5a878cb7c24bc5c4f2911cc2f359073a27e9b30ca6c3dc1f01",
+  "scores_sha256": "7381c140215fdd40861cb433c6de04e44c115b4629785b8c7e07210b94980ec7",
+  "generation": {
+    "isolation_forest": {
+      "seconds": 0.1110825620000071,
+      "distinct": 1062,
+      "warnings": []
+    },
+    "local_outlier_factor": {
+      "seconds": 0.1013284740000131,
+      "distinct": 993,
+      "warnings": []
+    },
+    "knn_distance": {
+      "seconds": 0.07257685299998684,
+      "distinct": 571,
+      "warnings": []
+    },
+    "one_class_svm": {
+      "seconds": 0.03680042600001343,
+      "distinct": 1088,
+      "warnings": []
+    },
+    "pca_reconstruction": {
+      "seconds": 0.003343064999995704,
+      "distinct": 1089,
+      "warnings": []
+    },
+    "kmeans_distance": {
+      "seconds": 0.0056920829999853595,
+      "distinct": 1086,
+      "warnings": []
+    },
+    "histogram_density": {
+      "seconds": 0.0028024899999934405,
+      "distinct": 63,
+      "warnings": []
+    },
+    "shrinkage_mahalanobis": {
+      "seconds": 0.0017175160000135747,
+      "distinct": 1088,
+      "warnings": []
+    }
+  },
+  "exact_pr_values": [
+    0.041116898297166866,
+    0.1259848105700425,
+    0.2552561733126624,
+    0.3329318469250213,
+    0.18886946769721974,
+    0.1967066526350773,
+    0.006767927909855718,
+    0.25346724045703717
+  ],
+  "exact_winners": [
+    3
+  ],
+  "svm": {
+    "fit_status": 0,
+    "n_iter": 133,
+    "support_vectors": 105,
+    "parameters": {
+      "cache_size": 200,
+      "coef0": 0.0,
+      "degree": 3,
+      "gamma": 0.0625,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "nu": 0.05,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    }
+  },
+  "scope": "New diagnostic repeat, not recovery of original Linux runner arrays. No causal attribution to a particular backend from host correlation alone."
+}

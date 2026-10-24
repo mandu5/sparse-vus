@@ -38,6 +38,20 @@ three original collections. Those residual gains combine geometry/ranking and
 implementation effects; the separate compiled dense control isolates support
 compression. Complete provenance and independent audits accompany both studies.
 
+A stronger, compilation-matched author control uses conventional direct ramps
+with the same radix/global-tie preparation. It is **2–9% faster than the released
+single-model evaluator on all 73 cases**; the batch implementation is **1.17–1.36×
+faster than this control**. Thus the public-library gap is not an isolated
+nearest-geometry effect. The [post-review evidence](docs/reviews/20261024/post-review-additions.md)
+also archives an inspectable two-host SVM diagnosis, including identical
+standardized inputs but different fitted support states.
+
+Inside the unchanged public TSB-AD **nine-metric consumer**, VUS time falls
+from **0.929 to 0.0141 seconds**, while total time falls only from **34.26 to
+33.23 seconds (1.031×)**. Other metric work dominates this fixed workload.
+The larger VUS-only ratios must not be described as comparable acceleration
+of the full multi-metric benchmark.
+
 [Research case and venue](docs/pvldb_research_case_20261024.md) ·
 [One-command reproduction](docs/REPRODUCE_PVLDB_20261024.md) ·
 [Fresh Linux execution](https://github.com/mandu5/sparse-vus/actions/runs/40049786600) ·

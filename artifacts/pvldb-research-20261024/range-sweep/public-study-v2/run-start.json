@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-24T04:01:21.612083+00:00",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.10.0",
+    "numba": "0.59.1",
+    "scikit-learn": "1.8.0"
+  },
+  "protocol_sha256": "ceb5befda804e15da0df5fd02e75c3e6d517ac8eae8cf634a34153a1f6f3dc11"
+}

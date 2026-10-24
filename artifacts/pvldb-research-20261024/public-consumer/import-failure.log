@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/pvldb_consumer.py", line 170, in <module>
+    globals()[parser.parse_args().command]()
+  File "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/pvldb_consumer.py", line 115, in run
+    from TSB_AD.utils.slidingWindows import find_length_rank
+  File "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/.cache/tsbad-consumer/pkg/TSB_AD/utils/slidingWindows.py", line 1, in <module>
+    from statsmodels.tsa.stattools import acf
+  File "/opt/anaconda3/lib/python3.12/site-packages/statsmodels/tsa/stattools.py", line 395, in <module>
+    @deprecate_kwarg("unbiased", "adjusted")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: deprecate_kwarg() missing 1 required positional argument: 'new_arg_name'

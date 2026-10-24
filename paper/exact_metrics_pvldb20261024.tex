@@ -1,0 +1,30 @@
+% Unified working manuscript; no submission or editorial decision is implied.
+% Existing frozen manuscripts, methods, and result fragments remain unchanged.
+\documentclass[sigconf,nonacm]{acmart}
+\usepackage{pvldb}
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{https://github.com/mandu5/sparse-vus/tree/research/pvldb-20261024}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\TPR}{\mathrm{TPR}}
+\newcommand{\FPR}{\mathrm{FPR}}
+\emergencystretch=2em
+\begin{document}
+\title{Exact Evaluation of Time-Series Anomaly Metrics by Local Event Statistics}
+\author{Youngmin Ko}
+\email{rhdudals0505@naver.com}
+\affiliation{\institution{Independent Researcher}\country{Republic of Korea}}
+\begin{abstract}
+Time-series anomaly evaluation repeatedly scans score thresholds to compute range-aware metrics. We derive local event statistics for two existing operators without changing their definitions. For dynamic VUS, inactive PR events vanish while ROC requires a predecessor correction; complete global ties and interval geometry give a support-sensitive exact representation. For flat reciprocal-cardinality range precision/recall, endpoint activations update both overlap and fragmentation statistics in constant time per inserted point. Exhaustive observed-threshold evaluation takes $O(n\log n+n)$, while $H$ ordered queries admit $O(n\log(H+1)+n+H)$ through ordinary offline bucketing. A frozen VUS study on 73 real series and eight score procedures is reproduced on two CPU architectures. A separate range-metric study on the same 584 profiles compares a fused compiled raster with identical outputs: exhaustive range-F1 evaluation improves geometrically by $27.8\times$, $21.4\times$ and $128.1\times$ on NAB, SMAP and SMD; fixed 100-query evaluation improves $1.72$--$1.99\times$. The 100-query approximation selects nonoverlapping winning models in 15/73 cases, twelve with range-F1 regret at least .01. Whole-consumer significance remains bounded: accelerating VUS alone in a public nine-metric workload gives only $1.031\times$ overall. We retain conventional-control wins, low-cardinality losses, source dependence and numerical limits. Classical component trees, sorting and caching are prior techniques; the contribution is the operator-specific exact state representation and its measured evaluation consequences.
+\end{abstract}
+\maketitle
+\vldbtopmatter
+\input{exact_metrics_pvldb20261024_body.tex}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{exact_metrics_pvldb20261024_references}
+\end{document}

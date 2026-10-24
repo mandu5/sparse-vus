@@ -1,8 +1,14 @@
 # Sparse VUS 연구 판정 — 2026-10-24
 
-최종 판정은 추가 blind review 집계 후 확정한다. 현재 완료된 과학적 검증은
-사전에 정한 **연구 5점 조건을 충족**하며, **6점 조건은 통과하지 못했다**.
-이 점수는 연구 투자 판단이며 학회 점수나 채택확률이 아니다.
+**사용자 근거 항목 6/6 수행·검증, 사전 연구 투자 5점 조건 충족. 현재 11쪽 원고의
+PVLDB 모의 판정은 Accept 7 / Revise 5 / Reject 5로 갈린다.** 따라서 근거표를
+채웠다는 사실을 강한 채택 전망으로 바꾸지 않는다. 6점 조건은 미통과다.
+
+다음 연구는 같은 VUS timing의 반복이 아니라, 실제 공개 consumer에서 드러난
+다른 range-metric 연산으로 일반화하는 것이다. 새 endpoint sweep과 가장 강한
+단순 compiled raster, query bucketing, 공개 TimeSeAD comparator를 별도 protocol로
+비교한다. 기존 결과와 심사 원문은 보존하며, 새 결과는 기존 원고의 점수로
+미리 합산하지 않는다. 이 점수는 연구 투자 판단이며 학회 점수나 채택확률이 아니다.
 
 ## 연구 대상과 PVLDB를 선택한 이유
 
@@ -32,7 +38,7 @@ component overlap와 ROC predecessor correction을 포함한다. 비교 기반 �
 | 2. 주 결과 | 통과 | NAB/SMAP/SMD 73개 완전한 실제 시계열, 8개 고정 detector 절차, 584개 float64 score vector. 가장 빠른 측정 공개 exact PR comparator인 Klein과 같은 target으로 비교하고, 모든 collection의 조정 신뢰구간 하한이 1보다 크다. 동일 compiled dense, geometry-only, stream, minimal-Klein ablation으로 원인을 분리했다. |
 | 3. 일반성 | 통과, 명시한 범위 | 실제 MITDB/SWaT 9개를 추가하여 최대 650,000점을 측정했다. 합성 16조건은 별도 mechanism test로 표시했다. dense support, width 0, M=1, 메모리 증가, 불확실한 긴 데이터 batch increment, 재사용·label 의존성을 공개했다. |
 | 4. 재현 | 통과, 주 표 기준 | 한 명령으로 fresh checkout/download/score generation/primary/supplement/audit를 실제 Linux EPYC에서 완료했다. 새 Mac 결과와 host별로 구별했다. 후속 실험에는 별도 frozen protocol과 명령이 있다. |
-| 5. 모의 심사 | 최종 집계 중 | 독립적인 최초 심사 3회와 후속 심사를 보존한다. 최종 재심 중 한 건의 이전 타 심사 점수 노출을 공개하고, 이를 추가 blind review로 세지 않는다. 현재 추가 unexposed review 진행 중. |
+| 5. 모의 심사 | 통과, 판정은 불일치 | 서로의 심사를 읽지 않은 3개 독립 최종 심사: Accept 7, Revise 5, Reject 5. 모두 동일 11쪽 PDF를 확인했고 이전 심사와 점수 변경을 보존했다. 타 심사 점수에 노출된 별도 실험 심사자는 이 3회에 세지 않았다. 가장 큰 약점은 novelty 규모와 실제 application significance다. |
 | 6. 학회 | 통과 | PVLDB 20 Regular Research / Foundations and Algorithms. 초록 2026-11-25 17:00 America/Los_Angeles, 논문 2026-12-01 17:00. KST는 각각 11월 26일/12월 2일 오전 10시. |
 
 심사 형식은 공개된 PVLDB 기준에 맞춘 internal surrogate다. 비공개 CMT 원본
@@ -100,10 +106,33 @@ release 이후의 새로운 mechanism이 아니다.
 5. **가장 가까운 코드의 최소 수정:** Klein threshold 식 하나만 고쳐 단순한
    개선으로 설명되는 몫과 그 이후의 전체 evaluator 차이를 분리했다.
 
-선택은 **5점의 전체 evaluator 논문을 PVLDB에 추진**하는 것이다. 6점으로 올리려면
-다른 host에서 유리한 숫자를 얻거나 같은 실험을 늘리는 대신, release를 넘어서는
-새 알고리즘 또는 새 target에 대한 실질적 일반화를 별도 hypothesis로 검증해야 한다.
-TMLR로 venue만 바꾸는 것으로 이 novelty 조건은 해결되지 않는다.
+선택은 **연구 투자 5점의 재현 가능한 whole-evaluator 성과를 보존하고, PVLDB 제출
+직전의 significance 판단은 새 일반화 결과까지 보고 갱신**하는 것이다. 현재 두
+심사자의 주요 반론을 무시하고 강한 Accept 수준이라고 보고하지 않는다. TMLR로
+venue만 바꾸어도 새로움과 중요성의 문제는 해결되지 않는다.
+
+## 더 강한 반증 실험과 바뀐 해석
+
+- Conventional direct-ramp compiled control이 released scalar를 **73개 모두에서
+  앞섰다**. Control/stream case ratio는 NAB 1.357, SMAP 1.201, SMD 1.166이고,
+  전체 VUS workflow에서는 1.177/1.126/1.152다. 기존 큰 public-library 대비
+  차이를 geometry 고유의 이득으로 돌릴 수 없다.
+- 실제 pinned TSB-AD nine-metric consumer는 VUS 시간이 **0.929초 → 0.0141초**,
+  전체가 **34.26초 → 33.23초(1.031배)**였다. Public baseline에서 VUS의 비중이
+  약 2.7%였기 때문이다. 두 번씩 측정한 단일 입력의 기술 통계이며 population CI가 아니다.
+- 새 Mac/Linux score probe는 입력과 standardized matrix가 byte-identical인 상태에서
+  SVM support가 104/105개로 달라짐을 보였다. 두 저장 score를 같은 evaluator에서
+  계산해 차이를 재현했다. 특정 BLAS의 인과 효과나 원래 Linux 배열의 복원은 주장하지 않는다.
+
+독립 최종 심사와 원고의 SHA는 [post-review 대응 자료](reviews/20261024/post-review-additions.md)에
+연결되어 있다. 강한 control과 실제 consumer를 넣자 두 평가가 낮아졌다. 이는
+검증 수행 자체를 성과의 중요성과 동일시하면 안 된다는 직접적인 근거다.
+
+새 연구의 설계와 통과 조건은 [range-sweep 계획](superpowers/plans/2026-10-24-range-sweep-generalization.md),
+독립 이론·선행연구 검토는 `docs/reviews/20261024/range-sweep-*-feasibility.md`에 있다.
+기존 component-tree의 threshold activation과 TimeSeAD의 exhaustive observed-threshold
+F1을 선행연구로 인정한다. 후보 차이는 Tatbul metric의 cardinality와 overlap을
+국소 통계로 갱신해 반복 배열 순회를 제거하는 데 한정한다.
 
 ## 산출물과 상태
 

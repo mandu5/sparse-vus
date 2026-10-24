@@ -1,0 +1,246 @@
+{
+  "exploratory": true,
+  "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+  "records": [
+    {
+      "model": 0,
+      "metric": "metric_PointF1",
+      "seconds": 0.005191750009544194,
+      "value": 0.11167136437217758
+    },
+    {
+      "model": 0,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.4086961660068482,
+      "value": 0.5099601593625498
+    },
+    {
+      "model": 0,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.2394019999774173,
+      "value": 0.13043478260869548
+    },
+    {
+      "model": 0,
+      "metric": "metric_RF1",
+      "seconds": 1.092377041990403,
+      "value": 0.2510933239764062
+    },
+    {
+      "model": 0,
+      "metric": "metric_Affiliation",
+      "seconds": 2.5054568750201724,
+      "value": 0.6861871364977697
+    },
+    {
+      "model": 1,
+      "metric": "metric_PointF1",
+      "seconds": 0.004249290970619768,
+      "value": 0.5704423864008185
+    },
+    {
+      "model": 1,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.43675433401949704,
+      "value": 0.9846153846153847
+    },
+    {
+      "model": 1,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.24910791701404378,
+      "value": 0.7999999999999995
+    },
+    {
+      "model": 1,
+      "metric": "metric_RF1",
+      "seconds": 0.09183433401631191,
+      "value": 0.5094066570188134
+    },
+    {
+      "model": 1,
+      "metric": "metric_Affiliation",
+      "seconds": 2.2569015829940327,
+      "value": 0.7970828789589055
+    },
+    {
+      "model": 2,
+      "metric": "metric_PointF1",
+      "seconds": 0.004234332998748869,
+      "value": 0.5142815724823359
+    },
+    {
+      "model": 2,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.42658904095878825,
+      "value": 0.9746192893401016
+    },
+    {
+      "model": 2,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.2595636250334792,
+      "value": 0.7654986522911046
+    },
+    {
+      "model": 2,
+      "metric": "metric_RF1",
+      "seconds": 0.22035345796030015,
+      "value": 0.44759876981310626
+    },
+    {
+      "model": 2,
+      "metric": "metric_Affiliation",
+      "seconds": 2.288356167031452,
+      "value": 0.7964786606678845
+    },
+    {
+      "model": 3,
+      "metric": "metric_PointF1",
+      "seconds": 0.004254375002346933,
+      "value": 0.5018141498505777
+    },
+    {
+      "model": 3,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.445761917042546,
+      "value": 0.9746192893401016
+    },
+    {
+      "model": 3,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.25739449996035546,
+      "value": 0.7645429362880881
+    },
+    {
+      "model": 3,
+      "metric": "metric_RF1",
+      "seconds": 0.2946373749873601,
+      "value": 0.41591107324692184
+    },
+    {
+      "model": 3,
+      "metric": "metric_Affiliation",
+      "seconds": 2.2265904580126517,
+      "value": 0.7964528234322288
+    },
+    {
+      "model": 4,
+      "metric": "metric_PointF1",
+      "seconds": 0.0044357909937389195,
+      "value": 0.5035419164373417
+    },
+    {
+      "model": 4,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.4326879999716766,
+      "value": 0.9846153846153847
+    },
+    {
+      "model": 4,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.25432887504575774,
+      "value": 0.7999999999999995
+    },
+    {
+      "model": 4,
+      "metric": "metric_RF1",
+      "seconds": 0.0884896669886075,
+      "value": 0.31300197347285325
+    },
+    {
+      "model": 4,
+      "metric": "metric_Affiliation",
+      "seconds": 2.1931329170474783,
+      "value": 0.7965427237610917
+    },
+    {
+      "model": 5,
+      "metric": "metric_PointF1",
+      "seconds": 0.004223666037432849,
+      "value": 0.5694401476018671
+    },
+    {
+      "model": 5,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.4176101670018397,
+      "value": 0.9746192893401016
+    },
+    {
+      "model": 5,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.25834766699699685,
+      "value": 0.7699530516431919
+    },
+    {
+      "model": 5,
+      "metric": "metric_RF1",
+      "seconds": 0.3358148749684915,
+      "value": 0.5094066570188134
+    },
+    {
+      "model": 5,
+      "metric": "metric_Affiliation",
+      "seconds": 2.3195375420036726,
+      "value": 0.8143317731981591
+    },
+    {
+      "model": 6,
+      "metric": "metric_PointF1",
+      "seconds": 0.003856875002384186,
+      "value": 0.24778543975588177
+    },
+    {
+      "model": 6,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.4207102499785833,
+      "value": 0.7777777777777778
+    },
+    {
+      "model": 6,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.2702157500316389,
+      "value": 0.4999999999999996
+    },
+    {
+      "model": 6,
+      "metric": "metric_RF1",
+      "seconds": 0.8741658750222996,
+      "value": 0.22986552166264126
+    },
+    {
+      "model": 6,
+      "metric": "metric_Affiliation",
+      "seconds": 2.357204542029649,
+      "value": 0.6833392739822634
+    },
+    {
+      "model": 7,
+      "metric": "metric_PointF1",
+      "seconds": 0.004235707980114967,
+      "value": 0.5124513534867817
+    },
+    {
+      "model": 7,
+      "metric": "metric_PointF1PA",
+      "seconds": 0.45317587500903755,
+      "value": 0.9846153846153847
+    },
+    {
+      "model": 7,
+      "metric": "metric_EventF1PA",
+      "seconds": 0.26886745798401535,
+      "value": 0.7999999999999995
+    },
+    {
+      "model": 7,
+      "metric": "metric_RF1",
+      "seconds": 0.08775099995546043,
+      "value": 0.39936571958736866
+    },
+    {
+      "model": 7,
+      "metric": "metric_Affiliation",
+      "seconds": 2.223412625025958,
+      "value": 0.7964428766501391
+    }
+  ]
+}

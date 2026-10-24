@@ -1,0 +1,81 @@
+{
+  "status": "FROZEN_BEFORE_PRIMARY_RANGE_SWEEP_OUTCOMES",
+  "utc": "2026-10-24T03:52:37.263312+00:00",
+  "source_sha256": {
+    "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+    "experiments/range_sweep_study.py": "74ea8b546ef1de8384a15e675d6584616011092e4b2eb887c0b3531ed237e57c"
+  },
+  "inputs_sha256": "9b1dc600e9f13052408c69a796064742236a12de8435ec32d897f7d9a04117b0",
+  "primary_protocol_sha256": "307e0498f441901dbe0d686064ffd8f9ff4c683e5e5f1197a2297921561a3579",
+  "cohort": "All 73 prior primary recordings and eight fixed fullprecision score vectors. Reused inputs, exploratory successor, not held-out generalization.",
+  "contracts": {
+    "grid100": "100 linspace(min,max) strict > thresholds, alpha=.2 flat reciprocal cardinality",
+    "distinct": "Every observed unique score as strict > threshold, alpha=.2; excludes below-min all-positive state, same threshold domain as TimeSeAD classic."
+  },
+  "grid_orders": [
+    [
+      "prefix",
+      "raster",
+      "sweep",
+      "bucket"
+    ],
+    [
+      "raster",
+      "sweep",
+      "bucket",
+      "prefix"
+    ],
+    [
+      "sweep",
+      "bucket",
+      "prefix",
+      "raster"
+    ],
+    [
+      "bucket",
+      "prefix",
+      "raster",
+      "sweep"
+    ],
+    [
+      "bucket",
+      "sweep",
+      "raster",
+      "prefix"
+    ],
+    [
+      "prefix",
+      "bucket",
+      "sweep",
+      "raster"
+    ],
+    [
+      "raster",
+      "prefix",
+      "bucket",
+      "sweep"
+    ],
+    [
+      "sweep",
+      "raster",
+      "prefix",
+      "bucket"
+    ]
+  ],
+  "distinct_orders": [
+    [
+      "raster",
+      "sweep"
+    ],
+    [
+      "sweep",
+      "raster"
+    ]
+  ],
+  "timing": "Complete eight-profile calls including validation, interval extraction, query construction, sort, metric and max selection. Warm compilation; serial one-thread. No file IO, training or whole-nine-metric claim.",
+  "parity_atol": 1e-10,
+  "winner_tie_atol": 1e-10,
+  "uncertainty": "10000 seeded paired case-median log-ratio resamples; familywise95 over three collections separately per method/contract. Equal-label-block sensitivity additionally reported. Fixed-input timing, no population claim.",
+  "hypothesis": "Endpoint sweep beats conventional compiled linear scans across observed distinct thresholds; grid100 can favor fused raster and those losses remain. Grid bucket control uses standard exact binary-search offline query grouping instead of score sorting. Public baselines are a separate explicit study.",
+  "failure_policy": "No input exclusion or replacement; nonfinite result or complete-curve disagreement above tolerance halts and preserves raw partial records."
+}

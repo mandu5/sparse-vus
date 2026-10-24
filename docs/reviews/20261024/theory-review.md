@@ -310,3 +310,92 @@ Thus the defensible operational classification is **5-point evidence, conditiona
 **Accept (weak), internal 6/10; confidence 4/5 on the central mathematics and 3/5 on overall significance/venue fit.** No further experiment is necessary to justify the present bounded claim in my assessment. Preserve the minimal-patch result, the compiler-attribution qualification, dense-support loss, uncertain long-recording batch increment, source/host distinctions and the failed prospective 1.25 criterion in the submission and research report.
 
 The recommendation would change if a same-target prior algorithm already supplied the complete claimed reduction, if a complete-tie/dynamic-denominator counterexample invalidated the theorem, if the disclosed precursor were found to be prior refereed publication relevant to the venue's originality rules, or if the final paper reassigned whole-method speedups to the new batch increment. None is established in the reviewed evidence. The strongest remaining reason to reject is a judgment that the useful specialized construction is too incremental for this venue, not a discovered false theorem, unmatched primary baseline or missing execution receipt.
+
+---
+
+## Dated reassessment — 2026-10-24, 11-page revision checked at 03:34 UTC
+
+**Five bounded evidence gates remain directly supported; aggregate completion of the three-review gate remains the coordinator's check. My recommendation changes to Revise, internal referee surrogate 5/10, from the preceding weak Accept / 6/10.** The new compiled control and public-consumer result materially weaken the argument for a sufficiently distinctive and consequential PVLDB contribution. Mathematical validity and implementation credibility remain strong. The prospective project 5-point conditions remain supportable within their original external-baseline scope, subject to aggregate review completion; the project 6-point criterion remains unmet.
+
+I assessed the complete first-archival evaluator paper, including its disclosed unrefereed precursor. This is not a rating of batch engineering alone. I read the permitted common additions note, current source/PDF, the three new evidence packages and the compiled control's implementation. I did not read another internal review, another reviewer's score or the agent listing. All earlier text and scores above are preserved.
+
+### Evidence actually checked
+
+The inspected body SHA-256 is `91e638315c79c0094bffe1c4fecbfc9436f01f4e4dbc76a762c44a7cc0fc8dc3`; the 11-page PDF SHA-256 is `fb81365502f290ae06ae7662019cc9a232a00dc00fd3d50140d95b3b87601633`. The extracted PDF text contains the new control, consumer and host-diagnostic findings. Both the abstract and body state the negative attribution and application results. Thus this reassessment is not requesting disclosure of evidence already disclosed.
+
+I independently hashed the new control/consumer protocols and raw records against their completion receipts and audit reports, checked all 13 compiled-control and 29 consumer source bindings, and found no mismatch. I also verified both host-probe receipt/NPZ hashes and directly compared the saved input arrays. No metrics, fits, timings, bootstrap or compilation were rerun. The principal new report hashes are:
+
+| Evidence | SHA-256 |
+| --- | --- |
+| `compiled-support-control/independent-report.json` | `ba8ea76283d68aa0d888673006c7a10743704137ceb4f700d6f9724ddc339330` |
+| `public-consumer/independent-report.json` | `ad2cb5ee149283e1ebb37e3d4cbfc8b0ba733f4be3a23e8852e8e1b1d15d5612` |
+| `score-host-probe/comparison.json` | `ee0870d5dae4ab331fa1565785a16b4718e5be8ceb4fbd9d6fe365a90abc10df` |
+
+The first two audits report PASS. The compiled study covers 1,314 complete case calls and 54 workflows; maximum reference PR discrepancy is `4.44e-16`. The consumer trace covers 32 nine-metric calls and four complete workflows; maximum paired output discrepancy is `3.44e-15`. These are scoped record/trace audits, not an independent reimplementation of the seven non-VUS metrics or all-input floating-point certification.
+
+### What the compiled control changes
+
+The optimized authored control uses the candidate's validation, fixed-word ranking and complete global tie counts. It replaces nearest-distance geometry with direct sum-and-clip ramps and component support scans, uses support-local scratch, and caches original-positive group mass across widths. It is neither an unchanged historical baseline nor a literal JIT compilation of Klein. Its balanced six-order evidence is substantially more informative about attribution than the earlier NumPy-only patch.
+
+| Collection | Control / released case ratio, adjusted 95% CI | Control / stream case ratio, adjusted 95% CI | Complete-workflow control / stream |
+| --- | --- | --- | --- |
+| NAB | 0.910 [0.905, 0.915] | 1.357 [1.291, 1.427] | 1.177 |
+| SMAP | 0.960 [0.945, 0.973] | 1.201 [1.180, 1.224] | 1.126 |
+| SMD | 0.978 [0.969, 0.985] | 1.166 [1.158, 1.174] | 1.152 |
+
+The control beats the released scalar evaluator on all 73 case medians. Stream still beats this control, including positive timing intervals in the six balanced workflow passes. However, the remaining complete-workflow gain is approximately 13–18%, and includes standard sharing across eight score vectors. The large previous public-library factors remain accurate comparisons to those public APIs; they do not establish a similarly large benefit of the distinctive geometry or batch mechanism over conventional optimized support evaluation.
+
+This is not a controlled substitution of geometry alone: caching and data-flow choices also differ. It therefore does not prove the geometric lemma intrinsically slower. It does establish that the current primary panel supplies no separate runtime superiority of the proposed scalar implementation over a straightforward compiled alternative without that geometry. A similarly shared direct-ramp implementation is not measured, so the remaining stream advantage is not uniquely attributed to nearest-distance geometry either.
+
+My earlier borderline acceptance gave substantial weight to elimination of repeated width work as a practical distinction beyond the elementary PR patch. The stronger control now removes full-series clearing by ordinary support-local storage and obtains all the primary scalar outputs more cheaply. That is a material change to the significance assessment, not merely another small qualification to the same positive conclusion.
+
+### The theorem still has a real, narrower distinction
+
+I do not find a counterexample to the support-event identity, dynamic ROC correction or stated bound. The control itself uses the paper's support grouping and global-rank machinery; it is not evidence that the whole construction was previously published. The public software precursor remains distinct from a verified prior refereed publication.
+
+There is also a genuine worst-case distinction from the direct-ramp control. Let `D_w` count individual original-interval ramp visits made by that control at width `w`, including visits that later clip. Inspection of its loops gives work bounded by `O(n + (L+1)Q + sum_w D_w)`, with `D_w <= K w`. When many ramps overlap, the summed visit term can grow as `Theta(K L^2)` for an appropriate interval family. The two-distance construction removes that multiplicity and retains `O(n+(L+1)Q)`. For sparse nonoverlapping ramps, the direct visits can already fit within the support-linear width work, consistent with the new empirical result.
+
+This theoretical distinction should not be erased because one implementation loses at width 30. Equally, it should not be credited as a demonstrated practical improvement where the measured conventional control wins. The existing wide-width synthetic comparison uses the matched dense evaluator, not this new direct-ramp control; it does not isolate the repeated-ramp term against the strongest newly measured support alternative. The ROC predecessor correction also remains necessary for that scalar target, but is a short specialized integral identity rather than, by itself, evidence of a broad new algorithmic framework.
+
+The narrow novelty survives: a complete exact representation and complexity account for the pinned dynamic operator. Its conceptual depth is modest. PR support-threshold restriction, complete ties, caching, radix ranking, local scans and loop interchange remain standard or elementary ingredients. The new control makes that limitation more consequential for a Foundations and Algorithms submission.
+
+### Application significance and the host diagnostic
+
+I inspected the pinned [TSB-AD `get_metrics` source](https://raw.githubusercontent.com/TheDatumOrg/TSB-AD/303dffbfc11612995b17b06633f8c9d0ea0e38e5/TSB_AD/evaluation/metrics.py). The experiment retains its nine outputs and seven non-VUS computations, replacing only the VUS callback with two exact ROC+PR backends. Its largest-primary-recording selection, public width estimator, ABBA order, output checks and import-failure disclosure make this a useful application probe.
+
+The result is unfavorable to a broad application-speed claim: VUS median time falls from 0.9289 to 0.01406 seconds, **66.07x**, while total median workflow time falls from 34.2603 to 33.2340 seconds, **1.03088x**. VUS occupies only 2.70–2.72% of the baseline trace. Two fixed-input repetitions per backend provide descriptive evidence, not a significance test or population interval. Other metrics and training are not accelerated by this method. One consumer does not prove that VUS is never a bottleneck; it does mean that the supplied public-consumer evidence does not substantiate a large end-to-end payoff.
+
+The earlier VUS-only MITDB saving from 53.14 to 2.30 seconds remains useful operator evidence. It is not an observed consumer bottleneck, and that long-recording study has not compared the new optimized compiled support control. A convincing practical novelty case can no longer rely mainly on the large unchanged-public-library ratios and that operator-only latency.
+
+The host diagnostic resolves a narrower issue successfully. I directly verified byte identity of observations, labels, standardized matrices, fit indices, feature means and standard deviations in the saved Mac/Linux arrays. The saved SVM support-vector shapes are `(104,16)` and `(105,16)`, and maximum SVM score difference is `0.0001195869`. The report evaluates both saved score sets on one evaluator host, reproduces SVM PR values 0.3092648648 and 0.3329318469, and agrees with unchanged Klein within `5.56e-17`. The [public diagnostic run](https://github.com/mandu5/sparse-vus/actions/runs/40057467287) also reports Success.
+
+This localizes the observed SVM discrepancy to fitted-state/score generation after standardization; it does not establish a specific BLAS, compiler or instruction as its cause. The new Linux eight-model bytes differ from the original Linux run, while the Mac bytes match their original run. Original Linux arrays have therefore not been recovered. The manuscript states these limits accurately. This addition strengthens provenance and implementation validity but does not supply new algorithmic or application significance.
+
+### Six evidence gates and the prospective research thresholds
+
+| User gate | Current assessment |
+| --- | --- |
+| 1. Recent primary-literature comparison and surviving distinction | **PASS as a bounded evidence requirement; major venue-significance reservation remains.** Twelve primary comparisons and an identifiable complete-operator distinction survive. They do not establish sufficient conceptual depth, and the new control materially narrows the practical distinction from conventional support evaluation. |
+| 2. Strong eligible public baseline, three collections, uncertainty and ablation | **PASS within the frozen operator scope.** Same-output public comparisons remain valid and positive; a stronger authored compiled control is now included. The much smaller gain over that control must accompany any interpretation of the public-library factors. There is no large application-wide speedup in the measured public consumer. |
+| 3. Real generality and failures | **PASS at the declared scope.** Complete real inputs, eight procedures, long recordings and explicit failures remain. The new consumer failure further limits the application claim. These data do not establish deployment-wide or multivariate benefit. |
+| 4. Reproduction | **PASS for principal primary/supplement results.** The earlier fresh Linux execution remains complete. New studies have separate frozen producers, receipts, raw records and audits; they are not silently included in the older one-command receipt. Saved diagnostic arrays now support the localized host-difference analysis. |
+| 5. Three independent calibrated reviews | **This independent review is complete; aggregate status requires coordinator verification.** No other review or score was inspected. The actual adjacent accepted/rejected mirrored notes documented earlier remain the calibration evidence; direct OpenReview origin bytes and the confidential current PVLDB form remain unavailable. |
+| 6. Venue and deadline | **PASS as specification, with a substantive merit concern.** PVLDB volume 20 Regular Research / Foundations and Algorithms, abstract 2026-11-25 and paper 2026-12-01 at 17:00 America/Los_Angeles. The whole first-archival evaluator is the submission unit; an official acceptance is not implied. |
+
+The prospective investment definitions must remain separate from this reviewer score. The original **5-point rule** uses the strongest eligible external baseline and asks for a surviving contribution, real three-collection results, positive lower bounds, at least 1.5x whole-VUS-workflow speedup and no unresolved validity defect. Those scoped scientific conditions still hold, with aggregate review completion to be checked by the coordinator. The author-created compiled control does not retroactively become an unchanged external release, and the new nine-metric consumer does not retroactively replace the frozen VUS-specific workflow. However, **a 5-point operational pass is now visibly insufficient to establish a convincing PVLDB significance case**.
+
+The **6-point rule still fails**: the primary Mac SMD released/stream ratio is 1.207 rather than at least 1.25, and no substantive new generalization beyond the released method has been demonstrated. The stronger compiled comparison further reduces the remaining incremental advantage. The host diagnosis is a reproducibility explanation, and the consumer is an application-boundary result; neither qualifies as a new generalization that repairs the failed target. This review now also records an unresolved major significance/novelty objection for the intended venue. No favorable host, rerun, different denominator or expanded definition should replace the prospective condition after inspection.
+
+### Recommendation, confidence and falsifiable revision conditions
+
+**Revise; internal surrogate 5/10. Confidence: 4/5 in the central mathematics and inspected numerical evidence, 3/5 in the overall venue judgment.** The biggest weakness is the absence of a demonstrated consequential advantage specific to the nontrivial part of the construction over conventional optimized support evaluation. The controlled experiments are valuable precisely because they reveal this limitation. Honest disclosure improves the paper's credibility; it does not by itself restore the missing significance.
+
+The official [Foundations and Algorithms category](https://www.vldb.org/2027/call-for-research-track.html) makes the conceptual/algorithmic contribution central. The full paper remains plausibly in scope through its direct engagement with database VUS research and stored-profile analytics, but scope eligibility and research merit are different judgments. The present evidence supports useful specialized software and a correct formal account more strongly than a compelling regular research contribution.
+
+A revision capable of changing my recommendation needs substantive evidence along at least one of the following routes, with claims restricted to what it establishes:
+
+1. **Establish the remaining geometric distinction where it matters.** Compare nearest-distance and optimized direct-ramp methods with the same compilation, ranking, cached positive masses and sharing policy across a prospectively chosen overlap/width regime. Report individual ramp-visit multiplicity alongside timing. A credible positive result must connect the theoretically removed work to a material measured benefit and explain the relevance of that regime; the existing dense-control comparison cannot substitute for this attribution. If there is no such benefit on relevant inputs, retain the negative result and reduce the algorithmic claim accordingly.
+2. **Demonstrate meaningful use of the operator result.** Use an independently motivated stored-profile consumer where VUS is actually a measured bottleneck; compare the best eligible compiled alternatives under matched outputs and sharing, and report complete-workflow paired uncertainty. A reproducible lower bound above one on representative cases is necessary, but a small isolated percentage alone would still need an application-specific reason to matter. Merely repeating the current nine-metric input or selecting a consumer because it gives a favorable fraction would not address the objection.
+3. **Provide a substantive conceptual generalization.** A rigorously specified operator class or independently defined additional metric for which the complete-tie/dynamic-integral reduction yields a nontrivial result could broaden significance. Repackaging standard weighted PR, the already released ROC identity or additional implementations of the same operator would not meet this condition.
+
+These are evidence routes, not a guarantee of acceptance or instructions to keep collecting repetitions until a desired score appears. If they are unsupported, the next defensible move is to present the work as a narrower exact-evaluation/optimization contribution and choose a publication format aligned with that scope. The current identified problems are significance and attribution, not a false central theorem or a defective experimental receipt.

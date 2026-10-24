@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-24T04:19:49.683494+00:00",
+  "scope": "Apple local pre-Linux checkpoint; completed scientific reports are hash-bound separately from implementation tests. Independent manuscript reviews pending.",
+  "git_base": "9536efc40fb47ee2d7199298544a002bf37cc9fc",
+  "files": {
+    "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+    "experiments/range_sweep_study.py": "74ea8b546ef1de8384a15e675d6584616011092e4b2eb887c0b3531ed237e57c",
+    "experiments/range_sweep_public.py": "19cd498100297d42b4b45e150e0f1b6343b52c0e4cea1823bd56b7965689d985",
+    "experiments/range_sweep_validation.py": "5453f30e8af5056fd71844203c5d214cf322dba0bd5e39bd9e8e60176064038e",
+    "experiments/reproduce_range_sweep.py": "786b6cb25c3c95493942c5d39bd66325c6b51696204d22b39e27a0af74444a48",
+    "paper/exact_metrics_pvldb20261024.pdf": "da132c602e81b38e7908143309a3d4b5ba7ffbf362445e2a92aaf22279ef3338",
+    "artifacts/pvldb-research-20261024/range-sweep/main-study/independent-report.json": "82bc379cb16ec8c3bba64a823279f4f0e71270e083459f410118cb71f4d590b2",
+    "artifacts/pvldb-research-20261024/range-sweep/public-study-v2/independent-report.json": "21f7bbd74fbae5bb100596464cab4be215bb7701b9ddf2ea947e4e692c452472",
+    "artifacts/pvldb-research-20261024/range-sweep/validation/report.json": "ab00d5378b4f7e67cf9c9f1981331748f589f660551a8aa83686c98d88c13273"
+  },
+  "tests": {
+    "command": "PYTHONPATH=src python -m pytest -q",
+    "result": "3675 passed, 2 warnings in 64.91s",
+    "log_sha256": "7ec3ce7caa2a23e92ab605b8e9315467870730d2c708e49f8443fb03c0fe2f39"
+  },
+  "post_test_changes": "Reproduction wrapper: scientific-design binding and PYTHONOPTIMIZE=0; wrapper py_compile and static review passed. No frozen kernel/producer changed.",
+  "diff_check": "passed"
+}

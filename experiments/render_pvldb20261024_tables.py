@@ -133,3 +133,24 @@ isolates support compression. The patched code is not an upstream release.}
 \label{tab:klein-control}\end{table*}''')
  with args.output.open('a') as f:f.write('\n'.join(extra)+'\n')
  print('Included separately frozen minimal Klein support-threshold ablation.')
+
+compiled_control = BASE / 'compiled-support-control/independent-report.json'
+if compiled_control.exists():
+ c = json.loads(compiled_control.read_text())
+ if c['status'] != 'PASS': raise ValueError('Compiled-control audit did not pass')
+ extra = [r'''\begin{table*}[t]\centering\small
+\begin{tabular}{llllr}\toprule
+Collection & Control / released & Control / stream & Released / stream & Workflow control/stream\\\midrule''' ]
+ for family in ['NAB','SMAP','SMD']:
+  d = c['collections'][family]; a = d['case_comparisons']
+  extra.append(f"{family} & {interval(a['control_over_released'])} & {interval(a['control_over_stream'])} & {interval(a['released_over_stream'])} & {d['workflow_comparisons']['control_over_stream']['median_ratio']:.3f}" + r'\\')
+ extra.append(r'''\bottomrule\end{tabular}
+\caption{New author-created compiled conventional support-cumsum control, with
+matched validation, radix ordering and global counts, direct per-width ramps
+and cached original-positive mass. Six balanced orders for all 73 primary
+cases and six balanced workflow passes, width 30, Apple M1 Pro. Brackets are
+three-collection-adjusted 95\% intervals. Ratios below one favor the control;
+all scalar cases favor it over released. This is not unchanged public Klein.}
+\label{tab:compiled-control}\end{table*}''')
+ with args.output.open('a') as f: f.write('\n'.join(extra) + '\n')
+ print('Included compiled conventional-support attribution control.')

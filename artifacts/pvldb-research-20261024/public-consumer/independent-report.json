@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "auditor_sha256": "13ddbb522cd709d856bee2a8888a8f41952da0b101d59004a1a35cc647c3e350",
+  "shared_auditor_sha256": "4cf06015fd728405f85e6262ce5d43053d9061a4008cff2ced833185caf3a005",
+  "audit_kind": "trace and paired-output audit; seven non-VUS metrics are not independently reimplemented",
+  "protocol_sha256": "4811c90e71adf7681834818237fd2fa9587e3806b60ff05d4aac68a4c7f73354",
+  "profiles_sha256": "c71985a9b3564007b3c1760be353ec8ba7cbb07fb6cbe0449e9d311c8c551633",
+  "workflows_sha256": "f767ca0dd210c3c6b6ad502075551b20514975be2e98bb1f7e71bd19ddf7def8",
+  "profiles_per_pass": 8,
+  "passes": 4,
+  "metric_calls": 32,
+  "width": 125,
+  "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+  "n": 28696,
+  "max_nine_metric_discrepancy": 3.4416913763379853e-15,
+  "methods": {
+    "benchopt_pair": {
+      "total_seconds": [
+        34.218668,
+        34.301950708
+      ],
+      "vus_seconds": [
+        0.9307150840000001,
+        0.927014541
+      ],
+      "median_total_seconds": 34.260309354,
+      "median_vus_seconds": 0.9288648125000001,
+      "vus_fraction_each_trial": [
+        0.02719904480209458,
+        0.027025126031208452
+      ]
+    },
+    "radix_pair": {
+      "total_seconds": [
+        33.282963083000006,
+        33.185035917
+      ],
+      "vus_seconds": [
+        0.014147459000000003,
+        0.013971626000000001
+      ],
+      "median_total_seconds": 33.2339995,
+      "median_vus_seconds": 0.014059542500000001,
+      "vus_fraction_each_trial": [
+        0.00042506609056169414,
+        0.0004210218736826085
+      ]
+    }
+  },
+  "total_median_ratio": 1.0308813224240434,
+  "vus_median_ratio": 66.06650340862798,
+  "scope": "One repeated public multi-metric consumer on fixed stored profiles; two trials per backend, no population CI, fitting excluded."
+}

@@ -1,0 +1,260 @@
+{
+  "status": "PASS",
+  "analysis_source_sha256": "a2d034bbc4c080580d7ad8aeb3ca5ef177f6cf1aed9b207d1560545503951668",
+  "array_comparisons": {
+    "observations": {
+      "mac_shape": [
+        7431
+      ],
+      "linux_shape": [
+        7431
+      ],
+      "exactly_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "labels": {
+      "mac_shape": [
+        7431
+      ],
+      "linux_shape": [
+        7431
+      ],
+      "exactly_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "scores": {
+      "mac_shape": [
+        8,
+        7431
+      ],
+      "linux_shape": [
+        8,
+        7431
+      ],
+      "exactly_equal": false,
+      "max_abs_difference": 147465536.2434552
+    },
+    "standardized_data": {
+      "mac_shape": [
+        7431,
+        16
+      ],
+      "linux_shape": [
+        7431,
+        16
+      ],
+      "exactly_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "train_indices": {
+      "mac_shape": [
+        2048
+      ],
+      "linux_shape": [
+        2048
+      ],
+      "exactly_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "feature_mean": {
+      "mac_shape": [
+        16
+      ],
+      "linux_shape": [
+        16
+      ],
+      "exactly_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "feature_std": {
+      "mac_shape": [
+        16
+      ],
+      "linux_shape": [
+        16
+      ],
+      "exactly_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "svm_support_indices": {
+      "mac_shape": [
+        104
+      ],
+      "linux_shape": [
+        105
+      ],
+      "exactly_equal": false,
+      "max_abs_difference": null
+    },
+    "svm_support_vectors": {
+      "mac_shape": [
+        104,
+        16
+      ],
+      "linux_shape": [
+        105,
+        16
+      ],
+      "exactly_equal": false,
+      "max_abs_difference": null
+    },
+    "svm_dual_coef": {
+      "mac_shape": [
+        1,
+        104
+      ],
+      "linux_shape": [
+        1,
+        105
+      ],
+      "exactly_equal": false,
+      "max_abs_difference": null
+    },
+    "svm_intercept": {
+      "mac_shape": [
+        1
+      ],
+      "linux_shape": [
+        1
+      ],
+      "exactly_equal": false,
+      "max_abs_difference": 4.1445602931844405e-06
+    },
+    "svm_n_iter": {
+      "mac_shape": [],
+      "linux_shape": [],
+      "exactly_equal": true,
+      "max_abs_difference": 0.0
+    }
+  },
+  "hosts": {
+    "mac": {
+      "receipt_sha256": "31d74c80c82d03529a9822e67da88e1469e9901d306d8aa326f791d6b6c2094e",
+      "array_sha256": "2fef454c4712615b5711143fa4af4beb9a442d20abace73349ad8553c2393ae5",
+      "whole_score_bytes_equal_original_run": true,
+      "same_host_exact_pr": [
+        0.041116898297166866,
+        0.12565708547664162,
+        0.25540378155515014,
+        0.30926486480353266,
+        0.18886946769721974,
+        0.1967066526350773,
+        0.006767927909855718,
+        0.25346724045703717
+      ],
+      "same_host_public_comparator_pr": [
+        0.04111689829716687,
+        0.12565708547664164,
+        0.2554037815551501,
+        0.30926486480353266,
+        0.18886946769721974,
+        0.19670665263507733,
+        0.00676792790985572,
+        0.25346724045703717
+      ],
+      "same_host_250_pr": [
+        0.04134462377097189,
+        0.05025427200086257,
+        0.14064968319449436,
+        0.12627859985005455,
+        0.08506753509479884,
+        0.08912468542196259,
+        0.0077961144622090825,
+        0.13871314209638136
+      ],
+      "same_host_250_winners": [
+        2
+      ],
+      "max_reference_evaluator_error": 5.551115123125783e-17,
+      "max_original_run_metric_difference": 0.0,
+      "svm_original_run_metric_difference": 0.0,
+      "svm": {
+        "fit_status": 0,
+        "n_iter": 133,
+        "support_vectors": 104,
+        "parameters": {
+          "cache_size": 200,
+          "coef0": 0.0,
+          "degree": 3,
+          "gamma": 0.0625,
+          "kernel": "rbf",
+          "max_iter": -1,
+          "nu": 0.05,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    "linux": {
+      "receipt_sha256": "9d140e3fce5186f69a80e875a36ee6b3bcff0f7db4caff4016ee13f395172967",
+      "array_sha256": "0f602e4889d22e5a878cb7c24bc5c4f2911cc2f359073a27e9b30ca6c3dc1f01",
+      "whole_score_bytes_equal_original_run": false,
+      "same_host_exact_pr": [
+        0.041116898297166866,
+        0.1259848105700425,
+        0.2552561733126624,
+        0.3329318469250213,
+        0.18886946769721974,
+        0.1967066526350773,
+        0.006767927909855718,
+        0.25346724045703717
+      ],
+      "same_host_public_comparator_pr": [
+        0.04111689829716687,
+        0.1259848105700425,
+        0.2552561733126624,
+        0.33293184692502137,
+        0.18886946769721974,
+        0.19670665263507733,
+        0.00676792790985572,
+        0.25346724045703717
+      ],
+      "same_host_250_pr": [
+        0.04134462377097189,
+        0.05068466787407087,
+        0.14050207495200664,
+        0.14994558197154334,
+        0.08506889488820088,
+        0.08912468542196259,
+        0.0077961144622090825,
+        0.13871314209638136
+      ],
+      "same_host_250_winners": [
+        3
+      ],
+      "max_reference_evaluator_error": 5.551115123125783e-17,
+      "max_original_run_metric_difference": 0.0005821346084679546,
+      "svm_original_run_metric_difference": 0.0,
+      "svm": {
+        "fit_status": 0,
+        "n_iter": 133,
+        "support_vectors": 105,
+        "parameters": {
+          "cache_size": 200,
+          "coef0": 0.0,
+          "degree": 3,
+          "gamma": 0.0625,
+          "kernel": "rbf",
+          "max_iter": -1,
+          "nu": 0.05,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    }
+  },
+  "per_model_max_score_difference": [
+    1.1102230246251565e-16,
+    147465536.2434552,
+    5.960464477539063e-08,
+    0.00011958691457181203,
+    9.402201239794294e-15,
+    5.878058456643132e-13,
+    7.105427357601002e-15,
+    3.749046300072223e-07
+  ],
+  "conclusion": "Raw and standardized inputs are byte-identical; fitted SVM support state differs (104 versus 105). Both arrays reproduce their recorded SVM VUS-PR on one evaluator host and agree with the public comparator. This localizes the observed SVM discrepancy after standardization to fitted-state/score generation, not the VUS implementation. It does not identify a particular compiler, BLAS or instruction as causal.",
+  "qualification": "New Linux diagnostic repeat is not recovery of original runner arrays; whole eight-model score hashes can differ across Linux runners. All such differences are retained."
+}

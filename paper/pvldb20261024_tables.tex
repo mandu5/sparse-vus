@@ -88,3 +88,17 @@ The final column uses three not-fully-balanced workflow passes. Remaining
 gains include implementation differences; the compiled dense control separately
 isolates support compression. The patched code is not an upstream release.}
 \label{tab:klein-control}\end{table*}
+\begin{table*}[t]\centering\small
+\begin{tabular}{llllr}\toprule
+Collection & Control / released & Control / stream & Released / stream & Workflow control/stream\\\midrule
+NAB & 0.910 [0.905, 0.915] & 1.357 [1.291, 1.427] & 1.492 [1.419, 1.567] & 1.177\\
+SMAP & 0.960 [0.945, 0.973] & 1.201 [1.180, 1.224] & 1.251 [1.218, 1.287] & 1.126\\
+SMD & 0.978 [0.969, 0.985] & 1.166 [1.158, 1.174] & 1.193 [1.181, 1.205] & 1.152\\
+\bottomrule\end{tabular}
+\caption{New author-created compiled conventional support-cumsum control, with
+matched validation, radix ordering and global counts, direct per-width ramps
+and cached original-positive mass. Six balanced orders for all 73 primary
+cases and six balanced workflow passes, width 30, Apple M1 Pro. Brackets are
+three-collection-adjusted 95\% intervals. Ratios below one favor the control;
+all scalar cases favor it over released. This is not unchanged public Klein.}
+\label{tab:compiled-control}\end{table*}
