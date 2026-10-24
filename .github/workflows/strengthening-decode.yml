@@ -1,0 +1,41 @@
+name: Frozen strengthening decode diagnostic
+
+on:
+  push:
+    branches: [research/pvldb-strengthen-20261024]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  decode:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[decode-diagnostic]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        pandas: ["2.2.3", "3.0.1"]
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMEXPR_NUM_THREADS: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.11.9"
+      - name: Install only pinned decoding dependencies
+        run: python -m pip install numpy==1.26.4 pandas==${{ matrix.pandas }}
+      - name: Compare all frozen identities without fitting or metrics
+        run: python experiments/diagnose_strengthening_decode.py --archive "$RUNNER_TEMP/TSB-AD-U.zip" --out "$RUNNER_TEMP/decode-pandas-${{ matrix.pandas }}.json"
+      - name: Archive metadata-only diagnostic
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: strengthening-decode-pandas-${{ matrix.pandas }}
+          path: ${{ runner.temp }}/decode-pandas-${{ matrix.pandas }}.json
+          if-no-files-found: error
