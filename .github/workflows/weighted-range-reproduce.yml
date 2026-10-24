@@ -1,0 +1,46 @@
+name: Weighted range and TimeEval fresh reproduction
+
+on:
+  push:
+    branches: [research/pvldb-strengthen-20261024]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[weighted-reproduce]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMBA_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.11.9"
+      - name: Install pinned core CPU dependencies
+        run: python -m pip install -r requirements-strengthening.txt
+      - name: Install detector import dependency
+        run: python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Regenerate raw inputs and run frozen studies
+        run: python experiments/reproduce_strengthening.py --output "$RUNNER_TEMP/strengthening-replica"
+      - name: Archive research outputs without raw datasets or detector score vectors
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: weighted-range-timeeval-linux
+          path: |
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/*.json
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/environment-freeze.txt
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/weighted-linux-v2
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/timeeval-linux-v1/*.json
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/timeeval-linux-v1/*.jsonl
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/timeeval-linux-v1/*.log
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/timeeval-linux-v1/trials/**/results.csv
+            ${{ runner.temp }}/strengthening-replica/artifacts/pvldb-research-20261024/strengthening/timeeval-linux-v1/trials/**/*.log
+          if-no-files-found: error

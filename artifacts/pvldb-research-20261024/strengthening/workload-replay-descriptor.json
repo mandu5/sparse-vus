@@ -1,0 +1,71 @@
+{
+  "status": "UNFROZEN_REPLAY_DESCRIPTOR_NOT_AN_EXPERIMENT_PROTOCOL",
+  "purpose": "Clean reproduction invokes the current fixed generator and writes a new prospective protocol. Historical Mac producer and packaging recovery remain archived unchanged.",
+  "working_directory": "repository root",
+  "source_sha256": {
+    "scripts/prepare_strengthening_workload.py": "0e54488367e7e9d71e75bd9eeaf16ad7b5eaac37177012de871e6c811bf5b526",
+    "artifacts/pvldb-research-20261024/strengthening/source-discovery.json": "3323712337117428e497655b7e0e3b1bafd2285938466de71e842c5375f76b26",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/source-manifest.json": "3bcfea0e80ae82cc20d6e556058f4ca35bad99a069edb89391630064e0e0cd6e",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/mapping.json": "1041db4e8c74a8f55b844d5f591a2d0388084de3ca40c0910c96f22ffb31c923",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/prepare_strengthening_workload.frozen.py": "ddd84a1fa99db2f9aa240acfc1292abc31bd668f8a522e68e66ef9947deb7b65",
+    "artifacts/pvldb-research-20261024/strengthening/provenance/assemble_existing_scores.py": "48a17309d29f01b48e72d64ff896a21d71d9f0fd6482b56640bd8ab6c7b5e2b7"
+  },
+  "selection_sha256": "ed9eb0e9d906c3bd321bf6446cb4bfbbabdeddef154e17fa8ef1fb2f9e5e196c",
+  "upstream_tsb_ad_commit": "ed74348e7876c9268b7a737c77f2f5f56f7fa458",
+  "prerequisites": [
+    "cache/TSB-AD-U.zip exists and matches SHA256 0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961; raw observations are not redistributed.",
+    "Fetch the 11 exact public source files listed by provenance/source-manifest.json into their listed repository-relative paths; preserve the upstream LICENSE and verify every hash.",
+    "Install detector dependencies in the calling interpreter or .cache/strengthening-env; generator probes imports before fitting and records the selected interpreter/package versions.",
+    "The fresh cache and two fresh receipt paths below must not exist; the generator refuses replacement."
+  ],
+  "ordered_commands": [
+    {
+      "purpose": "Verify current generator and retained historical artifacts before reproduction",
+      "argv": [
+        "python",
+        "-c",
+        "import hashlib,json;from pathlib import Path;r=Path.cwd();d=json.loads((r/'artifacts/pvldb-research-20261024/strengthening/workload-replay-descriptor.json').read_text());assert all(hashlib.sha256((r/p).read_bytes()).hexdigest()==h for p,h in d['source_sha256'].items());print('CURRENT_GENERATOR_AND_HISTORICAL_PROVENANCE_VERIFIED')"
+      ]
+    },
+    {
+      "purpose": "Make the archived pinned dependency manifest available without overwriting a differing file",
+      "argv": [
+        "python",
+        "-c",
+        "import hashlib,json;from pathlib import Path;r=Path.cwd();b=r/'artifacts/pvldb-research-20261024/strengthening/provenance';m=json.loads((b/'mapping.json').read_text());e=next(e for e in m['entries'] if e['archive_path'].endswith('/source-manifest.json'));data=(r/e['archive_path']).read_bytes();assert hashlib.sha256(data).hexdigest()==e['sha256'];p=r/'.cache/strengthening-tsbad/source-manifest.json';p.parent.mkdir(parents=True,exist_ok=True);assert not p.exists() or p.read_bytes()==data;p.write_bytes(data) if not p.exists() else None;print('PINNED_SOURCE_MANIFEST_AVAILABLE')"
+      ]
+    },
+    {
+      "purpose": "Generate once with the current fixed producer; protocol is written before the first detector fit",
+      "argv": [
+        "python",
+        "scripts/prepare_strengthening_workload.py",
+        "--archive",
+        "cache/TSB-AD-U.zip",
+        "--output",
+        ".cache/strengthening-workload-replay",
+        "--protocol",
+        "artifacts/pvldb-research-20261024/strengthening/workload-replay-protocol.json",
+        "--generation",
+        "artifacts/pvldb-research-20261024/strengthening/workload-replay-generation.json"
+      ]
+    }
+  ],
+  "fresh_outputs": {
+    "private_cache": ".cache/strengthening-workload-replay",
+    "protocol": "artifacts/pvldb-research-20261024/strengthening/workload-replay-protocol.json",
+    "generation": "artifacts/pvldb-research-20261024/strengthening/workload-replay-generation.json"
+  },
+  "historical_mac_execution": {
+    "protocol_sha256": "b1134f125ab7eba4c5acb6b8c2f1450f44b215de3b5860456592d79a99708a71",
+    "generation_sha256": "4177f82b6bfe404f82439d75b749adb16b21a416321425326da2611115f02568",
+    "original_fit_profiles": 52,
+    "repeated_fits_for_packaging_recovery": 0,
+    "historical_producer": "artifacts/pvldb-research-20261024/strengthening/provenance/prepare_strengthening_workload.frozen.py",
+    "historical_recovery": "artifacts/pvldb-research-20261024/strengthening/provenance/assemble_existing_scores.py",
+    "explanation": "The original Mac run completed all fits and native score serialization, then failed only at symlink-relative-path metadata construction. Archived source and recovery hashes preserve that chronology. Do not execute the historical producer or recovery on a clean rerun."
+  },
+  "clean_new_run": "Uses scripts/prepare_strengthening_workload.py, whose current hash is checked above and is pinned automatically into the new protocol. It includes the symlink-relative-path fix, so no packaging recovery is expected. New environment, file hashes and fit receipts must be retained as a new run; do not relabel them as the historical Mac execution.",
+  "downstream": "Pass the fresh generation receipt to weighted_range_study.py freeze --inputs and build consumer protocol against that receipt. These commands do not execute metric timings.",
+  "immutability": "This descriptor is auxiliary and was created after the historical workload. It does not change any existing discovery, protocol or generation manifest."
+}
