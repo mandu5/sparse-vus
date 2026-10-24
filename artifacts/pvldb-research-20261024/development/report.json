@@ -1,0 +1,67 @@
+{
+  "status": "COMPLETE_DEVELOPMENT",
+  "cases": 6,
+  "calls": 216,
+  "protocol_sha256": "c511b8e6d84d530238d063f1bebcf7f7dbdc75b8f555bfe406c2dcb1fa51d46f",
+  "records_sha256": "0e6f24468c4db7b9ce20a30497fdf727b643805415930c21ae04ef472c49a5a5",
+  "case_medians": {
+    "001_NAB_id_1_Facility_tr_1007_1st_2014": {
+      "released": 0.000797542,
+      "geometry": 0.0006392920000000001,
+      "stream": 0.000602375,
+      "dense": 0.002070771,
+      "external": 0.016832437500000002,
+      "certificate_fallback": 0.082032646
+    },
+    "002_NAB_id_2_WebService_tr_1500_1st_4106": {
+      "released": 0.001264771,
+      "geometry": 0.0010337290000000002,
+      "stream": 0.0009598955000000001,
+      "dense": 0.0031861045,
+      "external": 0.022449229,
+      "certificate_fallback": 0.0905781255
+    },
+    "531_SMAP_id_1_Sensor_tr_1811_1st_4510": {
+      "released": 0.001374896,
+      "geometry": 0.0012628125,
+      "stream": 0.001238354,
+      "dense": 0.0028331665000000004,
+      "external": 0.0216472085,
+      "certificate_fallback": 0.005085646000000001
+    },
+    "532_SMAP_id_2_Sensor_tr_2075_1st_5550": {
+      "released": 0.001171063,
+      "geometry": 0.0010197085,
+      "stream": 0.001005271,
+      "dense": 0.003908104,
+      "external": 0.028369292000000004,
+      "certificate_fallback": 0.086026833
+    },
+    "178_SMD_id_1_Facility_tr_6000_1st_10609": {
+      "released": 0.0029939585000000003,
+      "geometry": 0.002666354,
+      "stream": 0.0026304795000000004,
+      "dense": 0.010875354,
+      "external": 0.069088604,
+      "certificate_fallback": 0.086534729
+    },
+    "179_SMD_id_2_Facility_tr_5925_1st_17580": {
+      "released": 0.0027925000000000003,
+      "geometry": 0.0025771875,
+      "stream": 0.0024935415000000003,
+      "dense": 0.010086854000000001,
+      "external": 0.06742737500000001,
+      "certificate_fallback": 0.0736704375
+    }
+  },
+  "released_over_method_geomean": {
+    "released": 1.0,
+    "geometry": 1.1507428991930124,
+    "stream": 1.192515477064723,
+    "dense": 0.34527954316043,
+    "external": 0.04821351964225308,
+    "certificate_fallback": 0.029471130019172294
+  },
+  "certificate_early_returns": 0,
+  "max_scalar_difference": 1.1102230246251565e-16
+}

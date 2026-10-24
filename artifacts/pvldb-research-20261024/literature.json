@@ -1,0 +1,122 @@
+{
+  "checked_date": "2026-10-24",
+  "kind": "bounded primary-source comparison, not exhaustive novelty proof",
+  "papers": [
+    {
+      "title": "VUS: effective and efficient accuracy measures for time-series anomaly detection",
+      "year": 2025,
+      "venue": "VLDB Journal",
+      "url": "https://www.paparrizos.org/papers/BoniolVLDBJ25.pdf",
+      "relevance": "Closest operator and optimized algorithms",
+      "already_established": "Defines and optimizes VUS with static/dynamic work reuse and threshold/runtime sensitivity.",
+      "distinction": "Preserve the operator while compressing exhaustive complete-tie support events and sharing label work across model scores; fast VUS and reuse themselves are not new."
+    },
+    {
+      "title": "PATE: Proximity-Aware Time series anomaly Evaluation",
+      "year": 2024,
+      "venue": "KDD research",
+      "url": "https://arxiv.org/html/2405.12096",
+      "relevance": "Weighted PR and temporal buffers",
+      "already_established": "Introduces proximity-weighted PR evaluation and analyzes buffer-size/complexity effects.",
+      "distinction": "Computing a fixed existing VUS target more cheaply differs from proposing a different utility metric; do not claim novel weighted PR."
+    },
+    {
+      "title": "The Elephant in the Room: Towards A Reliable Time-Series Anomaly Detection Benchmark",
+      "year": 2024,
+      "venue": "NeurIPS Datasets and Benchmarks",
+      "url": "https://papers.neurips.cc/paper_files/paper/2024/file/c3f3c690b7a99fba16d0efd35cb83b2c-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "relevance": "Primary workload and metric reliability",
+      "already_established": "TSB-AD evaluates 40 algorithms and 1070 series, studies metric reliability and recommends VUS-PR.",
+      "distinction": "This work studies exact computational fidelity/cost of that evaluator, not a new detector benchmark or another general ranking audit."
+    },
+    {
+      "title": "TAB: Unified Benchmarking of Time Series Anomaly Detection Methods",
+      "year": 2025,
+      "venue": "PVLDB",
+      "url": "https://arxiv.org/html/2506.18046",
+      "relevance": "Evaluation pipeline and scalability",
+      "already_established": "Unified data, method, evaluation layers; diverse metrics and standardized preprocessing and strategies.",
+      "distinction": "A shared-label exact operator is a component optimization; the pipeline concept and scalable benchmarking are prior work."
+    },
+    {
+      "title": "TSB-AutoAD: Towards Automated Solutions for Time-Series Anomaly Detection",
+      "year": 2025,
+      "venue": "PVLDB EA&B",
+      "url": "https://www.vldb.org/pvldb/vol18/p4364-liu.pdf",
+      "relevance": "Model-selection use case",
+      "already_established": "Evaluates selection, ensembling and generation methods, including their accuracy/efficiency trade-offs.",
+      "distinction": "Labeled offline selection cost and numerical fidelity are distinct from learning an unlabeled deployment selector; no AutoML superiority is asserted."
+    },
+    {
+      "title": "Formally Exploring Time-Series Anomaly Detection Evaluation Metrics",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/html/2510.17562",
+      "relevance": "Formal properties of metrics",
+      "already_established": "Analyzes 37 metrics and proposes LARM/ALARM; section3 explicitly excludes score-based volume-under-surface metrics from the formal analysis.",
+      "distinction": "The target here is an existing score-integrated dynamic metric, with complete-tie computation rather than new metric axioms."
+    },
+    {
+      "title": "CCE: Confidence-Consistency Evaluation for Time Series Anomaly Detection",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "https://arxiv.org/html/2509.01098",
+      "relevance": "Fast alternative metric and ranking evaluation",
+      "already_established": "Proposes confidence/consistency scores, an O(n) computation and RankEval.",
+      "distinction": "A different O(n) metric cannot be treated as a same-output baseline; preserve the existing VUS target and compare matched operators."
+    },
+    {
+      "title": "A Problem-Oriented Taxonomy of Evaluation Metrics for Time Series Anomaly Detection",
+      "year": 2025,
+      "venue": "arXiv, inspected v2",
+      "url": "https://arxiv.org/html/2511.18739v2",
+      "relevance": "Metric semantics and application fit",
+      "already_established": "Organizes metrics by application needs including tolerance, timeliness, random-score robustness and audit costs.",
+      "distinction": "Separate semantic choice from approximation of one declared target; do not rebrand a metric taxonomy or ranking change as novel."
+    },
+    {
+      "title": "Did We Actually Fix It? An Independent Adversarial Stress-Test of Post-Point-Adjustment Evaluation Metrics for Time-Series Anomaly Detection",
+      "year": 2026,
+      "venue": "arXiv v2",
+      "url": "https://arxiv.org/html/2607.11969v2",
+      "relevance": "Adversarial evaluation and rank changes",
+      "already_established": "Studies best-of-N no-skill reporting on six benchmarks and inter-metric rank agreement with VUS resolution250.",
+      "distinction": "Our discrepancy holds scores/labels/metric fixed and changes numerical threshold integration; not a new seed-shopping or general metric-robustness result."
+    },
+    {
+      "title": "Retrieval Over Training: Similarity search-based Model Selection for Time Series Anomaly Detection",
+      "year": 2026,
+      "venue": "arXiv v2",
+      "url": "https://arxiv.org/html/2610.20243v2",
+      "relevance": "Recent selection scalability",
+      "already_established": "RAMSAD uses retrieval of historical detector profiles for model selection and reports OOD/runtime trade-offs.",
+      "distinction": "The new workload computes exact labeled profile scores; it does not replace the retrieval selector or claim better deployment accuracy."
+    },
+    {
+      "title": "Fast or Accurate? Rethinking Time Series Anomaly Detection",
+      "year": 2025,
+      "venue": "VLDB PhD Workshop",
+      "url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/PhD/PhD25_17.pdf",
+      "relevance": "Efficient metric implementation",
+      "already_established": "Discusses fast CPU/GPU evaluation and model-selection cost.",
+      "distinction": "Credit efficient VUS as established; compare the actual pinned FF-VUS native contract separately rather than claiming it computes the original square-root target."
+    },
+    {
+      "title": "mTSBench: Benchmarking Multivariate Time Series Anomaly Detection and Model Selection at Scale",
+      "year": 2026,
+      "venue": "TMLR; primary project page inspected",
+      "url": "https://plan-lab.github.io/projects/mtsbench/",
+      "relevance": "Broader model-selection workload",
+      "already_established": "Public benchmark spans 344 multivariate series, 19 datasets, 24 detectors and model selection.",
+      "distinction": "Eight CPU detectors on univariate components are a targeted operator workload, not broader coverage than mTSBench; future claims need broader panels."
+    }
+  ],
+  "software_not_counted_as_papers": [
+    "official VUS467bace0",
+    "Klein fast-VUS1bae859f",
+    "FF-VUS facf4362",
+    "TimeEval metrics",
+    "Sparse VUS v0.3.0 public unrefereed precursor"
+  ],
+  "surviving_claim": "A support-event representation preserves the pinned exhaustive dynamic VUS operator and complete global ties; its collection implementation reuses label-dependent width geometry across stored detector outputs. Standard sorting, loop interchange, caching, model selection and PR approximation warnings are not individually new."
+}

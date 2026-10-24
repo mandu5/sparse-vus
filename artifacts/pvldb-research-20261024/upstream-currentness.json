@@ -1,0 +1,27 @@
+{
+  "checked_date": "2026-10-24",
+  "repositories": [
+    {
+      "repository": "https://github.com/tomlouisklein/fast-VUS",
+      "head": "1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00",
+      "date": "2026-10-16T10:36:48Z"
+    },
+    {
+      "repository": "https://github.com/TheDatumOrg/VUS",
+      "head": "467bace0c103f5c2bdb4900306d82939bcac8ff9",
+      "date": "2026-08-12T08:41:59Z"
+    },
+    {
+      "repository": "https://github.com/benchopt/benchmark_tsfm",
+      "head": "2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94",
+      "date": "2026-09-29T21:02:26Z",
+      "metrics_url": "https://raw.githubusercontent.com/benchopt/benchmark_tsfm/2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94/benchmark_utils/metrics.py",
+      "metrics_sha256": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8"
+    },
+    {
+      "repository": "https://github.com/doanthihoaithu/aVUSi",
+      "head": "facf4362092525671215031048a75842b9d6d632",
+      "date": "2026-06-23T21:55:37Z"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source": "https://huggingface.co/datasets/WENJINLIU/Paper-Review-Dataset/resolve/main/ICLR_2026.jsonl",
+  "retrieved_utc": "2026-10-24T00:57:27Z",
+  "kind": "public mirror of original OpenReview notes; origin API unavailable",
+  "scanned_rows": 5357,
+  "scanned_bytes": 1319718244,
+  "found": [
+    {
+      "id": "H27kvyG4qf",
+      "title": "When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection",
+      "decision": "Accept (Poster)",
+      "sha256": "20e05d9af3a996ada77379833c9f00c4b177e8a2fafee513a8016de6b9a9ebbb",
+      "keys": [
+        "title",
+        "authors",
+        "abstract",
+        "pdf_url",
+        "source_url",
+        "id",
+        "decision",
+        "avg_rating",
+        "review_ratings",
+        "year",
+        "conference",
+        "context",
+        "related_notes"
+      ]
+    }
+  ],
+  "missing": [
+    "Z4T26VztkU"
+  ]
+}

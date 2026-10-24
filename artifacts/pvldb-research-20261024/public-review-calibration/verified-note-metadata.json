@@ -1,0 +1,202 @@
+[
+  {
+    "title": "When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection",
+    "forum": "H27kvyG4qf",
+    "year": "2026",
+    "original_record_sha256": "20e05d9af3a996ada77379833c9f00c4b177e8a2fafee513a8016de6b9a9ebbb",
+    "origin": "https://openreview.net/forum?id=H27kvyG4qf",
+    "retrieval": "public dataset mirror; raw note text read from private cache; no LLM-derived ratings used",
+    "notes": [
+      {
+        "id": "XfBOGU95OS",
+        "forum": "H27kvyG4qf",
+        "decision": "Accept (Poster)",
+        "rating": null,
+        "confidence": null,
+        "url": "https://openreview.net/forum?id=H27kvyG4qf&noteId=XfBOGU95OS"
+      },
+      {
+        "id": "t9hXxyBqb5",
+        "forum": "H27kvyG4qf",
+        "decision": null,
+        "rating": null,
+        "confidence": null,
+        "url": "https://openreview.net/forum?id=H27kvyG4qf&noteId=t9hXxyBqb5"
+      },
+      {
+        "id": "GNaYZoHZub",
+        "forum": "H27kvyG4qf",
+        "decision": null,
+        "rating": 4,
+        "confidence": 4,
+        "url": "https://openreview.net/forum?id=H27kvyG4qf&noteId=GNaYZoHZub"
+      },
+      {
+        "id": "blcme8qYo0",
+        "forum": "H27kvyG4qf",
+        "decision": null,
+        "rating": 6,
+        "confidence": 4,
+        "url": "https://openreview.net/forum?id=H27kvyG4qf&noteId=blcme8qYo0"
+      },
+      {
+        "id": "3ebbNTymw6",
+        "forum": "H27kvyG4qf",
+        "decision": null,
+        "rating": 6,
+        "confidence": 5,
+        "url": "https://openreview.net/forum?id=H27kvyG4qf&noteId=3ebbNTymw6"
+      },
+      {
+        "id": "cveVKQ7R4o",
+        "forum": "H27kvyG4qf",
+        "decision": null,
+        "rating": 4,
+        "confidence": 3,
+        "url": "https://openreview.net/forum?id=H27kvyG4qf&noteId=cveVKQ7R4o"
+      }
+    ]
+  },
+  {
+    "title": "Unsupervised Model Selection for Time Series Anomaly Detection",
+    "forum": "gOZ_pKANaPW",
+    "year": "2023",
+    "original_record_sha256": "99b1a03b0295f3136e8e4b91a51cbca5d41c23e68471017fdf8c841c7047665e",
+    "origin": "https://openreview.net/forum?id=gOZ_pKANaPW",
+    "retrieval": "public dataset mirror; raw note text read from private cache; no LLM-derived ratings used",
+    "notes": [
+      {
+        "id": "HRD5hna4dy",
+        "forum": "gOZ_pKANaPW",
+        "decision": "Accept: notable-top-25%",
+        "rating": null,
+        "confidence": null,
+        "url": "https://openreview.net/forum?id=gOZ_pKANaPW&noteId=HRD5hna4dy"
+      },
+      {
+        "id": "rKJN59g_G0",
+        "forum": "gOZ_pKANaPW",
+        "decision": null,
+        "rating": "8: accept, good paper",
+        "confidence": "4: You are confident in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work.",
+        "url": "https://openreview.net/forum?id=gOZ_pKANaPW&noteId=rKJN59g_G0"
+      },
+      {
+        "id": "6mrpaWFqxp",
+        "forum": "gOZ_pKANaPW",
+        "decision": null,
+        "rating": "6: marginally above the acceptance threshold",
+        "confidence": "2: You are willing to defend your assessment, but it is quite likely that you did not understand the central parts of the submission or that you are unfamiliar with some pieces of related work. Math/other details were not carefully checked.",
+        "url": "https://openreview.net/forum?id=gOZ_pKANaPW&noteId=6mrpaWFqxp"
+      },
+      {
+        "id": "NuKBOZgVkj",
+        "forum": "gOZ_pKANaPW",
+        "decision": null,
+        "rating": "3: reject, not good enough",
+        "confidence": "5: You are absolutely certain about your assessment. You are very familiar with the related work and checked the math/other details carefully.",
+        "url": "https://openreview.net/forum?id=gOZ_pKANaPW&noteId=NuKBOZgVkj"
+      },
+      {
+        "id": "0djXzsgrLzC",
+        "forum": "gOZ_pKANaPW",
+        "decision": null,
+        "rating": "5: marginally below the acceptance threshold",
+        "confidence": "4: You are confident in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work.",
+        "url": "https://openreview.net/forum?id=gOZ_pKANaPW&noteId=0djXzsgrLzC"
+      }
+    ]
+  },
+  {
+    "title": "Time Series Subsequence Anomaly Detection via Graph Neural Networks",
+    "forum": "73U_NlKaNx",
+    "year": "2023",
+    "original_record_sha256": "cfe70077662e677e28e77634418c18be526ab8a2aaaff631bbe13c4e82127329",
+    "origin": "https://openreview.net/forum?id=73U_NlKaNx",
+    "retrieval": "public dataset mirror; raw note text read from private cache; no LLM-derived ratings used",
+    "notes": [
+      {
+        "id": "GMS-BMZmsG",
+        "forum": "73U_NlKaNx",
+        "decision": "Reject",
+        "rating": null,
+        "confidence": null,
+        "url": "https://openreview.net/forum?id=73U_NlKaNx&noteId=GMS-BMZmsG"
+      },
+      {
+        "id": "Do6QtWdF5du",
+        "forum": "73U_NlKaNx",
+        "decision": null,
+        "rating": "5: marginally below the acceptance threshold",
+        "confidence": "4: You are confident in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work.",
+        "url": "https://openreview.net/forum?id=73U_NlKaNx&noteId=Do6QtWdF5du"
+      },
+      {
+        "id": "4xcgU6c2lR",
+        "forum": "73U_NlKaNx",
+        "decision": null,
+        "rating": "3: reject, not good enough",
+        "confidence": "4: You are confident in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work.",
+        "url": "https://openreview.net/forum?id=73U_NlKaNx&noteId=4xcgU6c2lR"
+      },
+      {
+        "id": "EfHxtysAGTA",
+        "forum": "73U_NlKaNx",
+        "decision": null,
+        "rating": "6: marginally above the acceptance threshold",
+        "confidence": "4: You are confident in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work.",
+        "url": "https://openreview.net/forum?id=73U_NlKaNx&noteId=EfHxtysAGTA"
+      },
+      {
+        "id": "QZEeqBt475",
+        "forum": "73U_NlKaNx",
+        "decision": null,
+        "rating": "5: marginally below the acceptance threshold",
+        "confidence": "3: You are fairly confident in your assessment. It is possible that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work. Math/other details were not carefully checked.",
+        "url": "https://openreview.net/forum?id=73U_NlKaNx&noteId=QZEeqBt475"
+      }
+    ]
+  },
+  {
+    "title": "Time Series Anomaly Detection via Hypothesis Testing for Dynamical Systems",
+    "forum": "G-dM79m_EXd",
+    "year": "2023",
+    "original_record_sha256": "8144f528a2d33ff09c2f656197a1e699efc252b083659a4a53eb9b54f4baa15a",
+    "origin": "https://openreview.net/forum?id=G-dM79m_EXd",
+    "retrieval": "public dataset mirror; raw note text read from private cache; no LLM-derived ratings used",
+    "notes": [
+      {
+        "id": "GYaqYZtEQU",
+        "forum": "G-dM79m_EXd",
+        "decision": "Reject",
+        "rating": null,
+        "confidence": null,
+        "url": "https://openreview.net/forum?id=G-dM79m_EXd&noteId=GYaqYZtEQU"
+      },
+      {
+        "id": "WoGTIpkmU5O",
+        "forum": "G-dM79m_EXd",
+        "decision": null,
+        "rating": "6: marginally above the acceptance threshold",
+        "confidence": "3: You are fairly confident in your assessment. It is possible that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work. Math/other details were not carefully checked.",
+        "url": "https://openreview.net/forum?id=G-dM79m_EXd&noteId=WoGTIpkmU5O"
+      },
+      {
+        "id": "AaajNllRxqm",
+        "forum": "G-dM79m_EXd",
+        "decision": null,
+        "rating": "1: strong reject",
+        "confidence": "4: You are confident in your assessment, but not absolutely certain. It is unlikely, but not impossible, that you did not understand some parts of the submission or that you are unfamiliar with some pieces of related work.",
+        "url": "https://openreview.net/forum?id=G-dM79m_EXd&noteId=AaajNllRxqm"
+      },
+      {
+        "id": "zzPoK1Z88ei",
+        "forum": "G-dM79m_EXd",
+        "decision": null,
+        "rating": "5: marginally below the acceptance threshold",
+        "confidence": "2: You are willing to defend your assessment, but it is quite likely that you did not understand the central parts of the submission or that you are unfamiliar with some pieces of related work. Math/other details were not carefully checked.",
+        "url": "https://openreview.net/forum?id=G-dM79m_EXd&noteId=zzPoK1Z88ei"
+      }
+    ]
+  }
+]

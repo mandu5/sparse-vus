@@ -1,0 +1,7484 @@
+{
+  "status": "PASS",
+  "audit_kind": "independent supplement record reconstruction, not a fresh run",
+  "source_sha256": "0b8c45bde23da1ca774b5afcf2dacc6596d608575bb0c20d14acadccdcdda903",
+  "shared_auditor_sha256": "7454d82f83562ef76e3679caa41d26ab93ac1f05a2192855fcc3e87f3c8a6dd5",
+  "protocol_sha256": "b657a2e185d1a0731150f579e108f1e3ecef81fe0f8e37bb831d04cb098201a9",
+  "inputs_sha256": "9b1dc600e9f13052408c69a796064742236a12de8435ec32d897f7d9a04117b0",
+  "records_sha256": "d8840743f7d988b16f7d2130d3955d2b443bbb7d50e303d87e9d510c5992dd52",
+  "workflows_sha256": "a9585f8a70fe1707c45e519126167c0ce2769bcea0b9f4fdbd94c3a19f0e112a",
+  "records": 5256,
+  "workflows": 216,
+  "max_exact_pr_error": 1.1102230246251565e-15,
+  "max_exact_workflow_pr_error": 1.1102230246251565e-15,
+  "max_workflow_roc_error": 4.851674617611934e-14,
+  "case_paired": {
+    "NAB": {
+      "klein_exact": {
+        "geometric_speedup": 29.63951065898101,
+        "ci95": [
+          27.44929189645027,
+          31.877362919804877
+        ],
+        "ci_familywise95_3collections": [
+          26.991007373648465,
+          32.31010782225102
+        ],
+        "case_wins": 20,
+        "cases": 20,
+        "minimum_speedup": 19.434404042263342,
+        "maximum_speedup": 38.36414846692993
+      },
+      "benchopt_pair": {
+        "geometric_speedup": 47.139275017965005,
+        "ci95": [
+          45.68220912080206,
+          48.514082036699314
+        ],
+        "ci_familywise95_3collections": [
+          45.29906230771745,
+          48.78636295362413
+        ],
+        "case_wins": 20,
+        "cases": 20,
+        "minimum_speedup": 39.72644183964151,
+        "maximum_speedup": 54.44817431530151
+      },
+      "radix_pair": {
+        "geometric_speedup": 1.7277574573228793,
+        "ci95": [
+          1.6523134049546808,
+          1.802977404836536
+        ],
+        "ci_familywise95_3collections": [
+          1.6367486877093953,
+          1.8197403688125338
+        ],
+        "case_wins": 20,
+        "cases": 20,
+        "minimum_speedup": 1.3475026784828166,
+        "maximum_speedup": 2.0765758411708344
+      },
+      "klein250": {
+        "geometric_speedup": 16.970189913624345,
+        "ci95": [
+          14.105184873046456,
+          20.185542884654406
+        ],
+        "ci_familywise95_3collections": [
+          13.493727180198704,
+          20.8385587900585
+        ],
+        "case_wins": 20,
+        "cases": 20,
+        "minimum_speedup": 7.154033343037154,
+        "maximum_speedup": 30.0729444488523
+      },
+      "klein1000": {
+        "geometric_speedup": 19.57947634019271,
+        "ci95": [
+          16.03468860282068,
+          23.55789823126203
+        ],
+        "ci_familywise95_3collections": [
+          15.327503404193983,
+          24.40469671503647
+        ],
+        "case_wins": 20,
+        "cases": 20,
+        "minimum_speedup": 7.715328940790723,
+        "maximum_speedup": 35.180480198231294
+      }
+    },
+    "SMAP": {
+      "klein_exact": {
+        "geometric_speedup": 26.64415197145294,
+        "ci95": [
+          24.40869660502038,
+          29.06928734063086
+        ],
+        "ci_familywise95_3collections": [
+          23.93417487512873,
+          29.65236589973324
+        ],
+        "case_wins": 17,
+        "cases": 17,
+        "minimum_speedup": 19.250378558588004,
+        "maximum_speedup": 35.992692674710774
+      },
+      "benchopt_pair": {
+        "geometric_speedup": 47.66646591977002,
+        "ci95": [
+          43.769778546992974,
+          52.12015127528895
+        ],
+        "ci_familywise95_3collections": [
+          42.88721652608592,
+          53.13079489036645
+        ],
+        "case_wins": 17,
+        "cases": 17,
+        "minimum_speedup": 35.824906030397116,
+        "maximum_speedup": 64.81421636574393
+      },
+      "radix_pair": {
+        "geometric_speedup": 1.3789520635804797,
+        "ci95": [
+          1.3274854527725246,
+          1.4361094573403015
+        ],
+        "ci_familywise95_3collections": [
+          1.318557643328473,
+          1.4518259801699993
+        ],
+        "case_wins": 17,
+        "cases": 17,
+        "minimum_speedup": 1.202785943134977,
+        "maximum_speedup": 1.7198017635946643
+      },
+      "klein250": {
+        "geometric_speedup": 11.713480265808192,
+        "ci95": [
+          10.674394715496328,
+          12.840921720028545
+        ],
+        "ci_familywise95_3collections": [
+          10.442754917422722,
+          13.073313489191449
+        ],
+        "case_wins": 17,
+        "cases": 17,
+        "minimum_speedup": 8.318096682464455,
+        "maximum_speedup": 14.772952296460304
+      },
+      "klein1000": {
+        "geometric_speedup": 13.085507391481045,
+        "ci95": [
+          11.90572837180896,
+          14.3637175849391
+        ],
+        "ci_familywise95_3collections": [
+          11.635661408701782,
+          14.63718048258597
+        ],
+        "case_wins": 17,
+        "cases": 17,
+        "minimum_speedup": 9.174494786729857,
+        "maximum_speedup": 16.843247686912157
+      }
+    },
+    "SMD": {
+      "klein_exact": {
+        "geometric_speedup": 25.276980272778186,
+        "ci95": [
+          23.9185377887547,
+          26.560592613190437
+        ],
+        "ci_familywise95_3collections": [
+          23.58401223281713,
+          26.81141612693339
+        ],
+        "case_wins": 36,
+        "cases": 36,
+        "minimum_speedup": 15.685910667419915,
+        "maximum_speedup": 31.091778453010814
+      },
+      "benchopt_pair": {
+        "geometric_speedup": 56.544094943098024,
+        "ci95": [
+          53.73438168840024,
+          59.2481443749771
+        ],
+        "ci_familywise95_3collections": [
+          52.99658020908547,
+          59.742167068336244
+        ],
+        "case_wins": 36,
+        "cases": 36,
+        "minimum_speedup": 37.07632371740605,
+        "maximum_speedup": 66.45295953251204
+      },
+      "radix_pair": {
+        "geometric_speedup": 1.2804353613010058,
+        "ci95": [
+          1.2575512546049816,
+          1.3060123404485282
+        ],
+        "ci_familywise95_3collections": [
+          1.2523511580195679,
+          1.3133504396499365
+        ],
+        "case_wins": 36,
+        "cases": 36,
+        "minimum_speedup": 1.162189505260838,
+        "maximum_speedup": 1.4975715960475633
+      },
+      "klein250": {
+        "geometric_speedup": 8.158381070191849,
+        "ci95": [
+          7.7226743759712235,
+          8.533807033955023
+        ],
+        "ci_familywise95_3collections": [
+          7.617603216380752,
+          8.604456553817139
+        ],
+        "case_wins": 36,
+        "cases": 36,
+        "minimum_speedup": 4.834249912191444,
+        "maximum_speedup": 9.64262633954321
+      },
+      "klein1000": {
+        "geometric_speedup": 8.678911691890214,
+        "ci95": [
+          8.221684575329075,
+          9.07865954292577
+        ],
+        "ci_familywise95_3collections": [
+          8.118991636574865,
+          9.15345127856008
+        ],
+        "case_wins": 36,
+        "cases": 36,
+        "minimum_speedup": 5.230476683106914,
+        "maximum_speedup": 10.343050564974778
+      }
+    }
+  },
+  "identical_label_block_sensitivity": {
+    "NAB": {
+      "klein_exact": {
+        "geometric_speedup": 29.63951065898098,
+        "blocks": 20,
+        "ci95": [
+          27.36518613146903,
+          31.902943064747713
+        ],
+        "ci_familywise95_3collections": [
+          26.928068809918912,
+          32.39464338406511
+        ]
+      },
+      "benchopt_pair": {
+        "geometric_speedup": 47.139275017965005,
+        "blocks": 20,
+        "ci95": [
+          45.66775002022305,
+          48.50229460639588
+        ],
+        "ci_familywise95_3collections": [
+          45.271543657161345,
+          48.79411525664231
+        ]
+      },
+      "radix_pair": {
+        "geometric_speedup": 1.727757457322879,
+        "blocks": 20,
+        "ci95": [
+          1.6500454434579555,
+          1.8044119841276642
+        ],
+        "ci_familywise95_3collections": [
+          1.6329105705078328,
+          1.8198232877243283
+        ]
+      },
+      "klein250": {
+        "geometric_speedup": 16.970189913624353,
+        "blocks": 20,
+        "ci95": [
+          14.03581810801549,
+          20.22908352687555
+        ],
+        "ci_familywise95_3collections": [
+          13.394813495356903,
+          20.92624209542597
+        ]
+      },
+      "klein1000": {
+        "geometric_speedup": 19.5794763401927,
+        "blocks": 20,
+        "ci95": [
+          15.967964567174581,
+          23.627926314988986
+        ],
+        "ci_familywise95_3collections": [
+          15.173819959029167,
+          24.490691857738895
+        ]
+      }
+    },
+    "SMAP": {
+      "klein_exact": {
+        "geometric_speedup": 26.64415197145295,
+        "blocks": 17,
+        "ci95": [
+          24.377863995969726,
+          29.025531898753588
+        ],
+        "ci_familywise95_3collections": [
+          23.942676642435373,
+          29.616452957782215
+        ]
+      },
+      "benchopt_pair": {
+        "geometric_speedup": 47.66646591977006,
+        "blocks": 17,
+        "ci95": [
+          43.72961054174756,
+          52.05128709687211
+        ],
+        "ci_familywise95_3collections": [
+          42.96478240772345,
+          53.0430190077525
+        ]
+      },
+      "radix_pair": {
+        "geometric_speedup": 1.3789520635804795,
+        "blocks": 17,
+        "ci95": [
+          1.3268233452102054,
+          1.4377767694950985
+        ],
+        "ci_familywise95_3collections": [
+          1.3157901635760818,
+          1.4516546700333435
+        ]
+      },
+      "klein250": {
+        "geometric_speedup": 11.713480265808192,
+        "blocks": 17,
+        "ci95": [
+          10.653656473341151,
+          12.8190281173558
+        ],
+        "ci_familywise95_3collections": [
+          10.45357309716275,
+          13.081453400454205
+        ]
+      },
+      "klein1000": {
+        "geometric_speedup": 13.085507391481045,
+        "blocks": 17,
+        "ci95": [
+          11.879083498284132,
+          14.35020541452104
+        ],
+        "ci_familywise95_3collections": [
+          11.648686749489459,
+          14.643697451888286
+        ]
+      }
+    },
+    "SMD": {
+      "klein_exact": {
+        "geometric_speedup": 23.863946276742485,
+        "blocks": 9,
+        "ci95": [
+          20.926956810379313,
+          26.6212707443238
+        ],
+        "ci_familywise95_3collections": [
+          20.255004017884453,
+          27.1089201483529
+        ]
+      },
+      "benchopt_pair": {
+        "geometric_speedup": 53.075881656556625,
+        "blocks": 9,
+        "ci95": [
+          46.90652705746819,
+          59.15642867606851
+        ],
+        "ci_familywise95_3collections": [
+          45.4678839046066,
+          60.32248395523274
+        ]
+      },
+      "radix_pair": {
+        "geometric_speedup": 1.30467116168771,
+        "blocks": 9,
+        "ci95": [
+          1.2455115202582763,
+          1.3741076916693553
+        ],
+        "ci_familywise95_3collections": [
+          1.2348109131685536,
+          1.392126721100695
+        ]
+      },
+      "klein250": {
+        "geometric_speedup": 7.691791734098043,
+        "blocks": 9,
+        "ci95": [
+          6.736907984765601,
+          8.489460133405274
+        ],
+        "ci_familywise95_3collections": [
+          6.480402889164571,
+          8.602987952612324
+        ]
+      },
+      "klein1000": {
+        "geometric_speedup": 8.174689085425044,
+        "blocks": 9,
+        "ci95": [
+          7.176801405113463,
+          9.024877575285709
+        ],
+        "ci_familywise95_3collections": [
+          6.920548441067668,
+          9.14067830814693
+        ]
+      }
+    }
+  },
+  "workflow_summaries": {
+    "NAB": {
+      "median_seconds": {
+        "stream": 0.052156354,
+        "klein_exact": 1.1438721045000002,
+        "benchopt_pair": 1.9960586665000002,
+        "radix_pair": 0.078847937,
+        "klein250": 0.5866164165000001,
+        "klein1000": 0.6691476875
+      },
+      "all_seconds": {
+        "stream": [
+          0.07146316600000001,
+          0.050980708000000007,
+          0.052098917,
+          0.051079583000000005,
+          0.049285875,
+          0.05308658300000001,
+          0.052213791,
+          0.052252416,
+          0.048078125000000006,
+          0.051366084000000006,
+          0.053282,
+          0.0547155
+        ],
+        "klein_exact": [
+          1.162620542,
+          1.147253875,
+          1.162546625,
+          1.1554959580000002,
+          1.1249407500000002,
+          1.1317573330000001,
+          1.140490334,
+          1.127396,
+          1.1212437080000002,
+          1.126937375,
+          1.150758167,
+          1.156655583
+        ],
+        "benchopt_pair": [
+          2.0246682920000003,
+          2.006467292,
+          2.022743084,
+          1.995035375,
+          1.98732525,
+          1.9941080420000001,
+          1.9870640840000002,
+          1.995470958,
+          2.036759333,
+          1.996646375,
+          1.9886321660000001,
+          2.002403542
+        ],
+        "radix_pair": [
+          0.079961,
+          0.0798885,
+          0.08368041600000001,
+          0.078962083,
+          0.076271375,
+          0.07787229100000001,
+          0.077507291,
+          0.078975375,
+          0.0800425,
+          0.07746433300000001,
+          0.077231666,
+          0.07873379100000001
+        ],
+        "klein250": [
+          0.595545583,
+          0.5904301660000001,
+          0.595036958,
+          0.5856191660000001,
+          0.5777090410000001,
+          0.6164976670000001,
+          0.5762222920000001,
+          0.588804125,
+          0.569779875,
+          0.582147125,
+          0.5876136670000001,
+          0.5832276670000001
+        ],
+        "klein1000": [
+          0.668904917,
+          0.6693904580000001,
+          0.673229708,
+          0.671282,
+          0.654813541,
+          0.6740772500000001,
+          0.653208459,
+          0.6569969170000001,
+          0.6487494580000001,
+          0.649648291,
+          0.6710742080000001,
+          0.6694927500000001
+        ]
+      },
+      "baseline_over_stream": {
+        "stream": 1.0,
+        "klein_exact": 21.93159637845851,
+        "benchopt_pair": 38.27067103847021,
+        "radix_pair": 1.5117609064467965,
+        "klein250": 11.24726656506703,
+        "klein1000": 12.829648473894474
+      },
+      "paired_trial_uncertainty": {
+        "klein_exact": {
+          "geometric_speedup": 21.52631980241418,
+          "ci95": [
+            20.34521956471447,
+            22.37129474365596
+          ],
+          "ci_familywise95_3collections": [
+            19.97171763569409,
+            22.470327529802553
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 16.26880821373069,
+          "maximum_speedup": 23.321286094247643
+        },
+        "benchopt_pair": {
+          "geometric_speedup": 37.7486802818317,
+          "ci95": [
+            35.56358724335778,
+            39.41484717534127
+          ],
+          "ci_familywise95_3collections": [
+            34.91059092200048,
+            39.67129147430353
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 28.331634397502064,
+          "maximum_speedup": 42.36353503802405
+        },
+        "radix_pair": {
+          "geometric_speedup": 1.4861879474578232,
+          "ci95": [
+            1.3999575865015856,
+            1.5544455506234849
+          ],
+          "ci_familywise95_3collections": [
+            1.3756854250780215,
+            1.5649550945451267
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 1.1189120840238171,
+          "maximum_speedup": 1.6648423789405262
+        },
+        "klein250": {
+          "geometric_speedup": 11.067588983081098,
+          "ci95": [
+            10.454824903739151,
+            11.501094950260796
+          ],
+          "ci_familywise95_3collections": [
+            10.263609887303247,
+            11.538834216000927
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 8.333601998545657,
+          "maximum_speedup": 11.851125121871952
+        },
+        "klein1000": {
+          "geometric_speedup": 12.50102743064196,
+          "ci95": [
+            11.795397061256935,
+            12.994929613990431
+          ],
+          "ci_familywise95_3collections": [
+            11.57218673152658,
+            13.050287981693938
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 9.360135499734225,
+          "maximum_speedup": 13.493651385115372
+        }
+      }
+    },
+    "SMAP": {
+      "median_seconds": {
+        "stream": 0.053314937500000006,
+        "klein_exact": 1.2200923535000001,
+        "benchopt_pair": 2.266388667,
+        "radix_pair": 0.07068206300000002,
+        "klein250": 0.5162603335,
+        "klein1000": 0.5908176045
+      },
+      "all_seconds": {
+        "stream": [
+          0.07236475,
+          0.057489916,
+          0.053307209,
+          0.051670291,
+          0.051786708,
+          0.053322666000000005,
+          0.051916709000000005,
+          0.051596958000000005,
+          0.052269833,
+          0.059335667,
+          0.055003083,
+          0.053463208000000005
+        ],
+        "klein_exact": [
+          1.254370667,
+          1.329628416,
+          1.2020264170000001,
+          1.177917416,
+          1.2007916250000001,
+          1.209331041,
+          1.1933432910000001,
+          1.265273125,
+          1.233199042,
+          1.292329791,
+          1.187324292,
+          1.230853666
+        ],
+        "benchopt_pair": [
+          2.306006667,
+          2.33985625,
+          2.310427458,
+          2.218021375,
+          2.216056333,
+          2.228710792,
+          2.2129865,
+          2.300560167,
+          2.2791050420000003,
+          2.3063854580000003,
+          2.2422077920000003,
+          2.253672292
+        ],
+        "radix_pair": [
+          0.073909625,
+          0.078635834,
+          0.07052245900000001,
+          0.065610084,
+          0.06798662500000001,
+          0.06604720800000001,
+          0.07427925,
+          0.07278625000000001,
+          0.06664845800000001,
+          0.07157416600000001,
+          0.07084166700000001,
+          0.066748375
+        ],
+        "klein250": [
+          0.577247375,
+          0.5806287920000001,
+          0.512739458,
+          0.487037041,
+          0.5012327910000001,
+          0.489836916,
+          0.5319262920000001,
+          0.474119167,
+          0.519781209,
+          0.5595075420000001,
+          0.529121209,
+          0.5072799170000001
+        ],
+        "klein1000": [
+          0.6444196670000001,
+          0.645715833,
+          0.5987815000000001,
+          0.538839583,
+          0.5385360840000001,
+          0.5943295000000001,
+          0.5748635000000001,
+          0.54228325,
+          0.583273292,
+          0.6252801250000001,
+          0.594638792,
+          0.587305709
+        ]
+      },
+      "baseline_over_stream": {
+        "stream": 1.0,
+        "klein_exact": 22.884625035901053,
+        "benchopt_pair": 42.5094499454304,
+        "radix_pair": 1.3257459600323083,
+        "klein250": 9.68322120794008,
+        "klein1000": 11.081652388695005
+      },
+      "paired_trial_uncertainty": {
+        "klein_exact": {
+          "geometric_speedup": 22.357650186122672,
+          "ci95": [
+            21.20271649506763,
+            23.205768667025154
+          ],
+          "ci_familywise95_3collections": [
+            20.900728197449727,
+            23.320190122651976
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 17.334001250608896,
+          "maximum_speedup": 24.522242667872007
+        },
+        "benchopt_pair": {
+          "geometric_speedup": 41.1955331610271,
+          "ci95": [
+            39.003471820653296,
+            42.81180785200321
+          ],
+          "ci_familywise95_3collections": [
+            38.44657364246637,
+            43.00356386523632
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 31.866435895929992,
+          "maximum_speedup": 44.58712792719291
+        },
+        "radix_pair": {
+          "geometric_speedup": 1.2783688647487343,
+          "ci95": [
+            1.2156163781662932,
+            1.3351704637268835
+          ],
+          "ci_familywise95_3collections": [
+            1.2001664754401855,
+            1.3458731017942769
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 1.021348446584836,
+          "maximum_speedup": 1.4307388012595328
+        },
+        "klein250": {
+          "geometric_speedup": 9.474658144521802,
+          "ci95": [
+            9.121243875791578,
+            9.765509545530318
+          ],
+          "ci_familywise95_3collections": [
+            9.03824873021013,
+            9.824453026192348
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 7.976913828901502,
+          "maximum_speedup": 10.245762919987861
+        },
+        "klein1000": {
+          "geometric_speedup": 10.68197623527057,
+          "ci95": [
+            10.269300529779779,
+            10.993829874331462
+          ],
+          "ci_familywise95_3collections": [
+            10.173250076859928,
+            11.036457809305853
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 8.905159860291095,
+          "maximum_speedup": 11.232655230552401
+        }
+      }
+    },
+    "SMD": {
+      "median_seconds": {
+        "stream": 0.286467271,
+        "klein_exact": 6.460171583000001,
+        "benchopt_pair": 14.533085687500002,
+        "radix_pair": 0.35512443800000004,
+        "klein250": 2.0817123125,
+        "klein1000": 2.2053750205
+      },
+      "all_seconds": {
+        "stream": [
+          0.345275125,
+          0.28147091700000004,
+          0.28345825,
+          0.28014175,
+          0.278451292,
+          0.289476292,
+          0.29120508300000003,
+          0.29073295800000004,
+          0.27863170800000003,
+          0.2914505,
+          0.29441758300000004,
+          0.281288709
+        ],
+        "klein_exact": [
+          6.4535539580000005,
+          6.399975,
+          6.388568708,
+          6.412718416000001,
+          6.535745959000001,
+          6.581534459,
+          6.367426125000001,
+          6.515275000000001,
+          6.508254291,
+          6.406882583000001,
+          6.515586583,
+          6.466789208000001
+        ],
+        "benchopt_pair": [
+          14.481015625000001,
+          14.550317292,
+          14.641475292,
+          14.585213000000001,
+          14.529089667000001,
+          14.537081708,
+          14.563156375,
+          14.506362458000002,
+          14.541402541,
+          14.522701666000001,
+          14.464441042,
+          14.506766125
+        ],
+        "radix_pair": [
+          0.34790520900000005,
+          0.345876667,
+          0.37866945900000004,
+          0.361827875,
+          0.34099120800000005,
+          0.351757708,
+          0.36390262500000004,
+          0.361974208,
+          0.3429575,
+          0.36113937500000004,
+          0.353486167,
+          0.356762709
+        ],
+        "klein250": [
+          2.08483175,
+          2.100850084,
+          2.1271287080000003,
+          2.064002666,
+          2.07776425,
+          2.0667827500000002,
+          2.078592875,
+          2.097905666,
+          2.093740875,
+          2.071964833,
+          2.1003311250000003,
+          2.0169606250000003
+        ],
+        "klein1000": [
+          2.2350070420000003,
+          2.257930166,
+          2.1826856670000003,
+          2.24531525,
+          2.1518827920000003,
+          2.1653149170000003,
+          2.2001565000000003,
+          2.242382833,
+          2.210593541,
+          2.182181,
+          2.265622292,
+          2.191808333
+        ]
+      },
+      "baseline_over_stream": {
+        "stream": 1.0,
+        "klein_exact": 22.551168098361927,
+        "benchopt_pair": 50.73209807447777,
+        "radix_pair": 1.2396684506412603,
+        "klein250": 7.266841706674407,
+        "klein1000": 7.698523509514635
+      },
+      "paired_trial_uncertainty": {
+        "klein_exact": {
+          "geometric_speedup": 22.28205480168,
+          "ci95": [
+            21.478129392314703,
+            22.85436719002854
+          ],
+          "ci_familywise95_3collections": [
+            21.268073072278522,
+            22.92992955029259
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 18.69104806782707,
+          "maximum_speedup": 23.471774585983965
+        },
+        "benchopt_pair": {
+          "geometric_speedup": 50.118647893128625,
+          "ci95": [
+            48.30144903227026,
+            51.40663652795048
+          ],
+          "ci_familywise95_3collections": [
+            47.81390991710285,
+            51.56271921301673
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 41.94051229436236,
+          "maximum_speedup": 52.18861358377776
+        },
+        "radix_pair": {
+          "geometric_speedup": 1.2256102329420635,
+          "ci95": [
+            1.175415687809929,
+            1.2637259921680297
+          ],
+          "ci_familywise95_3collections": [
+            1.16290932781942,
+            1.270524954740898
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 1.0076173573175884,
+          "maximum_speedup": 1.3358914725537183
+        },
+        "klein250": {
+          "geometric_speedup": 7.177219148776592,
+          "ci95": [
+            6.92205259084593,
+            7.362382925899836
+          ],
+          "ci_familywise95_3collections": [
+            6.8547126223375985,
+            7.38604653077278
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 6.038175353640087,
+          "maximum_speedup": 7.51436686810964
+        },
+        "klein1000": {
+          "geometric_speedup": 7.6221327335408375,
+          "ci95": [
+            7.3615377366400665,
+            7.814046869618595
+          ],
+          "ci_familywise95_3collections": [
+            7.298854929345356,
+            7.841097269059377
+          ],
+          "case_wins": 12,
+          "cases": 12,
+          "minimum_speedup": 6.47311920312823,
+          "maximum_speedup": 8.021895086233721
+        }
+      }
+    }
+  },
+  "matched_pair": {
+    "NAB": {
+      "case_paired": {
+        "geometric_speedup": 27.283502564651755,
+        "ci95": [
+          25.97549321066875,
+          28.541657641293625
+        ],
+        "ci_familywise95_3collections": [
+          25.680017973042332,
+          28.780444614881947
+        ],
+        "case_wins": 20,
+        "cases": 20,
+        "minimum_speedup": 20.595476272787355,
+        "maximum_speedup": 33.07682618336321
+      },
+      "identical_label_blocks": {
+        "geometric_speedup": 27.28350256465178,
+        "blocks": 20,
+        "ci95": [
+          25.983488466848236,
+          28.559766079462538
+        ],
+        "ci_familywise95_3collections": [
+          25.72054573271248,
+          28.7928188137612
+        ]
+      },
+      "workflow_median_ratio": 25.315293493347834,
+      "workflow_paired": {
+        "geometric_speedup": 25.39966788615271,
+        "ci95": [
+          25.119114011093554,
+          25.628778101996698
+        ],
+        "ci_familywise95_3collections": [
+          25.055102882722167,
+          25.667669703278214
+        ],
+        "case_wins": 12,
+        "cases": 12,
+        "minimum_speedup": 24.17223982251713,
+        "maximum_speedup": 26.05597775049945
+      }
+    },
+    "SMAP": {
+      "case_paired": {
+        "geometric_speedup": 34.567166748351646,
+        "ci95": [
+          31.805913221084708,
+          37.685809967675965
+        ],
+        "ci_familywise95_3collections": [
+          31.285053735340988,
+          38.47913778003328
+        ],
+        "case_wins": 17,
+        "cases": 17,
+        "minimum_speedup": 25.500755308513945,
+        "maximum_speedup": 50.20893345782931
+      },
+      "identical_label_blocks": {
+        "geometric_speedup": 34.567166748351646,
+        "blocks": 17,
+        "ci95": [
+          31.811811241837606,
+          37.804099044465985
+        ],
+        "ci_familywise95_3collections": [
+          31.29083153210474,
+          38.517064701081296
+        ]
+      },
+      "workflow_median_ratio": 32.064551751977014,
+      "workflow_paired": {
+        "geometric_speedup": 32.2250754825167,
+        "ci95": [
+          31.367267406099444,
+          33.04599965461723
+        ],
+        "ci_familywise95_3collections": [
+          31.186794408058645,
+          33.20705964488834
+        ],
+        "case_wins": 12,
+        "cases": 12,
+        "minimum_speedup": 29.75559781053508,
+        "maximum_speedup": 34.19591556041702
+      }
+    },
+    "SMD": {
+      "case_paired": {
+        "geometric_speedup": 44.16005419097889,
+        "ci95": [
+          41.593485053797906,
+          46.65098525862171
+        ],
+        "ci_familywise95_3collections": [
+          41.109475786170016,
+          47.074862486264905
+        ],
+        "case_wins": 36,
+        "cases": 36,
+        "minimum_speedup": 29.34145810260281,
+        "maximum_speedup": 53.647476045371754
+      },
+      "identical_label_blocks": {
+        "geometric_speedup": 40.681424726134225,
+        "blocks": 9,
+        "ci95": [
+          35.18012890536085,
+          46.54842190391359
+        ],
+        "ci_familywise95_3collections": [
+          33.97791646557233,
+          47.76468103946989
+        ]
+      },
+      "workflow_median_ratio": 40.92392449629163,
+      "workflow_paired": {
+        "geometric_speedup": 40.89281122663229,
+        "ci95": [
+          40.25496699336485,
+          41.51171411482121
+        ],
+        "ci_familywise95_3collections": [
+          40.124888216000016,
+          41.64139174759462
+        ],
+        "case_wins": 12,
+        "cases": 12,
+        "minimum_speedup": 38.66558272395556,
+        "maximum_speedup": 42.608399648239605
+      }
+    }
+  },
+  "accuracy": {
+    "NAB": {
+      "stream": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein_exact": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 6.661338147750939e-16
+      },
+      "benchopt_pair": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 5.551115123125783e-16
+      },
+      "radix_pair": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein250": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.02901452973430768
+      },
+      "klein1000": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.002547685534740163
+      }
+    },
+    "SMAP": {
+      "stream": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein_exact": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 7.771561172376096e-16
+      },
+      "benchopt_pair": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 7.771561172376096e-16
+      },
+      "radix_pair": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein250": {
+        "series": 17,
+        "winner_set_changes": 6,
+        "minimum_regret_at_least_threshold": 3,
+        "maximum_regret_at_least_threshold": 3,
+        "maximum_regret": 0.058350549941163565,
+        "mean_minimum_regret": 0.007893332817341767,
+        "maximum_scalar_error": 0.35624969194006295
+      },
+      "klein1000": {
+        "series": 17,
+        "winner_set_changes": 1,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0034548666653926308,
+        "mean_minimum_regret": 0.00020322745090544888,
+        "maximum_scalar_error": 0.15931808592460575
+      }
+    },
+    "SMD": {
+      "stream": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein_exact": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 1.1102230246251565e-15
+      },
+      "benchopt_pair": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 1.1102230246251565e-15
+      },
+      "radix_pair": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein250": {
+        "series": 36,
+        "winner_set_changes": 8,
+        "minimum_regret_at_least_threshold": 1,
+        "maximum_regret_at_least_threshold": 1,
+        "maximum_regret": 0.05430814864072597,
+        "mean_minimum_regret": 0.00204019503026819,
+        "maximum_scalar_error": 0.3370850954222962
+      },
+      "klein1000": {
+        "series": 36,
+        "winner_set_changes": 2,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0028258873761350944,
+        "mean_minimum_regret": 8.139071511363406e-05,
+        "maximum_scalar_error": 0.09344592710341751
+      }
+    }
+  },
+  "case_accuracy": [
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.008917628036361008
+    },
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.002547685534740163
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.02901452973430768
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.002231886902639063
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.163336342344337e-17
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.163336342344337e-17
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.003111631450115976
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.000980940832504329
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.008179106114506146
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0023590839328126723
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.00845416602829896
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0009799176991618364
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 8.326672684688674e-17
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.004836813432481574
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0009564901528642256
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0023883838717407846
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0047062611993931025
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0009994888102384802
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.009740824689495997
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0012042047814095347
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.002925561245764513
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0001887479197776043
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "method": "stream",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "method": "klein_exact",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.3877787807814457e-16
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "method": "benchopt_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "method": "radix_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "method": "klein250",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.010067325484830192
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "method": "klein1000",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.001426478710622625
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0030635727316773165
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.00039822878351850055
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.006913212855926998
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0011650236288265337
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.7755575615628914e-17
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.004091531023598077
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0010207587100725946
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.7755575615628914e-16
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.005170759103325651
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0016317261486950563
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "method": "stream",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "method": "klein_exact",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 6.661338147750939e-16
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "method": "benchopt_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "method": "radix_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "method": "klein250",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.007297696846845669
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "method": "klein1000",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0021595977230163266
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.163336342344337e-17
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01025782281804262
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0015008280523199219
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.3877787807814457e-16
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.006074067944144473
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0008926167414896324
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.00945943739771532
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.001674658953231739
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "method": "stream",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "method": "klein_exact",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "method": "benchopt_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "method": "radix_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "method": "klein250",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.006694934907662847
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "method": "klein1000",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0015068310437620358
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0028755978986912956,
+      "maximum_regret": 0.0028755978986912956,
+      "identical_winner_set": false,
+      "scalar_error": 0.20347024793171653
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.055491885799559104
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01550154163658013
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0036825355969003493
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.07869043274632842
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.03286249006383566
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.007727285672327389,
+      "maximum_regret": 0.007727285672327389,
+      "identical_winner_set": false,
+      "scalar_error": 0.07327724170732441
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.02581002096553356
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 6.661338147750939e-16
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 6.661338147750939e-16
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.006364388590240577
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0015632671387055819
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "method": "stream",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "method": "klein_exact",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "method": "benchopt_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "method": "radix_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "method": "klein250",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.00020041032223561128,
+      "maximum_regret": 0.00020041032223561128,
+      "identical_winner_set": false,
+      "scalar_error": 0.013862246362710218
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "method": "klein1000",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.003056534569665481
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.07505507345120443
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.009852251749893903
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "method": "stream",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "method": "klein_exact",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.7755575615628914e-16
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "method": "benchopt_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.7755575615628914e-16
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "method": "radix_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "method": "klein250",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.006555012354425738
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "method": "klein1000",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.001497357746042982
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.012379360856679789
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0024118799700718063
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.12193074596341141
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.014756522034235275
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.006555451032421555
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0016449677045009548
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.15335832815746397
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.011544728856048625
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.07472156413757158
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.012764297351236187
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0604808383916583
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.00843495345294365
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.15194599268752873
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.017734908423229723
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.003092911818456723,
+      "maximum_regret": 0.003092911818456723,
+      "identical_winner_set": false,
+      "scalar_error": 0.08413090833483897
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.03553836220920381
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.11512741380300012
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.054386483510299975
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01691955484012131
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0034852467069963478
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.13656493454598684
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.025366164362326693
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.13460483657388445
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01911906628220389
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0906931161526924
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.014402480890149047
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "method": "stream",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        5
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        5
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        5
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.7755575615628914e-16
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        5
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "method": "klein250",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        5
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.08044681178877858
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        5
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.02647214431483977
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.00010417836795573177,
+      "maximum_regret": 0.00010417836795573177,
+      "identical_winner_set": false,
+      "scalar_error": 0.3366912415657069
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.00010417836795573177,
+      "maximum_regret": 0.00010417836795573177,
+      "identical_winner_set": false,
+      "scalar_error": 0.0893205054749675
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.08214188227905558
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.019639294786874414
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "method": "stream",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "method": "klein_exact",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "method": "benchopt_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "method": "radix_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "method": "klein250",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.018197384352374613
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "method": "klein1000",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.004065373958022478
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0027338710133304467,
+      "maximum_regret": 0.0027338710133304467,
+      "identical_winner_set": false,
+      "scalar_error": 0.06995841691318519
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.03923479497094717
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "method": "klein250",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.05430814864072597,
+      "maximum_regret": 0.05430814864072597,
+      "identical_winner_set": false,
+      "scalar_error": 0.3370850954222962
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.09344592710341751
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.6653345369377348e-16
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.07286142120243044
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01375362322708279
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "method": "stream",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "method": "klein_exact",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "method": "benchopt_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "method": "radix_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "method": "klein250",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.016399314512883567
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "method": "klein1000",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.004418464966998159
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.07433558961574005
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.039478401005143826
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.002404617355931671,
+      "maximum_regret": 0.002404617355931671,
+      "identical_winner_set": false,
+      "scalar_error": 0.09038369426184703
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.030131770040814992
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.07421206159185811
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.008600246852814575
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 7.771561172376096e-16
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 7.771561172376096e-16
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.11279285162473507
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.017743911575542337
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.27217487930897044
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.049767880518848506
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.09023141460197973
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.029299104846432833
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "method": "stream",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "method": "klein_exact",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-15
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "method": "benchopt_pair",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-15
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "method": "radix_pair",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "method": "klein250",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.11211646687337118
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0028258873761350944,
+      "maximum_regret": 0.0028258873761350944,
+      "identical_winner_set": false,
+      "scalar_error": 0.016093381334048917
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "method": "stream",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "method": "klein_exact",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "method": "benchopt_pair",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "method": "radix_pair",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "method": "klein250",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0018752114080271554
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "method": "klein1000",
+      "selected": [
+        4
+      ],
+      "exact_winners": [
+        4
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0003895276056966601
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "method": "stream",
+      "selected": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "exact_winners": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "method": "klein_exact",
+      "selected": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "exact_winners": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "method": "benchopt_pair",
+      "selected": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "exact_winners": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "method": "radix_pair",
+      "selected": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "exact_winners": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "method": "klein250",
+      "selected": [
+        5
+      ],
+      "exact_winners": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "minimum_regret": 0.058350549941163565,
+      "maximum_regret": 0.058350549941163565,
+      "identical_winner_set": false,
+      "scalar_error": 0.291752749705818
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "method": "klein1000",
+      "selected": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "exact_winners": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.05835054994116361
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "method": "stream",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "method": "klein_exact",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "method": "benchopt_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "method": "radix_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.013084361680977818,
+      "maximum_regret": 0.013084361680977818,
+      "identical_winner_set": false,
+      "scalar_error": 0.13321698582793962
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "method": "klein1000",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0063984826068110845
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.06767600101951657
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01267758402855701
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.3306690738754696e-16
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01635451869789098
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.004154061619779714
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "method": "stream",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "method": "klein_exact",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "method": "benchopt_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "method": "radix_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "method": "klein250",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.028938123223140988
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "method": "klein1000",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.007811257955219253
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.05386108324838251,
+      "maximum_regret": 0.05386108324838251,
+      "identical_winner_set": false,
+      "scalar_error": 0.1829862649534781
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01311475409836066
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "method": "klein250",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.03338453304107658
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.004809929662526247
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "method": "stream",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "method": "klein_exact",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "method": "benchopt_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-16
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "method": "radix_pair",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "method": "klein250",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.011320095214741338
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "method": "klein1000",
+      "selected": [
+        0
+      ],
+      "exact_winners": [
+        0
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0016849973593164036
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0034548666653926308,
+      "maximum_regret": 0.0034548666653926308,
+      "identical_winner_set": false,
+      "scalar_error": 0.35624969194006295
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0034548666653926308,
+      "maximum_regret": 0.0034548666653926308,
+      "identical_winner_set": false,
+      "scalar_error": 0.15931808592460575
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "method": "stream",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "method": "klein_exact",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "method": "benchopt_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "method": "radix_pair",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "method": "klein250",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0005540716878965624,
+      "maximum_regret": 0.0005540716878965624,
+      "identical_winner_set": false,
+      "scalar_error": 0.07381309627052648
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "method": "klein1000",
+      "selected": [
+        7
+      ],
+      "exact_winners": [
+        7
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0068419993770608145
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 5.551115123125783e-17
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.7755575615628914e-17
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.06548157264926867
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.010047982776200892
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "method": "stream",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "method": "klein_exact",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "method": "benchopt_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 2.220446049250313e-16
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "method": "radix_pair",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.10544674673068088
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "method": "klein1000",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        3
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.009668422343237393
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.469446951953614e-18
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 3.469446951953614e-18
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0007755516273443876
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.00022931331068504202
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "method": "stream",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "method": "klein_exact",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 7.771561172376096e-16
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "method": "benchopt_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 7.771561172376096e-16
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "method": "radix_pair",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "method": "klein250",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.01602200382674482
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "method": "klein1000",
+      "selected": [
+        6
+      ],
+      "exact_winners": [
+        6
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.00501833674838123
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "method": "stream",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "method": "klein_exact",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "method": "benchopt_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 4.440892098500626e-16
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "method": "radix_pair",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "method": "klein250",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.19331473930392096
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "method": "klein1000",
+      "selected": [
+        2
+      ],
+      "exact_winners": [
+        2
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.02234560690024967
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "method": "stream",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "method": "klein_exact",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "method": "benchopt_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 1.1102230246251565e-16
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "method": "radix_pair",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.0
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "method": "klein250",
+      "selected": [
+        3
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.004881724670996956,
+      "maximum_regret": 0.004881724670996956,
+      "identical_winner_set": false,
+      "scalar_error": 0.04815401875368758
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "method": "klein1000",
+      "selected": [
+        1
+      ],
+      "exact_winners": [
+        1
+      ],
+      "minimum_regret": 0.0,
+      "maximum_regret": 0.0,
+      "identical_winner_set": true,
+      "scalar_error": 0.003009769435378923
+    }
+  ],
+  "qualifications": [
+    "Benchopt's native API computes both ROC and PR; PR-consumer ratios differ in returned work.",
+    "Matched pair ratios compare both outputs. Klein exact is the equal-output PR-only comparator.",
+    "Case confidence intervals resample fixed-panel series; equal-label blocks are a sensitivity, not known physical identities.",
+    "Trial intervals describe timing variation on a fixed collection, not new datasets.",
+    "Supplement was frozen after primary results; numerical parity is not real-arithmetic certification."
+  ]
+}

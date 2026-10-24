@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "records": 5256,
+  "workflows": 216,
+  "max_exact_pr_error": 1.1102230246251565e-15,
+  "max_workflow_roc_error": 4.851674617611934e-14,
+  "accuracy": {
+    "NAB": {
+      "stream": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein_exact": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 6.661338147750939e-16
+      },
+      "benchopt_pair": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 5.551115123125783e-16
+      },
+      "radix_pair": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein250": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.02901452973430768
+      },
+      "klein1000": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.002547685534740163
+      }
+    },
+    "SMAP": {
+      "stream": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein_exact": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 7.771561172376096e-16
+      },
+      "benchopt_pair": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 7.771561172376096e-16
+      },
+      "radix_pair": {
+        "series": 17,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein250": {
+        "series": 17,
+        "winner_set_changes": 6,
+        "minimum_regret_at_least_threshold": 3,
+        "maximum_regret_at_least_threshold": 3,
+        "maximum_regret": 0.058350549941163565,
+        "mean_minimum_regret": 0.007893332817341767,
+        "maximum_scalar_error": 0.35624969194006295
+      },
+      "klein1000": {
+        "series": 17,
+        "winner_set_changes": 1,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0034548666653926308,
+        "mean_minimum_regret": 0.00020322745090544888,
+        "maximum_scalar_error": 0.15931808592460575
+      }
+    },
+    "SMD": {
+      "stream": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein_exact": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 1.1102230246251565e-15
+      },
+      "benchopt_pair": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 1.1102230246251565e-15
+      },
+      "radix_pair": {
+        "series": 36,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.0
+      },
+      "klein250": {
+        "series": 36,
+        "winner_set_changes": 8,
+        "minimum_regret_at_least_threshold": 1,
+        "maximum_regret_at_least_threshold": 1,
+        "maximum_regret": 0.05430814864072597,
+        "mean_minimum_regret": 0.00204019503026819,
+        "maximum_scalar_error": 0.3370850954222962
+      },
+      "klein1000": {
+        "series": 36,
+        "winner_set_changes": 2,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0028258873761350944,
+        "mean_minimum_regret": 8.139071511363406e-05,
+        "maximum_scalar_error": 0.09344592710341751
+      }
+    }
+  }
+}

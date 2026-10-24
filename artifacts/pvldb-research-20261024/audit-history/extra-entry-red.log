@@ -1,0 +1,82 @@
+/opt/anaconda3/lib/python3.12/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+____________ test_corrupt_principal_table_is_rejected[extra_method] ____________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-697/test_corrupt_principal_table_i0')
+kind = 'extra_method'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct", "extra_method", "extra_collection"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        if kind == "extra_method": p["case_paired_summaries"]["NAB_L30"]["never_measured"] = {**s, "geometric_speedup": 999.}
+        if kind == "extra_collection": p["case_paired_summaries"]["NEVER_MEASURED_L999"] = {"released": s}
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:66: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+__________ test_corrupt_principal_table_is_rejected[extra_collection] __________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-697/test_corrupt_principal_table_i1')
+kind = 'extra_collection'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct", "extra_method", "extra_collection"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        if kind == "extra_method": p["case_paired_summaries"]["NAB_L30"]["never_measured"] = {**s, "geometric_speedup": 999.}
+        if kind == "extra_collection": p["case_paired_summaries"]["NEVER_MEASURED_L999"] = {"released": s}
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:66: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+=========================== short test summary info ============================
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[extra_method]
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[extra_collection]
+2 failed, 16 deselected in 0.09s

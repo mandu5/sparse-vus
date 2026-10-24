@@ -1,0 +1,234 @@
+/opt/anaconda3/lib/python3.12/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+FFFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+________ test_supplement_reconstructs_sampling_loss_and_matched_outputs ________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-694/test_supplement_reconstructs_s0')
+
+    def test_supplement_reconstructs_sampling_loss_and_matched_outputs(tmp_path):
+        supplement_fixture(tmp_path)
+>       module().audit(tmp_path, tmp_path/"supplement-audit.json")
+
+tests/test_pvldb_supplement_audit.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_pvldb_supplement_audit.py:15: in module
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+<frozen importlib._bootstrap_external>:991: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1128: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x12bc61940>
+path = '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+<frozen importlib._bootstrap_external>:1186: FileNotFoundError
+____________ test_supplement_rejects_corrupted_evidence[duplicate] _____________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-694/test_supplement_rejects_corrup0')
+kind = 'duplicate'
+
+    @pytest.mark.parametrize("kind", ["duplicate", "selection", "workflow_roc", "workflow_pr", "protocol_link"])
+    def test_supplement_rejects_corrupted_evidence(tmp_path, kind):
+        folder = supplement_fixture(tmp_path)
+        if kind == "protocol_link":
+            p = json.loads((folder/"protocol.json").read_text()); p["inputs_sha256"] = "wrong"; write(folder/"protocol.json", p)
+            write(folder/"run-start.json", {"protocol_sha256": sha(folder/"protocol.json")})
+        else:
+            file = folder/("workflows.jsonl" if kind.startswith("workflow") else "records.jsonl")
+            rows = [json.loads(line) for line in file.read_text().splitlines()]
+            if kind == "duplicate": rows[-1] = rows[0]
+            if kind == "selection": rows[4]["selection"]["minimum_regret"] = 0.
+            if kind == "workflow_roc": rows[2]["decisions"][0]["roc"][0] = .1
+            if kind == "workflow_pr": rows[0]["decisions"][0]["values"][0] = .3
+            file.write_text("".join(json.dumps(r)+"\n" for r in rows))
+        rebind(folder)
+>       with pytest.raises(ValueError): module().audit(tmp_path, tmp_path/"supplement-audit.json")
+
+tests/test_pvldb_supplement_audit.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_pvldb_supplement_audit.py:15: in module
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+<frozen importlib._bootstrap_external>:991: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1128: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x12bc63d40>
+path = '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+<frozen importlib._bootstrap_external>:1186: FileNotFoundError
+____________ test_supplement_rejects_corrupted_evidence[selection] _____________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-694/test_supplement_rejects_corrup1')
+kind = 'selection'
+
+    @pytest.mark.parametrize("kind", ["duplicate", "selection", "workflow_roc", "workflow_pr", "protocol_link"])
+    def test_supplement_rejects_corrupted_evidence(tmp_path, kind):
+        folder = supplement_fixture(tmp_path)
+        if kind == "protocol_link":
+            p = json.loads((folder/"protocol.json").read_text()); p["inputs_sha256"] = "wrong"; write(folder/"protocol.json", p)
+            write(folder/"run-start.json", {"protocol_sha256": sha(folder/"protocol.json")})
+        else:
+            file = folder/("workflows.jsonl" if kind.startswith("workflow") else "records.jsonl")
+            rows = [json.loads(line) for line in file.read_text().splitlines()]
+            if kind == "duplicate": rows[-1] = rows[0]
+            if kind == "selection": rows[4]["selection"]["minimum_regret"] = 0.
+            if kind == "workflow_roc": rows[2]["decisions"][0]["roc"][0] = .1
+            if kind == "workflow_pr": rows[0]["decisions"][0]["values"][0] = .3
+            file.write_text("".join(json.dumps(r)+"\n" for r in rows))
+        rebind(folder)
+>       with pytest.raises(ValueError): module().audit(tmp_path, tmp_path/"supplement-audit.json")
+
+tests/test_pvldb_supplement_audit.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_pvldb_supplement_audit.py:15: in module
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+<frozen importlib._bootstrap_external>:991: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1128: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x12bce1130>
+path = '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+<frozen importlib._bootstrap_external>:1186: FileNotFoundError
+___________ test_supplement_rejects_corrupted_evidence[workflow_roc] ___________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-694/test_supplement_rejects_corrup2')
+kind = 'workflow_roc'
+
+    @pytest.mark.parametrize("kind", ["duplicate", "selection", "workflow_roc", "workflow_pr", "protocol_link"])
+    def test_supplement_rejects_corrupted_evidence(tmp_path, kind):
+        folder = supplement_fixture(tmp_path)
+        if kind == "protocol_link":
+            p = json.loads((folder/"protocol.json").read_text()); p["inputs_sha256"] = "wrong"; write(folder/"protocol.json", p)
+            write(folder/"run-start.json", {"protocol_sha256": sha(folder/"protocol.json")})
+        else:
+            file = folder/("workflows.jsonl" if kind.startswith("workflow") else "records.jsonl")
+            rows = [json.loads(line) for line in file.read_text().splitlines()]
+            if kind == "duplicate": rows[-1] = rows[0]
+            if kind == "selection": rows[4]["selection"]["minimum_regret"] = 0.
+            if kind == "workflow_roc": rows[2]["decisions"][0]["roc"][0] = .1
+            if kind == "workflow_pr": rows[0]["decisions"][0]["values"][0] = .3
+            file.write_text("".join(json.dumps(r)+"\n" for r in rows))
+        rebind(folder)
+>       with pytest.raises(ValueError): module().audit(tmp_path, tmp_path/"supplement-audit.json")
+
+tests/test_pvldb_supplement_audit.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_pvldb_supplement_audit.py:15: in module
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+<frozen importlib._bootstrap_external>:991: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1128: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x12bce30e0>
+path = '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+<frozen importlib._bootstrap_external>:1186: FileNotFoundError
+___________ test_supplement_rejects_corrupted_evidence[workflow_pr] ____________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-694/test_supplement_rejects_corrup3')
+kind = 'workflow_pr'
+
+    @pytest.mark.parametrize("kind", ["duplicate", "selection", "workflow_roc", "workflow_pr", "protocol_link"])
+    def test_supplement_rejects_corrupted_evidence(tmp_path, kind):
+        folder = supplement_fixture(tmp_path)
+        if kind == "protocol_link":
+            p = json.loads((folder/"protocol.json").read_text()); p["inputs_sha256"] = "wrong"; write(folder/"protocol.json", p)
+            write(folder/"run-start.json", {"protocol_sha256": sha(folder/"protocol.json")})
+        else:
+            file = folder/("workflows.jsonl" if kind.startswith("workflow") else "records.jsonl")
+            rows = [json.loads(line) for line in file.read_text().splitlines()]
+            if kind == "duplicate": rows[-1] = rows[0]
+            if kind == "selection": rows[4]["selection"]["minimum_regret"] = 0.
+            if kind == "workflow_roc": rows[2]["decisions"][0]["roc"][0] = .1
+            if kind == "workflow_pr": rows[0]["decisions"][0]["values"][0] = .3
+            file.write_text("".join(json.dumps(r)+"\n" for r in rows))
+        rebind(folder)
+>       with pytest.raises(ValueError): module().audit(tmp_path, tmp_path/"supplement-audit.json")
+
+tests/test_pvldb_supplement_audit.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_pvldb_supplement_audit.py:15: in module
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+<frozen importlib._bootstrap_external>:991: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1128: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x12bced880>
+path = '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+<frozen importlib._bootstrap_external>:1186: FileNotFoundError
+__________ test_supplement_rejects_corrupted_evidence[protocol_link] ___________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-694/test_supplement_rejects_corrup4')
+kind = 'protocol_link'
+
+    @pytest.mark.parametrize("kind", ["duplicate", "selection", "workflow_roc", "workflow_pr", "protocol_link"])
+    def test_supplement_rejects_corrupted_evidence(tmp_path, kind):
+        folder = supplement_fixture(tmp_path)
+        if kind == "protocol_link":
+            p = json.loads((folder/"protocol.json").read_text()); p["inputs_sha256"] = "wrong"; write(folder/"protocol.json", p)
+            write(folder/"run-start.json", {"protocol_sha256": sha(folder/"protocol.json")})
+        else:
+            file = folder/("workflows.jsonl" if kind.startswith("workflow") else "records.jsonl")
+            rows = [json.loads(line) for line in file.read_text().splitlines()]
+            if kind == "duplicate": rows[-1] = rows[0]
+            if kind == "selection": rows[4]["selection"]["minimum_regret"] = 0.
+            if kind == "workflow_roc": rows[2]["decisions"][0]["roc"][0] = .1
+            if kind == "workflow_pr": rows[0]["decisions"][0]["values"][0] = .3
+            file.write_text("".join(json.dumps(r)+"\n" for r in rows))
+        rebind(folder)
+>       with pytest.raises(ValueError): module().audit(tmp_path, tmp_path/"supplement-audit.json")
+
+tests/test_pvldb_supplement_audit.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_pvldb_supplement_audit.py:15: in module
+    m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+<frozen importlib._bootstrap_external>:991: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1128: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x12bcee450>
+path = '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/gosmain/Documents/GitHub/sparse-vus-saturation/experiments/audit_pvldb_supplement.py'
+
+<frozen importlib._bootstrap_external>:1186: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_pvldb_supplement_audit.py::test_supplement_reconstructs_sampling_loss_and_matched_outputs
+FAILED tests/test_pvldb_supplement_audit.py::test_supplement_rejects_corrupted_evidence[duplicate]
+FAILED tests/test_pvldb_supplement_audit.py::test_supplement_rejects_corrupted_evidence[selection]
+FAILED tests/test_pvldb_supplement_audit.py::test_supplement_rejects_corrupted_evidence[workflow_roc]
+FAILED tests/test_pvldb_supplement_audit.py::test_supplement_rejects_corrupted_evidence[workflow_pr]
+FAILED tests/test_pvldb_supplement_audit.py::test_supplement_rejects_corrupted_evidence[protocol_link]
+6 failed in 0.14s

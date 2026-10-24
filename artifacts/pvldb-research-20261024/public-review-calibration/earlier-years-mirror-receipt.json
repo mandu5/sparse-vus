@@ -1,0 +1,50 @@
+{
+  "source": "https://huggingface.co/datasets/WENJINLIU/Paper-Review-Dataset/resolve/main/ICLR_merged_cleaned_huggingface.jsonl",
+  "kind": "public mirrored original OpenReview records; source API unavailable",
+  "scanned_rows": 8310,
+  "scanned_bytes": 1648166483,
+  "found": [
+    {
+      "id": "73U_NlKaNx",
+      "title": "Time Series Subsequence Anomaly Detection via Graph Neural Networks",
+      "decision": null,
+      "sha256": "cfe70077662e677e28e77634418c18be526ab8a2aaaff631bbe13c4e82127329"
+    },
+    {
+      "id": "G-dM79m_EXd",
+      "title": "Time Series Anomaly Detection via Hypothesis Testing for Dynamical Systems",
+      "decision": null,
+      "sha256": "8144f528a2d33ff09c2f656197a1e699efc252b083659a4a53eb9b54f4baa15a"
+    },
+    {
+      "id": "gOZ_pKANaPW",
+      "title": "Unsupervised Model Selection for Time Series Anomaly Detection",
+      "decision": null,
+      "sha256": "99b1a03b0295f3136e8e4b91a51cbca5d41c23e68471017fdf8c841c7047665e"
+    },
+    {
+      "id": "8TBGdH3t6a",
+      "title": "Learn hybrid prototypes for multivariate time series anomaly detection",
+      "decision": null,
+      "sha256": "b0986509adbcbe7d4eb33b48b2ac20ef6ed9d7e83c9e7bfdef922109d564ab36"
+    },
+    {
+      "id": "eWocmTQn7H",
+      "title": "Multi-Resolution Decomposable Diffusion Model for Non-Stationary Time Series Anomaly Detection",
+      "decision": null,
+      "sha256": "35b98c544c9f4319402335300b2eb3dfaa3507c86dff565314d8f16f0dede46a"
+    },
+    {
+      "id": "aKcd7ImG5e",
+      "title": "Towards a General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders",
+      "decision": null,
+      "sha256": "6fb3bce9668068e5f84eb167430d0af25d7b6b0544d29796bcee79ffc81b8858"
+    },
+    {
+      "id": "m08aK3xxdJ",
+      "title": "CATCH: Channel-Aware Multivariate Time Series Anomaly Detection via Frequency Patching",
+      "decision": null,
+      "sha256": "08527f0d87462dcb7ba33861de315abbaba2592ec8f2cd7a03e45315fbbdfa56"
+    }
+  ]
+}

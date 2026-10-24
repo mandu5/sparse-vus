@@ -1,0 +1,462 @@
+/opt/anaconda3/lib/python3.12/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+....FFFFFFFFFFFF..F                                                      [100%]
+=================================== FAILURES ===================================
+_________________ test_corrupt_principal_table_is_rejected[ci] _________________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_corrupt_principal_table_i0')
+kind = 'ci'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:64: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+________________ test_corrupt_principal_table_is_rejected[wins] ________________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_corrupt_principal_table_i1')
+kind = 'wins'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:64: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+________________ test_corrupt_principal_table_is_rejected[tail] ________________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_corrupt_principal_table_i2')
+kind = 'tail'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:64: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+___________ test_corrupt_principal_table_is_rejected[workflow_ratio] ___________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_corrupt_principal_table_i3')
+kind = 'workflow_ratio'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:64: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+____________ test_corrupt_principal_table_is_rejected[workflow_ci] _____________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_corrupt_principal_table_i4')
+kind = 'workflow_ci'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:64: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+__________ test_corrupt_principal_table_is_rejected[workflow_median] ___________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_corrupt_principal_table_i5')
+kind = 'workflow_median'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:64: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+______________ test_corrupt_principal_table_is_rejected[distinct] ______________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_corrupt_principal_table_i6')
+kind = 'distinct'
+
+    @pytest.mark.parametrize("kind", ["ci", "wins", "tail", "workflow_ratio", "workflow_ci", "workflow_median", "distinct"])
+    def test_corrupt_principal_table_is_rejected(tmp_path, kind):
+        folder, _ = fixture(tmp_path)
+        p = json.loads((folder/"report.json").read_text())
+        s = p["case_paired_summaries"]["NAB_L30"]["released"]
+        w = p["workflows"]["NAB"]
+        if kind == "ci": s["ci95"] = [999., 1000.]
+        if kind == "wins": s["case_wins"] = 0
+        if kind == "tail": s["minimum_speedup"] = 0.1
+        if kind == "workflow_ratio": w["baseline_over_stream"]["released"] = 999.
+        if kind == "workflow_ci": w["paired_trial_uncertainty"]["released"]["ci95"] = [99., 100.]
+        if kind == "workflow_median": w["median_seconds"]["stream"] = 123.
+        if kind == "distinct": p["distinct_values"]["max"] = 999
+        write(folder/"report.json", p)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:64: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+_______ test_frozen_cohort_and_run_bindings_are_enforced[input_protocol] _______
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_frozen_cohort_and_run_bin0')
+kind = 'input_protocol'
+
+    @pytest.mark.parametrize("kind", ["input_protocol", "start_protocol", "start_inputs", "raw_input", "case_family"])
+    def test_frozen_cohort_and_run_bindings_are_enforced(tmp_path, kind):
+        folder, cache = fixture(tmp_path)
+        ip = json.loads((folder/"inputs.json").read_text())
+        start = json.loads((folder/"run-start.json").read_text())
+        if kind == "input_protocol": ip["protocol_sha256"] = "wrong"
+        if kind == "start_protocol": start["protocol_sha256"] = "wrong"
+        if kind == "start_inputs": start["inputs_sha256"] = "wrong"
+        if kind == "case_family": ip["series"][0]["family"] = "SMAP"
+        if kind == "raw_input":
+            with np.load(cache/"one.npz") as z: s = z["scores"]
+            x = np.array([40., 50., 60.]); y = np.array([1, 0, 0], np.int8)
+            np.savez(cache/"one.npz", observations=x, labels=y, scores=s)
+            ip["series"][0].update({"npz_sha256": sha(cache/"one.npz"),
+                "observation_label_identity": hashlib.sha256(x.tobytes()+y.tobytes()).hexdigest()})
+        write(folder/"inputs.json", ip)
+        rebind_inputs(folder)
+        if kind.startswith("start_"): write(folder/"run-start.json", start)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:85: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+_______ test_frozen_cohort_and_run_bindings_are_enforced[start_protocol] _______
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_frozen_cohort_and_run_bin1')
+kind = 'start_protocol'
+
+    @pytest.mark.parametrize("kind", ["input_protocol", "start_protocol", "start_inputs", "raw_input", "case_family"])
+    def test_frozen_cohort_and_run_bindings_are_enforced(tmp_path, kind):
+        folder, cache = fixture(tmp_path)
+        ip = json.loads((folder/"inputs.json").read_text())
+        start = json.loads((folder/"run-start.json").read_text())
+        if kind == "input_protocol": ip["protocol_sha256"] = "wrong"
+        if kind == "start_protocol": start["protocol_sha256"] = "wrong"
+        if kind == "start_inputs": start["inputs_sha256"] = "wrong"
+        if kind == "case_family": ip["series"][0]["family"] = "SMAP"
+        if kind == "raw_input":
+            with np.load(cache/"one.npz") as z: s = z["scores"]
+            x = np.array([40., 50., 60.]); y = np.array([1, 0, 0], np.int8)
+            np.savez(cache/"one.npz", observations=x, labels=y, scores=s)
+            ip["series"][0].update({"npz_sha256": sha(cache/"one.npz"),
+                "observation_label_identity": hashlib.sha256(x.tobytes()+y.tobytes()).hexdigest()})
+        write(folder/"inputs.json", ip)
+        rebind_inputs(folder)
+        if kind.startswith("start_"): write(folder/"run-start.json", start)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:85: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+________ test_frozen_cohort_and_run_bindings_are_enforced[start_inputs] ________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_frozen_cohort_and_run_bin2')
+kind = 'start_inputs'
+
+    @pytest.mark.parametrize("kind", ["input_protocol", "start_protocol", "start_inputs", "raw_input", "case_family"])
+    def test_frozen_cohort_and_run_bindings_are_enforced(tmp_path, kind):
+        folder, cache = fixture(tmp_path)
+        ip = json.loads((folder/"inputs.json").read_text())
+        start = json.loads((folder/"run-start.json").read_text())
+        if kind == "input_protocol": ip["protocol_sha256"] = "wrong"
+        if kind == "start_protocol": start["protocol_sha256"] = "wrong"
+        if kind == "start_inputs": start["inputs_sha256"] = "wrong"
+        if kind == "case_family": ip["series"][0]["family"] = "SMAP"
+        if kind == "raw_input":
+            with np.load(cache/"one.npz") as z: s = z["scores"]
+            x = np.array([40., 50., 60.]); y = np.array([1, 0, 0], np.int8)
+            np.savez(cache/"one.npz", observations=x, labels=y, scores=s)
+            ip["series"][0].update({"npz_sha256": sha(cache/"one.npz"),
+                "observation_label_identity": hashlib.sha256(x.tobytes()+y.tobytes()).hexdigest()})
+        write(folder/"inputs.json", ip)
+        rebind_inputs(folder)
+        if kind.startswith("start_"): write(folder/"run-start.json", start)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:85: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+_________ test_frozen_cohort_and_run_bindings_are_enforced[raw_input] __________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_frozen_cohort_and_run_bin3')
+kind = 'raw_input'
+
+    @pytest.mark.parametrize("kind", ["input_protocol", "start_protocol", "start_inputs", "raw_input", "case_family"])
+    def test_frozen_cohort_and_run_bindings_are_enforced(tmp_path, kind):
+        folder, cache = fixture(tmp_path)
+        ip = json.loads((folder/"inputs.json").read_text())
+        start = json.loads((folder/"run-start.json").read_text())
+        if kind == "input_protocol": ip["protocol_sha256"] = "wrong"
+        if kind == "start_protocol": start["protocol_sha256"] = "wrong"
+        if kind == "start_inputs": start["inputs_sha256"] = "wrong"
+        if kind == "case_family": ip["series"][0]["family"] = "SMAP"
+        if kind == "raw_input":
+            with np.load(cache/"one.npz") as z: s = z["scores"]
+            x = np.array([40., 50., 60.]); y = np.array([1, 0, 0], np.int8)
+            np.savez(cache/"one.npz", observations=x, labels=y, scores=s)
+            ip["series"][0].update({"npz_sha256": sha(cache/"one.npz"),
+                "observation_label_identity": hashlib.sha256(x.tobytes()+y.tobytes()).hexdigest()})
+        write(folder/"inputs.json", ip)
+        rebind_inputs(folder)
+        if kind.startswith("start_"): write(folder/"run-start.json", start)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:85: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+________ test_frozen_cohort_and_run_bindings_are_enforced[case_family] _________
+
+tmp_path = PosixPath('/private/var/folders/xb/jp0xfqzj077c5_xxmrgkp2_w0000gq/T/pytest-of-gosmain/pytest-692/test_frozen_cohort_and_run_bin4')
+kind = 'case_family'
+
+    @pytest.mark.parametrize("kind", ["input_protocol", "start_protocol", "start_inputs", "raw_input", "case_family"])
+    def test_frozen_cohort_and_run_bindings_are_enforced(tmp_path, kind):
+        folder, cache = fixture(tmp_path)
+        ip = json.loads((folder/"inputs.json").read_text())
+        start = json.loads((folder/"run-start.json").read_text())
+        if kind == "input_protocol": ip["protocol_sha256"] = "wrong"
+        if kind == "start_protocol": start["protocol_sha256"] = "wrong"
+        if kind == "start_inputs": start["inputs_sha256"] = "wrong"
+        if kind == "case_family": ip["series"][0]["family"] = "SMAP"
+        if kind == "raw_input":
+            with np.load(cache/"one.npz") as z: s = z["scores"]
+            x = np.array([40., 50., 60.]); y = np.array([1, 0, 0], np.int8)
+            np.savez(cache/"one.npz", observations=x, labels=y, scores=s)
+            ip["series"][0].update({"npz_sha256": sha(cache/"one.npz"),
+                "observation_label_identity": hashlib.sha256(x.tobytes()+y.tobytes()).hexdigest()})
+        write(folder/"inputs.json", ip)
+        rebind_inputs(folder)
+        if kind.startswith("start_"): write(folder/"run-start.json", start)
+>       with pytest.raises(ValueError): audit().audit(tmp_path, tmp_path/"audit.json")
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_pvldb_audit.py:85: Failed
+----------------------------- Captured stdout call -----------------------------
+{
+  "status": "PASS",
+  "records": 4,
+  "workflows": 4,
+  "max_error": 0.0,
+  "sum_collection_median_seconds": {
+    "released": 15.0,
+    "stream": 7.5
+  }
+}
+___ test_supplement_design_preserves_every_contract_except_fresh_parent_ids ____
+
+    def test_supplement_design_preserves_every_contract_except_fresh_parent_ids():
+        reference = {"created_utc": "old", "primary_protocol_sha256": "old-parent", "inputs_sha256": "old-inputs",
+                     "source_sha256": {"supplement": "a"}, "methods": ["stream", "benchopt_pair"],
+                     "orders": [["stream", "benchopt_pair"]], "width": 30, "repetitions": 1,
+                     "cohort": "all fixed cases", "regret_threshold": .01, "timing": "complete calls",
+                     "comparison": "matched output", "uncertainty": "paired", "failure_policy": "halt"}
+        actual = {**reference, "created_utc": "new", "primary_protocol_sha256": "new-parent", "inputs_sha256": "new-inputs"}
+>       check = module().same_supplement_design
+E       AttributeError: module 'reproduction' has no attribute 'same_supplement_design'
+
+tests/test_pvldb_reproduce.py:39: AttributeError
+=========================== short test summary info ============================
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[ci]
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[wins]
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[tail]
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[workflow_ratio]
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[workflow_ci]
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[workflow_median]
+FAILED tests/test_pvldb_audit.py::test_corrupt_principal_table_is_rejected[distinct]
+FAILED tests/test_pvldb_audit.py::test_frozen_cohort_and_run_bindings_are_enforced[input_protocol]
+FAILED tests/test_pvldb_audit.py::test_frozen_cohort_and_run_bindings_are_enforced[start_protocol]
+FAILED tests/test_pvldb_audit.py::test_frozen_cohort_and_run_bindings_are_enforced[start_inputs]
+FAILED tests/test_pvldb_audit.py::test_frozen_cohort_and_run_bindings_are_enforced[raw_input]
+FAILED tests/test_pvldb_audit.py::test_frozen_cohort_and_run_bindings_are_enforced[case_family]
+FAILED tests/test_pvldb_reproduce.py::test_supplement_design_preserves_every_contract_except_fresh_parent_ids
+13 failed, 6 passed in 0.20s
