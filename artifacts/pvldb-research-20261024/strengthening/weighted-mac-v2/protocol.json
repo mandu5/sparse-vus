@@ -1,0 +1,561 @@
+{
+  "status": "FROZEN_BEFORE_WEIGHTED_METRIC_TIMINGS",
+  "utc": "2026-10-24T07:58:50.334875+00:00",
+  "sources": {
+    "src/sparse_vus/weighted_range.py": "95ef1ba243ad5ca34ba50ab027237a465a63544f12ce13c07a8513e56b29c338",
+    "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+    "experiments/weighted_range_study.py": "93ad71d1c9b7cbd18bf485807c76a3578d0c7b1403a669c96f1c6307bc01dc5d",
+    "experiments/audit_weighted_range_study.py": "2285fbb8b79aab3a9d365ac0cf7097b9b33098abc1fa78424a3ceaf138724923"
+  },
+  "inputs_path": "artifacts/pvldb-research-20261024/strengthening/workload-generation.json",
+  "inputs_sha256": "4177f82b6bfe404f82439d75b749adb16b21a416321425326da2611115f02568",
+  "model_order": [
+    "FFT",
+    "COPOD"
+  ],
+  "cases": [
+    {
+      "id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+      "family": "WSD",
+      "n": 10744,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/096_WSD_id_68_WebService_tr_1341_1st_1441.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/096_WSD_id_68_WebService_tr_1341_1st_1441.npz",
+      "npz_sha256": "aef721d9b8f3f2737a7431ee0f3ebc3515898c385867cdefb37b09ecf0d865e3",
+      "labels_sha256": "2536fc389720ca3d0215a876842c5da44a2609c29ceb5c299c60e07be91badc6",
+      "scores_sha256": "69000fe588de87ac82151f782c1ac4068e550a6ff70eb7468d23bcde63d02813"
+    },
+    {
+      "id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+      "family": "WSD",
+      "n": 15285,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/076_WSD_id_48_WebService_tr_3821_1st_7083.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/076_WSD_id_48_WebService_tr_3821_1st_7083.npz",
+      "npz_sha256": "33317fe82785dd04134d81c3d4f92860b907cce81bd1114c02114eb78e38d27c",
+      "labels_sha256": "bb8b029e1163cadd7bcf2872aea1c669ca56e1feced8b9a0a6ca8121efb75d19",
+      "scores_sha256": "5ac466b8ba873dd768f5bc3d4453d50795e7af630d1546b488554f30399e7958"
+    },
+    {
+      "id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+      "family": "WSD",
+      "n": 17438,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/120_WSD_id_92_WebService_tr_2329_1st_2429.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/120_WSD_id_92_WebService_tr_2329_1st_2429.npz",
+      "npz_sha256": "16ac7e35e9d854bf6774eea333ddaa9ff10445e74e61fe3e98dd4561f85bf223",
+      "labels_sha256": "6fd0c7f983eb7e0a83367d919ae649c5e09da3898e5c3a62580717b4597747a3",
+      "scores_sha256": "2cedb6e74aea170bfc9de4f964445ba5d57afe18ea964bef95c944436e9e792d"
+    },
+    {
+      "id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+      "family": "WSD",
+      "n": 18084,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/038_WSD_id_10_WebService_tr_4042_1st_4142.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/038_WSD_id_10_WebService_tr_4042_1st_4142.npz",
+      "npz_sha256": "93f10592c1c1ac5fa6adc6b757342296099bbeb404cb1fa02b121429ea0847cc",
+      "labels_sha256": "60ec25d5496a28fab84a8c59ea63b44c9fedad1e03d23610acb587d962f52ecf",
+      "scores_sha256": "57e0014e9423f511c97dff029982ed9cabd2cf839f16b0743cf853c72ea52024"
+    },
+    {
+      "id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+      "family": "WSD",
+      "n": 18214,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/115_WSD_id_87_WebService_tr_2252_1st_2352.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/115_WSD_id_87_WebService_tr_2252_1st_2352.npz",
+      "npz_sha256": "a2cc0934c6c5cfe3157171422a4d2d3c8fdc3810cd78b7b526abbd20f20d82a5",
+      "labels_sha256": "27f24245aa706cf5af9b891888a7fdc9ceac68e15c7c09b0a880bbc8afcdca5f",
+      "scores_sha256": "b9b0c38269bf3467d4580fa918b8501bd44eac232d1707b8f0af1cddf1de40c7"
+    },
+    {
+      "id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/034_WSD_id_6_WebService_tr_4559_1st_8461.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/034_WSD_id_6_WebService_tr_4559_1st_8461.npz",
+      "npz_sha256": "32ae167c0c5ee83353290d6f8741967990dc134c7a36b6c8e8d921a1bb156043",
+      "labels_sha256": "e6ff2cbe5b6f456887d88f4ea787ec7dd2e45d913e98c743a9e389a731be6f85",
+      "scores_sha256": "7c8158088e7a3d4ee9f875e636708edeb0c2a08a38c4cee5d648207cc464d963"
+    },
+    {
+      "id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/057_WSD_id_29_WebService_tr_2229_1st_2329.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/057_WSD_id_29_WebService_tr_2229_1st_2329.npz",
+      "npz_sha256": "ded33faa0a749b9bc1eea81b0b7bfaa2235a9146d9e310a33a533cea547a9062",
+      "labels_sha256": "864e99c4d515db7839cfd4808148d5950c3c4e8b1fad424851089588ef456723",
+      "scores_sha256": "3a3e0e253d7d27bd2a4591bd2388ab7dbc7c382959af0bdb5c950a2e093ce957"
+    },
+    {
+      "id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/071_WSD_id_43_WebService_tr_3387_1st_3487.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/071_WSD_id_43_WebService_tr_3387_1st_3487.npz",
+      "npz_sha256": "9fb9c469cbf4bd60015f77485d271f1ce8d2605d53a861e518e27ad3a5e4c66f",
+      "labels_sha256": "a2ce01880e7409ed54bcfbc6a27e7e6ba38a7539a05dc616168a160b8e7c5bb8",
+      "scores_sha256": "a4067b40ec454f9a6c839d7158873986d6167ab60599be3d1f51cfb7f17b71a1"
+    },
+    {
+      "id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/101_WSD_id_73_WebService_tr_1513_1st_1613.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/101_WSD_id_73_WebService_tr_1513_1st_1613.npz",
+      "npz_sha256": "e2c1b6a6a37054aa4dbd7d60a8f7307cf5726f406ed1675cd6829efa8b656d2a",
+      "labels_sha256": "6042d417d2a6845e504a0ddbea34112573814f6506287bf4ea22e54cde57a9fd",
+      "scores_sha256": "a290588705444a64641b7670f7c020cdb72b8070130427edc8c8d509378f6cc4"
+    },
+    {
+      "id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/124_WSD_id_96_WebService_tr_4559_1st_14350.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/124_WSD_id_96_WebService_tr_4559_1st_14350.npz",
+      "npz_sha256": "8df8b24198a491fc59580c010614978f986b2442b498cdb5e56cb3b7091c4be4",
+      "labels_sha256": "75b4cc408330e21913d223d280618441170e8bb16361dd18c66ece736cc383a1",
+      "scores_sha256": "fcd5ad5d46c7db2fea1ae2a865f07d7b7e9399af8c85ae695baae09d1f31a60a"
+    },
+    {
+      "id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+      "family": "WSD",
+      "n": 18302,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/066_WSD_id_38_WebService_tr_3320_1st_3420.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/066_WSD_id_38_WebService_tr_3320_1st_3420.npz",
+      "npz_sha256": "fb52fc56a92c738ab530f409b307d7394f412ae3d639db060dd31508c39eb017",
+      "labels_sha256": "cae9d75dc2acb1f0552b5c8acf28153a3a7545edbc79884004d96a2db496d00d",
+      "scores_sha256": "e0325db91ea478bfb73af24c808a54eef88fd4a5e78f8f1d4707e634faa44327"
+    },
+    {
+      "id": "126_WSD_id_98_WebService_tr_657_1st_757",
+      "family": "WSD",
+      "n": 18883,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/126_WSD_id_98_WebService_tr_657_1st_757.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/126_WSD_id_98_WebService_tr_657_1st_757.npz",
+      "npz_sha256": "1d2685477b0fcb58af91f479c3484ed8481543eb597af4a55359db19bd777c0d",
+      "labels_sha256": "ee013cedef8f39bf1b0cee3d675b6c1e81b7d60f94901eb1b0b14c60d27dd814",
+      "scores_sha256": "7eb85ea384836400a0f65a3766b6303e3b8bb6dca77edb249db60e3c9381db8e"
+    },
+    {
+      "id": "150_Stock_id_2_Finance_tr_500_1st_7",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/150_Stock_id_2_Finance_tr_500_1st_7.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/150_Stock_id_2_Finance_tr_500_1st_7.npz",
+      "npz_sha256": "d601e240c26e82a2c3590d45437bef194047731eadf753e6cd3d837e30008389",
+      "labels_sha256": "aac9e21d753ea9d3b04e604624c4ab90e06a786e78c8e7a595b86f92a3d66221",
+      "scores_sha256": "f4866567223e8a4024cb29f68071e62a2b6c7408bef0a2359cbadc7dbca60b4d"
+    },
+    {
+      "id": "153_Stock_id_5_Finance_tr_500_1st_1",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/153_Stock_id_5_Finance_tr_500_1st_1.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/153_Stock_id_5_Finance_tr_500_1st_1.npz",
+      "npz_sha256": "4418df7b9e1b078599ec4e44bd0c34bdda3b1a4f59eb314dab0001efa6f8275b",
+      "labels_sha256": "a4f194008c72ed65e78cbe8151817c43f02f73b9fddd7c989a64f65ee7b2accf",
+      "scores_sha256": "c539e952eee272b43e4e62cfe8ef838c21516fced357dc3b0beead4118541248"
+    },
+    {
+      "id": "157_Stock_id_9_Finance_tr_500_1st_19",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/157_Stock_id_9_Finance_tr_500_1st_19.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/157_Stock_id_9_Finance_tr_500_1st_19.npz",
+      "npz_sha256": "2ce1a114d4cf64b2c69429cad2fa8fe5c156cf0ac456323db0ac3eafa060fe9e",
+      "labels_sha256": "cc82b4e12cd694647430660a76925029953c2fed938260f67014798a2b008423",
+      "scores_sha256": "c6c7a1505600ef203649ec85312ec9b9883f4936a5c18e53036080caedd19aff"
+    },
+    {
+      "id": "161_Stock_id_13_Finance_tr_500_1st_3",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/161_Stock_id_13_Finance_tr_500_1st_3.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/161_Stock_id_13_Finance_tr_500_1st_3.npz",
+      "npz_sha256": "6bf78cf95936b5a6796a2baf44bb4175c75bb05febff250790b3451c930f2ff3",
+      "labels_sha256": "59fce0190e6d994d52bef94b139fe645b0dbd92231642864766f2bb4d793b2ba",
+      "scores_sha256": "fc018c2a5eafa3898243a618e6ffb8c43a4eb6b5d826c4fb0fb47bb8845b247a"
+    },
+    {
+      "id": "163_Stock_id_15_Finance_tr_500_1st_3",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/163_Stock_id_15_Finance_tr_500_1st_3.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/163_Stock_id_15_Finance_tr_500_1st_3.npz",
+      "npz_sha256": "4e7724a3baccbe28bf02dee25a76d229d435395c64bf03372d97926ba9c4a234",
+      "labels_sha256": "9d16c27476d775d17106acd099cb992d2e96c02d9b1619e31b2c43163ea0ea4b",
+      "scores_sha256": "6c86185e0c67c435930300dd12518e133b1148e0c105f6ce4dc88d5803c88429"
+    },
+    {
+      "id": "167_Stock_id_19_Finance_tr_500_1st_7",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/167_Stock_id_19_Finance_tr_500_1st_7.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/167_Stock_id_19_Finance_tr_500_1st_7.npz",
+      "npz_sha256": "e90f1739bbb9db3b27713b583a93a3067ce676bee10054f7a0287c66aadab5c2",
+      "labels_sha256": "b8436381e11a20c49029fa4db7f541363558eae9dcd81ccccbea65c0b5e06675",
+      "scores_sha256": "c3866872690549a82ebb7b9442c6a42e988d7bd278a010e7f6306fc23421a183"
+    },
+    {
+      "id": "168_Stock_id_20_Finance_tr_500_1st_1",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/168_Stock_id_20_Finance_tr_500_1st_1.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/168_Stock_id_20_Finance_tr_500_1st_1.npz",
+      "npz_sha256": "9f069c845b0ee3ac2910a3773280ecb654f9bb3ec931901d9594fb19b0f400e6",
+      "labels_sha256": "cdcc0a3739cb0bd550356c1a8d109912d1c14b40c6b5ae081e3acaac580ef813",
+      "scores_sha256": "20b23242a4b963a1a52a09cdee8cd43d06a754a29f1113bd03137dd041d8769a"
+    },
+    {
+      "id": "152_Stock_id_4_Finance_tr_500_1st_2",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/152_Stock_id_4_Finance_tr_500_1st_2.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/152_Stock_id_4_Finance_tr_500_1st_2.npz",
+      "npz_sha256": "d8fdbfa6c8342a44d6e6be046ead9637f0b979af2e1e588c087c75b6b6c824c4",
+      "labels_sha256": "9c6194171d7074258d2d39f0c9c040475926f33ec7367ad9067e92f98b7ab30b",
+      "scores_sha256": "e2c8e7e29994cb3bec7aa95c1fae6ed3320c5df7661f89d4107f1e5f813d41ca"
+    },
+    {
+      "id": "154_Stock_id_6_Finance_tr_500_1st_38",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/154_Stock_id_6_Finance_tr_500_1st_38.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/154_Stock_id_6_Finance_tr_500_1st_38.npz",
+      "npz_sha256": "9b7f8c3e1d692b0e3f49d24ea0b57a2737f048106a581a04d723d7d532e5b4be",
+      "labels_sha256": "3f02b33bcff262889328a3b2318393752b85d07ef37341e3ac714557713434a7",
+      "scores_sha256": "ad7534546b96a7ea26e5e24e015e7287e3913616129f5bf363538e5a165fe6d7"
+    },
+    {
+      "id": "158_Stock_id_10_Finance_tr_500_1st_2",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/158_Stock_id_10_Finance_tr_500_1st_2.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/158_Stock_id_10_Finance_tr_500_1st_2.npz",
+      "npz_sha256": "77bdef45f915c647e6f019031f521d5ef3e6fc8030739a757a4ff87034a5dc16",
+      "labels_sha256": "ccc5dc5927d5c6b424e4203a02737fac4c2683e84a7a3f83476a0eeb3131061d",
+      "scores_sha256": "d783afa9eb83954affa53af55b6b338b54f44df2d852b952bc30c5542983d1a3"
+    },
+    {
+      "id": "159_Stock_id_11_Finance_tr_500_1st_5",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/159_Stock_id_11_Finance_tr_500_1st_5.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/159_Stock_id_11_Finance_tr_500_1st_5.npz",
+      "npz_sha256": "51fb95ec6fafcb985c9f7e88514cae08c8aa903ce4de8a93d6ddb59148bdf1f4",
+      "labels_sha256": "cc2fce27c73176a66e30ce03301391094a5e4b97b1126d7bc6e4041abb72c8d8",
+      "scores_sha256": "b964ce13a4e5c08690469108e7d2406f81588843d8d778228c6135e1d65f5a37"
+    },
+    {
+      "id": "164_Stock_id_16_Finance_tr_500_1st_8",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/164_Stock_id_16_Finance_tr_500_1st_8.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/164_Stock_id_16_Finance_tr_500_1st_8.npz",
+      "npz_sha256": "7b60674158a54a1f8300d26386c3ae192c3374f15ef6ed0f7ba4ce3166775184",
+      "labels_sha256": "295eb5ac11ff9c2f732032e0519f10507702bac7001e3d126f30fc207ffac6b5",
+      "scores_sha256": "dcbb97b6df1f80d157d71b0a9cdb43df4eea658e721a329d584b7ffc008405dd"
+    },
+    {
+      "id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+      "family": "MSL",
+      "n": 2217,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/146_MSL_id_7_Sensor_tr_554_1st_1172.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/146_MSL_id_7_Sensor_tr_554_1st_1172.npz",
+      "npz_sha256": "d32e8ce447457a8eeed65329665eb1e265e0b1b8d9d40bf7b516cbfeec17628b",
+      "labels_sha256": "5efc2dc0cdb644b862d3fa2cc21a0f1a63a73f9d2d44a3c370c41843ff3c53dd",
+      "scores_sha256": "7d5589b0c3f8ccad29ff14b9544515eb466c967fe8972737c8feea837d5a5d51"
+    },
+    {
+      "id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+      "family": "MSL",
+      "n": 6100,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/arrays/142_MSL_id_3_Sensor_tr_1525_1st_4575.npz",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/142_MSL_id_3_Sensor_tr_1525_1st_4575.npz",
+      "npz_sha256": "00e1d456b7415af26417728708661a240f934a5b25270aca17cb7a9a5910df6f",
+      "labels_sha256": "abcf8b34d46cb5ea1e0cb73a645b894b46298c608a5f8ed32c2be4f834ed2d7d",
+      "scores_sha256": "1bb1bd507bf1dcac62963b94d93af562cf6ab2c332a19290a8341d1de4925fc8"
+    }
+  ],
+  "biases": [
+    "flat",
+    "front",
+    "back",
+    "middle"
+  ],
+  "cardinalities": [
+    "one",
+    "reciprocal",
+    "improved"
+  ],
+  "alpha": 0.2,
+  "precision_weighting": "unweighted average over all predicted windows",
+  "queries": {
+    "grid100": "np.linspace(min(score),max(score),100), strict score > threshold",
+    "distinct": "np.unique(score), strict >, all observed thresholds; excludes below-min state"
+  },
+  "orders": [
+    [
+      "raster",
+      "sweep",
+      "bucket"
+    ],
+    [
+      "raster",
+      "bucket",
+      "sweep"
+    ],
+    [
+      "sweep",
+      "raster",
+      "bucket"
+    ],
+    [
+      "sweep",
+      "bucket",
+      "raster"
+    ],
+    [
+      "bucket",
+      "raster",
+      "sweep"
+    ],
+    [
+      "bucket",
+      "sweep",
+      "raster"
+    ]
+  ],
+  "timing": "Serial one thread. Each measurement includes both detector profiles, validation, interval/prefix construction, queries, sorting/bucketing, metric computation and maximum selection. Excludes compilation, training and file IO. All 12 bias/cardinality contracts and both query contracts are retained.",
+  "parity_atol": 1e-10,
+  "winner_atol": 1e-10,
+  "bootstrap_seed": 20261024,
+  "bootstrap_resamples": 10000,
+  "uncertainty": "Point estimate: median method time per case/semantic/query, geometric ratio over fixed cases. Primary approximate paired-order resampling: resample six paired trial indices within each case, same indices for both methods and all12 semantics, recompute method medians and geometric ratio. Conditional on this panel/host; balanced orders are not independent workloads. Separately report case-log-ratio resampling as recording-reweighting sensitivity, not fixed-workload timing uncertainty or population coverage. For each prespecified comparison simultaneous95 adjustment over3 collections x12 semantics (Bonferroni36); aggregate all12 semantics equally per case with adjustment over3. MSL has2 recordings and cannot support population inference.",
+  "comparisons": [
+    [
+      "grid100",
+      "raster",
+      "bucket"
+    ],
+    [
+      "grid100",
+      "sweep",
+      "bucket"
+    ],
+    [
+      "distinct",
+      "raster",
+      "sweep"
+    ]
+  ],
+  "hypothesis": "The maintained local statistics apply to four published positional biases and three local cardinality rules, across separately selected real recordings and unchanged public FFT/COPOD APIs. Generality and costs are measured, not assumed.",
+  "failure_policy": "No replacement/exclusion. Any input/source mismatch, nonfinite curve or complete-curve error>1e-10 halts, preserves partial outputs and requires explicit new protocol/version if code changes.",
+  "data_note": "No exact/normalized array duplicate of prior panels found. Shared physical sources may remain. No raw public data are redistributed because license terms are unverified."
+}

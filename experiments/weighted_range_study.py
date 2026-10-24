@@ -22,7 +22,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT/'artifacts/pvldb-research-20261024/strengthening'
 SOURCES = ('src/sparse_vus/weighted_range.py', 'src/sparse_vus/range_sweep.py',
-           'experiments/weighted_range_study.py')
+           'experiments/weighted_range_study.py', 'experiments/audit_weighted_range_study.py')
 
 
 def sha(path):
@@ -31,6 +31,10 @@ def sha(path):
 
 def read(path):
     return json.loads(Path(path).read_text())
+
+
+def input_path(case):
+    return ROOT/case.get('npz_relative_path',case['npz_path'])
 
 
 def write(path, data):
@@ -45,8 +49,8 @@ def freeze(args):
     assert len(cases) == 26
     assert {f: sum(c['family'] == f for c in cases) for f in ('WSD', 'Stock', 'MSL')} == {'WSD':12, 'Stock':12, 'MSL':2}
     for c in cases:
-        assert sha(ROOT/c['npz_path']) == c['npz_sha256']
-        with np.load(ROOT/c['npz_path'], allow_pickle=False) as z:
+        assert sha(input_path(c)) == c['npz_sha256']
+        with np.load(input_path(c), allow_pickle=False) as z:
             assert z['scores'].shape == (2, c['n']) and z['labels'].shape == (c['n'],)
             assert np.isfinite(z['scores']).all()
     args.output.mkdir(parents=True, exist_ok=False)
@@ -69,7 +73,9 @@ def freeze(args):
         'timing':'Serial one thread. Each measurement includes both detector profiles, validation, interval/prefix construction, queries, sorting/bucketing, metric computation and maximum selection. Excludes compilation, training and file IO. All 12 bias/cardinality contracts and both query contracts are retained.',
         'parity_atol':1e-10,
         'winner_atol':1e-10,
-        'uncertainty':'Case is the resampling unit, not threshold/profile/repetition. Six balanced trial orders; median method time per case/semantic/query. 10000 seeded log-ratio bootstraps. For each prespecified comparison familywise95 across 3 collections x12 semantics (Bonferroni36). Also all12-semantics geometric aggregation per case, familywise95 across3. Fixed selected-cohort intervals only; MSL has2 units and cannot support population inference.',
+        'bootstrap_seed':20261024,
+        'bootstrap_resamples':10000,
+        'uncertainty':'Point estimate: median method time per case/semantic/query, geometric ratio over fixed cases. Primary approximate paired-order resampling: resample six paired trial indices within each case, same indices for both methods and all12 semantics, recompute method medians and geometric ratio. Conditional on this panel/host; balanced orders are not independent workloads. Separately report case-log-ratio resampling as recording-reweighting sensitivity, not fixed-workload timing uncertainty or population coverage. For each prespecified comparison simultaneous95 adjustment over3 collections x12 semantics (Bonferroni36); aggregate all12 semantics equally per case with adjustment over3. MSL has2 recordings and cannot support population inference.',
         'comparisons':[['grid100','raster','bucket'],['grid100','sweep','bucket'],['distinct','raster','sweep']],
         'hypothesis':'The maintained local statistics apply to four published positional biases and three local cardinality rules, across separately selected real recordings and unchanged public FFT/COPOD APIs. Generality and costs are measured, not assumed.',
         'failure_policy':'No replacement/exclusion. Any input/source mismatch, nonfinite curve or complete-curve error>1e-10 halts, preserves partial outputs and requires explicit new protocol/version if code changes.',
@@ -102,7 +108,7 @@ def run(args):
         if sha(ROOT/path)!=h: raise ValueError('source identity '+path)
     if sha(ROOT/p['inputs_path'])!=p['inputs_sha256']:raise ValueError('inputs identity')
     for c in p['cases']:
-        if sha(ROOT/c['npz_path'])!=c['npz_sha256']:raise ValueError('array identity '+c['id'])
+        if sha(input_path(c))!=c['npz_sha256']:raise ValueError('array identity '+c['id'])
     write(args.output/'run-start.json', {
         'utc':datetime.now(timezone.utc).isoformat(), 'platform':platform.platform(),
         'python':sys.version, 'processor':platform.processor(),
@@ -114,7 +120,7 @@ def run(args):
     (args.output/'curves').mkdir(exist_ok=False)
     with (args.output/'records.jsonl').open('x') as f:
         for ci,c in enumerate(p['cases']):
-            with np.load(ROOT/c['npz_path'],allow_pickle=False) as z:
+            with np.load(input_path(c),allow_pickle=False) as z:
                 y,scores=z['labels'],z['scores']
             for query in p['queries']:
                 saved={m:{} for m in p['orders'][0]}
@@ -160,7 +166,7 @@ def run(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('command',choices=['freeze','run'])
-    parser.add_argument('--output',type=Path,default=BASE/'weighted-mac')
+    parser.add_argument('--output',type=Path,default=BASE/'weighted-mac-v2')
     parser.add_argument('--inputs',type=Path,default=BASE/'workload-generation.json')
     args=parser.parse_args()
     globals()[args.command](args)

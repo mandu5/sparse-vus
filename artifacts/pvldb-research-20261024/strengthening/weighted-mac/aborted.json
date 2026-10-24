@@ -1,0 +1,10 @@
+{
+  "status": "ABORTED_FOR_PROTOCOL_CLARIFICATION",
+  "utc": "2026-10-24T07:57:37.917780+00:00",
+  "reason": "Independent static review requested explicit auditor binding/bootstrap seed, portable cache paths, and paired-order resampling uncertainty separate from recording sensitivity. Full rerun uses v2; no v1 timing summary was inspected.",
+  "prior_source_commit": "f68f4e4",
+  "protocol_commit": "7f3ce5f",
+  "partial_records_sha256": "748cbc93079315e5f0eb41a8f9760a7f7273fa3ea12bb51a4a137a55ff5b8aab",
+  "partial_records": 5400,
+  "no_outcome_based_case_or_method_selection": true
+}
