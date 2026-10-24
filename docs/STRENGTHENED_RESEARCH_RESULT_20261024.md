@@ -1,14 +1,17 @@
 # Strengthened exact-metric research decision — 24 October 2026
 
-Decision on immutable manuscript `ca8761cc40d493141511cad4bc3c184c48a681dc`:
-**six of six evidence gates are supported. Three independent AI-simulated
-reviews recommend Accept, each internal 7/10.** Their reports define the scale,
-preserve the remaining specialized-novelty concern, and are not an official
-venue score or an acceptance probability. Earlier weak-accept reports concern
-an earlier manuscript. The final finite five-session Linux robustness follow-up is complete and
-independently reconstructed below. Presentation improvements and the identical
-final-PDF reviews are being frozen before submission. The actual portal receipt
-will be recorded separately.
+Decision on submitted manuscript `c7eff9be3340c8fbab7afaabc54dc284ac4ac1cc`:
+**six of six evidence gates pass within the stated scope. Three independent
+AI-simulated reviews recommend Accept, each internal 7/10. PVLDB submission 2346
+was created on 24 October 2026 at 21:35:16 KST and its saved final file verified.**
+See the [actual submission receipt](PVLDB_SUBMISSION_RECEIPT_20261024.md).
+The final finite five-session experiment is complete and independently
+reconstructed below. A/C/D assessed the full v2 manuscript and separately
+verified the exact v3 PDF, whose sole change corrects one median's last displayed
+digit. Their reports define the internal scale and retain the remaining
+specialized-novelty concern. Their recommendations are not official venue
+ratings or acceptance probabilities. The earlier weak-accept reports concern
+an earlier manuscript.
 
 ## Research contribution
 
@@ -156,19 +159,21 @@ and [independent D reconstruction](reviews/20261024/strengthened-independent-d-a
 
 | Gate | Current decision | Evidence |
 |---|---|---|
-| 1. Novelty | Supported, scoped | Fourteen recent-paper discussions, now cross-referenced in a separate structured inventory, plus direct older Tatbul/component-tree mechanics and Klein, Benchopt and TimeEval implementations. Some recent papers supply context rather than the closest computational mechanism; absence from this bounded search is not universal precedence. |
-| 2. Main result | Supported, scoped | Three public collections, same-output public-reference checks, stronger compiler-matched raster/closed-form interval controls, paired uncertainty and ablations; all losses and censors retained. |
-| 3. Generality | Supported, scoped | Original 73-series panel plus 26 separately selected real recordings, public detector APIs, two environments and complete native workflows. Dependence, only two MSL recordings and negative selection findings are disclosed. |
-| 4. Reproduction | Supported | Fresh raw-data-to-profile-to-table Linux interval-control execution, source/input identities, independent reconstruction, and documented one-command drivers. Archived-only audits explicitly distinguish unavailable raw bytes. |
-| 5. Independent review | Supported on immutable v1 | Three independent final AI reviews assess the identical `ca8761c` manuscript and PDF SHA-256 `38ad66e21f7a21ab9d58f80f9b8d8499f92e55014e714c064cd467bd1cc05e54`, using disclosed historical PVLDB forms and public-review calibration. All recommend Accept, internal 7/10, with no required scientific blocker for the scoped claim. Final presentation/new-robustness deltas require separate acknowledgment. |
-| 6. Venue | Supported | PVLDB Volume 20 Regular Research, Foundations and Algorithms. Core contribution is an analytical operator, formal state and measured data-processing cost, with direct VUS database antecedents. |
+| 1. Novelty | Pass, scoped | Fourteen recent-paper discussions in a structured inventory, plus direct older Tatbul/component-tree/Naegel mechanics and Klein, Benchopt and TimeEval implementations. The increment is joint overlap/fragmentation/moving-normalization state; label conditioning alone is established. Absence from this bounded search is not universal precedence. |
+| 2. Main result | Pass, scoped | Three public collections, same-output public-reference checks, stronger compiler-matched raster/closed-form interval controls, paired uncertainty and ablations; all losses and censors retained. The final five-session native result is 1.919× over raster and 2.216× over interval, with descriptive block intervals. |
+| 3. Generality | Pass, scoped | Original 73-series panel plus 26 separately selected real recordings, public detector APIs, two environments and complete native workflows. Dependence, only two MSL recordings, fixed-runner follow-up and negative selection findings are disclosed. |
+| 4. Reproduction | Pass | Fresh raw-data-to-profile-to-table Linux interval-control execution, source/input identities, independently authored reconstruction, documented one-command drivers, and successful exact-manuscript-commit CI. Archived-only audits distinguish unavailable raw bytes. |
+| 5. Independent review | Pass on submitted v3 | A/C/D independently assessed the complete strengthened paper and acknowledged the exact final PDF SHA-256 `48e9c8f5f78b6b3168b67b5b1040cd06da43e74304d0f5e13184c41d0f70f75b`, using historical PVLDB fields and disclosed public-review calibration. All recommend Accept, internal 7/10; no must-fix scientific blocker. Final panel excludes B, who implemented the process orchestrator. |
+| 6. Venue | Pass; submitted | PVLDB Volume 20 Regular Research, Foundations and Algorithms fit. CMT actual track is Research → November 2026, paper 2346. Core contribution is an analytical operator, formal state and measured data-processing cost, with direct VUS database antecedents. |
 
 The target is the **November 2026 cycle**: abstract 26 October 09:00 KST,
 full paper 2 November 10:00 KST. Official [dates](https://www.vldb.org/2027/important-dates.html),
 [scope and submission rules](https://www.vldb.org/2027/submission-guidelines.html),
 and [algorithm-paper expectations](https://www.vldb.org/2027/call-for-research-track.html)
-were checked on 24 October 2026. CMT registration, submission and editorial
-decisions require their own receipts; this evidence decision is not one.
+were checked on 24 October 2026. The [submission receipt](PVLDB_SUBMISSION_RECEIPT_20261024.md)
+verifies the actual CMT event and exact uploaded file. The Author Console's
+editorial-status field reads `Not Yet Available`. Initial notifications for
+this cycle are usually available on 15 December 2026 under the official process.
 
 ## Reproduction and review entry points
 
@@ -180,11 +185,19 @@ decisions require their own receipts; this evidence decision is not one.
 - [Exploratory direct raster reconstruction](../artifacts/pvldb-research-20261024/strengthening/posthoc-direct-raster-incremental-v1/posthoc-direct-raster-incremental.md).
 - [Public review calibration and its provenance limits](reviews/20261024/public-calibration.md).
 - [Historical actual PVLDB form and revision comparison](reviews/20261024/public-pvldb-form-calibration.md).
-- [Independent final review A](reviews/20261024/strengthened-independent-a-final.md), [B](reviews/20261024/strengthened-independent-b-final.md), [C](reviews/20261024/strengthened-independent-c-final.md).
+- Independent full scientific reviews: [A](reviews/20261024/strengthened-independent-a-final-v2.md), [C](reviews/20261024/strengthened-independent-c-final-v2.md), [D](reviews/20261024/strengthened-independent-d-final-v2.md).
+- Exact submitted-v3 acknowledgments: [A](reviews/20261024/strengthened-independent-a-final-v3.md), [C](reviews/20261024/strengthened-independent-c-final-v3.md), [D](reviews/20261024/strengthened-independent-d-final-v3.md).
+- [Final review/source/CI readiness bindings](../artifacts/pvldb-research-20261024/strengthening/final-v3-readiness.json).
+- [Finite strengthening attempts and stopping decision](PVLDB_STRENGTHENING_STOPPING_DECISION_20261024.md).
 - [Fourteen recent-paper comparison inventory](../artifacts/pvldb-research-20261024/strengthening/literature-strengthened-14-v1.json), separately preserving the earlier twelve-entry inventory.
 - [Reproduction failure and repair history](reviews/20261024/strengthening-reproduction-provenance.md).
 
-Both original fresh Linux executions and the three v1 manuscript reviews are
-complete. The final session-block follow-up is complete. It tests process variability
-on one runner; it is not a new dataset sample, a new-host study, or a search for
-a higher review score through repeated favorable timings.
+Both original fresh Linux executions, the final session-block follow-up,
+three exact-version scientific reviews, final-file verification and authorized
+submission are complete. The follow-up tests process variability on one
+runner. It adds no new dataset sample or new-host inference. The largest
+remaining limitation is the modest specialized novelty and benefit concentrated
+in exhaustive evaluation; ordinary additional timing repetitions would not
+resolve it. The research-investment judgment remains 6/10 under the user's
+portfolio lens; the reviewers' 7/10 quality ratings use their separately
+disclosed scales.

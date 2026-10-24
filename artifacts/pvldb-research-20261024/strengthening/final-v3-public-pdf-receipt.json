@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-24T12:31:44.590265+00:00",
+  "status": "PUBLIC_IMMUTABLE_PDF_BYTES_VERIFIED",
+  "manuscript_commit": "c7eff9be3340c8fbab7afaabc54dc284ac4ac1cc",
+  "download_url": "https://raw.githubusercontent.com/mandu5/sparse-vus/c7eff9be3340c8fbab7afaabc54dc284ac4ac1cc/paper/exact_metrics_strengthened20261024.pdf",
+  "pdf_bytes": 201275,
+  "pdf_sha256": "48e9c8f5f78b6b3168b67b5b1040cd06da43e74304d0f5e13184c41d0f70f75b",
+  "matches_local_and_review_snapshot": true,
+  "cmt_submission_status": "NOT_ASSERTED_BY_THIS_RECEIPT"
+}

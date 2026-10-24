@@ -1,8 +1,10 @@
 # Finite strengthening decision: scientific additions and stopping rule
 
-This record concerns the exact time-series evaluator prepared as a Regular
-Research / Foundations and Algorithms candidate, not TCPR or Certified
-Sampling. The final submission and review identities are recorded separately.
+This record concerns the exact time-series evaluator submitted as PVLDB
+Regular Research, with Foundations and Algorithms fit, paper 2346 on 24 October 2026.
+The [submission and final-file receipt](PVLDB_SUBMISSION_RECEIPT_20261024.md)
+and [scientific review identities](STRENGTHENED_RESEARCH_RESULT_20261024.md)
+are recorded separately. TCPR and Certified Sampling remain separate projects.
 
 ## What was actually challenged
 
@@ -42,3 +44,12 @@ fixed-runner design. All 210 saved result CSVs, including warm-ups, agree within
 values and all score/query identity records. The first fresh v2 generation
 happened to match both prior Linux score realizations; v1 remains a failed
 preparation. No further repetition is needed to establish this scoped result.
+
+The finite stopping rule has been completed: all three final reviewers A/C/D
+recommend Accept, internal 7/10, for the same submitted v3 PDF. A final
+double-rounding display error was corrected and independently rechecked;
+no scientific result changed. The native/default utility and specialized
+novelty limitations remain. Raising the scientific score materially would
+require a new useful operating regime or broader conceptual contribution,
+not another favorable repetition of this fixed workload. The present result
+has therefore been submitted, with all prior outcomes and limitations retained.

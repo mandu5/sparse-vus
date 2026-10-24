@@ -1,0 +1,647 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-10-24T12:29:50Z",
+  "databaseId": 40094158300,
+  "headSha": "c7eff9be3340c8fbab7afaabc54dc284ac4ac1cc",
+  "jobs": [
+    {
+      "completedAt": "2026-10-24T12:30:13Z",
+      "conclusion": "success",
+      "databaseId": 120872820025,
+      "name": "sampling-report-portability",
+      "startedAt": "2026-10-24T12:29:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-24T12:29:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-24T12:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:00Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-24T12:29:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:01Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-24T12:30:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:05Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install numpy",
+          "number": 4,
+          "startedAt": "2026-10-24T12:30:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:07Z",
+          "conclusion": "success",
+          "name": "Capture native numerical dispatch and exact differences",
+          "number": 5,
+          "startedAt": "2026-10-24T12:30:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:10Z",
+          "conclusion": "success",
+          "name": "Require exact report bytes with fixed numerical dispatch",
+          "number": 6,
+          "startedAt": "2026-10-24T12:30:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:11Z",
+          "conclusion": "success",
+          "name": "Preserve exact differences even if replay fails",
+          "number": 7,
+          "startedAt": "2026-10-24T12:30:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 13,
+          "startedAt": "2026-10-24T12:30:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "startedAt": "2026-10-24T12:30:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-24T12:30:11Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/40094158300/job/120872820025"
+    },
+    {
+      "completedAt": "2026-10-24T12:33:07Z",
+      "conclusion": "success",
+      "databaseId": 120872820211,
+      "name": "parity (3.11)",
+      "startedAt": "2026-10-24T12:29:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-24T12:29:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-24T12:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:00Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-24T12:29:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:05Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-24T12:30:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:30Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[accelerate,research]'",
+          "number": 4,
+          "startedAt": "2026-10-24T12:30:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:31Z",
+          "conclusion": "success",
+          "name": "Run python experiments/fetch_reference.py",
+          "number": 5,
+          "startedAt": "2026-10-24T12:30:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:31Z",
+          "conclusion": "success",
+          "name": "Run python experiments/dtaianomaly_adapter.py --fetch",
+          "number": 6,
+          "startedAt": "2026-10-24T12:30:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:31Z",
+          "conclusion": "success",
+          "name": "Run python experiments/fast_vus_adapter.py --fetch",
+          "number": 7,
+          "startedAt": "2026-10-24T12:30:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:32Z",
+          "conclusion": "success",
+          "name": "Run python experiments/benchopt_vus_adapter.py --fetch",
+          "number": 8,
+          "startedAt": "2026-10-24T12:30:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "success",
+          "name": "Run python -m pytest -q",
+          "number": 9,
+          "startedAt": "2026-10-24T12:30:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Verify the certified-sampling evidence without raw input caches",
+          "number": 10,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Upload the certified-sampling audit",
+          "number": 11,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Verify the anonymous supplement after clean extraction",
+          "number": 12,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Upload the anonymous supplement audit",
+          "number": 13,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Reconstruct frozen active-prefix evidence without input caches",
+          "number": 14,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Upload reconstructed active-prefix evidence",
+          "number": 15,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Verify the real v2 report against its preserved source snapshot",
+          "number": 16,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Upload the verified v2 report",
+          "number": 17,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Verify the completed Linux v3 holdout report",
+          "number": 18,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Upload the verified Linux v3 holdout report",
+          "number": 19,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Verify the completed Mac v3 holdout report",
+          "number": 20,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "skipped",
+          "name": "Upload the verified Mac v3 holdout report",
+          "number": 21,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 41,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 42,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 43,
+          "startedAt": "2026-10-24T12:33:05Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/40094158300/job/120872820211"
+    },
+    {
+      "completedAt": "2026-10-24T12:30:33Z",
+      "conclusion": "success",
+      "databaseId": 120872820241,
+      "name": "installed-wheel",
+      "startedAt": "2026-10-24T12:29:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-24T12:29:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-24T12:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:01Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-24T12:29:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:02Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-24T12:30:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:04Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install build",
+          "number": 4,
+          "startedAt": "2026-10-24T12:30:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:07Z",
+          "conclusion": "success",
+          "name": "Run python -m build",
+          "number": 5,
+          "startedAt": "2026-10-24T12:30:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:09Z",
+          "conclusion": "success",
+          "name": "Run python -m venv /tmp/sparse-vus-wheel-check",
+          "number": 6,
+          "startedAt": "2026-10-24T12:30:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:11Z",
+          "conclusion": "success",
+          "name": "Run /tmp/sparse-vus-wheel-check/bin/python -m pip install dist/*.whl",
+          "number": 7,
+          "startedAt": "2026-10-24T12:30:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:12Z",
+          "conclusion": "success",
+          "name": "Verify the installed base package without optional Numba",
+          "number": 8,
+          "startedAt": "2026-10-24T12:30:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:20Z",
+          "conclusion": "success",
+          "name": "Install the accelerated wheel in a separate environment",
+          "number": 9,
+          "startedAt": "2026-10-24T12:30:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:25Z",
+          "conclusion": "success",
+          "name": "Verify installed radix and active-prefix APIs and source-byte identity",
+          "number": 10,
+          "startedAt": "2026-10-24T12:30:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:27Z",
+          "conclusion": "success",
+          "name": "Verify installed complete-tie APIs and source-byte identity",
+          "number": 11,
+          "startedAt": "2026-10-24T12:30:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:28Z",
+          "conclusion": "success",
+          "name": "Verify installed sampling and integer-certificate APIs",
+          "number": 12,
+          "startedAt": "2026-10-24T12:30:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:30Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 13,
+          "startedAt": "2026-10-24T12:30:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 25,
+          "startedAt": "2026-10-24T12:30:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 26,
+          "startedAt": "2026-10-24T12:30:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:30Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 27,
+          "startedAt": "2026-10-24T12:30:30Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/40094158300/job/120872820241"
+    },
+    {
+      "completedAt": "2026-10-24T12:33:58Z",
+      "conclusion": "success",
+      "databaseId": 120872820308,
+      "name": "parity (3.12)",
+      "startedAt": "2026-10-24T12:29:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-24T12:29:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-24T12:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:00Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "startedAt": "2026-10-24T12:29:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:03Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 3,
+          "startedAt": "2026-10-24T12:30:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:34Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install '.[accelerate,research]'",
+          "number": 4,
+          "startedAt": "2026-10-24T12:30:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:35Z",
+          "conclusion": "success",
+          "name": "Run python experiments/fetch_reference.py",
+          "number": 5,
+          "startedAt": "2026-10-24T12:30:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:35Z",
+          "conclusion": "success",
+          "name": "Run python experiments/dtaianomaly_adapter.py --fetch",
+          "number": 6,
+          "startedAt": "2026-10-24T12:30:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:35Z",
+          "conclusion": "success",
+          "name": "Run python experiments/fast_vus_adapter.py --fetch",
+          "number": 7,
+          "startedAt": "2026-10-24T12:30:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:30:36Z",
+          "conclusion": "success",
+          "name": "Run python experiments/benchopt_vus_adapter.py --fetch",
+          "number": 8,
+          "startedAt": "2026-10-24T12:30:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:30Z",
+          "conclusion": "success",
+          "name": "Run python -m pytest -q",
+          "number": 9,
+          "startedAt": "2026-10-24T12:30:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:35Z",
+          "conclusion": "success",
+          "name": "Verify the certified-sampling evidence without raw input caches",
+          "number": 10,
+          "startedAt": "2026-10-24T12:33:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:36Z",
+          "conclusion": "success",
+          "name": "Upload the certified-sampling audit",
+          "number": 11,
+          "startedAt": "2026-10-24T12:33:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:38Z",
+          "conclusion": "success",
+          "name": "Verify the anonymous supplement after clean extraction",
+          "number": 12,
+          "startedAt": "2026-10-24T12:33:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:39Z",
+          "conclusion": "success",
+          "name": "Upload the anonymous supplement audit",
+          "number": 13,
+          "startedAt": "2026-10-24T12:33:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:50Z",
+          "conclusion": "success",
+          "name": "Reconstruct frozen active-prefix evidence without input caches",
+          "number": 14,
+          "startedAt": "2026-10-24T12:33:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:51Z",
+          "conclusion": "success",
+          "name": "Upload reconstructed active-prefix evidence",
+          "number": 15,
+          "startedAt": "2026-10-24T12:33:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:52Z",
+          "conclusion": "success",
+          "name": "Verify the real v2 report against its preserved source snapshot",
+          "number": 16,
+          "startedAt": "2026-10-24T12:33:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:53Z",
+          "conclusion": "success",
+          "name": "Upload the verified v2 report",
+          "number": 17,
+          "startedAt": "2026-10-24T12:33:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:53Z",
+          "conclusion": "success",
+          "name": "Verify the completed Linux v3 holdout report",
+          "number": 18,
+          "startedAt": "2026-10-24T12:33:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:54Z",
+          "conclusion": "success",
+          "name": "Upload the verified Linux v3 holdout report",
+          "number": 19,
+          "startedAt": "2026-10-24T12:33:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:55Z",
+          "conclusion": "success",
+          "name": "Verify the completed Mac v3 holdout report",
+          "number": 20,
+          "startedAt": "2026-10-24T12:33:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:56Z",
+          "conclusion": "success",
+          "name": "Upload the verified Mac v3 holdout report",
+          "number": 21,
+          "startedAt": "2026-10-24T12:33:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "number": 41,
+          "startedAt": "2026-10-24T12:33:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:57Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 42,
+          "startedAt": "2026-10-24T12:33:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-24T12:33:57Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 43,
+          "startedAt": "2026-10-24T12:33:57Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/mandu5/sparse-vus/actions/runs/40094158300/job/120872820308"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-10-24T12:33:58Z",
+  "url": "https://github.com/mandu5/sparse-vus/actions/runs/40094158300"
+}

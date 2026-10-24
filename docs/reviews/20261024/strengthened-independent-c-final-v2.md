@@ -1,0 +1,85 @@
+# Independent final scientific review C — immutable v2
+
+**Recommendation: Accept. INTERNAL quality rating: 7/10, unchanged from v1.** The paper offers a publishable, narrowly scoped exact evaluation algorithm, with credible evidence of benefit beyond conventional compiled controls. The new session study strengthens repeatability evidence but does not increase conceptual novelty or establish broad application impact. This remains a qualified acceptance.
+
+This is an **AI-simulated independent review**, dated 24 October 2026, not external peer review, an editorial decision, an official PVLDB rating, or an acceptance probability. The internal scale is: 1–3, fundamentally unsound; 4–5, below the research bar; 6, credible but requiring a material scientific revision; 7, publishable scoped contribution with substantive limitations; 8, strong contribution; 9–10, exceptional or field-defining. The original [v1 review](strengthened-independent-c-final.md) is preserved unchanged. This addendum gives my final recommendation for the exact v2 below.
+
+## Immutable identity and independence
+
+- Review commit: `8036526f9bea0d4a03617477b290df3302e80bb2`.
+- Evidence commit: `448ad1b714a5daa13feeba617b10e02efef674fe`; independently verified to exist and be an ancestor of the review commit.
+- [Reviewed PDF](../../../paper/exact_metrics_strengthened20261024.pdf): SHA-256 `68b0576bf38f3defba59427bebf563576942277daebd8043a7053f82dcf400e5`, **201,275 bytes**, 13 pages. I hashed the commit blob and local PDF and verified byte equality.
+- I checked all nine source-file hashes and three style-file hashes in `manuscript-review-snapshot-v2.json` against both the commit blobs and local files. The style files are unchanged from v1. The two method/proof files are unchanged. I read all manuscript changes, checked the final rendered ending, and confirmed that nonreference content ends on page 12; page 13 contains references only.
+- Finite-study source: `d8494c25a8c6fe44616a34bdded375dc3993d048`. I independently checked that [run 40091476529](https://github.com/mandu5/sparse-vus/actions/runs/40091476529) completed successfully at that commit. The preserved ZIP has SHA-256 `8d1fd2e2715c8eb4b28c5f1861143766498686aa072a3c72b9d539ca57b6b595`; all 697 members match the extracted archive.
+- The v1 review remains SHA-256 `01c7f7af00257b0a5101088c83c4fb8b9ac2066fa9c6e8490ecb28154a401aee`. I consulted that review to identify the delta. I did not read other simulated scientific reviewers' reports or scores, the working decision document, or a requested target score. I reviewed the new protocol/code before measurement but did not implement it. I performed no detector fits, metric evaluations or timed studies.
+
+The v1 full-paper/proof/source review and its independent reconstruction of the original four native executions and weighted studies remain part of this assessment. The additional checks below were performed directly from the new records, without importing the experiment producer or its auditor.
+
+## Independently verified new evidence
+
+I reconstructed all **180 measured workflows**, checked the five distinct child-process identities and recorded singleton CPU-0 affinity, and verified the hashes and row identities of **210 result CSVs**, including 30 full untimed warm-ups. The CSVs contain 32,760 scalar cells. Maximum same-contract discrepancy across methods, orders, warm-ups and sessions is `3.3306690738754696e-16`; maximum CSV-versus-saved-JSON discrepancy is `1.1102230246251565e-16`.
+
+I recomputed the six paired log ratios within each session, equally averaged the five session means, and independently enumerated all 3,125 empirical bootstrap sequences. The four reconstructed results agree with Table 8:
+
+| Native contract | Control / bucket | Geometric ratio | Descriptive four-contrast-adjusted interval |
+|---|---|---:|---:|
+| Nominal 50 | Raster | 1.016773 | [1.011236, 1.024668] |
+| Nominal 50 | Interval | 1.022603 | [1.017351, 1.030162] |
+| All observed | Raster | 1.919025 | [1.905810, 1.932157] |
+| All observed | Interval | 2.216016 | [2.200817, 2.227253] |
+
+Every displayed session estimate also matches. The exhaustive raster ratios range from 1.904621 to 1.933165. The protocol SHA-256 is `fe5fea9da3262e72f8b79f927db67c3b66cd0d5c1377693417d9c9e92c15536a`. Its chronology and receipts bind the workload before measurement; 11 orchestration-source and 11 metric-source bindings match the committed source.
+
+Against **both** earlier Linux archives, I compared all 52 score-array hashes, native-score hashes and distinct counts; there are no differences. The complete native input-file map, ordered row identities and realized query-plan dictionaries are identical. Raw-member, typed-observation and label identity fields also agree. The native query totals are 2,776 and 71,750. This verifies consistency of archived identities and saved outputs; I did not independently reread the unredistributed remote raw/score bytes or repeat their acquisition.
+
+The failed predecessor is correctly retained. It completed generation but stopped during preparation before any metric/warm-up/timing, after 25 COPOD profiles failed prior-score identity and one distinct count changed. The separately frozen v2 required exactly one generation attempt and allowed prior score differences diagnostically. Its first realization happened to match the priors. That observed match does not retroactively turn v2 into successful execution of the failed v1 protocol, and the manuscript does not make that claim.
+
+## Synopsis, originality and scientific importance
+
+The paper accelerates two existing metric operators over stored detector profiles. Its stronger contribution is the exact maintenance of weighted Tatbul precision/recall trajectories as predicted components appear and merge: recall depends on overlap and fragmentation inside true intervals, while precision depends on predicted-component intersections and normalization that moves with the component endpoints. The VUS contribution preserves compressed integrals using complete ties and a necessary ROC predecessor correction. Neither contribution defines a new metric.
+
+The added [Naegel–Passat primary paper](https://www.ipol.im/pub/art/2014/71/) is consequential prior art, not a cosmetic citation. I downloaded and read its full primary PDF, including §§1.1.3 and 3.2; its SHA-256 is `17e2dfa873c0c3704cf22b4c156d4a4e2700daafe270bb78f56b3dc196f531e3`. It explicitly maintains component attributes relative to a fixed binary target during tree construction. Thus **fixed-target conditioning itself carries no novelty credit**. Any broader implication of my earlier discussion should be read with this correction. Its false-positive/false-negative segmentation objective does not, however, supply the joint Tatbul fragmentation and moving-weight normalization identity developed here.
+
+[Tatbul 2018](https://papers.neurips.cc/paper_files/paper/2018/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf) already supplies positional/cardinality weighting and ordered, closed-form overlap evaluation. Component trees and their attributes, including Naegel–Passat, provide the threshold/merge framework. [Ranefall–Wählby 2016](https://onlinelibrary.wiley.com/doi/10.1002/cyto.a.22806) additionally provides threshold-wise object precision/recall under a different size-defined target. The remaining originality is the particular coupled metric state, its update identities, and the declared finite-feature extension. It is a specialized algorithmic contribution using mature tools. I judge that contribution publishably novel at a modest level, not a new general component-tree framework. The fourteen recent-paper comparisons give context; they do not prove firstness, and the older mechanistic antecedents are more decisive.
+
+The evidence of importance remains concentrated in exhaustive queries. Same-compiler raster and closed-form interval controls address the possibility that the result is merely compilation or naive overlap code. The original four complete-consumer executions give 1.93–2.76-fold exhaustive raster gains; the finite follow-up independently retains about 1.92-fold improvement while including native CSV reads, all three requested metrics and result writing. That is sufficient practical support for a focused evaluation operator. The support/cumsum precedents in VUS, Klein and Benchopt, the weak nearest-geometry advantage, and the original 1.031-fold nine-metric consumer result prevent the VUS component alone from carrying a strong regular-paper case.
+
+The new study does **not** show routine detector-selection gains, adoption, broad cross-host reproducibility, or practical necessity for the full weighted family. The actual native consumer uses flat weights and cardinality one. At its nominal default the new raster gain is only 1.017. On the separate panel, selection regret remains small. These limits are now explicit next to the headline and remain central to my significance judgment.
+
+## Three strengths
+
+1. **A correct-looking, precisely scoped computational identity.** The joint recall/precision state handles fragmentation and moving normalization rather than merely maintaining connected components. The finite-feature assumptions, cardinality cost and output-model restriction on comparison optimality are stated. I found no new contradiction in the unchanged proofs.
+2. **Useful improvements survive conventional compiled controls and a native consumer.** The faster control is visible in the main weighted table, and all four historical native executions remain visible beside the finite follow-up. The new complete-workflow gain is substantial for exhaustive evaluation and is independently reconstructible from raw durations.
+3. **The revised evidence distinguishes successful claims from failed attempts.** The failed strict-score preparation, prospective scope change, actual first-realization identity, every session, unfavorable low-query behavior and MSL loss remain disclosed. This supports a bounded scientific conclusion rather than a selected best-run headline.
+
+## Three weaknesses
+
+1. **Moderate originality is still the largest weakness.** Generic tree construction, target-conditioned attributes, prefix features, sorting/bucketing and subtract-old/add-new aggregation are established. The research value rests on the exact specialized interaction, which an expert could reasonably regard as too incremental for a regular Foundations and Algorithms paper.
+2. **Application importance is uneven.** The native experiment demonstrates the flat/cardinality-one case, default queries benefit little, and the separate panel does not show a meaningful detector-selection improvement. A roughly twofold exhaustive-consumer gain supports a useful operator; it does not support broad end-user or full-pipeline acceleration claims.
+3. **Generality and uncertainty remain limited.** MSL has two recordings; both new detectors come from one public source family, and the original panel has recording/label reuse. Five fresh processes on one shared runner are not five independent hosts or workloads. The unexplained earlier Linux difference and failed score regeneration remain real limitations despite the successful v2 realization.
+
+## Correctness, experiments and reproducibility
+
+The mathematical and kernel-source claims did not change in this revision. I retain the earlier assessment that the stated exact-arithmetic trajectory theorem and query-associated sorting reduction are sound within their declared assumptions. The lower bound is not for scalar maxima or fixed-width radix evaluation. Binary64 parity is empirical, not a universal rounding certificate. New compiled-to-compiled scalar agreement adds no completed public-reference coverage for previously censored profiles.
+
+The five-session estimator is implemented and reported consistently. Equal weighting of session-level log means avoids treating all 30 paired orders as independent session replicates. Exhaustively enumerating the empirical bootstrap removes Monte Carlo sampling error, but **does not give guaranteed confidence coverage with five potentially correlated sessions**. The manuscript appropriately calls the intervals descriptive, makes no new-host inference and retains the complete range of session estimates. Affinity constrains permitted CPUs; it does not reserve an exclusive physical core or isolate background load.
+
+This is a useful finite check of fixed-input process repeatability, not an explanation of why earlier Linux estimates were 1.932 and 2.756. The first failed attempt exposed score-reproduction differences before any timing. The v2 amendment is transparent and not selected using a favorable timing result, but it remains a follow-up designed after earlier research observations rather than preregistration of the entire project.
+
+Reproduction instructions now distinguish primary prospective outputs, additional saved-record raster analysis, the historical studies and the separate v2 driver. The artifact provides enough saved evidence for the reconstruction I performed. It still requires fresh acquisition of unredistributed raw/score data for a full replay; I have not independently executed that replay. Neither hash consistency nor the quantity of receipts is credited as a substitute for novelty or importance.
+
+## Presentation, venue fit and calibration
+
+The main presentation requests from v1 are addressed: Table 6 displays both controls and labels the raster intervals as post hoc; Table 7 preserves every original/control execution; the native headline declares flat/cardinality-one semantics; the study/output map separates unlike query contracts; and the recent-paper inventory is no longer conflated with the historical twelve-entry file. The paper remains dense, but the conclusion and limitations survive the final shortening. The rendered tables checked in the delta are readable, and the final 12-page nonreference limit is respected.
+
+The target is **PVLDB Volume 20, Regular Research / Foundations and Algorithms, November 2026 cycle**. The [official call](https://www.vldb.org/2027/call-for-research-track.html) accommodates formal algorithms with prototype evaluation. The paper meets the [current scope criteria](https://www.vldb.org/2027/submission-guidelines.html) in my judgment through repeated analytics over stored profiles, substantive engagement with VUS/database literature, and a native read/compute/write consumer. This is a specialized data-management operator, not a general database system. The official cycle requires the abstract by October 25 and the full paper by November 1 at 5 p.m. Pacific; this review is not a submission receipt.
+
+Calibration uses the fields of the publicly available historical [PVLDB initial](https://dbis.cs.tu-dortmund.de/publikationen/2020/data-parallel-query-processing-on-non-uniform-data/vldb-2020-reviews/) and [revision reviews](https://dbis.cs.tu-dortmund.de/publikationen/2020/data-parallel-query-processing-on-non-uniform-data/vldb-2020-revision-reviews/), already directly read for v1, and the supplied adjacent accepted/rejected OpenReview cases. They calibrate questions about conventional baselines, whole-consumer benefit and claim scope. Their outcomes do not predict this paper's outcome. The OpenReview records have cached-mirror provenance limits; no current private 2027 CMT form or comparable official 1–10 scale has been retrieved.
+
+## Blockers, largest uncertainty and stopping judgment
+
+**No must-fix scientific, correctness, reporting or required-experiment blocker remains for this scoped manuscript.** I recommend acceptance rather than another scientific revision. This is not an endorsement of broader claims about component trees, label conditioning, default workloads, detector selection or deployment populations.
+
+The largest remaining uncertainty is the regular-paper novelty threshold for the coupled Tatbul state. I judge its exact construction, useful declared weight family and demonstrated advantage over meaningful compiled controls sufficient, narrowly. A reviewer who places more weight on the standard attributed-component-tree toolkit could reasonably reject on significance/originality. More carefully bounded evidence has not made the conceptual step larger, which is why the internal rating stays **7/10**.
+
+Another finite repetition of these timings is unlikely to materially change my recommendation. Repeating until the larger historical Linux ratio returns, or until all low-cardinality losses disappear, would be outcome-chasing. A valid counterexample, a closest prior algorithm already containing the same coupled identities, or a stronger equal-output conventional algorithm that removes the demonstrated benefit could change the verdict. Independent demanding-consumer use could strengthen importance, but I do not make it a new requirement. The present finite follow-up has answered its limited question; no additional timed experiment is requested.

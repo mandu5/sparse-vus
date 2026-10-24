@@ -62,7 +62,7 @@ protocols, not guessed in this planning document.
 - [x] Assemble revised paper with theory, result, negative findings and bounded scope, including all original public-reference Linux outcomes.
 - [x] Three independent calibrated reviews; preserve dissent without score bargaining. All three reviewed the same immutable v1 PDF and recommend Accept, internal 7/10, with scoped novelty/importance limitations.
 - [x] Render every PDF page, verify content limit, artifact/source identities and CI. The final review snapshot has 13 total pages with references starting on page 12; all non-reference content fits the 12-page limit.
-- [ ] Inspect logged-in CMT, complete factual submission fields and preserve actual abstract/full-paper receipts when submission requirements are satisfied.
+- [x] Inspect logged-in CMT, complete factual submission fields and preserve actual abstract/full-paper receipts when submission requirements are satisfied. Paper2346 was created 24 October 2026 at 21:35:16 KST; final PDF and all responses were read back, institutional conflicts and individual attestation verified after reload.
 
 ### Task5: Finite session-block robustness follow-up
 
@@ -70,7 +70,7 @@ protocols, not guessed in this planning document.
 - [x] Independently audit and freeze separate v2: same 26 recordings, exactly one fresh 52-profile generation attempt, score/query differences diagnostic, strict raw/label/layout identity, five processes sharing one newly frozen realization.
 - [x] Retain every block and trial; reconstruct output parity and resample the five process blocks, not the 180 individual workflows as independent sessions.
 - [x] Independently audit new code/protocol and completed result; integrate the finite result without replacing the four prior executions or their uncertainty.
-- [ ] Freeze the final PDF, obtain all three reviewers' delta acknowledgments, and submit the verified final file in the prepared CMT form.
+- [x] Freeze the final PDF, obtain all three reviewers' delta acknowledgments, and submit the verified final file in the prepared CMT form. Final v3 commit c7eff9b, A/C/D Accept internal 7/10, source-bound CI 40094158300 success; submitted file 5432 matches the public/local/reviewed SHA256 after re-download.
 
 ## Execution ledger
 
@@ -157,3 +157,6 @@ both conventional controls and all four native executions together, state the
 native weighted-family scope, and map manuscript tables to existing drivers.
 
 11:34 UTC: the single frozen strict-score affinity v1 stopped during preparation, after all 52 detector fits and the independent 26-recording input audit but before every metric/warm-up/timing. Exactly 25 COPOD score identities differed against each prior Linux run; WSD id6 COPOD distinct count was 1686 rather than 1687. Preserve source/tag/run40090142426 and its zero measured blocks. Independent readers approved a separate prospective v2 question: same recordings with one newly generated frozen score realization, strict raw/label/template identity, full prior score/query diagnostics, unchanged five-block schedule and analysis. No timing outcomes informed this change. Root implementation awaits independent premeasurement code audit before any v2 generation or metric execution.
+
+
+12:46 UTC closeout: the single finite v2 study, three independent final scientific reviews, the v3 one-cell display correction, final CI, public download verification and actual CMT submission are complete. Paper 2346 was created at 12:35:16 UTC. Individual conflicts and attestation persisted after reload; all saved submission text fields match the final packet. The post-submission PDF download remains exactly SHA256 48e9c8f5f78b6b3168b67b5b1040cd06da43e74304d0f5e13184c41d0f70f75b. The Author Console lists one submission and editorial status Not Yet Available. Private portal receipts and conflict details are git-ignored; the redacted public receipt records the completed submission without an external acceptance claim.

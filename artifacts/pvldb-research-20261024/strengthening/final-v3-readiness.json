@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-24T12:35:14.977163+00:00",
+  "status": "READY_FOR_AUTHORIZED_SUBMISSION",
+  "manuscript_commit": "c7eff9be3340c8fbab7afaabc54dc284ac4ac1cc",
+  "pdf_sha256": "48e9c8f5f78b6b3168b67b5b1040cd06da43e74304d0f5e13184c41d0f70f75b",
+  "pdf_bytes": 201275,
+  "evidence_commit": "448ad1b714a5daa13feeba617b10e02efef674fe",
+  "six_research_gates": "PASS_WITH_EXPLICIT_SCOPED_CLAIMS",
+  "reviews": [
+    {
+      "reviewer": "A",
+      "scientific_review": "docs/reviews/20261024/strengthened-independent-a-final-v2.md",
+      "scientific_review_sha256": "3446c427e16c3d8cdc72cf51766324c2aea30bc87c4ab0cb5d42d0eb3d965bd8",
+      "final_version_acknowledgment": "docs/reviews/20261024/strengthened-independent-a-final-v3.md",
+      "final_version_acknowledgment_sha256": "87db85df58a9ea0c66b3a8594126823a072764168cd27e5c44d4d1ca331ad025",
+      "recommendation": "Accept",
+      "internal_quality_score": 7,
+      "official_venue_rating": false
+    },
+    {
+      "reviewer": "C",
+      "scientific_review": "docs/reviews/20261024/strengthened-independent-c-final-v2.md",
+      "scientific_review_sha256": "74dd554bf8aa857ed7dcc76ad90187eacccec17f4f2e6d660dd1156ef379ab77",
+      "final_version_acknowledgment": "docs/reviews/20261024/strengthened-independent-c-final-v3.md",
+      "final_version_acknowledgment_sha256": "cd4af9d457d13cec43ac07a2f237d53583e745c9b77436767cfe53d9440bedbd",
+      "recommendation": "Accept",
+      "internal_quality_score": 7,
+      "official_venue_rating": false
+    },
+    {
+      "reviewer": "D",
+      "scientific_review": "docs/reviews/20261024/strengthened-independent-d-final-v2.md",
+      "scientific_review_sha256": "595bdccbf9119d58f03a922c903846f91cb121e395210178a196e933d3f4d687",
+      "final_version_acknowledgment": "docs/reviews/20261024/strengthened-independent-d-final-v3.md",
+      "final_version_acknowledgment_sha256": "327b25a39854713b5a4ce5335f467537a8ad66f7663f3a491e862c42613dab1f",
+      "recommendation": "Accept",
+      "internal_quality_score": 7,
+      "official_venue_rating": false
+    }
+  ],
+  "independence_limit": "Separate AI-simulated reviewing tasks and saved-data reconstructions, not independent human peer review or a venue decision. Reviewer B implemented the process orchestrator and is not in the final A/C/D panel.",
+  "numerical_ci_run": 40094158300,
+  "numerical_ci_conclusion": "success",
+  "public_and_portal_download_hashes_match": true,
+  "portal_form_fields_verified": true,
+  "submission_receipt": "RECORDED_SEPARATELY_AFTER_SUBMIT"
+}

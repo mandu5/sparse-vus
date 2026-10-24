@@ -1,5 +1,10 @@
 # Sparse VUS
 
+**Submitted to PVLDB Volume 20, Regular Research, November 2026 cycle — paper 2346.**
+The [submission receipt](docs/PVLDB_SUBMISSION_RECEIPT_20261024.md) binds the
+actual CMT record to the [final manuscript](paper/exact_metrics_strengthened20261024.pdf).
+[Scientific decision, six evidence gates and independent simulated reviews](docs/STRENGTHENED_RESEARCH_RESULT_20261024.md).
+
 ## Weighted trajectories and native consumers (24 October 2026 follow-up)
 
 [Strengthened manuscript](paper/exact_metrics_strengthened20261024.pdf) adds a
@@ -724,8 +729,10 @@ The supplied PDF is a working research manuscript. Source, executable protocols,
 raw measurements, and separately authored in-session validation are included.
 The [official-format counterpart](paper/vldb.pdf) uses the same scientific
 sources and can be rebuilt with `python experiments/build_vldb.py --build`.
-Both manuscripts are unsubmitted; the [submission packet](docs/submission_packet.md)
-records the author metadata, completed checks, and remaining venue decisions.
+These two earlier manuscripts remain archived drafts; the submitted unified
+manuscript and actual receipt are linked at the top. Their historical
+[submission packet](docs/submission_packet.md) retains the earlier checks and
+venue decisions.
 
 ## Reproduce the v0.2.0 follow-up
 
