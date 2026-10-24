@@ -1,0 +1,1801 @@
+{
+  "schema": "timeeval-affinity-five-blocks-v1",
+  "seed": 2026102405,
+  "blocks": [
+    {
+      "block": 0,
+      "trials": [
+        {
+          "trial": 0,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 1,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 2,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 3,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 4,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 5,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 6,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 7,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 8,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 9,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 10,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 11,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 12,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 13,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 14,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 15,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 16,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 17,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 18,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 19,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 20,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 21,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 22,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 23,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 24,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 25,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 26,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 27,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 28,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 29,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 30,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 31,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 32,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 33,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 34,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 35,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        }
+      ],
+      "warmup": [
+        {
+          "contract": "native_default50",
+          "method": "raster"
+        },
+        {
+          "contract": "native_default50",
+          "method": "interval"
+        },
+        {
+          "contract": "native_default50",
+          "method": "bucket"
+        },
+        {
+          "contract": "all_observed",
+          "method": "raster"
+        },
+        {
+          "contract": "all_observed",
+          "method": "interval"
+        },
+        {
+          "contract": "all_observed",
+          "method": "bucket"
+        }
+      ]
+    },
+    {
+      "block": 1,
+      "trials": [
+        {
+          "trial": 0,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 1,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 2,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 3,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 4,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 5,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 6,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 7,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 8,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 9,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 10,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 11,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 12,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 13,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 14,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 15,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 16,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 17,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 18,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 19,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 20,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 21,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 22,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 23,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 24,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 25,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 26,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 27,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 28,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 29,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 30,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 31,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 32,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 33,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 34,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 35,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        }
+      ],
+      "warmup": [
+        {
+          "contract": "native_default50",
+          "method": "raster"
+        },
+        {
+          "contract": "native_default50",
+          "method": "interval"
+        },
+        {
+          "contract": "native_default50",
+          "method": "bucket"
+        },
+        {
+          "contract": "all_observed",
+          "method": "raster"
+        },
+        {
+          "contract": "all_observed",
+          "method": "interval"
+        },
+        {
+          "contract": "all_observed",
+          "method": "bucket"
+        }
+      ]
+    },
+    {
+      "block": 2,
+      "trials": [
+        {
+          "trial": 0,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 1,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 2,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 3,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 4,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 5,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 6,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 7,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 8,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 9,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 10,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 11,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 12,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 13,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 14,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 15,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 16,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 17,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 18,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 19,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 20,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 21,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 22,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 23,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 24,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 25,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 26,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 27,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 28,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 29,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 30,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 31,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 32,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 33,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 34,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 35,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        }
+      ],
+      "warmup": [
+        {
+          "contract": "native_default50",
+          "method": "raster"
+        },
+        {
+          "contract": "native_default50",
+          "method": "interval"
+        },
+        {
+          "contract": "native_default50",
+          "method": "bucket"
+        },
+        {
+          "contract": "all_observed",
+          "method": "raster"
+        },
+        {
+          "contract": "all_observed",
+          "method": "interval"
+        },
+        {
+          "contract": "all_observed",
+          "method": "bucket"
+        }
+      ]
+    },
+    {
+      "block": 3,
+      "trials": [
+        {
+          "trial": 0,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 1,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 2,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 3,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 4,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 5,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 6,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 7,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 8,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 9,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 10,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 11,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 12,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 13,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 14,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 15,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 16,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 17,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 18,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 19,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 20,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 21,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 22,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 23,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 24,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 25,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 26,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 27,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 28,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 29,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 30,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 31,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 32,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 33,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 34,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 35,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        }
+      ],
+      "warmup": [
+        {
+          "contract": "native_default50",
+          "method": "raster"
+        },
+        {
+          "contract": "native_default50",
+          "method": "interval"
+        },
+        {
+          "contract": "native_default50",
+          "method": "bucket"
+        },
+        {
+          "contract": "all_observed",
+          "method": "raster"
+        },
+        {
+          "contract": "all_observed",
+          "method": "interval"
+        },
+        {
+          "contract": "all_observed",
+          "method": "bucket"
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "trials": [
+        {
+          "trial": 0,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 1,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 2,
+          "contract": "all_observed",
+          "round": 0,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 3,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 4,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 5,
+          "contract": "native_default50",
+          "round": 0,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 6,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 7,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 8,
+          "contract": "all_observed",
+          "round": 1,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 9,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 10,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 11,
+          "contract": "native_default50",
+          "round": 1,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 12,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 13,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 14,
+          "contract": "native_default50",
+          "round": 2,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 15,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 16,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 17,
+          "contract": "all_observed",
+          "round": 2,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 18,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 19,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 20,
+          "contract": "all_observed",
+          "round": 3,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 21,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 22,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 23,
+          "contract": "native_default50",
+          "round": 3,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 24,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 0,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 25,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 1,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 26,
+          "contract": "all_observed",
+          "round": 4,
+          "position": 2,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 27,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 0,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 28,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 1,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 29,
+          "contract": "native_default50",
+          "round": 4,
+          "position": 2,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 30,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 31,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 32,
+          "contract": "all_observed",
+          "round": 5,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 33,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 0,
+          "method": "interval",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 34,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 1,
+          "method": "raster",
+          "batch": "combined",
+          "row_count": 52
+        },
+        {
+          "trial": 35,
+          "contract": "native_default50",
+          "round": 5,
+          "position": 2,
+          "method": "bucket",
+          "batch": "combined",
+          "row_count": 52
+        }
+      ],
+      "warmup": [
+        {
+          "contract": "native_default50",
+          "method": "raster"
+        },
+        {
+          "contract": "native_default50",
+          "method": "interval"
+        },
+        {
+          "contract": "native_default50",
+          "method": "bucket"
+        },
+        {
+          "contract": "all_observed",
+          "method": "raster"
+        },
+        {
+          "contract": "all_observed",
+          "method": "interval"
+        },
+        {
+          "contract": "all_observed",
+          "method": "bucket"
+        }
+      ]
+    }
+  ],
+  "planned_trials": 180,
+  "primary_pairs": [
+    [
+      "raster",
+      "bucket"
+    ],
+    [
+      "interval",
+      "bucket"
+    ]
+  ],
+  "affinity_policy": "lowest logical CPU ID in the supervisor permitted affinity set; same single permitted logical CPU for every child, pinned before numerical imports; check every live thread before measurement and at block completion; shared-runner background load remains uncontrolled",
+  "warmup": "unchanged tiny native JIT warmup, then exactly one untimed full combined workflow per method/contract in the listed order, in every fresh child",
+  "timing_boundary": "unchanged execute(timed=True): native constructor, CSV reads, all three metrics and results CSV write/close; fixed 600s call deadline",
+  "failure_policy": "retain every trial and outlier; no repeats, replacements, trimming or censor-based skips; attempt all five blocks even after a block error or malformed child trace; complete child exit and hash-bound completion receipt required for block eligibility; any INVALID_OUTPUT invalidates its whole block for every comparison; TIMEOUT alone suppresses only intervals for incomplete comparison pairs",
+  "output_parity": "all pairs of completed 52-row, three-scalar results within each contract and block, including the six fixed full warmups, at absolute tolerance 1e-10; independently reread saved CSVs and check the same contract across all five blocks, including warmups; cross-block disagreement prevents five-block inference",
+  "resource_limit": "one explicitly authorized tagged workflow execution, fixed 90-minute overall job cap; an infrastructure interruption retains available partial evidence and is never a complete five-block result",
+  "unit": "five newly started Python processes on ONE Linux runner and ONE frozen 52-profile input; not five hosts or independent workload populations",
+  "statistics": "six matched log ratios averaged within each block; five block means equally averaged; enumerate all 5^5 empirical block-bootstrap sequences; descriptive 95% tails Bonferroni-adjusted over four contract/control contrasts; no finite-sample coverage or host-population claim",
+  "public_reference_evaluated": false
+}

@@ -1,0 +1,1009 @@
+{
+  "matches": false,
+  "profiles": 52,
+  "references": 2,
+  "mismatches": [
+    {
+      "reference": 0,
+      "identity": [
+        "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "ac306ecf43add72161bcba1f9d259afc150cd0ccec0eabed278b2ab0853a5b5c",
+      "expected": "d1fac4ab5113e9dffc11cee5e95c493558b41eed1d9b6c9df479412f040bd401"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "d5b9777847c8d17d42a93833b966019242c87a697bc37541d134a6854f520a8e",
+      "expected": "98f66bb67e3df4ed69d94f0deccbb9f2d4b43c2cacca0a70ce4179e8f348cfbb"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "ad2c7157baaace5a96b8c26c7b85bd1d60204049dbacc7a13e69cb9d0e2e2ca5",
+      "expected": "dc8c96de6d5cd2a0b56c9a50a0ecfdca625613ea38ddd02166abfcc0fbd69106"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "1e93fcb67fee64f35b3338f47d63f6ff46bcb81a2ae5ccc0e3af7bdbda5d156a",
+      "expected": "96384f0fb67ec0095fcb3187d78d79061ca4252c4bf74a32d96f0fa6df3b8be8"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "9cf9de558f1a23c32c0993258b2a3b6289b9754b6165195272460d635d3a9897",
+      "expected": "f4320502b90eef7ce3696aeecb6f2b87daa69d618f160e97635d4ba2447799a9"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "c7e7c583fb7c3cc8682d172de99d6d049dc1b098f02e544065574bdff6c37552",
+      "expected": "57ec72c9c08b333644419dce4234e5a8335021e6219fd265899d873523e155ad"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "e9cfab910c1b69c43ad07d09dc93245accfbdb90d983b5984d6d4977983d803c",
+      "expected": "22be652e46f87784bc39d850edd8dcb8a71cb68176b911ef2cd0cc59d6c15288"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "68c059ef5283bc18158bc470598cc0209bd082c4753cdc017c07cbaf3eb87b5b",
+      "expected": "720f6ce697fa3eaa1f0f95005a6b1b6a23c6f213caae798d3b5fb1fd8935fd4e"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "bfe72c33ffa5b58334d4e7935991cc7578a3e9e22cd8ce88378e481da0fc4878",
+      "expected": "62f5fc03b186dc69044b902780d75b18f2601a1d601b1d76bb22e2dea27b48d3"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "280cc25005a15ce625effc6523bdf0e0ae7e3227e448fb284d03d8f2dcc2c2dd",
+      "expected": "4097daaf33b81f94785a29118aede4c167ef3af5c14597557c3a88464725ee0c"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "4d581867e872c23be71cb10d48fe99a29216397fad06cd97c6df4fe5ea364ccd",
+      "expected": "6f9d5aa28ce40c504e84085fa978d8b17003032a4f920daa063da4411e015a54"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "e48f7b419325f2a26195dd054723f4fd7d385d0ebfff25e1d7244c1d8b6c6402",
+      "expected": "695e10a9beac337a9031c223f2dcadcaca33dd0fd39fbec3a5161efb489c1900"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "2f1d1efa1a708658d8d0603df32e28889e35b7431cf166b67d599e018ddd78b8",
+      "expected": "e323c0b6258d87fee59fc0dabbdfd0f47a1f7b58098b02c1475826e55678e68f"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "b688d0daebe0d6a2721e2de48fb9cffc78fe5dc3ba721f58e44bc90e634656a6",
+      "expected": "ee39c6d8f9ab57cbf6655442fc7bab228e60aadb997bc5ecd71595bd3814d454"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "8aa8c3580f35f81253e83d65948673e23b0c4fe14caf3cc39cb09b792d0808fd",
+      "expected": "77957cbbbb2e58895fb43fcaf6d8458c80560ac2638371949347cd5029d42925"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "3a7ba471aff2f3746d01d73bbab1c1bb6774ce69f49c06dec6ea0faf50406114",
+      "expected": "8108041bce05d02adcd8bd1e2ba248c21665ea146d78bb96e1e15ed328b4e3ee"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "2c5410c7e7f24491fcce0502cb47279e98af82f4f16eb5681a4b24394700dd8b",
+      "expected": "26e64442046105521fa0f07682e68c963a838fe64419cf47d4150dec5abc9970"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "4cf2949728acc0cbebccd8b6411eeb4efbf6e4ea0233c27f1cc1c074be489082",
+      "expected": "58e5f557d209c3ec2727052ecc982803bb9cde24547899d81132fed226fa7704"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "aab63298eb96973eaa46d7d54686b210a21cb21ac926cdbb7c0dbbe4b665b699",
+      "expected": "7df122c8c92c806ccda8fde3e28a10cba2a8e1cdd4cb4e27cab364920e42cf65"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "6c73df82f2a159c83f0d6c48045a1ef116b58676dce9252b8f3031896f28bffd",
+      "expected": "14fee315d69b4a55376c7483ebfb0503f0077b91aedc8eafc533413c3254572c"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "786ec3cdbd3ab5a6bd7bf9d95b23949583ed51c1ccea495ec72d3465487b2145",
+      "expected": "777985f7e64618c98265fca480f0c19a777e3be95e6a737e3667e0320b48876b"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "32aeb1212a3596acc1fe8223388bf1600f571283b3e8c7b891ea043731bab286",
+      "expected": "fbd04dda2f05715da9994c48ab765e4081cd146746db9e8f734988adb6ec64d7"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "126_WSD_id_98_WebService_tr_657_1st_757",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "705cb4d28a4a7bbef55ee1c3d1a5ce78d35d2e5fbd6c779d062ae4d85152376e",
+      "expected": "494015bc95864bce46fd4b972b62cecb80afa048d05368c2fbb577b5ff180d07"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "126_WSD_id_98_WebService_tr_657_1st_757",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "77fd761eb82d8b9f0a7150053ce37046eb04d6f49c71a5a9f4a028adb207207e",
+      "expected": "7e25470367325210960b3785a8819e650202aee307fe9954f2324c1d451b989b"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "150_Stock_id_2_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "5d9509184ec6157e89186d292a6d9c9978023f47b5d532733a12b742787ad334",
+      "expected": "fa3d3e6f74fdef22f5a5270c2b649ab385c36ff782a8fca8f61ea23674c629be"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "150_Stock_id_2_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "569bffb054c8cb99aafd4115d895ffc3caf6ee154c33f7041e3e70051bfe15e3",
+      "expected": "5fcf289fe68cc5b0433464f3ef48f14bd3c5b45f8747f0d7bfa92441bf02a205"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "153_Stock_id_5_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "c060af04777e87ae44ee4f3123f82af69b49633326f6bddf56474215712d681c",
+      "expected": "3e7b8b180fb49295d3a37d2bf0ec4bb4b8ac7b9e297145e393e2ffebbc1ef58e"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "153_Stock_id_5_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "2e2704bbea9ac786663a884a338b9ab70a5045c915d62cedb0f151843675bd96",
+      "expected": "5030ef23e6a6285d93660516476e9a3a5bdaa4539ba9a957237aa6cfcbeed9d3"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "157_Stock_id_9_Finance_tr_500_1st_19",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "494e2d92803262bd569b1ef0135c98c22d0bf1b48ac410d79393ee5ae2c901d6",
+      "expected": "863d99337d00a410874b1382438cc02d7f07ad400380e3bdf3f41ea687c26e93"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "157_Stock_id_9_Finance_tr_500_1st_19",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "cd1ea4a486df874ff7030d13583afce86f6b32915c80444a4ae1d1ef0e218f9e",
+      "expected": "fd51d657cf284069e0de8c1fd6c55f89cdb3c7eab94a3cb14fcff794fb134915"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "161_Stock_id_13_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "c8dda7840ab98be5845d3aff5fedbd723a19d4efb702d07a3943912b7af29811",
+      "expected": "632b7cfab7f5769838cad1f3e843f80ad9e5bd32f80329e608f5dfe9e3c79bad"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "161_Stock_id_13_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "1b0b66093b38e03daed04500990de4f6a52c8813fb96f5ddc4c6141c48e468ae",
+      "expected": "df3d2266b45f3490a44c3d6a15df90ca9d62390c21b43271a8b3433436328b10"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "163_Stock_id_15_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "f447f7a2502e21d86ff42915b70d302ebd811a42d7e6ee3dc7109c14a6108812",
+      "expected": "daca3db6513be9acc0892a767c610997db9b53c6b353a790e3764397117b7f4b"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "163_Stock_id_15_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "0a73bed89bbc735c747c034a529d5eb46bc22bdb555ec1c598a989b87f06d2c6",
+      "expected": "8bf9d5aa65fbc18733e1e9e2b311474606e0ae0c8dff6f165a6b01e708e78a30"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "167_Stock_id_19_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "a282351a067bf1ea5f7740b9104fa109e2ac45173d8c38d56d13697349bdded7",
+      "expected": "6743db04d6ec7919215921757f96fa7632029c60a0f2c40713cc42677136fabe"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "167_Stock_id_19_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "837608e0413ec33c8c733c5a34e0eca12d65396712b148c3fe00bd65e18b854c",
+      "expected": "ba0ba5cd45f449a980bd6d93136210d1c9812eb5920606b6c508e3a006a1da91"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "168_Stock_id_20_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "17fcdf2a760eee9bd0dc28b6d08f537fe0c378812da6172839e4d8200f2e1e8e",
+      "expected": "1c317d062f808f097fc7b75c2db21e8fd9cee2af9855ee29255f17082e08e014"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "168_Stock_id_20_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "5c29d6c831620504f569407e80910cebfc2a9b76567b660626b734ea41b565f4",
+      "expected": "c4a2ea969a5bd511b58cc3af12af1eb3e0d896bca095f36731614a8fa9c75d68"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "152_Stock_id_4_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "40da3a35e063e863faee68fb4d349d1635f33a861d2209d216e7b1b0c970696f",
+      "expected": "a69be2dba09f68a7b0f24f04a5d94d728e3e566178e2b31923bec35446ac8476"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "152_Stock_id_4_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "8fb0fd85daa826e29830f33a51d93f57b08c411373f80c43d9037ac6c12bf87a",
+      "expected": "b82191cfcc024136b85dab626264f1edd3e2ac7f35382c1b20ccf4e8d06c2219"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "154_Stock_id_6_Finance_tr_500_1st_38",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "eb1f8a6ba6bcd397d7d54fce1cf3729e5ef289221b2b3a75be05d0d110576b0e",
+      "expected": "3b401346765fc1484db8db8c815bff863025eb94bf0427272347d219c6ba26df"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "154_Stock_id_6_Finance_tr_500_1st_38",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "a1e5d2c28040115937e7e8f6193314831bd3bfc6b68ba743d99c86e0742548f1",
+      "expected": "89b32ef99f7aed1a094836194cbe0a030c57ed1f448f159d1015f637ec5c5f50"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "158_Stock_id_10_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "0cffb16e9f8f9903548519d9771d79b87bb2adc482b24c6076f3b4b7c64493d0",
+      "expected": "b9c0862f479a507a56f3f77fa850046dbd282b2f759c95528507f5eae2c325de"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "158_Stock_id_10_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "e94eca113aafa249c3f3fb59030be196718de7597af25d868e1a30c8a505792e",
+      "expected": "b8d230830590cc8a96712649373a514d7c198844430cc842c01ff7a555b102c2"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "159_Stock_id_11_Finance_tr_500_1st_5",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "a8d775045bf99209984f7bd3258c7a5ac3239dc5a1bd0d4104652c7cbe58efbc",
+      "expected": "560e43a5388f48e7c9e526e7a8b9b6eed095d1db76c29add4721f6e234a82c84"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "159_Stock_id_11_Finance_tr_500_1st_5",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "3f8ae1833cd0c1dcd5ad754254defc05af415ed11343a8449c5ea5ae801015b0",
+      "expected": "83e9bd2198319ebfd9ad8f89d70df00da5bb2f610d13d2144fa7e26b732f22ef"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "164_Stock_id_16_Finance_tr_500_1st_8",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "e2e679e1f6da4c7b6c0841c2c1bcc3a627680ac147a8e13d31ad244843bca153",
+      "expected": "10e457fdb7af6dfd8e0d757a7a905bc468f01bf197222b8ceac38cdc770b5825"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "164_Stock_id_16_Finance_tr_500_1st_8",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "cc5684d5192c7593921cff9153205ee8a09a00b1908c40ac09fd242051c579f6",
+      "expected": "40cd9da780839041078bd712f2f7d2d956748f0561d5bb2c4ef2295e43a58295"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "72af3b16acab0958c1fc34e8a823ce6a783609512ee2d6924ac747309172fb55",
+      "expected": "09514e349088d4f3bda9d52d8f1f2a10f881849186c6169dd19355dcba9dc72c"
+    },
+    {
+      "reference": 0,
+      "identity": [
+        "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "dfafe20f8def04f460b8240b9cff770c754a98fbd9a33ef96fe931f84291b0da",
+      "expected": "1c4e1ffdade8bfa6ff1b2666e85859e365e4823601ea35d910d76647fe491a60"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "ac306ecf43add72161bcba1f9d259afc150cd0ccec0eabed278b2ab0853a5b5c",
+      "expected": "d1fac4ab5113e9dffc11cee5e95c493558b41eed1d9b6c9df479412f040bd401"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "d5b9777847c8d17d42a93833b966019242c87a697bc37541d134a6854f520a8e",
+      "expected": "98f66bb67e3df4ed69d94f0deccbb9f2d4b43c2cacca0a70ce4179e8f348cfbb"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "ad2c7157baaace5a96b8c26c7b85bd1d60204049dbacc7a13e69cb9d0e2e2ca5",
+      "expected": "dc8c96de6d5cd2a0b56c9a50a0ecfdca625613ea38ddd02166abfcc0fbd69106"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "1e93fcb67fee64f35b3338f47d63f6ff46bcb81a2ae5ccc0e3af7bdbda5d156a",
+      "expected": "96384f0fb67ec0095fcb3187d78d79061ca4252c4bf74a32d96f0fa6df3b8be8"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "9cf9de558f1a23c32c0993258b2a3b6289b9754b6165195272460d635d3a9897",
+      "expected": "f4320502b90eef7ce3696aeecb6f2b87daa69d618f160e97635d4ba2447799a9"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "c7e7c583fb7c3cc8682d172de99d6d049dc1b098f02e544065574bdff6c37552",
+      "expected": "57ec72c9c08b333644419dce4234e5a8335021e6219fd265899d873523e155ad"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "e9cfab910c1b69c43ad07d09dc93245accfbdb90d983b5984d6d4977983d803c",
+      "expected": "22be652e46f87784bc39d850edd8dcb8a71cb68176b911ef2cd0cc59d6c15288"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "68c059ef5283bc18158bc470598cc0209bd082c4753cdc017c07cbaf3eb87b5b",
+      "expected": "720f6ce697fa3eaa1f0f95005a6b1b6a23c6f213caae798d3b5fb1fd8935fd4e"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "bfe72c33ffa5b58334d4e7935991cc7578a3e9e22cd8ce88378e481da0fc4878",
+      "expected": "62f5fc03b186dc69044b902780d75b18f2601a1d601b1d76bb22e2dea27b48d3"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "280cc25005a15ce625effc6523bdf0e0ae7e3227e448fb284d03d8f2dcc2c2dd",
+      "expected": "4097daaf33b81f94785a29118aede4c167ef3af5c14597557c3a88464725ee0c"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "4d581867e872c23be71cb10d48fe99a29216397fad06cd97c6df4fe5ea364ccd",
+      "expected": "6f9d5aa28ce40c504e84085fa978d8b17003032a4f920daa063da4411e015a54"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "e48f7b419325f2a26195dd054723f4fd7d385d0ebfff25e1d7244c1d8b6c6402",
+      "expected": "695e10a9beac337a9031c223f2dcadcaca33dd0fd39fbec3a5161efb489c1900"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "2f1d1efa1a708658d8d0603df32e28889e35b7431cf166b67d599e018ddd78b8",
+      "expected": "e323c0b6258d87fee59fc0dabbdfd0f47a1f7b58098b02c1475826e55678e68f"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "b688d0daebe0d6a2721e2de48fb9cffc78fe5dc3ba721f58e44bc90e634656a6",
+      "expected": "ee39c6d8f9ab57cbf6655442fc7bab228e60aadb997bc5ecd71595bd3814d454"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "8aa8c3580f35f81253e83d65948673e23b0c4fe14caf3cc39cb09b792d0808fd",
+      "expected": "77957cbbbb2e58895fb43fcaf6d8458c80560ac2638371949347cd5029d42925"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "3a7ba471aff2f3746d01d73bbab1c1bb6774ce69f49c06dec6ea0faf50406114",
+      "expected": "8108041bce05d02adcd8bd1e2ba248c21665ea146d78bb96e1e15ed328b4e3ee"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "2c5410c7e7f24491fcce0502cb47279e98af82f4f16eb5681a4b24394700dd8b",
+      "expected": "26e64442046105521fa0f07682e68c963a838fe64419cf47d4150dec5abc9970"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "4cf2949728acc0cbebccd8b6411eeb4efbf6e4ea0233c27f1cc1c074be489082",
+      "expected": "58e5f557d209c3ec2727052ecc982803bb9cde24547899d81132fed226fa7704"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "aab63298eb96973eaa46d7d54686b210a21cb21ac926cdbb7c0dbbe4b665b699",
+      "expected": "7df122c8c92c806ccda8fde3e28a10cba2a8e1cdd4cb4e27cab364920e42cf65"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "6c73df82f2a159c83f0d6c48045a1ef116b58676dce9252b8f3031896f28bffd",
+      "expected": "14fee315d69b4a55376c7483ebfb0503f0077b91aedc8eafc533413c3254572c"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "786ec3cdbd3ab5a6bd7bf9d95b23949583ed51c1ccea495ec72d3465487b2145",
+      "expected": "777985f7e64618c98265fca480f0c19a777e3be95e6a737e3667e0320b48876b"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "32aeb1212a3596acc1fe8223388bf1600f571283b3e8c7b891ea043731bab286",
+      "expected": "fbd04dda2f05715da9994c48ab765e4081cd146746db9e8f734988adb6ec64d7"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "126_WSD_id_98_WebService_tr_657_1st_757",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "705cb4d28a4a7bbef55ee1c3d1a5ce78d35d2e5fbd6c779d062ae4d85152376e",
+      "expected": "494015bc95864bce46fd4b972b62cecb80afa048d05368c2fbb577b5ff180d07"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "126_WSD_id_98_WebService_tr_657_1st_757",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "77fd761eb82d8b9f0a7150053ce37046eb04d6f49c71a5a9f4a028adb207207e",
+      "expected": "7e25470367325210960b3785a8819e650202aee307fe9954f2324c1d451b989b"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "150_Stock_id_2_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "5d9509184ec6157e89186d292a6d9c9978023f47b5d532733a12b742787ad334",
+      "expected": "fa3d3e6f74fdef22f5a5270c2b649ab385c36ff782a8fca8f61ea23674c629be"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "150_Stock_id_2_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "569bffb054c8cb99aafd4115d895ffc3caf6ee154c33f7041e3e70051bfe15e3",
+      "expected": "5fcf289fe68cc5b0433464f3ef48f14bd3c5b45f8747f0d7bfa92441bf02a205"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "153_Stock_id_5_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "c060af04777e87ae44ee4f3123f82af69b49633326f6bddf56474215712d681c",
+      "expected": "3e7b8b180fb49295d3a37d2bf0ec4bb4b8ac7b9e297145e393e2ffebbc1ef58e"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "153_Stock_id_5_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "2e2704bbea9ac786663a884a338b9ab70a5045c915d62cedb0f151843675bd96",
+      "expected": "5030ef23e6a6285d93660516476e9a3a5bdaa4539ba9a957237aa6cfcbeed9d3"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "157_Stock_id_9_Finance_tr_500_1st_19",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "494e2d92803262bd569b1ef0135c98c22d0bf1b48ac410d79393ee5ae2c901d6",
+      "expected": "863d99337d00a410874b1382438cc02d7f07ad400380e3bdf3f41ea687c26e93"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "157_Stock_id_9_Finance_tr_500_1st_19",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "cd1ea4a486df874ff7030d13583afce86f6b32915c80444a4ae1d1ef0e218f9e",
+      "expected": "fd51d657cf284069e0de8c1fd6c55f89cdb3c7eab94a3cb14fcff794fb134915"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "161_Stock_id_13_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "c8dda7840ab98be5845d3aff5fedbd723a19d4efb702d07a3943912b7af29811",
+      "expected": "632b7cfab7f5769838cad1f3e843f80ad9e5bd32f80329e608f5dfe9e3c79bad"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "161_Stock_id_13_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "1b0b66093b38e03daed04500990de4f6a52c8813fb96f5ddc4c6141c48e468ae",
+      "expected": "df3d2266b45f3490a44c3d6a15df90ca9d62390c21b43271a8b3433436328b10"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "163_Stock_id_15_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "f447f7a2502e21d86ff42915b70d302ebd811a42d7e6ee3dc7109c14a6108812",
+      "expected": "daca3db6513be9acc0892a767c610997db9b53c6b353a790e3764397117b7f4b"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "163_Stock_id_15_Finance_tr_500_1st_3",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "0a73bed89bbc735c747c034a529d5eb46bc22bdb555ec1c598a989b87f06d2c6",
+      "expected": "8bf9d5aa65fbc18733e1e9e2b311474606e0ae0c8dff6f165a6b01e708e78a30"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "167_Stock_id_19_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "a282351a067bf1ea5f7740b9104fa109e2ac45173d8c38d56d13697349bdded7",
+      "expected": "6743db04d6ec7919215921757f96fa7632029c60a0f2c40713cc42677136fabe"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "167_Stock_id_19_Finance_tr_500_1st_7",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "837608e0413ec33c8c733c5a34e0eca12d65396712b148c3fe00bd65e18b854c",
+      "expected": "ba0ba5cd45f449a980bd6d93136210d1c9812eb5920606b6c508e3a006a1da91"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "168_Stock_id_20_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "17fcdf2a760eee9bd0dc28b6d08f537fe0c378812da6172839e4d8200f2e1e8e",
+      "expected": "1c317d062f808f097fc7b75c2db21e8fd9cee2af9855ee29255f17082e08e014"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "168_Stock_id_20_Finance_tr_500_1st_1",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "5c29d6c831620504f569407e80910cebfc2a9b76567b660626b734ea41b565f4",
+      "expected": "c4a2ea969a5bd511b58cc3af12af1eb3e0d896bca095f36731614a8fa9c75d68"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "152_Stock_id_4_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "40da3a35e063e863faee68fb4d349d1635f33a861d2209d216e7b1b0c970696f",
+      "expected": "a69be2dba09f68a7b0f24f04a5d94d728e3e566178e2b31923bec35446ac8476"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "152_Stock_id_4_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "8fb0fd85daa826e29830f33a51d93f57b08c411373f80c43d9037ac6c12bf87a",
+      "expected": "b82191cfcc024136b85dab626264f1edd3e2ac7f35382c1b20ccf4e8d06c2219"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "154_Stock_id_6_Finance_tr_500_1st_38",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "eb1f8a6ba6bcd397d7d54fce1cf3729e5ef289221b2b3a75be05d0d110576b0e",
+      "expected": "3b401346765fc1484db8db8c815bff863025eb94bf0427272347d219c6ba26df"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "154_Stock_id_6_Finance_tr_500_1st_38",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "a1e5d2c28040115937e7e8f6193314831bd3bfc6b68ba743d99c86e0742548f1",
+      "expected": "89b32ef99f7aed1a094836194cbe0a030c57ed1f448f159d1015f637ec5c5f50"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "158_Stock_id_10_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "0cffb16e9f8f9903548519d9771d79b87bb2adc482b24c6076f3b4b7c64493d0",
+      "expected": "b9c0862f479a507a56f3f77fa850046dbd282b2f759c95528507f5eae2c325de"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "158_Stock_id_10_Finance_tr_500_1st_2",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "e94eca113aafa249c3f3fb59030be196718de7597af25d868e1a30c8a505792e",
+      "expected": "b8d230830590cc8a96712649373a514d7c198844430cc842c01ff7a555b102c2"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "159_Stock_id_11_Finance_tr_500_1st_5",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "a8d775045bf99209984f7bd3258c7a5ac3239dc5a1bd0d4104652c7cbe58efbc",
+      "expected": "560e43a5388f48e7c9e526e7a8b9b6eed095d1db76c29add4721f6e234a82c84"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "159_Stock_id_11_Finance_tr_500_1st_5",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "3f8ae1833cd0c1dcd5ad754254defc05af415ed11343a8449c5ea5ae801015b0",
+      "expected": "83e9bd2198319ebfd9ad8f89d70df00da5bb2f610d13d2144fa7e26b732f22ef"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "164_Stock_id_16_Finance_tr_500_1st_8",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "e2e679e1f6da4c7b6c0841c2c1bcc3a627680ac147a8e13d31ad244843bca153",
+      "expected": "10e457fdb7af6dfd8e0d757a7a905bc468f01bf197222b8ceac38cdc770b5825"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "164_Stock_id_16_Finance_tr_500_1st_8",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "cc5684d5192c7593921cff9153205ee8a09a00b1908c40ac09fd242051c579f6",
+      "expected": "40cd9da780839041078bd712f2f7d2d956748f0561d5bb2c4ef2295e43a58295"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "COPOD"
+      ],
+      "field": "score_array_sha256",
+      "actual": "72af3b16acab0958c1fc34e8a823ce6a783609512ee2d6924ac747309172fb55",
+      "expected": "09514e349088d4f3bda9d52d8f1f2a10f881849186c6169dd19355dcba9dc72c"
+    },
+    {
+      "reference": 1,
+      "identity": [
+        "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "COPOD"
+      ],
+      "field": "native_score_sha256",
+      "actual": "dfafe20f8def04f460b8240b9cff770c754a98fbd9a33ef96fe931f84291b0da",
+      "expected": "1c4e1ffdade8bfa6ff1b2666e85859e365e4823601ea35d910d76647fe491a60"
+    }
+  ],
+  "scope": "array and native score CSV hashes; native input verifier is additionally mandatory",
+  "native_input_hashes_equal_both_references": false
+}

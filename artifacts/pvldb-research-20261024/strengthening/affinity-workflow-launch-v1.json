@@ -1,0 +1,10 @@
+{
+  "status": "WORKFLOW_STARTED_NOT_COMPLETED",
+  "created_at": "2026-10-24T11:30:05Z",
+  "run_id": 40090142426,
+  "run_url": "https://github.com/mandu5/sparse-vus/actions/runs/40090142426",
+  "source_commit": "ee3031aafb5cc30c7928d36e965d2156cf3ac2ca",
+  "tag": "strength/affinity-blocks-linux-v1",
+  "premeasurement_audit": "docs/reviews/20261024/affinity-blocks-premeasurement-audit.md",
+  "scope": "One authorized tagged execution; exactly five process blocks on one runner, no repeated acquisition per block. A launch record is not a completed result."
+}

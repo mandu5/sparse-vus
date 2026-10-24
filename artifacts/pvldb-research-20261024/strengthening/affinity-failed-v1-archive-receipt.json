@@ -1,0 +1,38 @@
+{
+  "status": "FAILED_PREPARATION_NO_METRIC_BLOCKS",
+  "source_commit": "ee3031aafb5cc30c7928d36e965d2156cf3ac2ca",
+  "source_tag": "strength/affinity-blocks-linux-v1",
+  "workflow_run_id": 40090142426,
+  "workflow_url": "https://github.com/mandu5/sparse-vus/actions/runs/40090142426",
+  "artifact_id": 12558059165,
+  "artifact_zip_sha256": "e21a32d960ef6f5060dfa84f0ee8105438c403d17241313ed9f1c46f18de7862",
+  "metric_blocks_started": 0,
+  "warmups_started": 0,
+  "successful_detector_profiles": 52,
+  "native_recordings_verified": 26,
+  "prior_score_mismatching_profiles_per_reference": 25,
+  "profile_model": "COPOD",
+  "matching_profiles_per_reference": 27,
+  "distinct_count_change": {
+    "profile": "034_WSD_id_6_WebService_tr_4559_1st_8461/COPOD",
+    "prior": 1687,
+    "failed_preparation": 1686
+  },
+  "no_performance_result": true,
+  "mismatch_magnitude_and_cause": "unmeasured",
+  "files_sha256": {
+    "affinity-blocks-protocol-v1.input-identity.json": "731c87bee7682037fd7a13e458f410f7e1dc8f4601a499bf7837078daf1c0fa9",
+    "affinity-design-v1.json": "f7119a503d411d029761b137761061faea6e47e62d5ed165722d3acee8edeb91",
+    "affinity-reproduction-failure.json": "05a0a54e5260f98118a548c00b1869979c3bc7561186dc30fb3ed4fb75fdb2c7",
+    "affinity-reproduction-start.json": "0ff51b66811df26e05cc8e7ccb8caaaae59af610d14ce11ef2dee5cbe643d108",
+    "environment-freeze.txt": "ceb9372eb7fcfb3f64bf118b6fe9156f511c9a3d86742c2716115de1be0be14d",
+    "native-input-audit.json": "6f387bd90080b17819c82e9e40504ffc653589588f7ea1d38efa5d726fbb927b",
+    "native-source-acquisition.json": "9f0f170800b0eb5105544f0a6af2e6697051fea1f5cdb0d8639ac56fdd7af51a",
+    "provenance/float-decoding-contract.json": "514614e9711e87d12ab978a60316f40532324d6bf15f7a64ba7eed7d86ad08d8",
+    "provenance/source-manifest.json": "3bcfea0e80ae82cc20d6e556058f4ca35bad99a069edb89391630064e0e0cd6e",
+    "source-discovery.json": "3323712337117428e497655b7e0e3b1bafd2285938466de71e842c5375f76b26",
+    "timeeval-consumer-global-v1.json": "aefba85eea77cc3e50ce33e9f9f640881f38909e82cb342820e366ffa741f6bb",
+    "workload-generation.json": "65c399dcafa71cafafe35d3e35c03695a918a0a673aebfae88ed4f2286c2ee5d",
+    "workload-protocol.json": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e"
+  }
+}

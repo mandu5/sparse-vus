@@ -1,0 +1,20 @@
+{
+  "schema": "frozen-observation-binary64-replay-v1",
+  "scope": "Rehydrate the exact originally frozen Mac detector inputs from the same checksum-bound raw CSV; no score, label, selected recording, threshold or timing is changed.",
+  "diagnosis": "Linux diagnostic run40078835224 verified all26 raw members, labels and rounded-normalization identities. All3 tested parsers on pandas2.2.3 and3.0.1 agree, but one raw decimal differs by one binary64 ULP from the archived original Mac input. Direct NPY-byte comparison against Python float literals found exactly this one point.",
+  "entries": [
+    {
+      "case_id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+      "raw_member_sha256": "0d58744554f777f6b8029426992b51496cb00c184cb9a4e020528631361a5ac7",
+      "row_index_zero_based": 13920,
+      "column": "Data",
+      "literal": "2.9364790299813794",
+      "correctly_rounded_binary64_hex": "0x1.77de8b7b94754p+1",
+      "original_frozen_binary64_hex": "0x1.77de8b7b94753p+1",
+      "correctly_rounded_observation_sha256": "76d212f65b90617136d0dc13435fbab55ba060a0c616b85957c9db710607435e",
+      "original_frozen_observation_sha256": "dc96c1ac3395189c01b0a3470986c07ea0fd1e112e971d872d7aac6916a151a1"
+    }
+  ],
+  "identity_policy": "Keep every original archive/member/label/exact-observation/rounded-normalization hash check. Apply the recorded compatibility value only when the raw bytes, literal, index, column, original vector hash and one-ULP adjacent value match this manifest. Reject unexpected parser differences.",
+  "timing_policy": "This is input reconstruction before detector fitting and before metric measurements. The previously completed Mac workload and results remain immutable; fresh Linux profiles are generated from bit-identical frozen detector inputs."
+}

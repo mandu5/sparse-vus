@@ -1,0 +1,74 @@
+name: Frozen five-session new-realization v2 follow-up
+
+on:
+  push:
+    tags:
+      - strength/affinity-blocks-linux-v2
+  workflow_dispatch:
+    inputs:
+      run_study:
+        description: Explicitly run all five frozen sessions at the dedicated tag
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.run_study)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMBA_NUM_THREADS: "1"
+      VECLIB_MAXIMUM_THREADS: "1"
+      PYTHONOPTIMIZE: "0"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+      - name: Verify explicitly frozen tag before setup or execution
+        run: |
+          python3 - <<'PY'
+          import os
+          import subprocess
+          frozen = 'refs/tags/strength/affinity-blocks-linux-v2'
+          if os.environ['GITHUB_REF'] != frozen:
+              raise SystemExit('Only the explicitly frozen affinity study tag may run')
+          def revision(ref):
+              return subprocess.check_output(['git', 'rev-parse', '--verify', ref], text=True).strip()
+          head = revision('HEAD')
+          if head != revision(frozen + '^{commit}') or head != os.environ['GITHUB_SHA']:
+              raise SystemExit('HEAD, frozen tag, and event commit must be identical')
+          print('Frozen source commit:', head)
+          PY
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.11.9"
+      - name: Install the same pinned CPU dependencies
+        run: |
+          python -m pip install -r requirements-strengthening.txt
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Validate protocol coverage and block statistics without metric execution
+        run: PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest tests/test_timeeval_affinity_blocks_v2.py tests/test_timeeval_affinity_realization.py -q
+      - name: Fresh input verification then exactly five process sessions
+        run: python experiments/reproduce_affinity_blocks_v2.py --output "$RUNNER_TEMP/affinity-blocks-v2-replica" --run
+      - name: Archive receipts and scalar results without raw data or score vectors
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: affinity-blocks-linux-v2
+          path: |
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/*.json
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/environment-freeze.txt
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/provenance/*.json
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/*.json
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/*/*.json
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/*/*.jsonl
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/**/*.log
+            ${{ runner.temp }}/affinity-blocks-v2-replica/artifacts/pvldb-research-20261024/strengthening/affinity-blocks-linux-v2/blocks/**/results.csv
+          if-no-files-found: error

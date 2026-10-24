@@ -1,0 +1,54 @@
+{
+  "status": "PREPARING_WITHOUT_METRIC_EVALUATION",
+  "utc": "2026-10-24T11:31:13.921271+00:00",
+  "source_commit": "ee3031aafb5cc30c7928d36e965d2156cf3ac2ca",
+  "committed_source_sha256": {
+    "scripts/run_timeeval_affinity_blocks.py": "91fcbb62de679f983659640fedf847a310949365a177976bdebfd6f2e5cfedeb",
+    "experiments/reproduce_affinity_blocks.py": "5eb8ce3da05c43a9059a87abe925085e84167922d13abd17febc57d3568056be",
+    "experiments/reproduce_strengthening.py": "9fc030f5c9bd303a9fbc5ae98e41bb2ee8650eb83558edf8d71b09d9de99c369",
+    "scripts/prepare_strengthening_workload.py": "09da5fc196b2f8f11280c307a4ee81cbe62a3f61d860a2b282ed203ab26dd20c",
+    "experiments/audit_strengthening_inputs.py": "d04bf41823bce860b2f94491adfc3bf1d9a4ef109730e2d93b4abbf07939480c",
+    "requirements-strengthening.txt": "6ec99df9ae7870977f00f6d565850d0baad5cdd23edd27af0f271a7e5a143872",
+    ".github/workflows/affinity-blocks-reproduce.yml": "4e5be0cc9cc4cad77ea4736563e7d2b2eccda1690708b33d7c65263e94e13ddd",
+    "tests/test_timeeval_affinity_blocks.py": "4d65716c49e2cd5130dfd3342bd6bab844e18eb0e38c8655f41fc41587034248"
+  },
+  "requested_measurement": true,
+  "native_cpu": {
+    "pid": 2523,
+    "ppid": 2522,
+    "process_start_ticks": "10443",
+    "cpu_models": [
+      "AMD EPYC 7763 64-Core Processor"
+    ],
+    "permitted_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chosen_affinity": null,
+    "hostname": "runnervm8k3b6",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "boot_id": "64d5c432-7c46-42cd-877c-f22dc6ba048d",
+    "cpuinfo_sha256": "91ce3bde4e67b15ba5c30e0c2fd523799f2f6564790571c3a96cfbaede1845bf"
+  },
+  "ci_environment": {
+    "GITHUB_SHA": "ee3031aafb5cc30c7928d36e965d2156cf3ac2ca",
+    "GITHUB_REF": "refs/tags/strength/affinity-blocks-linux-v1",
+    "GITHUB_RUN_ID": "40090142426",
+    "GITHUB_RUN_ATTEMPT": "1",
+    "RUNNER_OS": "Linux",
+    "RUNNER_ARCH": "X64",
+    "ImageOS": "ubuntu24",
+    "ImageVersion": "20261012.334.1"
+  },
+  "thread_environment_for_children": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "scope": "five newly started Python processes on ONE Linux runner and ONE frozen 52-profile input; not five hosts or independent workload populations",
+  "raw_data_and_detector_scores_redistributed": false
+}

@@ -1,0 +1,3789 @@
+{
+  "status": "ALL_SELECTED_PROFILES_GENERATED",
+  "started_utc": "2026-10-24T11:31:23.731529+00:00",
+  "completed_utc": "2026-10-24T11:33:52.810824+00:00",
+  "protocol_path": "/home/runner/work/_temp/affinity-blocks-replica/artifacts/pvldb-research-20261024/strengthening/workload-protocol.json",
+  "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+  "selection_sha256": "ed9eb0e9d906c3bd321bf6446cb4bfbbabdeddef154e17fa8ef1fb2f9e5e196c",
+  "models": [
+    "FFT",
+    "COPOD"
+  ],
+  "selected_cases": 26,
+  "selected_profiles": 52,
+  "successful_profiles": 52,
+  "metric_evaluation_performed": false,
+  "profiles": [
+    {
+      "case_id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:31:24.014264+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.08687577900001031,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/096_WSD_id_68_WebService_tr_1341_1st_1441.npy",
+      "score_sha256": "5fccc6e44ef5bea081bf8a972462900c751c76943715d616060acc5f5cf6d4c3",
+      "score_array_sha256": "b04de1571b765ff66feb0a4fa66d8caafc9d3d4c8e8e80415d5b6cf230543a73",
+      "dtype": "<f8",
+      "shape": [
+        10744
+      ],
+      "distinct_values": 91,
+      "zero_values": 5766,
+      "completed_utc": "2026-10-24T11:31:25.913869+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5841079279999946,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/096_WSD_id_68_WebService_tr_1341_1st_1441/1/anomaly_scores.ts",
+      "native_score_sha256": "07137022f2e7b6c56d55abe6365589a6edffd4001395339dc2e786b8101f439e",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:31:26.616982+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.493519488000004,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/096_WSD_id_68_WebService_tr_1341_1st_1441.npy",
+      "score_sha256": "b2acaae6a662829cb79b0fcb84e4eee9aa7ac2cac66686b3c007f83320bc0774",
+      "score_array_sha256": "ac306ecf43add72161bcba1f9d259afc150cd0ccec0eabed278b2ab0853a5b5c",
+      "dtype": "<f8",
+      "shape": [
+        10744
+      ],
+      "distinct_values": 2337,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:31:28.885513+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.13377035500001,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/096_WSD_id_68_WebService_tr_1341_1st_1441/1/anomaly_scores.ts",
+      "native_score_sha256": "d5b9777847c8d17d42a93833b966019242c87a697bc37541d134a6854f520a8e",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:31:29.784548+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.10910303800000065,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/076_WSD_id_48_WebService_tr_3821_1st_7083.npy",
+      "score_sha256": "72e896f85b141e52457b09d3e734cbf9ec8fcf00b05ea84dac8f0525e3cd30db",
+      "score_array_sha256": "5e106c741c54815c5a916d3b5e1306c5ba534c227a854eb1cb2f8092a179710d",
+      "dtype": "<f8",
+      "shape": [
+        15285
+      ],
+      "distinct_values": 219,
+      "zero_values": 11944,
+      "completed_utc": "2026-10-24T11:31:31.654157+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5761412829999983,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/076_WSD_id_48_WebService_tr_3821_1st_7083/1/anomaly_scores.ts",
+      "native_score_sha256": "c458ce8a798121c90319195d8ce0ee591bf1021432b8049acec2f728b4584169",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:31:32.389234+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.47233410299999434,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/076_WSD_id_48_WebService_tr_3821_1st_7083.npy",
+      "score_sha256": "bad0bc28b02baa715369196cba50a5cc2586c5d128d3a4a2ced095171ff45db4",
+      "score_array_sha256": "ad2c7157baaace5a96b8c26c7b85bd1d60204049dbacc7a13e69cb9d0e2e2ca5",
+      "dtype": "<f8",
+      "shape": [
+        15285
+      ],
+      "distinct_values": 134,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:31:34.642081+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0604735569999946,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/076_WSD_id_48_WebService_tr_3821_1st_7083/1/anomaly_scores.ts",
+      "native_score_sha256": "1e93fcb67fee64f35b3338f47d63f6ff46bcb81a2ae5ccc0e3af7bdbda5d156a",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:31:35.497225+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.12784687999999278,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/120_WSD_id_92_WebService_tr_2329_1st_2429.npy",
+      "score_sha256": "5742fe8fdf437dc76e80d6486bd49e899eca6be42cdef2c4015fb69ea7f724fe",
+      "score_array_sha256": "62d17daa5d7bf3808a892a3e11f73f13d372fb6fe6507ef1dedeff178c9e8b7f",
+      "dtype": "<f8",
+      "shape": [
+        17438
+      ],
+      "distinct_values": 224,
+      "zero_values": 10549,
+      "completed_utc": "2026-10-24T11:31:37.385356+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.617252593999993,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/120_WSD_id_92_WebService_tr_2329_1st_2429/1/anomaly_scores.ts",
+      "native_score_sha256": "06e29ad537f9da9d5cf499af9e291a65235eca6b14a36df193182dc6ff35f502",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:31:38.154366+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4700243849999879,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/120_WSD_id_92_WebService_tr_2329_1st_2429.npy",
+      "score_sha256": "0b30494390e6943aa02a45b297f09535182279743e86f8199d7027e2465139f7",
+      "score_array_sha256": "9cf9de558f1a23c32c0993258b2a3b6289b9754b6165195272460d635d3a9897",
+      "dtype": "<f8",
+      "shape": [
+        17438
+      ],
+      "distinct_values": 2785,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:31:40.405212+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.089305794000012,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/120_WSD_id_92_WebService_tr_2329_1st_2429/1/anomaly_scores.ts",
+      "native_score_sha256": "c7e7c583fb7c3cc8682d172de99d6d049dc1b098f02e544065574bdff6c37552",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:31:41.279151+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.1320784799999899,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/038_WSD_id_10_WebService_tr_4042_1st_4142.npy",
+      "score_sha256": "358e6ff7898689ac02b440c156603452c5b320d8fd66f3e290820d1e402091d0",
+      "score_array_sha256": "900aed73c7ed7eb4679d4794add7f68605e31c990886496507864d5178d25c1f",
+      "dtype": "<f8",
+      "shape": [
+        18084
+      ],
+      "distinct_values": 287,
+      "zero_values": 9748,
+      "completed_utc": "2026-10-24T11:31:43.180286+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.6320254799999816,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/038_WSD_id_10_WebService_tr_4042_1st_4142/1/anomaly_scores.ts",
+      "native_score_sha256": "ccc9788fd053c5c246ddd4bb0df8861003060c3a5b1820128f65f4d45b61f15b",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:31:43.954794+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.48317794199999753,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/038_WSD_id_10_WebService_tr_4042_1st_4142.npy",
+      "score_sha256": "01900b221a6ed7abfd462017a4cd0494734b0b0c4a406ef3010f5fbe8ee9408a",
+      "score_array_sha256": "e9cfab910c1b69c43ad07d09dc93245accfbdb90d983b5984d6d4977983d803c",
+      "dtype": "<f8",
+      "shape": [
+        18084
+      ],
+      "distinct_values": 1660,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:31:46.220086+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.098374803000013,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/038_WSD_id_10_WebService_tr_4042_1st_4142/1/anomaly_scores.ts",
+      "native_score_sha256": "68c059ef5283bc18158bc470598cc0209bd082c4753cdc017c07cbaf3eb87b5b",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:31:47.095782+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.12189925399999879,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/115_WSD_id_87_WebService_tr_2252_1st_2352.npy",
+      "score_sha256": "0e1d5a7d35b4505ed3787aa9c446a866d5ca055044e6c5316da2a6024b4d2318",
+      "score_array_sha256": "3fe9d182b1d00e2cd7ab0052f1d6fd2044ebf2289f9530facf2af6f22e960879",
+      "dtype": "<f8",
+      "shape": [
+        18214
+      ],
+      "distinct_values": 258,
+      "zero_values": 11670,
+      "completed_utc": "2026-10-24T11:31:48.962066+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5059221170000114,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/115_WSD_id_87_WebService_tr_2252_1st_2352/1/anomaly_scores.ts",
+      "native_score_sha256": "3167f258f9bc4ccb0ca363eeac53285bd616d6b5b174cec45e8c48762a851b40",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:31:49.635720+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4579644670000107,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/115_WSD_id_87_WebService_tr_2252_1st_2352.npy",
+      "score_sha256": "ba09faf0e4b2f2fdbb20c1f301bc87bd4192c34d47e07651a321c2469e55233c",
+      "score_array_sha256": "bfe72c33ffa5b58334d4e7935991cc7578a3e9e22cd8ce88378e481da0fc4878",
+      "dtype": "<f8",
+      "shape": [
+        18214
+      ],
+      "distinct_values": 1907,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:31:51.791767+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.897014736000017,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/115_WSD_id_87_WebService_tr_2252_1st_2352/1/anomaly_scores.ts",
+      "native_score_sha256": "280cc25005a15ce625effc6523bdf0e0ae7e3227e448fb284d03d8f2dcc2c2dd",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:31:52.577195+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.12876689399999464,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/034_WSD_id_6_WebService_tr_4559_1st_8461.npy",
+      "score_sha256": "beec8020e62f4030c7e72104c14d5d6982a88ba18fd525c5f79f2707790578b1",
+      "score_array_sha256": "a3d9ec682ef0eacfa2eb5df76d94270b888500a83a4c3666da3530a5b50d7251",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 338,
+      "zero_values": 9042,
+      "completed_utc": "2026-10-24T11:31:54.457441+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.502975647999989,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/034_WSD_id_6_WebService_tr_4559_1st_8461/1/anomaly_scores.ts",
+      "native_score_sha256": "e9fe0cb88fc69d73c00c70c6de29a50d2c5a187ddce5c05103fbbeeeff0b6abe",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:31:55.124375+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.48392391900000575,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/034_WSD_id_6_WebService_tr_4559_1st_8461.npy",
+      "score_sha256": "94969b4e3634b1039cc6cd621f4b7494f9ae9289124c3dd3b06636bd28a20c9c",
+      "score_array_sha256": "4d581867e872c23be71cb10d48fe99a29216397fad06cd97c6df4fe5ea364ccd",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 1686,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:31:57.356202+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.1172946370000147,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/034_WSD_id_6_WebService_tr_4559_1st_8461/1/anomaly_scores.ts",
+      "native_score_sha256": "e48f7b419325f2a26195dd054723f4fd7d385d0ebfff25e1d7244c1d8b6c6402",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:31:58.285922+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.12935061900000733,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/057_WSD_id_29_WebService_tr_2229_1st_2329.npy",
+      "score_sha256": "105e0322b644e26da8935f2a5bb749048f2ef9455834c1056c4aa86f3b12a87d",
+      "score_array_sha256": "992640e5b10b592a73d270b7767e04efc94b6a404eb971ca1324c7cb7e9812d2",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 380,
+      "zero_values": 11900,
+      "completed_utc": "2026-10-24T11:32:00.149263+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5536041899999873,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/057_WSD_id_29_WebService_tr_2229_1st_2329/1/anomaly_scores.ts",
+      "native_score_sha256": "d3f249b4473af3f2bc43c9eab9e2630f81457f216f7fb0337d8433b4749ca4cf",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:00.891700+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.48188811500000384,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/057_WSD_id_29_WebService_tr_2229_1st_2329.npy",
+      "score_sha256": "50bc7877b5b722ac3fadca30d72bb9e0d74065400806769f79024f5ee7d8a61d",
+      "score_array_sha256": "2f1d1efa1a708658d8d0603df32e28889e35b7431cf166b67d599e018ddd78b8",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 266,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:03.176149+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0449599550000244,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/057_WSD_id_29_WebService_tr_2229_1st_2329/1/anomaly_scores.ts",
+      "native_score_sha256": "b688d0daebe0d6a2721e2de48fb9cffc78fe5dc3ba721f58e44bc90e634656a6",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:03.966576+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.09919036899998446,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/071_WSD_id_43_WebService_tr_3387_1st_3487.npy",
+      "score_sha256": "c08b5aba60fede4c7199164dbbd77682e8611976280171ebcbd446138e576ca4",
+      "score_array_sha256": "3d8310da23019f8be5e416b413cf8f2731d7c7cd2b7acdf30e2de11f7e189c94",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 75,
+      "zero_values": 16064,
+      "completed_utc": "2026-10-24T11:32:05.784596+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5099309169999913,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/071_WSD_id_43_WebService_tr_3387_1st_3487/1/anomaly_scores.ts",
+      "native_score_sha256": "77bf77a4867a1c9ba41d243119d043e979efb295a97d3d05469f0b89a6ac7db3",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:06.530044+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.48362386499999843,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/071_WSD_id_43_WebService_tr_3387_1st_3487.npy",
+      "score_sha256": "68d5d5f87db31b1aabf9888cc3be1f5f57f74aa9b29532b22acd4bbb721d9d73",
+      "score_array_sha256": "8aa8c3580f35f81253e83d65948673e23b0c4fe14caf3cc39cb09b792d0808fd",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 5820,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:08.789793+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.04535678900001,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/071_WSD_id_43_WebService_tr_3387_1st_3487/1/anomaly_scores.ts",
+      "native_score_sha256": "3a7ba471aff2f3746d01d73bbab1c1bb6774ce69f49c06dec6ea0faf50406114",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:09.613105+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.1238628020000192,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/101_WSD_id_73_WebService_tr_1513_1st_1613.npy",
+      "score_sha256": "43ae77f25829b77cb160cc4131f8e003c23f88c431f06d8b8b700ba69d86747c",
+      "score_array_sha256": "d3811cb26bcbe857f92ad39e62588fb6581e890ed4c208b3c1b2f64518d3853c",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 77,
+      "zero_values": 10258,
+      "completed_utc": "2026-10-24T11:32:11.464819+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.537648460999975,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/101_WSD_id_73_WebService_tr_1513_1st_1613/1/anomaly_scores.ts",
+      "native_score_sha256": "842b89b3282183d9e3892515ca16cca41b9c6ea1ee236528f51bb8dde192905b",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:12.205657+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4852892190000091,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/101_WSD_id_73_WebService_tr_1513_1st_1613.npy",
+      "score_sha256": "af7681094b941f1018b9e58e011d95c74fdf4344e2f214731a8a22a941438cad",
+      "score_array_sha256": "2c5410c7e7f24491fcce0502cb47279e98af82f4f16eb5681a4b24394700dd8b",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 4995,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:14.452241+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0707385979999913,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/101_WSD_id_73_WebService_tr_1513_1st_1613/1/anomaly_scores.ts",
+      "native_score_sha256": "4cf2949728acc0cbebccd8b6411eeb4efbf6e4ea0233c27f1cc1c074be489082",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:15.306730+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.13255029999999124,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/124_WSD_id_96_WebService_tr_4559_1st_14350.npy",
+      "score_sha256": "d4530b4caeef8e177bc1936c7a7710a302c31c245683b5da350fd42311b8ff97",
+      "score_array_sha256": "ce7abfb0186223bd43b15e567ff5944125f748986c064812fdb04976b96b8ed9",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 184,
+      "zero_values": 7256,
+      "completed_utc": "2026-10-24T11:32:17.222210+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.598803459999999,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/124_WSD_id_96_WebService_tr_4559_1st_14350/1/anomaly_scores.ts",
+      "native_score_sha256": "84b666869c8c15bc1070aba1ba6831bc5e0b6a5f29f674186ea687fa93e78cce",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:17.962613+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4951640080000175,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/124_WSD_id_96_WebService_tr_4559_1st_14350.npy",
+      "score_sha256": "2f323d7989c1d895289ada030a8dbb3db191b0f986dfdb137d76a910253ec265",
+      "score_array_sha256": "aab63298eb96973eaa46d7d54686b210a21cb21ac926cdbb7c0dbbe4b665b699",
+      "dtype": "<f8",
+      "shape": [
+        18236
+      ],
+      "distinct_values": 576,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:20.240237+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.1652983999999833,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/124_WSD_id_96_WebService_tr_4559_1st_14350/1/anomaly_scores.ts",
+      "native_score_sha256": "6c73df82f2a159c83f0d6c48045a1ef116b58676dce9252b8f3031896f28bffd",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:21.181884+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.13858523499999365,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/066_WSD_id_38_WebService_tr_3320_1st_3420.npy",
+      "score_sha256": "5b8e8858306cdf2e6846b8ca3aa81c4bbcd5fa0f147b2f80fea770c04ee4151e",
+      "score_array_sha256": "a00e2a1819de098b4bce39c63aac74dd5e1d0b29a0bddaab087a8ab8a548d425",
+      "dtype": "<f8",
+      "shape": [
+        18302
+      ],
+      "distinct_values": 290,
+      "zero_values": 9792,
+      "completed_utc": "2026-10-24T11:32:23.114783+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.74552843699999,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/066_WSD_id_38_WebService_tr_3320_1st_3420/1/anomaly_scores.ts",
+      "native_score_sha256": "4313863b39b449fbb0fde8e01c2c9ae8e6eda307230dd5c8c1436bd4a00c96e4",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:23.978713+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.49706200500000364,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/066_WSD_id_38_WebService_tr_3320_1st_3420.npy",
+      "score_sha256": "f669c347ac1863bce258e83a5874235af8fb9d832b204ee0cc4ac34f7d891aba",
+      "score_array_sha256": "786ec3cdbd3ab5a6bd7bf9d95b23949583ed51c1ccea495ec72d3465487b2145",
+      "dtype": "<f8",
+      "shape": [
+        18302
+      ],
+      "distinct_values": 2104,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:26.311455+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.190550110999993,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/066_WSD_id_38_WebService_tr_3320_1st_3420/1/anomaly_scores.ts",
+      "native_score_sha256": "32aeb1212a3596acc1fe8223388bf1600f571283b3e8c7b891ea043731bab286",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "126_WSD_id_98_WebService_tr_657_1st_757",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:27.205911+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.12729067399999394,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/126_WSD_id_98_WebService_tr_657_1st_757.npy",
+      "score_sha256": "23b960f9603c3b1bb5eeb8e047ffc3dc941fc40f95e0c0c2a12fe987eab83ace",
+      "score_array_sha256": "529d6f9ea002a2e866eabe48383e0a2a171acdb1ab0a77691d67d581642208c6",
+      "dtype": "<f8",
+      "shape": [
+        18883
+      ],
+      "distinct_values": 64,
+      "zero_values": 18105,
+      "completed_utc": "2026-10-24T11:32:29.142238+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.593437091999988,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/WSD/126_WSD_id_98_WebService_tr_657_1st_757/1/anomaly_scores.ts",
+      "native_score_sha256": "a93dbe7cead8abe9f75230a4afd7585dcd5d35f3f4e4aa46d395aed9ba5f921c",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "126_WSD_id_98_WebService_tr_657_1st_757",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:29.829661+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.5011004739999976,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/126_WSD_id_98_WebService_tr_657_1st_757.npy",
+      "score_sha256": "a36f660fade45b05b25710af73f315aa95ff3e3d183538a8f10f2e493c66b815",
+      "score_array_sha256": "705cb4d28a4a7bbef55ee1c3d1a5ce78d35d2e5fbd6c779d062ae4d85152376e",
+      "dtype": "<f8",
+      "shape": [
+        18883
+      ],
+      "distinct_values": 302,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:32.131130+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0684843109999917,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/WSD/126_WSD_id_98_WebService_tr_657_1st_757/1/anomaly_scores.ts",
+      "native_score_sha256": "77fd761eb82d8b9f0a7150053ce37046eb04d6f49c71a5a9f4a028adb207207e",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "150_Stock_id_2_Finance_tr_500_1st_7",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:32.934037+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.06671352800000818,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/150_Stock_id_2_Finance_tr_500_1st_7.npy",
+      "score_sha256": "ab7280bae08c246d29202f46186e133249cfb63f6e201dbce3edfc78333ba9d4",
+      "score_array_sha256": "36ac6ccb02eea103e9596103f6cda2d5f1b8d181cc2391f6102382b2f9425cec",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 230,
+      "zero_values": 4740,
+      "completed_utc": "2026-10-24T11:32:34.799607+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.564032349999991,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/150_Stock_id_2_Finance_tr_500_1st_7/1/anomaly_scores.ts",
+      "native_score_sha256": "e723db124a707ebdefa4854f4da42c747aad035e78ce4ab0d0676eb9701d04b1",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "150_Stock_id_2_Finance_tr_500_1st_7",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:35.544399+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.49332980300002305,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/150_Stock_id_2_Finance_tr_500_1st_7.npy",
+      "score_sha256": "d3be4c1b2d031dfbcd1d7530636a35c9bb71cac1b017f77eb44c64bfedad6f8f",
+      "score_array_sha256": "5d9509184ec6157e89186d292a6d9c9978023f47b5d532733a12b742787ad334",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 3074,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:37.842447+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.1592400609999913,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/150_Stock_id_2_Finance_tr_500_1st_7/1/anomaly_scores.ts",
+      "native_score_sha256": "569bffb054c8cb99aafd4115d895ffc3caf6ee154c33f7041e3e70051bfe15e3",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "153_Stock_id_5_Finance_tr_500_1st_1",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:38.722247+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.08247002499999212,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/153_Stock_id_5_Finance_tr_500_1st_1.npy",
+      "score_sha256": "04f2758f6cf09d6af24488ee4f4509c125849266bc2066e1ecb7e7eeca8c29a9",
+      "score_array_sha256": "c06a571b670a274dcc607efc287e2ffaf26bfcf3692f674b124a31e162d591a7",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 214,
+      "zero_values": 5512,
+      "completed_utc": "2026-10-24T11:32:40.601949+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5412465719999773,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/153_Stock_id_5_Finance_tr_500_1st_1/1/anomaly_scores.ts",
+      "native_score_sha256": "3ad26d9099e00edf6c4e4ab7fa6494ad138d7798fffbdf691a8381586765bb7a",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "153_Stock_id_5_Finance_tr_500_1st_1",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:41.269608+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.5046133780000162,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/153_Stock_id_5_Finance_tr_500_1st_1.npy",
+      "score_sha256": "b05bed37a584269966a982a512bac581cd8494dbc17a55dd024811c2b4dfe50e",
+      "score_array_sha256": "c060af04777e87ae44ee4f3123f82af69b49633326f6bddf56474215712d681c",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 2184,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:43.538131+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.133547825000022,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/153_Stock_id_5_Finance_tr_500_1st_1/1/anomaly_scores.ts",
+      "native_score_sha256": "2e2704bbea9ac786663a884a338b9ab70a5045c915d62cedb0f151843675bd96",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "157_Stock_id_9_Finance_tr_500_1st_19",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:44.436862+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.06412847699999702,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/157_Stock_id_9_Finance_tr_500_1st_19.npy",
+      "score_sha256": "a300b43696a93451e2f4cd8f186f3b11510a648690346e3cfd3593a22b8757f2",
+      "score_array_sha256": "4cc38de5ba55104d9ecc000c18adcc4b91bf072b9fb67f4b3e450edfb220cdff",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 239,
+      "zero_values": 4848,
+      "completed_utc": "2026-10-24T11:32:46.218873+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.4663066579999793,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/157_Stock_id_9_Finance_tr_500_1st_19/1/anomaly_scores.ts",
+      "native_score_sha256": "d47b8269beea0418fb3ad704bdf88596280deec3d7a6c38eabf5963c2062f4b2",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "157_Stock_id_9_Finance_tr_500_1st_19",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:46.936948+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.49583387900000275,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/157_Stock_id_9_Finance_tr_500_1st_19.npy",
+      "score_sha256": "00bd04324000f4231d0fe579150f91bcf75ee2e2da64000049fefe3ba4f1b987",
+      "score_array_sha256": "494e2d92803262bd569b1ef0135c98c22d0bf1b48ac410d79393ee5ae2c901d6",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 3038,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:49.232340+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.142253347999997,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/157_Stock_id_9_Finance_tr_500_1st_19/1/anomaly_scores.ts",
+      "native_score_sha256": "cd1ea4a486df874ff7030d13583afce86f6b32915c80444a4ae1d1ef0e218f9e",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "161_Stock_id_13_Finance_tr_500_1st_3",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:50.101643+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.0832661979999898,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/161_Stock_id_13_Finance_tr_500_1st_3.npy",
+      "score_sha256": "7d00371bb92e6217d1c98f45cd4a10865909c33c806a6e5c56a30f7fb2323042",
+      "score_array_sha256": "ee1f7867735614c02f0448f48c4f9cff280657f5b292d600f873643600374448",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 195,
+      "zero_values": 5265,
+      "completed_utc": "2026-10-24T11:32:51.994735+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.6144931519999943,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/161_Stock_id_13_Finance_tr_500_1st_3/1/anomaly_scores.ts",
+      "native_score_sha256": "feca861f0b9bd4c090a152277bd3c68534155af77119cd168857d5ef944c7796",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "161_Stock_id_13_Finance_tr_500_1st_3",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:52.746432+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.49668504899997856,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/161_Stock_id_13_Finance_tr_500_1st_3.npy",
+      "score_sha256": "32f9151540ee7fdd65cd71a6d61f194d4348f261908521b722e0c7b78cb9fcdf",
+      "score_array_sha256": "c8dda7840ab98be5845d3aff5fedbd723a19d4efb702d07a3943912b7af29811",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 2197,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:32:55.024587+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.093002385999995,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/161_Stock_id_13_Finance_tr_500_1st_3/1/anomaly_scores.ts",
+      "native_score_sha256": "1b0b66093b38e03daed04500990de4f6a52c8813fb96f5ddc4c6141c48e468ae",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "163_Stock_id_15_Finance_tr_500_1st_3",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:32:55.857893+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.06636782399999674,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/163_Stock_id_15_Finance_tr_500_1st_3.npy",
+      "score_sha256": "93de1af30c6fde2346d3519339f61d188730eb2222dbe2705d1f94a0f55ce640",
+      "score_array_sha256": "5d9672cd2fb12874f93359cd200a060a476998aa7f6182e2f1516d20132245eb",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 247,
+      "zero_values": 5127,
+      "completed_utc": "2026-10-24T11:32:57.678317+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.520106314000003,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/163_Stock_id_15_Finance_tr_500_1st_3/1/anomaly_scores.ts",
+      "native_score_sha256": "becc20342a1ed129bbadb5fc26771f83c6d60bb81d5d2d35f14d3a02e4137bae",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "163_Stock_id_15_Finance_tr_500_1st_3",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:32:58.400383+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.48538427500000125,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/163_Stock_id_15_Finance_tr_500_1st_3.npy",
+      "score_sha256": "cb97579d360cb4fd1ae3a835a6d4fe32315fa944b9e0e4f90d32e0fd9a533d41",
+      "score_array_sha256": "f447f7a2502e21d86ff42915b70d302ebd811a42d7e6ee3dc7109c14a6108812",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 3052,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:00.659393+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.1059629019999875,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/163_Stock_id_15_Finance_tr_500_1st_3/1/anomaly_scores.ts",
+      "native_score_sha256": "0a73bed89bbc735c747c034a529d5eb46bc22bdb555ec1c598a989b87f06d2c6",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "167_Stock_id_19_Finance_tr_500_1st_7",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:01.522363+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.08006758499999478,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/167_Stock_id_19_Finance_tr_500_1st_7.npy",
+      "score_sha256": "9df87b2c029d827b21f2813235ebcd33bb49306c2f2d36e2931445ab71caa212",
+      "score_array_sha256": "8bce8efa7c34709bd804989e9c596ac92e243127b3738b7be4d9c88ac4101d5c",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 205,
+      "zero_values": 5490,
+      "completed_utc": "2026-10-24T11:33:03.319915+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.4741403830000195,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/167_Stock_id_19_Finance_tr_500_1st_7/1/anomaly_scores.ts",
+      "native_score_sha256": "a6209e1d0ba2727bacac259e5f096ba6d854cdf6de47b58c318af76cff923e6e",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "167_Stock_id_19_Finance_tr_500_1st_7",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:04.029772+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.5001422629999865,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/167_Stock_id_19_Finance_tr_500_1st_7.npy",
+      "score_sha256": "eb3218f00f30c69abb9867ddb4a94150c126f1a1dccd2c443ae4525aa7f57acc",
+      "score_array_sha256": "a282351a067bf1ea5f7740b9104fa109e2ac45173d8c38d56d13697349bdded7",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 2187,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:06.290060+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0975881090000144,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/167_Stock_id_19_Finance_tr_500_1st_7/1/anomaly_scores.ts",
+      "native_score_sha256": "837608e0413ec33c8c733c5a34e0eca12d65396712b148c3fe00bd65e18b854c",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "168_Stock_id_20_Finance_tr_500_1st_1",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:07.151276+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.0641753349999874,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/168_Stock_id_20_Finance_tr_500_1st_1.npy",
+      "score_sha256": "48a7135d22186f0f09314fae977439f21874049f11d1d2b34ffdbc94900b34fa",
+      "score_array_sha256": "647fc142bbefac87ab7cfa806c6dd0b057ae023c99bc651a00ea730560f89bc1",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 227,
+      "zero_values": 4757,
+      "completed_utc": "2026-10-24T11:33:08.957514+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5036663779999913,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/168_Stock_id_20_Finance_tr_500_1st_1/1/anomaly_scores.ts",
+      "native_score_sha256": "9ec11d39cdd87e65b85924f873d66613991e1090c30467e75226131856f49614",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "168_Stock_id_20_Finance_tr_500_1st_1",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:09.678414+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.47729959099999064,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/168_Stock_id_20_Finance_tr_500_1st_1.npy",
+      "score_sha256": "47a91f219c94cdae850e67ebd972ddd31e66f5c541e7b440fdac3d2fc7829b6f",
+      "score_array_sha256": "17fcdf2a760eee9bd0dc28b6d08f537fe0c378812da6172839e4d8200f2e1e8e",
+      "dtype": "<f8",
+      "shape": [
+        10000
+      ],
+      "distinct_values": 3044,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:11.898593+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0350315869999918,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/168_Stock_id_20_Finance_tr_500_1st_1/1/anomaly_scores.ts",
+      "native_score_sha256": "5c29d6c831620504f569407e80910cebfc2a9b76567b660626b734ea41b565f4",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "152_Stock_id_4_Finance_tr_500_1st_2",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:12.750151+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.09174684699999602,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/152_Stock_id_4_Finance_tr_500_1st_2.npy",
+      "score_sha256": "bdbf21d27ed0bf8a317e3ef0b727d25368070fcba17f7cc878e3da57612b5c20",
+      "score_array_sha256": "c93a98b3cae48e4a11f77515d935884c0eae897591f2619e9849159dd2ba3c68",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 451,
+      "zero_values": 9101,
+      "completed_utc": "2026-10-24T11:33:14.615216+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5721746030000077,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/152_Stock_id_4_Finance_tr_500_1st_2/1/anomaly_scores.ts",
+      "native_score_sha256": "b6ec5fc91b4f25fcb1e78678542b8773f30bc3fd89164b67614be38beb9160f4",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "152_Stock_id_4_Finance_tr_500_1st_2",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:15.361683+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4807881560000169,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/152_Stock_id_4_Finance_tr_500_1st_2.npy",
+      "score_sha256": "2ebdf3241fd53d729e0dfca34242c1aea71d956f71544cb4652cade6b934e6e0",
+      "score_array_sha256": "40da3a35e063e863faee68fb4d349d1635f33a861d2209d216e7b1b0c970696f",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 5095,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:17.590504+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0971504390000177,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/152_Stock_id_4_Finance_tr_500_1st_2/1/anomaly_scores.ts",
+      "native_score_sha256": "8fb0fd85daa826e29830f33a51d93f57b08c411373f80c43d9037ac6c12bf87a",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "154_Stock_id_6_Finance_tr_500_1st_38",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:18.508128+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.08961953900001163,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/154_Stock_id_6_Finance_tr_500_1st_38.npy",
+      "score_sha256": "5955440c2aedfe8878a6794e6a7a4a4115d23eb14c8f44902e34a5d2ae3baaa4",
+      "score_array_sha256": "65b6b795280f88f95b1e005ade0836389061f00bb759291f26354960d07e5f66",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 245,
+      "zero_values": 17632,
+      "completed_utc": "2026-10-24T11:33:20.348855+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.5252953639999873,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/154_Stock_id_6_Finance_tr_500_1st_38/1/anomaly_scores.ts",
+      "native_score_sha256": "e418ed3173344b838a999a1fa76d87a6952381c7e023411fc816136aee42e17d",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "154_Stock_id_6_Finance_tr_500_1st_38",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:21.078119+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.5040271210000071,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/154_Stock_id_6_Finance_tr_500_1st_38.npy",
+      "score_sha256": "c7470471d93b5dd3e5b0c92e715fe4091613b5ac89172222e84b0a761ad944a3",
+      "score_array_sha256": "eb1f8a6ba6bcd397d7d54fce1cf3729e5ef289221b2b3a75be05d0d110576b0e",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 3318,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:23.414909+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.227435890999999,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/154_Stock_id_6_Finance_tr_500_1st_38/1/anomaly_scores.ts",
+      "native_score_sha256": "a1e5d2c28040115937e7e8f6193314831bd3bfc6b68ba743d99c86e0742548f1",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "158_Stock_id_10_Finance_tr_500_1st_2",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:24.348604+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.09101847600001634,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/158_Stock_id_10_Finance_tr_500_1st_2.npy",
+      "score_sha256": "3d93edf2474920a51d799f4ee2351055af605417c4b5bc9371dcdd05631aa220",
+      "score_array_sha256": "6df98d777b6b87cbbb50cec39146062558d098f009812f25900da7ecab1252da",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 250,
+      "zero_values": 17599,
+      "completed_utc": "2026-10-24T11:33:26.230081+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.588251850000006,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/158_Stock_id_10_Finance_tr_500_1st_2/1/anomaly_scores.ts",
+      "native_score_sha256": "261c18480aeef71740fa1c5794ad2941a5d4afe178f8bd0f920fca5d406b75e1",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "158_Stock_id_10_Finance_tr_500_1st_2",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:26.994558+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4979646429999889,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/158_Stock_id_10_Finance_tr_500_1st_2.npy",
+      "score_sha256": "0d8eae69f102c753ef4261d0f2b33ec54944610c469ffc6ba64c0e8605c028dc",
+      "score_array_sha256": "0cffb16e9f8f9903548519d9771d79b87bb2adc482b24c6076f3b4b7c64493d0",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 3318,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:29.241325+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.155768461000008,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/158_Stock_id_10_Finance_tr_500_1st_2/1/anomaly_scores.ts",
+      "native_score_sha256": "e94eca113aafa249c3f3fb59030be196718de7597af25d868e1a30c8a505792e",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "159_Stock_id_11_Finance_tr_500_1st_5",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:30.200909+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.08861580200002095,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/159_Stock_id_11_Finance_tr_500_1st_5.npy",
+      "score_sha256": "63303b0f744080c668b925b8b09e80fd851dc623bc9e73d29a3cd3720e72a274",
+      "score_array_sha256": "283b0d3ca9a1db4ebfa2e4da065c2014ec7cfc7d0f96b11c61d80bb1f54982f5",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 465,
+      "zero_values": 9368,
+      "completed_utc": "2026-10-24T11:33:32.089474+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.6042318230000205,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/159_Stock_id_11_Finance_tr_500_1st_5/1/anomaly_scores.ts",
+      "native_score_sha256": "2b21ca367c82fc97cf5d50660341e294dc9061084a20bb44b05eb9e9c75d78e8",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "159_Stock_id_11_Finance_tr_500_1st_5",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:32.835609+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4777961230000187,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/159_Stock_id_11_Finance_tr_500_1st_5.npy",
+      "score_sha256": "cd5483eb4e5fdee0f11329397658bb169cf5ebc052b4d8fc4eedadf455bb0be2",
+      "score_array_sha256": "a8d775045bf99209984f7bd3258c7a5ac3239dc5a1bd0d4104652c7cbe58efbc",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 5084,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:35.110071+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.176281246000002,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/159_Stock_id_11_Finance_tr_500_1st_5/1/anomaly_scores.ts",
+      "native_score_sha256": "3f8ae1833cd0c1dcd5ad754254defc05af415ed11343a8449c5ea5ae801015b0",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "164_Stock_id_16_Finance_tr_500_1st_8",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:36.082270+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.08936074700000063,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/164_Stock_id_16_Finance_tr_500_1st_8.npy",
+      "score_sha256": "402bd4b8eaa30a3ac92fbe09162de363b27bdf8c54dff9925821781a42dc8c55",
+      "score_array_sha256": "f1401399bbf0ecfd1ea2bc6dc03686affff16126a8c1954c2e4522de055c25a2",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 473,
+      "zero_values": 9952,
+      "completed_utc": "2026-10-24T11:33:37.942257+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.597840032999983,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/Stock/164_Stock_id_16_Finance_tr_500_1st_8/1/anomaly_scores.ts",
+      "native_score_sha256": "cf83aff59262aa3763be241e83064ef3b523396a12ec8e408f193b7d840bdaf9",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "164_Stock_id_16_Finance_tr_500_1st_8",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:38.709597+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4926122120000116,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/164_Stock_id_16_Finance_tr_500_1st_8.npy",
+      "score_sha256": "b05b6452da302e06d555e1957394b058d24e109ae04300cd243e337cbc9e62f0",
+      "score_array_sha256": "e2e679e1f6da4c7b6c0841c2c1bcc3a627680ac147a8e13d31ad244843bca153",
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "distinct_values": 5051,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:40.984344+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0891601479999906,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/Stock/164_Stock_id_16_Finance_tr_500_1st_8/1/anomaly_scores.ts",
+      "native_score_sha256": "cc5684d5192c7593921cff9153205ee8a09a00b1908c40ac09fd242051c579f6",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:41.864979+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.03588531200000489,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/146_MSL_id_7_Sensor_tr_554_1st_1172.npy",
+      "score_sha256": "98e8ac9cafae7f3a576c961505b47436c4e414cca2e7391b72d62189118ea7fb",
+      "score_array_sha256": "bb009d04283542eea43c6634e04ac3ce502fccb52fe7cfe33c8328ff26e3abe1",
+      "dtype": "<f8",
+      "shape": [
+        2217
+      ],
+      "distinct_values": 39,
+      "zero_values": 1360,
+      "completed_utc": "2026-10-24T11:33:43.639448+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.4365087019999976,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/MSL/146_MSL_id_7_Sensor_tr_554_1st_1172/1/anomaly_scores.ts",
+      "native_score_sha256": "a392d60471a21a89cfab21290b1d6af774f04dd4eeba96749889d187d88e20cc",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:44.290886+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.4957884849999914,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/146_MSL_id_7_Sensor_tr_554_1st_1172.npy",
+      "score_sha256": "f4414b92322341b2a1a50cb63ffa04afcb1e28e06cee343fc5f28d55ba540244",
+      "score_array_sha256": "f417f1f42d0c9a256be5ca1c9c5bec8f3af0d51c33d63bcf8c8ce29e87dc21bd",
+      "dtype": "<f8",
+      "shape": [
+        2217
+      ],
+      "distinct_values": 3,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:46.553707+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.074420695999976,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/MSL/146_MSL_id_7_Sensor_tr_554_1st_1172/1/anomaly_scores.ts",
+      "native_score_sha256": "c617cb72f1c23e39f2acbd704d4dd88fedcb21a630764007802476230c62275c",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+      "model": "FFT",
+      "started_utc": "2026-10-24T11:33:47.377520+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.04560907600000519,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/FFT/142_MSL_id_3_Sensor_tr_1525_1st_4575.npy",
+      "score_sha256": "a3fc05c167bff089a977c5000d209a796c6487387e394e8ebd77b5b0ca2556d1",
+      "score_array_sha256": "ad5bafaf5690941e90105eb1bbcb0ad6161f6a9cd150343d81a85fa051af2b5f",
+      "dtype": "<f8",
+      "shape": [
+        6100
+      ],
+      "distinct_values": 6,
+      "zero_values": 6053,
+      "completed_utc": "2026-10-24T11:33:49.163027+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 2.503250715999968,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/FFT/public-default/MSL/142_MSL_id_3_Sensor_tr_1525_1st_4575/1/anomaly_scores.ts",
+      "native_score_sha256": "5fbb28b50d2d1e4faa878eae8553d92485e3e7a7def25fdf6b7e21d5a4fc25b5",
+      "native_float64_bit_roundtrip": true
+    },
+    {
+      "case_id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+      "model": "COPOD",
+      "started_utc": "2026-10-24T11:33:49.890973+00:00",
+      "protocol_sha256": "002a2e3cbca7350d195033f1386a89c5ed5c9b7da44b99b4202249b5dbec8b2e",
+      "metric_evaluation_performed": false,
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "version": "0.3.23.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+          "version": "0.3.27.dev",
+          "threading_layer": "pthreads",
+          "architecture": "Zen"
+        }
+      ],
+      "detector_fit_wall_seconds_not_metric_time": 0.47331043299999465,
+      "status": "Status.OK",
+      "score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/scores/COPOD/142_MSL_id_3_Sensor_tr_1525_1st_4575.npy",
+      "score_sha256": "15a570f954bd67dc5ac851ff51b1ef47db92cf933e86e842d32c0b60287ca5eb",
+      "score_array_sha256": "72af3b16acab0958c1fc34e8a823ce6a783609512ee2d6924ac747309172fb55",
+      "dtype": "<f8",
+      "shape": [
+        6100
+      ],
+      "distinct_values": 611,
+      "zero_values": 0,
+      "completed_utc": "2026-10-24T11:33:52.089401+00:00",
+      "stdout": "",
+      "stderr": "",
+      "subprocess_wall_seconds_not_metric_time": 3.0583416329999977,
+      "native_score_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/COPOD/public-default/MSL/142_MSL_id_3_Sensor_tr_1525_1st_4575/1/anomaly_scores.ts",
+      "native_score_sha256": "dfafe20f8def04f460b8240b9cff770c754a98fbd9a33ef96fe931f84291b0da",
+      "native_float64_bit_roundtrip": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+      "family": "WSD",
+      "n": 10744,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/096_WSD_id_68_WebService_tr_1341_1st_1441.npz",
+      "npz_sha256": "aef721d9b8f3f2737a7431ee0f3ebc3515898c385867cdefb37b09ecf0d865e3",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/096_WSD_id_68_WebService_tr_1341_1st_1441.npz",
+      "labels_sha256": "2536fc389720ca3d0215a876842c5da44a2609c29ceb5c299c60e07be91badc6",
+      "scores_sha256": "69000fe588de87ac82151f782c1ac4068e550a6ff70eb7468d23bcde63d02813"
+    },
+    {
+      "id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+      "family": "WSD",
+      "n": 15285,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/076_WSD_id_48_WebService_tr_3821_1st_7083.npz",
+      "npz_sha256": "33317fe82785dd04134d81c3d4f92860b907cce81bd1114c02114eb78e38d27c",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/076_WSD_id_48_WebService_tr_3821_1st_7083.npz",
+      "labels_sha256": "bb8b029e1163cadd7bcf2872aea1c669ca56e1feced8b9a0a6ca8121efb75d19",
+      "scores_sha256": "5ac466b8ba873dd768f5bc3d4453d50795e7af630d1546b488554f30399e7958"
+    },
+    {
+      "id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+      "family": "WSD",
+      "n": 17438,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/120_WSD_id_92_WebService_tr_2329_1st_2429.npz",
+      "npz_sha256": "59c0b19c27384a70466ae90e498b2ef4a82b7ed80ba3d0a4e216397b03263c7a",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/120_WSD_id_92_WebService_tr_2329_1st_2429.npz",
+      "labels_sha256": "6fd0c7f983eb7e0a83367d919ae649c5e09da3898e5c3a62580717b4597747a3",
+      "scores_sha256": "bdc8fa94dcc15b4b20413470d546bf3fce3fea1281362d413b5cbaff4dbf4ff7"
+    },
+    {
+      "id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+      "family": "WSD",
+      "n": 18084,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/038_WSD_id_10_WebService_tr_4042_1st_4142.npz",
+      "npz_sha256": "f1b4a9f746c995c6e573f59fa7f185ba4fac3c43356ba4d207db70d135b996ce",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/038_WSD_id_10_WebService_tr_4042_1st_4142.npz",
+      "labels_sha256": "60ec25d5496a28fab84a8c59ea63b44c9fedad1e03d23610acb587d962f52ecf",
+      "scores_sha256": "92f0ba16382478ce8e7a8ae8d1ddc6c394845bd8cc7949c369ac78fb4abe8353"
+    },
+    {
+      "id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+      "family": "WSD",
+      "n": 18214,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/115_WSD_id_87_WebService_tr_2252_1st_2352.npz",
+      "npz_sha256": "1c5cd387d5ddf03b8cbf7d166da60f129f0696099f101ac76f031d5a18ef3830",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/115_WSD_id_87_WebService_tr_2252_1st_2352.npz",
+      "labels_sha256": "27f24245aa706cf5af9b891888a7fdc9ceac68e15c7c09b0a880bbc8afcdca5f",
+      "scores_sha256": "620e75500de0a1013b4dc034c85c2e7ea7a02a6ed9f810179671b8de32b8d8f3"
+    },
+    {
+      "id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/034_WSD_id_6_WebService_tr_4559_1st_8461.npz",
+      "npz_sha256": "67a860dbe2ba8dbd3d8f2c530e12f1c441b69042be465acc8b3d5bb6148f8caa",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/034_WSD_id_6_WebService_tr_4559_1st_8461.npz",
+      "labels_sha256": "e6ff2cbe5b6f456887d88f4ea787ec7dd2e45d913e98c743a9e389a731be6f85",
+      "scores_sha256": "172e7eba1a4dd54406b454e6f6e270c5e020a822a2d91b70c4c62a347c98af0f"
+    },
+    {
+      "id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/057_WSD_id_29_WebService_tr_2229_1st_2329.npz",
+      "npz_sha256": "ded33faa0a749b9bc1eea81b0b7bfaa2235a9146d9e310a33a533cea547a9062",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/057_WSD_id_29_WebService_tr_2229_1st_2329.npz",
+      "labels_sha256": "864e99c4d515db7839cfd4808148d5950c3c4e8b1fad424851089588ef456723",
+      "scores_sha256": "3a3e0e253d7d27bd2a4591bd2388ab7dbc7c382959af0bdb5c950a2e093ce957"
+    },
+    {
+      "id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/071_WSD_id_43_WebService_tr_3387_1st_3487.npz",
+      "npz_sha256": "19a565ca392fc261f0c00fd5b06efc09eeb67fe1e2792c2e247d33633b4f2581",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/071_WSD_id_43_WebService_tr_3387_1st_3487.npz",
+      "labels_sha256": "a2ce01880e7409ed54bcfbc6a27e7e6ba38a7539a05dc616168a160b8e7c5bb8",
+      "scores_sha256": "ba12d19f10dba874bf45807531722a0a4b66cd2a98a7b9034d970a007596c6f3"
+    },
+    {
+      "id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/101_WSD_id_73_WebService_tr_1513_1st_1613.npz",
+      "npz_sha256": "86fd3de1a8b178c4e868215a1544df60edb3f1c14ede611458d8f6c3eb1985b5",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/101_WSD_id_73_WebService_tr_1513_1st_1613.npz",
+      "labels_sha256": "6042d417d2a6845e504a0ddbea34112573814f6506287bf4ea22e54cde57a9fd",
+      "scores_sha256": "77031e8b10b79434f60ed0cb6851b1889d7e963ce1b8eedae2b4ddcbc238ab4e"
+    },
+    {
+      "id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/124_WSD_id_96_WebService_tr_4559_1st_14350.npz",
+      "npz_sha256": "8df8b24198a491fc59580c010614978f986b2442b498cdb5e56cb3b7091c4be4",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/124_WSD_id_96_WebService_tr_4559_1st_14350.npz",
+      "labels_sha256": "75b4cc408330e21913d223d280618441170e8bb16361dd18c66ece736cc383a1",
+      "scores_sha256": "fcd5ad5d46c7db2fea1ae2a865f07d7b7e9399af8c85ae695baae09d1f31a60a"
+    },
+    {
+      "id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+      "family": "WSD",
+      "n": 18302,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/066_WSD_id_38_WebService_tr_3320_1st_3420.npz",
+      "npz_sha256": "576120c3a3bf3ac299378c904b6434ff64001a62ea60145bc495bf8ca82a6947",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/066_WSD_id_38_WebService_tr_3320_1st_3420.npz",
+      "labels_sha256": "cae9d75dc2acb1f0552b5c8acf28153a3a7545edbc79884004d96a2db496d00d",
+      "scores_sha256": "b3e93686827eaa63df7a4d3b9cb389428ecd5a009ac5bf652cdbc38e384b7450"
+    },
+    {
+      "id": "126_WSD_id_98_WebService_tr_657_1st_757",
+      "family": "WSD",
+      "n": 18883,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/126_WSD_id_98_WebService_tr_657_1st_757.npz",
+      "npz_sha256": "1d2685477b0fcb58af91f479c3484ed8481543eb597af4a55359db19bd777c0d",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/126_WSD_id_98_WebService_tr_657_1st_757.npz",
+      "labels_sha256": "ee013cedef8f39bf1b0cee3d675b6c1e81b7d60f94901eb1b0b14c60d27dd814",
+      "scores_sha256": "7eb85ea384836400a0f65a3766b6303e3b8bb6dca77edb249db60e3c9381db8e"
+    },
+    {
+      "id": "150_Stock_id_2_Finance_tr_500_1st_7",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/150_Stock_id_2_Finance_tr_500_1st_7.npz",
+      "npz_sha256": "69a7788f7e14b34fd22399c49e7f153f5c2599d689008f36a75636318f6e6a25",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/150_Stock_id_2_Finance_tr_500_1st_7.npz",
+      "labels_sha256": "aac9e21d753ea9d3b04e604624c4ab90e06a786e78c8e7a595b86f92a3d66221",
+      "scores_sha256": "afd2944275838e8b0dfb3680e5d14870338b4c711b40a1a131396f2e12ac75cc"
+    },
+    {
+      "id": "153_Stock_id_5_Finance_tr_500_1st_1",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/153_Stock_id_5_Finance_tr_500_1st_1.npz",
+      "npz_sha256": "12c664b749704c70ae319184fa2410b46ddc605980d620f955ba6e3c3806f308",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/153_Stock_id_5_Finance_tr_500_1st_1.npz",
+      "labels_sha256": "a4f194008c72ed65e78cbe8151817c43f02f73b9fddd7c989a64f65ee7b2accf",
+      "scores_sha256": "acadf8aa797d7ae852a62b354650d645c358dfc60c97bb2bcd8d79b2376d8c83"
+    },
+    {
+      "id": "157_Stock_id_9_Finance_tr_500_1st_19",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/157_Stock_id_9_Finance_tr_500_1st_19.npz",
+      "npz_sha256": "df183a6b380d95e13fa9507a5fe29fda46c76389082cb7c96298fb048310ecc3",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/157_Stock_id_9_Finance_tr_500_1st_19.npz",
+      "labels_sha256": "cc82b4e12cd694647430660a76925029953c2fed938260f67014798a2b008423",
+      "scores_sha256": "539c192bdb2f8096df518b9848ec70eff2051bd8d45da7582bc4c03fd00c6410"
+    },
+    {
+      "id": "161_Stock_id_13_Finance_tr_500_1st_3",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/161_Stock_id_13_Finance_tr_500_1st_3.npz",
+      "npz_sha256": "1fb51558d935665e9b7d2f0025dafaa45f75a5c788d3554230df19a4ca8dc838",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/161_Stock_id_13_Finance_tr_500_1st_3.npz",
+      "labels_sha256": "59fce0190e6d994d52bef94b139fe645b0dbd92231642864766f2bb4d793b2ba",
+      "scores_sha256": "12823e3fc4a2f6e129b5b9810f8861c665a04638d681b1bab4f03ade794bc0b3"
+    },
+    {
+      "id": "163_Stock_id_15_Finance_tr_500_1st_3",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/163_Stock_id_15_Finance_tr_500_1st_3.npz",
+      "npz_sha256": "af2da7404d400423e6301e02a905f7c0b981e0cbffc182b50e26cff0bc8ee877",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/163_Stock_id_15_Finance_tr_500_1st_3.npz",
+      "labels_sha256": "9d16c27476d775d17106acd099cb992d2e96c02d9b1619e31b2c43163ea0ea4b",
+      "scores_sha256": "acf74b8912564be0d5636144c8cff131c920c169be6ec5e18031e2ea9e0e0e8a"
+    },
+    {
+      "id": "167_Stock_id_19_Finance_tr_500_1st_7",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/167_Stock_id_19_Finance_tr_500_1st_7.npz",
+      "npz_sha256": "541c9375b5381c3fba0df432cf9cd36dce2750995a213330b21ac7df841fc1f4",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/167_Stock_id_19_Finance_tr_500_1st_7.npz",
+      "labels_sha256": "b8436381e11a20c49029fa4db7f541363558eae9dcd81ccccbea65c0b5e06675",
+      "scores_sha256": "0797d8499cdeba407dc3101c10aa56e02896e2568c44af0caebd5c2ff45cdf35"
+    },
+    {
+      "id": "168_Stock_id_20_Finance_tr_500_1st_1",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/168_Stock_id_20_Finance_tr_500_1st_1.npz",
+      "npz_sha256": "1e6125a765a9266faacad532a7c97e87628d80865b3785476af524199e82f6d7",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/168_Stock_id_20_Finance_tr_500_1st_1.npz",
+      "labels_sha256": "cdcc0a3739cb0bd550356c1a8d109912d1c14b40c6b5ae081e3acaac580ef813",
+      "scores_sha256": "7ab0351d416ad0b85a22ac35669a3c7faa103318edb47289df5ace887a1e9708"
+    },
+    {
+      "id": "152_Stock_id_4_Finance_tr_500_1st_2",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/152_Stock_id_4_Finance_tr_500_1st_2.npz",
+      "npz_sha256": "7e29b4b2a320e9cf53d7ca7b865905a82b6117fc81fe0900ab11a88abb043977",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/152_Stock_id_4_Finance_tr_500_1st_2.npz",
+      "labels_sha256": "9c6194171d7074258d2d39f0c9c040475926f33ec7367ad9067e92f98b7ab30b",
+      "scores_sha256": "9d6ea77939ec745b8688af13786299ea6471730d6fd55f10262e1a9c358387aa"
+    },
+    {
+      "id": "154_Stock_id_6_Finance_tr_500_1st_38",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/154_Stock_id_6_Finance_tr_500_1st_38.npz",
+      "npz_sha256": "8a7242029c0244980a2e9cecb6974de1e52a93bc421f92d83b7cb4b8c32709b9",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/154_Stock_id_6_Finance_tr_500_1st_38.npz",
+      "labels_sha256": "3f02b33bcff262889328a3b2318393752b85d07ef37341e3ac714557713434a7",
+      "scores_sha256": "4b36cf9ad92f9265f7c52f9c97b7769a8c000dddbd8b1306ff0149aec5edd1ca"
+    },
+    {
+      "id": "158_Stock_id_10_Finance_tr_500_1st_2",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/158_Stock_id_10_Finance_tr_500_1st_2.npz",
+      "npz_sha256": "77bdef45f915c647e6f019031f521d5ef3e6fc8030739a757a4ff87034a5dc16",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/158_Stock_id_10_Finance_tr_500_1st_2.npz",
+      "labels_sha256": "ccc5dc5927d5c6b424e4203a02737fac4c2683e84a7a3f83476a0eeb3131061d",
+      "scores_sha256": "d783afa9eb83954affa53af55b6b338b54f44df2d852b952bc30c5542983d1a3"
+    },
+    {
+      "id": "159_Stock_id_11_Finance_tr_500_1st_5",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/159_Stock_id_11_Finance_tr_500_1st_5.npz",
+      "npz_sha256": "a0b07fbe952266c390b252f9c97d01a51b80fd8e7a7a7579a2398193f9c93582",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/159_Stock_id_11_Finance_tr_500_1st_5.npz",
+      "labels_sha256": "cc2fce27c73176a66e30ce03301391094a5e4b97b1126d7bc6e4041abb72c8d8",
+      "scores_sha256": "b8804870cc22df88617d8632f8b860321953079d0a6413f67477a0ef6bf79f6b"
+    },
+    {
+      "id": "164_Stock_id_16_Finance_tr_500_1st_8",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/164_Stock_id_16_Finance_tr_500_1st_8.npz",
+      "npz_sha256": "0a94c8d58e42fcbd6466108529d3b34e9d6eda9b7f195b7b5b64ed0abd332c86",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/164_Stock_id_16_Finance_tr_500_1st_8.npz",
+      "labels_sha256": "295eb5ac11ff9c2f732032e0519f10507702bac7001e3d126f30fc207ffac6b5",
+      "scores_sha256": "b2f9fe222c66df8aec5c4b292740bf702584c8f7dd8800c7d2400c81c1a1a223"
+    },
+    {
+      "id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+      "family": "MSL",
+      "n": 2217,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/146_MSL_id_7_Sensor_tr_554_1st_1172.npz",
+      "npz_sha256": "d32e8ce447457a8eeed65329665eb1e265e0b1b8d9d40bf7b516cbfeec17628b",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/146_MSL_id_7_Sensor_tr_554_1st_1172.npz",
+      "labels_sha256": "5efc2dc0cdb644b862d3fa2cc21a0f1a63a73f9d2d44a3c370c41843ff3c53dd",
+      "scores_sha256": "7d5589b0c3f8ccad29ff14b9544515eb466c967fe8972737c8feea837d5a5d51"
+    },
+    {
+      "id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+      "family": "MSL",
+      "n": 6100,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/arrays/142_MSL_id_3_Sensor_tr_1525_1st_4575.npz",
+      "npz_sha256": "00e1d456b7415af26417728708661a240f934a5b25270aca17cb7a9a5910df6f",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/142_MSL_id_3_Sensor_tr_1525_1st_4575.npz",
+      "labels_sha256": "abcf8b34d46cb5ea1e0cb73a645b894b46298c608a5f8ed32c2be4f834ed2d7d",
+      "scores_sha256": "1bb1bd507bf1dcac62963b94d93af562cf6ab2c332a19290a8341d1de4925fc8"
+    }
+  ],
+  "native_layout": {
+    "datasets_directory": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/datasets",
+    "datasets_csv": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/datasets/datasets.csv",
+    "datasets_sha256": "fa167954eaef6afceb5c9390a7e2835c0d55cca11cc3b7bfcbbc571c3b7a14c7",
+    "results_directory": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results",
+    "results_csv": "/home/runner/work/_temp/affinity-blocks-replica/.cache/strengthening-workload/results/results.csv",
+    "results_sha256": "dac3a2a0bff5b5fa00ffe288444b1650fb10041c7da3d4a61ce5320dc5c72b58",
+    "immutable_template": true
+  },
+  "environment": {
+    "python": "3.11.9 (main, Jul 15 2024, 21:50:42) [GCC 13.2.0]",
+    "executable": "/opt/hostedtoolcache/Python/3.11.9/x64/bin/python",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.14.1",
+      "scikit-learn": "1.5.2",
+      "torch": "2.10.0+cpu",
+      "numba": "0.59.1",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0"
+    },
+    "statsmodels": "0.14.6",
+    "statsmodels_file": "/opt/hostedtoolcache/Python/3.11.9/x64/lib/python3.11/site-packages/statsmodels/__init__.py"
+  }
+}
