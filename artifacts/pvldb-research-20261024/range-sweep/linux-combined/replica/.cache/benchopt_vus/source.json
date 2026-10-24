@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/benchopt/benchmark_tsfm",
+  "revision": "2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94",
+  "upstream_commit_date": "2026-09-29T21:02:26Z",
+  "vus_introduction_revision": "2283ad02a6e4546430ea9611fd336d65f4297638",
+  "vus_introduction_date": "2026-05-29T12:20:37Z",
+  "source_url": "https://raw.githubusercontent.com/benchopt/benchmark_tsfm/2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94/benchmark_utils/metrics.py",
+  "source_sha256": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+  "license": "No license file detected at this revision; upstream source is cache-only.",
+  "adapter": "Unchanged AST for _segments, _extend_labels, _merge_segments, _range_auc_volume; NumPy dependency only.",
+  "output": "ROC and PR pair, also when the consumer selects PR only.",
+  "threshold_contract": "250 by default; max_samples=len(scores) includes all score thresholds.",
+  "timing_contract": "Includes upstream score sorting, full-array ramps, cumulative sweeps, segment maxima and both integrals; cached source loading excluded after warm-up."
+}

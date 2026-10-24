@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-24T04:54:45.670251+00:00",
+  "title": "TimeSeAD: Benchmarking Deep Multivariate Time-Series Anomaly Detection",
+  "venue": "Transactions on Machine Learning Research",
+  "year": 2023,
+  "published_pdf": "https://openreview.net/pdf?id=iMmsCI0JsS",
+  "official_project_citation": "https://timesead.readthedocs.io/en/latest/",
+  "verified": "Author/title/venue/year corroborated by published PDF first page and project documentation; separate from pinned 2025 source implementation.",
+  "recent_2024_2026_counted": false
+}

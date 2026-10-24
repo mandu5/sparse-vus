@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-24T05:23:00.233387+00:00",
+  "scope": "Final archive/source/PDF/review integrity and recorded validation checkpoint; no new timing run or external publication decision.",
+  "canonical_execution": {
+    "run_id": 40062043152,
+    "source_commit": "e2405e39ec23486a3d228240569b48785de32cb4",
+    "url": "https://github.com/mandu5/sparse-vus/actions/runs/40062043152",
+    "archive_sha256": "cf9e0531b3ab00bc9f3f6d28113d62497f1ebe1c66b5eae2fe0fae915c898ec7"
+  },
+  "archive_verification": {
+    "manifest_sha256": "9e5babcc17b75f2dcb9879625966b16f17e734ea0a18b95b87f6e9160588c0d5",
+    "files": 568,
+    "bytes": 147330993,
+    "exact_file_coverage": true
+  },
+  "frozen_source_sha256": {
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "experiments/pvldb_supplement.py": "4e2a8e4140c0a0f662ca4e97c52bde52acaf728df6872318c07e2da73deba318",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+    "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+    "experiments/range_sweep_study.py": "74ea8b546ef1de8384a15e675d6584616011092e4b2eb887c0b3531ed237e57c",
+    ".cache/range-sweep-timesead/LICENSE": "3e3ed418d1b09a2917f4045cc49371554958fcc3337105a299adddb5805b87e2",
+    ".cache/range-sweep-timesead/timesead/evaluation/__init__.py": "a17a3a444959adcafaf937bd7e769b817492f1412468f704a9ed223348ae4f16",
+    ".cache/range-sweep-timesead/timesead/evaluation/ts_precision_recall.py": "d5bb774b4aab9e441e4119e957ce5fe52a4abed965d6286705836e002dd162c8",
+    ".cache/range-sweep-timesead/timesead/evaluation/evaluator.py": "f84495ccc62eeba905c515c8ac2d709b10302a6e20220692348ef73b6a633cea",
+    "experiments/pvldb_consumer.py": "287eb7c3a1f94144a0894e700ae61926059b48bfd0910a690d7c0d7926df71cf",
+    ".cache/tsbad-consumer/pkg/TSB_AD/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/metrics.py": "13957d15d3ebb2b743a4bebfa3a68af31e82a58ecc568557b4081ad90e38094d",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/basic_metrics.py": "1fcddedf5ada1d5221f39ee568c7fddb9e7181bd7e1c19636c2cbecf40c97707",
+    ".cache/tsbad-consumer/pkg/TSB_AD/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/tsbad-consumer/pkg/TSB_AD/utils/slidingWindows.py": "0ba65735c6572cd80e586409d4f653253d847e08fbae8e1da6e474e142e74af6",
+    ".cache/tsbad-consumer/pkg/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    ".cache/tsbad-consumer/pkg/benchmark_exp/HP_Tuning_U.py": "3c809dd6dbf868da9698112487909d128947f25c2af9cfb3f065b588f478bb9c",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_affiliation_zone.py": "3b289bf11cebe614afabe353c873de90ba9debf8831aef8f73532870dce01ba2",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_integral_interval.py": "8177e69eccb0ae4ea76b2f54f6799ae61758b5a103603fae3d1a3a8d331e7cda",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_single_ground_truth_event.py": "a04b5daa0fb0ef68893807c7ab5d4353b43f0d5231ae06ef0006b2e6cf939165",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/generics.py": "16743b204d24feb8ba9deaabceb7b0cf900520136e8a3b77e499448fcaafbfc9",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/metrics.py": "9fe83cd2cb1cd4b1b3c7869971e94a18d5ea71b4103f88e347de70c8330cc060",
+    "experiments/range_sweep_public.py": "19cd498100297d42b4b45e150e0f1b6343b52c0e4cea1823bd56b7965689d985",
+    "experiments/range_sweep_validation.py": "5453f30e8af5056fd71844203c5d214cf322dba0bd5e39bd9e8e60176064038e"
+  },
+  "review_sha256": {
+    "docs/reviews/20261024/exact-metrics-independent-review.md": "939037df607772fec545a6404cd39f46fb575a4fe5b3478c443aa8c1ca920480",
+    "docs/reviews/20261024/exact-metrics-theory-review.md": "a761a6be3d6e99e696d4ff2a71e36a1a154b244a3f9e0699cb71f4698d0c12ad",
+    "docs/reviews/20261024/exact-metrics-blind-review.md": "2ff1046ac50de84c9c79bf9fb298cea99552420fcce684d4bff8d9713b6118a4",
+    "docs/reviews/20261024/range-reproduction-code-review.md": "8dd3b18f2fb9022914705d5b73915265450bbb5e76c5ae125111b149f7442480"
+  },
+  "final_pdf": {
+    "path": "paper/exact_metrics_pvldb20261024.pdf",
+    "sha256": "6646c1f497273f2e4731d158761568c26b7cf04b3b06978813aa1962518e3a11",
+    "total_pages": 13,
+    "references_begin_page": 12,
+    "all_pages_rendered_and_visually_inspected": true
+  },
+  "full_suite_prior_execution": {
+    "log": "range-sweep/full-pytest.log",
+    "sha256": "7ec3ce7caa2a23e92ab605b8e9315467870730d2c708e49f8443fb03c0fe2f39",
+    "passed": 3675,
+    "warnings": 2,
+    "seconds": 64.91,
+    "note": "Recorded prior run; later modified code consists of reviewed post hoc plot/accounting helpers, both syntax-checked here. Frozen numerical code unchanged."
+  },
+  "local_reaudit_receipt_sha256": "55e3d7f7439bf133982b7106c2c881144b077460ed9c2e2dd3b151a0c549232d",
+  "posthoc_helpers_syntax_check": "PASS",
+  "git_diff_check": {
+    "authored_changes": "PASS",
+    "pinned_external_source_snapshots": "Upstream whitespace warnings retained to preserve exact source SHA-256; excluded only from the whitespace check, not from manifest/source integrity verification."
+  },
+  "decision": {
+    "six_evidence_gates": "PASS for bounded exact-operator claim",
+    "investment_5": "SATISFIED",
+    "investment_6": "SATISFIED through prospectively allowed substantive-generalization alternative",
+    "mock_review_recommendations": [
+      "Weak Accept 7/10",
+      "Weak Accept 6/10",
+      "Accept 7/10"
+    ],
+    "original_smd_batch_numerical_alternative": "FAIL: 1.207 < 1.25; not replaced",
+    "external_acceptance_receipt": null
+  }
+}

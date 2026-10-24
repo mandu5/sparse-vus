@@ -99,3 +99,17 @@ the observed score difference without claiming its precise backend cause.
 The submission package is prepared, not submitted. The separate range-sweep
 plan pursues a new falsifiable generalization; it does not erase these decisions
 or complete the historical broader SOTA/external-acceptance goal.
+
+## Successor milestone closure, 05:22 UTC
+
+The separately frozen range-sweep generalization has now completed its real
+three-collection experiment, same-compiler controls, public comparisons, full
+curve/source audits and fresh combined Linux reproduction. Three new independent
+reviews of the combined manuscript give Weak Accept 7 / Weak Accept 6 / Accept 7
+and each closes major objections for the narrowed operator contribution.
+The new generalization satisfies the prospective alternative in the original
+investment-6 definition; the failed 1.25 numerical VUS branch stays failed.
+Six evidence gates and investment 6 are supported. See the complete decision,
+limitations and proof links in `docs/EXACT_METRICS_RESULT_20261024.md`.
+This update does not rewrite the earlier VUS-only phase or assert external
+acceptance. It completes the user's current >=5/6 research-evidence milestone.

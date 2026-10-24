@@ -1,0 +1,18 @@
+{
+  "status": "RUNNING",
+  "utc": "2026-10-24T04:21:12.183261+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "processor": "AMD EPYC 9V45 96-Core Processor",
+  "logical_cpus": 4,
+  "packages": {
+    "numpy": "1.26.4",
+    "numba": "0.59.1",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "torch": "2.10.0+cpu"
+  },
+  "host_note": "One serial numerical process; public hosted-runner background load is not controlled.",
+  "scope": "Fresh raw download, 73-case score generation, range main/public/validation and numerical JSON audits; source/semantic design matches, host-dependent scores/timings may differ."
+}

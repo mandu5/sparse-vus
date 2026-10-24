@@ -1,0 +1,611 @@
+{
+  "scope": "Post-review descriptive ratio from existing audited calls, across different threshold contracts. Not a same-output speedup or prospective endpoint.",
+  "records_sha256": "cb174dfc14e830730a3a7f95d889d76f4c7919f3113fc642ba6f3adda2185e47",
+  "families": [
+    {
+      "family": "NAB",
+      "exact_over_bucket_geomean": 2.1897891425176894,
+      "exact_over_raster_geomean": 1.273644227412109,
+      "details": [
+        {
+          "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+          "distinct_sweep_seconds": 0.020399208500000002,
+          "grid100_bucket_seconds": 0.007091146,
+          "grid100_raster_seconds": 0.014806146000000001,
+          "exact_over_bucket": 2.8767153433309653,
+          "exact_over_raster": 1.3777527588880996
+        },
+        {
+          "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+          "distinct_sweep_seconds": 0.0044359790000000005,
+          "grid100_bucket_seconds": 0.001855021,
+          "grid100_raster_seconds": 0.003594812,
+          "exact_over_bucket": 2.3913362705866943,
+          "exact_over_raster": 1.2339947123799522
+        },
+        {
+          "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+          "distinct_sweep_seconds": 0.0029494580000000003,
+          "grid100_bucket_seconds": 0.0015760000000000001,
+          "grid100_raster_seconds": 0.00251575,
+          "exact_over_bucket": 1.8714835025380712,
+          "exact_over_raster": 1.1723970982808307
+        },
+        {
+          "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+          "distinct_sweep_seconds": 0.013429271000000001,
+          "grid100_bucket_seconds": 0.005304938,
+          "grid100_raster_seconds": 0.0101298545,
+          "exact_over_bucket": 2.531466154741111,
+          "exact_over_raster": 1.3257121314032696
+        },
+        {
+          "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+          "distinct_sweep_seconds": 0.003048375,
+          "grid100_bucket_seconds": 0.0015395005000000002,
+          "grid100_raster_seconds": 0.002441396,
+          "exact_over_bucket": 1.9801065345545517,
+          "exact_over_raster": 1.2486196422047058
+        },
+        {
+          "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+          "distinct_sweep_seconds": 0.0025991250000000003,
+          "grid100_bucket_seconds": 0.0012934790000000002,
+          "grid100_raster_seconds": 0.0020878125000000003,
+          "exact_over_bucket": 2.009406414792973,
+          "exact_over_raster": 1.2449034575662326
+        },
+        {
+          "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+          "distinct_sweep_seconds": 0.0014498330000000002,
+          "grid100_bucket_seconds": 0.0008471875000000001,
+          "grid100_raster_seconds": 0.0011346255,
+          "exact_over_bucket": 1.7113484323127999,
+          "exact_over_raster": 1.2778075232753012
+        },
+        {
+          "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+          "distinct_sweep_seconds": 0.004850979,
+          "grid100_bucket_seconds": 0.002039333,
+          "grid100_raster_seconds": 0.0035968960000000005,
+          "exact_over_bucket": 2.3787086267912105,
+          "exact_over_raster": 1.3486570087097318
+        },
+        {
+          "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+          "distinct_sweep_seconds": 0.0028967710000000002,
+          "grid100_bucket_seconds": 0.0015117085000000002,
+          "grid100_raster_seconds": 0.0024413335,
+          "exact_over_bucket": 1.9162232665887635,
+          "exact_over_raster": 1.186552758973733
+        },
+        {
+          "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+          "distinct_sweep_seconds": 0.001867583,
+          "grid100_bucket_seconds": 0.0010500420000000002,
+          "grid100_raster_seconds": 0.0015588335,
+          "exact_over_bucket": 1.778579333017155,
+          "exact_over_raster": 1.1980644501160642
+        },
+        {
+          "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+          "distinct_sweep_seconds": 0.009496729,
+          "grid100_bucket_seconds": 0.0036257915000000003,
+          "grid100_raster_seconds": 0.006572896,
+          "exact_over_bucket": 2.619215418205928,
+          "exact_over_raster": 1.4448317758260592
+        },
+        {
+          "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+          "distinct_sweep_seconds": 0.0019622290000000002,
+          "grid100_bucket_seconds": 0.0011401879999999999,
+          "grid100_raster_seconds": 0.001917542,
+          "exact_over_bucket": 1.7209696997337285,
+          "exact_over_raster": 1.0233043135430673
+        },
+        {
+          "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+          "distinct_sweep_seconds": 0.005166292,
+          "grid100_bucket_seconds": 0.0022456250000000002,
+          "grid100_raster_seconds": 0.003992625,
+          "exact_over_bucket": 2.30060317283607,
+          "exact_over_raster": 1.2939587364202751
+        },
+        {
+          "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+          "distinct_sweep_seconds": 0.0021280835,
+          "grid100_bucket_seconds": 0.0012279580000000001,
+          "grid100_raster_seconds": 0.001912917,
+          "exact_over_bucket": 1.733026292430197,
+          "exact_over_raster": 1.1124808342442458
+        },
+        {
+          "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+          "distinct_sweep_seconds": 0.0051243755,
+          "grid100_bucket_seconds": 0.0021350415000000005,
+          "grid100_raster_seconds": 0.0038399165000000002,
+          "exact_over_bucket": 2.400129224654415,
+          "exact_over_raster": 1.33450180492206
+        },
+        {
+          "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+          "distinct_sweep_seconds": 0.0251388335,
+          "grid100_bucket_seconds": 0.008927187500000001,
+          "grid100_raster_seconds": 0.016683541500000003,
+          "exact_over_bucket": 2.815985829803619,
+          "exact_over_raster": 1.5068043856275957
+        },
+        {
+          "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+          "distinct_sweep_seconds": 0.0217194165,
+          "grid100_bucket_seconds": 0.00740425,
+          "grid100_raster_seconds": 0.014158896,
+          "exact_over_bucket": 2.933371577134754,
+          "exact_over_raster": 1.533976695640677
+        },
+        {
+          "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+          "distinct_sweep_seconds": 0.0032670415,
+          "grid100_bucket_seconds": 0.001639729,
+          "grid100_raster_seconds": 0.0026755415,
+          "exact_over_bucket": 1.992427712140238,
+          "exact_over_raster": 1.2210767427827227
+        },
+        {
+          "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+          "distinct_sweep_seconds": 0.0037551665,
+          "grid100_bucket_seconds": 0.0017991250000000002,
+          "grid100_raster_seconds": 0.0030429795,
+          "exact_over_bucket": 2.0872182310845546,
+          "exact_over_raster": 1.2340426545758851
+        },
+        {
+          "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+          "distinct_sweep_seconds": 0.004736417000000001,
+          "grid100_bucket_seconds": 0.0019643955000000005,
+          "grid100_raster_seconds": 0.0037367915000000003,
+          "exact_over_bucket": 2.41113207599997,
+          "exact_over_raster": 1.267509038168172
+        }
+      ]
+    },
+    {
+      "family": "SMAP",
+      "exact_over_bucket_geomean": 2.1355374917954566,
+      "exact_over_raster_geomean": 1.071035177212798,
+      "details": [
+        {
+          "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+          "distinct_sweep_seconds": 0.010585104500000001,
+          "grid100_bucket_seconds": 0.0038061250000000005,
+          "grid100_raster_seconds": 0.0075362495,
+          "exact_over_bucket": 2.781071168182863,
+          "exact_over_raster": 1.4045586601133628
+        },
+        {
+          "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+          "distinct_sweep_seconds": 0.002011896,
+          "grid100_bucket_seconds": 0.0019884375,
+          "grid100_raster_seconds": 0.006367313,
+          "exact_over_bucket": 1.0117974540311172,
+          "exact_over_raster": 0.3159725303279421
+        },
+        {
+          "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+          "distinct_sweep_seconds": 0.004252771000000001,
+          "grid100_bucket_seconds": 0.0020765840000000002,
+          "grid100_raster_seconds": 0.0038247085,
+          "exact_over_bucket": 2.047964830702731,
+          "exact_over_raster": 1.1119202940563968
+        },
+        {
+          "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+          "distinct_sweep_seconds": 0.006891271,
+          "grid100_bucket_seconds": 0.0038822710000000005,
+          "grid100_raster_seconds": 0.007010416500000001,
+          "exact_over_bucket": 1.775061813047054,
+          "exact_over_raster": 0.9830045047965409
+        },
+        {
+          "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+          "distinct_sweep_seconds": 0.01115975,
+          "grid100_bucket_seconds": 0.0041086460000000005,
+          "grid100_raster_seconds": 0.0073215835,
+          "exact_over_bucket": 2.71616245351875,
+          "exact_over_raster": 1.5242262824701787
+        },
+        {
+          "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+          "distinct_sweep_seconds": 0.0041754165,
+          "grid100_bucket_seconds": 0.002251063,
+          "grid100_raster_seconds": 0.0069401870000000004,
+          "exact_over_bucket": 1.854864346311054,
+          "exact_over_raster": 0.6016288177825756
+        },
+        {
+          "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+          "distinct_sweep_seconds": 0.00414675,
+          "grid100_bucket_seconds": 0.002762021,
+          "grid100_raster_seconds": 0.006124583000000001,
+          "exact_over_bucket": 1.501346296787751,
+          "exact_over_raster": 0.6770665039562692
+        },
+        {
+          "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+          "distinct_sweep_seconds": 0.011101333000000001,
+          "grid100_bucket_seconds": 0.0043835835,
+          "grid100_raster_seconds": 0.0075005625,
+          "exact_over_bucket": 2.532478963843167,
+          "exact_over_raster": 1.4800667283287088
+        },
+        {
+          "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+          "distinct_sweep_seconds": 0.010081854500000001,
+          "grid100_bucket_seconds": 0.004159958,
+          "grid100_raster_seconds": 0.0076166255,
+          "exact_over_bucket": 2.423547184851386,
+          "exact_over_raster": 1.323664200110666
+        },
+        {
+          "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+          "distinct_sweep_seconds": 0.005249729000000001,
+          "grid100_bucket_seconds": 0.0025656455000000002,
+          "grid100_raster_seconds": 0.006235979000000001,
+          "exact_over_bucket": 2.0461630416205203,
+          "exact_over_raster": 0.8418452018520267
+        },
+        {
+          "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+          "distinct_sweep_seconds": 0.0102824375,
+          "grid100_bucket_seconds": 0.004311187500000001,
+          "grid100_raster_seconds": 0.007437333500000001,
+          "exact_over_bucket": 2.3850592209223094,
+          "exact_over_raster": 1.3825435554288374
+        },
+        {
+          "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+          "distinct_sweep_seconds": 0.010619896,
+          "grid100_bucket_seconds": 0.004203833000000001,
+          "grid100_raster_seconds": 0.007693416000000001,
+          "exact_over_bucket": 2.5262411708552643,
+          "exact_over_raster": 1.3803875937554917
+        },
+        {
+          "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+          "distinct_sweep_seconds": 0.0049884790000000005,
+          "grid100_bucket_seconds": 0.0022730625,
+          "grid100_raster_seconds": 0.0041096255,
+          "exact_over_bucket": 2.19460705545932,
+          "exact_over_raster": 1.213852454438975
+        },
+        {
+          "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+          "distinct_sweep_seconds": 0.011735375,
+          "grid100_bucket_seconds": 0.005121396,
+          "grid100_raster_seconds": 0.0087445625,
+          "exact_over_bucket": 2.291440654071663,
+          "exact_over_raster": 1.3420196836605602
+        },
+        {
+          "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+          "distinct_sweep_seconds": 0.010532083000000001,
+          "grid100_bucket_seconds": 0.004435062500000001,
+          "grid100_raster_seconds": 0.008260896,
+          "exact_over_bucket": 2.374731584955116,
+          "exact_over_raster": 1.274932283374588
+        },
+        {
+          "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+          "distinct_sweep_seconds": 0.0075326460000000005,
+          "grid100_bucket_seconds": 0.0035727505,
+          "grid100_raster_seconds": 0.0067354375,
+          "exact_over_bucket": 2.1083604914476957,
+          "exact_over_raster": 1.1183603143819538
+        },
+        {
+          "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+          "distinct_sweep_seconds": 0.010844396,
+          "grid100_bucket_seconds": 0.004000458,
+          "grid100_raster_seconds": 0.007435917,
+          "exact_over_bucket": 2.710788614703616,
+          "exact_over_raster": 1.4583804526059125
+        }
+      ]
+    },
+    {
+      "family": "SMD",
+      "exact_over_bucket_geomean": 3.0127014543881505,
+      "exact_over_raster_geomean": 1.5298776966787506,
+      "details": [
+        {
+          "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.013167125000000002,
+          "grid100_bucket_seconds": 0.005659354,
+          "grid100_raster_seconds": 0.018334875,
+          "exact_over_bucket": 2.32661271940225,
+          "exact_over_raster": 0.7181464285957773
+        },
+        {
+          "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+          "distinct_sweep_seconds": 0.025004271,
+          "grid100_bucket_seconds": 0.008040979,
+          "grid100_raster_seconds": 0.015938812500000003,
+          "exact_over_bucket": 3.1096053104976398,
+          "exact_over_raster": 1.5687662427800062
+        },
+        {
+          "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+          "distinct_sweep_seconds": 0.03949195800000001,
+          "grid100_bucket_seconds": 0.0127515625,
+          "grid100_raster_seconds": 0.023904229,
+          "exact_over_bucket": 3.0970289327288327,
+          "exact_over_raster": 1.652090849698604
+        },
+        {
+          "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.030673833,
+          "grid100_bucket_seconds": 0.010285291500000002,
+          "grid100_raster_seconds": 0.019357958,
+          "exact_over_bucket": 2.982300793322192,
+          "exact_over_raster": 1.5845593321361684
+        },
+        {
+          "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+          "distinct_sweep_seconds": 0.041052375,
+          "grid100_bucket_seconds": 0.012584104,
+          "grid100_raster_seconds": 0.025525521000000002,
+          "exact_over_bucket": 3.2622406013173446,
+          "exact_over_raster": 1.6082874469046096
+        },
+        {
+          "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+          "distinct_sweep_seconds": 0.0253535,
+          "grid100_bucket_seconds": 0.008075666500000002,
+          "grid100_raster_seconds": 0.0163828955,
+          "exact_over_bucket": 3.1394931922956446,
+          "exact_over_raster": 1.5475591601008503
+        },
+        {
+          "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.033786250000000004,
+          "grid100_bucket_seconds": 0.011676604,
+          "grid100_raster_seconds": 0.0204166665,
+          "exact_over_bucket": 2.893499685353721,
+          "exact_over_raster": 1.654836748202749
+        },
+        {
+          "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+          "distinct_sweep_seconds": 0.0275069165,
+          "grid100_bucket_seconds": 0.009173458,
+          "grid100_raster_seconds": 0.017724791500000003,
+          "exact_over_bucket": 2.9985329959541973,
+          "exact_over_raster": 1.5518894256104505
+        },
+        {
+          "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+          "distinct_sweep_seconds": 0.011462354000000001,
+          "grid100_bucket_seconds": 0.0058181875000000004,
+          "grid100_raster_seconds": 0.019249625,
+          "exact_over_bucket": 1.9700901698338185,
+          "exact_over_raster": 0.5954585608810562
+        },
+        {
+          "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.0315537295,
+          "grid100_bucket_seconds": 0.010882521,
+          "grid100_raster_seconds": 0.0194721875,
+          "exact_over_bucket": 2.8994871225150867,
+          "exact_over_raster": 1.6204511948131148
+        },
+        {
+          "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+          "distinct_sweep_seconds": 0.039009167000000004,
+          "grid100_bucket_seconds": 0.01370325,
+          "grid100_raster_seconds": 0.026262416500000003,
+          "exact_over_bucket": 2.846709138343094,
+          "exact_over_raster": 1.4853609149028613
+        },
+        {
+          "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+          "distinct_sweep_seconds": 0.030968250000000003,
+          "grid100_bucket_seconds": 0.0096725,
+          "grid100_raster_seconds": 0.018400083,
+          "exact_over_bucket": 3.201680020677178,
+          "exact_over_raster": 1.683049473200746
+        },
+        {
+          "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.027748708500000004,
+          "grid100_bucket_seconds": 0.008719521000000001,
+          "grid100_raster_seconds": 0.0187733545,
+          "exact_over_bucket": 3.1823661529113814,
+          "exact_over_raster": 1.4780900504488959
+        },
+        {
+          "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.030799166500000003,
+          "grid100_bucket_seconds": 0.010440542,
+          "grid100_raster_seconds": 0.019654229500000002,
+          "exact_over_bucket": 2.949958584525593,
+          "exact_over_raster": 1.5670503135215756
+        },
+        {
+          "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.0234332705,
+          "grid100_bucket_seconds": 0.008808813,
+          "grid100_raster_seconds": 0.019621646,
+          "exact_over_bucket": 2.6602075103649034,
+          "exact_over_raster": 1.1942561036928299
+        },
+        {
+          "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.030850729500000004,
+          "grid100_bucket_seconds": 0.0093923125,
+          "grid100_raster_seconds": 0.0183446875,
+          "exact_over_bucket": 3.2846787731988267,
+          "exact_over_raster": 1.681725540432346
+        },
+        {
+          "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+          "distinct_sweep_seconds": 0.040827604,
+          "grid100_bucket_seconds": 0.012501375,
+          "grid100_raster_seconds": 0.0231549375,
+          "exact_over_bucket": 3.265849076601574,
+          "exact_over_raster": 1.7632353358759878
+        },
+        {
+          "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+          "distinct_sweep_seconds": 0.023181542,
+          "grid100_bucket_seconds": 0.0086662915,
+          "grid100_raster_seconds": 0.016713313,
+          "exact_over_bucket": 2.674909100392019,
+          "exact_over_raster": 1.3870105825218495
+        },
+        {
+          "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.031078021,
+          "grid100_bucket_seconds": 0.009615916500000002,
+          "grid100_raster_seconds": 0.019360875,
+          "exact_over_bucket": 3.2319354062610666,
+          "exact_over_raster": 1.605197130811495
+        },
+        {
+          "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.034686146,
+          "grid100_bucket_seconds": 0.010359896,
+          "grid100_raster_seconds": 0.018789188000000002,
+          "exact_over_bucket": 3.348117201176537,
+          "exact_over_raster": 1.8460694522828767
+        },
+        {
+          "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+          "distinct_sweep_seconds": 0.053345792,
+          "grid100_bucket_seconds": 0.012937291500000002,
+          "grid100_raster_seconds": 0.023667521,
+          "exact_over_bucket": 4.123412694225835,
+          "exact_over_raster": 2.253966184291122
+        },
+        {
+          "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+          "distinct_sweep_seconds": 0.039999875000000004,
+          "grid100_bucket_seconds": 0.012584354,
+          "grid100_raster_seconds": 0.0232069585,
+          "exact_over_bucket": 3.1785401936404525,
+          "exact_over_raster": 1.7236155698731483
+        },
+        {
+          "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+          "distinct_sweep_seconds": 0.033962833500000005,
+          "grid100_bucket_seconds": 0.011313812500000001,
+          "grid100_raster_seconds": 0.021012021000000002,
+          "exact_over_bucket": 3.001891139702024,
+          "exact_over_raster": 1.6163525393392668
+        },
+        {
+          "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+          "distinct_sweep_seconds": 0.0408493125,
+          "grid100_bucket_seconds": 0.0127064375,
+          "grid100_raster_seconds": 0.023744375,
+          "exact_over_bucket": 3.214851723781744,
+          "exact_over_raster": 1.7203785106999023
+        },
+        {
+          "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+          "distinct_sweep_seconds": 0.0268815835,
+          "grid100_bucket_seconds": 0.0093993335,
+          "grid100_raster_seconds": 0.017377396000000003,
+          "exact_over_bucket": 2.859945707852583,
+          "exact_over_raster": 1.5469281761202884
+        },
+        {
+          "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.028419166500000002,
+          "grid100_bucket_seconds": 0.010105563000000001,
+          "grid100_raster_seconds": 0.018910896000000003,
+          "exact_over_bucket": 2.8122299074282155,
+          "exact_over_raster": 1.50279323095003
+        },
+        {
+          "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+          "distinct_sweep_seconds": 0.031924416500000004,
+          "grid100_bucket_seconds": 0.010449291500000001,
+          "grid100_raster_seconds": 0.0194159585,
+          "exact_over_bucket": 3.055175224080982,
+          "exact_over_raster": 1.6442359258235952
+        },
+        {
+          "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+          "distinct_sweep_seconds": 0.0397171045,
+          "grid100_bucket_seconds": 0.0143343125,
+          "grid100_raster_seconds": 0.023575771000000002,
+          "exact_over_bucket": 2.770771496714614,
+          "exact_over_raster": 1.684657714905697
+        },
+        {
+          "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+          "distinct_sweep_seconds": 0.024969646,
+          "grid100_bucket_seconds": 0.008429812500000002,
+          "grid100_raster_seconds": 0.0169407085,
+          "exact_over_bucket": 2.962064221475863,
+          "exact_over_raster": 1.4739434304061134
+        },
+        {
+          "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.032445625500000005,
+          "grid100_bucket_seconds": 0.010844479,
+          "grid100_raster_seconds": 0.019940396,
+          "exact_over_bucket": 2.991902653875765,
+          "exact_over_raster": 1.6271304491646006
+        },
+        {
+          "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.0286362705,
+          "grid100_bucket_seconds": 0.009452521000000002,
+          "grid100_raster_seconds": 0.0183252915,
+          "exact_over_bucket": 3.0294849913583897,
+          "exact_over_raster": 1.562663846302254
+        },
+        {
+          "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.0306419375,
+          "grid100_bucket_seconds": 0.0096162705,
+          "grid100_raster_seconds": 0.019309896,
+          "exact_over_bucket": 3.186467924337195,
+          "exact_over_raster": 1.5868515034985171
+        },
+        {
+          "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.031715770500000004,
+          "grid100_bucket_seconds": 0.009535979,
+          "grid100_raster_seconds": 0.018427333,
+          "exact_over_bucket": 3.325906076345177,
+          "exact_over_raster": 1.721126464692422
+        },
+        {
+          "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.028833625,
+          "grid100_bucket_seconds": 0.009409854,
+          "grid100_raster_seconds": 0.019141375000000002,
+          "exact_over_bucket": 3.0641947260818285,
+          "exact_over_raster": 1.506350771561604
+        },
+        {
+          "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.0319897495,
+          "grid100_bucket_seconds": 0.0109185205,
+          "grid100_raster_seconds": 0.019822166500000002,
+          "exact_over_bucket": 2.929861193190048,
+          "exact_over_raster": 1.6138371908035378
+        },
+        {
+          "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+          "distinct_sweep_seconds": 0.0310948955,
+          "grid100_bucket_seconds": 0.009383271,
+          "grid100_raster_seconds": 0.018573937000000002,
+          "exact_over_bucket": 3.3138652288738117,
+          "exact_over_raster": 1.6741144055780957
+        }
+      ]
+    }
+  ]
+}

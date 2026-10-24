@@ -1,5 +1,7 @@
 # Sparse VUS: the PVLDB research case
 
+> Historical VUS-only assessment. The new combined VUS/range manuscript and current evidence decision are in [EXACT_METRICS_RESULT_20261024.md](EXACT_METRICS_RESULT_20261024.md). The original results and judgments below are preserved.
+
 Evidence cut: 24 October 2026. This is a research decision record, not an editorial
 decision. The prospective protocol is in
 [`superpowers/specs/2026-10-24-pvldb-evidence-design.md`](superpowers/specs/2026-10-24-pvldb-evidence-design.md).

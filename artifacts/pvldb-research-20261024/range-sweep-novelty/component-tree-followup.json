@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-24T04:30:00.952435+00:00",
+  "discovered_by": "Independent combined-paper reviewer, followed by root primary-text verification",
+  "paper": "Menotti, Najman, de Albuquerque Araujo. 1D Component Tree in Linear Time and Space and Its Application to Gray-Level Image Multithresholding. ISMM 2007, pp.437-448.",
+  "canonical_url": "https://hal.science/hal-00622373",
+  "author_publication_page": "https://web.inf.ufpr.br/menotti/publications/",
+  "primary_full_text": "https://www.researchgate.net/publication/228747458_1D_Component_tree_in_linear_time_and_space_and_its_application_to_gray-level_image_multithresholding",
+  "inspected": "Sections 3.1-3.3, Algorithm1 and application description, retrieved through web text. HAL/inpe full text unavailable through web tool.",
+  "finding": "1D component-tree construction is directly relevant prior art. Its presented array for integer weight counts has O(m) space; complete space O(max(n,m)). No new component-tree construction or universal sorting lower bound is claimed. Candidate contribution is specific label-conditioned overlap and fragmentation aggregate maintenance; global uniqueness is not established by this comparison.",
+  "manuscript_changes": [
+    "Direct menotti2007 citation in range method and related work",
+    "Distinguish construction cost from queried metric-aggregate maintenance"
+  ],
+  "attribute_addendum": {
+    "checked_utc": "2026-10-24T05:11:01.764860+00:00",
+    "primary_section": "3.4 Attributes, p.444, author-uploaded full text",
+    "finding": "Height, surface/cardinality and volume can be computed during component-tree construction without changing its time complexity. Generic component attribute maintenance is prior work. The candidate claim remains the label-conditioned Tatbul overlap and fragmentation aggregate."
+  }
+}

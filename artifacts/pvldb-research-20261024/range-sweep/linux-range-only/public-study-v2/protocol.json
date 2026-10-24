@@ -1,0 +1,575 @@
+{
+  "status": "FROZEN_BEFORE_PUBLIC_RANGE_BASELINE_OUTCOMES",
+  "utc": "2026-10-24T04:26:41.178910+00:00",
+  "source_sha256": {
+    ".cache/range-sweep-timesead/LICENSE": "3e3ed418d1b09a2917f4045cc49371554958fcc3337105a299adddb5805b87e2",
+    ".cache/range-sweep-timesead/timesead/evaluation/__init__.py": "a17a3a444959adcafaf937bd7e769b817492f1412468f704a9ed223348ae4f16",
+    ".cache/range-sweep-timesead/timesead/evaluation/ts_precision_recall.py": "d5bb774b4aab9e441e4119e957ce5fe52a4abed965d6286705836e002dd162c8",
+    ".cache/range-sweep-timesead/timesead/evaluation/evaluator.py": "f84495ccc62eeba905c515c8ac2d709b10302a6e20220692348ef73b6a633cea",
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "experiments/pvldb_supplement.py": "4e2a8e4140c0a0f662ca4e97c52bde52acaf728df6872318c07e2da73deba318",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8",
+    "experiments/pvldb_consumer.py": "287eb7c3a1f94144a0894e700ae61926059b48bfd0910a690d7c0d7926df71cf",
+    ".cache/tsbad-consumer/pkg/TSB_AD/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/metrics.py": "13957d15d3ebb2b743a4bebfa3a68af31e82a58ecc568557b4081ad90e38094d",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/basic_metrics.py": "1fcddedf5ada1d5221f39ee568c7fddb9e7181bd7e1c19636c2cbecf40c97707",
+    ".cache/tsbad-consumer/pkg/TSB_AD/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cache/tsbad-consumer/pkg/TSB_AD/utils/slidingWindows.py": "0ba65735c6572cd80e586409d4f653253d847e08fbae8e1da6e474e142e74af6",
+    ".cache/tsbad-consumer/pkg/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    ".cache/tsbad-consumer/pkg/benchmark_exp/HP_Tuning_U.py": "3c809dd6dbf868da9698112487909d128947f25c2af9cfb3f065b588f478bb9c",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_affiliation_zone.py": "3b289bf11cebe614afabe353c873de90ba9debf8831aef8f73532870dce01ba2",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_integral_interval.py": "8177e69eccb0ae4ea76b2f54f6799ae61758b5a103603fae3d1a3a8d331e7cda",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_single_ground_truth_event.py": "a04b5daa0fb0ef68893807c7ab5d4353b43f0d5231ae06ef0006b2e6cf939165",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/generics.py": "16743b204d24feb8ba9deaabceb7b0cf900520136e8a3b77e499448fcaafbfc9",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/metrics.py": "9fe83cd2cb1cd4b1b3c7869971e94a18d5ea71b4103f88e347de70c8330cc060",
+    "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+    "experiments/range_sweep_public.py": "19cd498100297d42b4b45e150e0f1b6343b52c0e4cea1823bd56b7965689d985",
+    "experiments/range_sweep_study.py": "74ea8b546ef1de8384a15e675d6584616011092e4b2eb887c0b3531ed237e57c"
+  },
+  "manifest_sha256": "ff520f417aa05ce8e3b69c625137bd88cc92c9bb0859baf4f3008ec3ba701769",
+  "inputs_sha256": "fdffefd8c1590c149919c880ba32897d7f1e057524d840d1db94b2b93ee2c066",
+  "main_protocol_sha256": "30aff0472dd10033fccf4e34004ed39a2ad021d6aa1fa85c90770fd3537d9dbc",
+  "cases": [
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "family": "NAB",
+      "member": "TSB-AD-U/010_NAB_id_10_WebService_tr_500_1st_271.csv",
+      "n": 1000,
+      "positive_points": 148,
+      "raw_sha256": "af6be1972ec7cf6b33d267f7f96e38e9781fce87917c461870a1ff83dcd12c3f",
+      "observation_label_identity": "110b7d661e0488eedd12702c09f2e947a56a1e6cffdf66f5a300ee0178d83982",
+      "raw_recording_previously_measured_by_name": true,
+      "file": "0006.npz",
+      "npz_sha256": "266b05694e3eb509b31530b4b4a29a1b9f220adebdab49c9b5b0d1f60817c260",
+      "bytes": 73766,
+      "score_sha256": "b380d921f68c797defee7ad75cf47041c9b70d5d432e9b062642c6bfa97a43bf",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.053197358999995004,
+          "distinct": 999,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.009709315000009155,
+          "distinct": 1000,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.0046247319999963565,
+          "distinct": 997,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.00450480099999595,
+          "distinct": 1000,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0006565000000051668,
+          "distinct": 1000,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.0019369400000073256,
+          "distinct": 998,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.0008519350000000259,
+          "distinct": 987,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.0005897390000058067,
+          "distinct": 1000,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "family": "NAB",
+      "member": "TSB-AD-U/014_NAB_id_14_WebService_tr_500_1st_1045.csv",
+      "n": 1537,
+      "positive_points": 152,
+      "raw_sha256": "f60ad21655a727f5f20477d0c92bdd281c810a6ffdf3d872e8690fe00887844f",
+      "observation_label_identity": "d054a03d778ed7c9295bd526901a9309d0a42bb2c70e1e3648f402c74c29f833",
+      "raw_recording_previously_measured_by_name": true,
+      "file": "0009.npz",
+      "npz_sha256": "6001a2e93756b46f4aa0477ac0e1b36cf44f724c4e6371b7724137f2842d0959",
+      "bytes": 112967,
+      "score_sha256": "f2d5a56a4d0c2a90c9b52008e40f050f59fd5a955f5f0708b53cf320d167fad2",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.05699139700000444,
+          "distinct": 1537,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.019589568999990092,
+          "distinct": 1537,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.009472377999998116,
+          "distinct": 1525,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.008362304999991466,
+          "distinct": 1537,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0007863259999965067,
+          "distinct": 1537,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.0026928890000021966,
+          "distinct": 1537,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.0010082099999948468,
+          "distinct": 1413,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.0006574910000125556,
+          "distinct": 1537,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "family": "NAB",
+      "member": "TSB-AD-U/021_NAB_id_21_WebService_tr_500_1st_565.csv",
+      "n": 1623,
+      "positive_points": 160,
+      "raw_sha256": "2babfdb6f282c7c025151d8aa1ed61d04104bb308f6a807912149bba90a7c1d6",
+      "observation_label_identity": "8de0a63595fb46f723a6245d48b79ed7426b700ad6e219d0819b3560567ee867",
+      "raw_recording_previously_measured_by_name": false,
+      "file": "0013.npz",
+      "npz_sha256": "a347f362f88c5e515824da6717270629a609c8ca6ed6618d031a63483d346c7c",
+      "bytes": 119245,
+      "score_sha256": "7e54f36bf8ac494366e973b22ddebcfd6b095a981510a8f1478f23cd287fe08e",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.058795576999997934,
+          "distinct": 1623,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.019297979000000964,
+          "distinct": 1623,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.009423174999994899,
+          "distinct": 1605,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.008485770999996589,
+          "distinct": 1623,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0007390039999961573,
+          "distinct": 1623,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.002570784999988973,
+          "distinct": 1623,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.0010181149999937134,
+          "distinct": 1621,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.00065706999998838,
+          "distinct": 1623,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "family": "SMAP",
+      "member": "TSB-AD-U/535_SMAP_id_5_Sensor_tr_1113_1st_1890.csv",
+      "n": 4453,
+      "positive_points": 41,
+      "raw_sha256": "32a6736f23aa6bc15d5f4b8b84953b70de72fd432873a45703af1b9e947da513",
+      "observation_label_identity": "56ee1c10e6607da86fdadba16edc75eb0dd4763393c8700e463714c68f377745",
+      "raw_recording_previously_measured_by_name": false,
+      "file": "0058.npz",
+      "npz_sha256": "9825503685178877f16185b6d60d79fc08792352169b64d109de359a3926453a",
+      "bytes": 325835,
+      "score_sha256": "81dd5ad1454279fc2a8e4f327cf835d0ad539d02bef14e55753b643945b8c907",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.06373761700000102,
+          "distinct": 2104,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.04711928500000795,
+          "distinct": 2106,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.03131991699999048,
+          "distinct": 1825,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.01640673299999662,
+          "distinct": 2123,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.001174938999994879,
+          "distinct": 2123,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.0026266649999939773,
+          "distinct": 2115,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.0013590869999973165,
+          "distinct": 49,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.0008797149999963949,
+          "distinct": 2123,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "family": "SMAP",
+      "member": "TSB-AD-U/545_SMAP_id_15_Sensor_tr_1173_1st_2750.csv",
+      "n": 4693,
+      "positive_points": 51,
+      "raw_sha256": "f23dda8c410db8b2858ce76cd4170a693ddaa0a1737eed6e74212337818d4301",
+      "observation_label_identity": "e67523642413252961e6f11a21ec5082b33030b120bac3a11ab08c309403b1e8",
+      "raw_recording_previously_measured_by_name": true,
+      "file": "0068.npz",
+      "npz_sha256": "85486e041a30a37d629bc9d83d46c90a7d1aacb1e4f440806592e978b9d119da",
+      "bytes": 343355,
+      "score_sha256": "8e13e0c32a831c6f2b8c03e4c84e31510b048f67b25dbf77a3e2c25a06691ba9",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.06425012799999763,
+          "distinct": 2086,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.042812179999998534,
+          "distinct": 2085,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.035709425999996824,
+          "distinct": 1348,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.027812126000000603,
+          "distinct": 2089,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0027168599999924936,
+          "distinct": 2089,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.0059213060000047335,
+          "distinct": 2080,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.0032816209999992907,
+          "distinct": 47,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.0017969760000084989,
+          "distinct": 2089,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "family": "SMAP",
+      "member": "TSB-AD-U/541_SMAP_id_11_Sensor_tr_1832_1st_5300.csv",
+      "n": 7331,
+      "positive_points": 448,
+      "raw_sha256": "c851be78e1a07f1277b5c0c279c49c7e62b6173227518a5a5d1c1d7b8b83d70d",
+      "observation_label_identity": "530a44ba32f0982acc3b9c92ba2bb5a763e06117a90c00528380c771cbca153d",
+      "raw_recording_previously_measured_by_name": true,
+      "file": "0064.npz",
+      "npz_sha256": "97fef749352f3fce5f49410f010397ace8024b84c1b2da095e0bb0f9a9a67ae2",
+      "bytes": 535929,
+      "score_sha256": "79394ad7b62453a251d2649df79876aa863c4fedd952e2b1e3af4d889da59666",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.07445902999999987,
+          "distinct": 7194,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.06744764200000475,
+          "distinct": 7017,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.05101776499999744,
+          "distinct": 7168,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.04595003400000053,
+          "distinct": 7195,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.001407639000007066,
+          "distinct": 7195,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.0038153540000109842,
+          "distinct": 7195,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.0018890650000003006,
+          "distinct": 5373,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.0010399560000138308,
+          "distinct": 7195,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "member": "TSB-AD-U/181_SMD_id_4_Facility_tr_5000_1st_15144.csv",
+      "n": 20000,
+      "positive_points": 908,
+      "raw_sha256": "9bd257d42f23347d8d85b1f0d16073b50a1e74d76bed229f4c582fa20af860e0",
+      "observation_label_identity": "be7096888f257dcaa5ebf5038be20097d18e6ee9ce7d25de9a9aaf410cd9d893",
+      "raw_recording_previously_measured_by_name": true,
+      "file": "0021.npz",
+      "npz_sha256": "7812e6c2a852fb5d8ad7bf03de8f3d57b3cd945be1283c54039c1ec67e4962c5",
+      "bytes": 1460766,
+      "score_sha256": "73157222b269012d6bf841d14eda9295d804bf2b0bcfc97d64678a159a9ae5d9",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.08297908199999426,
+          "distinct": 17640,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.14229765599999666,
+          "distinct": 19094,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.12211264399999777,
+          "distinct": 19962,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.05977378000000044,
+          "distinct": 20000,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0019283550000039895,
+          "distinct": 20000,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.004494211000007908,
+          "distinct": 19998,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.0037098199999974213,
+          "distinct": 2910,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.0014951429999996435,
+          "distinct": 20000,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "member": "TSB-AD-U/185_SMD_id_8_Facility_tr_5000_1st_15144.csv",
+      "n": 20000,
+      "positive_points": 908,
+      "raw_sha256": "8c2c988c43b42986d24328e8c2a5f61fe963099e1dc541ef611266c2c9a8bedd",
+      "observation_label_identity": "9e76601efad6904d38379070e2bbd22d91f911276eb93a3a7af605b636428211",
+      "raw_recording_previously_measured_by_name": true,
+      "file": "0025.npz",
+      "npz_sha256": "3397718bcf9f374cf9dd382b0e1ad1592cfacc99452973a2ebe0d026c33d7ea2",
+      "bytes": 1460766,
+      "score_sha256": "4b19c9656f1266a16f535c998071e0da8e6b822cdfaacfd66684eb7e9b72371b",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.08426527100000669,
+          "distinct": 19896,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.15390057800000534,
+          "distinct": 19987,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.13625744499999826,
+          "distinct": 19980,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.06081640000000732,
+          "distinct": 19997,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0019799939999955996,
+          "distinct": 19997,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.004867462999996519,
+          "distinct": 19996,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.00382589500000563,
+          "distinct": 3177,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.0015146420000036187,
+          "distinct": 19997,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "family": "SMD",
+      "member": "TSB-AD-U/187_SMD_id_10_Facility_tr_5000_1st_15849.csv",
+      "n": 20000,
+      "positive_points": 2190,
+      "raw_sha256": "c32643e3e6be89acc64e25f2d8e5c50c76222dae762d2373c9b45974b9947288",
+      "observation_label_identity": "f0e3189205fed9e1782d2326d011d53b05961ae689f0ef6f426c8c81a679516b",
+      "raw_recording_previously_measured_by_name": true,
+      "file": "0027.npz",
+      "npz_sha256": "fd986e5e3ec4ea85bcce3eb6e45fe7f5b1e9fcc2fb5467aa77d851fd2f071290",
+      "bytes": 1460766,
+      "score_sha256": "6a199cb03bcbfafc1169fb0a008f107621942b35eb10f416c5f36aa9c164aaf1",
+      "models": {
+        "isolation_forest": {
+          "seconds": 0.08443645799999899,
+          "distinct": 19907,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 0.14136857599999075,
+          "distinct": 19994,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 0.12500935899998922,
+          "distinct": 19984,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 0.0613332589999942,
+          "distinct": 20000,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0019716110000018716,
+          "distinct": 20000,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.004916818000012313,
+          "distinct": 20000,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.004288821999992365,
+          "distinct": 8332,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.001531847000009634,
+          "distinct": 20000,
+          "warnings": []
+        }
+      }
+    }
+  ],
+  "selection": "Three shortest primary recordings in each collection, lexicographic ties; all eight stored profiles. Cost-bounded public comparator panel chosen by length before its outcomes. No representativeness or long-input claim.",
+  "contracts": {
+    "tsb_grid": "Unchanged TSB-AD metric_RF1; 100 linspace strict thresholds, flat alpha=.2 reciprocal, double scalar; compare bucket tsb_compat.",
+    "timesead_distinct": "Unchanged TimeSeAD Evaluator.best_ts_fbeta_score_classic(beta=1), alpha=0, strict observed thresholds, unweighted precision, reciprocal; float32 PR/F storage. Compare standard sweep, not TSB alpha=.2."
+  },
+  "orders": [
+    [
+      "public",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "public"
+    ]
+  ],
+  "public_call_limit_seconds": 60,
+  "amendment": "Before any public timing, the initial unexecuted protocol is preserved at public-study/protocol.json. This version adds a 60s eight-profile API-call budget. A timeout remains a censored lower bound, never an exact time, successful parity check or exclusion.",
+  "parity_atol": {
+    "tsb_grid": 1e-10,
+    "timesead_distinct": 2e-07
+  },
+  "timing": "Two balanced AB/BA complete eight-profile in-memory calls per method. Conversion/threshold preparation included, imports/JIT warm, single numerical thread. No training/disk/whole-nine-metric claim.",
+  "failure_policy": "No dropped/replaced cases. Public timeout is retained with null outputs and censoring limit, then the next fixed trial continues. Nonfinite completed output or scalar discrepancy above the predeclared contract tolerance halts.",
+  "scope": "External API validation and timing on 9 length-selected recordings. Broad compiled-algorithm evidence is separately all73, alpha=.2. Do not combine the two target semantics into one ratio."
+}

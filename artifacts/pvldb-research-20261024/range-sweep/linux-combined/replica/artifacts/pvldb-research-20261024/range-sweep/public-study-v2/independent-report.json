@@ -1,0 +1,272 @@
+{
+  "status": "PASS",
+  "scope": "Source/input/raw-API scalar and timing audit; censored calls are not parity evidence.",
+  "protocol_sha256": "06e377fd5229406a055854a3e8720cb13d4e2e5e88b2e7a1b5d96706b41c0afc",
+  "records_sha256": "f29883a314c08019c65e38d6f30606e28a1db32b8f1287209c908e6481b6b2c7",
+  "record_count": 72,
+  "max_public_scalar_error": {
+    "tsb_grid": 6.661338147750939e-16,
+    "timesead_distinct": 5.6508299595137146e-08
+  },
+  "censored_public_calls": 2,
+  "tables": [
+    {
+      "family": "NAB",
+      "contract": "tsb_grid",
+      "details": [
+        {
+          "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 597.5193111363693,
+          "candidate_seconds": 0.0017081465,
+          "public_seconds_or_censoring_limit": 1.0206505200000002,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 582.7468122979689,
+          "candidate_seconds": 0.0019002325000000001,
+          "public_seconds_or_censoring_limit": 1.1073544320000002,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 840.8864935770456,
+          "candidate_seconds": 0.0020377305000000004,
+          "public_seconds_or_censoring_limit": 1.7135000550000001,
+          "public_completed_parity_calls": 2
+        }
+      ],
+      "censored_bound": false,
+      "ratio_summary": {
+        "geometric_ratio": 664.0331227818576,
+        "familywise95_ci": [
+          582.7468122979684,
+          840.8864935770454
+        ],
+        "units": 3,
+        "wins": 3,
+        "min_ratio": 582.7468122979689,
+        "max_ratio": 840.8864935770454
+      },
+      "interval_scope": "If censored, bootstrap summarizes conservative substituted lower limits, not a confidence interval for actual speedup. Only 3 length-selected cases per family."
+    },
+    {
+      "family": "SMAP",
+      "contract": "tsb_grid",
+      "details": [
+        {
+          "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 315.93932154490915,
+          "candidate_seconds": 0.0021521395,
+          "public_seconds_or_censoring_limit": 0.6799454935,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 333.2839315548545,
+          "candidate_seconds": 0.0023014050000000003,
+          "public_seconds_or_censoring_limit": 0.7670213065,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 1601.370787147748,
+          "candidate_seconds": 0.004203061,
+          "public_seconds_or_censoring_limit": 6.730659102000001,
+          "public_completed_parity_calls": 2
+        }
+      ],
+      "censored_bound": false,
+      "ratio_summary": {
+        "geometric_ratio": 552.4631553612003,
+        "familywise95_ci": [
+          315.9393215449092,
+          1601.3707871477486
+        ],
+        "units": 3,
+        "wins": 3,
+        "min_ratio": 315.9393215449092,
+        "max_ratio": 1601.3707871477486
+      },
+      "interval_scope": "If censored, bootstrap summarizes conservative substituted lower limits, not a confidence interval for actual speedup. Only 3 length-selected cases per family."
+    },
+    {
+      "family": "SMD",
+      "contract": "tsb_grid",
+      "details": [
+        {
+          "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 947.4201850185335,
+          "candidate_seconds": 0.0062405640000000005,
+          "public_seconds_or_censoring_limit": 5.9124362995,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 909.0167895821943,
+          "candidate_seconds": 0.0070311160000000004,
+          "public_seconds_or_censoring_limit": 6.3914024935,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 1439.9267012206478,
+          "candidate_seconds": 0.0073366365,
+          "public_seconds_or_censoring_limit": 10.5642187935,
+          "public_completed_parity_calls": 2
+        }
+      ],
+      "censored_bound": false,
+      "ratio_summary": {
+        "geometric_ratio": 1074.3644788004103,
+        "familywise95_ci": [
+          909.0167895821942,
+          1439.9267012206478
+        ],
+        "units": 3,
+        "wins": 3,
+        "min_ratio": 909.0167895821942,
+        "max_ratio": 1439.9267012206478
+      },
+      "interval_scope": "If censored, bootstrap summarizes conservative substituted lower limits, not a confidence interval for actual speedup. Only 3 length-selected cases per family."
+    },
+    {
+      "family": "NAB",
+      "contract": "timesead_distinct",
+      "details": [
+        {
+          "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 439.87885874851963,
+          "candidate_seconds": 0.002306836,
+          "public_seconds_or_censoring_limit": 1.0147283870000001,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 485.593046480093,
+          "candidate_seconds": 0.002955007,
+          "public_seconds_or_censoring_limit": 1.4349308515,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 564.5251706291231,
+          "candidate_seconds": 0.0030770685000000002,
+          "public_seconds_or_censoring_limit": 1.73708262,
+          "public_completed_parity_calls": 2
+        }
+      ],
+      "censored_bound": false,
+      "ratio_summary": {
+        "geometric_ratio": 494.04095569055585,
+        "familywise95_ci": [
+          439.87885874851975,
+          564.525170629123
+        ],
+        "units": 3,
+        "wins": 3,
+        "min_ratio": 439.87885874851975,
+        "max_ratio": 564.525170629123
+      },
+      "interval_scope": "If censored, bootstrap summarizes conservative substituted lower limits, not a confidence interval for actual speedup. Only 3 length-selected cases per family."
+    },
+    {
+      "family": "SMAP",
+      "contract": "timesead_distinct",
+      "details": [
+        {
+          "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 438.34082513714276,
+          "candidate_seconds": 0.0045665015,
+          "public_seconds_or_censoring_limit": 2.0016840355000003,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 454.80601171238305,
+          "candidate_seconds": 0.005660334,
+          "public_seconds_or_censoring_limit": 2.5743539315,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 1475.0542220061382,
+          "candidate_seconds": 0.011201393,
+          "public_seconds_or_censoring_limit": 16.522662037000003,
+          "public_completed_parity_calls": 2
+        }
+      ],
+      "censored_bound": false,
+      "ratio_summary": {
+        "geometric_ratio": 664.9903873464316,
+        "familywise95_ci": [
+          438.34082513714276,
+          1475.0542220061384
+        ],
+        "units": 3,
+        "wins": 3,
+        "min_ratio": 438.34082513714276,
+        "max_ratio": 1475.0542220061384
+      },
+      "interval_scope": "If censored, bootstrap summarizes conservative substituted lower limits, not a confidence interval for actual speedup. Only 3 length-selected cases per family."
+    },
+    {
+      "family": "SMD",
+      "contract": "timesead_distinct",
+      "details": [
+        {
+          "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 1908.5140558008302,
+          "candidate_seconds": 0.024239245,
+          "public_seconds_or_censoring_limit": 46.260939784499996,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+          "censored_public_calls": 0,
+          "ratio_or_censored_lower_bound": 2008.1433185283486,
+          "candidate_seconds": 0.027833868,
+          "public_seconds_or_censoring_limit": 55.89439605300001,
+          "public_completed_parity_calls": 2
+        },
+        {
+          "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+          "censored_public_calls": 2,
+          "ratio_or_censored_lower_bound": 2056.023945414346,
+          "candidate_seconds": 0.0291825395,
+          "public_seconds_or_censoring_limit": 60.0,
+          "public_completed_parity_calls": 0
+        }
+      ],
+      "censored_bound": true,
+      "ratio_summary": {
+        "geometric_ratio": 1989.9373882802142,
+        "familywise95_ci": [
+          1908.5140558008302,
+          2056.0239454143466
+        ],
+        "units": 3,
+        "wins": 3,
+        "min_ratio": 1908.5140558008302,
+        "max_ratio": 2056.0239454143466
+      },
+      "interval_scope": "If censored, bootstrap summarizes conservative substituted lower limits, not a confidence interval for actual speedup. Only 3 length-selected cases per family."
+    }
+  ]
+}

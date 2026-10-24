@@ -47,13 +47,25 @@ Sparse VUS 0.3.0 on 21 October 2026~\cite{sparsevus03}. This paper presents the
 complete exact-evaluator work and separately measures the sharing increment
 over that unrefereed software precursor.
 
-The VUS development makes three connected contributions. First, it proves the
+The second operator needs a different event representation: predicted intervals
+merge even outside true ranges, and fragmentation makes recall nonmonotone.
+For flat reciprocal-cardinality range precision/recall, we maintain exact
+overlap and component-count contributions in constant time per activation.
+Endpoint arrays specialize classical connected-level-set processing to a path;
+sorting and connectivity themselves are prior techniques. An exhaustive
+observed-score query therefore takes $O(n\log n+n)$ instead of repeated
+$O(n)$ scans. For $H$ supplied ordered queries, offline buckets give
+$O(n\log(H+1)+n+H)$ including preparation. This new range representation was
+not in the public VUS precursor.
+
+Together, the developments make three connected contributions. First, they prove the
 support-event identities and their complexity, including the dynamic
-denominator, complete ties, and ROC predecessor correction. Second, it gives
-an implementation and preparation/streaming ablations for repeated evaluation
-with a shared label sequence. Third, it evaluates full public calls and complete
+denominator, complete ties and ROC predecessor correction, and the distinct
+local-statistics identity for range precision/recall. Second, they provide
+implementations and ablations separating shared preparation, compiled raster
+recomputation, sorting and query bucketing. Third, they evaluate full public calls and complete
 collection workflows on a prospectively frozen, full-precision panel, followed
-by a separately frozen strongest-comparator and approximation study. The
+by separately frozen comparator, approximation and range-generalization studies. The
 experiments report confidence intervals, label-block sensitivity, exact-value
 checks and unsuccessful alternatives. The primary study uses three public
 univariate collections and eight fixed score-generation procedures, with fresh
@@ -575,8 +587,8 @@ $n=100{,}000$, $M=8$, positive fraction 0.01, $K=1$, width-30 anchor:
 $n$ up to one million, positive fraction up to 0.9, $K$ up to 1,000,
 $M$ up to 32, width up to 300, and a 16-level tied-score condition.
 Four cyclic orders balance method positions. These cases test evaluator cost,
-not detector accuracy. Figure~\ref{fig:operating-new} reports paired trial
-geometric ratios, with unadjusted conditional 95\% intervals.
+not detector accuracy. The artifact retains their paired trial geometric
+ratios, unadjusted conditional 95\% intervals and operating-range figure.
 At positive fraction 0.9, matched dense/released is 0.980 [0.962,0.9994]:
 support compression no longer improves runtime (the ratio of medians is
 0.995). At width 0 its ratio is 1.065, versus 16.36 at width 300. With
@@ -584,15 +596,6 @@ $M=1$, released/stream is only 1.023; sharing has little work to amortize.
 These observations delimit the contribution rather than imply universal
 dominance. Increasing $K$ also increases expanded support and is not an
 isolated intervention on component overhead.
-
-\begin{figure*}[t]
-\centering\includegraphics[width=.94\textwidth]{figures/pvldb_operating_range.pdf}
-\caption{Controlled one-axis runtime conditions. Points and bars are paired
-geometric time ratios and unadjusted 95\% trial intervals on four fixed-input
-orders. Above one favors stream. All other parameters retain the common
-anchor; the component axis also changes expanded support. These synthetic
-mechanism checks supplement, rather than enlarge, the real-recording panel.}
-\label{fig:operating-new}\end{figure*}
 
 Post-timing diagnostics separately instrument the earlier active-prefix
 algorithm. A dense independent reconstruction of interval ramps, complete
@@ -602,39 +605,30 @@ positions, explaining why recall saturation is not a general substitute for
 support compression. At $K=1{,}000$, it visits 33.79\%; these counts do not
 measure the different stream implementation's work or establish its timing.
 
-\paragraph{Fresh execution on a second CPU.}
-The one-command artifact was executed from a fresh checkout on a hosted Linux
-runner with an AMD EPYC 7763 CPU, using the same source revisions, cohort,
-detector parameters and balanced method orders. Raw data and public comparator
-sources were downloaded and all scores generated anew. Both independent record
-audits passed. At width 30, released/stream case ratios were 1.886, 1.580 and
-1.340 for NAB, SMAP and SMD; the respective three-collection-adjusted 95\%
-intervals were [1.732,2.043], [1.526,1.644] and [1.322,1.359]. All 73 case
-medians favored stream. The exact Klein workflow ratios were 20.06, 20.28 and
-16.17, while matched ROC+PR Benchopt/radix workflow ratios were 22.38, 30.40
-and 42.55. Thus the direction of the main result survives a second CPU and a
-fresh input-generation run. Hosted-runner load is uncontrolled: one NAB stream
-workflow took 0.111 seconds against a 0.061-second median and is retained.
-We report each host separately rather than pooling its timing repetitions.
+\paragraph{Original VUS execution on a second CPU.}
+The original one-command VUS artifact was executed from a fresh checkout on
+hosted Linux with an AMD EPYC 7763, regenerating all scores from pinned raw data
+and sources. Both record audits passed. At width 30, released/stream case ratios
+were 1.886, 1.580 and 1.340; three-collection-adjusted 95\% intervals were
+[1.732,2.043], [1.526,1.644] and [1.322,1.359]. All 73 case medians favored
+stream. Klein workflow ratios were 20.06/20.28/16.17; matched ROC+PR
+Benchopt/radix workflow ratios were 22.38/30.40/42.55. Hosted-runner load is
+uncontrolled: a NAB stream workflow of 0.111 seconds versus its 0.061-second
+median is retained. Hosts are not pooled.
 
-Fresh detector scores differ across hosts, and so does the approximation result: 250 thresholds
-change 13/73 winner sets on Linux, including three losses of at least 0.01,
-versus 14/73 and four on the Mac. The difference is one SMAP case whose
-approximate selected model changes, while its exact winner remains the same.
-Its SVM exact VUS-PR changes from 0.3093 to 0.3329. A post-review diagnostic
-archives fresh Mac/Linux score arrays, standardized inputs, fitted SVM state
-and numerical-backend metadata. Raw inputs and standardized matrices are
-byte-identical, but the fitted support-vector counts are 104 and 105. Both
-arrays reproduce the two SVM metric values on one evaluator host and agree
-with unchanged Klein to $5.56\cdot10^{-17}$. This localizes the difference
-after standardization to fitted-state/score generation; it does not identify
-a particular compiler or numerical instruction as causal. The new Linux
-eight-model score hash differs from the first runner (other metric differences
-reach 0.000583), so these arrays are a diagnostic repeat, not recovered
-original-run arrays. The Mac score hash exactly matches its first run.
-The 1,000-threshold counts remain three changed sets and zero losses of 0.01.
-This sensitivity reinforces the distinction between a fixed-input numerical
-comparison and a cross-platform detector-selection claim.
+Generated scores and approximation outcomes differ across platforms. The
+250-query VUS approximation changes 13 winner sets with three losses of at
+least .01 on Linux, versus 14 and four on the Mac. A separate diagnostic
+archives fresh two-host score arrays, standardized inputs, fitted SVM states
+and backend metadata. Identical raw and standardized inputs yield 104 versus
+105 support vectors; both score arrays reproduce their metric values on one
+evaluator host and agree with unchanged Klein within $5.56\cdot10^{-17}$.
+This localizes the difference after standardization without identifying a
+specific instruction or compiler cause. The diagnostic Linux arrays are not
+recovered original-run arrays: their hashes differ and other metric values
+change by up to .000583. The 1,000-query counts remain three changed winner
+sets and no losses of .01. The artifact retains full diagnostic values and
+provenance; fixed-input exactness is distinct from cross-host score generation.
 
 \paragraph{Process memory.}
 A separately frozen resource study selects the real cases with largest length,
@@ -687,7 +681,8 @@ the target fixed. None of these distinctions makes rank changes themselves a
 new discovery. For VUS, the narrow contribution is the exact event reduction, complete global
 counts and dynamic integral correction. For range precision/recall, Tatbul's
 metric and TimeSeAD's exhaustive observed-threshold evaluation already exist.
-Classical component-tree methods already process descending connected level sets.
+Classical component-tree methods already process connected level sets, including
+linear-time one-dimensional construction~\cite{menotti2007}.
 Our additional result is the local overlap/cardinality update and its measured
 advantage over a fused same-compiler raster. The old VUS software precursor does
 not contain this range-metric generalization.
@@ -696,11 +691,11 @@ not contain this range-metric generalization.
 The artifact binds the public archive, each raw member, decoded observations,
 labels, scores, method sources, trial orders and output records by SHA-256.
 A single command creates a new isolated workspace, downloads pinned sources,
-generates scores, executes both studies and reconstructs their numerical tables
+generates scores, executes the VUS primary/supplement and range studies, and reconstructs their numerical tables
 as JSON (TeX rendering and manuscript compilation are separate):
 \begin{quote}\small\ttfamily
-python experiments/reproduce\_pvldb20261024.py\\
-\hspace*{1em}--output /tmp/pvldb-replica
+python experiments/reproduce\_range\_sweep.py\\
+\hspace*{1em}--include-vus --output /tmp/exact-replica
 \end{quote}
 It refuses an existing destination. Independent reconstruction imports no
 metric producer and checks complete coverage, input/protocol/run bindings,
@@ -716,13 +711,17 @@ a separate statsmodels 0.14.6 overlay; an earlier 0.14.2/pandas import failure
 is retained and occurred before any measurements. Detector scores can differ
 across platforms even with these package pins; the diagnosed SVM fitted states
 differ despite identical standardized inputs. Each execution workspace retains its CPU, platform,
-package versions and independently generated arrays. The archived Linux output
-contains records and input hashes but omits the generated NPZ arrays; a later
-inspectable two-host diagnostic pair is archived separately. We do not
+package versions and independently generated arrays. The original VUS-only Linux archive omitted generated NPZ arrays; a later
+two-host diagnostic pair is archived separately. The new combined execution
+retains all generated NPZ arrays and complete range curves. We do not
 pool hosts into a single interval. Our CPU measurements do not establish GPU superiority;
 the literature comparison is a bounded search of the stated sources.
 
-The completed fresh two-CPU one-command execution covers the original VUS primary and public-comparator supplement only. The range-metric successor has separate frozen producers, full curve archives, source-pinned public comparisons and audit commands; its new timing evidence is on the Apple host. Long-recording/controlled, resource, minimal-Klein and
+The completed combined one-command execution covers VUS primary/supplement
+and range main/public/validation studies on freshly generated inputs. Its
+archived reports were independently reconstructed after download, with
+exactly equal JSON objects on the auditing host. The original and auxiliary
+runs remain identified separately. Long-recording/controlled, resource, minimal-Klein and
 compiled conventional-support and public-consumer studies
 have separate frozen protocols and commands in the artifact instructions.
 The operating-range wrapper regenerates its inputs and checks its full design

@@ -1,5 +1,7 @@
 # Sparse VUS 연구 판정 — 2026-10-24
 
+> Historical VUS-only assessment. The new combined VUS/range manuscript and current evidence decision are in [EXACT_METRICS_RESULT_20261024.md](EXACT_METRICS_RESULT_20261024.md). The original results and judgments below are preserved.
+
 **사용자 근거 항목 6/6 수행·검증, 사전 연구 투자 5점 조건 충족. 현재 11쪽 원고의
 PVLDB 모의 판정은 Accept 7 / Revise 5 / Reject 5로 갈린다.** 따라서 근거표를
 채웠다는 사실을 강한 채택 전망으로 바꾸지 않는다. 6점 조건은 미통과다.

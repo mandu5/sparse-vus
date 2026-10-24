@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_BEFORE_VALIDATION",
+  "utc": "2026-10-24T04:30:58.600315+00:00",
+  "source_sha256": {
+    "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+    "experiments/range_sweep_validation.py": "5453f30e8af5056fd71844203c5d214cf322dba0bd5e39bd9e8e60176064038e",
+    "experiments/range_sweep_study.py": "74ea8b546ef1de8384a15e675d6584616011092e4b2eb887c0b3531ed237e57c",
+    ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/basic_metrics.py": "1fcddedf5ada1d5221f39ee568c7fddb9e7181bd7e1c19636c2cbecf40c97707"
+  },
+  "records_sha256": "f92b9e49b709c8d837e00a1e5502a6968cb0e579fcdd1c70369f35dd1b953bf2",
+  "inputs_sha256": "fdffefd8c1590c149919c880ba32897d7f1e057524d840d1db94b2b93ee2c066",
+  "scope": "All 584 profiles at their grid and observed-distinct maximizing thresholds: unchanged TSB public binary-prediction RF1. This validates values at chosen cuts, not independent maximality over every cut. Separate long-input numerical stress has no runtime claim.",
+  "stress": [
+    {
+      "n": 1000000,
+      "geometry": "alternating",
+      "scores": "normal"
+    },
+    {
+      "n": 1000000,
+      "geometry": "single",
+      "scores": "normal"
+    },
+    {
+      "n": 1000000,
+      "geometry": "dense",
+      "scores": "ties"
+    }
+  ],
+  "thresholds": 257,
+  "seed": 20261024,
+  "alpha": 0.2,
+  "atol": 1e-09
+}

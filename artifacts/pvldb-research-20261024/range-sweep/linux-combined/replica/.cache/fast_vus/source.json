@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/tomlouisklein/fast-VUS",
+  "revision": "1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00",
+  "upstream_commit_date": "2026-10-16T10:36:48Z",
+  "upstream_first_commit": "189de211f8821c3027110af2d00593e603c11cfc",
+  "upstream_first_commit_date": "2026-10-12T11:03:32Z",
+  "source_url": "https://raw.githubusercontent.com/tomlouisklein/fast-VUS/1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00/fast_vus.py",
+  "source_sha256": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+  "license": "Apache-2.0",
+  "license_sha256": "3b19b00e8d74e9e8f3db69d8407da5b5dd2078f3bf9c57ff47ff0fb9551db282",
+  "adapter": "Full upstream module imported and vus_pr called unchanged.",
+  "output": "PR scalar only; no ROC output.",
+  "threshold_contract": "250 by default; max_samples=len(scores) includes all score thresholds.",
+  "timing_contract": "Includes upstream validation, global and support sorting, ramp construction, and all width integrals; module import excluded after warm-up."
+}

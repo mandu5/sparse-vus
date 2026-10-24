@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-24T04:23:43.653838+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "python": "3.12.4 (main, Jul 15 2024, 21:50:43) [GCC 13.2.0]",
+  "numpy": "1.26.4",
+  "protocol_sha256": "1367f1ecf98b6542c8d52224e17a5e5366c29ed361feb6e2da1e98f49fdcf872",
+  "inputs_sha256": "67bd9404520342d0d97d00cb55beca284ef50a522f395e18c48cbd3d4e65330e"
+}

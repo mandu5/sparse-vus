@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-24T04:26:42.287536+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.10.0+cpu",
+    "numba": "0.59.1",
+    "scikit-learn": "1.8.0"
+  },
+  "protocol_sha256": "b1aba2de1477c8f2dc2f43273590529dcbf19feb8219de18a401f17f5bf42686"
+}

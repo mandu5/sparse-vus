@@ -1,5 +1,52 @@
 # Sparse VUS
 
+## Exact range metrics by local event statistics (24 October 2026)
+
+[Current combined manuscript](paper/exact_metrics_pvldb20261024.pdf) develops
+two exact metric operators: support events for dynamic VUS and local overlap /
+fragmentation updates for range precision and recall. The range contribution
+preserves flat reciprocal-cardinality semantics through interval merges.
+Classical component-tree construction, sorting and offline bucketing are
+credited prior techniques; the contribution is the metric-specific maintained
+state and measured evaluation consequence.
+
+On **73 complete real recordings / 584 full-precision profiles**, exhaustive
+observed-threshold range-F1 is **27.80× / 21.44× / 128.08× faster** on
+NAB / SMAP / SMD than a fused **same-compiler linear raster**. Familywise 95%
+case intervals are **[18.74,41.94] / [8.57,43.14] / [95.09,154.61]**.
+At 100 fixed queries, exact bucketing improves the same compiled baseline
+**1.72× / 1.99× / 1.97×**, winning all 73 case medians. Exhaustive sweep loses
+on one SMAP case whose profiles have only 3–11 distinct scores. Complete
+curves agree within `3.00e-15` on this panel.
+
+A [fresh combined Linux execution](https://github.com/mandu5/sparse-vus/actions/runs/40062043152)
+on AMD EPYC 7763 reproduces the direction of all three collection results:
+exhaustive raster/sweep **29.35× / 27.76× / 163.60×**, with adjusted 95%
+intervals **[18.81,46.08] / [11.63,53.75] / [125.92,193.02]**. The same
+low-cardinality loss remains. Hosts are reported separately: regenerated scores
+differ, and matching aggregate selection counts conceal two exchanged SMD case
+indicators. Complete arrays, curves and source snapshots are retained in the
+[canonical archive](artifacts/pvldb-research-20261024/range-sweep/linux-combined/README.md).
+
+Replacing grid100 by all observed thresholds changes 24/73 winner sets;
+**15/73 have no overlapping winning model** and **12/73 have range-F1 regret
+at least .01**. This is oracle metric selection on a reused panel, not improved
+detector accuracy or a label-free deployment policy. Unchanged TSB-AD and
+TimeSeAD comparisons have separate, explicit query/alpha contracts; two
+TimeSeAD calls remain censored rather than silently discarded.
+
+```sh
+python experiments/reproduce_range_sweep.py --include-vus --output /tmp/exact-metrics-replica
+```
+
+This command regenerates scores and the principal VUS/range numerical tables
+in a new directory. The [reproduction guide](docs/REPRODUCE_PVLDB_20261024.md)
+lists pinned dependencies, source checks, records and execution receipts.
+[Frozen range evidence](artifacts/pvldb-research-20261024/range-sweep/) ·
+[Six-gate research decision and independent reviews](docs/EXACT_METRICS_RESULT_20261024.md) ·
+[Prior-art/source audit](docs/reviews/20261024/range-sweep-novelty-feasibility.md) ·
+[Prospective research conditions](docs/superpowers/specs/2026-10-24-pvldb-evidence-design.md).
+
 ## Exact evaluation with full-precision inputs (24 October 2026)
 
 [Exact VUS Evaluation by Support Events and Shared Interval Geometry](paper/sparse_vus_pvldb20261024.pdf)

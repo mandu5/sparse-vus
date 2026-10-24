@@ -1,0 +1,136 @@
+{
+  "status": "FROZEN_AFTER_PRIMARY_RESULTS_BEFORE_SUPPLEMENT_OUTCOMES",
+  "created_utc": "2026-10-24T04:33:49.847723+00:00",
+  "primary_protocol_sha256": "1367f1ecf98b6542c8d52224e17a5e5366c29ed361feb6e2da1e98f49fdcf872",
+  "inputs_sha256": "67bd9404520342d0d97d00cb55beca284ef50a522f395e18c48cbd3d4e65330e",
+  "source_sha256": {
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "experiments/pvldb_supplement.py": "4e2a8e4140c0a0f662ca4e97c52bde52acaf728df6872318c07e2da73deba318",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8"
+  },
+  "methods": [
+    "stream",
+    "klein_exact",
+    "benchopt_pair",
+    "radix_pair",
+    "klein250",
+    "klein1000"
+  ],
+  "orders": [
+    [
+      "stream",
+      "klein_exact",
+      "benchopt_pair",
+      "radix_pair",
+      "klein250",
+      "klein1000"
+    ],
+    [
+      "klein_exact",
+      "benchopt_pair",
+      "radix_pair",
+      "klein250",
+      "klein1000",
+      "stream"
+    ],
+    [
+      "benchopt_pair",
+      "radix_pair",
+      "klein250",
+      "klein1000",
+      "stream",
+      "klein_exact"
+    ],
+    [
+      "radix_pair",
+      "klein250",
+      "klein1000",
+      "stream",
+      "klein_exact",
+      "benchopt_pair"
+    ],
+    [
+      "klein250",
+      "klein1000",
+      "stream",
+      "klein_exact",
+      "benchopt_pair",
+      "radix_pair"
+    ],
+    [
+      "klein1000",
+      "stream",
+      "klein_exact",
+      "benchopt_pair",
+      "radix_pair",
+      "klein250"
+    ],
+    [
+      "klein1000",
+      "klein250",
+      "radix_pair",
+      "benchopt_pair",
+      "klein_exact",
+      "stream"
+    ],
+    [
+      "stream",
+      "klein1000",
+      "klein250",
+      "radix_pair",
+      "benchopt_pair",
+      "klein_exact"
+    ],
+    [
+      "klein_exact",
+      "stream",
+      "klein1000",
+      "klein250",
+      "radix_pair",
+      "benchopt_pair"
+    ],
+    [
+      "benchopt_pair",
+      "klein_exact",
+      "stream",
+      "klein1000",
+      "klein250",
+      "radix_pair"
+    ],
+    [
+      "radix_pair",
+      "benchopt_pair",
+      "klein_exact",
+      "stream",
+      "klein1000",
+      "klein250"
+    ],
+    [
+      "klein250",
+      "radix_pair",
+      "benchopt_pair",
+      "klein_exact",
+      "stream",
+      "klein1000"
+    ]
+  ],
+  "width": 30,
+  "cohort": "All 73 fixed full-precision series and all eight stored scores; no exclusions or regenerated inputs",
+  "comparison": "Unchanged Benchopt computes ROC and PR. Report its native PR-consumer cost AND matched two-output radix/Benchopt comparison. Klein PR exact and default250/1000 form separate accuracy-cost comparisons.",
+  "timing": "Single numerical thread, warm JIT, complete public calls and winner selection. Balanced orders. A separate complete collection pass includes reads and output writes.",
+  "repetitions": 12,
+  "regret_threshold": 0.01,
+  "uncertainty": "Paired log-ratio bootstrap of case medians plus identical-label-block sensitivity; no physical-recording iid or unseen-data claim",
+  "failure_policy": "Record all losses; scalar parity>1e-11 or mismatched exact winner sets halt; sampled errors retained, not failures"
+}

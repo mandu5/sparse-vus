@@ -1,0 +1,591 @@
+{
+  "scope": "Descriptive fixed-panel per-case median ratios; observations are not controlled interventions or independent population samples.",
+  "records_sha256": "cb174dfc14e830730a3a7f95d889d76f4c7919f3113fc642ba6f3adda2185e47",
+  "audit_sha256": "82bc379cb16ec8c3bba64a823279f4f0e71270e083459f410118cb71f4d590b2",
+  "rows": [
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "family": "NAB",
+      "n": 15852,
+      "mean_distinct_queries": 8179.875,
+      "distinct_raster_over_sweep": 71.0424254941068,
+      "grid100_raster_over_bucket": 2.087976470939958
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "family": "NAB",
+      "n": 4031,
+      "mean_distinct_queries": 3435.875,
+      "distinct_raster_over_sweep": 28.54447406085556,
+      "grid100_raster_over_bucket": 1.9378821048387054
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "family": "NAB",
+      "n": 2379,
+      "mean_distinct_queries": 2378.0,
+      "distinct_raster_over_sweep": 18.917274970520005,
+      "grid100_raster_over_bucket": 1.59628807106599
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "family": "NAB",
+      "n": 10319,
+      "mean_distinct_queries": 10244.5,
+      "distinct_raster_over_sweep": 85.49780460905137,
+      "grid100_raster_over_bucket": 1.9095142110991683
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "family": "NAB",
+      "n": 2499,
+      "mean_distinct_queries": 2498.125,
+      "distinct_raster_over_sweep": 19.52186952064625,
+      "grid100_raster_over_bucket": 1.5858364450027784
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "family": "NAB",
+      "n": 2161,
+      "mean_distinct_queries": 2045.125,
+      "distinct_raster_over_sweep": 17.099079882652816,
+      "grid100_raster_over_bucket": 1.614106220510731
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "family": "NAB",
+      "n": 1000,
+      "mean_distinct_queries": 997.375,
+      "distinct_raster_over_sweep": 7.295883387948818,
+      "grid100_raster_over_bucket": 1.3392849870896346
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "family": "NAB",
+      "n": 4031,
+      "mean_distinct_queries": 4003.25,
+      "distinct_raster_over_sweep": 31.228434301612108,
+      "grid100_raster_over_bucket": 1.7637609944035626
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "family": "NAB",
+      "n": 2494,
+      "mean_distinct_queries": 2492.25,
+      "distinct_raster_over_sweep": 20.550539894247766,
+      "grid100_raster_over_bucket": 1.6149499060169337
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "family": "NAB",
+      "n": 1537,
+      "mean_distinct_queries": 1520.125,
+      "distinct_raster_over_sweep": 11.611543101431101,
+      "grid100_raster_over_bucket": 1.48454395157527
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "family": "NAB",
+      "n": 7266,
+      "mean_distinct_queries": 7261.875,
+      "distinct_raster_over_sweep": 54.29956030123635,
+      "grid100_raster_over_bucket": 1.8128168704681444
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "family": "NAB",
+      "n": 1881,
+      "mean_distinct_queries": 1212.125,
+      "distinct_raster_over_sweep": 11.509073100030628,
+      "grid100_raster_over_bucket": 1.6817770402775685
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "family": "NAB",
+      "n": 4031,
+      "mean_distinct_queries": 4026.5,
+      "distinct_raster_over_sweep": 29.78103047601645,
+      "grid100_raster_over_bucket": 1.7779571388811575
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "family": "NAB",
+      "n": 1623,
+      "mean_distinct_queries": 1620.5,
+      "distinct_raster_over_sweep": 12.586873118465514,
+      "grid100_raster_over_bucket": 1.5578032799167398
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "family": "NAB",
+      "n": 4031,
+      "mean_distinct_queries": 3988.875,
+      "distinct_raster_over_sweep": 30.370107147690483,
+      "grid100_raster_over_bucket": 1.7985207781675436
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "family": "NAB",
+      "n": 18049,
+      "mean_distinct_queries": 16701.25,
+      "distinct_raster_over_sweep": 121.82829935207614,
+      "grid100_raster_over_bucket": 1.8688463191794729
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "family": "NAB",
+      "n": 15832,
+      "mean_distinct_queries": 15132.375,
+      "distinct_raster_over_sweep": 115.73297121034534,
+      "grid100_raster_over_bucket": 1.9122660634095283
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "family": "NAB",
+      "n": 2499,
+      "mean_distinct_queries": 2497.125,
+      "distinct_raster_over_sweep": 19.196783236454145,
+      "grid100_raster_over_bucket": 1.6316973719437786
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "family": "NAB",
+      "n": 3031,
+      "mean_distinct_queries": 3029.75,
+      "distinct_raster_over_sweep": 22.73727409956389,
+      "grid100_raster_over_bucket": 1.6913663586465641
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "family": "NAB",
+      "n": 4031,
+      "mean_distinct_queries": 3552.875,
+      "distinct_raster_over_sweep": 29.217831432494222,
+      "grid100_raster_over_bucket": 1.9022602627627683
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 635.125,
+      "distinct_raster_over_sweep": 9.541223273873376,
+      "grid100_raster_over_bucket": 3.2397469746547043
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "n": 20000,
+      "mean_distinct_queries": 17450.125,
+      "distinct_raster_over_sweep": 119.94975278423435,
+      "grid100_raster_over_bucket": 1.9821980010145535
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "n": 28696,
+      "mean_distinct_queries": 25747.25,
+      "distinct_raster_over_sweep": 187.42115431450623,
+      "grid100_raster_over_bucket": 1.8746117583629456
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 20960.0,
+      "distinct_raster_over_sweep": 140.2112388432186,
+      "grid100_raster_over_bucket": 1.8821010566399599
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "family": "SMD",
+      "n": 28479,
+      "mean_distinct_queries": 23036.125,
+      "distinct_raster_over_sweep": 180.20050809484226,
+      "grid100_raster_over_bucket": 2.028393996108106
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "n": 20000,
+      "mean_distinct_queries": 17878.25,
+      "distinct_raster_over_sweep": 134.36932606937896,
+      "grid100_raster_over_bucket": 2.0286741038649874
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 22643.625,
+      "distinct_raster_over_sweep": 151.1368542380406,
+      "grid100_raster_over_bucket": 1.7485106542964033
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "family": "SMD",
+      "n": 20000,
+      "mean_distinct_queries": 18527.5,
+      "distinct_raster_over_sweep": 136.02375166260458,
+      "grid100_raster_over_bucket": 1.9321821171471
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 616.25,
+      "distinct_raster_over_sweep": 10.399594446306578,
+      "grid100_raster_over_bucket": 3.3085260658925133
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 22243.25,
+      "distinct_raster_over_sweep": 155.69558769590137,
+      "grid100_raster_over_bucket": 1.7893085159220004
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "family": "SMD",
+      "n": 28479,
+      "mean_distinct_queries": 27988.625,
+      "distinct_raster_over_sweep": 219.15939015052538,
+      "grid100_raster_over_bucket": 1.9165100614817656
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "family": "SMD",
+      "n": 22700,
+      "mean_distinct_queries": 20130.375,
+      "distinct_raster_over_sweep": 143.75960191486442,
+      "grid100_raster_over_bucket": 1.9023089170328251
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 13213.25,
+      "distinct_raster_over_sweep": 108.81916583613251,
+      "grid100_raster_over_bucket": 2.1530258944269987
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 21049.625,
+      "distinct_raster_over_sweep": 140.43802398029177,
+      "grid100_raster_over_bucket": 1.8824913016967895
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 12159.25,
+      "distinct_raster_over_sweep": 107.02401297334916,
+      "grid100_raster_over_bucket": 2.2275017076648123
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 20879.375,
+      "distinct_raster_over_sweep": 137.91484386130966,
+      "grid100_raster_over_bucket": 1.953159831511143
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "n": 28696,
+      "mean_distinct_queries": 25458.0,
+      "distinct_raster_over_sweep": 167.28192799410908,
+      "grid100_raster_over_bucket": 1.8521912589615142
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "n": 20000,
+      "mean_distinct_queries": 17520.5,
+      "distinct_raster_over_sweep": 130.00179282724162,
+      "grid100_raster_over_bucket": 1.9285426759531459
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 19732.625,
+      "distinct_raster_over_sweep": 167.22493901719162,
+      "grid100_raster_over_bucket": 2.0134196256799854
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 22394.75,
+      "distinct_raster_over_sweep": 146.83914977178497,
+      "grid100_raster_over_bucket": 1.8136463918170609
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "n": 28696,
+      "mean_distinct_queries": 27970.625,
+      "distinct_raster_over_sweep": 147.62154646612052,
+      "grid100_raster_over_bucket": 1.8294030864188224
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "n": 28696,
+      "mean_distinct_queries": 25343.875,
+      "distinct_raster_over_sweep": 167.37114542232942,
+      "grid100_raster_over_bucket": 1.844112021959967
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "family": "SMD",
+      "n": 25000,
+      "mean_distinct_queries": 22060.875,
+      "distinct_raster_over_sweep": 151.2323114029929,
+      "grid100_raster_over_bucket": 1.8572007446649836
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "n": 28696,
+      "mean_distinct_queries": 26414.125,
+      "distinct_raster_over_sweep": 177.83748195272565,
+      "grid100_raster_over_bucket": 1.868688607644747
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "n": 20000,
+      "mean_distinct_queries": 18331.625,
+      "distinct_raster_over_sweep": 136.06272718271973,
+      "grid100_raster_over_bucket": 1.8487902360310975
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 20903.125,
+      "distinct_raster_over_sweep": 148.5268885348907,
+      "grid100_raster_over_bucket": 1.8713352239751513
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "family": "SMD",
+      "n": 25000,
+      "mean_distinct_queries": 22147.125,
+      "distinct_raster_over_sweep": 162.0535446278243,
+      "grid100_raster_over_bucket": 1.858112437575313
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "n": 28696,
+      "mean_distinct_queries": 25547.625,
+      "distinct_raster_over_sweep": 175.02959167126596,
+      "grid100_raster_over_bucket": 1.6447088759924833
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "n": 20000,
+      "mean_distinct_queries": 16009.875,
+      "distinct_raster_over_sweep": 118.84162440668962,
+      "grid100_raster_over_bucket": 2.0096186599642634
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 23649.375,
+      "distinct_raster_over_sweep": 191.4311273333288,
+      "grid100_raster_over_bucket": 1.838760165426112
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 20882.5,
+      "distinct_raster_over_sweep": 147.3056622893683,
+      "grid100_raster_over_bucket": 1.938667102670282
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 20844.5,
+      "distinct_raster_over_sweep": 150.60655433423557,
+      "grid100_raster_over_bucket": 2.0080441788737122
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 21018.0,
+      "distinct_raster_over_sweep": 138.1043278453538,
+      "grid100_raster_over_bucket": 1.9324007529798461
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 20746.875,
+      "distinct_raster_over_sweep": 153.28197836727085,
+      "grid100_raster_over_bucket": 2.0341840585411846
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 22333.5,
+      "distinct_raster_over_sweep": 139.37867426876852,
+      "grid100_raster_over_bucket": 1.8154626810473087
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "mean_distinct_queries": 20744.0,
+      "distinct_raster_over_sweep": 141.89518327855453,
+      "grid100_raster_over_bucket": 1.9794735758990656
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "family": "SMAP",
+      "n": 8209,
+      "mean_distinct_queries": 7409.875,
+      "distinct_raster_over_sweep": 59.4713976135049,
+      "grid100_raster_over_bucket": 1.980032053597819
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "family": "SMAP",
+      "n": 7874,
+      "mean_distinct_queries": 4.875,
+      "distinct_raster_over_sweep": 0.41655383777292665,
+      "grid100_raster_over_bucket": 3.202169039761119
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "family": "SMAP",
+      "n": 4453,
+      "mean_distinct_queries": 1827.0,
+      "distinct_raster_over_sweep": 16.476561164473704,
+      "grid100_raster_over_bucket": 1.841827010128172
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "family": "SMAP",
+      "n": 8640,
+      "mean_distinct_queries": 5423.625,
+      "distinct_raster_over_sweep": 53.86466437033169,
+      "grid100_raster_over_bucket": 1.8057514532087018
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "family": "SMAP",
+      "n": 8310,
+      "mean_distinct_queries": 5607.875,
+      "distinct_raster_over_sweep": 46.084612110486354,
+      "grid100_raster_over_bucket": 1.7819942384912206
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "family": "SMAP",
+      "n": 8029,
+      "mean_distinct_queries": 175.75,
+      "distinct_raster_over_sweep": 2.9822923054502466,
+      "grid100_raster_over_bucket": 3.0830709758012103
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "family": "SMAP",
+      "n": 7431,
+      "mean_distinct_queries": 877.75,
+      "distinct_raster_over_sweep": 12.974663893410503,
+      "grid100_raster_over_bucket": 2.2174281078963562
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "family": "SMAP",
+      "n": 8205,
+      "mean_distinct_queries": 7792.0,
+      "distinct_raster_over_sweep": 58.8051039906649,
+      "grid100_raster_over_bucket": 1.711057289087798
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "family": "SMAP",
+      "n": 7331,
+      "mean_distinct_queries": 6940.375,
+      "distinct_raster_over_sweep": 54.426232197657676,
+      "grid100_raster_over_bucket": 1.8309380767786598
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "family": "SMAP",
+      "n": 7632,
+      "mean_distinct_queries": 147.625,
+      "distinct_raster_over_sweep": 2.272752269688588,
+      "grid100_raster_over_bucket": 2.4305692271204267
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "family": "SMAP",
+      "n": 8080,
+      "mean_distinct_queries": 8012.375,
+      "distinct_raster_over_sweep": 63.37017205307593,
+      "grid100_raster_over_bucket": 1.7251241102364485
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "family": "SMAP",
+      "n": 7914,
+      "mean_distinct_queries": 6848.75,
+      "distinct_raster_over_sweep": 52.49728712032584,
+      "grid100_raster_over_bucket": 1.8300955342422023
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "family": "SMAP",
+      "n": 4693,
+      "mean_distinct_queries": 1741.0,
+      "distinct_raster_over_sweep": 15.707948354598667,
+      "grid100_raster_over_bucket": 1.8079685446396658
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "family": "SMAP",
+      "n": 8469,
+      "mean_distinct_queries": 8360.0,
+      "distinct_raster_over_sweep": 62.14054548746846,
+      "grid100_raster_over_bucket": 1.707456814509169
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "family": "SMAP",
+      "n": 8532,
+      "mean_distinct_queries": 4085.625,
+      "distinct_raster_over_sweep": 33.91468435066454,
+      "grid100_raster_over_bucket": 1.862633502910049
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "family": "SMAP",
+      "n": 8376,
+      "mean_distinct_queries": 5405.25,
+      "distinct_raster_over_sweep": 47.187184158129824,
+      "grid100_raster_over_bucket": 1.8852247029284581
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "family": "SMAP",
+      "n": 8579,
+      "mean_distinct_queries": 3447.375,
+      "distinct_raster_over_sweep": 28.855168605056473,
+      "grid100_raster_over_bucket": 1.8587664212447674
+    }
+  ]
+}

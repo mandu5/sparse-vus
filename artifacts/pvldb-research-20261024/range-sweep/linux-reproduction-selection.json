@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-24T04:32:24.861997+00:00",
+  "canonical_run": 40062043152,
+  "canonical_commit": "e2405e39ec23486a3d228240569b48785de32cb4",
+  "reason": "Combined one-command VUS+range execution verifies all principal studies on one set of fresh arrays. Select before reading either fresh timing output.",
+  "auxiliary_range_only_run": 40061935240,
+  "auxiliary_commit": "d4eb3eddd0d441757ee31e149466528e41905c7d",
+  "status_at_selection": "Range-only workflow success observed; combined still running. Neither timing report read at selection.",
+  "policy": "Keep both runs; no choosing faster timings or pooling hosts. A combined execution failure remains reported and repaired if needed."
+}

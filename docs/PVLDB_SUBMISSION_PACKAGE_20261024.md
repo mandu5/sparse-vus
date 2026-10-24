@@ -6,15 +6,18 @@ it is not a CMT registration or submission receipt.
 
 ## Paper and author
 
-- Title: **Exact VUS Evaluation by Support Events and Shared Interval Geometry**
+- Title: **Exact Evaluation of Time-Series Anomaly Metrics by Local Event Statistics**
 - Author: **Youngmin Ko**
 - Affiliation: **Independent Researcher, Republic of Korea**
 - Contact: **rhdudals0505@naver.com**
-- Manuscript: `paper/sparse_vus_pvldb20261024.pdf`
-- Source: `paper/sparse_vus_pvldb20261024.tex`
+- Manuscript: `paper/exact_metrics_pvldb20261024.pdf`
+- Source: `paper/exact_metrics_pvldb20261024.tex`
 - Artifact: <https://github.com/mandu5/sparse-vus/tree/research/pvldb-20261024>
 - Reproduction instructions: `docs/REPRODUCE_PVLDB_20261024.md`
-- Public fresh-execution receipt: <https://github.com/mandu5/sparse-vus/actions/runs/40049786600>
+- Public combined fresh-execution receipt: <https://github.com/mandu5/sparse-vus/actions/runs/40062043152>
+- Reproduction source commit: `e2405e39ec23486a3d228240569b48785de32cb4`
+- Final PDF SHA-256: `6646c1f497273f2e4731d158761568c26b7cf04b3b06978813aa1962518e3a11`
+- PDF extent: 13 total pages, references begin on page 12; 12-page content limit satisfied.
 
 The author metadata follows the author's already-confirmed personal research
 status and prior confirmation. Alumni status is not represented as a current
@@ -49,25 +52,32 @@ the three style files against upstream revision `39c95f5c` on 24 October.
 
 ## Self-Assessment of Relevance: prepared text
 
-This paper addresses the cost of repeated exact analytical evaluation over
-stored time-series detector profiles. A query joins a shared binary label
-sequence with several score columns, integrates the original dynamic VUS
-operator over score thresholds and tolerance widths, selects the maximizing
-profile, and writes its result. The contribution reduces the threshold states
-and width-dependent work needed for that aggregate while preserving complete
-global ties, merged anomaly components, and the dynamic ROC contribution.
+This paper addresses repeated exact analytical evaluation over stored time-series
+anomaly-detector profiles. A query combines labels with score columns, evaluates
+an established metric over threshold states, and selects the maximizing profile.
+The first contribution represents dynamic VUS with support events, complete
+score ties and the ROC predecessor correction. The second maintains flat
+reciprocal-cardinality range precision/recall by constant-time local updates to
+overlap and fragmentation statistics during point activation. Sorting,
+component-tree connectivity and query bucketing are credited prior techniques;
+the additional contribution is the metric-specific exact state representation.
 
-The technical development builds directly on VUS and its optimized evaluators
-in the PVLDB/VLDB Journal literature. The formal target and support-event
-identities are in Section 2; comparisons to existing evaluators and the exact
-algorithm are in the subsequent algorithm sections. The prototype includes compiled dense, optimized conventional direct-ramp and shared-label controls. The conventional compiled scalar wins on all 73 primary cases, so the paper does not attribute the public-library gap to a separately demonstrated runtime superiority of nearest geometry. Stream adds 13–18% over that control in complete VUS workflows. In an actual nine-metric public consumer, whole-workflow speedup is only 1.031x; the paper states this application limit prominently.
-The evaluation measures complete public calls and collection workflows from
-score-file reads through decision-file writes, with public raw-data provenance,
-fixed full-precision inputs, paired uncertainty and a fresh second-CPU execution.
+The work builds directly on VUS and its optimized evaluators in PVLDB and the
+VLDB Journal, and on established range metrics and exact analytical processing.
+The prototype preserves each operator's output contract and compares complete
+calls against public implementations and conventional same-compiler controls.
+The range result removes repeated raster scans at observed thresholds, with
+three public collections, paired uncertainty, full numerical curves and explicit
+low-cardinality losses. The original stored-profile VUS workflow includes array
+reads, metric computation, selection and decision writes. A separate actual
+nine-metric public consumer improves only 1.031 times; this adverse whole-system
+result is not replaced with a partial-operator speedup.
 
-The work concerns analytical operator efficiency and reproducibility. Its scope
-does not require a claim that the detector inputs are state-of-the-art predictors
-or that the implementation is a full database engine.
+The claimed scope is exact analytical operator evaluation. It is not a new
+anomaly detector, a label-free model selector, a new metric or a full database
+execution engine. Scientific value rests on the exact reductions, fair compiled
+controls and measured cost/selection consequences, not on using database
+terminology for an otherwise unrelated task.
 
 ## Related-work and submission declarations
 
@@ -77,6 +87,13 @@ reported. The exact-evaluator and narrower sampling manuscripts must not be
 submitted concurrently with overlapping claims. Existing related submission
 status and author conflicts must be verified in CMT from their actual records;
 this package does not invent or pre-attest those author declarations.
+
+The reviewer-nomination field can identify Youngmin Ko as the best-qualified
+available author under the explicit single-author/no-qualified-reviewer provision.
+This does not assert the separate two-database-paper qualification. CMT conflict
+and related-submission declarations must reflect actual records, including the
+venue's five-year institution/collaboration rule; they are not pre-attested by
+this preparation document.
 
 ## Upload contents
 
@@ -88,4 +105,14 @@ research-quality checks, not external decision letters or acceptance receipts.
 
 ## Current internal decision
 
-Three independent final mock assessments of the 11-page revision are Accept 7, Revise 5 and Reject 5 on explicitly internal surrogate scales. This package is reviewable preparation, not a claim of strong consensus for submission. A separately frozen range-metric generalization study is ongoing; its results are not part of this PDF or pre-attested here.
+Three independent AI mock reviews of the new combined manuscript have completed
+initial assessments and final evidence-closure addenda. Their initial
+recommendations were Weak Accept 7, Weak Accept 6 and Revise 6 on explicitly
+internal surrogate scales. Final recommendations are Weak Accept 7, Weak Accept 6
+and Accept 7; the last reviewer closed their stated presentation/reproduction
+conditions. Remaining limitations are recorded in
+`docs/EXACT_METRICS_RESULT_20261024.md`. All six evidence gates and
+the prospective investment-6 generalization route are supported for the narrowed
+operator contribution. The original VUS-only 7/5/5 assessments remain in the
+historical record. Reviewer numbers are not an acceptance probability or a
+substitute for external review.

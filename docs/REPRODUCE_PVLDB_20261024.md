@@ -24,9 +24,31 @@ The range results are `range-sweep/main-study/independent-report.json`,
 `range-reproduction-complete.json` binds their hashes and records the CPU,
 packages and whether VUS was included. Complete numerical curves and generated
 score arrays are retained. A running receipt or a successful static wrapper
-check is not a completed execution. At this documentation checkpoint the fresh
-Linux range-only run is in progress; the combined mode is newly composed and
-will receive a separate complete run.
+check is not a completed execution. The canonical combined run [40062043152](https://github.com/mandu5/sparse-vus/actions/runs/40062043152)
+completed successfully at 2026-10-24 05:07:05 UTC on AMD EPYC 7763, from
+`e2405e39ec23486a3d228240569b48785de32cb4`. Its downloaded archive matched
+GitHub SHA-256 `cf9e0531b3ab00bc9f3f6d28113d62497f1ebe1c66b5eae2fe0fae915c898ec7`.
+All four saved-record auditors were then rerun locally against its actual
+arrays/sources; each reconstructed JSON object exactly equalled the archived
+report. The selected-cut/stress receipt and its parents were also checked.
+The complete scientific archive, including all generated NPZ inputs and range
+curves, is retained in `artifacts/pvldb-research-20261024/range-sweep/linux-combined/`.
+The auxiliary range-only run 40061935240 remains separately reported. The
+canonical run was selected before inspecting either run's timings; no pooling
+or faster-run selection is used.
+
+To audit a downloaded workflow artifact, first restore `src/`, `experiments/`
+and `artifacts/selected_series.json` from the workflow's exact commit into the
+extracted workspace. The upload retains the numerical records, generated NPZ
+arrays and pinned comparator source directories, but not these project source
+directories or the public raw ZIP. Restore `cache/TSB-AD-U.zip` from
+`https://www.thedatum.org/datasets/TSB-AD-U.zip`; its required SHA-256 is
+`0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961`.
+The primary VUS auditor checks members inside that archive, so an artifact
+download alone does not satisfy its input prerequisites. Run the auditors from
+the restored tree; do not mix the generated arrays or source revisions of two
+runs. Cross-platform recomputation of derived log/exp summaries can differ in
+their last floating-point bits even when all input and result hashes match.
 
 The main range panel includes all 73 recordings and 584 score profiles. Public
 comparisons use the predeclared three shortest recordings in each collection;

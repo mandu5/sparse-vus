@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "run_id": 40062043152,
+  "commit": "e2405e39ec23486a3d228240569b48785de32cb4",
+  "utc": "2026-10-24T05:12:32.888816+00:00",
+  "completion_receipt_sha256": "0457f8271d18d060f1bd3143ae957ff9ea76e599e965384ef8aab0f3d3ea0553",
+  "reports": [
+    {
+      "report": "full-precision/independent-audit.json",
+      "sha256": "9fe355ecfcb8a27f13cad90d8d6da7ad1ae1acadc66c4a9df5bf8363687ba6b0",
+      "reconstructed_sha256": "9fe355ecfcb8a27f13cad90d8d6da7ad1ae1acadc66c4a9df5bf8363687ba6b0",
+      "status": "PASS",
+      "last_bit_differences": []
+    },
+    {
+      "report": "supplement/independent-report.json",
+      "sha256": "9e17112f09676514e689079203ae2534bf0dcac6a8267e7cbf3f42b1271bcee8",
+      "reconstructed_sha256": "9e17112f09676514e689079203ae2534bf0dcac6a8267e7cbf3f42b1271bcee8",
+      "status": "PASS",
+      "last_bit_differences": []
+    },
+    {
+      "report": "range-sweep/main-study/independent-report.json",
+      "sha256": "b934652c89b067af465bf40b301d3e555e69f74d289a4fc5ac7796cc65471ae8",
+      "reconstructed_sha256": "b934652c89b067af465bf40b301d3e555e69f74d289a4fc5ac7796cc65471ae8",
+      "status": "PASS",
+      "last_bit_differences": []
+    },
+    {
+      "report": "range-sweep/public-study-v2/independent-report.json",
+      "sha256": "82e234cd72a60c71b0a90fb1a333ecc9ff90e3794a10917661c4a8449a6329f8",
+      "reconstructed_sha256": "82e234cd72a60c71b0a90fb1a333ecc9ff90e3794a10917661c4a8449a6329f8",
+      "status": "PASS",
+      "last_bit_differences": []
+    }
+  ],
+  "validation_receipt_and_parent_binding": "PASS",
+  "scope": "Four independent saved-record reconstructions plus validation-receipt arithmetic/source/parent binding. The fresh numerical execution is the separate GitHub run, not this re-audit.",
+  "floating_summary_policy": "Same post hoc 1e-12 relative/absolute comparison used after auxiliary cross-host log/exp last-bit differences; hashes, discrete fields and structure exact."
+}

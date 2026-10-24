@@ -1,0 +1,2850 @@
+{
+  "status": "ARCHIVED",
+  "utc": "2026-10-24T05:13:25.217474+00:00",
+  "run_id": 40062043152,
+  "commit": "e2405e39ec23486a3d228240569b48785de32cb4",
+  "archive_sha256": "cf9e0531b3ab00bc9f3f6d28113d62497f1ebe1c66b5eae2fe0fae915c898ec7",
+  "scope": "All generated scientific evidence, complete range curves, 73 generated score NPZ files and pinned external source files; project code restored from exact commit; public raw ZIP restored by pinned hash. Bytecode caches omitted.",
+  "files": [
+    {
+      "path": ".cache/benchopt_vus/metrics.py",
+      "bytes": 20293,
+      "sha256": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8"
+    },
+    {
+      "path": ".cache/benchopt_vus/source.json",
+      "bytes": 1086,
+      "sha256": "ed6d450a3c0e32855d05d1477a15bceb412722333cb2cf6e5a1ff5e3bbefe59e"
+    },
+    {
+      "path": ".cache/fast_vus/LICENSE",
+      "bytes": 11339,
+      "sha256": "3b19b00e8d74e9e8f3db69d8407da5b5dd2078f3bf9c57ff47ff0fb9551db282"
+    },
+    {
+      "path": ".cache/fast_vus/fast_vus.py",
+      "bytes": 4653,
+      "sha256": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+    },
+    {
+      "path": ".cache/fast_vus/source.json",
+      "bytes": 1013,
+      "sha256": "5d7ee952dbc805fe7f749f48b573b86f108f1098b25329874aa14d1e690f1aed"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0000.npz",
+      "bytes": 1157962,
+      "sha256": "5b822271bf2052d4970aab21a04989bc34b3cc8e6561faf9c7aeb16b54cde269"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0001.npz",
+      "bytes": 295029,
+      "sha256": "7658849eebf5a67ead75142c5d576eea4ff1c412d4ded62823de807ed6138cf0"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0002.npz",
+      "bytes": 174433,
+      "sha256": "adbaa84fe8fdb362697f18f5cb974c1235ad1b7677270574cdfde909567a76c7"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0003.npz",
+      "bytes": 754053,
+      "sha256": "34fdaccfbfe0495880fe9ba6205163e3ab5c9cf14cb6bebfcd86de67af752ac3"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0004.npz",
+      "bytes": 183193,
+      "sha256": "ddae737d4571be858bad965612199cfe2601298b2794d83826780a72df4711c2"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0005.npz",
+      "bytes": 158519,
+      "sha256": "37477046734ee10711d85289179071f0e38dfcfafbf7dbea4fa49bc3c3ee7a7b"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0006.npz",
+      "bytes": 73766,
+      "sha256": "7101a35c44e85211bd81bccc5a726f17949c850e00c740b5925e5c39111bba20"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0007.npz",
+      "bytes": 295029,
+      "sha256": "312544dff46623d5ffeb4e0e3b0e77d50b659280160aa5d358e6dd9dfc5aaf9d"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0008.npz",
+      "bytes": 182828,
+      "sha256": "d676556625965645bfb41173afe2e212c0243dc8ca978e244bb5c71eeadfb402"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0009.npz",
+      "bytes": 112967,
+      "sha256": "f1e15592f7e0d4aac1001fd5db2c26a2e2e488103170e18bd2be247d690d057b"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0010.npz",
+      "bytes": 531184,
+      "sha256": "65c3bff66bd2bf388b9604512e35569b288c37db1271044c1fa018d82ced720e"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0011.npz",
+      "bytes": 138079,
+      "sha256": "a44eb12de32c212eca139c3e886db099776da71a07e7a75eba19b647553171f7"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0012.npz",
+      "bytes": 295029,
+      "sha256": "265dfe148e538a30ab0974eedefdf7f16e979af54d5497338f4c5d3b9cdc220e"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0013.npz",
+      "bytes": 119245,
+      "sha256": "d61d9e7f06c0fd7b920158bca9450d9bba00492f25676a1b712dab21a7e86744"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0014.npz",
+      "bytes": 295029,
+      "sha256": "2782a4847bd9be74cf538b54f57c6d5b3347736bf14c2771c227d2a28bcad0ef"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0015.npz",
+      "bytes": 1318343,
+      "sha256": "15ad9fa1c0e25d9b29ed055cad6e64de75496cb7cb24d21424b83ed4e408a220"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0016.npz",
+      "bytes": 1156502,
+      "sha256": "b8c039cd63f02f01a3bf0192f7f9248a462ddb6084f5c0e8a1240c5e5e8b30ac"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0017.npz",
+      "bytes": 183193,
+      "sha256": "feb7c338cd24df0581ee879ccad2b0b4dbd87569ead42d2f337decff9138b04b"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0018.npz",
+      "bytes": 222029,
+      "sha256": "e43833880ecb18535fd268b8384db821e35f41816dc6b39556766a551939793c"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0019.npz",
+      "bytes": 295029,
+      "sha256": "3f607fc1ad5f5c557a099f14a88c21d50f75f405115bdd54719d83cbbebc171d"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0020.npz",
+      "bytes": 1731085,
+      "sha256": "57b63d1822f75104fa57755431e34aed4bd8ff3c7c8a390c301f6ea50822573f"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0021.npz",
+      "bytes": 1460766,
+      "sha256": "89167cb7585d8e70c21cfb3114c8762b55bc33f953643b0da983495bf4d6d409"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0022.npz",
+      "bytes": 2095574,
+      "sha256": "3b09fb52b1624c424f7577245b50f16fb2d6ccc933adce55ed15713fe5972151"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0023.npz",
+      "bytes": 1731085,
+      "sha256": "4440abf898ebed221fc20c382baaa08d9ae9b0dad3f47512d08de0ecf24d6c8f"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0024.npz",
+      "bytes": 2079733,
+      "sha256": "6871f3fbdb33441d9675495d83ece9add472edf97c645c185ea615b013c201aa"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0025.npz",
+      "bytes": 1460766,
+      "sha256": "2c154139e93fe7dbfaee9de1068f012fa2655f7d1e3f4fe39a1d49b3f897a071"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0026.npz",
+      "bytes": 1731085,
+      "sha256": "f69792da6e696714246149ba733d847893ea7ad9f61528b1cc21bcbff914f2de"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0027.npz",
+      "bytes": 1460766,
+      "sha256": "9ffc45f880ad4f8b5835bfc1dcbb6a351262d6cca7cb5a7e77e8c0d63193d2e3"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0028.npz",
+      "bytes": 1731085,
+      "sha256": "c62a3a3eb11b09e637081f8b95fb9e65bc914f2b615592371899f2eb7b45ebab"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0029.npz",
+      "bytes": 1731085,
+      "sha256": "a720f965ba375382b746cc34cc3df4716bd928fa6a94768a3fb0906bc7feeefe"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0030.npz",
+      "bytes": 2079733,
+      "sha256": "d5f03000dc984ef27dfba547266b318a0f5771616f2837bc8215a6ed79138a22"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0031.npz",
+      "bytes": 1657866,
+      "sha256": "2d4448a6f2bacd8c1afe6bc37e174d6084d76e005ad9c32795ecdfe39b641f6e"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0032.npz",
+      "bytes": 1731085,
+      "sha256": "308ed1ded0771a18f891fb2cf739f5bcb50e97f1744f8691aca6c722fd75c0c6"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0033.npz",
+      "bytes": 1731085,
+      "sha256": "a74c70d3935932932f9aac3fc38d2a137823be36587ca0ba62d1dbf35ef4482b"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0034.npz",
+      "bytes": 1731085,
+      "sha256": "405f53c3ddadd9ac2d571bc34dec8207ae90695868f1decf7d75b82da82f5d59"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0035.npz",
+      "bytes": 1731085,
+      "sha256": "e559830676221e721573ee2c733fcb6f394ba9ca7d152a14e0ed937451071d80"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0036.npz",
+      "bytes": 2095574,
+      "sha256": "f5bcb26d3d53e7889c63c033ae7e45dc17075f8f3e76a4e1742075daa2d12f2a"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0037.npz",
+      "bytes": 1460766,
+      "sha256": "8004d330e54dccc6de49076603fa0c2373b526c6683276e83a13166343e250aa"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0038.npz",
+      "bytes": 1731085,
+      "sha256": "0f6800bf6778df11bcd0fec52f694177ec4b476be227b81d30514ef3ca38499d"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0039.npz",
+      "bytes": 1731085,
+      "sha256": "bf26417274f772416d6ebb074cdf6fa5184134a4ccdec9561d133c7d73087d4e"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0040.npz",
+      "bytes": 2095574,
+      "sha256": "0921e346dff73f4bb09811e3fd857a38930c878509d35d4945361023e767cdc1"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0041.npz",
+      "bytes": 2095574,
+      "sha256": "ed42042c88010056a89ae69a8e5482f995c84f5956c1b5535439c3d3cda40d92"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0042.npz",
+      "bytes": 1825766,
+      "sha256": "e23b3aff7dd786cb67a8fd10a86ad094d57a0a1a0c646fddf6369b98d0c62f8c"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0043.npz",
+      "bytes": 2095574,
+      "sha256": "ff2194889b3069178580c9ee4e8fa37aa68cc0fdfac3a16c5126dd3f8f3cc1d3"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0044.npz",
+      "bytes": 1460766,
+      "sha256": "19d0e346f7a5796133c43eb77df454cd66099009752b507d2e1ea619530b34b9"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0045.npz",
+      "bytes": 1731085,
+      "sha256": "e2efe1753c76f08c9fb49207acafc2d85dd0d0f4aa55954a717670f81896a5dd"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0046.npz",
+      "bytes": 1825766,
+      "sha256": "9a8a4d9dd9771ba37c8ac762879c572882fb9533c70da84690e3e94dac2a8083"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0047.npz",
+      "bytes": 2095574,
+      "sha256": "e99d3021b36ccd0c8833b867e3c49ce9d46debfdf12a26f118249be42eee39ba"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0048.npz",
+      "bytes": 1460766,
+      "sha256": "cdb6bb397c498bb7508929b7304e0956e42ca2d209d006f5d0decda3fb14ff4d"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0049.npz",
+      "bytes": 1731085,
+      "sha256": "3edccd160e349bf4618e5265614fef4efa81b1afa9da1308b4aed79171929b70"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0050.npz",
+      "bytes": 1731085,
+      "sha256": "f8d2fb9ed0b8a3561db98d0930b6fe417962f24e80bf2b30b77da37aa1b6a200"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0051.npz",
+      "bytes": 1731085,
+      "sha256": "a03fe0a8240f265b7b696fdfffb6dcb1377a42d73b96483ab635bf88bc341ebd"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0052.npz",
+      "bytes": 1731085,
+      "sha256": "c25ab2110bfc5cf1327cba1a8cee078a9d13e2090ecf89a41109f764f714d659"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0053.npz",
+      "bytes": 1731085,
+      "sha256": "27fe1623b607cbb1772f748510494e0984bbcc842dd5b7078e79cb8f2b0a4364"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0054.npz",
+      "bytes": 1731085,
+      "sha256": "c32b7e99bdc2f3bdcb1e1121e026dd0945a926902f7220222f9090aacf2b4414"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0055.npz",
+      "bytes": 1731085,
+      "sha256": "2f3ac189d862ba9774728cab3ad729f18505520628a657574cbb260b1dcafa6e"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0056.npz",
+      "bytes": 600023,
+      "sha256": "207e484e8f3120fe75e161568c105dcc4d8bb78b8d300a27a2a01e6a03c6de06"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0057.npz",
+      "bytes": 575568,
+      "sha256": "7a6543762046e9c76283159dc7e4fd1ae85717c1bebeabdf52c0edc50ab2b2fd"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0058.npz",
+      "bytes": 325835,
+      "sha256": "349b422e641eed277d7700d00d0c2dd0ad09882ec21f7de42eaf41c928c3d5a4"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0059.npz",
+      "bytes": 631486,
+      "sha256": "4d2ff26a30f193d390f033b4232b1d4d489183c91345d44aa4698a2b96653a56"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0060.npz",
+      "bytes": 607396,
+      "sha256": "1c5884a7a8c4fdd00873003e57c2646172f2c580f00d29ab818f89fe92400b92"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0061.npz",
+      "bytes": 586883,
+      "sha256": "10eddd982aeaaa1c64a2336061c5a10ccb8458370ccfe51da583f10f0cda6fb2"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0062.npz",
+      "bytes": 543229,
+      "sha256": "2f1cca5e7f75e2b15a2b429c9f98cf94796bd3876ffa38c82d25aae6bee29bbc"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0063.npz",
+      "bytes": 599731,
+      "sha256": "99f9ad868549a46fb65da62e7124f1b8bedfbd2bbc0dca4cc6e03866f4b5337f"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0064.npz",
+      "bytes": 535929,
+      "sha256": "87fe18bb0486ec3ed428fdf05cbb14f9df72bc760b30dd3b3df6f3da0b6008ac"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0065.npz",
+      "bytes": 557902,
+      "sha256": "53b7bd651002eddec017daf2080390cf59083c404ed802aab0342c26e9ed182e"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0066.npz",
+      "bytes": 590606,
+      "sha256": "7962d66b7026be1b1d14c90309e2b91980df733d7056339ccdbfc21045e5f85a"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0067.npz",
+      "bytes": 578488,
+      "sha256": "a54b8fbd4a69c98367d869d30f3a65be25def81b2ef973d637dd146d7080c4f2"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0068.npz",
+      "bytes": 343355,
+      "sha256": "9f325ff73a62f659d32486b86e23a63bb624197a62112e9ec350d7c5b5612eef"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0069.npz",
+      "bytes": 619003,
+      "sha256": "50494bd49d788c8fcd9c4ee37efc6ddbe756d5f40a505537282931936243a1c4"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0070.npz",
+      "bytes": 623602,
+      "sha256": "94637ffb8c01c9a3c1a5b536d5bcf4f64b13ccf86898d3f1beda8f1da1e71499"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0071.npz",
+      "bytes": 612214,
+      "sha256": "be44e8659fce01c4ebbfc75fef9bed9dab64d18f3ed78e23f90129af8627ef72"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/0072.npz",
+      "bytes": 627033,
+      "sha256": "6fd9a8217ad1c17e96b5f3174efa987d2a81ee52745564c263622639190c69bd"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/last-supplement-output.json",
+      "bytes": 9292,
+      "sha256": "857d8ccafd186f61ec7de65a524ecb0b6864abff479668a3c612870b3e734d4e"
+    },
+    {
+      "path": ".cache/pvldb-full-precision-20261024/last-workflow-output.json",
+      "bytes": 8827,
+      "sha256": "3ac31d747e7ad718a91c2f38d57495fd7714d10e6df624d29721ce60f6575356"
+    },
+    {
+      "path": ".cache/range-sweep-timesead/LICENSE",
+      "bytes": 1073,
+      "sha256": "3e3ed418d1b09a2917f4045cc49371554958fcc3337105a299adddb5805b87e2"
+    },
+    {
+      "path": ".cache/range-sweep-timesead/timesead/evaluation/__init__.py",
+      "bytes": 526,
+      "sha256": "a17a3a444959adcafaf937bd7e769b817492f1412468f704a9ed223348ae4f16"
+    },
+    {
+      "path": ".cache/range-sweep-timesead/timesead/evaluation/evaluator.py",
+      "bytes": 19696,
+      "sha256": "f84495ccc62eeba905c515c8ac2d709b10302a6e20220692348ef73b6a633cea"
+    },
+    {
+      "path": ".cache/range-sweep-timesead/timesead/evaluation/ts_precision_recall.py",
+      "bytes": 12838,
+      "sha256": "d5bb774b4aab9e441e4119e957ce5fe52a4abed965d6286705836e002dd162c8"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_affiliation_zone.py",
+      "bytes": 3486,
+      "sha256": "3b289bf11cebe614afabe353c873de90ba9debf8831aef8f73532870dce01ba2"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_integral_interval.py",
+      "bytes": 20845,
+      "sha256": "8177e69eccb0ae4ea76b2f54f6799ae61758b5a103603fae3d1a3a8d331e7cda"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/_single_ground_truth_event.py",
+      "bytes": 3488,
+      "sha256": "a04b5daa0fb0ef68893807c7ab5d4353b43f0d5231ae06ef0006b2e6cf939165"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/generics.py",
+      "bytes": 4882,
+      "sha256": "16743b204d24feb8ba9deaabceb7b0cf900520136e8a3b77e499448fcaafbfc9"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/affiliation/metrics.py",
+      "bytes": 5187,
+      "sha256": "9fe83cd2cb1cd4b1b3c7869971e94a18d5ea71b4103f88e347de70c8330cc060"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/basic_metrics.py",
+      "bytes": 29267,
+      "sha256": "1fcddedf5ada1d5221f39ee568c7fddb9e7181bd7e1c19636c2cbecf40c97707"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/evaluation/metrics.py",
+      "bytes": 2340,
+      "sha256": "13957d15d3ebb2b743a4bebfa3a68af31e82a58ecc568557b4081ad90e38094d"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/TSB_AD/utils/slidingWindows.py",
+      "bytes": 2492,
+      "sha256": "0ba65735c6572cd80e586409d4f653253d847e08fbae8e1da6e474e142e74af6"
+    },
+    {
+      "path": ".cache/tsbad-consumer/pkg/benchmark_exp/HP_Tuning_U.py",
+      "bytes": 3163,
+      "sha256": "3c809dd6dbf868da9698112487909d128947f25c2af9cfb3f065b588f478bb9c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/development/protocol.json",
+      "bytes": 12725,
+      "sha256": "c511b8e6d84d530238d063f1bebcf7f7dbdc75b8f555bfe406c2dcb1fa51d46f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/generation.jsonl",
+      "bytes": 97481,
+      "sha256": "ae725c34a5a592a09e19dc67f029c4dbb3638bcb22dc97d96718ed8d04eda481"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/independent-audit.json",
+      "bytes": 92011,
+      "sha256": "9fe355ecfcb8a27f13cad90d8d6da7ad1ae1acadc66c4a9df5bf8363687ba6b0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/inputs.json",
+      "bytes": 132918,
+      "sha256": "67bd9404520342d0d97d00cb55beca284ef50a522f395e18c48cbd3d4e65330e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/protocol.json",
+      "bytes": 40129,
+      "sha256": "1367f1ecf98b6542c8d52224e17a5e5366c29ed361feb6e2da1e98f49fdcf872"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/records.jsonl",
+      "bytes": 3802872,
+      "sha256": "2995c0ac9505d28953c7c9daf02ab40e0f284302433daf2ddd7025e174b31c86"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/report.json",
+      "bytes": 28111,
+      "sha256": "102ccf43cfc276ba078e1c50da6d8c41616728c8ab54a493005fad53198fb6df"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/run-complete.json",
+      "bytes": 260,
+      "sha256": "39308f8789a9e4eb9bb8a9f204f61de22d3ed05fabab23556cefb61bcfaa7ce5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/run-start.json",
+      "bytes": 373,
+      "sha256": "855e3d2a1a536bc6cda4cf68eba4c6a29b576c4a355374a14bd9144a587772b8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/full-precision/workflows.jsonl",
+      "bytes": 1315083,
+      "sha256": "5f904094dd88f798cf0b00f1231a25357cac65770351ceae862b5d64da593bd9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/public-consumer/protocol.json",
+      "bytes": 6860,
+      "sha256": "4811c90e71adf7681834818237fd2fa9587e3806b60ff05d4aac68a4c7f73354"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-reproduction-complete.json",
+      "bytes": 1412,
+      "sha256": "0457f8271d18d060f1bd3143ae957ff9ea76e599e965384ef8aab0f3d3ea0553"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-reproduction-start.json",
+      "bytes": 755,
+      "sha256": "7a9396da76cb54efe7ff0eb2760eecb0c8f4f1b12deb1c62c5ab3f47bb5f50ef"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/complete.json",
+      "bytes": 249,
+      "sha256": "6cefda235631ccbdeda24bae6ada4283ef70dc9adaa22c2bd81cc980661391ed"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/000-distinct-raster.npz",
+      "bytes": 468563,
+      "sha256": "281ad03b6258bb5f6e78d1d9498f2a02cf5fb6d169c9228fe3aab59778d6ac99"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/000-distinct-sweep.npz",
+      "bytes": 468592,
+      "sha256": "4fc1ed4f3174a95b94835bcbe4121db68361a64905ff2a6252bc00e36c56126f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/000-grid100-bucket.npz",
+      "bytes": 12522,
+      "sha256": "bed4782a347f8a4317715e394abe55e8dea1d1667ccb0518d5e05fc855520d80"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/000-grid100-prefix.npz",
+      "bytes": 12517,
+      "sha256": "429a3ca215a2ed46ae1ff13b4cd10e709f86f513637dff173c4b34f1c632f427"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/000-grid100-raster.npz",
+      "bytes": 12528,
+      "sha256": "748baa4170b0c70bb5a15f44b60ee5ba87a06b90d8636713ad481538a1ade459"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/000-grid100-sweep.npz",
+      "bytes": 12516,
+      "sha256": "429cc99ee943e8bcc8067f467e18a89c550501d8ad2ee73a7c2d1b5f9b904888"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/001-distinct-raster.npz",
+      "bytes": 247578,
+      "sha256": "46199868870a52e68d67ee19fd0f4b94b419538ea6be26f09af06424ab855244"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/001-distinct-sweep.npz",
+      "bytes": 247520,
+      "sha256": "6640311d8ec57d3eb838415e3e70123ebba4a150907fe69549caaa81e0ef426f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/001-grid100-bucket.npz",
+      "bytes": 4743,
+      "sha256": "adbcaa2f75ece89caebe2bc3d36338567b44f815c0e3e86f9c62bf83e562e4b8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/001-grid100-prefix.npz",
+      "bytes": 4749,
+      "sha256": "0184ac01ace2017c505e53de904b4eb6424dbd43c0ef357ffa3c99a09c3e59d2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/001-grid100-raster.npz",
+      "bytes": 4749,
+      "sha256": "29731c7aa39d0844f4a5a4148ed5d1789cc2d63be6c8d67716cfa2231c279f8f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/001-grid100-sweep.npz",
+      "bytes": 4743,
+      "sha256": "45c37c6542452707a87e63da6ecd1f85e66e15ef24dba08ed9ad5720b7e49d80"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/002-distinct-raster.npz",
+      "bytes": 106799,
+      "sha256": "661685cbe33dbfb8d48d6a1b76b30e965c396488aa22bf29d68c52534de7169d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/002-distinct-sweep.npz",
+      "bytes": 106836,
+      "sha256": "9e8bc1d27bda7a1beffcb55f5117bf0e6a4de4c85ba77c8107057041ea5069c3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/002-grid100-bucket.npz",
+      "bytes": 11489,
+      "sha256": "d84efbcde5004d6a5566f2b8f4d4d300c56dee1d5a49e0ceba2a0fa714ea3d94"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/002-grid100-prefix.npz",
+      "bytes": 11480,
+      "sha256": "4669449203f492cc01d5972412a123d2f01d48c49c9915a2181bbf3c51856dad"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/002-grid100-raster.npz",
+      "bytes": 11483,
+      "sha256": "aaf8a741516e051d15d99a1cc646621b07c0137a309586fefa8d237c1fe8c1d4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/002-grid100-sweep.npz",
+      "bytes": 11480,
+      "sha256": "1d9dd1a5d7bb64ad415edc1991c7084afa50fdaf76fff413aeebb6c0bc4a2403"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/003-distinct-raster.npz",
+      "bytes": 494560,
+      "sha256": "6684cf7081622dd9624c20b613a2493c4481cd9e25aac8ff72e7d6fc37b44619"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/003-distinct-sweep.npz",
+      "bytes": 494453,
+      "sha256": "c867b882f25aae004261fe3b8a499905a1f358b2965e20bc6f5abe55a7f3e868"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/003-grid100-bucket.npz",
+      "bytes": 12198,
+      "sha256": "20445226b9cbdee6c3d7870d4990ae8c4b1cb38eae0c7a10ef12c5e831b1fbd2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/003-grid100-prefix.npz",
+      "bytes": 12202,
+      "sha256": "cd775cb7473304600c127dcf01c2dd3a6f349de54d8fbf6a3de78528cb4c52b1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/003-grid100-raster.npz",
+      "bytes": 12208,
+      "sha256": "065ab2258c52aa57f9ec1ad158ff8497c091b04a14b82683d79592725200d698"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/003-grid100-sweep.npz",
+      "bytes": 12201,
+      "sha256": "6dcf932bbd864af4ec18a4f83cc5a8a3fb7b0bc36a20cd419b65b3c5059a632c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/004-distinct-raster.npz",
+      "bytes": 122770,
+      "sha256": "a35903171151b24a1bd22bfae7397764841d8123fd4f5e790091996482c078be"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/004-distinct-sweep.npz",
+      "bytes": 122773,
+      "sha256": "02a7861bb63f90853216c2ecca624a6e3e732960a21a32d1684ef81f38d9463f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/004-grid100-bucket.npz",
+      "bytes": 11223,
+      "sha256": "e253bec6d304e57d5676b7e5ddb12daccd7585c121a2b932e465d9248d469e1b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/004-grid100-prefix.npz",
+      "bytes": 11219,
+      "sha256": "1c2d5fb7ed27ad28a390715eddbc7bfa2705689c1c097fc014a65cf0ae0c97d7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/004-grid100-raster.npz",
+      "bytes": 11209,
+      "sha256": "98d81bed3caa4e459ee5ac3234ac85baf8add0dfbb6fc06a6d1109d9d4e09763"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/004-grid100-sweep.npz",
+      "bytes": 11221,
+      "sha256": "534d20f27794bb76013d158cc1dd2db6eab0fd7a138b5d18c3318f4bf9fda690"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/005-distinct-raster.npz",
+      "bytes": 79245,
+      "sha256": "0de689061efbb7c6121e78ff418dbeac933983dd32bebbd4f426843b8e155705"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/005-distinct-sweep.npz",
+      "bytes": 79254,
+      "sha256": "86b26a7589ece3ecd5f55cfaf8c9ca8d25a2e86a5e160a4040dfc2d6a39e5e72"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/005-grid100-bucket.npz",
+      "bytes": 9141,
+      "sha256": "ccdce0ba59b190d6ab84fbf18e09b118b76cb470d34aa690fd92a3587f4ae147"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/005-grid100-prefix.npz",
+      "bytes": 9135,
+      "sha256": "1285c956d4021a67a8d81474c363e3bf4b636cca628ea4df10e3589b729ba6f8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/005-grid100-raster.npz",
+      "bytes": 9120,
+      "sha256": "edf00e20cd03f116b7fc641f82d9a068fb990f5ee35aeb86108bb3b6639d9745"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/005-grid100-sweep.npz",
+      "bytes": 9140,
+      "sha256": "7764724c25fb39a60044d63216a3eaf6f01b34b937d1a31ac887d0343d51c5af"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/006-distinct-raster.npz",
+      "bytes": 51251,
+      "sha256": "684514d21a6cb06ba6774aa2dad5fc9e960b4ab6c1536076f91fe140919c87a8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/006-distinct-sweep.npz",
+      "bytes": 51286,
+      "sha256": "93aad7c0b17f15209aed97aac47dc643bd0d77537740b2f82bfabb3995cb4b93"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/006-grid100-bucket.npz",
+      "bytes": 10421,
+      "sha256": "4ca3d8c0b74b3c38c1c6d2087f410d62c4efa748e670bc4a17c7b0d7a7b16cd1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/006-grid100-prefix.npz",
+      "bytes": 10412,
+      "sha256": "22daf8d0cbf76e5b48fefaa711e7b896ece90cfe4696657a24fe21d0074b8daa"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/006-grid100-raster.npz",
+      "bytes": 10392,
+      "sha256": "28c640839989106dc5adea320485259ca20da63ae9ce81154e36c9007c56e4a3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/006-grid100-sweep.npz",
+      "bytes": 10423,
+      "sha256": "7d3553edfc6f7de8f760918bd746daef6443e1bf8a5e87966e96438675807a30"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/007-distinct-raster.npz",
+      "bytes": 204546,
+      "sha256": "675dc21dda9d7b52c4efc18d77dd1967243a6ff2263e0aaa956213a4ccce3fae"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/007-distinct-sweep.npz",
+      "bytes": 204562,
+      "sha256": "b6cf4f6dfcc346543a5a02ae7fb33f15e9b6b0ddc2a6a79064ff15e252aaa298"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/007-grid100-bucket.npz",
+      "bytes": 8379,
+      "sha256": "faaf44f73ffd8d8ec887d4bd36fbd49f5a6167f2ea0146dccf6cceb53db77b24"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/007-grid100-prefix.npz",
+      "bytes": 8379,
+      "sha256": "c9a944295741c390525f041b800010c7b675646bf800d2019ae5b0fcd4ccdd9d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/007-grid100-raster.npz",
+      "bytes": 8379,
+      "sha256": "e3bcb004cf33662a436726938d05c432e6ce0e065bb730ec6e263930f169638f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/007-grid100-sweep.npz",
+      "bytes": 8383,
+      "sha256": "b1b5c940aa52bc5928a5922d548fc24cc317da9ec26e9e07f1d8a3b5fc2072bc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/008-distinct-raster.npz",
+      "bytes": 116724,
+      "sha256": "9bc36b6beb5762f37f807d5ce19d1ac13e980f5d214c21ffffb661e4f7a9493a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/008-distinct-sweep.npz",
+      "bytes": 116683,
+      "sha256": "5d336a876a9e0f2fab264b2605253f34f389e7534c53c58a08e74c8ecbb796e5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/008-grid100-bucket.npz",
+      "bytes": 12274,
+      "sha256": "d6ce4c1445545d05c2cad5de04afc441cd335354e81e9640ac2ef413e62b39eb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/008-grid100-prefix.npz",
+      "bytes": 12263,
+      "sha256": "9161ce9caa0e12236b68ec9dd7909751ce37506026f1eb1400dc403458db482a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/008-grid100-raster.npz",
+      "bytes": 12266,
+      "sha256": "3cff0b4fc51eb4cdfc5751928010dea8fab98b6f3be7f6df522086a7bf55a998"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/008-grid100-sweep.npz",
+      "bytes": 12274,
+      "sha256": "919b9bb6d56063e416b5cd4b896bd6585c954999a00ceb1ed9151cc9dfde562c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/009-distinct-raster.npz",
+      "bytes": 56191,
+      "sha256": "f8575e09cc16aae7584f7ceabc1c24a7a4a149f3294df6c77dad2ce3917a0a50"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/009-distinct-sweep.npz",
+      "bytes": 56200,
+      "sha256": "fc7c9cb042a42ae7052e691173a590c7e3c9f9421dc35e57745fa0dd83b568ef"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/009-grid100-bucket.npz",
+      "bytes": 6929,
+      "sha256": "70c99a9e83b66a8f21d9f741a5a1138d589281e35babf97f6b7bdfe2f3333a8d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/009-grid100-prefix.npz",
+      "bytes": 6926,
+      "sha256": "22c7c8cfd9656a9f660d190569e3fadbb6ed2d4a95571b94d1cde87494651252"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/009-grid100-raster.npz",
+      "bytes": 6919,
+      "sha256": "5623b71d2677e31a7f18c9067cd13235dfcd6c30de77a995e2320650a30e6278"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/009-grid100-sweep.npz",
+      "bytes": 6929,
+      "sha256": "53500bbdc507b9f3e505b7495c5817d945ded7da653e5988dd246f293def5877"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/010-distinct-raster.npz",
+      "bytes": 328771,
+      "sha256": "8fbba1de8436c6e4cdae322a7973ce4978146af781a1846e25eb391c36d6323b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/010-distinct-sweep.npz",
+      "bytes": 328796,
+      "sha256": "9460874ded6c64c04ae71781b5be8fb8d826b5235972264f976c5761e35e9013"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/010-grid100-bucket.npz",
+      "bytes": 11913,
+      "sha256": "7b8c3de4786d7568fcbc5d63a1c61cfeeb392819a614b60d5b8216dc4ff77897"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/010-grid100-prefix.npz",
+      "bytes": 11906,
+      "sha256": "b456262f933a8887914915ac9fac671d300fdc873866227243227978aa68b4a3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/010-grid100-raster.npz",
+      "bytes": 11900,
+      "sha256": "c2b03e0f317c43375aae14ae5d131eeccb8736a4be93b1dbed773cc54e14a094"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/010-grid100-sweep.npz",
+      "bytes": 11910,
+      "sha256": "b9f12816e94fcf0b052d9a4b1b4333a92efd593e5f3b16d05d508409061e697d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/011-distinct-raster.npz",
+      "bytes": 46848,
+      "sha256": "74c493acef77d90875b6ce502a0a8b23dd3e0cc3d13acc5dfd0d5ae57e35b05c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/011-distinct-sweep.npz",
+      "bytes": 46947,
+      "sha256": "b0804e4a78d85cc85a8302ca5e2e125fe419dbae8795a4f6c201f017e53b4fad"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/011-grid100-bucket.npz",
+      "bytes": 8007,
+      "sha256": "735047cb120c1f468b3e139dbaa83f738eaed46e29ae597b8a5ddb7c23619ac6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/011-grid100-prefix.npz",
+      "bytes": 7964,
+      "sha256": "ff1890ce71ce54a1f80905cf2812cda55a8830809ff89c038551a00cbd8a5eef"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/011-grid100-raster.npz",
+      "bytes": 7961,
+      "sha256": "0e911263a7af07f291f75af19a54ccfc321cbe89dbe88274087613317a21e452"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/011-grid100-sweep.npz",
+      "bytes": 7991,
+      "sha256": "1e4618d53801bf6d5fc50b5aabc68fd52b9832fcd1a25bde0dc050a943e0ae84"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/012-distinct-raster.npz",
+      "bytes": 220346,
+      "sha256": "b92530f443d23ba00c66de064f2ad8d076ae11d21c04bf59d31c1bfbda9d17c9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/012-distinct-sweep.npz",
+      "bytes": 220304,
+      "sha256": "6f426c4874dcda96ba727b91f0b88ae5ced89e3989707efbae31afe8969f8d9c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/012-grid100-bucket.npz",
+      "bytes": 10809,
+      "sha256": "10659c27359c3856de296c2b50eb22c3c7d1f31fdf52360531a8aae6b90df8c0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/012-grid100-prefix.npz",
+      "bytes": 10811,
+      "sha256": "6905d1e4bd8fa1e997c6daf0e1246941d45fdfa91591475137c1e1d3cdbe3093"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/012-grid100-raster.npz",
+      "bytes": 10810,
+      "sha256": "2c9e4684bab4df65f2a9bfc9cf90008e94235a0bbf44f38402150d0663380026"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/012-grid100-sweep.npz",
+      "bytes": 10811,
+      "sha256": "040225c332fab7eecdd549827fbd4b45b95d473b18014834cc431fd209205309"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/013-distinct-raster.npz",
+      "bytes": 70236,
+      "sha256": "190d414d2f24f0a4ae8fc6d8ac91a2636fef722b34f8d0bf24ac2021034768d1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/013-distinct-sweep.npz",
+      "bytes": 70280,
+      "sha256": "7a179002c19c9b2034d921439a5b332642a3e518a9a2d0622fb914b44cf6b009"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/013-grid100-bucket.npz",
+      "bytes": 12669,
+      "sha256": "dd01f1d596727e87017965a59b7d556ce972f31e49f13118034b159559be4c01"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/013-grid100-prefix.npz",
+      "bytes": 12671,
+      "sha256": "014d39d2a940e597233f1f2483544292dbad7606c61f7f3570f15526ea70b308"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/013-grid100-raster.npz",
+      "bytes": 12677,
+      "sha256": "57d05183a58fcf593ac57fa46869d77099de2e9ee478fb6d639b991f3cad715f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/013-grid100-sweep.npz",
+      "bytes": 12675,
+      "sha256": "9d623e161b748f8a04dea7ba572d9e61e14e5235453f31cf8a95fa229b45520c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/014-distinct-raster.npz",
+      "bytes": 227701,
+      "sha256": "9ba732e067257a7fdae1b54f2dc7482b7695929497bca33e0d82ff8c9ac23ff2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/014-distinct-sweep.npz",
+      "bytes": 227610,
+      "sha256": "f677d375bf0e8a63419760fff990d8f7f529368bc0c30d5747b0aa1abac53237"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/014-grid100-bucket.npz",
+      "bytes": 7819,
+      "sha256": "7c331e1165c7f561f8ff001f58baa742717b84cad93e8d04e7bcafc853663dc5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/014-grid100-prefix.npz",
+      "bytes": 7822,
+      "sha256": "f5a8246b989c1d09f0e8bdd80fb11f406223e6de4509dd2d42637d54b36d13e6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/014-grid100-raster.npz",
+      "bytes": 7817,
+      "sha256": "28122f5f80efa42bb65a91150d1a7896615a05ddd83d1ca7cd30278a707119cc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/014-grid100-sweep.npz",
+      "bytes": 7816,
+      "sha256": "dc5f2f8a935b51201bc37fae6f3684d5f1f4eba49f46fecbe5d39c273e94dbac"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/015-distinct-raster.npz",
+      "bytes": 742559,
+      "sha256": "5b3aa8d42c6c094ab012d27cc6ebe36aeb6f30eb851d86a09add5fe14ec74c08"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/015-distinct-sweep.npz",
+      "bytes": 742588,
+      "sha256": "847490c3ca44d3109e5f5d0248d7bde3ee02b8729e104212391c7f3594096c12"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/015-grid100-bucket.npz",
+      "bytes": 14318,
+      "sha256": "0fdc4eafd900d9d544342031e8cd3f00954f10a917c0711a3b1147a78d7b3e2d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/015-grid100-prefix.npz",
+      "bytes": 14319,
+      "sha256": "d56cc331103d1bf63227b998cf8581fd230eafea93b2847fc72827fd933e8132"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/015-grid100-raster.npz",
+      "bytes": 14321,
+      "sha256": "a5ce247c4b0a77891be4176788564dee93a9e145af970714d4298940cbe2d30c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/015-grid100-sweep.npz",
+      "bytes": 14321,
+      "sha256": "f751e6e26c85189163accec7182aa96502f5489039f28b5945c6379dc0d06ec0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/016-distinct-raster.npz",
+      "bytes": 693132,
+      "sha256": "17b15ff1c6e5a7f1df7ed1b0a0aa2019982917aaa0f7b37832c239f6383eee13"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/016-distinct-sweep.npz",
+      "bytes": 693131,
+      "sha256": "75cd36a2a2606a458b806a55855ef0870293f35f9f489eff1e9d198ba8c45368"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/016-grid100-bucket.npz",
+      "bytes": 10155,
+      "sha256": "8b9c2c7cf96368e8bc2b17bec48404d6cce58c741d92571b608168e073ad2943"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/016-grid100-prefix.npz",
+      "bytes": 10153,
+      "sha256": "38654d2634d5e72de08fe6a023a5ddf5a1e52429f709dcf8f731969f085d888a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/016-grid100-raster.npz",
+      "bytes": 10154,
+      "sha256": "57e0410aa8786e4ff82bdccbda528f9c106b9aed734408c2ee4a56fbd97d4dd1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/016-grid100-sweep.npz",
+      "bytes": 10151,
+      "sha256": "7865f0adbd7f489859241b7f110854f4957eab020607125c71d61c4ff82b461b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/017-distinct-raster.npz",
+      "bytes": 113947,
+      "sha256": "343abd8f35709e860b7123b986b0d17de66b7773d46bde78555815aa536e6e87"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/017-distinct-sweep.npz",
+      "bytes": 113944,
+      "sha256": "b055dfe22421e1fe87c9d84995816dfe4df70256d26623c17eb789724f93cd73"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/017-grid100-bucket.npz",
+      "bytes": 11233,
+      "sha256": "143f3dea111bdee1aacd8b00571437f6e357f7f04d83706be03e4cb9b4ec52d7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/017-grid100-prefix.npz",
+      "bytes": 11230,
+      "sha256": "875b4028dffc342dbec642319abb29c6e41c994d9d4f1b89eb4320effddd1a69"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/017-grid100-raster.npz",
+      "bytes": 11226,
+      "sha256": "6d7c245132f2ba91c7bb25fe2be447e3317264c1005a11b14e5aeee73d44db35"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/017-grid100-sweep.npz",
+      "bytes": 11227,
+      "sha256": "8e11911a6783f98d31428dd2f3bb07bee4874b44957fe17cea4304ebc3dc4b0b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/018-distinct-raster.npz",
+      "bytes": 122464,
+      "sha256": "fec723284136ed740d89b5ee0a6db79cfa2d3cdca45d9f81e8ff17cf8b0c891d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/018-distinct-sweep.npz",
+      "bytes": 122542,
+      "sha256": "c8f9f396c1e7f7152a0b3f7e65dd92ae456023f6c01b60db0a3d1e3162577197"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/018-grid100-bucket.npz",
+      "bytes": 11817,
+      "sha256": "13c39b3ba2bfe6d70dcd19e737251c9b2edb40ba5f7f8b1e31272c33a28ca5e3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/018-grid100-prefix.npz",
+      "bytes": 11814,
+      "sha256": "cc8230f38533ee043cfdd320379861b2faddd5f5f30a5b0b738042cb752f777a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/018-grid100-raster.npz",
+      "bytes": 11811,
+      "sha256": "246c9f7ac8643adc9e948743cb87d7263bf9533ad6aaade64d14e0ba52f486ed"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/018-grid100-sweep.npz",
+      "bytes": 11817,
+      "sha256": "ff14c61b9d3eaab7f43640c34d54aa5b0aa472fbdb090c3a5c115cff07c63016"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/019-distinct-raster.npz",
+      "bytes": 215654,
+      "sha256": "c2eda477077364d83f365e509c15692e4505eaa12fa117734ca943953a821f9c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/019-distinct-sweep.npz",
+      "bytes": 215662,
+      "sha256": "3f2e7c81c841f6b76c8912f87dad3867c2c24cf20798e8bfb7cd4640368311c0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/019-grid100-bucket.npz",
+      "bytes": 8116,
+      "sha256": "baff34b7c98e12dacdbbcdf121770d3751f5277bb354a93c375c1131357293bb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/019-grid100-prefix.npz",
+      "bytes": 8117,
+      "sha256": "510df55352bfc52f35c8577c32216902904a44e79aab03c501e0809bc33fd66b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/019-grid100-raster.npz",
+      "bytes": 8116,
+      "sha256": "4ac59280a36d411ecdb0300483ccad73c93b8b801cfa7fd150da29cdbfd2e06e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/019-grid100-sweep.npz",
+      "bytes": 8116,
+      "sha256": "1fab4b265eebe370c48fc1bed226cb5244639516c7cb5ca25c54f87edffd7e96"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/020-distinct-raster.npz",
+      "bytes": 39824,
+      "sha256": "e72082505d8933cde98739929c4f54c713cd19ee5eeb18328a434f74d84ad8af"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/020-distinct-sweep.npz",
+      "bytes": 39802,
+      "sha256": "b93637d4f94bcd3ffa9ab31711d003fc573f7858bd33ecefb96deb0393538ac1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/020-grid100-bucket.npz",
+      "bytes": 7849,
+      "sha256": "a21f9e4e4887a6fc5d59335faabfe49c30c156a25f7bc6cd8de9e85f55effb18"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/020-grid100-prefix.npz",
+      "bytes": 7851,
+      "sha256": "ee6928aee2d47901dd211292c58abe77d0b275d66fbf98059cfddbe5ce87f012"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/020-grid100-raster.npz",
+      "bytes": 7849,
+      "sha256": "35e6b498d0975fade374e61050d464afbeb6307e3ea787520a860fb194ef8694"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/020-grid100-sweep.npz",
+      "bytes": 7849,
+      "sha256": "a21f9e4e4887a6fc5d59335faabfe49c30c156a25f7bc6cd8de9e85f55effb18"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/021-distinct-raster.npz",
+      "bytes": 512831,
+      "sha256": "f2f77c53db0a70b08bb199c7832dde6771e66a19900b63e99d756d2a69972d27"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/021-distinct-sweep.npz",
+      "bytes": 512826,
+      "sha256": "077362b724c7667970a5cda5377e5068c71dabeb28bad55f617b0f85b24d10cf"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/021-grid100-bucket.npz",
+      "bytes": 12701,
+      "sha256": "ebb7f7b22d6a550c95fe1c7814c1e9edb128515f91d05aa42d441221577815e7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/021-grid100-prefix.npz",
+      "bytes": 12691,
+      "sha256": "3deeb237e90b1780cb6599152e4eec8c9c3f69c1290b254d90c5696e16a52adf"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/021-grid100-raster.npz",
+      "bytes": 12683,
+      "sha256": "bdf81a00b741c932004035a4a2e97b2955a4bbfd89cb2ddf105150cbd04736c2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/021-grid100-sweep.npz",
+      "bytes": 12689,
+      "sha256": "d25795c96ae7084a72cbecf7b0d552e900a2fcc2f5bc64870834d134049b9530"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/022-distinct-raster.npz",
+      "bytes": 597161,
+      "sha256": "59050a116a2dc3c14a67ed0f288d5f7476122e96be90fc3cc57bbf5446daba63"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/022-distinct-sweep.npz",
+      "bytes": 597192,
+      "sha256": "13f245c493b470e2c7f417778a7b8faa381bf54b18925b9354ed281b6713f44b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/022-grid100-bucket.npz",
+      "bytes": 11690,
+      "sha256": "d9e24cd46ff55768eb29e00e05ff884665cba96a7d2737e72f4ca1f98ada9ed6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/022-grid100-prefix.npz",
+      "bytes": 11711,
+      "sha256": "c56114af6435a19fb4b855a2fe2de1750c4041df59c8fe6fc754b6f6f635b7f1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/022-grid100-raster.npz",
+      "bytes": 11702,
+      "sha256": "efc1a88925b11e7aa64c19449277223153b4b6d873fc3e82a38ad0351e4c4e90"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/022-grid100-sweep.npz",
+      "bytes": 11711,
+      "sha256": "1d8248f5dd43420d0802065a10f33ae3930ae748b92bd456137f9a93cacf0ce5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/023-distinct-raster.npz",
+      "bytes": 392983,
+      "sha256": "d9c29ac8d0d3282f0e365157aad20c082431619c49e4f665f1069aeb0ad123f1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/023-distinct-sweep.npz",
+      "bytes": 393133,
+      "sha256": "19615581ef7ce948d64eb6bea74007c9fc7ec996a1df97af44675c6602d5c926"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/023-grid100-bucket.npz",
+      "bytes": 11468,
+      "sha256": "a3b150971479ab64c05176a05106b75bb0d39dc253f8984506e3629890edfb72"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/023-grid100-prefix.npz",
+      "bytes": 11480,
+      "sha256": "178f18a39fa1b8a2e2fd23765fe3f1ab96cc97fe76bfd6fcff4ad57e5d1f038d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/023-grid100-raster.npz",
+      "bytes": 11480,
+      "sha256": "6351bc13f8e3466ad22325445095989e5a8d192f74ce3b2c797952517328d408"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/023-grid100-sweep.npz",
+      "bytes": 11474,
+      "sha256": "64bfb0bb5f55603854d38ba2a04add6cd96d288c9e5fd2777084aae8462c9422"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/024-distinct-raster.npz",
+      "bytes": 1212816,
+      "sha256": "b4830e89ec80c7bd2eef74b91d64fbbb2a1307f5bb1a7d5cf3f3a760bf42ec51"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/024-distinct-sweep.npz",
+      "bytes": 1212467,
+      "sha256": "8787571a470976ee8948ae79f947563ad622197df8bbcc0332084a1287ea5c1b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/024-grid100-bucket.npz",
+      "bytes": 14396,
+      "sha256": "9b408268e178077447f7eceb5b8e938234e1caad80e6cac653ee4c8bd233abe7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/024-grid100-prefix.npz",
+      "bytes": 14395,
+      "sha256": "ecc79a13073972e02a7bd7d5be639e21e8b4548f32f6c205dc4fc1e1d1c66693"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/024-grid100-raster.npz",
+      "bytes": 14394,
+      "sha256": "038ba0f66d4764f93cdd1f8311609bd394bad2830a7dbbe77a91cfd797bb0052"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/024-grid100-sweep.npz",
+      "bytes": 14398,
+      "sha256": "0dec0504e34ec9a18659a1ba70c8b6a52326a8a6041560b5328c7b2ab62363d7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/025-distinct-raster.npz",
+      "bytes": 498968,
+      "sha256": "a08d1b3b08913397103f30412947fdee8a4471c4a1f99401d574ceaf47565158"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/025-distinct-sweep.npz",
+      "bytes": 499023,
+      "sha256": "b45a4dd85b3be8eebebd88d3e47bbef486f32ec9b669128b3a6387046b735f4a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/025-grid100-bucket.npz",
+      "bytes": 14213,
+      "sha256": "6d87bc5865936d00a4ce1461fec61fea2e3dfc9ed64692ad5c8e12fbbba8ebb8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/025-grid100-prefix.npz",
+      "bytes": 14199,
+      "sha256": "40a455ac9e43bc4b1a15193b7ff17b709fa431a3ff18c67258a7d9b00670e633"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/025-grid100-raster.npz",
+      "bytes": 14181,
+      "sha256": "09922813a87873ecb1e6cf76dd63d218f9cfa10b6dab13eeb6d647a1bce51528"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/025-grid100-sweep.npz",
+      "bytes": 14213,
+      "sha256": "87d7ee5d32d842cedec4533355946145ff85d01bfe5e82f33c4903ef7ba3eabb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/026-distinct-raster.npz",
+      "bytes": 454927,
+      "sha256": "eb1df93061b36484323b26339767979c9d0ded9ad366858e0e90c15c7d67b82c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/026-distinct-sweep.npz",
+      "bytes": 454976,
+      "sha256": "e4f32aff6199dc8d35f993738730284179fb91ce6d8b1844ed57966366074f9f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/026-grid100-bucket.npz",
+      "bytes": 11928,
+      "sha256": "d97fd5e411d7da63ca84b3f24a1ff75463f80a7561b68e86cde01a8e4b1593a9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/026-grid100-prefix.npz",
+      "bytes": 11921,
+      "sha256": "2aa47e7fa28c1ce20dd6759adbb41a2d79b37eafc38a3b792901b6360763d85e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/026-grid100-raster.npz",
+      "bytes": 11924,
+      "sha256": "cd179da159cdc17d480f424aa86d55bdfcf5d30d8924308f06902dd1474f6321"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/026-grid100-sweep.npz",
+      "bytes": 11921,
+      "sha256": "22640cf0acfd265f256052792d8bae583cf4dfabb1da0c657c9b139fa3f6332a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/027-distinct-raster.npz",
+      "bytes": 898041,
+      "sha256": "61a041b714906e118898daec45a4b18a90d3783065b8d1a3a9c886a5f347154c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/027-distinct-sweep.npz",
+      "bytes": 897851,
+      "sha256": "11a3895f971439b51162328bd1ab065a0d8c16ea1cf85fa1be29d9307ec21cbf"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/027-grid100-bucket.npz",
+      "bytes": 12953,
+      "sha256": "1a2300692d6220151f4b8466b9b6b26f3776a8b0f27bc9d378150c5d71168645"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/027-grid100-prefix.npz",
+      "bytes": 12949,
+      "sha256": "72ca2fbff13fba1b9e6aeff55c78700434190f922cb438d2c753da94e370055e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/027-grid100-raster.npz",
+      "bytes": 12962,
+      "sha256": "3196fb5bc9e0daaf983c60f4dd553dd3e45a33a762bbca61c09db57cadef300e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/027-grid100-sweep.npz",
+      "bytes": 12952,
+      "sha256": "16b9a9cd5ad757562efc51b81d4dfd08aa80274859a731290b02409c8938527a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/028-distinct-raster.npz",
+      "bytes": 73849,
+      "sha256": "966b1ffeac5a3af8ecf33cc11f3b886623b8cd3c62f772a87e7e872dd8c1d609"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/028-distinct-sweep.npz",
+      "bytes": 73825,
+      "sha256": "394bfa3a80aece38515d8c8e14582c3d9fc35bec77e615e1486eabbbf7d57be2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/028-grid100-bucket.npz",
+      "bytes": 8755,
+      "sha256": "2ee38ca49f14e26c4f0c0efffb7f160b1009036d87dc03cbdbbeb7599070df09"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/028-grid100-prefix.npz",
+      "bytes": 8753,
+      "sha256": "5a05884dbd231f01fa41a252f7edd083e3d4e112723a97bb208a7a833ad48e39"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/028-grid100-raster.npz",
+      "bytes": 8759,
+      "sha256": "f1b0524e67cec7848b3ded7b197e1d7581a045773879afb61640a8b2dd811048"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/028-grid100-sweep.npz",
+      "bytes": 8753,
+      "sha256": "1d42fc8791d7ff0818e7ce112304b4954c8a7e9693ed68814502a4f1c025edd6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/029-distinct-raster.npz",
+      "bytes": 502144,
+      "sha256": "cc2ce368ba4435a29b3b03db3b57ee49120a40e6d0457493f05971a65f8c9dc7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/029-distinct-sweep.npz",
+      "bytes": 502293,
+      "sha256": "d96c9bee7631d496dbe2b6dc5e1722d09c57522730d4c8ad67a16a3629862432"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/029-grid100-bucket.npz",
+      "bytes": 10786,
+      "sha256": "4857368cd4ec98637e0cfffe35b926dd67750b902e3b66e53fd2da942386e57f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/029-grid100-prefix.npz",
+      "bytes": 10784,
+      "sha256": "cebd169ec318f3b4715f21ba9b052b8b87e6dc0c686ce02d33f4626a7e64a82a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/029-grid100-raster.npz",
+      "bytes": 10781,
+      "sha256": "09f6471217349ed48422b1ebd5852746054b49378e9ca9fb329c0370a8a23c71"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/029-grid100-sweep.npz",
+      "bytes": 10789,
+      "sha256": "4514d23d1000ce941a04aca0d7685ffec3423f999b5dc7968cd066eb002c21ce"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/030-distinct-raster.npz",
+      "bytes": 1302284,
+      "sha256": "2c4d86add5b8ee06a43824e5760a7f3a597c2ce8641fa54549c87a8259fa402c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/030-distinct-sweep.npz",
+      "bytes": 1301967,
+      "sha256": "a7fc5ccce0216aa68818f697d44e81402f7a0f9641bdaa79df34fdfd7fcac265"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/030-grid100-bucket.npz",
+      "bytes": 15410,
+      "sha256": "68e7696383bc5abd9e284e66d8cf8762f0383096119244113ff466e3d54a56a7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/030-grid100-prefix.npz",
+      "bytes": 15400,
+      "sha256": "70d34b05d41e88eeac01b0c05eced8d61518b44b2647970ad4972cbbdbaae88b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/030-grid100-raster.npz",
+      "bytes": 15402,
+      "sha256": "b77e5818f908d882859261e1340278cbd6286013726015ff658bb75c8328208d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/030-grid100-sweep.npz",
+      "bytes": 15404,
+      "sha256": "f3ff5025a2dca3f32f3b3d7eb4020e508571ad2a29951e2acc48c303d8f2ac25"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/031-distinct-raster.npz",
+      "bytes": 409751,
+      "sha256": "2a00eea64b58f78ba49ffc22eb6b2f7b2059953c6085704d58f24f69a9a37f3c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/031-distinct-sweep.npz",
+      "bytes": 409748,
+      "sha256": "2b9a6c5bc958ba5d9cee2210f9e27be154972bc662c59b8cf12660cebcd7522f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/031-grid100-bucket.npz",
+      "bytes": 10750,
+      "sha256": "779c0dd33a07bb33dd2772f41be4bedc7c8a87db518533b0fc3efdc173bef679"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/031-grid100-prefix.npz",
+      "bytes": 10749,
+      "sha256": "248913c0ebd571d3b97a3cfe5ce3fdda9d5ad5e6e927f59c5ad994c99d2adabe"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/031-grid100-raster.npz",
+      "bytes": 10757,
+      "sha256": "bea1125dc78b0b1417438581677998acb71a2fa6a230b95c490d9358dd4882b3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/031-grid100-sweep.npz",
+      "bytes": 10751,
+      "sha256": "6c2d72265cd3d7fab8d1b39edb60933b816cd449a690d2a6ded3378abd6d68b2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/032-distinct-raster.npz",
+      "bytes": 318503,
+      "sha256": "0a86370c4c51b7f451628672f17f0c3baff0d9ab5675920dfbd714e5abd90619"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/032-distinct-sweep.npz",
+      "bytes": 318715,
+      "sha256": "a2a68b61bc23ba0798e2d1d0866eed5b9c6ab34bf878bebea0c35c09907c27e6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/032-grid100-bucket.npz",
+      "bytes": 9198,
+      "sha256": "59da225ebe079ee2b5460230a4340af8fe7bf553e1d3eaf4b4444b08a5ecafca"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/032-grid100-prefix.npz",
+      "bytes": 9190,
+      "sha256": "523be4f039f24474cef2f8d38cf44d268f99f83e19c5d3aa7161c4191d73175b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/032-grid100-raster.npz",
+      "bytes": 9188,
+      "sha256": "970ea333d6b8bdfbc662c9efa3dce87e7d24ba71427af34354ab7656b46170f9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/032-grid100-sweep.npz",
+      "bytes": 9185,
+      "sha256": "b4869aea2dd043437e33f38e557e31298097b3d7253f91ba04849c3dd5b17218"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/033-distinct-raster.npz",
+      "bytes": 378366,
+      "sha256": "dfd5ae770ed3c809d8bb42609cf66bff4e5a4646d50ae0983a236aefc3ef93f9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/033-distinct-sweep.npz",
+      "bytes": 378424,
+      "sha256": "b6465b9a58ae34d2e307b1ece072eeb9165f583843fc7e9b5e6b94c61640b3a7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/033-grid100-bucket.npz",
+      "bytes": 11087,
+      "sha256": "0486f4319a22ecde977b6de75abcfe32328d36109892859742cd6fdc527c27d8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/033-grid100-prefix.npz",
+      "bytes": 11088,
+      "sha256": "276eff453bd7617b59fcaeb2e9d239f4a24d78571d5a7501491b660dbc5e6c6a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/033-grid100-raster.npz",
+      "bytes": 11089,
+      "sha256": "b9075e57da915855bbc92a6ee002e44849b0b20fb5dc6ef0cadb85aa3a52ebab"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/033-grid100-sweep.npz",
+      "bytes": 11085,
+      "sha256": "adf62099cd4495098ad2c01090b0ac2383e53a910b42ed557b34fd9b20d10d97"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/034-distinct-raster.npz",
+      "bytes": 290797,
+      "sha256": "1be05309359b722f43c1db5a03e29f8e83582c6e96cb48b15b9c78b2e9e624f9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/034-distinct-sweep.npz",
+      "bytes": 290880,
+      "sha256": "2b3adb24489c3fb8201d86be67c63c856b1b5c585ec766f883ba4cbe21aedff4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/034-grid100-bucket.npz",
+      "bytes": 9784,
+      "sha256": "5ba13fb026707134b19aae52c447a5b0d52bb3ab26798b13934eb4ea6df1c453"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/034-grid100-prefix.npz",
+      "bytes": 9781,
+      "sha256": "c7dd83491d7d3b06cd340389ddf0c1af503b04b33337aad9b47911033cfe0b74"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/034-grid100-raster.npz",
+      "bytes": 9776,
+      "sha256": "b5167b39e9ebece979da5db8ab38dcfc021f0f567663e455b3fe13a2dd3d8b67"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/034-grid100-sweep.npz",
+      "bytes": 9782,
+      "sha256": "df2dc1d70996eaecc69b8ffca492266fec806c36a17ab6ed139782212f1ebd08"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/035-distinct-raster.npz",
+      "bytes": 387546,
+      "sha256": "0acf1a3c0fa17e0e777b6f8bd1389815577ce8a6b8e4eba03b5f01d489a9663d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/035-distinct-sweep.npz",
+      "bytes": 387783,
+      "sha256": "c01b4b5320b65fea9da81367f7444682e00e4eba4f565f40b73c0be553fd4b2f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/035-grid100-bucket.npz",
+      "bytes": 11565,
+      "sha256": "8e1477e2087eac7730fab8b9e117caa18f6ace325babddb84355275b58ce3ea5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/035-grid100-prefix.npz",
+      "bytes": 11559,
+      "sha256": "3d6676ed9f2760be008e9ad1116818deb42d03b83d838902d2cf5ec991eaa32c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/035-grid100-raster.npz",
+      "bytes": 11557,
+      "sha256": "03d2bbf81c1460cf92f8e565bf2a7e93691f67af1c67463539bfb1d748d2259a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/035-grid100-sweep.npz",
+      "bytes": 11571,
+      "sha256": "820dce755d2989fe5fcca98467f822ce7f7c8d29ffb22caaccf14fb97eeb9bd4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/036-distinct-raster.npz",
+      "bytes": 498104,
+      "sha256": "ead5adcb093048c0adf39f9f29dc57d9a0ca0bac982bba831b9d82988a4d4f26"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/036-distinct-sweep.npz",
+      "bytes": 498155,
+      "sha256": "df9b779115577cba4b5ec9bae5b25d31c79dbe7fab65ff2fe0d31c7f3cb0c018"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/036-grid100-bucket.npz",
+      "bytes": 11630,
+      "sha256": "5b5ec9a9494a3c8b57c4286a67ce9cfb0762ccd9cce09411582b4172876b7cda"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/036-grid100-prefix.npz",
+      "bytes": 11611,
+      "sha256": "f7f962e150488ac68f8cb2072e45f9fce5cd8eff8dad50f2567dd3942f90d0a1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/036-grid100-raster.npz",
+      "bytes": 11603,
+      "sha256": "03f4c64dd3b58510bf2baf525edc6e3b21410774c267dd04b6d3acb6e4439d33"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/036-grid100-sweep.npz",
+      "bytes": 11629,
+      "sha256": "b25faea800816938969427449f463d9b9b4d881f19a76180bf4b216b2aaa3e64"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/037-distinct-raster.npz",
+      "bytes": 526596,
+      "sha256": "20d96a7b3b74b2b6eedbfd99b6a94843225b41b67109e96a06ff294aff92863f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/037-distinct-sweep.npz",
+      "bytes": 526709,
+      "sha256": "2ffc3e5f7465f3b10314b7e6527614faa7a4873bbbedb31d6ee82022fe3be0e4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/037-grid100-bucket.npz",
+      "bytes": 12791,
+      "sha256": "46ed6ff0228526b24766ee5e678f892f1a28b525748c3eaf2bdf5418cf1ed59e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/037-grid100-prefix.npz",
+      "bytes": 12785,
+      "sha256": "7bce9f8c8e88d97c58261c875935e7d817e4b003eb1dec2eabbde34f76cb5535"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/037-grid100-raster.npz",
+      "bytes": 12770,
+      "sha256": "3e1c5899d2263b69b52fe22c3ebd4670a2a265e6df2989411adc44a2434d47ba"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/037-grid100-sweep.npz",
+      "bytes": 12797,
+      "sha256": "e3e705f4ede52e0bd806120fed05ff42d772b1497199cded081f762154644989"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/038-distinct-raster.npz",
+      "bytes": 623369,
+      "sha256": "dbe048ec6a5a86e647d41e9602922044fca8239dbd56ec12d15c90afd255b541"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/038-distinct-sweep.npz",
+      "bytes": 623475,
+      "sha256": "f9cd13a41e71fd99b4c8e5ebd8fe19bbf49035ebdc100d911a7a3fd05afde5f2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/038-grid100-bucket.npz",
+      "bytes": 9876,
+      "sha256": "420a35659dd9bc1e6dc1fb4603a0ecaa6d6432bb0c7a645912d592b5b6439b9c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/038-grid100-prefix.npz",
+      "bytes": 9876,
+      "sha256": "c35377c771c41940ff99704d686ee53687cdf43b98d3226901b9df4f0c3ab291"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/038-grid100-raster.npz",
+      "bytes": 9876,
+      "sha256": "6038d2547343cbd7115fcf8b4256db485c1438a81cc138ab410075bb0e339038"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/038-grid100-sweep.npz",
+      "bytes": 9877,
+      "sha256": "4399ebfde8e524dd587c79e7a59506bb44428659e874c4766ea71c7d2b51bf8c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/039-distinct-raster.npz",
+      "bytes": 602113,
+      "sha256": "c29c68bb3b90d5f178739ca039564eafb11a62a4f908a45ba35c3351d43cc17a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/039-distinct-sweep.npz",
+      "bytes": 602110,
+      "sha256": "eaf59a7de22a20beb6cb4d729f9f53d1254b29ce7a16ad7a3604944cecc88907"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/039-grid100-bucket.npz",
+      "bytes": 10834,
+      "sha256": "60cada343744529aa4c0b29b88b26d8440d948ae931c00cb0bbb5ca21c7ae337"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/039-grid100-prefix.npz",
+      "bytes": 10836,
+      "sha256": "d196b35725dedb348aa7697ded44566d71e7f382b4ab691120fa32e01728c8ea"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/039-grid100-raster.npz",
+      "bytes": 10833,
+      "sha256": "0f64f3236368cf995451bf3ba5ec76300dc341949ccab8e4d006655956d5b238"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/039-grid100-sweep.npz",
+      "bytes": 10836,
+      "sha256": "b552d825bf79601b2f9bef77738dbf7113c19e18e50955b6bfd3f46a71661856"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/040-distinct-raster.npz",
+      "bytes": 574259,
+      "sha256": "1bb53150bb3c4c6f7325e0fa24565767a0c3510c324e3eebf1c2d1a22c7b664e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/040-distinct-sweep.npz",
+      "bytes": 574211,
+      "sha256": "69037f0696be8943da3b2a0e5ab5ee4cc004c38add7fb8db140cbac3850ffcc5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/040-grid100-bucket.npz",
+      "bytes": 11422,
+      "sha256": "10a8911cf683203682ee47dbd2b28570d6a0390c0f022abbd68d49f0937d0ce4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/040-grid100-prefix.npz",
+      "bytes": 11424,
+      "sha256": "4b6a3894e8a3a03bf9b782fe32ca5a92e563abf17e0da6b3847f9a343e9509b5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/040-grid100-raster.npz",
+      "bytes": 11407,
+      "sha256": "077ae5273f6d11d0f6760f3931c35c05eaaab645265fabba6a1550218e0af00e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/040-grid100-sweep.npz",
+      "bytes": 11418,
+      "sha256": "50eba08d4933253181d74258cd9cd5d7bea14140c281e63066c340084aa81435"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/041-distinct-raster.npz",
+      "bytes": 486604,
+      "sha256": "bdce6ba0fcd0e117971f544df1897672db553a7b63d234c58540ac8cd21dcf02"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/041-distinct-sweep.npz",
+      "bytes": 486658,
+      "sha256": "22db757f94b55c847344fe8adc8d55aa3f77b476de8b61e7d327118d26fc9d79"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/041-grid100-bucket.npz",
+      "bytes": 11645,
+      "sha256": "d0a7e1fcb297fe883848827763dad5e52ac89261da04bb5005acc425db3b6b6a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/041-grid100-prefix.npz",
+      "bytes": 11640,
+      "sha256": "3fdc09139419d8e9f949bb8609f1118b5c2d53a1867c8ba385bfd8a0ca5f2158"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/041-grid100-raster.npz",
+      "bytes": 11619,
+      "sha256": "641bb5cd6cad1031701ffbe0a1873b402a9bd3324e46a1a0989d1c76a2233181"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/041-grid100-sweep.npz",
+      "bytes": 11645,
+      "sha256": "c5497a943e975f6366e4aa389d56891dd67462217b3ecbcc57475f4c380a19d4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/042-distinct-raster.npz",
+      "bytes": 350795,
+      "sha256": "62ca9e32a8dfb8b296a07e2e819ed3a2dab861e6d4bf47e84f7b620bc91ace61"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/042-distinct-sweep.npz",
+      "bytes": 350953,
+      "sha256": "efd14451e66111ce42ae87205949959e647c0536bd18f9e81891d47262c17ea7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/042-grid100-bucket.npz",
+      "bytes": 7335,
+      "sha256": "e7168e649ef85c375f6b92ebec467d8ef3ad7e413ec189429e60f65c99dcf4e6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/042-grid100-prefix.npz",
+      "bytes": 7338,
+      "sha256": "fee922ca3878d08a22fc9cf822adeb0e695e366c629da705f39fa3033cd183d6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/042-grid100-raster.npz",
+      "bytes": 7329,
+      "sha256": "ecbd28014392862171a96b598daec9f99ece43113de9b45c2c5c40a1e310dbc1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/042-grid100-sweep.npz",
+      "bytes": 7339,
+      "sha256": "b36316f12f889b321621ccfe52976f184c133677d6fd86bd1ee126d700e90c65"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/043-distinct-raster.npz",
+      "bytes": 497430,
+      "sha256": "d0a09548edb34504f7ba0fc4bbc6d32be33ca9912cc78fa083f0d39f9ca1bad7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/043-distinct-sweep.npz",
+      "bytes": 497508,
+      "sha256": "be7d02b178c13cb8ba7457f3fee70c5a32358667c691ca02ac0964c065c54109"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/043-grid100-bucket.npz",
+      "bytes": 9794,
+      "sha256": "5a87ac1b3b7bc48ea3a2b2b5ab51bab1bf4449979283339bb3b4795659db4041"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/043-grid100-prefix.npz",
+      "bytes": 9795,
+      "sha256": "66974945320ef543a45c588bf1e18406e42e78fa25695c648fab44f98506b48e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/043-grid100-raster.npz",
+      "bytes": 9781,
+      "sha256": "61f039252e0ab5c969a649e3e2c9583e25ac50397063ede579e866df68ee2707"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/043-grid100-sweep.npz",
+      "bytes": 9791,
+      "sha256": "9a53960e01f312c1e360992c1604d048ee252abb9bf23e3ca1f1adfbd068c70f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/044-distinct-raster.npz",
+      "bytes": 596419,
+      "sha256": "98425ff04cf3431213c10b94d66e76f3dace7d34054b58ac241bd1810a699b2a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/044-distinct-sweep.npz",
+      "bytes": 596358,
+      "sha256": "1855f50aac5bf3c21c67702fb0c2dfb69f659edec3ed743d392ff80f9f3cb8c1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/044-grid100-bucket.npz",
+      "bytes": 14209,
+      "sha256": "fb484124561d2d47ac7ea2479d8e3db4c7066a77f9ea82aa3192176439635681"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/044-grid100-prefix.npz",
+      "bytes": 14209,
+      "sha256": "9990b212b0fa648f4f7ff7bf0911019fd44fd7391743eaaee5998d2212a10fdd"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/044-grid100-raster.npz",
+      "bytes": 14200,
+      "sha256": "d5aaf1962b91c1621ed87e516514ad5cfff535aca44b97926b211c475c3bf780"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/044-grid100-sweep.npz",
+      "bytes": 14200,
+      "sha256": "9ba8f86e959ec21cdd44da87898c994c7e4f404850592a976b606ad2160cb04d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/045-distinct-raster.npz",
+      "bytes": 382851,
+      "sha256": "bdb55a7b1ec321b53a0a814c8ac00a2f471232c4d8f63045c06d6894fcfcc29b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/045-distinct-sweep.npz",
+      "bytes": 383012,
+      "sha256": "5c974aea0085b85b822876bad673ef82c183451a1276643fb8696915f8a1b421"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/045-grid100-bucket.npz",
+      "bytes": 11832,
+      "sha256": "ebb02c5f7b56fb8421850015ae89a24b874a0847a38a4bcd89b6f0f4c5d64bb3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/045-grid100-prefix.npz",
+      "bytes": 11840,
+      "sha256": "41ea0cb5a3f68a44e91001270c211b03f28dfe347178b551bd87b44c718ee63c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/045-grid100-raster.npz",
+      "bytes": 11838,
+      "sha256": "3fd6484c20f819b1a99f300f1613a1e601fb366480e2ce232e5b5a2392b7a6cb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/045-grid100-sweep.npz",
+      "bytes": 11839,
+      "sha256": "c573ba3f1b915f52056efdc278aefa558a1944e6ce8804f842c0368aa70f0c9c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/046-distinct-raster.npz",
+      "bytes": 372241,
+      "sha256": "e19b5f5e405807eb27add9b5372e89e530aac8671d22ed05959b5992f8006973"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/046-distinct-sweep.npz",
+      "bytes": 372375,
+      "sha256": "1696d5aa3b09748811d21cdfd24e0b834c2070aeb96eb8991a67a756c54ed722"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/046-grid100-bucket.npz",
+      "bytes": 7306,
+      "sha256": "bc259d0210877e8ade0e48507bacf08955490834e86468d5c2cdd55514b0b064"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/046-grid100-prefix.npz",
+      "bytes": 7307,
+      "sha256": "5ce9ba1771ef3431483f76698298d99ca826babfda2707bad3d333ee57b5fbf7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/046-grid100-raster.npz",
+      "bytes": 7312,
+      "sha256": "e858ce0f5c9303e61f1db9a0c7e217579ebed2da6c030998df8113c6673cbde3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/046-grid100-sweep.npz",
+      "bytes": 7307,
+      "sha256": "c9b3055110784bdd410cceb6fb4f66d44d00d6cbd95ca283fd2ab590f760ef23"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/047-distinct-raster.npz",
+      "bytes": 480314,
+      "sha256": "8594cfa726c1bc13e1c8547e079ed441943dcfd4b6997ec18083f83e58d9b3a6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/047-distinct-sweep.npz",
+      "bytes": 480260,
+      "sha256": "561f6512dd528746fceb3b1f2e9546c5107f745465499e8ce7a4644740420a81"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/047-grid100-bucket.npz",
+      "bytes": 10380,
+      "sha256": "6010293a35f84fd8cc8c6b76d87e8f3066e387b1ba177969c4d28c24b63ad217"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/047-grid100-prefix.npz",
+      "bytes": 10381,
+      "sha256": "e021863fc3e2f6acb23c388c07f239c2bb68c122e1d073c55d1ec979b5fb1d6f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/047-grid100-raster.npz",
+      "bytes": 10366,
+      "sha256": "1b7f33bbf05f1c6c88e2d17e8145a2bffb7a7e9d92af2dd4722541234b3be145"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/047-grid100-sweep.npz",
+      "bytes": 10378,
+      "sha256": "4349361081047b73de675f7ab0680b203e47479386936ce97d87cc180139d68f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/048-distinct-raster.npz",
+      "bytes": 450076,
+      "sha256": "08f91da9a353850c60ebebc8aad25ca451d38812a26f3472a34e543afdd66033"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/048-distinct-sweep.npz",
+      "bytes": 450156,
+      "sha256": "6f6f34412b025cac06c5017b4bc7ec8d0e9098d6822cd8737746f1ef02aedddb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/048-grid100-bucket.npz",
+      "bytes": 13560,
+      "sha256": "6f6fbb8d2dc5afe644ba12e298ef2bda48690cf11d45bccdd0a949a980213f66"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/048-grid100-prefix.npz",
+      "bytes": 13543,
+      "sha256": "cc048892701732ddaded2abf730ce318a67083ff2263b31c11599ff387295612"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/048-grid100-raster.npz",
+      "bytes": 13518,
+      "sha256": "ce3bd4c4fbc971d8e655b9ef0379fa18f98a0a65691f3cb664877867e331c014"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/048-grid100-sweep.npz",
+      "bytes": 13550,
+      "sha256": "c444f2e4f5eb1e0f05c1489d290fa7ae9f9721358991116447278a528dcb3544"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/049-distinct-raster.npz",
+      "bytes": 581201,
+      "sha256": "624319f6402ad7795678d2d79c1f936871b06d8e289cd13e70930aab41013e89"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/049-distinct-sweep.npz",
+      "bytes": 581196,
+      "sha256": "ddec8081d63b242706a7ac108b590411e9e48594c3f12745b940b91f4f186db1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/049-grid100-bucket.npz",
+      "bytes": 11422,
+      "sha256": "5f2fd2d742bd50aeac5849a0e1b72c38376dedf013f4135ba380d3d8901b819b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/049-grid100-prefix.npz",
+      "bytes": 11420,
+      "sha256": "b95646399408280b13b9d3fa27140c9cefe84280c6ee3ac9f2868cea0310f199"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/049-grid100-raster.npz",
+      "bytes": 11422,
+      "sha256": "220d9e8b7c9b119e8a37b1d50c3a4f722f51742fcee93991aa99c7aeeabcd476"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/049-grid100-sweep.npz",
+      "bytes": 11421,
+      "sha256": "cb17f25156fd6765857c3513ab0fb6f7f58370c9e35d314e6e3e71aa72cbdebb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/050-distinct-raster.npz",
+      "bytes": 383529,
+      "sha256": "406471f4f47e6785840e598a23982314cbf0b5ceb28329d70b974412487b9b18"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/050-distinct-sweep.npz",
+      "bytes": 383861,
+      "sha256": "d1d11d515f25cd3ce8f497aff329847df022aef8af982ec2c6b6741b71af0b84"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/050-grid100-bucket.npz",
+      "bytes": 11857,
+      "sha256": "5fdca456035788b951772e3fe66c27fff7038969cf3c281787f877c05b3f6d3b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/050-grid100-prefix.npz",
+      "bytes": 11846,
+      "sha256": "040e0887e6b1a7e3c54124b5d2bf4cce6073f79858e60b1a0f74ea4ed065ff72"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/050-grid100-raster.npz",
+      "bytes": 11844,
+      "sha256": "9dbd4e58a4ed6013fa04570c4e5f80daa06506eaa7bab30ffa85fbaed61bfbb9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/050-grid100-sweep.npz",
+      "bytes": 11850,
+      "sha256": "29520d08fa9a429c93b6712a353740c4beccf842a2ae056304baeabb367ef40b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/051-distinct-raster.npz",
+      "bytes": 377454,
+      "sha256": "d82c788add6ea8c51c619dc88d5f19c5612ea11e13ead7c5580a80b356839cd6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/051-distinct-sweep.npz",
+      "bytes": 377539,
+      "sha256": "911d3af03cfa3e3b91c22f7615bc5742addfeef13e95ec78f10441038f87f996"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/051-grid100-bucket.npz",
+      "bytes": 9604,
+      "sha256": "8552cd6e6ac97e775f0d6190e085cbe0877309c04a8813fa466fa89b1859857c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/051-grid100-prefix.npz",
+      "bytes": 9605,
+      "sha256": "617a78942569b0dae91f8ca40e2cda1014c067e56e2f8beb91c79bfc65055d1e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/051-grid100-raster.npz",
+      "bytes": 9603,
+      "sha256": "8a8657396393af33f1a23a1e81469332b31f02dd1bd1e52867cfa6ebebca2a11"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/051-grid100-sweep.npz",
+      "bytes": 9604,
+      "sha256": "cede792e2ccab952713cf51c6d128d8ca5460e56b5d3e73e3c05e46bbc1628b0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/052-distinct-raster.npz",
+      "bytes": 401869,
+      "sha256": "4d74ee1ddf919d05731677488685fff7806cb8f3804967d557ef0ffe7831efe9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/052-distinct-sweep.npz",
+      "bytes": 401912,
+      "sha256": "16fe7cf5e3b6aea13b083f20f9a9a6d329314df259ddf31a967c0d9c1abcdd02"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/052-grid100-bucket.npz",
+      "bytes": 11277,
+      "sha256": "82fc4e8710c6c97876f41207d8cd41d216779adca94a0a0883dc68e6166e7ef3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/052-grid100-prefix.npz",
+      "bytes": 11277,
+      "sha256": "9712c8f91322d99b1afeec13f20e940d5560f6ca957e721cc786f4507a7f9089"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/052-grid100-raster.npz",
+      "bytes": 11277,
+      "sha256": "1d840eb14cb43a0b5d95d584e5fc0ba5dc75cb4b166c57434c4a5dbbbe5f5bf3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/052-grid100-sweep.npz",
+      "bytes": 11280,
+      "sha256": "77091694bd4c1dcca9d0a6487fe9593ef3941183011e7aa78b61e9d0b21ab525"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/053-distinct-raster.npz",
+      "bytes": 311817,
+      "sha256": "6ba5e4cb9da85bbfd0fe30b4fac50b2e8320dad9ce25decf294f43b63ef1d938"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/053-distinct-sweep.npz",
+      "bytes": 311899,
+      "sha256": "88717181b691b6fa72829ea86a091ddbb5dcd3f0ac60015bf2cbfef65f747cf0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/053-grid100-bucket.npz",
+      "bytes": 9979,
+      "sha256": "b56a961dc95a5ec6076fe5e2b955f66ab333d4db3db0080f1e1159b626c421b1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/053-grid100-prefix.npz",
+      "bytes": 9979,
+      "sha256": "3b98133ec8adc15270b9fd7bdbcb9918e5318c55e2869772ac84ba18ed314cc5"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/053-grid100-raster.npz",
+      "bytes": 9980,
+      "sha256": "f5072d76dcfba1ffffedcd0cfcd0e32eb3170b92a798dbc633c41c15add89ecd"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/053-grid100-sweep.npz",
+      "bytes": 9982,
+      "sha256": "15c2690db8750a73431fa9de98d9f990aa4dad803134ddc68c96f2be4b7cfbcc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/054-distinct-raster.npz",
+      "bytes": 417644,
+      "sha256": "6a54d3d1fc1f863f8d39781e1fc616972ce9923a117f2ba77636bc3c3c45124f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/054-distinct-sweep.npz",
+      "bytes": 417651,
+      "sha256": "2ebc2d7db60e5bf3598a69334a62d90111001fe2b3e49415e015e077f9aa7961"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/054-grid100-bucket.npz",
+      "bytes": 10834,
+      "sha256": "e057e3a90dc0226c97f39385bc9693d0cad8d1f300aea85dd570de3aa57c4dfa"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/054-grid100-prefix.npz",
+      "bytes": 10833,
+      "sha256": "e1e1b0f672655d7d0d6b7fe9568cb6da24c9ac1d652c645908b6301642ee886c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/054-grid100-raster.npz",
+      "bytes": 10828,
+      "sha256": "c112edc98d0986fb10a5dd4c1c735685e8c269f3dd84a431d7d7c2ae3c0937c1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/054-grid100-sweep.npz",
+      "bytes": 10838,
+      "sha256": "f59b08715ce0541d1edbdb5ec75497b01485e617884a7796e8a92e1095ee3fb6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/055-distinct-raster.npz",
+      "bytes": 367430,
+      "sha256": "4cab4add7db3d44189d6382c1bc0dba88d709441eda4b5868f05a897fb08358f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/055-distinct-sweep.npz",
+      "bytes": 367464,
+      "sha256": "00b001804421f0ebf8c878d2724c4a6c5b1763cd6eb97c15c96ebeca0da37f1e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/055-grid100-bucket.npz",
+      "bytes": 10399,
+      "sha256": "d241458bc11c6a7174e7d1f523fabba7bc456d7ebd2a2baa7f1d419304da774c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/055-grid100-prefix.npz",
+      "bytes": 10397,
+      "sha256": "ae72504f11778a94934c75371741cd3b6082672acfe7aceaca2c61c20888edfd"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/055-grid100-raster.npz",
+      "bytes": 10392,
+      "sha256": "230c73ed671619af8a624e620a4d516364a510b614eb66fb6e49d6673ef14c29"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/055-grid100-sweep.npz",
+      "bytes": 10399,
+      "sha256": "314c99e283d74c14d56e119476ca914c32b19fbac6a6e8493341b0fd24794910"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/056-distinct-raster.npz",
+      "bytes": 320341,
+      "sha256": "22df56ff214204e792f681a3bf0fd067d26c60724e667b884224defa98760a50"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/056-distinct-sweep.npz",
+      "bytes": 320346,
+      "sha256": "62400e1e70d6819311cd9298f412f1fc75130544c6e359bdabf3ad61e3921991"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/056-grid100-bucket.npz",
+      "bytes": 12646,
+      "sha256": "ea7d31f303fe27b3d7105696a81071569bfdc53f6ba262c9bb26b913c0a09bfb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/056-grid100-prefix.npz",
+      "bytes": 12650,
+      "sha256": "c1a2e51bcea0c860c16f3d33f049bbe6cb2b88a50793d69b281e4eee396bbb5f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/056-grid100-raster.npz",
+      "bytes": 12649,
+      "sha256": "c2395b05005f17ed4ae8b435efeb66303c2f26e578296ba6f52c9def50eefa66"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/056-grid100-sweep.npz",
+      "bytes": 12650,
+      "sha256": "e8580da8f2988f3dbada5f5119ed4790927636bd701cd0d6f93f05464d432fbc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/057-distinct-raster.npz",
+      "bytes": 1967,
+      "sha256": "ade4445cff26aa312bdfda013b376e0b58f358c9ed9a7f574509ec1aa7cb5b78"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/057-distinct-sweep.npz",
+      "bytes": 1974,
+      "sha256": "e4752a08dac7c5a9b3c6c57e0fe6e01933897b2f057618546208a792ea696b7c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/057-grid100-bucket.npz",
+      "bytes": 1952,
+      "sha256": "989d33a1f3d32a894f17956b2f89150bb511e38dabbf987acb2b6d73591b1c89"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/057-grid100-prefix.npz",
+      "bytes": 1952,
+      "sha256": "989d33a1f3d32a894f17956b2f89150bb511e38dabbf987acb2b6d73591b1c89"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/057-grid100-raster.npz",
+      "bytes": 1952,
+      "sha256": "989d33a1f3d32a894f17956b2f89150bb511e38dabbf987acb2b6d73591b1c89"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/057-grid100-sweep.npz",
+      "bytes": 1952,
+      "sha256": "989d33a1f3d32a894f17956b2f89150bb511e38dabbf987acb2b6d73591b1c89"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/058-distinct-raster.npz",
+      "bytes": 86014,
+      "sha256": "310a71e9e1ac7a9801a899d4388e03e565e2934357cd2350f611d6a796645478"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/058-distinct-sweep.npz",
+      "bytes": 86125,
+      "sha256": "7b94ff6fe906cb5ed5788fed370764abb95001242343d4d182f9d2e2628654d1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/058-grid100-bucket.npz",
+      "bytes": 5654,
+      "sha256": "cdf570432c33d4725154def2b3cc3383efb9a07a1a2636608780955587fb56b6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/058-grid100-prefix.npz",
+      "bytes": 5644,
+      "sha256": "94f27cb3ddebd6ac36dee41c2b0193f9b40e9965bbcc4e9bf0a85ca8ace0e8f6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/058-grid100-raster.npz",
+      "bytes": 5676,
+      "sha256": "58e3f50cdab3ee7ab9e20d12cde2aa15457dd4d74360648d21f1ef7c3b08d111"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/058-grid100-sweep.npz",
+      "bytes": 5650,
+      "sha256": "cb1b96ea4e71f322b650ea90d0eb91c97a3e740a0dfe557d64b4048917c5e7f1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/059-distinct-raster.npz",
+      "bytes": 329487,
+      "sha256": "4784540ae7ed0a4adf33839ffb553d33c95e02edc9ea830caf1d7d1c21a6e8f2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/059-distinct-sweep.npz",
+      "bytes": 329318,
+      "sha256": "abd2d6aa6d522e4b155f186ef4bfcec4e027809cfea2eca49dd1e70c68969963"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/059-grid100-bucket.npz",
+      "bytes": 4705,
+      "sha256": "f1f57220ea267baa78f3a5252eaa86f2e97c1b6f01f5867c9990361f394977f3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/059-grid100-prefix.npz",
+      "bytes": 4706,
+      "sha256": "f5bf42723f2f93bfd5101447ad97ad0132c1b187a044562d9eeac2bb3199dbdd"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/059-grid100-raster.npz",
+      "bytes": 4721,
+      "sha256": "74bbdda47df9bd66529457e797b9900bd979bcf74869b98bc7e5afc84e3d2616"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/059-grid100-sweep.npz",
+      "bytes": 4705,
+      "sha256": "efec091a3c8b250a324a980725c704b046ce6e61b24bfb788c40f6af1eb1580b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/060-distinct-raster.npz",
+      "bytes": 258523,
+      "sha256": "aa778c19ef944b4fff978512eda92b585a2fad5251c105d12a7b157b1faf5962"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/060-distinct-sweep.npz",
+      "bytes": 258556,
+      "sha256": "5736534e6118288e516afceb0928ba3b403279d7976c1ca1067f8834ea9bc663"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/060-grid100-bucket.npz",
+      "bytes": 8213,
+      "sha256": "6aedd9f142b16a8030448d103965a5f87ce5e1a9af032400a287f6e9410a5f59"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/060-grid100-prefix.npz",
+      "bytes": 8209,
+      "sha256": "21af104a7269fc2e1f27286576e24567fda7d4a88893c579c263fdd0ed5c1462"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/060-grid100-raster.npz",
+      "bytes": 8209,
+      "sha256": "f748ee9efb867ad77d7ce8cfeb1a11c7cdc84e72023b47c854a0c99f122f2fbb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/060-grid100-sweep.npz",
+      "bytes": 8211,
+      "sha256": "f6d7ca09d69be4f8b4e935c987c2652abf1773f4119e7069f88aeafc3f140cbe"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/061-distinct-raster.npz",
+      "bytes": 22754,
+      "sha256": "448cba5e20382cb8337bacdbc4f449a559125fe9a6a716fde74279ab1857690f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/061-distinct-sweep.npz",
+      "bytes": 22759,
+      "sha256": "716f503295072ef9aa06083b45b615c087458ff5ebf5e9b5d9add96d2eeef5e0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/061-grid100-bucket.npz",
+      "bytes": 8829,
+      "sha256": "f33392025e4ad4878fd0f4f78c1ad05cc141447c49189162e7e55dfaf81becc4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/061-grid100-prefix.npz",
+      "bytes": 8832,
+      "sha256": "230c38717eacf81d27c378fc58d92a9b56b09dc0de43aabe7c6564995a812618"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/061-grid100-raster.npz",
+      "bytes": 8826,
+      "sha256": "e52795293c345f7fba5c3b2096e0bf0bde855f6bf442e1e34216c10697f3cb14"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/061-grid100-sweep.npz",
+      "bytes": 8842,
+      "sha256": "f3a4514e8739a59888669ebd4760222411fa9f4bcc51162b44a8001bbe2544a0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/062-distinct-raster.npz",
+      "bytes": 31168,
+      "sha256": "a4a39bae107268fb6992ba67dd42b009773ea627b546006d49449b6da87cbc71"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/062-distinct-sweep.npz",
+      "bytes": 31264,
+      "sha256": "ac0e949c59a2b1e74bbfd499ab985c9daf4cadad680c175890c7a5d85f2c079b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/062-grid100-bucket.npz",
+      "bytes": 4011,
+      "sha256": "d1d09e6cf2982d701a0d281d152a07dfb0d396b8e3643c0d06a0ae15df72a03f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/062-grid100-prefix.npz",
+      "bytes": 4012,
+      "sha256": "991ab8c5c7378dcc78bb501b589900a58aa06470f546509711b1916e9894a0b1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/062-grid100-raster.npz",
+      "bytes": 4014,
+      "sha256": "1e626524bf9aea170bb692378297c8f91a401c73002fbf6ed7eb90b941d38b22"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/062-grid100-sweep.npz",
+      "bytes": 4014,
+      "sha256": "be4e9cf53c121d7d56eb7da15e9c811b75076990431e46e9c5db16337c9d65ef"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/063-distinct-raster.npz",
+      "bytes": 208384,
+      "sha256": "9b23b1813c08c5ec0f1f8b3b168cdeb15dce1214823a9500d61d1154f7a6d6fc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/063-distinct-sweep.npz",
+      "bytes": 208462,
+      "sha256": "aae0086698a612b050bc49695a9a871210b08cc3272d976be9ada735e321f507"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/063-grid100-bucket.npz",
+      "bytes": 8607,
+      "sha256": "04459307f7897b2e6b045112a40fd48df13f31bcd697b0d72288665e14d3d0b0"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/063-grid100-prefix.npz",
+      "bytes": 8602,
+      "sha256": "0aee4bf0cc6d214bce4fcc32192647e4872b798832e110f8a719ad5a54ba7965"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/063-grid100-raster.npz",
+      "bytes": 8600,
+      "sha256": "e975de18c34e01966d04b1f4c003f2fe47cd8131b4a9646f57f762cd849d37e9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/063-grid100-sweep.npz",
+      "bytes": 8616,
+      "sha256": "00dabfc6799fe9238aaaf32da52194c21cf0b493e5600e5f5baf04632cbbb4be"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/064-distinct-raster.npz",
+      "bytes": 275342,
+      "sha256": "b4ff2ed6c1ce5153c5e8191030fcf8f0ca7cf0176185371b3d58bf6cf35597cb"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/064-distinct-sweep.npz",
+      "bytes": 275397,
+      "sha256": "2663c5dad4a60bb9844cf503665007ae4d843b276797d2996e9041bd057df58f"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/064-grid100-bucket.npz",
+      "bytes": 12504,
+      "sha256": "bd23f512a69a78d94b3e64474917dcc0ac94994a1431481e4251d4d020c1cee9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/064-grid100-prefix.npz",
+      "bytes": 12500,
+      "sha256": "c56ee184bcbb58b917d7c878e4c6ebed4f14a4f6bbb37f6555be7494e159bfa8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/064-grid100-raster.npz",
+      "bytes": 12492,
+      "sha256": "8292bdf07f2be476133a9b9ea55839c42e6ff0bf7a1d38d884991f2cf2e1875a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/064-grid100-sweep.npz",
+      "bytes": 12501,
+      "sha256": "b97821659136bdda915dc0ca5150262419b3c8b9116fe398fbbe75a6d4a5ae78"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/065-distinct-raster.npz",
+      "bytes": 14406,
+      "sha256": "a4540f0769a0f566e37917d280d22a3009d48f4076c4f56607aac00b6666735c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/065-distinct-sweep.npz",
+      "bytes": 14424,
+      "sha256": "df2fe1210c0527076c0c1c6dd03299995ef062c0ffbfc13d5fa8f67eaf7e5cd2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/065-grid100-bucket.npz",
+      "bytes": 3656,
+      "sha256": "41072cdbfbb6a165a03227dc1d8c48846d006f2edbc585195e57ccc342b256a4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/065-grid100-prefix.npz",
+      "bytes": 3656,
+      "sha256": "dc138ecd7b4f9370bee992ebfa5c2de4fdbab0c8747fbbb6489dab065db4c8ca"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/065-grid100-raster.npz",
+      "bytes": 3655,
+      "sha256": "b3e92403d54c293c5ee252fdd27f3c03a18aa5ea74731da57e29ea2c4ccdaefc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/065-grid100-sweep.npz",
+      "bytes": 3662,
+      "sha256": "fb0cf020480a5812c792519cc020b902903cecb96088b4f6c66101b79d29e3d8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/066-distinct-raster.npz",
+      "bytes": 204254,
+      "sha256": "83d3ac018830a01e4a2e09ef9167884da5e4c7313e8d8372b5aefe2800dcdf68"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/066-distinct-sweep.npz",
+      "bytes": 204268,
+      "sha256": "c7de3f2a45e8bd2b9f3c6a15b1dafa639f585e6d5410f28bf401f859daba8832"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/066-grid100-bucket.npz",
+      "bytes": 10583,
+      "sha256": "f8d85df199d82566112064ca8f6f6924e64990ddc1a2f6aca0de1a9892eae153"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/066-grid100-prefix.npz",
+      "bytes": 10578,
+      "sha256": "562f9bcc538e7c526255a197d4b24aecd3405734be0191473ce80cff73351595"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/066-grid100-raster.npz",
+      "bytes": 10595,
+      "sha256": "6504cc7f890e5bc9cf3513397107a55139439150516010a21025cf2158b29643"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/066-grid100-sweep.npz",
+      "bytes": 10583,
+      "sha256": "7c44771be14f36fef5cd996946ffbe34d7b0458db7ce156956594ae55f44003e"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/067-distinct-raster.npz",
+      "bytes": 162165,
+      "sha256": "78daf624a2de2f38ef915eb9965acecaeb0867bbceada5b72c381ad753e246dd"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/067-distinct-sweep.npz",
+      "bytes": 162237,
+      "sha256": "120290009f31df5a7be322fda2bdd23fb6e4157dd7e0ec0d2bf76b3f0e04cbef"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/067-grid100-bucket.npz",
+      "bytes": 10315,
+      "sha256": "0b621f4e89ca508236cf12d0e08349d5737183f4761884811850c563afd2ba90"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/067-grid100-prefix.npz",
+      "bytes": 10302,
+      "sha256": "5afdb4e28bf5e7c79e59b85e55a831ba2179ebb4dfdccb1d5d682f0e84906f63"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/067-grid100-raster.npz",
+      "bytes": 10309,
+      "sha256": "a146af8baea54f41bd3d38211c0a363ab1b64470f66f706632a46889b921c0c8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/067-grid100-sweep.npz",
+      "bytes": 10309,
+      "sha256": "3c6d31f7c821eb07c75c690c1da892395710af6b767889b82a6a03d8d7460544"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/068-distinct-raster.npz",
+      "bytes": 105272,
+      "sha256": "618b10fd100f58540aff1f89dd3b7cd7904bfcdadb29ddd47695d151e3beb240"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/068-distinct-sweep.npz",
+      "bytes": 105357,
+      "sha256": "4e06407bcada688dfab4e6659e57ff647804cf4cdb0c93fa26bbb6549da637cd"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/068-grid100-bucket.npz",
+      "bytes": 5730,
+      "sha256": "367e7d8d080f362ae663b193b9a2c8f3b7a17839a7a023903916672d80966fdc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/068-grid100-prefix.npz",
+      "bytes": 5722,
+      "sha256": "bf12d170e8c3c52c9bec6954935efe05d6f1ff630e6176e20da47fe0ceb5e9a6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/068-grid100-raster.npz",
+      "bytes": 5720,
+      "sha256": "58b65d8983bb7a374d69de6e16e3246f720595bdb49af4585f3bd50e581d40c3"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/068-grid100-sweep.npz",
+      "bytes": 5734,
+      "sha256": "3884f167fad8fcbf8c60ca4f6bffa6a6097acd69cdef3fccd5ed9d4717a29f87"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/069-distinct-raster.npz",
+      "bytes": 208913,
+      "sha256": "3b6c3a76d1c3cf8cd2211c5301cf4c9658ccd56b09f810434dde6613393bd57d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/069-distinct-sweep.npz",
+      "bytes": 208901,
+      "sha256": "0d83b254e35f299a7dd852069a755ca07123fb16c2a553f42771f3310a52c0cc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/069-grid100-bucket.npz",
+      "bytes": 10284,
+      "sha256": "e29e8e98bd4650b3e06da52abd960613cf1a2a7b4f78a0253d72719998b4bb5c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/069-grid100-prefix.npz",
+      "bytes": 10288,
+      "sha256": "691b2a17e480a20eae2b3104a9bfad18f2232827082a1b4d9839d1f62bce2cec"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/069-grid100-raster.npz",
+      "bytes": 10287,
+      "sha256": "2972427e42392b89fa19a883e1e12d5360cce3c6d9a42b9db19a80feb2c2bc8c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/069-grid100-sweep.npz",
+      "bytes": 10280,
+      "sha256": "b234c712c3b217270daba1b83867ce38ab311419d64531ab873ecc1b0fe90132"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/070-distinct-raster.npz",
+      "bytes": 198279,
+      "sha256": "15088ad7d631f4ed71c1383ae014c1d63f9e46dbb4e907ca9897ebd308fa134a"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/070-distinct-sweep.npz",
+      "bytes": 198291,
+      "sha256": "8866e0937e0fbbc5b8d5d9a952da5ee22f9384e48021f817592e28e0dc86d87c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/070-grid100-bucket.npz",
+      "bytes": 13020,
+      "sha256": "57c51ff886065c335627e8f52512f9183099392e3bb6b9876662a32622bdd9cc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/070-grid100-prefix.npz",
+      "bytes": 13017,
+      "sha256": "0d6cb1b1a3d653c4019697fde93bcbf9f4dfb970606b0e4feedab777e0aff68d"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/070-grid100-raster.npz",
+      "bytes": 13019,
+      "sha256": "fae71fee8f5472226ac449b4d5d477297e75aef9ff9a92850d70c810ae7e72a2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/070-grid100-sweep.npz",
+      "bytes": 13017,
+      "sha256": "029dc3b6a76bdef0cf5fedc6a379b0abb5c02cf99377294408978cd83cc1e176"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/071-distinct-raster.npz",
+      "bytes": 163371,
+      "sha256": "dcc95197d24f5b72c73d48f1dafe413bb3a391b8607a07064acc94d4f6538bd4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/071-distinct-sweep.npz",
+      "bytes": 163722,
+      "sha256": "74413e09f3be325e117a60041bc031a0760af92b9bb4da403b12378dfa7bfb5b"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/071-grid100-bucket.npz",
+      "bytes": 7198,
+      "sha256": "9cc53332078163b8b6bd03c1897c8b35f52bb32d96c10b325d29fc6a83a96d44"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/071-grid100-prefix.npz",
+      "bytes": 7194,
+      "sha256": "317e70022590e41725d6e5c9ed0e60b3b43a3d1e887be6722853611be969e7e2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/071-grid100-raster.npz",
+      "bytes": 7219,
+      "sha256": "0de8ab7a057a37e103e6ab1610e7a3179a0d1710f23b6afa6912c4b9fc024de2"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/071-grid100-sweep.npz",
+      "bytes": 7195,
+      "sha256": "dedf235602322fb3f4842f66f693e68a69711b876fb9049cbc890017edc0add9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/072-distinct-raster.npz",
+      "bytes": 187444,
+      "sha256": "b66fb98973a023dd2455f6b1dafeb67c9b6b18a55c7a0ee91ca86f42d85734e6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/072-distinct-sweep.npz",
+      "bytes": 187438,
+      "sha256": "f11af518433b7aeb91cb154327f2fcc276d14b26f2e15744ff65c24160ea9757"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/072-grid100-bucket.npz",
+      "bytes": 6006,
+      "sha256": "813ebf78413761fff043c529d5f0324c825a52bee14f03be5cd3ade3a337f297"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/072-grid100-prefix.npz",
+      "bytes": 6006,
+      "sha256": "897a71ede49bcf5a9e54bf491d8f3c980dbdd9ad0356929c948562ce0b201e91"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/072-grid100-raster.npz",
+      "bytes": 6005,
+      "sha256": "60c63f0745be53a88a9084de71d21c48e5540ef06384fd846b460c72591e4670"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/curves/072-grid100-sweep.npz",
+      "bytes": 6001,
+      "sha256": "54c324c56a61bc54ce94e331655d9f4b7418c64154f7d89d717e6460ce69b288"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/independent-report.json",
+      "bytes": 27912,
+      "sha256": "b934652c89b067af465bf40b301d3e555e69f74d289a4fc5ac7796cc65471ae8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/protocol.json",
+      "bytes": 2698,
+      "sha256": "0dca6c76363d3a1f682260f6a1f12478f8c8d5dac3f790b2ae0462f49b8cdf00"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/records.jsonl",
+      "bytes": 2451325,
+      "sha256": "0c6caff5d9f761cad48ce8c6a448f630b3b7ffd82f3644bd609eca028c085565"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/main-study/run-start.json",
+      "bytes": 265,
+      "sha256": "173db9afa177de3171cc77a8a81743b28e1c42cc804bc980098c82012c65e1da"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/public-study-v2/complete.json",
+      "bytes": 249,
+      "sha256": "ddadba32c03a704cd34d4f5e55c8adf7296aa74d13242aa0b5478572aec25c72"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/public-study-v2/independent-report.json",
+      "bytes": 10289,
+      "sha256": "82e234cd72a60c71b0a90fb1a333ecc9ff90e3794a10917661c4a8449a6329f8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/public-study-v2/protocol.json",
+      "bytes": 22873,
+      "sha256": "06e377fd5229406a055854a3e8720cb13d4e2e5e88b2e7a1b5d96706b41c0afc"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/public-study-v2/records.jsonl",
+      "bytes": 28331,
+      "sha256": "f29883a314c08019c65e38d6f30606e28a1db32b8f1287209c908e6481b6b2c7"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/public-study-v2/run-start.json",
+      "bytes": 322,
+      "sha256": "f2c36aab18aa52cc81c41bfd160d5ca45bdb0b00e4751b33e58e48d6a6e4a7b1"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/timesead-sources.json",
+      "bytes": 1727,
+      "sha256": "ff520f417aa05ce8e3b69c625137bd88cc92c9bb0859baf4f3008ec3ba701769"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/validation/protocol.json",
+      "bytes": 1376,
+      "sha256": "e381b0af0e14638eeafa2711b49e8c9b881464fac7bfe0e998003e1ab192dff9"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/range-sweep/validation/report.json",
+      "bytes": 279290,
+      "sha256": "f74dd276d66847c60f63a07a57688324536215b53bf0e992caba5dde82fba4a4"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/supplement/complete.json",
+      "bytes": 339,
+      "sha256": "9b7709a9daa3c8e094bbd49112e91de171178d67c9b5764f2ed1b1419fd69dd6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/supplement/independent-report.json",
+      "bytes": 176015,
+      "sha256": "9e17112f09676514e689079203ae2534bf0dcac6a8267e7cbf3f42b1271bcee8"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/supplement/protocol.json",
+      "bytes": 4353,
+      "sha256": "f7320f4a010f3e47a13aac35b854e78d66a8af1a1d322715980fbd8eaa7c1e5c"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/supplement/records.jsonl",
+      "bytes": 2668000,
+      "sha256": "ed773b8de829ca5f91737316ba0e710b53d46707b8594c7e739ce35ab43403fa"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/supplement/run-start.json",
+      "bytes": 265,
+      "sha256": "d70e575787d92568b54debf0c3a103abceda8e1da133667efd9194a9a138f7a6"
+    },
+    {
+      "path": "artifacts/pvldb-research-20261024/supplement/workflows.jsonl",
+      "bytes": 1655834,
+      "sha256": "cc827ef8dd2b30eba1dcad66cdfa505aa5d3f5120ad0acd3e410e7bcfea62ab5"
+    }
+  ]
+}

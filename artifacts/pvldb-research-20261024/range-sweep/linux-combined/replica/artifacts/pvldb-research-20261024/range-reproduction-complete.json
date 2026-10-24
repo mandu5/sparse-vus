@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-24T04:22:56.520454+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "processor": "AMD EPYC 7763 64-Core Processor",
+  "logical_cpus": 4,
+  "packages": {
+    "numpy": "1.26.4",
+    "numba": "0.59.1",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "torch": "2.10.0+cpu"
+  },
+  "host_note": "One serial numerical process; public hosted-runner background load is not controlled.",
+  "include_vus": true,
+  "scope": "Fresh raw download, 73-case score generation, range main/public/validation and numerical JSON audits; optional original VUS primary/supplement; source/semantic design matches, host-dependent scores/timings may differ.",
+  "completed_utc": "2026-10-24T05:07:05.682988+00:00",
+  "reports": {
+    "range-sweep/main-study/independent-report.json": "b934652c89b067af465bf40b301d3e555e69f74d289a4fc5ac7796cc65471ae8",
+    "range-sweep/public-study-v2/independent-report.json": "82e234cd72a60c71b0a90fb1a333ecc9ff90e3794a10917661c4a8449a6329f8",
+    "range-sweep/validation/report.json": "f74dd276d66847c60f63a07a57688324536215b53bf0e992caba5dde82fba4a4",
+    "full-precision/independent-audit.json": "9fe355ecfcb8a27f13cad90d8d6da7ad1ae1acadc66c4a9df5bf8363687ba6b0",
+    "supplement/independent-report.json": "9e17112f09676514e689079203ae2534bf0dcac6a8267e7cbf3f42b1271bcee8"
+  }
+}

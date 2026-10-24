@@ -1,0 +1,361 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-24T04:48:47.588845+00:00",
+  "run": 40061935240,
+  "role": "auxiliary; canonical combined selected before timing inspection",
+  "commit": "d4eb3eddd0d441757ee31e149466528e41905c7d",
+  "archive_sha256": "6889566d825e2bc85b34264d7d9365dc932207a4add152d64d80ad199d8ba9a2",
+  "reports": [
+    {
+      "report": "range-sweep/main-study/independent-report.json",
+      "sha256": "149cca1decf0f236694c823ed513476ed3ad7c8869ccd146e6945f85cad5b000",
+      "numerically_equal": true,
+      "last_bit_differences": [
+        {
+          "field": "/timing/0/case/min_ratio",
+          "archived": 14.62540200385447,
+          "recomputed": 14.625402003854475,
+          "relative_difference": 3.643708745097258e-16
+        },
+        {
+          "field": "/timing/0/equal_label_blocks/min_ratio",
+          "archived": 14.62540200385447,
+          "recomputed": 14.625402003854475,
+          "relative_difference": 3.643708745097258e-16
+        },
+        {
+          "field": "/timing/1/case/familywise95_ci/0",
+          "archived": 1.8709528115537029,
+          "recomputed": 1.870952811553703,
+          "relative_difference": 1.186799600470083e-16
+        },
+        {
+          "field": "/timing/1/equal_label_blocks/familywise95_ci/0",
+          "archived": 1.8709528115537029,
+          "recomputed": 1.870952811553703,
+          "relative_difference": 1.186799600470083e-16
+        },
+        {
+          "field": "/timing/2/case/familywise95_ci/1",
+          "archived": 1.8503082496239767,
+          "recomputed": 1.8503082496239769,
+          "relative_difference": 1.2000411551435045e-16
+        },
+        {
+          "field": "/timing/2/equal_label_blocks/familywise95_ci/1",
+          "archived": 1.8503082496239767,
+          "recomputed": 1.8503082496239769,
+          "relative_difference": 1.2000411551435045e-16
+        },
+        {
+          "field": "/timing/3/case/geometric_ratio",
+          "archived": 30.92140575799767,
+          "recomputed": 30.921405757997668,
+          "relative_difference": 1.1489496003530204e-16
+        },
+        {
+          "field": "/timing/3/case/familywise95_ci/1",
+          "archived": 47.726361560255036,
+          "recomputed": 47.72636156025503,
+          "relative_difference": 1.4887846308230147e-16
+        },
+        {
+          "field": "/timing/3/case/max_ratio",
+          "archived": 142.2047268526589,
+          "recomputed": 142.20472685265887,
+          "relative_difference": 1.998647306559106e-16
+        },
+        {
+          "field": "/timing/3/equal_label_blocks/geometric_ratio",
+          "archived": 30.92140575799767,
+          "recomputed": 30.921405757997668,
+          "relative_difference": 1.1489496003530204e-16
+        },
+        {
+          "field": "/timing/3/equal_label_blocks/familywise95_ci/1",
+          "archived": 47.726361560255036,
+          "recomputed": 47.72636156025503,
+          "relative_difference": 1.4887846308230147e-16
+        },
+        {
+          "field": "/timing/3/equal_label_blocks/max_ratio",
+          "archived": 142.2047268526589,
+          "recomputed": 142.20472685265887,
+          "relative_difference": 1.998647306559106e-16
+        },
+        {
+          "field": "/timing/4/case/geometric_ratio",
+          "archived": 26.33840939004241,
+          "recomputed": 26.338409390042436,
+          "relative_difference": 9.442102362113614e-16
+        },
+        {
+          "field": "/timing/4/equal_label_blocks/geometric_ratio",
+          "archived": 26.33840939004241,
+          "recomputed": 26.338409390042436,
+          "relative_difference": 9.442102362113614e-16
+        },
+        {
+          "field": "/timing/5/case/familywise95_ci/0",
+          "archived": 2.7482814548723047,
+          "recomputed": 2.748281454872305,
+          "relative_difference": 1.61587965840528e-16
+        },
+        {
+          "field": "/timing/5/case/max_ratio",
+          "archived": 4.957508501422106,
+          "recomputed": 4.957508501422107,
+          "relative_difference": 1.791582242260085e-16
+        },
+        {
+          "field": "/timing/5/equal_label_blocks/familywise95_ci/0",
+          "archived": 2.7482814548723047,
+          "recomputed": 2.748281454872305,
+          "relative_difference": 1.61587965840528e-16
+        },
+        {
+          "field": "/timing/5/equal_label_blocks/max_ratio",
+          "archived": 4.957508501422106,
+          "recomputed": 4.957508501422107,
+          "relative_difference": 1.791582242260085e-16
+        },
+        {
+          "field": "/timing/6/case/familywise95_ci/1",
+          "archived": 1.9579709900121138,
+          "recomputed": 1.9579709900121136,
+          "relative_difference": 1.1340546211241748e-16
+        },
+        {
+          "field": "/timing/6/equal_label_blocks/familywise95_ci/1",
+          "archived": 1.9579709900121138,
+          "recomputed": 1.9579709900121136,
+          "relative_difference": 1.1340546211241748e-16
+        },
+        {
+          "field": "/timing/7/case/geometric_ratio",
+          "archived": 28.639618609618953,
+          "recomputed": 28.639618609618967,
+          "relative_difference": 4.96195668975463e-16
+        },
+        {
+          "field": "/timing/7/case/familywise95_ci/0",
+          "archived": 12.099782713100701,
+          "recomputed": 12.099782713100712,
+          "relative_difference": 8.808539201998801e-16
+        },
+        {
+          "field": "/timing/7/case/min_ratio",
+          "archived": 0.7214179986941854,
+          "recomputed": 0.7214179986941853,
+          "relative_difference": 1.5389455581018689e-16
+        },
+        {
+          "field": "/timing/7/case/max_ratio",
+          "archived": 81.89833960247164,
+          "recomputed": 81.89833960247165,
+          "relative_difference": 1.7351822740461427e-16
+        },
+        {
+          "field": "/timing/7/equal_label_blocks/geometric_ratio",
+          "archived": 28.639618609618953,
+          "recomputed": 28.639618609618967,
+          "relative_difference": 4.96195668975463e-16
+        },
+        {
+          "field": "/timing/7/equal_label_blocks/familywise95_ci/0",
+          "archived": 12.099782713100701,
+          "recomputed": 12.099782713100712,
+          "relative_difference": 8.808539201998801e-16
+        },
+        {
+          "field": "/timing/7/equal_label_blocks/min_ratio",
+          "archived": 0.7214179986941854,
+          "recomputed": 0.7214179986941853,
+          "relative_difference": 1.5389455581018689e-16
+        },
+        {
+          "field": "/timing/7/equal_label_blocks/max_ratio",
+          "archived": 81.89833960247164,
+          "recomputed": 81.89833960247165,
+          "relative_difference": 1.7351822740461427e-16
+        },
+        {
+          "field": "/timing/8/case/familywise95_ci/0",
+          "archived": 15.911661806495648,
+          "recomputed": 15.911661806495646,
+          "relative_difference": 1.1163867489158706e-16
+        },
+        {
+          "field": "/timing/8/case/familywise95_ci/1",
+          "archived": 18.284124170065073,
+          "recomputed": 18.284124170065077,
+          "relative_difference": 1.9430592604577877e-16
+        },
+        {
+          "field": "/timing/8/case/min_ratio",
+          "archived": 12.661384665298963,
+          "recomputed": 12.661384665298964,
+          "relative_difference": 1.402972017956858e-16
+        },
+        {
+          "field": "/timing/8/case/max_ratio",
+          "archived": 31.96626668946439,
+          "recomputed": 31.9662666894644,
+          "relative_difference": 3.334183856982669e-16
+        },
+        {
+          "field": "/timing/8/equal_label_blocks/geometric_ratio",
+          "archived": 16.830804379552006,
+          "recomputed": 16.83080437955201,
+          "relative_difference": 2.1108400993102532e-16
+        },
+        {
+          "field": "/timing/9/case/familywise95_ci/1",
+          "archived": 3.8729479739535777,
+          "recomputed": 3.8729479739535773,
+          "relative_difference": 1.146643881706286e-16
+        },
+        {
+          "field": "/timing/9/case/min_ratio",
+          "archived": 2.7684883004083543,
+          "recomputed": 2.7684883004083547,
+          "relative_difference": 1.6040855573944778e-16
+        },
+        {
+          "field": "/timing/9/case/max_ratio",
+          "archived": 6.553029201197305,
+          "recomputed": 6.553029201197306,
+          "relative_difference": 2.7107415286287624e-16
+        },
+        {
+          "field": "/timing/9/equal_label_blocks/familywise95_ci/1",
+          "archived": 4.363033490425631,
+          "recomputed": 4.363033490425632,
+          "relative_difference": 2.0356901262600202e-16
+        },
+        {
+          "field": "/timing/9/equal_label_blocks/min_ratio",
+          "archived": 2.7684883004083543,
+          "recomputed": 2.7684883004083547,
+          "relative_difference": 1.6040855573944778e-16
+        },
+        {
+          "field": "/timing/10/case/geometric_ratio",
+          "archived": 2.8551516421457173,
+          "recomputed": 2.855151642145717,
+          "relative_difference": 1.5553962293796717e-16
+        },
+        {
+          "field": "/timing/10/case/familywise95_ci/0",
+          "archived": 2.626398179101824,
+          "recomputed": 2.6263981791018245,
+          "relative_difference": 1.6908677952325272e-16
+        },
+        {
+          "field": "/timing/10/equal_label_blocks/geometric_ratio",
+          "archived": 2.6994503651680635,
+          "recomputed": 2.699450365168063,
+          "relative_difference": 1.6451097437474622e-16
+        },
+        {
+          "field": "/timing/10/equal_label_blocks/familywise95_ci/0",
+          "archived": 2.065524538800705,
+          "recomputed": 2.0655245388007053,
+          "relative_difference": 2.150006942584724e-16
+        },
+        {
+          "field": "/timing/10/equal_label_blocks/familywise95_ci/1",
+          "archived": 3.071875743950828,
+          "recomputed": 3.071875743950829,
+          "relative_difference": 2.891322741322255e-16
+        },
+        {
+          "field": "/timing/10/equal_label_blocks/max_ratio",
+          "archived": 3.1750981973767263,
+          "recomputed": 3.175098197376727,
+          "relative_difference": 2.7973258289584245e-16
+        },
+        {
+          "field": "/timing/11/equal_label_blocks/familywise95_ci/0",
+          "archived": 63.36177997562396,
+          "recomputed": 63.36177997562395,
+          "relative_difference": 1.121405894899819e-16
+        },
+        {
+          "field": "/timing/11/equal_label_blocks/familywise95_ci/1",
+          "archived": 205.4000650432896,
+          "recomputed": 205.4000650432898,
+          "relative_difference": 9.686071227431075e-16
+        }
+      ]
+    },
+    {
+      "report": "range-sweep/public-study-v2/independent-report.json",
+      "sha256": "9c22d7c2133b5e12a389bfdabd868d0cb2a62a791bbbd76f1149d80abb5a98f7",
+      "numerically_equal": true,
+      "last_bit_differences": [
+        {
+          "field": "/tables/1/ratio_summary/geometric_ratio",
+          "archived": 552.5596443616381,
+          "recomputed": 552.5596443616382,
+          "relative_difference": 2.0574582107413273e-16
+        },
+        {
+          "field": "/tables/1/ratio_summary/familywise95_ci/0",
+          "archived": 335.66165807646706,
+          "recomputed": 335.66165807646735,
+          "relative_difference": 8.467368478507973e-16
+        },
+        {
+          "field": "/tables/1/ratio_summary/min_ratio",
+          "archived": 335.66165807646706,
+          "recomputed": 335.66165807646735,
+          "relative_difference": 8.467368478507973e-16
+        },
+        {
+          "field": "/tables/2/ratio_summary/familywise95_ci/0",
+          "archived": 671.1004807162276,
+          "recomputed": 671.1004807162282,
+          "relative_difference": 8.470180024329919e-16
+        },
+        {
+          "field": "/tables/2/ratio_summary/familywise95_ci/1",
+          "archived": 1346.2558803606144,
+          "recomputed": 1346.2558803606155,
+          "relative_difference": 8.444667865901039e-16
+        },
+        {
+          "field": "/tables/2/ratio_summary/min_ratio",
+          "archived": 671.1004807162276,
+          "recomputed": 671.1004807162282,
+          "relative_difference": 8.470180024329919e-16
+        },
+        {
+          "field": "/tables/2/ratio_summary/max_ratio",
+          "archived": 1346.2558803606144,
+          "recomputed": 1346.2558803606155,
+          "relative_difference": 8.444667865901039e-16
+        },
+        {
+          "field": "/tables/3/ratio_summary/familywise95_ci/1",
+          "archived": 514.4321414986267,
+          "recomputed": 514.4321414986266,
+          "relative_difference": 2.2099481846221212e-16
+        },
+        {
+          "field": "/tables/4/ratio_summary/familywise95_ci/0",
+          "archived": 400.63916444915264,
+          "recomputed": 400.6391644491527,
+          "relative_difference": 1.418818325935839e-16
+        },
+        {
+          "field": "/tables/5/ratio_summary/geometric_ratio",
+          "archived": 2394.547091601056,
+          "recomputed": 2394.5470916010563,
+          "relative_difference": 1.8990954593522246e-16
+        }
+      ]
+    }
+  ],
+  "comparison_policy": "All shape, string, integer, provenance, hash and discrete result fields exact; derived floating summaries allow relative/absolute 1e-12. This audit tolerance was chosen after observing exp/log roundoff; it is not an experimental endpoint."
+}

@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 12547039841,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU0NzAzOTg0MQ==",
+      "name": "range-sweep-linux",
+      "size_in_bytes": 110832205,
+      "url": "https://api.github.com/repos/mandu5/sparse-vus/actions/artifacts/12547039841",
+      "archive_download_url": "https://api.github.com/repos/mandu5/sparse-vus/actions/artifacts/12547039841/zip",
+      "expired": false,
+      "digest": "sha256:6889566d825e2bc85b34264d7d9365dc932207a4add152d64d80ad199d8ba9a2",
+      "created_at": "2026-10-24T04:31:19Z",
+      "updated_at": "2026-10-24T04:31:19Z",
+      "expires_at": "2027-01-22T04:20:15Z",
+      "workflow_run": {
+        "id": 40061935240,
+        "repository_id": 1425799575,
+        "head_repository_id": 1425799575,
+        "head_branch": "research/pvldb-20261024",
+        "head_sha": "d4eb3eddd0d441757ee31e149466528e41905c7d"
+      }
+    }
+  ]
+}

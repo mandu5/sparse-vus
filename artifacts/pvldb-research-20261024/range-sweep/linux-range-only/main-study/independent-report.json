@@ -1,0 +1,892 @@
+{
+  "status": "PASS",
+  "scope": "Saved complete-curve parity, timing/selection/provenance reconstruction; no independent all-input mathematical oracle.",
+  "protocol_sha256": "30aff0472dd10033fccf4e34004ed39a2ad021d6aa1fa85c90770fd3537d9dbc",
+  "records_sha256": "f92b9e49b709c8d837e00a1e5502a6968cb0e579fcdd1c70369f35dd1b953bf2",
+  "record_count": 2628,
+  "series_count": 73,
+  "max_curve_error": 2.9976021664879227e-15,
+  "producer_reported_max_curve_error": 2.563921297493721e-15,
+  "winner_set_disagreements_between_methods": 0,
+  "timing": [
+    {
+      "family": "NAB",
+      "contract": "grid100",
+      "control": "prefix",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 27.228372252943416,
+        "familywise95_ci": [
+          22.741243608069315,
+          32.11478012007593
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 14.62540200385447,
+        "max_ratio": 42.69237798824753
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 27.228372252943416,
+        "familywise95_ci": [
+          22.741243608069315,
+          32.11478012007593
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 14.62540200385447,
+        "max_ratio": 42.69237798824753
+      }
+    },
+    {
+      "family": "NAB",
+      "contract": "grid100",
+      "control": "raster",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 2.1205937050368773,
+        "familywise95_ci": [
+          1.8709528115537029,
+          2.401725902478057
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 1.2999831694325334,
+        "max_ratio": 3.325651743145603
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 2.1205937050368773,
+        "familywise95_ci": [
+          1.8709528115537029,
+          2.401725902478057
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 1.2999831694325334,
+        "max_ratio": 3.325651743145603
+      }
+    },
+    {
+      "family": "NAB",
+      "contract": "grid100",
+      "control": "sweep",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 1.627737123816791,
+        "familywise95_ci": [
+          1.4414331912678615,
+          1.8503082496239767
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 1.138956057755144,
+        "max_ratio": 2.611008952087007
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 1.627737123816791,
+        "familywise95_ci": [
+          1.4414331912678615,
+          1.8503082496239767
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 1.138956057755144,
+        "max_ratio": 2.611008952087007
+      }
+    },
+    {
+      "family": "NAB",
+      "contract": "distinct",
+      "control": "raster",
+      "candidate": "sweep",
+      "case": {
+        "geometric_ratio": 30.92140575799767,
+        "familywise95_ci": [
+          20.184367548244637,
+          47.726361560255036
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 7.138573390100066,
+        "max_ratio": 142.2047268526589
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 30.92140575799767,
+        "familywise95_ci": [
+          20.184367548244637,
+          47.726361560255036
+        ],
+        "units": 20,
+        "wins": 20,
+        "min_ratio": 7.138573390100066,
+        "max_ratio": 142.2047268526589
+      }
+    },
+    {
+      "family": "SMAP",
+      "contract": "grid100",
+      "control": "prefix",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 26.33840939004241,
+        "familywise95_ci": [
+          21.414502700316323,
+          32.40770878409787
+        ],
+        "units": 17,
+        "wins": 17,
+        "min_ratio": 16.154011324587685,
+        "max_ratio": 54.097492727395846
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 26.33840939004241,
+        "familywise95_ci": [
+          21.414502700316323,
+          32.40770878409787
+        ],
+        "units": 17,
+        "wins": 17,
+        "min_ratio": 16.154011324587685,
+        "max_ratio": 54.097492727395846
+      }
+    },
+    {
+      "family": "SMAP",
+      "contract": "grid100",
+      "control": "raster",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 3.1229325729957207,
+        "familywise95_ci": [
+          2.7482814548723047,
+          3.578899150913848
+        ],
+        "units": 17,
+        "wins": 17,
+        "min_ratio": 2.347944478491978,
+        "max_ratio": 4.957508501422106
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 3.1229325729957207,
+        "familywise95_ci": [
+          2.7482814548723047,
+          3.578899150913848
+        ],
+        "units": 17,
+        "wins": 17,
+        "min_ratio": 2.347944478491978,
+        "max_ratio": 4.957508501422106
+      }
+    },
+    {
+      "family": "SMAP",
+      "contract": "grid100",
+      "control": "sweep",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 1.6970903231241818,
+        "familywise95_ci": [
+          1.4465375794438629,
+          1.9579709900121138
+        ],
+        "units": 17,
+        "wins": 16,
+        "min_ratio": 0.9095169875552499,
+        "max_ratio": 2.5193865988707023
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 1.6970903231241818,
+        "familywise95_ci": [
+          1.4465375794438629,
+          1.9579709900121138
+        ],
+        "units": 17,
+        "wins": 16,
+        "min_ratio": 0.9095169875552499,
+        "max_ratio": 2.5193865988707023
+      }
+    },
+    {
+      "family": "SMAP",
+      "contract": "distinct",
+      "control": "raster",
+      "candidate": "sweep",
+      "case": {
+        "geometric_ratio": 28.639618609618953,
+        "familywise95_ci": [
+          12.099782713100701,
+          54.848321575953214
+        ],
+        "units": 17,
+        "wins": 16,
+        "min_ratio": 0.7214179986941854,
+        "max_ratio": 81.89833960247164
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 28.639618609618953,
+        "familywise95_ci": [
+          12.099782713100701,
+          54.848321575953214
+        ],
+        "units": 17,
+        "wins": 16,
+        "min_ratio": 0.7214179986941854,
+        "max_ratio": 81.89833960247164
+      }
+    },
+    {
+      "family": "SMD",
+      "contract": "grid100",
+      "control": "prefix",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 16.954140586651995,
+        "familywise95_ci": [
+          15.911661806495648,
+          18.284124170065073
+        ],
+        "units": 36,
+        "wins": 36,
+        "min_ratio": 12.661384665298963,
+        "max_ratio": 31.96626668946439
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 16.830804379552006,
+        "familywise95_ci": [
+          14.886479591414219,
+          20.365487239570747
+        ],
+        "units": 9,
+        "wins": 9,
+        "min_ratio": 13.27700548483304,
+        "max_ratio": 28.149038656176266
+      }
+    },
+    {
+      "family": "SMD",
+      "contract": "grid100",
+      "control": "raster",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 3.6055216433570485,
+        "familywise95_ci": [
+          3.398685760760434,
+          3.8729479739535777
+        ],
+        "units": 36,
+        "wins": 36,
+        "min_ratio": 2.7684883004083543,
+        "max_ratio": 6.553029201197305
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 3.6114979621289622,
+        "familywise95_ci": [
+          3.1940391950045206,
+          4.363033490425631
+        ],
+        "units": 9,
+        "wins": 9,
+        "min_ratio": 2.7684883004083543,
+        "max_ratio": 6.00424922025285
+      }
+    },
+    {
+      "family": "SMD",
+      "contract": "grid100",
+      "control": "sweep",
+      "candidate": "bucket",
+      "case": {
+        "geometric_ratio": 2.8551516421457173,
+        "familywise95_ci": [
+          2.626398179101824,
+          3.0294752073679434
+        ],
+        "units": 36,
+        "wins": 36,
+        "min_ratio": 1.3081060314219426,
+        "max_ratio": 3.5378830443765943
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 2.6994503651680635,
+        "familywise95_ci": [
+          2.065524538800705,
+          3.071875743950828
+        ],
+        "units": 9,
+        "wins": 9,
+        "min_ratio": 1.3081060314219426,
+        "max_ratio": 3.1750981973767263
+      }
+    },
+    {
+      "family": "SMD",
+      "contract": "distinct",
+      "control": "raster",
+      "candidate": "sweep",
+      "case": {
+        "geometric_ratio": 164.65532854643985,
+        "familywise95_ci": [
+          124.79452378661807,
+          195.8769646741801
+        ],
+        "units": 36,
+        "wins": 36,
+        "min_ratio": 15.559769706842104,
+        "max_ratio": 240.15124364196618
+      },
+      "equal_label_blocks": {
+        "geometric_ratio": 143.29210316379567,
+        "familywise95_ci": [
+          63.36177997562396,
+          205.4000650432896
+        ],
+        "units": 9,
+        "wins": 9,
+        "min_ratio": 16.116448997667746,
+        "max_ratio": 232.00575425330905
+      }
+    }
+  ],
+  "grid_to_distinct_selection": [
+    {
+      "family": "NAB",
+      "cases": 20,
+      "winner_set_changes": 7,
+      "nonoverlap": 6,
+      "regret_ge_01": 5,
+      "max_regret": 0.43913121911227054,
+      "details": [
+        {
+          "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.04203392267820555
+        },
+        {
+          "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.017132811702343154,
+          "max_profile_gain": 0.11503365967920598
+        },
+        {
+          "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.13649855620023943
+        },
+        {
+          "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.43913121911227054,
+          "max_profile_gain": 0.6218390867394993
+        },
+        {
+          "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.003943719308958482
+        },
+        {
+          "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.06910761376332175
+        },
+        {
+          "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.005277492362881997
+        },
+        {
+          "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.05640057945023125
+        },
+        {
+          "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.004898307509153543,
+          "max_profile_gain": 0.0661201095108147
+        },
+        {
+          "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.02950607429655122,
+          "max_profile_gain": 0.09104159520686189
+        },
+        {
+          "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.10511819505128733
+        },
+        {
+          "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.018614001387701418,
+          "max_profile_gain": 0.05844371272421853
+        },
+        {
+          "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.01904671346295378
+        },
+        {
+          "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.06934009933851717
+        },
+        {
+          "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.13506459660182646
+        },
+        {
+          "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.09743953895439267
+        },
+        {
+          "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.08160504573935612,
+          "max_profile_gain": 0.1333035750741705
+        },
+        {
+          "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 5.551115123125783e-17,
+          "max_profile_gain": 0.07083289229219897
+        },
+        {
+          "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.016408536028682474
+        },
+        {
+          "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0025482991584686587
+        }
+      ]
+    },
+    {
+      "family": "SMAP",
+      "cases": 17,
+      "winner_set_changes": 5,
+      "nonoverlap": 3,
+      "regret_ge_01": 2,
+      "max_regret": 0.14978403663035345,
+      "details": [
+        {
+          "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.025081655219199417
+        },
+        {
+          "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0
+        },
+        {
+          "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.09145351899731796
+        },
+        {
+          "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.14978403663035345,
+          "max_profile_gain": 0.25607664951927234
+        },
+        {
+          "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0955676765624216
+        },
+        {
+          "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.1831665058923542
+        },
+        {
+          "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.007010205019766458
+        },
+        {
+          "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.08520298714495353
+        },
+        {
+          "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.015963492608393415
+        },
+        {
+          "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0579306749024459
+        },
+        {
+          "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.013997075238009998
+        },
+        {
+          "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.018587826959667132
+        },
+        {
+          "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.07388283291897749
+        },
+        {
+          "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0217518597433545
+        },
+        {
+          "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.009835903811807434,
+          "max_profile_gain": 0.10325164922345875
+        },
+        {
+          "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.014879332244601695,
+          "max_profile_gain": 0.031416326812746254
+        },
+        {
+          "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.009084991814434173
+        }
+      ]
+    },
+    {
+      "family": "SMD",
+      "cases": 36,
+      "winner_set_changes": 12,
+      "nonoverlap": 6,
+      "regret_ge_01": 5,
+      "max_regret": 0.07966324970564426,
+      "details": [
+        {
+          "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.21204974271012006
+        },
+        {
+          "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.11086968736590125
+        },
+        {
+          "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.009099088049143667
+        },
+        {
+          "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.2369644622275413
+        },
+        {
+          "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.3760197091311085
+        },
+        {
+          "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.17398441053807837
+        },
+        {
+          "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0040049738281707215
+        },
+        {
+          "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.27890169156044636
+        },
+        {
+          "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.0318729951229928,
+          "max_profile_gain": 0.4277342572609113
+        },
+        {
+          "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.02843374709859725
+        },
+        {
+          "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.012275725290817219
+        },
+        {
+          "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.01204861392563683,
+          "max_profile_gain": 0.2100069684809216
+        },
+        {
+          "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.5112965902836419
+        },
+        {
+          "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.09346498346483745
+        },
+        {
+          "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.01963312173012244
+        },
+        {
+          "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0388234928744523
+        },
+        {
+          "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.017320169387307738,
+          "max_profile_gain": 0.07352572363583554
+        },
+        {
+          "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.12931745558805086
+        },
+        {
+          "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0050613810339679155
+        },
+        {
+          "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0578827643374602
+        },
+        {
+          "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.020536482542738543
+        },
+        {
+          "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.01662414957078784,
+          "max_profile_gain": 0.042364581962429926
+        },
+        {
+          "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0
+        },
+        {
+          "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0657297026727035
+        },
+        {
+          "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.03858505335261653
+        },
+        {
+          "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.04619243379971971
+        },
+        {
+          "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.0035044413188971
+        },
+        {
+          "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.07966324970564426,
+          "max_profile_gain": 0.10380784951434335
+        },
+        {
+          "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.08178807081303206
+        },
+        {
+          "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+          "winner_set_changes": true,
+          "nonoverlap": true,
+          "best_grid_winner_regret": 0.008451044307617894,
+          "max_profile_gain": 0.23778103616813284
+        },
+        {
+          "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.057896673596561365
+        },
+        {
+          "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.10656485907724256
+        },
+        {
+          "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.03391868154904487
+        },
+        {
+          "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+          "winner_set_changes": true,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.10581736041206163
+        },
+        {
+          "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.02549375842466156
+        },
+        {
+          "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+          "winner_set_changes": false,
+          "nonoverlap": false,
+          "best_grid_winner_regret": 0.0,
+          "max_profile_gain": 0.005992617789679411
+        }
+      ]
+    }
+  ]
+}
