@@ -92,7 +92,7 @@ complete score classes. All methods receive the same float64 score vectors.
 | Implementation | Role and configuration | Qualification |
 |---|---|---|
 | Klein fast-VUS, revision `1bae859f8a4fa4467b215ba4e8e5efb1b16e6b00` | Unchanged public external PR baseline, `thre=n` | `thre=250` is sampled and belongs on a separate accuracy–cost frontier. |
-| Benchopt VUS, revision `2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94` | Public cumulative-sum baseline, `thre=n` | Computes both ROC and PR; preserve that fact. Needs contemporaneous full-precision comparison before calling Klein universally strongest. |
+| Benchopt VUS, revision `2b55ccb1fd77b7bd2846ecb4fdb14f609502ed94` | Public cumulative-sum baseline, `thre=n` | Computes both ROC and PR. The completed supplement includes both native-consumer and matched two-output comparisons; Klein is faster on the measured panel, not asserted universally fastest. |
 | Official VUS, revision `467bace0c103f5c2bdb4900306d82939bcac8ff9` | Semantic reference and prior algorithm | Python threshold loop is not the sole performance competitor. |
 | Matched dense radix PR | Compiled internal algorithmic control | Same arithmetic and output; isolates support compression from Numba and sorting. |
 | Released sparse radix PR | Strong internal/public precursor | A batch improvement must beat it, separately from whole-method gains over external software. |
@@ -149,17 +149,59 @@ through decision JSON writes. There are twelve balanced method orders, primary
 width 30 and secondary width 100. Hashes bind the protocol, sources and scores.
 All successes and adverse tails must enter the final report.
 
-## Outstanding decisions
+## Completed primary evidence and remaining review condition
 
-- Reconstruct the primary experiment independently, including paired intervals
-  and recording-family sensitivity. Repeated timings do not create new datasets.
-- Check the complete eligible public baseline set on the new workload, including
-  Benchopt, without changing the primary frozen study.
-- Measure input preparation and memory; establish a second CPU result before a
-  6-point claim.
-- Obtain three independent reviews of the whole paper, with actual public
-  accepted/rejected review evidence where accessible. Direct OpenReview API and
-  forum reads currently return 403/browser verification; this is recorded, not
-  replaced with invented review scores.
-- Integrate only supported claims into a new manuscript revision and maintain
-  the distinction between prepared, submitted, reviewed and accepted.
+The primary Apple M1 Pro run and its independent v3 record audit are complete.
+At width 30, case geometric Klein/stream ratios are 30.51, 25.77 and 25.17;
+whole-collection workflow ratios are 23.03, 22.16 and 22.57 for NAB, SMAP and
+SMD. All exact numerical winner sets match. The matched compiled dense control
+is 3.54--3.96 times slower than stream; removing batching, dense/released ratios
+are 2.368, 2.905 and 3.279. These ablations identify support compression rather
+than only a language/runtime advantage. Released/stream is 1.496, 1.271 and
+1.207, so the SMD Mac result misses the prospective 1.25 incremental threshold.
+
+The completed separately frozen supplement compares Benchopt on the same inputs.
+Matched ROC+PR workflow ratios are 25.32, 32.06 and 40.92. The sampled 250-point
+API changes 14/73 winner sets, four with regret at least 0.01, whereas 1,000
+thresholds change three sets and incur no losses of 0.01. Exact stream also
+beats the 250-threshold workflow by 11.25, 9.68 and 7.27. These are conditional
+accuracy-cost results; they do not claim widespread approximation harm.
+
+SMD dependence sensitivity explicitly uses nine unique label blocks, including
+18 cases sharing development geometry. Removing these 18 cases still gives
+released/stream 1.220 with an unadjusted 95% block interval [1.191,1.253]. This
+does not establish physical-source independence. Resource measurements retain
+the adverse dense-memory result: at n=500,000, M=8 and positive fraction 0.5,
+stream uses 225.0 MiB peak process RSS versus 175.2 released and 210.6 dense.
+
+The [fresh Linux execution](https://github.com/mandu5/sparse-vus/actions/runs/40049786600)
+completed on AMD EPYC 7763, with data download, new score generation, primary and
+supplemental timings and both independent audits. Its primary external workflow
+ratios are 20.06, 20.28 and 16.17; released/stream case ratios are 1.886, 1.580
+and 1.340. No CPU intervals are pooled and the hosted-runner outlier is retained.
+New detector scores differ across hosts: sampled winner changes are 13/73,
+with three losses of 0.01. The raw score-generation cause is not diagnosed from
+timing records. Receipts, raw records and audit outputs are retained in
+`artifacts/pvldb-research-20261024/linux-reproduction/`; generated Linux NPZ
+arrays were not uploaded and must be regenerated for a new input-file audit.
+
+Three independent scientific reviews are stored in `docs/reviews/20261024/`.
+Actual public accepted/rejected OpenReview notes were retrieved through a
+hash-recorded research-data mirror after direct requests failed. They calibrate
+qualitative objections, not an acceptance probability. The confidential PVLDB
+CMT form is not publicly retrieved; the internal format follows the verified
+public PVLDB criteria and discloses that limit.
+
+The operating-range condition now has a separately frozen, completed and
+independently audited experiment: all nine MITDB/SWaT recordings
+(419,919--650,000 points), sixteen controlled n/density/K/M/L/tie regimes,
+matched public outputs and independently reconstructed prefix counts. MITDB
+workflow latency is 53.14 seconds for Klein versus 2.30 seconds for stream;
+SWaT is 4.34 versus 0.245 seconds. Matched ROC+PR workflow ratios are 29.50 and
+25.66. Whole-method gains persist while released/stream workflow intervals
+include one on both collections. At 90% positive density, dense/released is
+0.980 under the paired-geometric estimator, so support compression itself
+loses its runtime advantage. These retained limits distinguish a measured
+operating range from universal superiority. Synthetic cases are not counted
+as public datasets. Final independent review and the minimal Klein
+support-threshold ablation determine the final score band.

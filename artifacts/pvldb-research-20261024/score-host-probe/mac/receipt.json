@@ -1,0 +1,118 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-24T03:12:20.938907+00:00",
+  "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "numba": "0.59.1",
+    "pandas": "3.0.1",
+    "threadpoolctl": "3.6.0"
+  },
+  "threadpools_with_limit_one": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libomp",
+      "filepath": "/opt/anaconda3/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib",
+      "version": null
+    }
+  ],
+  "numpy_config": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/arm64-builds/include\n    lib directory: /opt/arm64-builds/lib\n    name: openblas64\n    openblas configuration: USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=\n      NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=3\n    pc file directory: /usr/local/lib/pkgconfig\n    version: 0.3.23.dev\n  lapack:\n    detection method: internal\n    found: true\n    include directory: unknown\n    lib directory: unknown\n    name: dep4335021056\n    openblas configuration: unknown\n    pc file directory: unknown\n    version: 1.26.4\nCompilers:\n  c:\n    args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: cc\n    linker: ld64\n    linker args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  c++:\n    args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: c++\n    linker: ld64\n    linker args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.0.8\nMachine Information:\n  build:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\n  host:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\nPython Information:\n  path: /private/var/folders/76/zy5ktkns50v6gt5g8r0sf6sc0000gn/T/cibw-run-q69bfk1p/cp312-macosx_arm64/build/venv/bin/python\n  version: '3.12'\nSIMD Extensions:\n  baseline:\n  - NEON\n  - NEON_FP16\n  - NEON_VFPV4\n  - ASIMD\n  found:\n  - ASIMDHP\n  not found:\n  - ASIMDFHM\n\n",
+  "source_sha256": {
+    "experiments/pvldb_score_probe.py": "0b7ab5216989fa03e336dc82718797003fe2bc398e2a49badcb83162df34821b",
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5"
+  },
+  "archive_sha256": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+  "arrays_sha256": "2fef454c4712615b5711143fa4af4beb9a442d20abace73349ad8553c2393ae5",
+  "scores_sha256": "3aa2c0a3c9946e6c33a5ded3978282584f8d33846f1a6cfefe9dd78b39fa0ef0",
+  "generation": {
+    "isolation_forest": {
+      "seconds": 0.08201504201861098,
+      "distinct": 1062,
+      "warnings": []
+    },
+    "local_outlier_factor": {
+      "seconds": 0.08453016699058935,
+      "distinct": 987,
+      "warnings": []
+    },
+    "knn_distance": {
+      "seconds": 0.06290975003503263,
+      "distinct": 561,
+      "warnings": []
+    },
+    "one_class_svm": {
+      "seconds": 0.037266625033225864,
+      "distinct": 1088,
+      "warnings": []
+    },
+    "pca_reconstruction": {
+      "seconds": 0.00316062499769032,
+      "distinct": 1088,
+      "warnings": []
+    },
+    "kmeans_distance": {
+      "seconds": 0.0062951670261099935,
+      "distinct": 1085,
+      "warnings": []
+    },
+    "histogram_density": {
+      "seconds": 0.0063013340113684535,
+      "distinct": 63,
+      "warnings": []
+    },
+    "shrinkage_mahalanobis": {
+      "seconds": 0.0025369590148329735,
+      "distinct": 1088,
+      "warnings": []
+    }
+  },
+  "exact_pr_values": [
+    0.041116898297166866,
+    0.12565708547664162,
+    0.25540378155515014,
+    0.30926486480353266,
+    0.18886946769721974,
+    0.1967066526350773,
+    0.006767927909855718,
+    0.25346724045703717
+  ],
+  "exact_winners": [
+    3
+  ],
+  "svm": {
+    "fit_status": 0,
+    "n_iter": 133,
+    "support_vectors": 104,
+    "parameters": {
+      "cache_size": 200,
+      "coef0": 0.0,
+      "degree": 3,
+      "gamma": 0.0625,
+      "kernel": "rbf",
+      "max_iter": -1,
+      "nu": 0.05,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    }
+  },
+  "scope": "New diagnostic repeat, not recovery of original Linux runner arrays. No causal attribution to a particular backend from host correlation alone."
+}

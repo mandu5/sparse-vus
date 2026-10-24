@@ -1,0 +1,33 @@
+name: PVLDB inspectable score diagnostic
+on:
+  push:
+    branches: [research/pvldb-20261024]
+permissions:
+  contents: read
+jobs:
+  probe:
+    if: contains(github.event.head_commit.message, '[pvldb-score-probe]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12.4"
+      - name: Install identical numerical package versions
+        run: >-
+          python -m pip install numpy==1.26.4 numba==0.59.1 pandas==3.0.1
+          scikit-learn==1.8.0 scipy==1.17.1 threadpoolctl==3.6.0
+      - name: Download fixed public raw input
+        run: curl -fL --retry 2 --max-time 300 https://www.thedatum.org/datasets/TSB-AD-U.zip -o "$RUNNER_TEMP/TSB-AD-U.zip"
+      - name: Generate inspectable diagnostic
+        run: >-
+          python experiments/pvldb_score_probe.py --archive "$RUNNER_TEMP/TSB-AD-U.zip"
+          --output "$RUNNER_TEMP/pvldb-score-probe"
+      - name: Preserve arrays and backend receipt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: pvldb-score-probe-linux
+          path: ${{ runner.temp }}/pvldb-score-probe
+          if-no-files-found: error

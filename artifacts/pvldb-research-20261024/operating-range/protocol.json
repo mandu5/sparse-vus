@@ -1,0 +1,440 @@
+{
+  "status": "FROZEN_BEFORE_FOLLOWUP_SCORES_AND_TIMINGS_AFTER_PRIMARY_AND_REVIEW",
+  "created_utc": "2026-10-24T01:50:58.744178+00:00",
+  "source_sha256": {
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "experiments/pvldb_operating_range.py": "7c11fd8ec2d5b118d80760ff477e49ee5e8219562b0df0950b08edeeb5b4379b",
+    "experiments/benchopt_vus_adapter.py": "42c67e3bd7633142a1002a86725143f82958e40fba2300749dbe71d34f062c4a",
+    ".cache/benchopt_vus/metrics.py": "298c746c84a28f9296b015bd70eac984d27be5452e3ca42c853de05328c194a8"
+  },
+  "archive_sha256": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+  "real_cases": [
+    {
+      "name": "170_MITDB_id_1_Medical_tr_17675_1st_17775",
+      "family": "MITDB",
+      "member": "TSB-AD-U/170_MITDB_id_1_Medical_tr_17675_1st_17775.csv",
+      "n": 500000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 22845,
+      "components": 49,
+      "raw_sha256": "a606f3cb9297bd82531b7509dfff6afc909c01cc04fb13a599a8a6455ae33ca7",
+      "observation_label_identity": "7e03eb098947c8b5c4ac77721de989880bb371b201540482d7adcf2c3b455809",
+      "previously_measured_by_name": true
+    },
+    {
+      "name": "171_MITDB_id_2_Medical_tr_50000_1st_88864",
+      "family": "MITDB",
+      "member": "TSB-AD-U/171_MITDB_id_2_Medical_tr_50000_1st_88864.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 19657,
+      "components": 42,
+      "raw_sha256": "2b72e2036d7205cf432b15c83eefe2b6f9cb7ba300e207eba65414c1b6b1efc6",
+      "observation_label_identity": "878d2eb3a2f0cea2b1631969e5378828e5611a52c6c4386d1ef5358141a8abd1",
+      "previously_measured_by_name": true
+    },
+    {
+      "name": "172_MITDB_id_3_Medical_tr_27274_1st_27374",
+      "family": "MITDB",
+      "member": "TSB-AD-U/172_MITDB_id_3_Medical_tr_27274_1st_27374.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 18109,
+      "components": 27,
+      "raw_sha256": "a89dde496d5e5ef40937f8f68ae515cf43be080ed6f76a8930b2bd9175cbf7fd",
+      "observation_label_identity": "e86f567526f783bd07fdd8e87859955d53acb606b008c68602511f8c4ef4c012",
+      "previously_measured_by_name": true
+    },
+    {
+      "name": "173_MITDB_id_4_Medical_tr_13620_1st_13720",
+      "family": "MITDB",
+      "member": "TSB-AD-U/173_MITDB_id_4_Medical_tr_13620_1st_13720.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 66682,
+      "components": 199,
+      "raw_sha256": "3d5bf0285e945e291cceb9ead0549682026b87708ef001a4f4529d8e6eacb404",
+      "observation_label_identity": "b3a1a303bc87a7ae9559d0c5f454d79786678099e4d5c2ed24811e78500fbb65",
+      "previously_measured_by_name": true
+    },
+    {
+      "name": "174_MITDB_id_5_Medical_tr_50000_1st_539948",
+      "family": "MITDB",
+      "member": "TSB-AD-U/174_MITDB_id_5_Medical_tr_50000_1st_539948.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 574,
+      "components": 2,
+      "raw_sha256": "ddbddf12bfa92594f5879627d7ea58156ff9e322227f626428fe75fc731ae23c",
+      "observation_label_identity": "ea7d11fd792c94266d4043f9930db4462b8fa946fc4c6283991702b956237d60",
+      "previously_measured_by_name": false
+    },
+    {
+      "name": "175_MITDB_id_6_Medical_tr_27274_1st_27374",
+      "family": "MITDB",
+      "member": "TSB-AD-U/175_MITDB_id_6_Medical_tr_27274_1st_27374.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 18109,
+      "components": 27,
+      "raw_sha256": "57344affaa9c266075a31880bb723588dc5b908facd61e7b764736b784729495",
+      "observation_label_identity": "e22af36a3dfaed0ab34f35816908cbeaf077258a9f87012304793e26902d8c5d",
+      "previously_measured_by_name": true
+    },
+    {
+      "name": "176_MITDB_id_7_Medical_tr_6232_1st_6332",
+      "family": "MITDB",
+      "member": "TSB-AD-U/176_MITDB_id_7_Medical_tr_6232_1st_6332.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 38272,
+      "components": 144,
+      "raw_sha256": "aaac15a1fb6df2c22de2c7baaa26e6f07c5120dd8940392969bddb495e032486",
+      "observation_label_identity": "9fc7936c70806d2d65192393065890030039b250d5aea48381d4b442ea1a9417",
+      "previously_measured_by_name": true
+    },
+    {
+      "name": "177_MITDB_id_8_Medical_tr_17675_1st_17775",
+      "family": "MITDB",
+      "member": "TSB-AD-U/177_MITDB_id_8_Medical_tr_17675_1st_17775.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 27124,
+      "components": 60,
+      "raw_sha256": "00997821c495ed97ed2ea79683df779ef949adff9e4f6c840885701813bcb592",
+      "observation_label_identity": "348dbe184e41cee5067420ccc23842ace0981cc4c965263181ca1b96e436b4f9",
+      "previously_measured_by_name": true
+    },
+    {
+      "name": "550_SWaT_id_1_Sensor_tr_43700_1st_43800",
+      "family": "SWaT",
+      "member": "TSB-AD-U/550_SWaT_id_1_Sensor_tr_43700_1st_43800.csv",
+      "n": 419919,
+      "models": 8,
+      "width": 30,
+      "positive_points": 50653,
+      "components": 27,
+      "raw_sha256": "5bfacad8722285d70fe3326c51f07002b86bf429f5bf8b5be9b2806debd66784",
+      "observation_label_identity": "e752e928255aaddb289cdceccc18587c04e9a80da483943fb5007f09c8d88ea9",
+      "previously_measured_by_name": true
+    }
+  ],
+  "controlled_cases": [
+    {
+      "n": 1000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_00"
+    },
+    {
+      "n": 10000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_01"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_02"
+    },
+    {
+      "n": 1000000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_03"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.001,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_04"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.1,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_05"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.5,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_06"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.9,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_07"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 10,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_08"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 100,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_09"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1000,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_10"
+    },
+    {
+      "n": 100000,
+      "models": 1,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_11"
+    },
+    {
+      "n": 100000,
+      "models": 32,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_12"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 0,
+      "levels": null,
+      "name": "controlled_13"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 300,
+      "levels": null,
+      "name": "controlled_14"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": 16,
+      "name": "controlled_15"
+    }
+  ],
+  "real_methods": [
+    "released",
+    "geometry",
+    "stream",
+    "dense",
+    "external",
+    "benchopt_pair",
+    "radix_pair"
+  ],
+  "controlled_methods": [
+    "released",
+    "stream",
+    "dense",
+    "external"
+  ],
+  "real_orders": [
+    [
+      "released",
+      "geometry",
+      "stream",
+      "dense",
+      "external",
+      "benchopt_pair",
+      "radix_pair"
+    ],
+    [
+      "geometry",
+      "stream",
+      "dense",
+      "external",
+      "benchopt_pair",
+      "radix_pair",
+      "released"
+    ],
+    [
+      "stream",
+      "dense",
+      "external",
+      "benchopt_pair",
+      "radix_pair",
+      "released",
+      "geometry"
+    ],
+    [
+      "dense",
+      "external",
+      "benchopt_pair",
+      "radix_pair",
+      "released",
+      "geometry",
+      "stream"
+    ],
+    [
+      "external",
+      "benchopt_pair",
+      "radix_pair",
+      "released",
+      "geometry",
+      "stream",
+      "dense"
+    ],
+    [
+      "benchopt_pair",
+      "radix_pair",
+      "released",
+      "geometry",
+      "stream",
+      "dense",
+      "external"
+    ],
+    [
+      "radix_pair",
+      "released",
+      "geometry",
+      "stream",
+      "dense",
+      "external",
+      "benchopt_pair"
+    ]
+  ],
+  "controlled_orders": [
+    [
+      "released",
+      "stream",
+      "dense",
+      "external"
+    ],
+    [
+      "stream",
+      "dense",
+      "external",
+      "released"
+    ],
+    [
+      "dense",
+      "external",
+      "released",
+      "stream"
+    ],
+    [
+      "external",
+      "released",
+      "stream",
+      "dense"
+    ]
+  ],
+  "workflow_orders": [
+    [
+      "released",
+      "geometry",
+      "stream",
+      "dense",
+      "external",
+      "benchopt_pair",
+      "radix_pair"
+    ],
+    [
+      "geometry",
+      "stream",
+      "dense",
+      "external",
+      "benchopt_pair",
+      "radix_pair",
+      "released"
+    ],
+    [
+      "stream",
+      "dense",
+      "external",
+      "benchopt_pair",
+      "radix_pair",
+      "released",
+      "geometry"
+    ]
+  ],
+  "selection_rule": "Every MITDB and SWaT series in the fixed public TSB-AD-U archive. No outcome-based exclusion. Controlled one-factor grids retain their common anchor once.",
+  "detectors": [
+    "isolation_forest",
+    "local_outlier_factor",
+    "knn_distance",
+    "one_class_svm",
+    "pca_reconstruction",
+    "kmeans_distance",
+    "histogram_density",
+    "shrinkage_mahalanobis"
+  ],
+  "model_protocol": "8 distinct unsupervised CPU families; trailing16 windows; edge-repeat initial values; fit2048 evenly spaced unlabeled windows from complete series; fixed seed20261024; full float64 scores. Exact parameters bound by driver source.",
+  "seed": 20261024,
+  "parity_atol": 1e-11,
+  "winner_tie_atol": 1e-10,
+  "timing": "Serial single numerical thread; tiny warm-up equally; complete public calls including winner selection. Seven/ four cyclic orders balance positions in real/controlled cases. Three additional directly timed complete collection passes use the first three orders and are not fully position-balanced.",
+  "inference": "Follow-up conditional evidence; per-case trial uncertainty, not nine new independent populations. MITDB has 8 series and SWaT one. Raw reuse and equal-label dependence disclosed. Controlled cases are not real data and do not imply detector accuracy.",
+  "diagnostics": "After all clocks, profile actual visited and active positions across widths for every stored model. Check values against timed exact records.",
+  "failure_policy": "Retain all runtime losses. Nonfinite data, missing/duplicate records or exact PR/ROC discrepancy above tolerance halt; no replacement."
+}

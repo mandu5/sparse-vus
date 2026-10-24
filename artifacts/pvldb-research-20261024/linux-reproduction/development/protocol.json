@@ -1,0 +1,397 @@
+{
+  "kind": "development_on_previously_measured_raw_recordings_and_scores",
+  "primary_width": 30,
+  "repetitions": 6,
+  "methods": [
+    "released",
+    "geometry",
+    "stream",
+    "dense",
+    "external",
+    "certificate_fallback"
+  ],
+  "cases": [
+    {
+      "series": "001_NAB_id_1_Facility_tr_1007_1st_2014",
+      "family": "NAB",
+      "n": 4031,
+      "max_buffer": 30,
+      "label_sha256": "e3e67660bbaa840ef24e70b38f0b384d41c7e2bce71bf0edbab65565a40a7584",
+      "score_sha256": {
+        "TimeMoE-200M_64": "a048436d489bbf8b944a01f44081565196a8c38199006137dada3fbe204b2aa4",
+        "bolt_base_64": "9efd1b159e5ef0ff98d2e8a6239a1f57f4b4536c7d6271a333584b6383045229",
+        "timesfm-1.0-200m_64": "5dc3d6f72f70e10af502f1ae1f51cbebe2659bd2d3b59c75744a4547d2771d67"
+      },
+      "file": "0000.npz",
+      "bytes": 101779,
+      "npz_sha256": "d9eae0076f6759b8a87fbb7a67d4d44503477d0b182a8a1cae6a39ff0aebfd28",
+      "arrays": {
+        "labels": {
+          "dtype": "|i1",
+          "shape": [
+            4031
+          ],
+          "sha256": "66e789fb36c6718c5d9179fad72e0740b243981d01ac0412b82860be7c55e3b9"
+        },
+        "score_0": {
+          "dtype": "<f8",
+          "shape": [
+            4031
+          ],
+          "sha256": "50c7320752e6e06b3d01a36f9361e4090ae1352f51af87f18a85fa23ea2e6191"
+        },
+        "score_1": {
+          "dtype": "<f8",
+          "shape": [
+            4031
+          ],
+          "sha256": "cdd8d743ace2fffe1268171f78a184d49180a4ce9c6e0fe7edbe6ccfbb1df687"
+        },
+        "score_2": {
+          "dtype": "<f8",
+          "shape": [
+            4031
+          ],
+          "sha256": "e60237ed53d8bed62e23a3ea0c070a081dcf23abb74cd1901254943cccb7ab26"
+        }
+      },
+      "decoded_label_array": {
+        "dtype": "<i8",
+        "shape": [
+          4031
+        ],
+        "sha256": "16e633bef2f431fc5d2cf4f0a951bc0bc7433d50757bf081b0789feb7ddf6b36"
+      },
+      "label_member": "TSB-AD-U/001_NAB_id_1_Facility_tr_1007_1st_2014.csv"
+    },
+    {
+      "series": "002_NAB_id_2_WebService_tr_1500_1st_4106",
+      "family": "NAB",
+      "n": 6000,
+      "max_buffer": 30,
+      "label_sha256": "c7b3f7899e4d740bf3a8d726c1f776842e0ca9b83a41da1fb49cb2cb383f23d2",
+      "score_sha256": {
+        "TimeMoE-200M_64": "b3a850a4fbac8947794d57467c7351b21af41e2feb6960a3fc8e8a928ae97f0c",
+        "bolt_base_64": "6d47fa18e4ff6542e00aacd5273fb39fcfa8fc5e27a981b6605899fad2936c75",
+        "timesfm-1.0-200m_64": "7b31f15f7525848f9f658424196e6a0007a2a7356b9907fbf1be90b225142e40"
+      },
+      "file": "0001.npz",
+      "bytes": 151004,
+      "npz_sha256": "69b506220e765ac03948c013493589f211954cc036f620ed39d803525584527a",
+      "arrays": {
+        "labels": {
+          "dtype": "|i1",
+          "shape": [
+            6000
+          ],
+          "sha256": "68e12df4967e0fc72129cbe575c1dda7d2abea360af5ba1d9ec3ba573cd3d704"
+        },
+        "score_0": {
+          "dtype": "<f8",
+          "shape": [
+            6000
+          ],
+          "sha256": "427f90f8330ab34b3699fc98558a362454577120e4b804852943bbdcbd524cb1"
+        },
+        "score_1": {
+          "dtype": "<f8",
+          "shape": [
+            6000
+          ],
+          "sha256": "432c5680be9359bd227986658b4aa6c4c42be268eeb4bae6e7071b3edc6991bd"
+        },
+        "score_2": {
+          "dtype": "<f8",
+          "shape": [
+            6000
+          ],
+          "sha256": "5e33d100c64317d1ea2f53334563ee8c90689952abdf7d8e0fa8fe31081eca59"
+        }
+      },
+      "decoded_label_array": {
+        "dtype": "<i8",
+        "shape": [
+          6000
+        ],
+        "sha256": "fea614530532a13fc7dd971bf24aa65feb5385dc42b186d7fe551a682f7bd979"
+      },
+      "label_member": "TSB-AD-U/002_NAB_id_2_WebService_tr_1500_1st_4106.csv"
+    },
+    {
+      "series": "531_SMAP_id_1_Sensor_tr_1811_1st_4510",
+      "family": "SMAP",
+      "n": 7244,
+      "max_buffer": 30,
+      "label_sha256": "b54b913b838932f033c0ab9ad00b6c4883707968bb9727d6f5305614f04d5182",
+      "score_sha256": {
+        "TimeMoE-200M_64": "3fcfdd08eb2e2f0238fcac15be6ced967afe188c1aca0331eabdf0981a3f4082",
+        "bolt_base_64": "50e462b9b79e706afbedf5d74cd6c9b0d60d44f20ef5dd1add6bf7e451b1f7c7",
+        "timesfm-1.0-200m_64": "5dbd63c468448c9b9b46507e8ebac3f7ab5586d5718e28f8434018686e94f18c"
+      },
+      "file": "0212.npz",
+      "bytes": 182104,
+      "npz_sha256": "b7514edf0d6037d9b281e59a279466e5d8502168452f5c238f345fb094b5bee5",
+      "arrays": {
+        "labels": {
+          "dtype": "|i1",
+          "shape": [
+            7244
+          ],
+          "sha256": "6e4a6f275750307e8f0ed3f967e3cd53fe495b7f4575094e10165081b4df6fbd"
+        },
+        "score_0": {
+          "dtype": "<f8",
+          "shape": [
+            7244
+          ],
+          "sha256": "667b9b9e6e87e389a9d78af0f39ab185c052ed0b6d8aa0a6a2080c640b705319"
+        },
+        "score_1": {
+          "dtype": "<f8",
+          "shape": [
+            7244
+          ],
+          "sha256": "4d1102279e742120ef05c03bd85cf9ee05d1a4d50f2d0bbf94d7e151996678ef"
+        },
+        "score_2": {
+          "dtype": "<f8",
+          "shape": [
+            7244
+          ],
+          "sha256": "846759540d6f069bf1cc268641dc2cd10f4bf04a62f4ad2a27babeda600db584"
+        }
+      },
+      "decoded_label_array": {
+        "dtype": "<i8",
+        "shape": [
+          7244
+        ],
+        "sha256": "1243e37276288a9060555c7f458abdd6270d4c34f399263196793093ead536ca"
+      },
+      "label_member": "TSB-AD-U/531_SMAP_id_1_Sensor_tr_1811_1st_4510.csv"
+    },
+    {
+      "series": "532_SMAP_id_2_Sensor_tr_2075_1st_5550",
+      "family": "SMAP",
+      "n": 8302,
+      "max_buffer": 30,
+      "label_sha256": "468136b464981a50e9bf93655cf930854d5c6948078de219cff274407169aa8e",
+      "score_sha256": {
+        "TimeMoE-200M_64": "54029f2bcca1434b3c0c71d1ba637080e6333665abc146395769752422950194",
+        "bolt_base_64": "c25660144db27a336d3aebb6c6c2c782b030f58e97d48b870773f27e14a57298",
+        "timesfm-1.0-200m_64": "89e229a43fc440e74c5b1755887ff80beb9c1dfefa0f4876f4795e950ac84227"
+      },
+      "file": "0213.npz",
+      "bytes": 208554,
+      "npz_sha256": "df7dbdf3273574b47ecb6535f524e84d1387aadbaecfaff5678c58c49563eb71",
+      "arrays": {
+        "labels": {
+          "dtype": "|i1",
+          "shape": [
+            8302
+          ],
+          "sha256": "75a5e37272278a35de91c6f1a5f967056a4450e565072c25328537004d28b2bf"
+        },
+        "score_0": {
+          "dtype": "<f8",
+          "shape": [
+            8302
+          ],
+          "sha256": "8b416ff641598434721979223890c60463caed132617c4b70c4338de4e33dd49"
+        },
+        "score_1": {
+          "dtype": "<f8",
+          "shape": [
+            8302
+          ],
+          "sha256": "e172790be8977864b6031f59e057875ad3bbfbdbcefca9bac67508c1669b0e63"
+        },
+        "score_2": {
+          "dtype": "<f8",
+          "shape": [
+            8302
+          ],
+          "sha256": "4547024cd4de959f53b8c0bd495eae4d80cb1ef1449ef3f14d48248589e22c04"
+        }
+      },
+      "decoded_label_array": {
+        "dtype": "<i8",
+        "shape": [
+          8302
+        ],
+        "sha256": "5c298f1e781c5dd773c5951f30b682f253adcd40259e23129d500fb58757fea3"
+      },
+      "label_member": "TSB-AD-U/532_SMAP_id_2_Sensor_tr_2075_1st_5550.csv"
+    },
+    {
+      "series": "178_SMD_id_1_Facility_tr_6000_1st_10609",
+      "family": "SMD",
+      "n": 24000,
+      "max_buffer": 30,
+      "label_sha256": "cd7bb2f50e3c4a1199a4c0f655d43dc4459cddbfd0b9c8f8fe2735f2c63b6f40",
+      "score_sha256": {
+        "TimeMoE-200M_64": "225647242c0f48e9da49f46f9e263169e77cab22bd89e0678b0400b7e2ddf6b4",
+        "bolt_base_64": "bd2754293867089316809619e23fa938fb38476ed8007e8015ec3efab13e336a",
+        "timesfm-1.0-200m_64": "db7f311c3f37d487c9a5e22306ab831d357799ed14874c90cc7a98db7d3de14e"
+      },
+      "file": "0055.npz",
+      "bytes": 601004,
+      "npz_sha256": "56b56b496905c32bf8b5a89aa31dda6ed8fad582d30e53bc9d4010e45404e631",
+      "arrays": {
+        "labels": {
+          "dtype": "|i1",
+          "shape": [
+            24000
+          ],
+          "sha256": "730d9e6d0ef9b971c2b44993b4f0021d59068ce5d82b9cd9ccdd105ae29517bf"
+        },
+        "score_0": {
+          "dtype": "<f8",
+          "shape": [
+            24000
+          ],
+          "sha256": "23d6130acbb6c866882f094e9b77ab3ea4b5f623cbb292e851eeca0269be8e87"
+        },
+        "score_1": {
+          "dtype": "<f8",
+          "shape": [
+            24000
+          ],
+          "sha256": "b71d18c5cc14c16ba03a186164cb5451a6df0ea90b9037d82f6ccb4efcbddf13"
+        },
+        "score_2": {
+          "dtype": "<f8",
+          "shape": [
+            24000
+          ],
+          "sha256": "6cb6a3aefcc4237852e001eea9c698fff7fc3a59db4e5a14b2d79a39197ee9e3"
+        }
+      },
+      "decoded_label_array": {
+        "dtype": "<i8",
+        "shape": [
+          24000
+        ],
+        "sha256": "96dc6d01f13d2867a90e5d61f2ba38e57611a9d864137219d78c0af0e0c6561c"
+      },
+      "label_member": "TSB-AD-U/178_SMD_id_1_Facility_tr_6000_1st_10609.csv"
+    },
+    {
+      "series": "179_SMD_id_2_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "n": 23703,
+      "max_buffer": 30,
+      "label_sha256": "1226486d247888bc5ab0d08d0408d13bd9f78e848884c6d541c76c98c132f2e8",
+      "score_sha256": {
+        "TimeMoE-200M_64": "7468054e2003ce482094aae30730f00eb71d5c5d739ca48c8f71bdb3201d719f",
+        "bolt_base_64": "0e33e1afc67e512c473a88dcc04bd11dde9d0158c2b4bfaf093bab65d5726fa4",
+        "timesfm-1.0-200m_64": "58598b94aa12e952dd17e3b9e313b41e8b1d2814e05bbe51150554a264c1f6c6"
+      },
+      "file": "0056.npz",
+      "bytes": 593579,
+      "npz_sha256": "94189d2bdb23f19cadc6d9d552637e1f406112947a780458ccda9d8b4354e697",
+      "arrays": {
+        "labels": {
+          "dtype": "|i1",
+          "shape": [
+            23703
+          ],
+          "sha256": "0ea887eec7048183c8b012b218ac02793e24f4f91d7742c48c3e6f54c0be9aef"
+        },
+        "score_0": {
+          "dtype": "<f8",
+          "shape": [
+            23703
+          ],
+          "sha256": "4f9de87ea39ee1ff11b5a8546250f324f52f02df1da7c50d9480c0333c285561"
+        },
+        "score_1": {
+          "dtype": "<f8",
+          "shape": [
+            23703
+          ],
+          "sha256": "f91c114aeccf160a5f5c09f98846889a70c34bdf9074ab19416c93cd598d124b"
+        },
+        "score_2": {
+          "dtype": "<f8",
+          "shape": [
+            23703
+          ],
+          "sha256": "c8378b77762f34fc0beffe52f993d1f1af8255079b1b426b316785892f4ad016"
+        }
+      },
+      "decoded_label_array": {
+        "dtype": "<i8",
+        "shape": [
+          23703
+        ],
+        "sha256": "39e12393915bb2c5467016a4e2565e1a13724c71b45eaacf33f247a822f12e8c"
+      },
+      "label_member": "TSB-AD-U/179_SMD_id_2_Facility_tr_5925_1st_17580.csv"
+    }
+  ],
+  "source_sha256": {
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/sampling_bounds.py": "ec1511ff448373096bc3e6d253e3e748a8182bc04c4d20e2d5ca5391a8adb790",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "experiments/pvldb_development.py": "9a93bb42b1d6f4cd6c318f6955eed1c1e6b278d33636b6f197c0520c8e823e87",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "orders": [
+    [
+      "released",
+      "geometry",
+      "stream",
+      "dense",
+      "external",
+      "certificate_fallback"
+    ],
+    [
+      "geometry",
+      "stream",
+      "dense",
+      "external",
+      "certificate_fallback",
+      "released"
+    ],
+    [
+      "stream",
+      "dense",
+      "external",
+      "certificate_fallback",
+      "released",
+      "geometry"
+    ],
+    [
+      "dense",
+      "external",
+      "certificate_fallback",
+      "released",
+      "geometry",
+      "stream"
+    ],
+    [
+      "external",
+      "certificate_fallback",
+      "released",
+      "geometry",
+      "stream",
+      "dense"
+    ],
+    [
+      "certificate_fallback",
+      "released",
+      "geometry",
+      "stream",
+      "dense",
+      "external"
+    ]
+  ],
+  "timing": "all preparation and exact fallback; imports/JIT excluded; one CPU thread",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "numpy": "1.26.4"
+}

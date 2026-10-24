@@ -1,0 +1,7 @@
+{
+  "protocol_sha256": "ccae7854df988dca14db843dc8dbf6f640c2c578789a8c88ca7a7f8ecc66892e",
+  "inputs_sha256": "fc36fee841ca8a228fe2fd2d6101733d071a4fca911932b18bbf37e70f47a0c0",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "utc": "2026-10-24T01:54:39.538131+00:00"
+}

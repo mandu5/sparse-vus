@@ -1,0 +1,90 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrlll}\toprule
+Collection & Cases & Released / stream & Dense / stream & Klein exact / stream\\\midrule
+NAB & 20 & 1.496 [1.428, 1.566] & 3.543 [3.338, 3.713] & 30.513 [27.399, 33.652]\\
+SMAP & 17 & 1.271 [1.242, 1.302] & 3.693 [3.196, 4.191] & 25.772 [22.941, 28.940]\\
+SMD & 36 & 1.207 [1.193, 1.221] & 3.956 [3.736, 4.125] & 25.172 [23.475, 26.695]\\
+\bottomrule\end{tabular}
+\caption{Primary complete-call geometric speedups at width 30. Brackets give
+paired-series 95\% bounds adjusted across three collections for each comparator.
+All include public validation, preparation, allocation and eight-model winner
+selection. Hardware is identified by the selected evidence receipt; per-series intervals are
+conditional on the fixed panel and supplemented with label-block sensitivity.}
+\label{tab:primary-new}\end{table*}
+\begin{table}[t]\centering\small
+\begin{tabular}{lrrrr}\toprule
+Collection & Stream & Released & Dense & Klein\\\midrule
+NAB & 0.0470 & 0.0626 & 0.1565 & 1.0828\\
+SMAP & 0.0528 & 0.0647 & 0.1756 & 1.1699\\
+SMD & 0.2824 & 0.3302 & 1.0328 & 6.3759\\
+\bottomrule\end{tabular}
+\caption{Directly timed primary collection workflow medians, seconds. Each pass
+reads all score files and writes/closes its selected-model output. Detector
+fitting, cold storage and JIT compilation are excluded.}
+\label{tab:workflow-new}\end{table}
+\begin{table*}[t]\centering\small
+\begin{tabular}{llllr}\toprule
+Collection & Paired case Benchopt / radix & Benchopt workflow (s) & Radix workflow (s) & Workflow ratio\\\midrule
+NAB & 27.284 [25.680, 28.780] & 1.9961 & 0.0788 & 25.32\\
+SMAP & 34.567 [31.285, 38.479] & 2.2664 & 0.0707 & 32.06\\
+SMD & 44.160 [41.109, 47.075] & 14.5331 & 0.3551 & 40.92\\
+\bottomrule\end{tabular}
+\caption{Supplementary matched-output comparison: both methods return exact
+numerical ROC and PR. Width 30, unchanged Benchopt source, same 73 series and
+scores. Case bounds use the same three-collection adjustment. This gain belongs
+to the complete sparse evaluator, not solely to the new PR batch loop.}
+\label{tab:supp-new}\end{table*}
+\begin{table*}[t]\centering\small
+\begin{tabular}{lrrrrrr}\toprule
+& \multicolumn{3}{c}{Klein, 250 thresholds} & \multicolumn{2}{c}{Klein, 1,000 thresholds} &\\
+Collection & Changed sets & Regret $\ge0.01$ & Max regret & Changed sets & Max regret & 250 / exact workflow\\\midrule
+NAB & 0 & 0 & 0.00000 & 0 & 0.00000 & 11.25\\
+SMAP & 6 & 3 & 0.05835 & 1 & 0.00345 & 9.68\\
+SMD & 8 & 1 & 0.05431 & 2 & 0.00283 & 7.27\\
+\bottomrule\end{tabular}
+\caption{Approximation accuracy--cost comparison. Minimum and maximum regret
+threshold counts coincide in this panel; both are retained in the artifact.
+The final column compares directly timed PR-only workflows. Zero losses,
+including all NAB selections and every 1,000-threshold loss below 0.01, are
+retained. Values describe these fixed detector-score inputs, not detector quality.}
+\label{tab:accuracy-new}\end{table*}
+\begin{table}[t]\centering\small
+\begin{tabular}{lrrrr}\toprule
+Positive fraction & Released & Geometry & Stream & Dense\\\midrule
+0.01 & 181.0 & 183.2 & 198.4 & 217.6\\
+0.50 & 175.2 & 188.1 & 225.0 & 210.6\\
+\bottomrule\end{tabular}
+\caption{Median OS lifetime peak RSS (MiB), three fresh processes per method,
+$n=500{,}000$, $M=8$, one centered anomaly interval, width 30. These synthetic
+resource cases include interpreter, libraries, inputs and warm-up; they are not
+measurements of auxiliary space or additional real datasets.}
+\label{tab:memory-new}\end{table}
+\begin{table*}[t]\centering\small
+\begin{tabular}{lrrrrl r}\toprule
+Collection & Series & Stream (s) & Klein (s) & Released (s) & Paired geometric Klein/stream [95\% CI] & Matched pair ratio\\\midrule
+MITDB & 8 & 2.300 & 53.141 & 2.806 & 22.10 [19.00, 25.00] & 29.50\\
+SWaT & 1 & 0.245 & 4.339 & 0.266 & 17.62 [16.37, 18.90] & 25.66\\
+\bottomrule\end{tabular}
+\caption{Separately frozen long-recording follow-up, $M=8$, width 30, Apple M1 Pro.
+Times are medians of three complete collection passes. PR intervals resample
+paired timing trials on fixed inputs and are unadjusted; three workflow orders
+are not fully position-balanced. The matched-pair column is the ratio of median
+Benchopt and radix workflow times for ROC+PR. SWaT is one recording, not an estimate
+over a population of independent series.}
+\label{tab:long-new}\end{table*}
+\begin{table*}[t]\centering\small
+\begin{tabular}{llllr}\toprule
+Collection & Klein / patched Klein & Patched Klein / released & Patched Klein / stream & Workflow patched/stream\\\midrule
+NAB & 1.654 [1.496, 1.842] & 12.052 [10.325, 13.812] & 17.956 [14.605, 21.626] & 11.96\\
+SMAP & 2.274 [2.149, 2.401] & 9.067 [8.179, 10.052] & 11.534 [10.190, 12.994] & 10.14\\
+SMD & 2.968 [2.842, 3.089] & 6.969 [6.586, 7.270] & 8.396 [7.891, 8.794] & 7.46\\
+\bottomrule\end{tabular}
+\caption{Author-created minimal ablation: replace only Klein's threshold list
+with all distinct maximum-support scores; retain global counts and other code.
+Eight balanced case orders on the original 73 series, width 30, Apple M1 Pro;
+case intervals are 95\% bounds adjusted across three collections per comparison.
+The final column uses three not-fully-balanced workflow passes. Remaining
+gains include implementation differences; the compiled dense control separately
+isolates support compression. The patched code is not an upstream release.}
+\label{tab:klein-control}\end{table*}

@@ -1,5 +1,48 @@
 # Sparse VUS
 
+## Exact evaluation with full-precision inputs (24 October 2026)
+
+[Exact VUS Evaluation by Support Events and Shared Interval Geometry](paper/sparse_vus_pvldb20261024.pdf)
+develops the complete support-event evaluator, with complete global ties,
+the dynamic ROC predecessor correction, and shared-label batch ablations.
+This PVLDB-oriented manuscript is distinct from the narrower sampling paper
+below; the public software precursor is disclosed in both the paper and results.
+
+The frozen primary panel contains **73 complete real series from NAB, SMAP and
+SMD**, with **584 unrounded score vectors from eight fixed detector procedures**.
+At width 30, complete stored-score selection workflows are **22.16–23.03× faster
+than the unchanged exact PR comparator on Apple M1 Pro** and **16.17–20.28× on
+AMD EPYC 7763**. All exact evaluators select identical numerical winner sets
+within each host's fixed inputs. The smaller increment over released Sparse VUS
+is reported separately: case geometric ratios **1.21–1.50×** and **1.34–1.89×**,
+respectively. Matched compiled controls isolate the support-compression effect.
+
+The fresh Linux execution downloads the archive and comparator sources,
+generates new scores, runs both experiments and passes both independent record
+audits. Cross-host scores differ, so timing intervals and sampling outcomes are
+reported separately. These measurements concern warm stored-profile evaluation,
+including validation, preparation and file-to-decision workflows; they do not
+measure detector training or establish detection accuracy.
+
+A separately frozen follow-up includes all eight MITDB recordings and the one
+SWaT recording in the same public archive, with lengths **419,919–650,000**.
+MITDB's complete workflow takes **2.30 seconds versus Klein's 53.14 seconds**;
+SWaT takes **0.245 versus 4.34 seconds**. Controlled cases expose the boundary:
+at 90% positive density, support compression alone ceases to improve runtime.
+The small extra sharing gain is uncertain in the long-recording workflows.
+
+A further author-created control changes only Klein's threshold-list expression
+to use distinct support scores. That patch accelerates Klein by **1.65–2.97×**,
+but the independent-call sparse evaluator remains **6.97–12.05× faster** on the
+three original collections. Those residual gains combine geometry/ranking and
+implementation effects; the separate compiled dense control isolates support
+compression. Complete provenance and independent audits accompany both studies.
+
+[Research case and venue](docs/pvldb_research_case_20261024.md) ·
+[One-command reproduction](docs/REPRODUCE_PVLDB_20261024.md) ·
+[Fresh Linux execution](https://github.com/mandu5/sparse-vus/actions/runs/40049786600) ·
+[Raw evidence](artifacts/pvldb-research-20261024/)
+
 ## Threshold sampling and certified rankings (23 October 2026)
 
 [When Threshold Sampling Reverses VUS Rankings (PDF)](paper/certified_sampling.pdf)

@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE",
+  "started_utc": "2026-10-24T01:27:03.086150+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "processor": "AMD EPYC 7763 64-Core Processor",
+  "logical_cpus": 4,
+  "python": "3.12.4 (main, Jul 15 2024, 21:50:43) [GCC 13.2.0]",
+  "packages": {
+    "numpy": "1.26.4",
+    "numba": "0.59.1",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1"
+  },
+  "original_protocol_sha256": "307e0498f441901dbe0d686064ffd8f9ff4c683e5e5f1197a2297921561a3579",
+  "replica_protocol_sha256": "355073a5e6ab3ebc0537b521da25cecfae62b7b5dd60c531be42dd196ddee024",
+  "host_scope": "One serial process on a public hosted x86 runner; shared host load is not controlled. Compilation excluded equally; no GPU or paid API.",
+  "fresh_scores": true,
+  "claim": "Same frozen data/model/method design executed afresh; generated scores can have platform-dependent floating-point differences.",
+  "supplement_protocol_sha256": "8478f746a827ad45291c2fb6c99e891238d1a71b1b8eeeab132b404463b8eb34",
+  "supplement_report_sha256": "06e349b6a94260f3ea2bbf882051169977c70742656c37d4e9660c037bb93f3d",
+  "completed_utc": "2026-10-24T01:53:14.393157+00:00",
+  "primary_report_sha256": "b76b2ebd26eb5d03caecf3a1831547395185d290dcf88cd4a562dfaa79c41691",
+  "primary_audit_sha256": "8ff422267f2ba03bc6e0f2a2e57371149d3ed3119ca147d917cafad546a1c41f"
+}

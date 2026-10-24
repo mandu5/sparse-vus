@@ -1,0 +1,27 @@
+{
+  "checked_date": "2026-10-24",
+  "source_commit": "39c95f5c6fcbe652a83be24e4eff8f2134cd3fbc",
+  "files": [
+    {
+      "file": "acmart.cls",
+      "upstream_url": "https://raw.githubusercontent.com/vldbproceedings/VLDB-Template/39c95f5c6fcbe652a83be24e4eff8f2134cd3fbc/acmart.cls",
+      "upstream_sha256": "2f949e6e3f2a79f2cdc218b9dcdbaa7dd451adb4ee0be1af6dc7ebe00b318ea7",
+      "local_sha256": "2f949e6e3f2a79f2cdc218b9dcdbaa7dd451adb4ee0be1af6dc7ebe00b318ea7",
+      "identical": true
+    },
+    {
+      "file": "pvldb.sty",
+      "upstream_url": "https://raw.githubusercontent.com/vldbproceedings/VLDB-Template/39c95f5c6fcbe652a83be24e4eff8f2134cd3fbc/pvldb.sty",
+      "upstream_sha256": "52ad3948f3231b31d2ac90f470c1759e7f96add7b577ec4e267dfbdc87fc4eb2",
+      "local_sha256": "52ad3948f3231b31d2ac90f470c1759e7f96add7b577ec4e267dfbdc87fc4eb2",
+      "identical": true
+    },
+    {
+      "file": "ACM-Reference-Format.bst",
+      "upstream_url": "https://raw.githubusercontent.com/vldbproceedings/VLDB-Template/39c95f5c6fcbe652a83be24e4eff8f2134cd3fbc/ACM-Reference-Format.bst",
+      "upstream_sha256": "0590db3b8d255a3af91982ab710f3ace5fcaa52434020c9af8a4f141b00b68f3",
+      "local_sha256": "0590db3b8d255a3af91982ab710f3ace5fcaa52434020c9af8a4f141b00b68f3",
+      "identical": true
+    }
+  ]
+}

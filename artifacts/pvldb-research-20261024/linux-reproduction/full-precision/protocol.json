@@ -1,0 +1,938 @@
+{
+  "status": "FROZEN_BEFORE_NEW_SCORE_OR_METRIC_OUTCOMES",
+  "created_utc": "2026-10-24T01:27:03.035531+00:00",
+  "source_commit_before_additions": "92319eafd0f937a152edf3a5c7e4355b2114acce",
+  "archive_url": "https://www.thedatum.org/datasets/TSB-AD-U.zip",
+  "archive_sha256": "0c47020d3423723c70773736dbd800369f2b487328becbf339450d1ae5020961",
+  "source_sha256": {
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b"
+  },
+  "cases": [
+    {
+      "series": "003_NAB_id_3_WebService_tr_1362_1st_1462",
+      "family": "NAB",
+      "member": "TSB-AD-U/003_NAB_id_3_WebService_tr_1362_1st_1462.csv",
+      "n": 15852,
+      "positive_points": 1523,
+      "raw_sha256": "39746eb9f69b47e974f10009ddc12ec9e709a02f73064bf102b381b416159d9c",
+      "observation_label_identity": "ed9c7c37918ccf8cd52ceeacd566db97332811e089d9353755078953e61ef342",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "004_NAB_id_4_Facility_tr_1007_1st_1437",
+      "family": "NAB",
+      "member": "TSB-AD-U/004_NAB_id_4_Facility_tr_1007_1st_1437.csv",
+      "n": 4031,
+      "positive_points": 402,
+      "raw_sha256": "4359addc7a13e784cedbc116a8243ba3efc65a3e53e25ea7e6a2a358de422066",
+      "observation_label_identity": "fd4cb0ce67529a76ac687c455f67cefba1ddd0a14e3d90cf6c4435e6d8f83f3c",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "005_NAB_id_5_Traffic_tr_594_1st_1645",
+      "family": "NAB",
+      "member": "TSB-AD-U/005_NAB_id_5_Traffic_tr_594_1st_1645.csv",
+      "n": 2379,
+      "positive_points": 238,
+      "raw_sha256": "e148525c109bdb5f21e9cb2063d95774dde8276a5aca321ebf0c68ea10e7a8a5",
+      "observation_label_identity": "b727ddcf9fa3c926fca3debcb6b48cdacdd5fbcd89b1312b6aba5c4b03a75718",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "006_NAB_id_6_Traffic_tr_2579_1st_5839",
+      "family": "NAB",
+      "member": "TSB-AD-U/006_NAB_id_6_Traffic_tr_2579_1st_5839.csv",
+      "n": 10319,
+      "positive_points": 1030,
+      "raw_sha256": "00438b9c44bef619489cbc26f8ecb5cf8e4a8e0be242c74a3f8d71b913cddfc6",
+      "observation_label_identity": "7a1bf2f6f0f006e1ee0844c0eef0cc864a57c17762a426b943ed4b7d35b09e45",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "007_NAB_id_7_Traffic_tr_624_1st_2087",
+      "family": "NAB",
+      "member": "TSB-AD-U/007_NAB_id_7_Traffic_tr_624_1st_2087.csv",
+      "n": 2499,
+      "positive_points": 248,
+      "raw_sha256": "f17c9058e720edb71f286c1beae9d005c9fe1116564867cc8ee3038757b72120",
+      "observation_label_identity": "30e28d036c8d756d3b6e7c00bda927b95af62666d5251223f919d73c3af0b705",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "009_NAB_id_9_Traffic_tr_500_1st_438",
+      "family": "NAB",
+      "member": "TSB-AD-U/009_NAB_id_9_Traffic_tr_500_1st_438.csv",
+      "n": 2161,
+      "positive_points": 216,
+      "raw_sha256": "65730f8beb03865bc0a69ff4209649fe5387b3f057a87f09a70379969c930ebe",
+      "observation_label_identity": "41f6314ea0a5569b69cb90ff9b37f054493ce3786b98b8c818c77f45243dc658",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+      "family": "NAB",
+      "member": "TSB-AD-U/010_NAB_id_10_WebService_tr_500_1st_271.csv",
+      "n": 1000,
+      "positive_points": 148,
+      "raw_sha256": "af6be1972ec7cf6b33d267f7f96e38e9781fce87917c461870a1ff83dcd12c3f",
+      "observation_label_identity": "110b7d661e0488eedd12702c09f2e947a56a1e6cffdf66f5a300ee0178d83982",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "011_NAB_id_11_Facility_tr_1007_1st_1526",
+      "family": "NAB",
+      "member": "TSB-AD-U/011_NAB_id_11_Facility_tr_1007_1st_1526.csv",
+      "n": 4031,
+      "positive_points": 474,
+      "raw_sha256": "6c0b9d9ca9196d4c392b74bd46eb20166b9c321fd0e2689733c28be6d21fc595",
+      "observation_label_identity": "7f0b00180b0036946e16bdb32e87c75dfdd971c905dff4a9ad8333e38c8a6a5e",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "013_NAB_id_13_Traffic_tr_623_1st_2084",
+      "family": "NAB",
+      "member": "TSB-AD-U/013_NAB_id_13_Traffic_tr_623_1st_2084.csv",
+      "n": 2494,
+      "positive_points": 248,
+      "raw_sha256": "92d55d1a37735b363e7d4dd37c00c5d36723db77d0f665ae99931078b4c45948",
+      "observation_label_identity": "b89dac6378e21818044ff1e467519ac0acd82c3019a18ab40e054bf0352b1a84",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "014_NAB_id_14_WebService_tr_500_1st_1045",
+      "family": "NAB",
+      "member": "TSB-AD-U/014_NAB_id_14_WebService_tr_500_1st_1045.csv",
+      "n": 1537,
+      "positive_points": 152,
+      "raw_sha256": "f60ad21655a727f5f20477d0c92bdd281c810a6ffdf3d872e8690fe00887844f",
+      "observation_label_identity": "d054a03d778ed7c9295bd526901a9309d0a42bb2c70e1e3648f402c74c29f833",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "016_NAB_id_16_Environment_tr_1816_1st_3540",
+      "family": "NAB",
+      "member": "TSB-AD-U/016_NAB_id_16_Environment_tr_1816_1st_3540.csv",
+      "n": 7266,
+      "positive_points": 724,
+      "raw_sha256": "ed883ebe1556efd3f260e6991fb82aafd95cf150c69dc7ab31043e2c32598687",
+      "observation_label_identity": "c9ed0c7a9c94ad9fc715d1182743399595ef4b2a7356526b63fa236a98262a9a",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "018_NAB_id_18_Facility_tr_500_1st_669",
+      "family": "NAB",
+      "member": "TSB-AD-U/018_NAB_id_18_Facility_tr_500_1st_669.csv",
+      "n": 1881,
+      "positive_points": 188,
+      "raw_sha256": "b10ceea8a6e0eb4c5e17ffc064eee845b52003d147383dedcba4239137261695",
+      "observation_label_identity": "d4ff90c28a72d49cb2dd5b0fb824ce801006f598084d17d489b113c6316cf473",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "019_NAB_id_19_Facility_tr_1007_1st_1171",
+      "family": "NAB",
+      "member": "TSB-AD-U/019_NAB_id_19_Facility_tr_1007_1st_1171.csv",
+      "n": 4031,
+      "positive_points": 400,
+      "raw_sha256": "9f7c0c79aa6cebd20ba911a3bd71ca4b95230bbd75a48bde5fcdb0e4c98aa0a8",
+      "observation_label_identity": "2edd8493750a5b9c3183490aef1becf877ce57f9e1533a1013ddb2f997b7a845",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "021_NAB_id_21_WebService_tr_500_1st_565",
+      "family": "NAB",
+      "member": "TSB-AD-U/021_NAB_id_21_WebService_tr_500_1st_565.csv",
+      "n": 1623,
+      "positive_points": 160,
+      "raw_sha256": "2babfdb6f282c7c025151d8aa1ed61d04104bb308f6a807912149bba90a7c1d6",
+      "observation_label_identity": "8de0a63595fb46f723a6245d48b79ed7426b700ad6e219d0819b3560567ee867",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "022_NAB_id_22_Facility_tr_1007_1st_2980",
+      "family": "NAB",
+      "member": "TSB-AD-U/022_NAB_id_22_Facility_tr_1007_1st_2980.csv",
+      "n": 4031,
+      "positive_points": 520,
+      "raw_sha256": "4628d577133ea18a5f09c2dd6dafb240495df37edcb83e605ec91c3fcbc36c3c",
+      "observation_label_identity": "bc50770dfc7f57a9b4af39d70254bf4a2c6afdab74a537c3cfb6f36a1a1d2fb5",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "023_NAB_id_23_Facility_tr_4512_1st_16551",
+      "family": "NAB",
+      "member": "TSB-AD-U/023_NAB_id_23_Facility_tr_4512_1st_16551.csv",
+      "n": 18049,
+      "positive_points": 1498,
+      "raw_sha256": "7e320e7c91d514e6dd799b1ff497716ccdee42b83b72bc5cf182481ad8560f9c",
+      "observation_label_identity": "a60447d58d5099a2dc46eeb2b21ec04b516f662527c32716b493855e9e9b5870",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "025_NAB_id_25_WebService_tr_3958_1st_4614",
+      "family": "NAB",
+      "member": "TSB-AD-U/025_NAB_id_25_WebService_tr_3958_1st_4614.csv",
+      "n": 15832,
+      "positive_points": 1580,
+      "raw_sha256": "55cd543ef14386f8ad633ccde243d300b1fc4c59aa733a3565466915dc59903a",
+      "observation_label_identity": "ff738785fb7c3f24308d80cf8fbc2b2a561c389a284aa657e5b70fc8848abbdc",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "026_NAB_id_26_Traffic_tr_624_1st_2261",
+      "family": "NAB",
+      "member": "TSB-AD-U/026_NAB_id_26_Traffic_tr_624_1st_2261.csv",
+      "n": 2499,
+      "positive_points": 238,
+      "raw_sha256": "0de0b629a8dc0c7b7f086fce457c2f0f36c4e33e93b95030e11ba1eb8addf8ab",
+      "observation_label_identity": "c3f9317df6fe8f53fb9674ae6a1ab03a283d541a21f48caede4bdc4e5dd94812",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "027_NAB_id_27_Facility_tr_757_1st_2582",
+      "family": "NAB",
+      "member": "TSB-AD-U/027_NAB_id_27_Facility_tr_757_1st_2582.csv",
+      "n": 3031,
+      "positive_points": 200,
+      "raw_sha256": "5e9c42fc399ffce975cbb203d36ea4b9b701844f913aa6a7b307913c7722aa95",
+      "observation_label_identity": "dcdf0a16aa376d3d386d872bbd7444649d3887eb90f34a81ef83e84ff60c5fb1",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "028_NAB_id_28_Facility_tr_1007_1st_3447",
+      "family": "NAB",
+      "member": "TSB-AD-U/028_NAB_id_28_Facility_tr_1007_1st_3447.csv",
+      "n": 4031,
+      "positive_points": 430,
+      "raw_sha256": "a63ffc42ad919a99a2a131ec3e9698045c1c1d12439d23400e0ad550de7fdde4",
+      "observation_label_identity": "a95fb935a6c9ddc625aecec4f5b68f1ac673a987f3b71cb1b3b3de7ba7e44fa9",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "180_SMD_id_3_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/180_SMD_id_3_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "e668c166f316a25d227abe23b969eb9e57d0f17263c15c71a51693c9efed2fe5",
+      "observation_label_identity": "518e21cd1bb1607c33dcf1fbe55df30f66b830db6edb4ab238ddc65800f3dd19",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "181_SMD_id_4_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "member": "TSB-AD-U/181_SMD_id_4_Facility_tr_5000_1st_15144.csv",
+      "n": 20000,
+      "positive_points": 908,
+      "raw_sha256": "9bd257d42f23347d8d85b1f0d16073b50a1e74d76bed229f4c582fa20af860e0",
+      "observation_label_identity": "be7096888f257dcaa5ebf5038be20097d18e6ee9ce7d25de9a9aaf410cd9d893",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/182_SMD_id_5_Facility_tr_7174_1st_21230.csv",
+      "n": 28696,
+      "positive_points": 198,
+      "raw_sha256": "8eebd0659e9057cd91e5ae6e6d252337d4a21e8ca680372d087f95c5fbdf75df",
+      "observation_label_identity": "7a65ff6d06294424af80d9b6392954c330d1c9c7fa3d9cee34a8aa899a24e70c",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "183_SMD_id_6_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/183_SMD_id_6_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "07b2e896c50353bccd0ff2a41e748884b4d1005fee5ff4d95b37a1a05cabdf18",
+      "observation_label_identity": "f7212cd59edd2221aaf35d0e13d500e42573090e3b4bdd6a10bd7c006047d41e",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "184_SMD_id_7_Facility_tr_7119_1st_15849",
+      "family": "SMD",
+      "member": "TSB-AD-U/184_SMD_id_7_Facility_tr_7119_1st_15849.csv",
+      "n": 28479,
+      "positive_points": 2694,
+      "raw_sha256": "19636e4e0b671da92d9d22b1af8eb0a6fe810517ff54fc27b62f4599f0f01002",
+      "observation_label_identity": "838a032420c834539650ab95f473321c0e4c75e4be57a46d5726d10e24feda2b",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "185_SMD_id_8_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "member": "TSB-AD-U/185_SMD_id_8_Facility_tr_5000_1st_15144.csv",
+      "n": 20000,
+      "positive_points": 908,
+      "raw_sha256": "8c2c988c43b42986d24328e8c2a5f61fe963099e1dc541ef611266c2c9a8bedd",
+      "observation_label_identity": "9e76601efad6904d38379070e2bbd22d91f911276eb93a3a7af605b636428211",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "186_SMD_id_9_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/186_SMD_id_9_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "5409aa730ed06ee88c523b308b2d099af807724de08596c4b59c38d16c5d0c38",
+      "observation_label_identity": "e0378f926aba9075b6bf3af78d961d0f8bfe8048e8e79ab51864b81424a755a8",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "187_SMD_id_10_Facility_tr_5000_1st_15849",
+      "family": "SMD",
+      "member": "TSB-AD-U/187_SMD_id_10_Facility_tr_5000_1st_15849.csv",
+      "n": 20000,
+      "positive_points": 2190,
+      "raw_sha256": "c32643e3e6be89acc64e25f2d8e5c50c76222dae762d2373c9b45974b9947288",
+      "observation_label_identity": "f0e3189205fed9e1782d2326d011d53b05961ae689f0ef6f426c8c81a679516b",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+      "family": "SMD",
+      "member": "TSB-AD-U/188_SMD_id_11_Facility_tr_500_1st_392.csv",
+      "n": 23703,
+      "positive_points": 817,
+      "raw_sha256": "f94e42cedd6d49a60b9b65d68d2ef0969a724c020e277589a3045b6d7d5d42fd",
+      "observation_label_identity": "6f7c41ab3c6e2602adb9d3ad916eef93bc31f67fe3450d98b7d640448c2c5507",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "189_SMD_id_12_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/189_SMD_id_12_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "229940b66b42da4aac88908629b1c141c5aa0350fe48d6a98732caedecee5f5a",
+      "observation_label_identity": "fe2a82cb30343412adb697dc2f559e35e5184cfcfbe57fbdfebca75a985cc795",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "190_SMD_id_13_Facility_tr_7119_1st_15849",
+      "family": "SMD",
+      "member": "TSB-AD-U/190_SMD_id_13_Facility_tr_7119_1st_15849.csv",
+      "n": 28479,
+      "positive_points": 2694,
+      "raw_sha256": "790e5eaa0f61a9de9fb041e5b4ebc37f5125e6ccbc83b64fa37716292ae059e1",
+      "observation_label_identity": "dcb93e43ec88c2391bbb75b71c884b3f59da6ff11a75f78d93230f8e1f6b66b9",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "191_SMD_id_14_Facility_tr_4596_1st_4696",
+      "family": "SMD",
+      "member": "TSB-AD-U/191_SMD_id_14_Facility_tr_4596_1st_4696.csv",
+      "n": 22700,
+      "positive_points": 146,
+      "raw_sha256": "e7ee6cff5896c25f75c371ee025e338c83d054d25c1785b40443a0b364fb1da5",
+      "observation_label_identity": "873c400cd3dbb21b539bd7ab677c82891059a2cc1fc36badee0ca956b80f8bd2",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "192_SMD_id_15_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/192_SMD_id_15_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "56b8ffc3f9cb5c7357ae87c85907376e4ad6cc82c395c81055645d13fed73dee",
+      "observation_label_identity": "cd5adefe81b0965947e180aaf22c86e4c5da8bd855af4437a92f63a18009df24",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "193_SMD_id_16_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/193_SMD_id_16_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "3ca717c0b5abb5b6f7342b7f56dfbb649b6c96e60d9e560334de438208d50d52",
+      "observation_label_identity": "ca988bdadabfbb7c382286353a7e226ca88fd452180f85643dbd1b6c101b1231",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "194_SMD_id_17_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/194_SMD_id_17_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "d62bea2d6d85897a86295896427e02b2c822d18a79e865c53aa7bbae63e070e7",
+      "observation_label_identity": "49c8ab8a0e0bdacd54fb7ca8eb1df71ffedcd595ff07f2c7744892b95a6f5184",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "195_SMD_id_18_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/195_SMD_id_18_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "48a73e1f8af2f13884c5c7cf93e3f6c01d6f45274d9a2b3db107997bad017c62",
+      "observation_label_identity": "3bf5b35455e8e601c1f9e1f84279dffac9fc4e80b09b4671e1ad6a2f21cdda50",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "196_SMD_id_19_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/196_SMD_id_19_Facility_tr_7174_1st_21230.csv",
+      "n": 28696,
+      "positive_points": 192,
+      "raw_sha256": "10c5ded89b24249daab1dcc3627658cd909e061539f03899752988a7005d019a",
+      "observation_label_identity": "350b455fc1b29b8b99781b7f9183b99d8bc1563b44ff0fb026bb2d08463d15ec",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "197_SMD_id_20_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "member": "TSB-AD-U/197_SMD_id_20_Facility_tr_5000_1st_15144.csv",
+      "n": 20000,
+      "positive_points": 908,
+      "raw_sha256": "e0257691f8b675fc5d5b722ed027c289932bad8aaa17f83d7d31168a14b23dba",
+      "observation_label_identity": "3a16ade1e01f8b6aa31e7787e95f0d371380ca5a7a918de6e51b50fb31d68b65",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "198_SMD_id_21_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/198_SMD_id_21_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "1e857927296018f16234093d7ec62742c1789b64e6afea33500d31b1f92ce1ac",
+      "observation_label_identity": "94dfa9e4ff2d79c83ece4f2959f5b65c8ca4def544e21044849cb4d0765065a1",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "199_SMD_id_22_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/199_SMD_id_22_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "87ab2bc4517a1c5632e75fdaad0d0f7bfb21111447e66e10df7737e9d61562e4",
+      "observation_label_identity": "84d92c7b566db53e4f78bd14bc2fe8809452febcec7d1283e067ea1bfec0d65b",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "200_SMD_id_23_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/200_SMD_id_23_Facility_tr_7174_1st_21230.csv",
+      "n": 28696,
+      "positive_points": 198,
+      "raw_sha256": "d359cdb83bd2ad82f034d1987853e875b6da54b33fcea3d518d9b8da5277e144",
+      "observation_label_identity": "45471f703f62998c11ce61cfcb1d564cb0c95c1da619247231bfbe11807dbdef",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "201_SMD_id_24_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/201_SMD_id_24_Facility_tr_7174_1st_21230.csv",
+      "n": 28696,
+      "positive_points": 198,
+      "raw_sha256": "454df8f7469f5818e920bd8709b47186eacbfbd32d530bc6fa46c1d882633e46",
+      "observation_label_identity": "b68d20a4678c0c46e5b8613c6b817ddb765ae5472d3aa6732e9a1eb2b7982ef2",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "202_SMD_id_25_Facility_tr_6250_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/202_SMD_id_25_Facility_tr_6250_1st_21230.csv",
+      "n": 25000,
+      "positive_points": 66,
+      "raw_sha256": "1a0f1d5982319d486fc8d110b8ffa1f85d0aca7fae72a80e103762eb1af12be1",
+      "observation_label_identity": "cf98b6a53e49bb5f1d2b89f59303222d2e1c2c13abb43b76b637ce1f4c0a7b85",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "203_SMD_id_26_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/203_SMD_id_26_Facility_tr_7174_1st_21230.csv",
+      "n": 28696,
+      "positive_points": 198,
+      "raw_sha256": "a3d37ae0e041f88bac9c5588496e6ce9a4667c8fcdfb7fc0ef1ecc9b4774ead2",
+      "observation_label_identity": "4d288f8bc7e59dedc7d5add1126b341cea5d26a409198ec92caff3d46f91130e",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "204_SMD_id_27_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "member": "TSB-AD-U/204_SMD_id_27_Facility_tr_5000_1st_15144.csv",
+      "n": 20000,
+      "positive_points": 908,
+      "raw_sha256": "e65f92ce571b8e2d5fbe7d439ec68bfb8df4ac27db2981ae36a2db7460531249",
+      "observation_label_identity": "53c311e89592b1f3eef4a87ece63ad45b36b023ae9ccc8b78632cfbebb037af1",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "205_SMD_id_28_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/205_SMD_id_28_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "10aed97e24c36701dfa4b80500f82afae2a4c638be83197964f0f060453c0c1e",
+      "observation_label_identity": "c7bd844ccd4ad16f952507528f2d0c94a68fa5b888ea1d824cd895c45b5d6385",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "206_SMD_id_29_Facility_tr_6250_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/206_SMD_id_29_Facility_tr_6250_1st_21230.csv",
+      "n": 25000,
+      "positive_points": 66,
+      "raw_sha256": "9fdfc7a2620d88e383e8c4b722a35fbf11af7c0c2f379821a8cfe96c0f73c427",
+      "observation_label_identity": "52252c37fbe288688c2515aeb34ccc548d5e20ad431a95bf67e6c05859425048",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "207_SMD_id_30_Facility_tr_7174_1st_21230",
+      "family": "SMD",
+      "member": "TSB-AD-U/207_SMD_id_30_Facility_tr_7174_1st_21230.csv",
+      "n": 28696,
+      "positive_points": 198,
+      "raw_sha256": "9f50cc5153f6f7a0614b411c9bf8d2b05fe7ecad7e1e95ed8afeaf7c22be61a4",
+      "observation_label_identity": "8032610937064f77c75ad152720184de52a57c5e6d970a257bf52f7611659453",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "208_SMD_id_31_Facility_tr_5000_1st_15144",
+      "family": "SMD",
+      "member": "TSB-AD-U/208_SMD_id_31_Facility_tr_5000_1st_15144.csv",
+      "n": 20000,
+      "positive_points": 908,
+      "raw_sha256": "58b14853fd0ce495ae0188ff2091d2a475a643f8393dfb5005b7b3e26c981916",
+      "observation_label_identity": "a0d3f666fd9d8d040fbdb9eb347b5cf001117cd87f8dd81ceff14b2a08fae940",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "209_SMD_id_32_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/209_SMD_id_32_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "183873389211ab2cf889b124f2286ee1a525b90c34e4c8a5f80a8f8a4ff265bb",
+      "observation_label_identity": "7b839b073ee3740410ceb984bf4114d1d3f8212026c04179d6b3d9a324c62791",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "210_SMD_id_33_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/210_SMD_id_33_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "7aab164c802438f70fb3be502e687dab599b2d282e7a847325c3d17e7b6f400e",
+      "observation_label_identity": "9c5f72a32a5797044793c2b331dd220749bde71434c68cfa9dae90b387cb5e96",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "211_SMD_id_34_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/211_SMD_id_34_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "f16a5fb13acd4aab258fe82baaf5cb2442685b2b796eeee197e97681b3c04ac9",
+      "observation_label_identity": "1f00d2915ab564b6e3bdf9f8f1eede4b0194f4e9fd9929f758e9d4b734db0471",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "212_SMD_id_35_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/212_SMD_id_35_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "cb3b386dfd8c320746cf51f4d81277094c1f967332bce0e23841a1fb9153c1fb",
+      "observation_label_identity": "0636a9568c8a1d54ad8dbe20082bf2785001da59873436e3057dcef6557c2196",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "213_SMD_id_36_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/213_SMD_id_36_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "9f687c331c5d449e4789074321181be9b7c8369f5e92c60caa9557bd817fd5ea",
+      "observation_label_identity": "ca755b6de7369469a631a1de5078d4bee8eba87404e3756a66f5bed931da2e87",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "214_SMD_id_37_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/214_SMD_id_37_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "39729be67ac2bb53ffb386ec83dafcc456faa7cd02aa2c287697dd70dca646c0",
+      "observation_label_identity": "54aa9aa321c42a9abf3aa29123eca05334af19c940bb754c25edb4b67c6378fc",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "215_SMD_id_38_Facility_tr_5925_1st_17580",
+      "family": "SMD",
+      "member": "TSB-AD-U/215_SMD_id_38_Facility_tr_5925_1st_17580.csv",
+      "n": 23703,
+      "positive_points": 161,
+      "raw_sha256": "c2ad6549dc5a82287d5e96721a42d45660beab3890a0dc9a76bee790840a53b1",
+      "observation_label_identity": "6e26c95d7482b7378da0861344729984f9cc9854e3905727482ba0a9c5db1357",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "533_SMAP_id_3_Sensor_tr_2052_1st_5300",
+      "family": "SMAP",
+      "member": "TSB-AD-U/533_SMAP_id_3_Sensor_tr_2052_1st_5300.csv",
+      "n": 8209,
+      "positive_points": 1121,
+      "raw_sha256": "0fb83d69fc536dfea3d11e9f35726d531174c400f58ca8855e706e9dc38595a7",
+      "observation_label_identity": "051c62fa5cb87e205d859d60c3477b8c3c5f06b3268b2608d37f92964aa6ee74",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "534_SMAP_id_4_Sensor_tr_1968_1st_4370",
+      "family": "SMAP",
+      "member": "TSB-AD-U/534_SMAP_id_4_Sensor_tr_1968_1st_4370.csv",
+      "n": 7874,
+      "positive_points": 51,
+      "raw_sha256": "d0900ec25531bc16a50bb39a6fad1d1af6cdc28b118071bc9817515563fab0bd",
+      "observation_label_identity": "b920dd8ebae64330e078dd80a3d03e972468426f2cab2573de26b304c5e55a8b",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "535_SMAP_id_5_Sensor_tr_1113_1st_1890",
+      "family": "SMAP",
+      "member": "TSB-AD-U/535_SMAP_id_5_Sensor_tr_1113_1st_1890.csv",
+      "n": 4453,
+      "positive_points": 41,
+      "raw_sha256": "32a6736f23aa6bc15d5f4b8b84953b70de72fd432873a45703af1b9e947da513",
+      "observation_label_identity": "56ee1c10e6607da86fdadba16edc75eb0dd4763393c8700e463714c68f377745",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "536_SMAP_id_6_Sensor_tr_2160_1st_5600",
+      "family": "SMAP",
+      "member": "TSB-AD-U/536_SMAP_id_6_Sensor_tr_2160_1st_5600.csv",
+      "n": 8640,
+      "positive_points": 101,
+      "raw_sha256": "06e0e11b8c73b7ffce61fd98758da61f2d2315cd009c3fc8c06a25d0267a7fa7",
+      "observation_label_identity": "b14e86496e18e46cc7ba2086eff218503354a164bf9667ed04b4d089b1f9ed62",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "537_SMAP_id_7_Sensor_tr_2077_1st_5394",
+      "family": "SMAP",
+      "member": "TSB-AD-U/537_SMAP_id_7_Sensor_tr_2077_1st_5394.csv",
+      "n": 8310,
+      "positive_points": 281,
+      "raw_sha256": "989103255cdc56504fa45cf2741e5f24c247905869a922b93ac1bc95ea6d28ac",
+      "observation_label_identity": "34b97e1061ab605308b8c27941ab5e665b1a1ae00be7686fda403f9b5e259779",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "538_SMAP_id_8_Sensor_tr_2007_1st_3650",
+      "family": "SMAP",
+      "member": "TSB-AD-U/538_SMAP_id_8_Sensor_tr_2007_1st_3650.csv",
+      "n": 8029,
+      "positive_points": 268,
+      "raw_sha256": "3528118416d3e0eb133d8ed3c648e9ed7c032b5645a03dabece3b1e89948813f",
+      "observation_label_identity": "76f51a377fd5214531e55f6cf51305682df4a6a03a32d78f42092e7a7c67f885",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "539_SMAP_id_9_Sensor_tr_1857_1st_4270",
+      "family": "SMAP",
+      "member": "TSB-AD-U/539_SMAP_id_9_Sensor_tr_1857_1st_4270.csv",
+      "n": 7431,
+      "positive_points": 61,
+      "raw_sha256": "102c5c69acb67557a87822cb234a39ccf28882ba00f742f4f09ff8730075765a",
+      "observation_label_identity": "8b0546e34f049c06efdd5c83374feff293f30125d62efe883ae2f54ea243f9ff",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "540_SMAP_id_10_Sensor_tr_2051_1st_4575",
+      "family": "SMAP",
+      "member": "TSB-AD-U/540_SMAP_id_10_Sensor_tr_2051_1st_4575.csv",
+      "n": 8205,
+      "positive_points": 186,
+      "raw_sha256": "70e0e61de358222373b0457ea6ef8ba2bf4a3c338f609659064ea27dc43a298c",
+      "observation_label_identity": "52b58d23f90eff4ca452a666b1bb8fe762fb9c265219f5bb0ead1927644cd12d",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "541_SMAP_id_11_Sensor_tr_1832_1st_5300",
+      "family": "SMAP",
+      "member": "TSB-AD-U/541_SMAP_id_11_Sensor_tr_1832_1st_5300.csv",
+      "n": 7331,
+      "positive_points": 448,
+      "raw_sha256": "c851be78e1a07f1277b5c0c279c49c7e62b6173227518a5a5d1c1d7b8b83d70d",
+      "observation_label_identity": "530a44ba32f0982acc3b9c92ba2bb5a763e06117a90c00528380c771cbca153d",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "542_SMAP_id_12_Sensor_tr_1908_1st_4690",
+      "family": "SMAP",
+      "member": "TSB-AD-U/542_SMAP_id_12_Sensor_tr_1908_1st_4690.csv",
+      "n": 7632,
+      "positive_points": 31,
+      "raw_sha256": "390e764076d4b1c729c07d81eb274cd564bbd540edb0f8e62a076893fb7ae5b5",
+      "observation_label_identity": "bb9303a3182889b9a954e92272570141034a9d00f6bbaf4a2616191bce1cf001",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "543_SMAP_id_13_Sensor_tr_2020_1st_4550",
+      "family": "SMAP",
+      "member": "TSB-AD-U/543_SMAP_id_13_Sensor_tr_2020_1st_4550.csv",
+      "n": 8080,
+      "positive_points": 111,
+      "raw_sha256": "6d952f29216acc628fcca9a7de7892970b77c2deec8dfc38a847b3f3de139962",
+      "observation_label_identity": "3632741a9d2bacf0982bbb305f31467b5e8fdb612f5f4ea38a4228b773596cfd",
+      "raw_recording_previously_measured_by_name": false
+    },
+    {
+      "series": "544_SMAP_id_14_Sensor_tr_1978_1st_4450",
+      "family": "SMAP",
+      "member": "TSB-AD-U/544_SMAP_id_14_Sensor_tr_1978_1st_4450.csv",
+      "n": 7914,
+      "positive_points": 111,
+      "raw_sha256": "29c9f7d554793352be1adc3616eb54069303bcb666cb4818a59b03cabe38b6eb",
+      "observation_label_identity": "08e5576a689d46adcf93306142c50e7859ddee97cfbd2ee16a4ca9f9116dce82",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "545_SMAP_id_15_Sensor_tr_1173_1st_2750",
+      "family": "SMAP",
+      "member": "TSB-AD-U/545_SMAP_id_15_Sensor_tr_1173_1st_2750.csv",
+      "n": 4693,
+      "positive_points": 51,
+      "raw_sha256": "f23dda8c410db8b2858ce76cd4170a693ddaa0a1737eed6e74212337818d4301",
+      "observation_label_identity": "e67523642413252961e6f11a21ec5082b33030b120bac3a11ab08c309403b1e8",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "546_SMAP_id_16_Sensor_tr_2117_1st_4770",
+      "family": "SMAP",
+      "member": "TSB-AD-U/546_SMAP_id_16_Sensor_tr_2117_1st_4770.csv",
+      "n": 8469,
+      "positive_points": 121,
+      "raw_sha256": "a0ff7539d81f53eb904434968110033e257b3e8b3eb055aa28c19691d86c6860",
+      "observation_label_identity": "6bbb67741f41f2f4c6250fd41c5b526312b4168fa58638c9bffaecdbfa7ce885",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "547_SMAP_id_17_Sensor_tr_2133_1st_5400",
+      "family": "SMAP",
+      "member": "TSB-AD-U/547_SMAP_id_17_Sensor_tr_2133_1st_5400.csv",
+      "n": 8532,
+      "positive_points": 623,
+      "raw_sha256": "b56d62d1b32778b281102af0623c206054fab526696d60c7f2ca30a9493f6db8",
+      "observation_label_identity": "c9a24e1174d126a204ab8c7e7ae38fb7606c3585f93e89499a1507273e5c3d7c",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "548_SMAP_id_18_Sensor_tr_2094_1st_5600",
+      "family": "SMAP",
+      "member": "TSB-AD-U/548_SMAP_id_18_Sensor_tr_2094_1st_5600.csv",
+      "n": 8376,
+      "positive_points": 41,
+      "raw_sha256": "e5db2e7f443b5d1ed4f588fd49873f3339c71af69c9db3568a83d24909e94ed6",
+      "observation_label_identity": "b6755b87300e06abdd5d6fa873d4555715081042eac48b5f36b42db0bf60cd67",
+      "raw_recording_previously_measured_by_name": true
+    },
+    {
+      "series": "549_SMAP_id_19_Sensor_tr_1998_1st_2098",
+      "family": "SMAP",
+      "member": "TSB-AD-U/549_SMAP_id_19_Sensor_tr_1998_1st_2098.csv",
+      "n": 8579,
+      "positive_points": 184,
+      "raw_sha256": "3e9f90c3146607fd28c652d2e945f22c72a021970f19443c08ad61bf5d6a4267",
+      "observation_label_identity": "bcbcae25cb95695920a0d900604f37a0f5c9dbbee66a35785b762a48658051c8",
+      "raw_recording_previously_measured_by_name": true
+    }
+  ],
+  "exclusions": [
+    {
+      "series": "001_NAB_id_1_Facility_tr_1007_1st_2014",
+      "reason": "development series"
+    },
+    {
+      "series": "002_NAB_id_2_WebService_tr_1500_1st_4106",
+      "reason": "development series"
+    },
+    {
+      "series": "008_NAB_id_8_Synthetic_tr_1007_1st_2734",
+      "reason": "source-labelled synthetic"
+    },
+    {
+      "series": "012_NAB_id_12_Synthetic_tr_1007_1st_2787",
+      "reason": "source-labelled synthetic"
+    },
+    {
+      "series": "015_NAB_id_15_Synthetic_tr_1007_1st_2787",
+      "reason": "source-labelled synthetic"
+    },
+    {
+      "series": "017_NAB_id_17_Synthetic_tr_1007_1st_1805",
+      "reason": "source-labelled synthetic"
+    },
+    {
+      "series": "020_NAB_id_20_Synthetic_tr_1007_1st_2679",
+      "reason": "source-labelled synthetic"
+    },
+    {
+      "series": "024_NAB_id_24_Synthetic_tr_1007_1st_2787",
+      "reason": "source-labelled synthetic"
+    },
+    {
+      "series": "178_SMD_id_1_Facility_tr_6000_1st_10609",
+      "reason": "development series"
+    },
+    {
+      "series": "179_SMD_id_2_Facility_tr_5925_1st_17580",
+      "reason": "development series"
+    },
+    {
+      "series": "531_SMAP_id_1_Sensor_tr_1811_1st_4510",
+      "reason": "development series"
+    },
+    {
+      "series": "532_SMAP_id_2_Sensor_tr_2075_1st_5550",
+      "reason": "development series"
+    }
+  ],
+  "collections": [
+    "NAB",
+    "SMAP",
+    "SMD"
+  ],
+  "models": [
+    "isolation_forest",
+    "local_outlier_factor",
+    "knn_distance",
+    "one_class_svm",
+    "pca_reconstruction",
+    "kmeans_distance",
+    "histogram_density",
+    "shrinkage_mahalanobis"
+  ],
+  "methods": [
+    "released",
+    "geometry",
+    "stream",
+    "saturation",
+    "dense",
+    "external"
+  ],
+  "widths": [
+    30,
+    100
+  ],
+  "primary_width": 30,
+  "repetitions": 12,
+  "orders": [
+    [
+      "released",
+      "geometry",
+      "stream",
+      "saturation",
+      "dense",
+      "external"
+    ],
+    [
+      "geometry",
+      "stream",
+      "saturation",
+      "dense",
+      "external",
+      "released"
+    ],
+    [
+      "stream",
+      "saturation",
+      "dense",
+      "external",
+      "released",
+      "geometry"
+    ],
+    [
+      "saturation",
+      "dense",
+      "external",
+      "released",
+      "geometry",
+      "stream"
+    ],
+    [
+      "dense",
+      "external",
+      "released",
+      "geometry",
+      "stream",
+      "saturation"
+    ],
+    [
+      "external",
+      "released",
+      "geometry",
+      "stream",
+      "saturation",
+      "dense"
+    ],
+    [
+      "external",
+      "dense",
+      "saturation",
+      "stream",
+      "geometry",
+      "released"
+    ],
+    [
+      "released",
+      "external",
+      "dense",
+      "saturation",
+      "stream",
+      "geometry"
+    ],
+    [
+      "geometry",
+      "released",
+      "external",
+      "dense",
+      "saturation",
+      "stream"
+    ],
+    [
+      "stream",
+      "geometry",
+      "released",
+      "external",
+      "dense",
+      "saturation"
+    ],
+    [
+      "saturation",
+      "stream",
+      "geometry",
+      "released",
+      "external",
+      "dense"
+    ],
+    [
+      "dense",
+      "saturation",
+      "stream",
+      "geometry",
+      "released",
+      "external"
+    ]
+  ],
+  "bootstrap": "10000 paired series resamples of log ratios of case median complete-call times; per-collection, plus Bonferroni 3-collection bounds; seed20261024",
+  "model_protocol": "8 distinct unsupervised CPU families; trailing16 windows; edge-repeat initial values; fit2048 evenly spaced unlabeled windows from complete series; fixed seed20261024; full float64 scores. Exact parameters bound by driver source.",
+  "failure_policy": "no replacement/exclusion after scores; nonfinite outputs halt; warnings and constant outputs retained",
+  "reused_data": "Physical recording reuse is explicit; new detector scores are prospectively generated. Excludes only six development names and source-labelled Synthetic rows; exact within-panel observation+label duplicates logged. Cross-catalogue normalized/endpoint-shift identity is not exhaustively excluded.",
+  "parity_atol": 1e-11,
+  "winner_tie_atol": 1e-10,
+  "timing": "Single process/thread; all public validation, geometry, sorting, allocation, widths and winner selection included. Repeated in-memory complete-call cases plus separate file-read-to-JSON-write collection passes. No detector fitting in stored-score time. Imports/JIT excluded equally. No fsync/cold-disk claim.",
+  "confirmatory_candidate": "stream; selected on development corpus before new scores",
+  "primary_success": "same numerical winner sets; max pairwise error<=1e-11; candidate faster than every eligible external exact method on all3collections with familywise CI lower>1; report released and saturation internal controls without exclusion"
+}

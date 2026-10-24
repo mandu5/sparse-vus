@@ -1,0 +1,30 @@
+% Unified working manuscript; no submission or editorial decision is implied.
+% Existing frozen manuscripts, methods, and result fragments remain unchanged.
+\documentclass[sigconf,nonacm]{acmart}
+\usepackage{pvldb}
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{https://github.com/mandu5/sparse-vus/tree/research/pvldb-20261024}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\TPR}{\mathrm{TPR}}
+\newcommand{\FPR}{\mathrm{FPR}}
+\emergencystretch=2em
+\begin{document}
+\title{Exact VUS Evaluation by Support Events and Shared Interval Geometry}
+\author{Youngmin Ko}
+\email{rhdudals0505@naver.com}
+\affiliation{\institution{Independent Researcher}\country{Republic of Korea}}
+\begin{abstract}
+Volume Under the Surface (VUS) evaluates anomaly scores across thresholds and temporal tolerance widths. We derive an exact support-event representation for the original dynamic VUS operator. Thresholds with no active support have zero precision--recall contribution; their receiver-operating-characteristic contribution requires a predecessor correction. Complete global ties and merged anomaly components remain explicit. Standard fixed-width ranking and two-distance interval geometry give $O(n+(L+1)Q)$ evaluation, where $Q$ is maximum-buffer support. Shared-label preparation further reduces repeated work across score columns. A prospectively fixed study uses 73 complete real series from three public collections and eight fixed detector procedures, producing 584 unrounded score vectors per host. Fresh execution on Apple M1 Pro and AMD EPYC preserves the main result: directly timed collection workflows are $16.2$--$23.0\times$ faster than an unchanged exhaustive PR comparator. Matched ROC+PR workflows improve by $22.4$--$42.5\times$ over a public cumulative-sum implementation. Compiled dense and sharing ablations isolate the support-compression and batching effects. Exact evaluation also dominates the measured 250-threshold approximation in both latency and numerical fidelity on this workload. We report paired uncertainty, shared-label dependence, unfavorable regimes and process-memory costs. Mathematical exactness and measured floating-point parity are distinct guarantees.
+\end{abstract}
+\maketitle
+\vldbtopmatter
+\input{sparse_vus_pvldb20261024_body.tex}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sparse_vus_pvldb20261024_references}
+\end{document}

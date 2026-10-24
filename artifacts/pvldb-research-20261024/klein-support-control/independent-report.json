@@ -1,0 +1,1122 @@
+{
+  "status": "PASS",
+  "audit_kind": "raw-record reconstruction, not a fresh timing run",
+  "auditor_sha256": "9ea6ae36568d54b0bdc9d830e138c94a5aea936003602a59a25a4e458a46cdf0",
+  "shared_auditor_sha256": "4cf06015fd728405f85e6262ce5d43053d9061a4008cff2ced833185caf3a005",
+  "protocol_sha256": "0ef105ee4d2f6a80554e503ef4540e3a9b75379a6c9e61f539f5bd0c29d19ca9",
+  "records_sha256": "cfbf9567c4b5e34e3f7fb3ee66cc3f8b5e13638c0c9a759385983f6ac3e04dd6",
+  "workflows_sha256": "501f21d62a6ee21f5e9415b32ed703455f116b40327670382ccc8531d5e0fd26",
+  "qualification": "Post-primary author-created control on the unchanged fixed panel; not an unchanged upstream release. Case intervals are per-comparison familywise over three collections; geometry dependence is separately reported.",
+  "collections": {
+    "NAB": {
+      "series": 20,
+      "case_medians": {
+        "003_NAB_id_3_WebService_tr_1362_1st_1462": {
+          "released": 0.008433687500000002,
+          "stream": 0.0067181455,
+          "klein_support": 0.054601625,
+          "external": 0.12929016650000003
+        },
+        "004_NAB_id_4_Facility_tr_1007_1st_1437": {
+          "released": 0.0021548545,
+          "stream": 0.0015174375000000001,
+          "klein_support": 0.024589541500000003,
+          "external": 0.041672208
+        },
+        "005_NAB_id_5_Traffic_tr_594_1st_1645": {
+          "released": 0.0014515835,
+          "stream": 0.0009200835000000001,
+          "klein_support": 0.021394812500000002,
+          "external": 0.0315450625
+        },
+        "006_NAB_id_6_Traffic_tr_2579_1st_5839": {
+          "released": 0.00489475,
+          "stream": 0.0037605,
+          "klein_support": 0.0416733955,
+          "external": 0.08814485400000001
+        },
+        "007_NAB_id_7_Traffic_tr_624_1st_2087": {
+          "released": 0.0015791045000000002,
+          "stream": 0.001023187,
+          "klein_support": 0.0220265,
+          "external": 0.03226791700000001
+        },
+        "009_NAB_id_9_Traffic_tr_500_1st_438": {
+          "released": 0.001411396,
+          "stream": 0.0008712290000000001,
+          "klein_support": 0.0211441245,
+          "external": 0.030344229
+        },
+        "010_NAB_id_10_WebService_tr_500_1st_271": {
+          "released": 0.0011334585000000001,
+          "stream": 0.0006381875000000001,
+          "klein_support": 0.0194683125,
+          "external": 0.023112604000000002
+        },
+        "011_NAB_id_11_Facility_tr_1007_1st_1526": {
+          "released": 0.0021783125,
+          "stream": 0.001497,
+          "klein_support": 0.026260104000000003,
+          "external": 0.043277562000000006
+        },
+        "013_NAB_id_13_Traffic_tr_623_1st_2084": {
+          "released": 0.0015568959999999999,
+          "stream": 0.0009951460000000001,
+          "klein_support": 0.021750521000000002,
+          "external": 0.032033583500000004
+        },
+        "014_NAB_id_14_WebService_tr_500_1st_1045": {
+          "released": 0.0011520000000000002,
+          "stream": 0.0006671045,
+          "klein_support": 0.019861291500000003,
+          "external": 0.0262222915
+        },
+        "016_NAB_id_16_Environment_tr_1816_1st_3540": {
+          "released": 0.0034972500000000004,
+          "stream": 0.0025537705,
+          "klein_support": 0.033608562,
+          "external": 0.0711549375
+        },
+        "018_NAB_id_18_Facility_tr_500_1st_669": {
+          "released": 0.0014225835,
+          "stream": 0.0009272915000000001,
+          "klein_support": 0.019263395500000002,
+          "external": 0.0278179785
+        },
+        "019_NAB_id_19_Facility_tr_1007_1st_1171": {
+          "released": 0.0021059580000000002,
+          "stream": 0.0014515005000000003,
+          "klein_support": 0.025215313000000003,
+          "external": 0.042123667000000004
+        },
+        "021_NAB_id_21_WebService_tr_500_1st_565": {
+          "released": 0.001199042,
+          "stream": 0.0007179790000000001,
+          "klein_support": 0.019696688000000004,
+          "external": 0.0263253755
+        },
+        "022_NAB_id_22_Facility_tr_1007_1st_2980": {
+          "released": 0.002291958,
+          "stream": 0.0015623125,
+          "klein_support": 0.0261815625,
+          "external": 0.042371625
+        },
+        "023_NAB_id_23_Facility_tr_4512_1st_16551": {
+          "released": 0.0076941045,
+          "stream": 0.0059688755,
+          "klein_support": 0.05760354200000001,
+          "external": 0.1380613545
+        },
+        "025_NAB_id_25_WebService_tr_3958_1st_4614": {
+          "released": 0.007455125,
+          "stream": 0.005665875000000001,
+          "klein_support": 0.0599323755,
+          "external": 0.1312294375
+        },
+        "026_NAB_id_26_Traffic_tr_624_1st_2261": {
+          "released": 0.0014333955000000002,
+          "stream": 0.000899417,
+          "klein_support": 0.021449937500000002,
+          "external": 0.031893625
+        },
+        "027_NAB_id_27_Facility_tr_757_1st_2582": {
+          "released": 0.0015551455000000001,
+          "stream": 0.0010079585000000002,
+          "klein_support": 0.022167812500000002,
+          "external": 0.035343041500000005
+        },
+        "028_NAB_id_28_Facility_tr_1007_1st_3447": {
+          "released": 0.002233792,
+          "stream": 0.0015303955,
+          "klein_support": 0.0257404585,
+          "external": 0.043859396
+        }
+      },
+      "case_comparisons": {
+        "external_over_control": {
+          "geometric_speedup": 1.6538616142456928,
+          "ci95": [
+            1.522576566376325,
+            1.8059709956406902
+          ],
+          "ci_familywise95_3collections": [
+            1.4956427679712883,
+            1.84151150720456
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 1.1871909288491234,
+          "maximum_speedup": 2.3967511320744825
+        },
+        "control_over_released": {
+          "geometric_speedup": 12.051855835065988,
+          "ci95": [
+            10.627128984171229,
+            13.52355258730636
+          ],
+          "ci_familywise95_3collections": [
+            10.32528110559324,
+            13.81240411283688
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 6.474229096110093,
+          "maximum_speedup": 17.240704427083333
+        },
+        "control_over_stream": {
+          "geometric_speedup": 17.956097569590987,
+          "ci95": [
+            15.204870128846036,
+            21.00548815013618
+          ],
+          "ci_familywise95_3collections": [
+            14.604758080379156,
+            21.626367504218635
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 8.127484735184732,
+          "maximum_speedup": 30.50563118205856
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.4899031166093162,
+          "ci95": [
+            1.4296324647472245,
+            1.5527326950313116
+          ],
+          "ci_familywise95_3collections": [
+            1.4150539679113325,
+            1.5673832624199904
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 1.2553594589459252,
+          "maximum_speedup": 1.776058760160611
+        }
+      },
+      "label_block_sensitivity": {
+        "external_over_control": {
+          "geometric_speedup": 1.6538616142456928,
+          "blocks": 20,
+          "ci95": [
+            1.5208409275800792,
+            1.8103045691140518
+          ],
+          "ci_familywise95_3collections": [
+            1.4954318798629305,
+            1.8488284218823439
+          ]
+        },
+        "control_over_released": {
+          "geometric_speedup": 12.051855835065982,
+          "blocks": 20,
+          "ci95": [
+            10.592640207710641,
+            13.550164577450513
+          ],
+          "ci_familywise95_3collections": [
+            10.275877756755113,
+            13.8625896853155
+          ]
+        },
+        "control_over_stream": {
+          "geometric_speedup": 17.956097569590987,
+          "blocks": 20,
+          "ci95": [
+            15.14992561254245,
+            21.030226677060934
+          ],
+          "ci_familywise95_3collections": [
+            14.520687110877244,
+            21.693699872099543
+          ]
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.4899031166093162,
+          "blocks": 20,
+          "ci95": [
+            1.4285764124206421,
+            1.5533287014083268
+          ],
+          "ci_familywise95_3collections": [
+            1.4130361035587395,
+            1.5678924659819427
+          ]
+        }
+      },
+      "workflow_seconds": {
+        "released": [
+          0.087239542,
+          0.06911529100000001,
+          0.067549792
+        ],
+        "stream": [
+          0.05042325,
+          0.050182792000000004,
+          0.047599417000000005
+        ],
+        "klein_support": [
+          0.6000555830000001,
+          0.592946875,
+          0.614576875
+        ],
+        "external": [
+          1.0788670420000002,
+          1.1126999160000002,
+          1.094049541
+        ]
+      },
+      "workflow_medians": {
+        "released": 0.06911529100000001,
+        "stream": 0.050182792000000004,
+        "klein_support": 0.6000555830000001,
+        "external": 1.094049541
+      },
+      "workflow_comparisons": {
+        "external_over_control": {
+          "median_ratio": 1.8232469991034144,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.8177458557077089,
+            "ci95": [
+              1.7801671125357588,
+              1.8765592043975274
+            ],
+            "ci_familywise95_3collections": [
+              1.7801671125357588,
+              1.8765592043975274
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 1.7801671125357588,
+            "maximum_speedup": 1.8765592043975274
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "control_over_released": {
+          "median_ratio": 8.68195119080089,
+          "paired_trial_ratios": {
+            "geometric_speedup": 8.12750631177207,
+            "ci95": [
+              6.878252329660329,
+              9.098131271817982
+            ],
+            "ci_familywise95_3collections": [
+              6.878252329660329,
+              9.098131271817982
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 6.878252329660328,
+            "maximum_speedup": 9.09813127181798
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "control_over_stream": {
+          "median_ratio": 11.957397328550393,
+          "paired_trial_ratios": {
+            "geometric_speedup": 12.199220015852754,
+            "ci95": [
+              11.815741041271675,
+              12.911437024533305
+            ],
+            "ci_familywise95_3collections": [
+              11.815741041271675,
+              12.911437024533305
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 11.815741041271677,
+            "maximum_speedup": 12.911437024533305
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "released_over_stream": {
+          "median_ratio": 1.3772707385432044,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.5009794576453448,
+            "ci95": [
+              1.3772707385432044,
+              1.7301451612103542
+            ],
+            "ci_familywise95_3collections": [
+              1.3772707385432044,
+              1.7301451612103542
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 1.3772707385432044,
+            "maximum_speedup": 1.7301451612103542
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        }
+      }
+    },
+    "SMAP": {
+      "series": 17,
+      "case_medians": {
+        "533_SMAP_id_3_Sensor_tr_2052_1st_5300": {
+          "released": 0.0046390830000000004,
+          "stream": 0.0033079370000000004,
+          "klein_support": 0.042505167,
+          "external": 0.07689885400000002
+        },
+        "534_SMAP_id_4_Sensor_tr_1968_1st_4370": {
+          "released": 0.004075021,
+          "stream": 0.0033441455000000004,
+          "klein_support": 0.028741708,
+          "external": 0.064946771
+        },
+        "535_SMAP_id_5_Sensor_tr_1113_1st_1890": {
+          "released": 0.0021735415,
+          "stream": 0.0016470205,
+          "klein_support": 0.021944125000000002,
+          "external": 0.050024437500000005
+        },
+        "536_SMAP_id_6_Sensor_tr_2160_1st_5600": {
+          "released": 0.0037319790000000003,
+          "stream": 0.002911146,
+          "klein_support": 0.0324116255,
+          "external": 0.0728872915
+        },
+        "537_SMAP_id_7_Sensor_tr_2077_1st_5394": {
+          "released": 0.0035142505,
+          "stream": 0.0027667705,
+          "klein_support": 0.0312223955,
+          "external": 0.0761282505
+        },
+        "538_SMAP_id_8_Sensor_tr_2007_1st_3650": {
+          "released": 0.004498229,
+          "stream": 0.003694625,
+          "klein_support": 0.0309406245,
+          "external": 0.069654854
+        },
+        "539_SMAP_id_9_Sensor_tr_1857_1st_4270": {
+          "released": 0.0036748335000000003,
+          "stream": 0.0030652500000000003,
+          "klein_support": 0.024806375000000002,
+          "external": 0.0682118125
+        },
+        "540_SMAP_id_10_Sensor_tr_2051_1st_4575": {
+          "released": 0.003055396,
+          "stream": 0.0023911870000000003,
+          "klein_support": 0.0338504585,
+          "external": 0.074666229
+        },
+        "541_SMAP_id_11_Sensor_tr_1832_1st_5300": {
+          "released": 0.003120042,
+          "stream": 0.002385292,
+          "klein_support": 0.033322791500000004,
+          "external": 0.0722857085
+        },
+        "542_SMAP_id_12_Sensor_tr_1908_1st_4690": {
+          "released": 0.0036593335000000005,
+          "stream": 0.0031181045,
+          "klein_support": 0.029659187500000003,
+          "external": 0.06751750000000001
+        },
+        "543_SMAP_id_13_Sensor_tr_2020_1st_4550": {
+          "released": 0.0025983755,
+          "stream": 0.0020022085,
+          "klein_support": 0.030362271000000003,
+          "external": 0.076372625
+        },
+        "544_SMAP_id_14_Sensor_tr_1978_1st_4450": {
+          "released": 0.0028080415,
+          "stream": 0.002213896,
+          "klein_support": 0.0295859995,
+          "external": 0.0719623335
+        },
+        "545_SMAP_id_15_Sensor_tr_1173_1st_2750": {
+          "released": 0.0023657085,
+          "stream": 0.001789854,
+          "klein_support": 0.026666521000000002,
+          "external": 0.052747875
+        },
+        "546_SMAP_id_16_Sensor_tr_2117_1st_4770": {
+          "released": 0.0029756870000000003,
+          "stream": 0.0022485000000000005,
+          "klein_support": 0.03293402100000001,
+          "external": 0.0776249165
+        },
+        "547_SMAP_id_17_Sensor_tr_2133_1st_5400": {
+          "released": 0.0044873955000000005,
+          "stream": 0.0035637085000000002,
+          "klein_support": 0.036871479,
+          "external": 0.075914334
+        },
+        "548_SMAP_id_18_Sensor_tr_2094_1st_5600": {
+          "released": 0.003362854,
+          "stream": 0.002679125,
+          "klein_support": 0.027271833500000002,
+          "external": 0.071113646
+        },
+        "549_SMAP_id_19_Sensor_tr_1998_1st_2098": {
+          "released": 0.004175687500000001,
+          "stream": 0.0033435415,
+          "klein_support": 0.034442458,
+          "external": 0.0759202085
+        }
+      },
+      "case_comparisons": {
+        "external_over_control": {
+          "geometric_speedup": 2.27405508834852,
+          "ci95": [
+            2.169205217646271,
+            2.3795585131380914
+          ],
+          "ci_familywise95_3collections": [
+            2.1492150490784,
+            2.4014390808595554
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 1.8091648481230531,
+          "maximum_speedup": 2.749769464502572
+        },
+        "control_over_released": {
+          "geometric_speedup": 9.067185538992161,
+          "ci95": [
+            8.335897165308014,
+            9.858137054905155
+          ],
+          "ci_familywise95_3collections": [
+            8.179063736449118,
+            10.051828650219084
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 6.750339845329047,
+          "maximum_speedup": 11.685097477250691
+        },
+        "control_over_stream": {
+          "geometric_speedup": 11.533577079914856,
+          "ci95": [
+            10.432519362949117,
+            12.71257262593503
+          ],
+          "ci_familywise95_3collections": [
+            10.190125856827363,
+            12.993992411610888
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 8.092773835739337,
+          "maximum_speedup": 15.164390222097252
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.2720129118695453,
+          "ci95": [
+            1.2471910506874793,
+            1.297730235465404
+          ],
+          "ci_familywise95_3collections": [
+            1.242392618155043,
+            1.303206482112164
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 1.173576286490719,
+          "maximum_speedup": 1.4024097194112222
+        }
+      },
+      "label_block_sensitivity": {
+        "external_over_control": {
+          "geometric_speedup": 2.27405508834852,
+          "blocks": 17,
+          "ci95": [
+            2.1686231811302954,
+            2.3780701165057607
+          ],
+          "ci_familywise95_3collections": [
+            2.144679216853033,
+            2.4032914342264444
+          ]
+        },
+        "control_over_released": {
+          "geometric_speedup": 9.067185538992161,
+          "blocks": 17,
+          "ci95": [
+            8.320906430256242,
+            9.85571131516133
+          ],
+          "ci_familywise95_3collections": [
+            8.192009846296612,
+            10.01545458981095
+          ]
+        },
+        "control_over_stream": {
+          "geometric_speedup": 11.533577079914851,
+          "blocks": 17,
+          "ci95": [
+            10.412832685672427,
+            12.70469156422462
+          ],
+          "ci_familywise95_3collections": [
+            10.209426657675944,
+            12.943729534665804
+          ]
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.2720129118695453,
+          "blocks": 17,
+          "ci95": [
+            1.246529684486304,
+            1.2979025131141568
+          ],
+          "ci_familywise95_3collections": [
+            1.2414154429485198,
+            1.304369927289509
+          ]
+        }
+      },
+      "workflow_seconds": {
+        "released": [
+          0.069138958,
+          0.06444316600000001,
+          0.067358334
+        ],
+        "stream": [
+          0.051801208,
+          0.052570667,
+          0.054412625000000006
+        ],
+        "klein_support": [
+          0.570870042,
+          0.527311167,
+          0.533009917
+        ],
+        "external": [
+          1.167251875,
+          1.1906775,
+          1.156201542
+        ]
+      },
+      "workflow_medians": {
+        "released": 0.067358334,
+        "stream": 0.052570667,
+        "klein_support": 0.533009917,
+        "external": 1.167251875
+      },
+      "workflow_comparisons": {
+        "external_over_control": {
+          "median_ratio": 2.189925248614089,
+          "paired_trial_ratios": {
+            "geometric_speedup": 2.155514358675304,
+            "ci95": [
+              2.0446893147705234,
+              2.25801684947059
+            ],
+            "ci_familywise95_3collections": [
+              2.0446893147705234,
+              2.25801684947059
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 2.0446893147705234,
+            "maximum_speedup": 2.25801684947059
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "control_over_released": {
+          "median_ratio": 7.913050774088325,
+          "paired_trial_ratios": {
+            "geometric_speedup": 8.116139288622614,
+            "ci95": [
+              7.913050774088325,
+              8.256850529913976
+            ],
+            "ci_familywise95_3collections": [
+              7.913050774088325,
+              8.256850529913976
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 7.913050774088325,
+            "maximum_speedup": 8.256850529913974
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "control_over_stream": {
+          "median_ratio": 10.138922471727437,
+          "paired_trial_ratios": {
+            "geometric_speedup": 10.268779286364415,
+            "ci95": [
+              9.795703056046275,
+              11.020400180628991
+            ],
+            "ci_familywise95_3collections": [
+              9.795703056046275,
+              11.020400180628991
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 9.795703056046275,
+            "maximum_speedup": 11.020400180628993
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "released_over_stream": {
+          "median_ratio": 1.281291218922522,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.2652295532630176,
+            "ci95": [
+              1.2258388503992161,
+              1.33469779314799
+            ],
+            "ci_familywise95_3collections": [
+              1.2258388503992161,
+              1.33469779314799
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 1.2258388503992161,
+            "maximum_speedup": 1.33469779314799
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        }
+      }
+    },
+    "SMD": {
+      "series": 36,
+      "case_medians": {
+        "180_SMD_id_3_Facility_tr_5925_1st_17580": {
+          "released": 0.010913167000000001,
+          "stream": 0.009511979,
+          "klein_support": 0.0481885,
+          "external": 0.1496656875
+        },
+        "181_SMD_id_4_Facility_tr_5000_1st_15144": {
+          "released": 0.007906333500000001,
+          "stream": 0.0064369580000000004,
+          "klein_support": 0.057579937500000004,
+          "external": 0.14914483300000003
+        },
+        "182_SMD_id_5_Facility_tr_7174_1st_21230": {
+          "released": 0.009397854,
+          "stream": 0.0078626045,
+          "klein_support": 0.065846604,
+          "external": 0.215577959
+        },
+        "183_SMD_id_6_Facility_tr_5925_1st_17580": {
+          "released": 0.0076913755,
+          "stream": 0.0063641875,
+          "klein_support": 0.05588791700000001,
+          "external": 0.168222375
+        },
+        "184_SMD_id_7_Facility_tr_7119_1st_15849": {
+          "released": 0.013786583500000001,
+          "stream": 0.011135541,
+          "klein_support": 0.0889110625,
+          "external": 0.215745229
+        },
+        "185_SMD_id_8_Facility_tr_5000_1st_15144": {
+          "released": 0.0077634375,
+          "stream": 0.006273250000000001,
+          "klein_support": 0.057630625000000005,
+          "external": 0.14862516650000002
+        },
+        "186_SMD_id_9_Facility_tr_5925_1st_17580": {
+          "released": 0.0075339165000000005,
+          "stream": 0.006222604,
+          "klein_support": 0.058155208,
+          "external": 0.1714521045
+        },
+        "187_SMD_id_10_Facility_tr_5000_1st_15849": {
+          "released": 0.009799771000000002,
+          "stream": 0.007838916500000001,
+          "klein_support": 0.069637166,
+          "external": 0.162820708
+        },
+        "188_SMD_id_11_Facility_tr_500_1st_392": {
+          "released": 0.012114312,
+          "stream": 0.0106386875,
+          "klein_support": 0.05474058350000001,
+          "external": 0.1592943545
+        },
+        "189_SMD_id_12_Facility_tr_5925_1st_17580": {
+          "released": 0.007586896000000001,
+          "stream": 0.006204104,
+          "klein_support": 0.058355146000000004,
+          "external": 0.17364075
+        },
+        "190_SMD_id_13_Facility_tr_7119_1st_15849": {
+          "released": 0.0127281255,
+          "stream": 0.0101160625,
+          "klein_support": 0.090394229,
+          "external": 0.22087025
+        },
+        "191_SMD_id_14_Facility_tr_4596_1st_4696": {
+          "released": 0.007589521,
+          "stream": 0.006169708500000001,
+          "klein_support": 0.0564315415,
+          "external": 0.1701911665
+        },
+        "192_SMD_id_15_Facility_tr_5925_1st_17580": {
+          "released": 0.0095898125,
+          "stream": 0.0081270835,
+          "klein_support": 0.0574268335,
+          "external": 0.17303785400000002
+        },
+        "193_SMD_id_16_Facility_tr_5925_1st_17580": {
+          "released": 0.007620542000000001,
+          "stream": 0.00636275,
+          "klein_support": 0.052309812500000004,
+          "external": 0.17467143750000003
+        },
+        "194_SMD_id_17_Facility_tr_5925_1st_17580": {
+          "released": 0.009333645500000001,
+          "stream": 0.007875875000000001,
+          "klein_support": 0.054235979000000004,
+          "external": 0.1637911875
+        },
+        "195_SMD_id_18_Facility_tr_5925_1st_17580": {
+          "released": 0.008064313,
+          "stream": 0.006529667000000001,
+          "klein_support": 0.058519417000000004,
+          "external": 0.1731304375
+        },
+        "196_SMD_id_19_Facility_tr_7174_1st_21230": {
+          "released": 0.0092246875,
+          "stream": 0.007765458,
+          "klein_support": 0.0653360835,
+          "external": 0.2070500835
+        },
+        "197_SMD_id_20_Facility_tr_5000_1st_15144": {
+          "released": 0.0079046875,
+          "stream": 0.0064003540000000005,
+          "klein_support": 0.05849412500000001,
+          "external": 0.148050083
+        },
+        "198_SMD_id_21_Facility_tr_5925_1st_17580": {
+          "released": 0.0076332085000000004,
+          "stream": 0.006511479000000001,
+          "klein_support": 0.05480887500000001,
+          "external": 0.1660041255
+        },
+        "199_SMD_id_22_Facility_tr_5925_1st_17580": {
+          "released": 0.0071976665,
+          "stream": 0.006165646,
+          "klein_support": 0.052610000000000004,
+          "external": 0.1677624165
+        },
+        "200_SMD_id_23_Facility_tr_7174_1st_21230": {
+          "released": 0.008758063,
+          "stream": 0.0073518540000000005,
+          "klein_support": 0.06652822950000001,
+          "external": 0.224585437
+        },
+        "201_SMD_id_24_Facility_tr_7174_1st_21230": {
+          "released": 0.0095554375,
+          "stream": 0.007983437500000001,
+          "klein_support": 0.06602816650000001,
+          "external": 0.215864875
+        },
+        "202_SMD_id_25_Facility_tr_6250_1st_21230": {
+          "released": 0.0080816045,
+          "stream": 0.006725354,
+          "klein_support": 0.058658958500000004,
+          "external": 0.18037041650000002
+        },
+        "203_SMD_id_26_Facility_tr_7174_1st_21230": {
+          "released": 0.009231063000000001,
+          "stream": 0.007777041500000001,
+          "klein_support": 0.0671015625,
+          "external": 0.2279418545
+        },
+        "204_SMD_id_27_Facility_tr_5000_1st_15144": {
+          "released": 0.0078097915,
+          "stream": 0.006423750000000001,
+          "klein_support": 0.06052231250000001,
+          "external": 0.1523352295
+        },
+        "205_SMD_id_28_Facility_tr_5925_1st_17580": {
+          "released": 0.007456146,
+          "stream": 0.0062926250000000005,
+          "klein_support": 0.053700708,
+          "external": 0.1653685835
+        },
+        "206_SMD_id_29_Facility_tr_6250_1st_21230": {
+          "released": 0.007667104500000001,
+          "stream": 0.0065184375,
+          "klein_support": 0.05451152050000001,
+          "external": 0.176102396
+        },
+        "207_SMD_id_30_Facility_tr_7174_1st_21230": {
+          "released": 0.008879312,
+          "stream": 0.007577375000000001,
+          "klein_support": 0.061284104500000006,
+          "external": 0.215598375
+        },
+        "208_SMD_id_31_Facility_tr_5000_1st_15144": {
+          "released": 0.0084250625,
+          "stream": 0.006847271,
+          "klein_support": 0.058529604500000006,
+          "external": 0.1512442715
+        },
+        "209_SMD_id_32_Facility_tr_5925_1st_17580": {
+          "released": 0.007218354,
+          "stream": 0.005850896,
+          "klein_support": 0.053827271,
+          "external": 0.17389704150000002
+        },
+        "210_SMD_id_33_Facility_tr_5925_1st_17580": {
+          "released": 0.008089396,
+          "stream": 0.006430854000000001,
+          "klein_support": 0.053031729,
+          "external": 0.17315541650000002
+        },
+        "211_SMD_id_34_Facility_tr_5925_1st_17580": {
+          "released": 0.007786062000000001,
+          "stream": 0.00634025,
+          "klein_support": 0.057382417000000005,
+          "external": 0.17108958350000003
+        },
+        "212_SMD_id_35_Facility_tr_5925_1st_17580": {
+          "released": 0.007545687000000001,
+          "stream": 0.0063480210000000006,
+          "klein_support": 0.056942688000000005,
+          "external": 0.16998866700000004
+        },
+        "213_SMD_id_36_Facility_tr_5925_1st_17580": {
+          "released": 0.007468354,
+          "stream": 0.0062870205000000005,
+          "klein_support": 0.055091167,
+          "external": 0.165844438
+        },
+        "214_SMD_id_37_Facility_tr_5925_1st_17580": {
+          "released": 0.007087437,
+          "stream": 0.005969479000000001,
+          "klein_support": 0.0564326455,
+          "external": 0.17004022900000001
+        },
+        "215_SMD_id_38_Facility_tr_5925_1st_17580": {
+          "released": 0.007744916500000001,
+          "stream": 0.0063628125,
+          "klein_support": 0.05534947950000001,
+          "external": 0.16644393700000001
+        }
+      },
+      "case_comparisons": {
+        "external_over_control": {
+          "geometric_speedup": 2.968081111459512,
+          "ci95": [
+            2.8661400907387415,
+            3.0666104957260725
+          ],
+          "ci_familywise95_3collections": [
+            2.8423179674395582,
+            3.089096945284643
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 2.338129440821874,
+          "maximum_speedup": 3.5180146101343457
+        },
+        "control_over_released": {
+          "geometric_speedup": 6.969193690387361,
+          "ci95": [
+            6.6607331141384725,
+            7.2270347428828625
+          ],
+          "ci_familywise95_3collections": [
+            6.585780292053949,
+            7.269713285761709
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 4.415629303574296,
+          "maximum_speedup": 7.962348801125146
+        },
+        "control_over_stream": {
+          "geometric_speedup": 8.39594140585983,
+          "ci95": [
+            7.986166726313974,
+            8.737377754193245
+          ],
+          "ci_familywise95_3collections": [
+            7.890516155899776,
+            8.793811377573041
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 5.066085616883721,
+          "maximum_speedup": 9.453529445367007
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.2047220638221585,
+          "ci95": [
+            1.1950278977789577,
+            1.2142079375089463
+          ],
+          "ci_familywise95_3collections": [
+            1.1927352895724062,
+            1.2162310427054148
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 1.1387036229798084,
+          "maximum_speedup": 1.2582094564955484
+        }
+      },
+      "label_block_sensitivity": {
+        "external_over_control": {
+          "geometric_speedup": 2.8689662687403117,
+          "blocks": 9,
+          "ci95": [
+            2.64571058196255,
+            3.092912005105375
+          ],
+          "ci_familywise95_3collections": [
+            2.600601682319231,
+            3.1377607454884187
+          ]
+        },
+        "control_over_released": {
+          "geometric_speedup": 6.772331432423103,
+          "blocks": 9,
+          "ci95": [
+            6.088498403775069,
+            7.2180204863860595
+          ],
+          "ci_familywise95_3collections": [
+            5.8353525612634485,
+            7.2525129710708
+          ]
+        },
+        "control_over_stream": {
+          "geometric_speedup": 8.170231099407445,
+          "blocks": 9,
+          "ci95": [
+            7.223394094312508,
+            8.79925499343985
+          ],
+          "ci_familywise95_3collections": [
+            6.897852484605622,
+            8.857834804237068
+          ]
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.206413357192145,
+          "blocks": 9,
+          "ci95": [
+            1.1837059939364316,
+            1.2273402379521736
+          ],
+          "ci_familywise95_3collections": [
+            1.1783259848112007,
+            1.2317924870752717
+          ]
+        }
+      },
+      "workflow_seconds": {
+        "released": [
+          0.38987925,
+          0.343625292,
+          0.337168375
+        ],
+        "stream": [
+          0.287516084,
+          0.28807875,
+          0.277272459
+        ],
+        "klein_support": [
+          2.2253128330000003,
+          2.1055902090000003,
+          2.14628875
+        ],
+        "external": [
+          6.475730125,
+          6.37257425,
+          6.374707833
+        ]
+      },
+      "workflow_medians": {
+        "released": 0.343625292,
+        "stream": 0.287516084,
+        "klein_support": 2.14628875,
+        "external": 6.374707833
+      },
+      "workflow_comparisons": {
+        "external_over_control": {
+          "median_ratio": 2.9701072761062557,
+          "paired_trial_ratios": {
+            "geometric_speedup": 2.9684993088927847,
+            "ci95": [
+              2.9100313578248254,
+              3.02650260376472
+            ],
+            "ci_familywise95_3collections": [
+              2.9100313578248254,
+              3.02650260376472
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 2.910031357824826,
+            "maximum_speedup": 3.0265026037647194
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "control_over_released": {
+          "median_ratio": 6.2460150634080795,
+          "paired_trial_ratios": {
+            "geometric_speedup": 6.060805295803698,
+            "ci95": [
+              5.707697531992277,
+              6.365628893872387
+            ],
+            "ci_familywise95_3collections": [
+              5.707697531992277,
+              6.365628893872387
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 5.707697531992277,
+            "maximum_speedup": 6.365628893872386
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "control_over_stream": {
+          "median_ratio": 7.464934553017911,
+          "paired_trial_ratios": {
+            "geometric_speedup": 7.5937738129986165,
+            "ci95": [
+              7.309078538420486,
+              7.740721014054986
+            ],
+            "ci_familywise95_3collections": [
+              7.309078538420486,
+              7.740721014054986
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 7.3090785384204855,
+            "maximum_speedup": 7.740721014054987
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        },
+        "released_over_stream": {
+          "median_ratio": 1.1951515449827843,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.2529314905160034,
+            "ci95": [
+              1.1928172140430353,
+              1.3560258771471025
+            ],
+            "ci_familywise95_3collections": [
+              1.1928172140430353,
+              1.3560258771471025
+            ],
+            "case_wins": 3,
+            "cases": 3,
+            "minimum_speedup": 1.1928172140430353,
+            "maximum_speedup": 1.3560258771471025
+          },
+          "scope": "three fixed-input timing trials, not fully position-balanced; not population uncertainty"
+        }
+      }
+    }
+  },
+  "max_reference_pr_error": 1.1102230246251565e-15,
+  "records": 2336,
+  "workflows": 36
+}

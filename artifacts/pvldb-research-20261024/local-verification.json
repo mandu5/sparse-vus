@@ -1,0 +1,42 @@
+{
+  "verified_utc": "2026-10-24T02:52:39.396151+00:00",
+  "status": "PASS",
+  "scope": "Local implementation/artifact verification; scientific effect sizes and independent review judgments are separate evidence.",
+  "test_command": "/opt/anaconda3/bin/python -m pytest -q",
+  "tests_passed": 3644,
+  "test_seconds": 76.75,
+  "frozen_sources": {
+    "full-precision": {
+      "status": "PASS",
+      "protocol_sha256": "307e0498f441901dbe0d686064ffd8f9ff4c683e5e5f1197a2297921561a3579",
+      "source_files": 11
+    },
+    "supplement": {
+      "status": "PASS",
+      "protocol_sha256": "b657a2e185d1a0731150f579e108f1e3ecef81fe0f8e37bb831d04cb098201a9",
+      "source_files": 14
+    },
+    "resources": {
+      "status": "PASS",
+      "protocol_sha256": "b5c51a22aa154e196fb219032c0c2c1391b6b096ae70fe211cccae329b8bebd1",
+      "source_files": 12
+    },
+    "operating-range": {
+      "status": "PASS",
+      "protocol_sha256": "ccae7854df988dca14db843dc8dbf6f640c2c578789a8c88ca7a7f8ecc66892e",
+      "source_files": 14
+    },
+    "klein-support-control": {
+      "status": "PASS",
+      "protocol_sha256": "0ef105ee4d2f6a80554e503ef4540e3a9b75379a6c9e61f539f5bd0c29d19ca9",
+      "source_files": 14
+    }
+  },
+  "pdf_pages": 10,
+  "pdf_sha256": "ad65d590ce52322a7dd641c5cb8767adf3244b81b7b4469ce1f9b2cfa2ce5670",
+  "body_sha256": "b6f1ae4b6523cdf4b38eaadad53d99f0d1f83a61233615c2e42bdd6cf9ea6840",
+  "tables_sha256": "c8fbfab4fd4e21527cc748b233fc8f7f6bd7ccba1fd2405cb58ecf76546c4aec",
+  "pdf_visual_check": "All ten rendered pages inspected; labels, tables, formulas and references readable. Redundant plot text removed and affected page rechecked.",
+  "fresh_reproduction_run": "https://github.com/mandu5/sparse-vus/actions/runs/40049786600",
+  "fresh_reproduction_scope": "Primary and public-comparator supplement, AMD EPYC7763. Additional followups have separate protocols/commands."
+}

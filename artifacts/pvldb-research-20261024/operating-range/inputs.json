@@ -1,0 +1,761 @@
+{
+  "status": "COMPLETE",
+  "protocol_sha256": "ccae7854df988dca14db843dc8dbf6f640c2c578789a8c88ca7a7f8ecc66892e",
+  "cases": [
+    {
+      "name": "170_MITDB_id_1_Medical_tr_17675_1st_17775",
+      "family": "MITDB",
+      "member": "TSB-AD-U/170_MITDB_id_1_Medical_tr_17675_1st_17775.csv",
+      "n": 500000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 22845,
+      "components": 49,
+      "raw_sha256": "a606f3cb9297bd82531b7509dfff6afc909c01cc04fb13a599a8a6455ae33ca7",
+      "observation_label_identity": "7e03eb098947c8b5c4ac77721de989880bb371b201540482d7adcf2c3b455809",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "170_MITDB_id_1_Medical_tr_17675_1st_17775.npz",
+      "npz_sha256": "25cae38eaae6fe660f4f9b09ea2615e1a871736691d42fcd33fb089514e561a4",
+      "score_sha256": "4ca83594fb2be23ee40375010ea4e76babdc4d6cbca5515fff4f75fc8829946d",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.1016147080226801,
+          "distinct": 493881,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 4.087108833016828,
+          "distinct": 495101,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 3.9795254579512402,
+          "distinct": 499959,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 2.3595148340100423,
+          "distinct": 499992,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.06760995899094269,
+          "distinct": 499992,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.058456833998207,
+          "distinct": 499992,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.40139416698366404,
+          "distinct": 87762,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.073699124972336,
+          "distinct": 499992,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "171_MITDB_id_2_Medical_tr_50000_1st_88864",
+      "family": "MITDB",
+      "member": "TSB-AD-U/171_MITDB_id_2_Medical_tr_50000_1st_88864.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 19657,
+      "components": 42,
+      "raw_sha256": "2b72e2036d7205cf432b15c83eefe2b6f9cb7ba300e207eba65414c1b6b1efc6",
+      "observation_label_identity": "878d2eb3a2f0cea2b1631969e5378828e5611a52c6c4386d1ef5358141a8abd1",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "171_MITDB_id_2_Medical_tr_50000_1st_88864.npz",
+      "npz_sha256": "1ab22e45a22e78718b217605ae6e147f27233035b0cb51486972b1c5e3e87a45",
+      "score_sha256": "1e84d1b3a29bab882c29b78625082196c711abe376066f46b55062dac1b95b29",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.2321415409678593,
+          "distinct": 613427,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 5.309591625002213,
+          "distinct": 632551,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 5.135589042038191,
+          "distinct": 649968,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 2.994284541986417,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.08270208403700963,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.06963437498779967,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.5497937920154072,
+          "distinct": 38615,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.09090683300746605,
+          "distinct": 649993,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "172_MITDB_id_3_Medical_tr_27274_1st_27374",
+      "family": "MITDB",
+      "member": "TSB-AD-U/172_MITDB_id_3_Medical_tr_27274_1st_27374.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 18109,
+      "components": 27,
+      "raw_sha256": "a89dde496d5e5ef40937f8f68ae515cf43be080ed6f76a8930b2bd9175cbf7fd",
+      "observation_label_identity": "e86f567526f783bd07fdd8e87859955d53acb606b008c68602511f8c4ef4c012",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "172_MITDB_id_3_Medical_tr_27274_1st_27374.npz",
+      "npz_sha256": "b8d4d147d39c8f84b6bc92f8eb6f1f57ef13b6252a9156c8efc62a34b33a075d",
+      "score_sha256": "df6207bb19cafa87c4dbfd69ccc3b0e4a53c52c2e3462271dbe1608c6ac412f1",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.2261636249604635,
+          "distinct": 391755,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 5.048419209022541,
+          "distinct": 550410,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 4.923202709003817,
+          "distinct": 649942,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 2.5700227500055917,
+          "distinct": 649990,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.08713454200187698,
+          "distinct": 649990,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.07012987503549084,
+          "distinct": 649990,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.5242955000139773,
+          "distinct": 25038,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.09127333300421014,
+          "distinct": 649990,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "173_MITDB_id_4_Medical_tr_13620_1st_13720",
+      "family": "MITDB",
+      "member": "TSB-AD-U/173_MITDB_id_4_Medical_tr_13620_1st_13720.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 66682,
+      "components": 199,
+      "raw_sha256": "3d5bf0285e945e291cceb9ead0549682026b87708ef001a4f4529d8e6eacb404",
+      "observation_label_identity": "b3a1a303bc87a7ae9559d0c5f454d79786678099e4d5c2ed24811e78500fbb65",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "173_MITDB_id_4_Medical_tr_13620_1st_13720.npz",
+      "npz_sha256": "7db1bfa35e7bc1187568c6ae2c04d2427119241852780ebdab40da9270b4652e",
+      "score_sha256": "8f5a3357907a0442067cb0181ebdaac4508d7321b3d0f834a510823a044b9a0a",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.1807827079901472,
+          "distinct": 581853,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 5.031456291966606,
+          "distinct": 607588,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 4.918835499964189,
+          "distinct": 649953,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 2.753732833021786,
+          "distinct": 649991,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.0822515839827247,
+          "distinct": 649991,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.07081175001803786,
+          "distinct": 649991,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.5539731669705361,
+          "distinct": 49586,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.09132041601696983,
+          "distinct": 649991,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "174_MITDB_id_5_Medical_tr_50000_1st_539948",
+      "family": "MITDB",
+      "member": "TSB-AD-U/174_MITDB_id_5_Medical_tr_50000_1st_539948.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 574,
+      "components": 2,
+      "raw_sha256": "ddbddf12bfa92594f5879627d7ea58156ff9e322227f626428fe75fc731ae23c",
+      "observation_label_identity": "ea7d11fd792c94266d4043f9930db4462b8fa946fc4c6283991702b956237d60",
+      "previously_measured_by_name": false,
+      "kind": "real",
+      "file": "174_MITDB_id_5_Medical_tr_50000_1st_539948.npz",
+      "npz_sha256": "ee13c9fa466632c4ba6618ca39e88f0b2daca2a3425f1c7a0e7f4f82f06bb09d",
+      "score_sha256": "64a141394edb02f9f17f6bc20bcb86e5579cd8afa20f30616a552b971ca7e221",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.2491092910058796,
+          "distinct": 600086,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 5.265796791005414,
+          "distinct": 622081,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 5.178155457950197,
+          "distinct": 649961,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 3.0218721670098603,
+          "distinct": 649985,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.08308274997398257,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.07327037496725097,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.5640228330157697,
+          "distinct": 54640,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.09105466597247869,
+          "distinct": 649993,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "175_MITDB_id_6_Medical_tr_27274_1st_27374",
+      "family": "MITDB",
+      "member": "TSB-AD-U/175_MITDB_id_6_Medical_tr_27274_1st_27374.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 18109,
+      "components": 27,
+      "raw_sha256": "57344affaa9c266075a31880bb723588dc5b908facd61e7b764736b784729495",
+      "observation_label_identity": "e22af36a3dfaed0ab34f35816908cbeaf077258a9f87012304793e26902d8c5d",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "175_MITDB_id_6_Medical_tr_27274_1st_27374.npz",
+      "npz_sha256": "d383cbae97b6f2c4fb0746d11362d0e002af0d20b876ab2680c4e44b567be71e",
+      "score_sha256": "21037e1f3d46880102f35c10381a0af3e084b9cce22a1ccdccb0e0f30badb5da",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.297982249991037,
+          "distinct": 637350,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 5.008647250011563,
+          "distinct": 638657,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 4.861288166954182,
+          "distinct": 649970,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 2.89535370800877,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.08547112497035414,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.07368545804638416,
+          "distinct": 649993,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.5866410000016913,
+          "distinct": 100417,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.09109758294653147,
+          "distinct": 649993,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "176_MITDB_id_7_Medical_tr_6232_1st_6332",
+      "family": "MITDB",
+      "member": "TSB-AD-U/176_MITDB_id_7_Medical_tr_6232_1st_6332.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 38272,
+      "components": 144,
+      "raw_sha256": "aaac15a1fb6df2c22de2c7baaa26e6f07c5120dd8940392969bddb495e032486",
+      "observation_label_identity": "9fc7936c70806d2d65192393065890030039b250d5aea48381d4b442ea1a9417",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "176_MITDB_id_7_Medical_tr_6232_1st_6332.npz",
+      "npz_sha256": "1554ffce256ed419e31458b6bce9a3a822d6bfe9146ccebda7b8f9d56aa3d58c",
+      "score_sha256": "9626ddad90d1bb94d891ecc525274bd758e7c9f325a40e403127f23992406182",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.3176596669945866,
+          "distinct": 639600,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 5.267808832984883,
+          "distinct": 622103,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 5.219925666984636,
+          "distinct": 649959,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 2.927649666031357,
+          "distinct": 649992,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.08482354099396616,
+          "distinct": 649992,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.07423974998528138,
+          "distinct": 649992,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.5965565840015188,
+          "distinct": 96606,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.09396045800531283,
+          "distinct": 649992,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "177_MITDB_id_8_Medical_tr_17675_1st_17775",
+      "family": "MITDB",
+      "member": "TSB-AD-U/177_MITDB_id_8_Medical_tr_17675_1st_17775.csv",
+      "n": 650000,
+      "models": 8,
+      "width": 30,
+      "positive_points": 27124,
+      "components": 60,
+      "raw_sha256": "00997821c495ed97ed2ea79683df779ef949adff9e4f6c840885701813bcb592",
+      "observation_label_identity": "348dbe184e41cee5067420ccc23842ace0981cc4c965263181ca1b96e436b4f9",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "177_MITDB_id_8_Medical_tr_17675_1st_17775.npz",
+      "npz_sha256": "a910dd774014637dac84bcfcbd73e3f981986111c3eee244edf87dbea8458612",
+      "score_sha256": "25c0dc28c07e3128d055cbfbbb393da35d0640350289de05d145c1d4390770cd",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 1.2040436660172418,
+          "distinct": 556061,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 5.1869811250362545,
+          "distinct": 627986,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 5.030474458995741,
+          "distinct": 649956,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 2.8025466660037637,
+          "distinct": 649994,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.08364241599338129,
+          "distinct": 649994,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.07153954199748114,
+          "distinct": 649994,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.5540311670047231,
+          "distinct": 33873,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.09111529204528779,
+          "distinct": 649994,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "name": "550_SWaT_id_1_Sensor_tr_43700_1st_43800",
+      "family": "SWaT",
+      "member": "TSB-AD-U/550_SWaT_id_1_Sensor_tr_43700_1st_43800.csv",
+      "n": 419919,
+      "models": 8,
+      "width": 30,
+      "positive_points": 50653,
+      "components": 27,
+      "raw_sha256": "5bfacad8722285d70fe3326c51f07002b86bf429f5bf8b5be9b2806debd66784",
+      "observation_label_identity": "e752e928255aaddb289cdceccc18587c04e9a80da483943fb5007f09c8d88ea9",
+      "previously_measured_by_name": true,
+      "kind": "real",
+      "file": "550_SWaT_id_1_Sensor_tr_43700_1st_43800.npz",
+      "npz_sha256": "8ac14abe6a303823ac698eb1392e9121953c04af876af478a9dbfadd0ef115df",
+      "score_sha256": "e79e95c6b1f742227ce3c65f172712ec1fce93ead8a33b8ec28f371f02fc18fe",
+      "model_details": {
+        "isolation_forest": {
+          "seconds": 0.7532825410016812,
+          "distinct": 119818,
+          "warnings": []
+        },
+        "local_outlier_factor": {
+          "seconds": 2.7998387909610756,
+          "distinct": 122282,
+          "warnings": []
+        },
+        "knn_distance": {
+          "seconds": 2.705438208009582,
+          "distinct": 118989,
+          "warnings": []
+        },
+        "one_class_svm": {
+          "seconds": 1.6427098339772783,
+          "distinct": 122866,
+          "warnings": []
+        },
+        "pca_reconstruction": {
+          "seconds": 0.05611670797225088,
+          "distinct": 122866,
+          "warnings": []
+        },
+        "kmeans_distance": {
+          "seconds": 0.047835791017860174,
+          "distinct": 122866,
+          "warnings": []
+        },
+        "histogram_density": {
+          "seconds": 0.3602067500469275,
+          "distinct": 57388,
+          "warnings": []
+        },
+        "shrinkage_mahalanobis": {
+          "seconds": 0.060710416990332305,
+          "distinct": 122866,
+          "warnings": []
+        }
+      }
+    },
+    {
+      "n": 1000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_00",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_00.npz",
+      "npz_sha256": "c6033424a0ed8eb60978c6bbc9a388059d1400c7eee52a24dc15f4e68aeb05a9",
+      "score_sha256": "dc2d5350cf73d2e1ce119f10af36589538de3790fb169067e14f521c5d0f6048"
+    },
+    {
+      "n": 10000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_01",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_01.npz",
+      "npz_sha256": "9f3a1dfbf8cde86431b52ff73911f4a5f1d62a2d44a9d12a12cfae36b9852c55",
+      "score_sha256": "abc4a11568683d36de23de521c934bea37c8531b3c9284ff4182fbdb69ea31ad"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_02",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_02.npz",
+      "npz_sha256": "286bd01e52f7b1f46f6fc76bcf325f5678389784c35f489795a43d3c3b9cf9de",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 1000000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_03",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_03.npz",
+      "npz_sha256": "a9375a8898dec8dfb31f19dec6c19f953c674d42888dcea70e03be0c1bc3cf1a",
+      "score_sha256": "0c61ae9253b4692fa031635abd282ce185fc7fc9bf04bc0ee47b490c93ee3ae9"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.001,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_04",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_04.npz",
+      "npz_sha256": "ef29269d30944269d1943bdeffbd16efe508481837f5c748798ca82d7396d520",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.1,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_05",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_05.npz",
+      "npz_sha256": "1b6072ef8026a9e34c5dc00b79359ba59ec88c7124e856c23908d08a1ee29a56",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.5,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_06",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_06.npz",
+      "npz_sha256": "deb7b049990d4495ed9d9e421d557319e4e9d1a7bd7afc12f56c1ff7edea88b5",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.9,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_07",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_07.npz",
+      "npz_sha256": "eafba8444b0d11af574cf5b7a8405db5ac19a037ddc1cdcc673c7a44e7a3c892",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 10,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_08",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_08.npz",
+      "npz_sha256": "d95979da3a1fed6fd3de97c994d657c58bea70518edaf23960fc51816247202e",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 100,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_09",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_09.npz",
+      "npz_sha256": "bbe4c2bbdf6e058174a4341ccbbc977def26602dbe6d4a9db2785118d0571fb4",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1000,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_10",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_10.npz",
+      "npz_sha256": "4aecc03437af90349c5a8cd27b6b9372b10bbecf3cdc7920ae0b36458e5e478d",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 1,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_11",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_11.npz",
+      "npz_sha256": "cc98038facd3a43e3c7d06f5da5b39a9efa490dd28ddd770d48018decf82c2f6",
+      "score_sha256": "da41f00a77003b23f558af5c30eafa06fcb45228d75770ae2ef20cbe85b38bfc"
+    },
+    {
+      "n": 100000,
+      "models": 32,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": null,
+      "name": "controlled_12",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_12.npz",
+      "npz_sha256": "bff7a08972d35a10d97c60e51f1e4e811afa14478e1251dbbe69d9ade54025eb",
+      "score_sha256": "1f22099e1870e5afe104163da7f13d8cf2db74143369e564b138f9a2a27dc898"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 0,
+      "levels": null,
+      "name": "controlled_13",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_13.npz",
+      "npz_sha256": "286bd01e52f7b1f46f6fc76bcf325f5678389784c35f489795a43d3c3b9cf9de",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 300,
+      "levels": null,
+      "name": "controlled_14",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_14.npz",
+      "npz_sha256": "286bd01e52f7b1f46f6fc76bcf325f5678389784c35f489795a43d3c3b9cf9de",
+      "score_sha256": "2fdd91ff979f121d0b09f6da346ddd826c57ac034b919617321f2afb3b624582"
+    },
+    {
+      "n": 100000,
+      "models": 8,
+      "positive_fraction": 0.01,
+      "components": 1,
+      "width": 30,
+      "levels": 16,
+      "name": "controlled_15",
+      "kind": "controlled",
+      "family": "controlled",
+      "file": "controlled_15.npz",
+      "npz_sha256": "f431e6492c373da6da66bc7e6b9d727f72edec9739b0108809a9280046c41580",
+      "score_sha256": "9b044f2d7bca9ccc0e7b96fb8c321b6717e90477855adefcbc479bc54b458298"
+    }
+  ]
+}

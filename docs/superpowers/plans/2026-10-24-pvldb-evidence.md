@@ -51,13 +51,13 @@ Files: `experiments/pvldb_full_precision.py`, `tests/test_pvldb_full_precision.p
 - [x] Freeze cohort and detector parameters without evaluating metrics; bind original archive/input hashes and reused-source identities.
 - [x] Generate eight detector-family scores on complete real inputs, with no output rounding or manufactured jitter.
 - [x] Freeze balanced trial orders and source hashes, then measure public exact baselines, ablations and stored-score workflow.
-- [ ] Compute per-collection paired confidence intervals, selection agreement, failure tails and resource costs.
-- [ ] Independently reconstruct results and provide one reproduction command.
+- [x] Compute per-collection paired confidence intervals, selection agreement, failure tails and resource costs.
+- [x] Independently reconstruct results and provide one reproduction command.
 
 ## Task 4: Scientific decision and review
 
 - [ ] Update all six gates with evidence; never count a prepared artifact as a result.
-- [ ] Obtain three independent reviews using verified venue criteria and public-review calibration.
+- [x] Obtain three independent reviews using verified venue criteria and public-review calibration.
 - [ ] For each remaining scientific failure, try three materially different remedies before changing the claim or target.
 - [ ] Select the supported research-score band and venue; only supported results enter the manuscript.
 - [ ] Prepare the final submission path if gates pass; preserve actual submission/acceptance receipts separately.

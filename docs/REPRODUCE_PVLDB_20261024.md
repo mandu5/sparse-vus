@@ -3,7 +3,8 @@
 This is the complete exact-evaluator study, distinct from the narrower
 `certified_sampling` manuscript. The original recorded evidence is immutable.
 The command below generates new scores, executes the complete primary and
-supplementary experiments, and reconstructs their tables in a **new directory**.
+supplementary experiments, and reconstructs their numerical tables as JSON in a
+**new directory**. It does not compile the manuscript or produce its TeX tables.
 
 ## Recorded environment and command
 
@@ -45,7 +46,21 @@ The destination contains:
 - Raw `records.jsonl` and `workflows.jsonl`, frozen protocols and all stored
   scores in `.cache/pvldb-full-precision-20261024/`.
 
-Fresh scores may differ in floating-point rounding across platforms. The
+Render the four primary/supplemental TeX tables from these fresh audited JSON
+files with a separate command:
+
+```sh
+python experiments/render_pvldb20261024_tables.py --evidence /tmp/pvldb-independent-replica/artifacts/pvldb-research-20261024 --output /tmp/fresh-pvldb-tables.tex
+```
+
+The optional resource table is included only when that evidence directory also
+contains its separate completed resource study. It is not silently copied from
+the original run. The manuscript combines the recorded studies and explicitly
+identified follow-ups; compiling it is separate from reproducing the numerical
+results.
+
+Fresh scores can differ across platforms; the observed SVM difference has not
+been attributed to a particular numerical-library operation. The
 source, cohort, methods, parameters, method orders, widths and measurement
 contracts must match the recorded design. Scores are never rounded or jittered
 to manufacture cardinality. Public-call correctness is checked against exact
@@ -98,3 +113,70 @@ does not independently rerun the numerical operator or recover unrecorded data.
 The v3 receipt supersedes v1's incomplete statistical/input-binding coverage and
 v2's missing rejection of additional unmeasured summary entries.
 The frozen timing producers and metric sources were not changed by this repair.
+
+## Separately frozen operating-range follow-up
+
+The follow-up uses all eight MITDB and the one SWaT recording in the archive,
+plus sixteen explicitly synthetic one-factor conditions. It does not replace
+the 73-case primary study. A separate fresh-workspace driver is available:
+
+```sh
+python experiments/reproduce_pvldb_operating_range.py --output /tmp/pvldb-operating-replica
+```
+
+It creates a fresh primary protocol without rerunning the primary measurements,
+checks every follow-up protocol field except its new creation timestamp, then
+generates, times and independently audits the follow-up. The original follow-up
+was executed through these stages; the wrapper's orchestration is covered by
+focused checks, rather than a second completed end-to-end follow-up execution.
+The completed second-CPU receipt above covers the primary and supplement.
+
+To audit the recorded follow-up with its generated input arrays present:
+
+```sh
+python experiments/audit_pvldb_operating_range.py --output /tmp/operating-record-audit.json
+python experiments/plot_pvldb_operating_range.py
+```
+
+The auditor independently reconstructs every prefix visit count with dense
+interval ramps, comparison sorting and complete-tie saturation. These counters
+belong to the active-prefix algorithm, not the width-major stream algorithm.
+Real diagnostic ROC is checked against recorded two-output reference values;
+controlled diagnostic ROC is only finite-checked because the producer did not
+record that reference. Seven/four case orders balance positions, whereas the
+three collection-workflow orders do not. Their intervals describe timing
+uncertainty on fixed recordings, not extra independent populations.
+
+The table renderer includes long-recording and resource tables only when the
+selected evidence folder contains those separate completed studies.
+
+## Minimal Klein ablation on a fresh primary workspace
+
+This newly constructed comparator changes one threshold expression in the
+hash-pinned Klein source in memory, while retaining its global counts and
+other operations. It is not represented as an unchanged public implementation.
+After completing the primary reproduction command, copy the following scripts
+into that new workspace and execute the separate freeze/run/audit sequence:
+
+```sh
+cp experiments/klein_support_control.py experiments/pvldb_klein_control.py experiments/audit_pvldb_klein_control.py /tmp/pvldb-independent-replica/experiments/
+python /tmp/pvldb-independent-replica/experiments/pvldb_klein_control.py freeze
+python /tmp/pvldb-independent-replica/experiments/pvldb_klein_control.py run
+python /tmp/pvldb-independent-replica/experiments/audit_pvldb_klein_control.py --root /tmp/pvldb-independent-replica --output /tmp/pvldb-independent-replica/artifacts/pvldb-research-20261024/klein-support-control/independent-report.json
+```
+
+The primary input and reference-record hashes are bound before the new control
+is timed. All 73 cases remain included. Eight case orders balance positions;
+the three workflow orders are explicitly not fully balanced. The independent
+report distinguishes the one-expression patch's gain, the remaining
+single-model evaluator gain, and batching. These are fixed-panel estimates.
+
+For the separate resource study, copy its driver into a fresh primary workspace
+and run its `freeze` then `run` stages. Its report records lifetime process RSS,
+not precise auxiliary-space usage or runtime:
+
+```sh
+cp experiments/pvldb_resources.py /tmp/pvldb-independent-replica/experiments/
+python /tmp/pvldb-independent-replica/experiments/pvldb_resources.py freeze
+python /tmp/pvldb-independent-replica/experiments/pvldb_resources.py run
+```

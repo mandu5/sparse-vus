@@ -1,0 +1,291 @@
+{
+  "created_utc": "2026-10-24T01:29:32.661828+00:00",
+  "status": "FROZEN_BEFORE_RESOURCE_OUTCOMES_AFTER_TIMING_RESULTS",
+  "source_sha256": {
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "experiments/pvldb_resources.py": "d081ab5e92508491ea472a353b5aae5632fa3e364684ba47ce2f3d2de4a49bab"
+  },
+  "primary_inputs_sha256": "9b1dc600e9f13052408c69a796064742236a12de8435ec32d897f7d9a04117b0",
+  "cases": [
+    {
+      "name": "182_SMD_id_5_Facility_tr_7174_1st_21230_M8",
+      "kind": "real",
+      "input": {
+        "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+        "family": "SMD",
+        "member": "TSB-AD-U/182_SMD_id_5_Facility_tr_7174_1st_21230.csv",
+        "n": 28696,
+        "positive_points": 198,
+        "raw_sha256": "8eebd0659e9057cd91e5ae6e6d252337d4a21e8ca680372d087f95c5fbdf75df",
+        "observation_label_identity": "7a65ff6d06294424af80d9b6392954c330d1c9c7fa3d9cee34a8aa899a24e70c",
+        "raw_recording_previously_measured_by_name": false,
+        "file": "0022.npz",
+        "npz_sha256": "e48341a282c369272cb240c2c799a02151dc9ff24dddc7f3fe8f142a57e8a662",
+        "bytes": 2095574,
+        "score_sha256": "b2ff8fb37d4ce45519f54316a66d8b191642b054308163ec87e1bb7ea80ba223",
+        "models": {
+          "isolation_forest": {
+            "seconds": 0.14009862503735349,
+            "distinct": 28498,
+            "warnings": []
+          },
+          "local_outlier_factor": {
+            "seconds": 0.2265783330076374,
+            "distinct": 27335,
+            "warnings": []
+          },
+          "knn_distance": {
+            "seconds": 0.20761254196986556,
+            "distinct": 28648,
+            "warnings": []
+          },
+          "one_class_svm": {
+            "seconds": 0.13129541702801362,
+            "distinct": 28696,
+            "warnings": []
+          },
+          "pca_reconstruction": {
+            "seconds": 0.005447167030069977,
+            "distinct": 28696,
+            "warnings": []
+          },
+          "kmeans_distance": {
+            "seconds": 0.0068211249890737236,
+            "distinct": 28696,
+            "warnings": []
+          },
+          "histogram_density": {
+            "seconds": 0.025575958017725497,
+            "distinct": 6713,
+            "warnings": []
+          },
+          "shrinkage_mahalanobis": {
+            "seconds": 0.005120540969073772,
+            "distinct": 28696,
+            "warnings": []
+          }
+        }
+      },
+      "models": 8
+    },
+    {
+      "name": "010_NAB_id_10_WebService_tr_500_1st_271_M8",
+      "kind": "real",
+      "input": {
+        "series": "010_NAB_id_10_WebService_tr_500_1st_271",
+        "family": "NAB",
+        "member": "TSB-AD-U/010_NAB_id_10_WebService_tr_500_1st_271.csv",
+        "n": 1000,
+        "positive_points": 148,
+        "raw_sha256": "af6be1972ec7cf6b33d267f7f96e38e9781fce87917c461870a1ff83dcd12c3f",
+        "observation_label_identity": "110b7d661e0488eedd12702c09f2e947a56a1e6cffdf66f5a300ee0178d83982",
+        "raw_recording_previously_measured_by_name": true,
+        "file": "0006.npz",
+        "npz_sha256": "35f0325e3991a76583deff922731d1ebb5e1c34a6162dda64784baf28b8498bf",
+        "bytes": 73766,
+        "score_sha256": "1470bc68389afd1a6130565a3caa67697f2f6deb828eca72e2ec8105bfff5343",
+        "models": {
+          "isolation_forest": {
+            "seconds": 0.07343033299548551,
+            "distinct": 999,
+            "warnings": []
+          },
+          "local_outlier_factor": {
+            "seconds": 0.013026833010371774,
+            "distinct": 1000,
+            "warnings": []
+          },
+          "knn_distance": {
+            "seconds": 0.005891416978556663,
+            "distinct": 996,
+            "warnings": []
+          },
+          "one_class_svm": {
+            "seconds": 0.007363832963164896,
+            "distinct": 1000,
+            "warnings": []
+          },
+          "pca_reconstruction": {
+            "seconds": 0.0010049580014310777,
+            "distinct": 1000,
+            "warnings": []
+          },
+          "kmeans_distance": {
+            "seconds": 0.0024544590269215405,
+            "distinct": 997,
+            "warnings": []
+          },
+          "histogram_density": {
+            "seconds": 0.0016800839803181589,
+            "distinct": 987,
+            "warnings": []
+          },
+          "shrinkage_mahalanobis": {
+            "seconds": 0.0008224579505622387,
+            "distinct": 1000,
+            "warnings": []
+          }
+        }
+      },
+      "models": 8
+    },
+    {
+      "name": "188_SMD_id_11_Facility_tr_500_1st_392_M8",
+      "kind": "real",
+      "input": {
+        "series": "188_SMD_id_11_Facility_tr_500_1st_392",
+        "family": "SMD",
+        "member": "TSB-AD-U/188_SMD_id_11_Facility_tr_500_1st_392.csv",
+        "n": 23703,
+        "positive_points": 817,
+        "raw_sha256": "f94e42cedd6d49a60b9b65d68d2ef0969a724c020e277589a3045b6d7d5d42fd",
+        "observation_label_identity": "6f7c41ab3c6e2602adb9d3ad916eef93bc31f67fe3450d98b7d640448c2c5507",
+        "raw_recording_previously_measured_by_name": true,
+        "file": "0028.npz",
+        "npz_sha256": "f4c207d8b266c077bcea9a4eb7c4dcff5387080d76d245db125b076dd368a312",
+        "bytes": 1731085,
+        "score_sha256": "f11e44df0c07846e6c48fe8a116e0977bfd4fa4f7e2dce638a4fb3708d4e1111",
+        "models": {
+          "isolation_forest": {
+            "seconds": 0.10350879200268537,
+            "distinct": 653,
+            "warnings": []
+          },
+          "local_outlier_factor": {
+            "seconds": 0.12580783298471943,
+            "distinct": 708,
+            "warnings": []
+          },
+          "knn_distance": {
+            "seconds": 0.10922362498240545,
+            "distinct": 628,
+            "warnings": []
+          },
+          "one_class_svm": {
+            "seconds": 0.10704591602552682,
+            "distinct": 684,
+            "warnings": []
+          },
+          "pca_reconstruction": {
+            "seconds": 0.004020749998744577,
+            "distinct": 708,
+            "warnings": []
+          },
+          "kmeans_distance": {
+            "seconds": 0.005934000015258789,
+            "distinct": 699,
+            "warnings": []
+          },
+          "histogram_density": {
+            "seconds": 0.024056625028606504,
+            "distinct": 142,
+            "warnings": []
+          },
+          "shrinkage_mahalanobis": {
+            "seconds": 0.004343041975516826,
+            "distinct": 708,
+            "warnings": []
+          }
+        }
+      },
+      "models": 8
+    },
+    {
+      "name": "182_SMD_id_5_Facility_tr_7174_1st_21230_M32_repeated",
+      "kind": "real_repeated_models",
+      "input": {
+        "series": "182_SMD_id_5_Facility_tr_7174_1st_21230",
+        "family": "SMD",
+        "member": "TSB-AD-U/182_SMD_id_5_Facility_tr_7174_1st_21230.csv",
+        "n": 28696,
+        "positive_points": 198,
+        "raw_sha256": "8eebd0659e9057cd91e5ae6e6d252337d4a21e8ca680372d087f95c5fbdf75df",
+        "observation_label_identity": "7a65ff6d06294424af80d9b6392954c330d1c9c7fa3d9cee34a8aa899a24e70c",
+        "raw_recording_previously_measured_by_name": false,
+        "file": "0022.npz",
+        "npz_sha256": "e48341a282c369272cb240c2c799a02151dc9ff24dddc7f3fe8f142a57e8a662",
+        "bytes": 2095574,
+        "score_sha256": "b2ff8fb37d4ce45519f54316a66d8b191642b054308163ec87e1bb7ea80ba223",
+        "models": {
+          "isolation_forest": {
+            "seconds": 0.14009862503735349,
+            "distinct": 28498,
+            "warnings": []
+          },
+          "local_outlier_factor": {
+            "seconds": 0.2265783330076374,
+            "distinct": 27335,
+            "warnings": []
+          },
+          "knn_distance": {
+            "seconds": 0.20761254196986556,
+            "distinct": 28648,
+            "warnings": []
+          },
+          "one_class_svm": {
+            "seconds": 0.13129541702801362,
+            "distinct": 28696,
+            "warnings": []
+          },
+          "pca_reconstruction": {
+            "seconds": 0.005447167030069977,
+            "distinct": 28696,
+            "warnings": []
+          },
+          "kmeans_distance": {
+            "seconds": 0.0068211249890737236,
+            "distinct": 28696,
+            "warnings": []
+          },
+          "histogram_density": {
+            "seconds": 0.025575958017725497,
+            "distinct": 6713,
+            "warnings": []
+          },
+          "shrinkage_mahalanobis": {
+            "seconds": 0.005120540969073772,
+            "distinct": 28696,
+            "warnings": []
+          }
+        }
+      },
+      "models": 32
+    },
+    {
+      "name": "synthetic_n500000_M8_p0.01",
+      "kind": "synthetic_resource_only",
+      "n": 500000,
+      "models": 8,
+      "positive_fraction": 0.01
+    },
+    {
+      "name": "synthetic_n500000_M8_p0.5",
+      "kind": "synthetic_resource_only",
+      "n": 500000,
+      "models": 8,
+      "positive_fraction": 0.5
+    }
+  ],
+  "methods": [
+    "released",
+    "geometry",
+    "stream",
+    "dense"
+  ],
+  "repetitions": 3,
+  "width": 30,
+  "selection_rule": "Real maxima of n, support fraction and original component count, ties in frozen order; largest real case repeats eight scores four times for M32. Two declared synthetic density/resource stress cases.",
+  "measurement": "Fresh interpreter process per case/method/repetition; warm tiny JIT call, load/generate inputs, OS lifetime peak RSS before/after complete call. Includes interpreter/libraries/inputs. No auxiliary-memory inference from high-water delta; no timing comparison.",
+  "hardware": "macOS-26.6.1-arm64-arm-64bit",
+  "synthetic_scope": "Uniform fixed-seed scores and one centered anomaly interval test memory scaling, not real-data generalization."
+}

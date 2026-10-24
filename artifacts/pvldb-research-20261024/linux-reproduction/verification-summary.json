@@ -1,0 +1,329 @@
+{
+  "status": "VERIFIED_COMPLETED_REPRODUCTION",
+  "run_url": "https://github.com/mandu5/sparse-vus/actions/runs/40049786600",
+  "source_commit": "e1d504aba90dfd5bf7eaf1e6eb64e5765f859a3f",
+  "cpu": "AMD EPYC 7763 64-Core Processor",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "receipt_sha256": "cf5c8681954499f317e35efd4bca7b84442318a6b324732a0bac0d4e20e1899e",
+  "collections": {
+    "NAB": {
+      "case_primary_L30": {
+        "released": {
+          "geometric_speedup": 1.885731480545577,
+          "ci95": [
+            1.758621105118112,
+            2.0157290707731863
+          ],
+          "ci_familywise95_3collections": [
+            1.7318309785941022,
+            2.0427158017008105
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 1.4030888559037222,
+          "maximum_speedup": 2.3612088828408533
+        },
+        "geometry": {
+          "geometric_speedup": 1.1761421781544419,
+          "ci95": [
+            1.1635033951316225,
+            1.187969327534006
+          ],
+          "ci_familywise95_3collections": [
+            1.1606392848629656,
+            1.1900829959503911
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 1.1041731158744668,
+          "maximum_speedup": 1.2197755209135903
+        },
+        "saturation": {
+          "geometric_speedup": 1.9149633732232647,
+          "ci95": [
+            1.7727073780618232,
+            2.062559680255402
+          ],
+          "ci_familywise95_3collections": [
+            1.7432887120245937,
+            2.09173290004437
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 1.388310375683903,
+          "maximum_speedup": 2.4573885683213583
+        },
+        "dense": {
+          "geometric_speedup": 4.375040950376132,
+          "ci95": [
+            4.1717922627154795,
+            4.567733959869669
+          ],
+          "ci_familywise95_3collections": [
+            4.130228162554085,
+            4.605994214900068
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 3.388284085326469,
+          "maximum_speedup": 5.210986569858687
+        },
+        "external": {
+          "geometric_speedup": 31.443009638334736,
+          "ci95": [
+            26.228439345596477,
+            37.23464296604241
+          ],
+          "ci_familywise95_3collections": [
+            25.14274720156302,
+            38.49451969275712
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 13.687644938123338,
+          "maximum_speedup": 53.45220552220833
+        }
+      },
+      "workflow_primary": {
+        "released": 1.5438044896514387,
+        "geometry": 1.1396849714630684,
+        "stream": 1.0,
+        "saturation": 1.5501290161099592,
+        "dense": 3.7807006477536813,
+        "external": 20.05654686036043
+      },
+      "matched_pair_workflow": 22.38003258075747,
+      "klein250": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.02901452973430768
+      },
+      "klein1000": {
+        "series": 20,
+        "winner_set_changes": 0,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0,
+        "mean_minimum_regret": 0.0,
+        "maximum_scalar_error": 0.002547685534740135
+      }
+    },
+    "SMAP": {
+      "case_primary_L30": {
+        "released": {
+          "geometric_speedup": 1.5795184196476957,
+          "ci95": [
+            1.5353116338602104,
+            1.6308977640685225
+          ],
+          "ci_familywise95_3collections": [
+            1.525744150441706,
+            1.6439428836989158
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 1.4361376722835775,
+          "maximum_speedup": 1.887775464664974
+        },
+        "geometry": {
+          "geometric_speedup": 1.052191565703604,
+          "ci95": [
+            1.0306260975020802,
+            1.0800603097873986
+          ],
+          "ci_familywise95_3collections": [
+            1.0275335065185636,
+            1.087190909135362
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 1.0070762086415133,
+          "maximum_speedup": 1.234640207371402
+        },
+        "saturation": {
+          "geometric_speedup": 1.6102998170502982,
+          "ci95": [
+            1.561634136806199,
+            1.666859421882506
+          ],
+          "ci_familywise95_3collections": [
+            1.5521845678799002,
+            1.6798476907645519
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 1.4619573161818449,
+          "maximum_speedup": 1.9338106403039201
+        },
+        "dense": {
+          "geometric_speedup": 4.935085492394487,
+          "ci95": [
+            4.465506491938794,
+            5.429838779776823
+          ],
+          "ci_familywise95_3collections": [
+            4.365964411071909,
+            5.543747204878969
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 3.5418973825998865,
+          "maximum_speedup": 6.6227641643143444
+        },
+        "external": {
+          "geometric_speedup": 26.504104972169838,
+          "ci95": [
+            23.972093218514967,
+            29.290990532479952
+          ],
+          "ci_familywise95_3collections": [
+            23.43658291176052,
+            29.88398573903445
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 17.75382676809483,
+          "maximum_speedup": 42.640397934777404
+        }
+      },
+      "workflow_primary": {
+        "released": 1.4375693639115592,
+        "geometry": 1.0509360551675238,
+        "stream": 1.0,
+        "saturation": 1.4609138779643283,
+        "dense": 4.116866783245183,
+        "external": 20.283014250359003
+      },
+      "matched_pair_workflow": 30.404174557341502,
+      "klein250": {
+        "series": 17,
+        "winner_set_changes": 5,
+        "minimum_regret_at_least_threshold": 2,
+        "maximum_regret_at_least_threshold": 2,
+        "maximum_regret": 0.058350549941163565,
+        "mean_minimum_regret": 0.004724813827827246,
+        "maximum_scalar_error": 0.35624969194006295
+      },
+      "klein1000": {
+        "series": 17,
+        "winner_set_changes": 1,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0034548666653926308,
+        "mean_minimum_regret": 0.00020322745090544888,
+        "maximum_scalar_error": 0.15931808592460575
+      }
+    },
+    "SMD": {
+      "case_primary_L30": {
+        "released": {
+          "geometric_speedup": 1.3403606447466574,
+          "ci95": [
+            1.325448177824973,
+            1.355692808635749
+          ],
+          "ci_familywise95_3collections": [
+            1.3221981200835715,
+            1.3591587443002326
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 1.2606725636526601,
+          "maximum_speedup": 1.440920898587207
+        },
+        "geometry": {
+          "geometric_speedup": 1.0522231836812295,
+          "ci95": [
+            1.0369516148600788,
+            1.0699821075056017
+          ],
+          "ci_familywise95_3collections": [
+            1.0340452935215023,
+            1.0740481257645846
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 1.0090207696024593,
+          "maximum_speedup": 1.201777610375652
+        },
+        "saturation": {
+          "geometric_speedup": 1.355985542607453,
+          "ci95": [
+            1.3431991675725776,
+            1.36852969208758
+          ],
+          "ci_familywise95_3collections": [
+            1.3402730061241488,
+            1.3715621071548738
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 1.2878998652657643,
+          "maximum_speedup": 1.439740265716201
+        },
+        "dense": {
+          "geometric_speedup": 6.022629632441459,
+          "ci95": [
+            5.683275947414077,
+            6.350957230929801
+          ],
+          "ci_familywise95_3collections": [
+            5.6102853347486885,
+            6.408229095009583
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 3.8406295776804167,
+          "maximum_speedup": 7.3709553024906
+        },
+        "external": {
+          "geometric_speedup": 18.503206682892365,
+          "ci95": [
+            17.62944067179534,
+            19.31698292491269
+          ],
+          "ci_familywise95_3collections": [
+            17.432662605345648,
+            19.48969598821612
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 11.904381807557302,
+          "maximum_speedup": 22.32890983913424
+        }
+      },
+      "workflow_primary": {
+        "released": 1.2987732076369876,
+        "geometry": 1.0559317275678872,
+        "stream": 1.0,
+        "saturation": 1.3122127679220983,
+        "dense": 5.454704984909946,
+        "external": 16.172308107042685
+      },
+      "matched_pair_workflow": 42.54786345851139,
+      "klein250": {
+        "series": 36,
+        "winner_set_changes": 8,
+        "minimum_regret_at_least_threshold": 1,
+        "maximum_regret_at_least_threshold": 1,
+        "maximum_regret": 0.05430814864072597,
+        "mean_minimum_regret": 0.0020403853290079533,
+        "maximum_scalar_error": 0.33708509542229625
+      },
+      "klein1000": {
+        "series": 36,
+        "winner_set_changes": 2,
+        "minimum_regret_at_least_threshold": 0,
+        "maximum_regret_at_least_threshold": 0,
+        "maximum_regret": 0.0028258873761350944,
+        "mean_minimum_regret": 8.139071511363406e-05,
+        "maximum_scalar_error": 0.09344592710341748
+      }
+    }
+  },
+  "qualification": "One hosted x86 CPU environment. Scores regenerated; do not pool with Mac intervals. Artifact retains records, input hashes and audits; the large generated NPZ arrays stayed on the runner and must be regenerated for a new input audit."
+}

@@ -1,0 +1,118 @@
+{
+  "status": "FROZEN_AFTER_PRIMARY_AND_LONG_FOLLOWUP_BEFORE_THIS_CONTROL_TIMING",
+  "created_utc": "2026-10-24T02:37:39.661148+00:00",
+  "primary_protocol_sha256": "307e0498f441901dbe0d686064ffd8f9ff4c683e5e5f1197a2297921561a3579",
+  "inputs_sha256": "9b1dc600e9f13052408c69a796064742236a12de8435ec32d897f7d9a04117b0",
+  "primary_records_sha256": "2b9d5dbd101d0784cec0ec2afc60ca8e20fc959a3f7457423b08209d4f0daab0",
+  "source_sha256": {
+    "experiments/pvldb_full_precision.py": "83cc8d5cbbf11a7c1a2e2d8ec386abdd3d64f1b311721f9be2866a54cd40315d",
+    "experiments/fast_vus_adapter.py": "1f0d6c37f1ac751e9f0b0ebb5f669b197927e320bb86fb19a01d3e589769ffd3",
+    "src/sparse_vus/batch.py": "43bd8648a769b94e38d4310e0c7300d067764802132dbee9b55d737e11ddee14",
+    "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+    "src/sparse_vus/radix.py": "d8d45d3cc15105f1771aa37cf3cac95b6138a2f1ee38ee464fc940c54a55a3f5",
+    "src/sparse_vus/compiled.py": "3b73ea67e23d92c00018d9a31646bac3bc03b781caca3dfa5ef9155fa47c2f32",
+    "src/sparse_vus/pr_compiled.py": "60afd9a2bc584bf670500d772552625064cdec01bb00ae76246006c163b70646",
+    "src/sparse_vus/dense_radix.py": "61af156345f4fcc89702a24f5ec56b6f2c722295f4b6242ec7ec944fa4d50513",
+    "src/sparse_vus/saturation.py": "319271b40a5f029e71088eedc2830d98665f55f5f7dbbbe3b1d03b5fdc7a1914",
+    "src/sparse_vus/sampling.py": "6ea098351b40d9155db1fc64262c91537c425842138c1fc5aeafe3a6fa10b101",
+    ".cache/fast_vus/fast_vus.py": "15b7afb94da0e1f1b1c408fe44b937d910935c19f8eb76f42ae6719f9cfcb52b",
+    "experiments/pvldb_klein_control.py": "54ba812eb0f77bec740c1ec9ee2419b82689e2b2676ee8bef6204eb667d945da",
+    "experiments/klein_support_control.py": "313bbac796a0738d41e6a04e5c30295016aaa916cd53f56fa7a6737d989aafe3",
+    "experiments/audit_pvldb20261024.py": "4cf06015fd728405f85e6262ce5d43053d9061a4008cff2ced833185caf3a005"
+  },
+  "methods": [
+    "released",
+    "stream",
+    "klein_support",
+    "external"
+  ],
+  "orders": [
+    [
+      "released",
+      "stream",
+      "klein_support",
+      "external"
+    ],
+    [
+      "stream",
+      "klein_support",
+      "external",
+      "released"
+    ],
+    [
+      "klein_support",
+      "external",
+      "released",
+      "stream"
+    ],
+    [
+      "external",
+      "released",
+      "stream",
+      "klein_support"
+    ],
+    [
+      "external",
+      "klein_support",
+      "stream",
+      "released"
+    ],
+    [
+      "released",
+      "external",
+      "klein_support",
+      "stream"
+    ],
+    [
+      "stream",
+      "released",
+      "external",
+      "klein_support"
+    ],
+    [
+      "klein_support",
+      "stream",
+      "released",
+      "external"
+    ]
+  ],
+  "workflow_orders": [
+    [
+      "released",
+      "stream",
+      "klein_support",
+      "external"
+    ],
+    [
+      "stream",
+      "klein_support",
+      "external",
+      "released"
+    ],
+    [
+      "klein_support",
+      "external",
+      "released",
+      "stream"
+    ]
+  ],
+  "width": 30,
+  "parity_atol": 1e-11,
+  "winner_tie_atol": 1e-10,
+  "patch": {
+    "old": "th = asc[::-1][np.linspace(0, n - 1, thre).astype(int)]",
+    "new": "th = np.unique(x[np.flatnonzero(_cover(*_merge(s, e, window // 2, n), n))])[::-1]"
+  },
+  "cohort": "All 73 fixed primary recordings and eight stored float64 scores; no new scores or exclusions.",
+  "hypothesis": "Measure how much one support-threshold expression explains the unchanged public Klein gap; compare remaining gain to the single-model released evaluator separately from batching.",
+  "timing": "Serial single numerical thread, warm imports/JIT, complete public calls and winner selection; eight case orders balance each position twice. Three file-to-decision collection passes are not fully position balanced.",
+  "comparisons": [
+    "external_over_control",
+    "control_over_released",
+    "control_over_stream",
+    "released_over_stream"
+  ],
+  "uncertainty": "10000 seeded paired log-ratio resamples of case medians, familywise95 over three collections per comparison; identical-label-block sensitivity. Workflow intervals concern only three fixed-input trials.",
+  "failure_policy": "Retain every loss. Nonfinite output, PR discrepancy above tolerance or different winner set halts with no replacement.",
+  "scope": "The modified Klein implementation is a new author-created ablation, not an unchanged public baseline or a claim that the idea is absent from prior work."
+}

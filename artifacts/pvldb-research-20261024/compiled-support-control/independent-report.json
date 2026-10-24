@@ -1,0 +1,921 @@
+{
+  "status": "PASS",
+  "audit_kind": "raw-record reconstruction, not fresh timing",
+  "auditor_sha256": "5ddbb19e4c76a5768a6a966da22dbce1c6c7c8c8d694473805ffb45b318ef5c8",
+  "shared_auditor_sha256": "9ea6ae36568d54b0bdc9d830e138c94a5aea936003602a59a25a4e458a46cdf0",
+  "base_auditor_sha256": "4cf06015fd728405f85e6262ce5d43053d9061a4008cff2ced833185caf3a005",
+  "protocol_sha256": "13dd166e907be1756c07d9f2216e86bf61016409901408aa94cc4068adb828b5",
+  "records_sha256": "846e9147300a3d49c5cb756b5ebce18d2c6a6c7580ac98243d3bfdf552f5d950",
+  "workflows_sha256": "bd082af600f885de1e833e5312328e319b88bd27ff32bd9812429dfa4681c4d6",
+  "qualification": "Post-review author-created compiled control. Same ranking/validation, conventional per-width ramps. Not an unchanged public comparator.",
+  "collections": {
+    "NAB": {
+      "series": 20,
+      "case_medians": {
+        "003_NAB_id_3_WebService_tr_1362_1st_1462": {
+          "released": 0.008405271,
+          "stream": 0.0067250420000000005,
+          "support_cumsum": 0.007745125
+        },
+        "004_NAB_id_4_Facility_tr_1007_1st_1437": {
+          "released": 0.0020759585000000003,
+          "stream": 0.001462729,
+          "support_cumsum": 0.0018870205000000003
+        },
+        "005_NAB_id_5_Traffic_tr_594_1st_1645": {
+          "released": 0.001358625,
+          "stream": 0.000848916,
+          "support_cumsum": 0.0012433330000000001
+        },
+        "006_NAB_id_6_Traffic_tr_2579_1st_5839": {
+          "released": 0.005242354500000001,
+          "stream": 0.0038865205000000002,
+          "support_cumsum": 0.0047327295
+        },
+        "007_NAB_id_7_Traffic_tr_624_1st_2087": {
+          "released": 0.0015371875,
+          "stream": 0.0009900210000000002,
+          "support_cumsum": 0.0013695205000000001
+        },
+        "009_NAB_id_9_Traffic_tr_500_1st_438": {
+          "released": 0.0013451035,
+          "stream": 0.0008426460000000001,
+          "support_cumsum": 0.0012115835000000002
+        },
+        "010_NAB_id_10_WebService_tr_500_1st_271": {
+          "released": 0.0010205000000000001,
+          "stream": 0.000569354,
+          "support_cumsum": 0.0009253955
+        },
+        "011_NAB_id_11_Facility_tr_1007_1st_1526": {
+          "released": 0.002146396,
+          "stream": 0.001444646,
+          "support_cumsum": 0.0019113955
+        },
+        "013_NAB_id_13_Traffic_tr_623_1st_2084": {
+          "released": 0.0015037495000000001,
+          "stream": 0.000950542,
+          "support_cumsum": 0.0013683750000000002
+        },
+        "014_NAB_id_14_WebService_tr_500_1st_1045": {
+          "released": 0.0010688335,
+          "stream": 0.0006306665000000001,
+          "support_cumsum": 0.0009934585000000002
+        },
+        "016_NAB_id_16_Environment_tr_1816_1st_3540": {
+          "released": 0.0034505415000000003,
+          "stream": 0.002509896,
+          "support_cumsum": 0.0031168125000000002
+        },
+        "018_NAB_id_18_Facility_tr_500_1st_669": {
+          "released": 0.0013821035000000001,
+          "stream": 0.0009354375000000001,
+          "support_cumsum": 0.0012475835000000002
+        },
+        "019_NAB_id_19_Facility_tr_1007_1st_1171": {
+          "released": 0.0020889790000000004,
+          "stream": 0.0014316040000000002,
+          "support_cumsum": 0.0019105005
+        },
+        "021_NAB_id_21_WebService_tr_500_1st_565": {
+          "released": 0.001178875,
+          "stream": 0.0006991250000000001,
+          "support_cumsum": 0.001068646
+        },
+        "022_NAB_id_22_Facility_tr_1007_1st_2980": {
+          "released": 0.0022845,
+          "stream": 0.001558125,
+          "support_cumsum": 0.002068042
+        },
+        "023_NAB_id_23_Facility_tr_4512_1st_16551": {
+          "released": 0.007678771000000001,
+          "stream": 0.005963834,
+          "support_cumsum": 0.0070316665
+        },
+        "025_NAB_id_25_WebService_tr_3958_1st_4614": {
+          "released": 0.007406333000000001,
+          "stream": 0.005667437500000001,
+          "support_cumsum": 0.006810771
+        },
+        "026_NAB_id_26_Traffic_tr_624_1st_2261": {
+          "released": 0.0014424580000000002,
+          "stream": 0.000889958,
+          "support_cumsum": 0.0013194585
+        },
+        "027_NAB_id_27_Facility_tr_757_1st_2582": {
+          "released": 0.0014933750000000001,
+          "stream": 0.0009737505000000001,
+          "support_cumsum": 0.0013773745000000002
+        },
+        "028_NAB_id_28_Facility_tr_1007_1st_3447": {
+          "released": 0.002145833,
+          "stream": 0.0014903750000000002,
+          "support_cumsum": 0.001964458
+        }
+      },
+      "case_comparisons": {
+        "control_over_released": {
+          "geometric_speedup": 0.9097931809761558,
+          "ci95": [
+            0.9055109302538077,
+            0.9139680072489907
+          ],
+          "ci_familywise95_3collections": [
+            0.9045922688474387,
+            0.9148845086623612
+          ],
+          "case_wins": 0,
+          "cases": 20,
+          "minimum_speedup": 0.8905139126237656,
+          "maximum_speedup": 0.929479193906254
+        },
+        "control_over_stream": {
+          "geometric_speedup": 1.3574630011767546,
+          "ci95": [
+            1.3029343891748988,
+            1.4151191719421143
+          ],
+          "ci_familywise95_3collections": [
+            1.2912522859009892,
+            1.4266822250508515
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 1.1516842571392119,
+          "maximum_speedup": 1.6253429325165012
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.4920566888842524,
+          "ci95": [
+            1.4315679567401804,
+            1.5545843037310807
+          ],
+          "ci_familywise95_3collections": [
+            1.418916303738043,
+            1.5672955663651862
+          ],
+          "case_wins": 20,
+          "cases": 20,
+          "minimum_speedup": 1.249846618058296,
+          "maximum_speedup": 1.7923822437358834
+        }
+      },
+      "label_block_sensitivity": {
+        "control_over_released": {
+          "geometric_speedup": 0.9097931809761558,
+          "blocks": 20,
+          "ci95": [
+            0.9053632088459572,
+            0.9139837607374323
+          ],
+          "ci_familywise95_3collections": [
+            0.9042777262966639,
+            0.914958819334785
+          ]
+        },
+        "control_over_stream": {
+          "geometric_speedup": 1.3574630011767546,
+          "blocks": 20,
+          "ci95": [
+            1.302495671692133,
+            1.4157514794554944
+          ],
+          "ci_familywise95_3collections": [
+            1.2897969859121177,
+            1.4275003977561782
+          ]
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.4920566888842526,
+          "blocks": 20,
+          "ci95": [
+            1.4305063647582181,
+            1.5555792897714973
+          ],
+          "ci_familywise95_3collections": [
+            1.416579471218566,
+            1.5687284173108067
+          ]
+        }
+      },
+      "workflow_seconds": {
+        "released": [
+          0.06310425,
+          0.061889000000000007,
+          0.06436116700000001,
+          0.06542125,
+          0.066185084,
+          0.065357791
+        ],
+        "stream": [
+          0.048099958000000005,
+          0.048814792,
+          0.050048458000000004,
+          0.047969291000000004,
+          0.050854125,
+          0.050611333
+        ],
+        "support_cumsum": [
+          0.056651667,
+          0.058150583000000006,
+          0.057294417,
+          0.058214042,
+          0.061347333000000004,
+          0.0610435
+        ]
+      },
+      "workflow_medians": {
+        "released": 0.064859479,
+        "stream": 0.04943162500000001,
+        "support_cumsum": 0.0581823125
+      },
+      "workflow_comparisons": {
+        "control_over_released": {
+          "median_ratio": 0.8970518017882938,
+          "paired_trial_ratios": {
+            "geometric_speedup": 0.9128055483551221,
+            "ci95": [
+              0.8972308128057916,
+              0.9292625363223037
+            ],
+            "ci_familywise95_3collections": [
+              0.8925868107350109,
+              0.9334822776753506
+            ],
+            "case_wins": 0,
+            "cases": 6,
+            "minimum_speedup": 0.8898338383934884,
+            "maximum_speedup": 0.9395948068315856
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        },
+        "control_over_stream": {
+          "median_ratio": 1.1770260941249653,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.1897424918768473,
+            "ci95": [
+              1.1702346075281174,
+              1.206175118757862
+            ],
+            "ci_familywise95_3collections": [
+              1.1655735343890994,
+              1.2086360965407805
+            ],
+            "case_wins": 6,
+            "cases": 6,
+            "minimum_speedup": 1.1447788661141167,
+            "maximum_speedup": 1.2135689476836335
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        },
+        "released_over_stream": {
+          "median_ratio": 1.3121049328238752,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.3033909511404331,
+            "ci95": [
+              1.2825796263464455,
+              1.3305484094520261
+            ],
+            "ci_familywise95_3collections": [
+              1.2789942690553084,
+              1.33686130309492
+            ],
+            "case_wins": 6,
+            "cases": 6,
+            "minimum_speedup": 1.2678329142527127,
+            "maximum_speedup": 1.3638152375443697
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        }
+      }
+    },
+    "SMAP": {
+      "series": 17,
+      "case_medians": {
+        "533_SMAP_id_3_Sensor_tr_2052_1st_5300": {
+          "released": 0.004324604500000001,
+          "stream": 0.0031166045,
+          "support_cumsum": 0.003910521
+        },
+        "534_SMAP_id_4_Sensor_tr_1968_1st_4370": {
+          "released": 0.0038522085000000004,
+          "stream": 0.0032810835000000003,
+          "support_cumsum": 0.0037764585
+        },
+        "535_SMAP_id_5_Sensor_tr_1113_1st_1890": {
+          "released": 0.0020443120000000004,
+          "stream": 0.0015789165000000003,
+          "support_cumsum": 0.002010896
+        },
+        "536_SMAP_id_6_Sensor_tr_2160_1st_5600": {
+          "released": 0.0035425625,
+          "stream": 0.0028101455,
+          "support_cumsum": 0.003458458
+        },
+        "537_SMAP_id_7_Sensor_tr_2077_1st_5394": {
+          "released": 0.003356125,
+          "stream": 0.002663167,
+          "support_cumsum": 0.0032192500000000003
+        },
+        "538_SMAP_id_8_Sensor_tr_2007_1st_3650": {
+          "released": 0.004360521,
+          "stream": 0.0036853335000000004,
+          "support_cumsum": 0.0042263335
+        },
+        "539_SMAP_id_9_Sensor_tr_1857_1st_4270": {
+          "released": 0.00369725,
+          "stream": 0.0031483960000000004,
+          "support_cumsum": 0.0036500835000000003
+        },
+        "540_SMAP_id_10_Sensor_tr_2051_1st_4575": {
+          "released": 0.0027349375000000004,
+          "stream": 0.002157417,
+          "support_cumsum": 0.0026209585000000002
+        },
+        "541_SMAP_id_11_Sensor_tr_1832_1st_5300": {
+          "released": 0.0028405415,
+          "stream": 0.002184146,
+          "support_cumsum": 0.002612583
+        },
+        "542_SMAP_id_12_Sensor_tr_1908_1st_4690": {
+          "released": 0.0038130000000000004,
+          "stream": 0.0032168955000000006,
+          "support_cumsum": 0.0037428545
+        },
+        "543_SMAP_id_13_Sensor_tr_2020_1st_4550": {
+          "released": 0.0027411455,
+          "stream": 0.0020525625,
+          "support_cumsum": 0.0025515830000000005
+        },
+        "544_SMAP_id_14_Sensor_tr_1978_1st_4450": {
+          "released": 0.0027221045,
+          "stream": 0.002155479,
+          "support_cumsum": 0.002621167
+        },
+        "545_SMAP_id_15_Sensor_tr_1173_1st_2750": {
+          "released": 0.0023926255000000004,
+          "stream": 0.0018027705000000002,
+          "support_cumsum": 0.002245479
+        },
+        "546_SMAP_id_16_Sensor_tr_2117_1st_4770": {
+          "released": 0.002664375,
+          "stream": 0.0021852085000000003,
+          "support_cumsum": 0.002588875
+        },
+        "547_SMAP_id_17_Sensor_tr_2133_1st_5400": {
+          "released": 0.004180937500000001,
+          "stream": 0.0034011255000000002,
+          "support_cumsum": 0.003918416500000001
+        },
+        "548_SMAP_id_18_Sensor_tr_2094_1st_5600": {
+          "released": 0.0032795005,
+          "stream": 0.0026735210000000003,
+          "support_cumsum": 0.0032213335
+        },
+        "549_SMAP_id_19_Sensor_tr_1998_1st_2098": {
+          "released": 0.0037550210000000003,
+          "stream": 0.0031149375,
+          "support_cumsum": 0.0036799790000000003
+        }
+      },
+      "case_comparisons": {
+        "control_over_released": {
+          "geometric_speedup": 0.9598776225783294,
+          "ci95": [
+            0.9475807543574676,
+            0.9710300347298396
+          ],
+          "ci_familywise95_3collections": [
+            0.9446197340017958,
+            0.9730896787608369
+          ],
+          "case_wins": 0,
+          "cases": 17,
+          "minimum_speedup": 0.904249394366583,
+          "maximum_speedup": 0.9872428156061939
+        },
+        "control_over_stream": {
+          "geometric_speedup": 1.2009996041271975,
+          "ci95": [
+            1.1829702273479283,
+            1.2194908526123602
+          ],
+          "ci_familywise95_3collections": [
+            1.1798385286144264,
+            1.2239157860221679
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 1.1467981120297526,
+          "maximum_speedup": 1.27359236539741
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.2512007529680604,
+          "ci95": [
+            1.2244507858260094,
+            1.2807070367739417
+          ],
+          "ci_familywise95_3collections": [
+            1.2179234152473353,
+            1.2868974775152469
+          ],
+          "case_wins": 17,
+          "cases": 17,
+          "minimum_speedup": 1.1740659754620693,
+          "maximum_speedup": 1.3876013141866415
+        }
+      },
+      "label_block_sensitivity": {
+        "control_over_released": {
+          "geometric_speedup": 0.9598776225783294,
+          "blocks": 17,
+          "ci95": [
+            0.94791724919076,
+            0.9709609754888757
+          ],
+          "ci_familywise95_3collections": [
+            0.9446525592063737,
+            0.9730181279308636
+          ]
+        },
+        "control_over_stream": {
+          "geometric_speedup": 1.2009996041271975,
+          "blocks": 17,
+          "ci95": [
+            1.1826715166321278,
+            1.219641447263936
+          ],
+          "ci_familywise95_3collections": [
+            1.1789024010761042,
+            1.2236358934564635
+          ]
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.2512007529680604,
+          "blocks": 17,
+          "ci95": [
+            1.2236147885530397,
+            1.2805196398200434
+          ],
+          "ci_familywise95_3collections": [
+            1.2184609658238401,
+            1.2873474012906576
+          ]
+        }
+      },
+      "workflow_seconds": {
+        "released": [
+          0.06656179200000001,
+          0.065969792,
+          0.066860708,
+          0.066348667,
+          0.066004458,
+          0.06616108300000001
+        ],
+        "stream": [
+          0.056939833,
+          0.056369291,
+          0.057025708,
+          0.056273208000000005,
+          0.056855792,
+          0.057744417000000006
+        ],
+        "support_cumsum": [
+          0.064607625,
+          0.063952458,
+          0.064427416,
+          0.063825375,
+          0.064146334,
+          0.06379216700000001
+        ]
+      },
+      "workflow_medians": {
+        "released": 0.066254875,
+        "stream": 0.056897812500000006,
+        "support_cumsum": 0.06404939600000001
+      },
+      "workflow_comparisons": {
+        "control_over_released": {
+          "median_ratio": 0.9667122004229878,
+          "paired_trial_ratios": {
+            "geometric_speedup": 0.966939249091858,
+            "ci95": [
+              0.964026450282553,
+              0.9698644914410058
+            ],
+            "ci_familywise95_3collections": [
+              0.9633543355516677,
+              0.9706362121067149
+            ],
+            "case_wins": 0,
+            "cases": 6,
+            "minimum_speedup": 0.9619692133377752,
+            "maximum_speedup": 0.9718485075659586
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        },
+        "control_over_stream": {
+          "median_ratio": 1.1256917126647004,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.1276424360765998,
+            "ci95": [
+              1.11773658849021,
+              1.1337293074612664
+            ],
+            "ci_familywise95_3collections": [
+              1.1146062619938901,
+              1.134442528968846
+            ],
+            "case_wins": 6,
+            "cases": 6,
+            "minimum_speedup": 1.1047330688263768,
+            "maximum_speedup": 1.1346648136463624
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        },
+        "released_over_stream": {
+          "median_ratio": 1.1644538179741093,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.1661978114299043,
+            "ci95": [
+              1.1567687104626716,
+              1.1738117475872152
+            ],
+            "ci_familywise95_3collections": [
+              1.154641838896501,
+              1.174907002223089
+            ],
+            "case_wins": 6,
+            "cases": 6,
+            "minimum_speedup": 1.1457572253262165,
+            "maximum_speedup": 1.1790453993666044
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        }
+      }
+    },
+    "SMD": {
+      "series": 36,
+      "case_medians": {
+        "180_SMD_id_3_Facility_tr_5925_1st_17580": {
+          "released": 0.010686479000000002,
+          "stream": 0.009454521,
+          "support_cumsum": 0.010628729
+        },
+        "181_SMD_id_4_Facility_tr_5000_1st_15144": {
+          "released": 0.007889042,
+          "stream": 0.006421521,
+          "support_cumsum": 0.007571312500000001
+        },
+        "182_SMD_id_5_Facility_tr_7174_1st_21230": {
+          "released": 0.009555770500000001,
+          "stream": 0.0080012085,
+          "support_cumsum": 0.009483791500000002
+        },
+        "183_SMD_id_6_Facility_tr_5925_1st_17580": {
+          "released": 0.007650042000000001,
+          "stream": 0.00638525,
+          "support_cumsum": 0.0075825415000000005
+        },
+        "184_SMD_id_7_Facility_tr_7119_1st_15849": {
+          "released": 0.0143009165,
+          "stream": 0.0113307705,
+          "support_cumsum": 0.013400875
+        },
+        "185_SMD_id_8_Facility_tr_5000_1st_15144": {
+          "released": 0.0076718955,
+          "stream": 0.006160792,
+          "support_cumsum": 0.007262729000000001
+        },
+        "186_SMD_id_9_Facility_tr_5925_1st_17580": {
+          "released": 0.007338958500000001,
+          "stream": 0.0060668335,
+          "support_cumsum": 0.0073073125000000004
+        },
+        "187_SMD_id_10_Facility_tr_5000_1st_15849": {
+          "released": 0.009245771,
+          "stream": 0.0074850625,
+          "support_cumsum": 0.0084733745
+        },
+        "188_SMD_id_11_Facility_tr_500_1st_392": {
+          "released": 0.0119219585,
+          "stream": 0.0105042085,
+          "support_cumsum": 0.011817854000000001
+        },
+        "189_SMD_id_12_Facility_tr_5925_1st_17580": {
+          "released": 0.0074044375,
+          "stream": 0.0059639375000000005,
+          "support_cumsum": 0.007085521000000001
+        },
+        "190_SMD_id_13_Facility_tr_7119_1st_15849": {
+          "released": 0.012698708,
+          "stream": 0.010195187000000001,
+          "support_cumsum": 0.011876104500000002
+        },
+        "191_SMD_id_14_Facility_tr_4596_1st_4696": {
+          "released": 0.007088875,
+          "stream": 0.0060625,
+          "support_cumsum": 0.0070133955
+        },
+        "192_SMD_id_15_Facility_tr_5925_1st_17580": {
+          "released": 0.008889728999999999,
+          "stream": 0.0076656250000000006,
+          "support_cumsum": 0.008798375
+        },
+        "193_SMD_id_16_Facility_tr_5925_1st_17580": {
+          "released": 0.007347833500000001,
+          "stream": 0.00629425,
+          "support_cumsum": 0.007281979000000001
+        },
+        "194_SMD_id_17_Facility_tr_5925_1st_17580": {
+          "released": 0.0088590625,
+          "stream": 0.0075371875000000005,
+          "support_cumsum": 0.008742021
+        },
+        "195_SMD_id_18_Facility_tr_5925_1st_17580": {
+          "released": 0.007383895500000001,
+          "stream": 0.0063256045,
+          "support_cumsum": 0.007310708500000001
+        },
+        "196_SMD_id_19_Facility_tr_7174_1st_21230": {
+          "released": 0.009153020500000001,
+          "stream": 0.007536333500000001,
+          "support_cumsum": 0.00895625
+        },
+        "197_SMD_id_20_Facility_tr_5000_1st_15144": {
+          "released": 0.0073569790000000005,
+          "stream": 0.0062141455000000005,
+          "support_cumsum": 0.007010479
+        },
+        "198_SMD_id_21_Facility_tr_5925_1st_17580": {
+          "released": 0.007805625500000001,
+          "stream": 0.0064479375000000005,
+          "support_cumsum": 0.0076306460000000005
+        },
+        "199_SMD_id_22_Facility_tr_5925_1st_17580": {
+          "released": 0.007260688,
+          "stream": 0.006079458000000001,
+          "support_cumsum": 0.0071475415
+        },
+        "200_SMD_id_23_Facility_tr_7174_1st_21230": {
+          "released": 0.008569417,
+          "stream": 0.007200729000000001,
+          "support_cumsum": 0.008484708
+        },
+        "201_SMD_id_24_Facility_tr_7174_1st_21230": {
+          "released": 0.0090729375,
+          "stream": 0.007722083500000001,
+          "support_cumsum": 0.008963833000000001
+        },
+        "202_SMD_id_25_Facility_tr_6250_1st_21230": {
+          "released": 0.007727083000000001,
+          "stream": 0.0065657085000000006,
+          "support_cumsum": 0.0077067705000000005
+        },
+        "203_SMD_id_26_Facility_tr_7174_1st_21230": {
+          "released": 0.0089183545,
+          "stream": 0.007549750000000001,
+          "support_cumsum": 0.0087923125
+        },
+        "204_SMD_id_27_Facility_tr_5000_1st_15144": {
+          "released": 0.007497729000000001,
+          "stream": 0.006084229,
+          "support_cumsum": 0.007139271000000001
+        },
+        "205_SMD_id_28_Facility_tr_5925_1st_17580": {
+          "released": 0.007707875500000001,
+          "stream": 0.006476188000000001,
+          "support_cumsum": 0.0074173335000000005
+        },
+        "206_SMD_id_29_Facility_tr_6250_1st_21230": {
+          "released": 0.007656438000000001,
+          "stream": 0.0065005625,
+          "support_cumsum": 0.0076227285
+        },
+        "207_SMD_id_30_Facility_tr_7174_1st_21230": {
+          "released": 0.0088331665,
+          "stream": 0.007584166500000001,
+          "support_cumsum": 0.008745271
+        },
+        "208_SMD_id_31_Facility_tr_5000_1st_15144": {
+          "released": 0.0079507085,
+          "stream": 0.0065283125,
+          "support_cumsum": 0.0075652915
+        },
+        "209_SMD_id_32_Facility_tr_5925_1st_17580": {
+          "released": 0.00693425,
+          "stream": 0.0057432920000000005,
+          "support_cumsum": 0.00687375
+        },
+        "210_SMD_id_33_Facility_tr_5925_1st_17580": {
+          "released": 0.007427854500000001,
+          "stream": 0.006252229000000001,
+          "support_cumsum": 0.0073377915
+        },
+        "211_SMD_id_34_Facility_tr_5925_1st_17580": {
+          "released": 0.007077854000000001,
+          "stream": 0.006043354000000001,
+          "support_cumsum": 0.0070214380000000005
+        },
+        "212_SMD_id_35_Facility_tr_5925_1st_17580": {
+          "released": 0.0073494375,
+          "stream": 0.006197541500000001,
+          "support_cumsum": 0.007281354
+        },
+        "213_SMD_id_36_Facility_tr_5925_1st_17580": {
+          "released": 0.007148583,
+          "stream": 0.006094271,
+          "support_cumsum": 0.0070758335
+        },
+        "214_SMD_id_37_Facility_tr_5925_1st_17580": {
+          "released": 0.007159542,
+          "stream": 0.0060035,
+          "support_cumsum": 0.0070905625000000005
+        },
+        "215_SMD_id_38_Facility_tr_5925_1st_17580": {
+          "released": 0.007161000000000001,
+          "stream": 0.0061063335,
+          "support_cumsum": 0.007096291500000001
+        }
+      },
+      "case_comparisons": {
+        "control_over_released": {
+          "geometric_speedup": 0.9776584982182305,
+          "ci95": [
+            0.9704284553834219,
+            0.9840583130367707
+          ],
+          "ci_familywise95_3collections": [
+            0.9685746298947276,
+            0.985297875703199
+          ],
+          "case_wins": 0,
+          "cases": 36,
+          "minimum_speedup": 0.9164594818539201,
+          "maximum_speedup": 0.9973712589860882
+        },
+        "control_over_stream": {
+          "geometric_speedup": 1.1664276277650154,
+          "ci95": [
+            1.1599284680078403,
+            1.1726386179531416
+          ],
+          "ci_familywise95_3collections": [
+            1.1583039907280082,
+            1.173994251386952
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 1.124195398159251,
+          "maximum_speedup": 1.204468937543778
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.1930828913069484,
+          "ci95": [
+            1.183323985549149,
+            1.2029106779618053
+          ],
+          "ci_familywise95_3collections": [
+            1.1811200011949103,
+            1.205244778413689
+          ],
+          "case_wins": 36,
+          "cases": 36,
+          "minimum_speedup": 1.1303035870352398,
+          "maximum_speedup": 1.2621309821781317
+        }
+      },
+      "label_block_sensitivity": {
+        "control_over_released": {
+          "geometric_speedup": 0.9703228905974609,
+          "blocks": 9,
+          "ci95": [
+            0.9516400693362966,
+            0.9868902641307618
+          ],
+          "ci_familywise95_3collections": [
+            0.9474891450804953,
+            0.9894510065507822
+          ]
+        },
+        "control_over_stream": {
+          "geometric_speedup": 1.1609421233248969,
+          "blocks": 9,
+          "ci95": [
+            1.147815512421316,
+            1.1728861182741668
+          ],
+          "ci_familywise95_3collections": [
+            1.1446913953760436,
+            1.1748405264217368
+          ]
+        },
+        "released_over_stream": {
+          "geometric_speedup": 1.1964492794868162,
+          "blocks": 9,
+          "ci95": [
+            1.173825779834186,
+            1.2194224228357975
+          ],
+          "ci_familywise95_3collections": [
+            1.1686293384813986,
+            1.223840072751931
+          ]
+        }
+      },
+      "workflow_seconds": {
+        "released": [
+          0.342590958,
+          0.34107766700000003,
+          0.370337833,
+          0.337159125,
+          0.338432084,
+          0.339287542
+        ],
+        "stream": [
+          0.28778320900000004,
+          0.28918370800000004,
+          0.29629304100000003,
+          0.289200291,
+          0.28835808300000004,
+          0.285027458
+        ],
+        "support_cumsum": [
+          0.331558375,
+          0.33276004200000003,
+          0.33019695800000004,
+          0.338771792,
+          0.335299292,
+          0.33232020900000003
+        ]
+      },
+      "workflow_medians": {
+        "released": 0.34018260450000004,
+        "stream": 0.2887708955,
+        "support_cumsum": 0.3325401255
+      },
+      "workflow_comparisons": {
+        "control_over_released": {
+          "median_ratio": 0.9775341863490259,
+          "paired_trial_ratios": {
+            "geometric_speedup": 0.9676312263527336,
+            "ci95": [
+              0.9347473645166188,
+              0.9913920281978439
+            ],
+            "ci_familywise95_3collections": [
+              0.9301689607748698,
+              0.9939379951628194
+            ],
+            "case_wins": 1,
+            "cases": 6,
+            "minimum_speedup": 0.8916101153510828,
+            "maximum_speedup": 1.004783103527155
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        },
+        "control_over_stream": {
+          "median_ratio": 1.1515707804424493,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.1527375276066911,
+            "ci95": [
+              1.1362539641513616,
+              1.1652658624202747
+            ],
+            "ci_familywise95_3collections": [
+              1.1326455324208686,
+              1.1668359375918926
+            ],
+            "case_wins": 6,
+            "cases": 6,
+            "minimum_speedup": 1.1144269770412867,
+            "maximum_speedup": 1.1714088904564761
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        },
+        "released_over_stream": {
+          "median_ratio": 1.1780363249938393,
+          "paired_trial_ratios": {
+            "geometric_speedup": 1.191298395724241,
+            "ci95": [
+              1.1742724861514748,
+              1.2155733273866431
+            ],
+            "ci_familywise95_3collections": [
+              1.1721528312248717,
+              1.2198001027659848
+            ],
+            "case_wins": 6,
+            "cases": 6,
+            "minimum_speedup": 1.1658325924713542,
+            "maximum_speedup": 1.2499039186006395
+          },
+          "scope": "six balanced trials on fixed inputs; timing uncertainty only"
+        }
+      }
+    }
+  },
+  "max_reference_pr_error": 4.440892098500626e-16,
+  "records": 1314,
+  "workflows": 54
+}

@@ -1,0 +1,142 @@
+{
+  "status": "COMPLETE",
+  "protocol_sha256": "b5c51a22aa154e196fb219032c0c2c1391b6b096ae70fe211cccae329b8bebd1",
+  "records_sha256": "ea9d31c03928428f3a04f779ae532d6ebe9319d92a92e306bed6232b71bb3809",
+  "max_scalar_error": 1.6653345369377348e-16,
+  "cases": {
+    "182_SMD_id_5_Facility_tr_7174_1st_21230_M8": {
+      "released": {
+        "peak_process_mib_median": 118.40625,
+        "input_mib": 1.7788314819335938,
+        "additional_lifetime_highwater_mib_median": 0.046875
+      },
+      "geometry": {
+        "peak_process_mib_median": 117.796875,
+        "input_mib": 1.7788314819335938,
+        "additional_lifetime_highwater_mib_median": 0.046875
+      },
+      "stream": {
+        "peak_process_mib_median": 117.390625,
+        "input_mib": 1.7788314819335938,
+        "additional_lifetime_highwater_mib_median": 0.078125
+      },
+      "dense": {
+        "peak_process_mib_median": 119.90625,
+        "input_mib": 1.7788314819335938,
+        "additional_lifetime_highwater_mib_median": 0.046875
+      }
+    },
+    "010_NAB_id_10_WebService_tr_500_1st_271_M8": {
+      "released": {
+        "peak_process_mib_median": 114.890625,
+        "input_mib": 0.06198883056640625,
+        "additional_lifetime_highwater_mib_median": 0.03125
+      },
+      "geometry": {
+        "peak_process_mib_median": 114.5625,
+        "input_mib": 0.06198883056640625,
+        "additional_lifetime_highwater_mib_median": 0.03125
+      },
+      "stream": {
+        "peak_process_mib_median": 113.890625,
+        "input_mib": 0.06198883056640625,
+        "additional_lifetime_highwater_mib_median": 0.015625
+      },
+      "dense": {
+        "peak_process_mib_median": 113.859375,
+        "input_mib": 0.06198883056640625,
+        "additional_lifetime_highwater_mib_median": 0.0
+      }
+    },
+    "188_SMD_id_11_Facility_tr_500_1st_392_M8": {
+      "released": {
+        "peak_process_mib_median": 117.828125,
+        "input_mib": 1.4693212509155273,
+        "additional_lifetime_highwater_mib_median": 0.015625
+      },
+      "geometry": {
+        "peak_process_mib_median": 116.671875,
+        "input_mib": 1.4693212509155273,
+        "additional_lifetime_highwater_mib_median": 0.03125
+      },
+      "stream": {
+        "peak_process_mib_median": 119.046875,
+        "input_mib": 1.4693212509155273,
+        "additional_lifetime_highwater_mib_median": 0.0625
+      },
+      "dense": {
+        "peak_process_mib_median": 118.703125,
+        "input_mib": 1.4693212509155273,
+        "additional_lifetime_highwater_mib_median": 0.046875
+      }
+    },
+    "182_SMD_id_5_Facility_tr_7174_1st_21230_M32_repeated": {
+      "released": {
+        "peak_process_mib_median": 125.453125,
+        "input_mib": 7.033226013183594,
+        "additional_lifetime_highwater_mib_median": 0.046875
+      },
+      "geometry": {
+        "peak_process_mib_median": 125.953125,
+        "input_mib": 7.033226013183594,
+        "additional_lifetime_highwater_mib_median": 0.046875
+      },
+      "stream": {
+        "peak_process_mib_median": 127.375,
+        "input_mib": 7.033226013183594,
+        "additional_lifetime_highwater_mib_median": 0.0625
+      },
+      "dense": {
+        "peak_process_mib_median": 126.984375,
+        "input_mib": 7.033226013183594,
+        "additional_lifetime_highwater_mib_median": 0.078125
+      }
+    },
+    "synthetic_n500000_M8_p0.01": {
+      "released": {
+        "peak_process_mib_median": 181.03125,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 34.515625
+      },
+      "geometry": {
+        "peak_process_mib_median": 183.25,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 37.203125
+      },
+      "stream": {
+        "peak_process_mib_median": 198.421875,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 52.28125
+      },
+      "dense": {
+        "peak_process_mib_median": 217.578125,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 71.0
+      }
+    },
+    "synthetic_n500000_M8_p0.5": {
+      "released": {
+        "peak_process_mib_median": 175.171875,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 29.265625
+      },
+      "geometry": {
+        "peak_process_mib_median": 188.140625,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 40.84375
+      },
+      "stream": {
+        "peak_process_mib_median": 224.953125,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 77.09375
+      },
+      "dense": {
+        "peak_process_mib_median": 210.5625,
+        "input_mib": 30.994415283203125,
+        "additional_lifetime_highwater_mib_median": 65.390625
+      }
+    }
+  },
+  "qualification": "Fresh interpreter process per case/method/repetition; warm tiny JIT call, load/generate inputs, OS lifetime peak RSS before/after complete call. Includes interpreter/libraries/inputs. No auxiliary-memory inference from high-water delta; no timing comparison.",
+  "completed_utc": "2026-10-24T01:30:29.197090+00:00"
+}
