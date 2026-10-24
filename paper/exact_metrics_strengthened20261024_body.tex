@@ -1,0 +1,458 @@
+\section{Introduction}
+Time-series anomaly benchmarks repeatedly join stored detector scores with
+labels to evaluate and compare models. A range-aware metric can require a
+complete pass through the same series at every score threshold, and a volume
+metric repeats this work across temporal widths. Sampling the thresholds
+reduces work but changes the numerical query. Our question is which local
+statistics suffice to answer the original query exactly.
+
+We study two established operators. Dynamic Volume Under the Surface
+(VUS) integrates precision--recall (PR) or receiver-operating-characteristic
+(ROC) curves over temporal widths~\cite{paparrizos2022,boniol2025}. Tatbul range
+precision and recall reward positional overlap and penalize fragmentation of
+true and predicted intervals~\cite{tatbul2018}. Both are used in public
+evaluation software. TimeEval's maintainers explicitly identify slow range
+metrics and threshold sampling as an optimization opportunity~\cite{timeevalrangeissue}.
+These operators have different state dependencies: VUS can omit inactive
+support events, whereas range precision changes even when a point outside
+every true interval joins two predicted components.
+
+Consider the four-point example $y=(1,0,1,0)$ and $s=(3,2,1,0)$.
+Removing off-label events and connecting the remaining ROC endpoints changes
+zero-width VUS-ROC from .625 to .8125. An omitted run must instead contribute
+its predecessor rectangle. For range metrics, dropping an off-label point can
+change predicted intervals and therefore their precision denominators. The
+same intuitive ``ignore irrelevant points'' shortcut cannot serve both
+operators. We derive the sufficient state for each.
+
+For VUS, complete global ties, predecessor rectangles and two-distance
+interval geometry give a support-sensitive representation. For range metrics,
+endpoint activations update one recall contribution and at most three precision
+contributions. Fixed-label moment prefixes support moving positional weights,
+including a middle bias whose interval midpoint changes after a merge. A
+finite-feature theorem covers endpoint-dependent piecewise weights; the
+implementation provides four canonical biases and three cardinality factors.
+Known query grids can use ordinary offline bucketing instead of sorting every
+score. The new result is the metric-specific coupled state, rather than
+sorting, prefix sums, caching, or component trees.
+
+The data-management setting is repeated analytics over stored score columns.
+We provide complete-call and read-to-result-write experiments, including a
+native public TimeEval consumer, and compare with same-compiler conventional
+controls. We do not propose a detector, a new accuracy metric, an unlabeled
+model selector, or a database engine. Our earlier public Sparse VUS 0.3.0
+release~\cite{sparsevus03} is an unrefereed software precursor; its speed is
+separated from subsequent shared-label computation. It contains no weighted
+range trajectory implementation.
+
+The contributions are: (i) exact support-event identities for dynamic VUS and
+a general local-update theorem for weighted range trajectories; (ii) algorithms
+and ablations separating these identities from compilation and work sharing;
+and (iii) source-bound evaluation on public data, including a separately
+selected panel with unchanged public detectors and native consumer execution.
+We retain reused recordings, low-cardinality losses, non-beneficial alternatives,
+and consumers whose other metrics dominate total cost.
+
+\input{support_events_method.tex}
+
+\section{Prior VUS algorithms and shared labels}
+Boniol et al. already distinguish maximum-buffer support from unaffected
+regions and reuse static work~\cite{boniol2025}. Klein's fast-VUS uses
+support-score cumulative sums; Benchopt uses dense cumulative sums and segment
+maxima~\cite{klein2026,benchopt2026}. Their public exact configurations use
+$H=n$, rather than the sampled defaults. The inspected Klein implementation
+still constructs full-length coverage arrays at each width; Benchopt builds
+full-series cumulative sums and returns both ROC and PR. These array operations
+are distinct from the support-event representation. We compare equal returned
+work separately from the cost of an available PR-only API.
+
+Sylligardos's efficient VUS work and the public FF-VUS implementation are
+important acceleration antecedents~\cite{sylligardos2025,ffvus2026}. The latter
+uses linear/max ramps differing from our pinned dynamic target, rounds scores
+in its wrapper, and has an approximate existence fallback in its Torch path.
+We retain source-level semantic witnesses; native FF-VUS timings would not be
+equal-output speed ratios. No experiment here establishes superiority over an
+unmeasured GPU evaluator. Complete ties and trapezoidal sweeps are established
+ROC techniques~\cite{fawcett2006}; full-recall PR stopping is present in
+scikit-learn~1.0.2~\cite{sklearn102}. Neither is claimed as new.
+
+For $M$ profiles sharing labels, the \emph{geometry} variant prepares original
+intervals, support and distances once. The \emph{stream} variant additionally
+interchanges width and model loops: each width's weights and component
+identifiers are prepared once, while all model-specific grouped masses and
+complete events remain separate. Under Proposition~\ref{prop:radix}, this costs
+$O(Mn+(L+1)MQ)$ time. Its retained workspace after conversion and validation is
+$O(MQ+n+Q+K)$: two model-by-support rank/count arrays occupy $16MQ$ bytes.
+The public NumPy validation and conversion can allocate $M\times n$ arrays,
+giving the more conservative peak bound $O(Mn+MQ+n+Q+K)$. Sharing can therefore
+use more memory. Caching and loop interchange are standard optimizations; their
+increment is measured against the released evaluator.
+
+An earlier active-prefix alternative uses reversible interval updates and
+complete-tie recall saturation, with predicate $A+B/2\ge P_0$ and $H=K_w$.
+Its conditional bound and a single-interval run variant remain in the artifact.
+The default-width prefix route did not pass its runtime target. This outcome
+motivates measuring actual visited work rather than assuming early saturation.
+
+\input{weighted_range_method.tex}
+
+\section{Experimental design}
+\label{sec:design}
+We distinguish the original VUS/range panel, a separately selected weighted
+panel, and native consumer queries. Each follow-up freezes its own methods,
+inputs, orders and censoring rule before its measurements; it is not a
+retrospective enlargement of the original protocol. All exact comparisons
+hold the metric definition and query set fixed. Comparing sampled and complete
+queries is instead an accuracy--cost analysis.
+An initial weighted Mac run was stopped after 12 WSD cases and one Stock
+query contract. Before a complete rerun, we separated paired-order timing
+uncertainty from recording sensitivity and bound the independent auditor in
+the protocol. Cohort, profiles, semantics, methods, orders and hypotheses were
+unchanged. The 5,400 partial records are retained but excluded from the final
+study; its analysis protocol was therefore fixed after this partial pilot,
+not before every observation in the research process.
+
+\paragraph{Original panel and its dependence.}
+The pinned TSB-AD-U archive~\cite{tsbad} supplies all eligible NAB, SMAP and SMD
+recordings after six named development exclusions, source-labelled synthetic
+exclusions and exact observation-plus-label deduplication. The 73 recordings
+(20/17/36 by collection) have lengths 1,000--28,696. Eight fixed CPU procedures
+produce Isolation Forest, LOF, nearest-neighbor, one-class SVM, PCA, KMeans,
+HBOS and shrinkage-Mahalanobis scores. They use trailing length-16 windows,
+an evenly spaced unlabeled fit set capped at 2,048 points, and seed 20261024.
+These authored offline transductive procedures are workload generators, not
+reproductions of eight tuned benchmark pipelines. LOF novelty-mode scoring
+includes fit points. All 584 outputs retain binary64 scores without jitter or
+rounding; distinct counts range from 3 to 28,696. A five-distinct-cluster warning
+for requested 16-cluster KMeans remains in the record.
+
+Sixty-two recordings were used by name in older repository studies. SMD's
+36 cases have nine distinct label sequences; 18 share labels with excluded
+development recordings. We report label-block weighting and exclusion
+sensitivity. These checks do not establish independent physical sources, and
+fresh scores do not make the recordings unseen.
+
+\paragraph{Separately selected public-detector panel.}
+Before fitting or metric outcomes, we screen archive candidates against 563
+prior provenance entries by name, exact labels, exact observations, and
+z-normalized observations rounded to ten decimals. We select 12 WSD recordings
+at fixed length quantiles among 91 eligible cases, all 12 eligible Stock cases,
+and both eligible MSL cases. The 26 recordings contain 386,447 observations.
+This screening removes the declared forms of reuse; it cannot prove absence
+of shifted variants or common physical sources. In particular, MSL is only two
+recordings, not a broad new-domain sample.
+
+Unchanged public FFT and COPOD APIs at TSB-AD revision \texttt{ed74348e}
+generate two profiles per recording, using the full univariate input and their
+upstream preprocessing. We perform no extra quantization or model selection.
+The fixed seed is 20261024, one thread is used, and the per-fit limit is 120
+seconds. All 52 fits complete, with no replacement or retry. A path-packaging
+error occurred after the original Mac fits; the receipt was recovered from
+their immutable outputs with zero repeated fits. Original producer and recovery
+sources are archived. The Linux replay uses the corrected packaging path and
+regenerates every score from raw inputs. Following a failed input-identity
+check, a separate decoding contract was frozen before fresh Linux fits. It
+restores one original Mac binary64 observation that the Linux parsers round
+one ULP differently. Its raw-file digest, decimal token, row index, adjacent
+binary64 values, and full before/after array hashes are explicit. All original
+input-identity checks remain mandatory; this reproduces the frozen typed
+input rather than asserting cross-platform identity of the original parser.
+
+\paragraph{Comparators and contracts.}
+VUS compares stream, geometry-only, released sparse radix, active prefix,
+matched dense radix, unchanged Klein, and a separately frozen Benchopt pair.
+An author-created conventional support control shares validation, radix
+ordering and global counts, but uses direct per-width ramps instead of nearest
+geometry. A minimal Klein ablation changes only its threshold list to distinct
+maximum-support scores. These controls isolate compiler, support and sharing
+effects; neither is an unchanged public release.
+
+The original flat/reciprocal range study compares vectorized prefix/interval
+recomputation, fused compiled raster, score-sorted sweep, and query buckets at
+100 evenly spaced strict thresholds. The exhaustive contract evaluates every
+observed score under $s_i>t$. It excludes the all-active state below the minimum.
+The weighted follow-up uses raster, sweep and bucket with all 12 combinations
+of four equal precision/recall biases and three cardinality factors, macro
+precision, and recall $\alpha=.2$. Mixed biases and length-weighted precision
+are correctness cases, not extra timed workloads. The same compiler and
+arithmetic formulas are used for the raster and incremental methods.
+
+A subsequent comparator audit identified an additional conventional control:
+Tatbul's closed-form ordered-interval traversal. In a separate frozen ablation,
+we precompute fixed-label count/moment prefixes, discover all predicted
+intervals by a complete score scan at each query, and compute recall from
+ordered intersections and closed-form positional sums. No metric state is
+reused across thresholds. Six permutations remeasure raster, this interval
+control, and the incremental backend (bucket for grid100, sweep for distinct)
+on the unchanged full panel and all 12 semantic choices. This prospective
+follow-up isolates conventional per-query optimization from joint state
+maintenance; it does not replace the original frozen raster results.
+
+\paragraph{Native TimeEval consumer.}
+We pin the complete TimeEval source at \texttt{7c362275}, instantiate its
+unchanged \texttt{MetricComputor}, and request ROC-AUC, PR-AUC and range PR-AUC.
+The range configuration is \texttt{DefaultMetrics.RANGE\_PR\_AUC}, whose
+parameters differ from the range-curve class constructor defaults.
+The native loader reads dataset labels and stored scores, computes all three
+metrics and writes its result CSV. Only the inner range curve callback is
+replaced. Validation, score sanitization, constants, threshold selection,
+synthetic endpoints, recall/precision ordering and trapezoidal integration
+remain native. This experiment uses flat bias, cardinality one, and zero
+existence reward, matching the native default. Its $\ge$ query is mapped to
+the strict kernel using the preceding representable binary64 threshold.
+It is a different query contract from the strict observed-score F1 study.
+
+We compare the unchanged public callback, compiled raster, and buckets in
+two contracts: native nominal \texttt{max\_samples=50}, and every nonminimum
+observed-score query, retaining the native synthetic endpoints.
+Nominal 50 is not a hard cap: the Mac inputs produce 2--90 actual
+queries per profile. The consumer preserves that behavior. Batches are all 52
+profiles together and each of the three collections separately. Six method
+permutations balance order, giving 144 scheduled trials. A workflow is censored
+at 600 seconds; after its first censor, the five remaining same-method/contract/
+batch repetitions are explicitly not run. Censored calls provide no completed
+public-output parity claim or ordinary timing confidence interval.
+
+\paragraph{Timing and uncertainty.}
+Warm operator calls include validation, preparation, sorting, allocation,
+curve production and numerical model selection. Whole-consumer clocks include
+CSV loading, all three metrics and result-CSV write/close; they exclude imports,
+JIT warm-up, trial-directory preparation and audits. Detector fitting, cold
+storage and \texttt{fsync} are outside the claimed workload. A sum of case medians
+is not described as directly timed collection latency. Numerical libraries use
+one thread, but shared-host load is not controlled.
+
+Original VUS case medians use 12 balanced orders, range-grid medians eight, and
+the original exhaustive range comparison two AB/BA calls per method. Paired
+case log ratios are bootstrapped 10,000 times, with a three-collection Bonferroni
+95\% interval per comparator. Label-block sensitivity addresses repeated SMD
+geometry. These are fixed-panel sensitivity analyses, not estimates from an
+independent random population of recordings.
+
+For the new weighted panel, each case/contract/semantics combination uses six
+method permutations. Primary uncertainty resamples paired order indices within
+each recording, sharing indices across both methods and all 12 semantics,
+recomputes medians, then averages log ratios equally across semantics and
+recordings. It is conditional timing uncertainty on the fixed panel. A separate
+recording-reweighting bootstrap shows workload sensitivity, especially for
+two-recording MSL. Aggregate intervals adjust over three collections; individual
+semantics intervals adjust over 36 collection/semantics cells per comparison.
+The extreme adjusted quantiles of 10,000 draws are approximate. No host pooling
+or favorable-host selection is used. Native consumer intervals resample its
+six paired complete-workflow trials only when all six are observed.
+
+\paragraph{Correctness and selection.}
+Complete canonical range curves are archived, including precision, recall and
+F1; repeated-output hashes must agree. Independent record auditors import no
+metric producer and reconstruct coverage, curve discrepancies, winner sets,
+regret and intervals. Finite-set rational oracles additionally cover exhaustive
+small tied inputs, with randomized boundary and mixed-weight cases. Public
+implementations and a long-window high-precision check provide further
+differential evidence. Real-arithmetic identities, empirical binary64 agreement
+and a formal rounding certificate are distinct.
+
+Winner sets contain values within $10^{-10}$ of the maximum. Approximation
+regret is the best exhaustive value minus the selected model's exhaustive
+optimum. The original panel retains minimum and maximum over tied winners;
+the weighted panel's prespecified primary statistic uses the best tied winner.
+Worst-tie sensitivity is a separate subsequent reconstruction. The predeclared
+practical cutoff is .01. This is labeled oracle evaluation, not a deployable
+threshold policy or an improvement in detector accuracy.
+
+\section{VUS and original range results}
+\input{strengthened_legacy_tables.tex}
+\paragraph{VUS attribution.}
+At width 30, the whole stream evaluator improves over exact Klein by
+25.17--30.51 times geometrically and over a matched compiled dense evaluator
+by 3.54--3.96 times (Table~\ref{tab:vus-main}). The public-library advantage
+therefore includes implementation effects but is not entirely explained by
+them. Independent-call dense/released ratios are 2.37/2.91/3.28. All primary
+exact PR calls agree within $1.11\cdot10^{-15}$; matched ROC workflow differences
+are at most $4.86\cdot10^{-14}$. Against unchanged Benchopt with equal ROC+PR
+outputs, directly timed workflow ratios are 25.3/32.1/40.9.
+
+The new sharing increment is smaller: released/stream ratios are
+1.496/1.271/1.207. Geometry reuse already explains most of it on SMAP/SMD;
+the additional stream/geometry improvement is 1.094/1.024/1.025, with five
+SMAP/SMD case losses. The conventional compiled support control is faster than
+the released single-model evaluator on every primary case (ratios
+.910/.960/.978, adjusted intervals below one). Thus this panel does not
+establish a separate runtime advantage of nearest geometry over optimized
+direct ramps. Control/stream ratios remain 1.357/1.201/1.166, including shared
+work. The minimal Klein patch alone improves public Klein by 1.65/2.27/2.97;
+the remaining released/patch advantage combines additional reductions and
+implementation differences. These ablations preclude assigning the entire
+public-library gap to one geometric lemma.
+
+At 250 sampled Klein thresholds, 14/73 winner sets change and four have regret
+at least .01 (maximum .0584); at 1,000, three change and none has regret .01.
+NAB has no changes. Complete stream workflows are nevertheless 7.27--11.25
+times faster than the sampled 250-query public API. This comparison has
+different outputs and establishes an observed cost/fidelity tradeoff, not
+same-query dominance over every approximate algorithm.
+
+\paragraph{Failure regimes and broader VUS checks.}
+Primary support fractions are .00384--.223. In a controlled dense-positive
+case, dense/released is .980 with interval [.962,.9994]: sparse compression
+loses. A one-million-point random-score case visits 99.94\% of support in the
+active-prefix algorithm, explaining why saturation is not a general solution.
+With one profile, sharing gains only 1.023 times. A six-series development
+certificate-plus-fallback route took 33.93 times the direct exact cost and
+certified no early selections; this failed route was not promoted.
+
+Eight MITDB and one SWaT recording extend real lengths to 419,919--650,000.
+Complete Klein/stream workflow median ratios are 23.10 and 17.70; incremental
+released/stream paired intervals [.925,1.340] and [.955,1.165] include one.
+These reused follow-up recordings support the whole evaluator more strongly
+than the batch refinement. At $n=500{,}000$, eight profiles and positive fraction
+.5, process peak RSS is 225.0 MiB for stream, versus released 175.2 and dense
+210.6 MiB; lifetime process peaks include libraries, inputs and warm-up.
+
+The earlier unchanged TSB-AD nine-metric consumer shows an Amdahl limit. On
+the length-selected SMD case with eight profiles, replacing only VUS reduces
+its stage from .9289 to .01406 seconds but total read-to-CSV time from 34.260
+to 33.234 seconds: $1.031\times$. All nine outputs agree within
+$3.45\cdot10^{-15}$. Two complete repetitions per backend give descriptive
+timing, not a population interval. Affiliation and other stages dominate.
+The new three-metric TimeEval experiment is a separately defined consumer,
+not a revision of this unfavorable observation.
+
+\paragraph{Original flat/reciprocal range trajectory.}
+Table~\ref{tab:range-main} compares exhaustive observed-threshold evaluation
+against a fused compiled raster, including preparation and winner selection.
+The maximum curve difference is $3.00\cdot10^{-15}$, with no method-induced
+winner disagreement. Bucketing wins every grid100 case median; the exhaustive
+sweep loses on SMAP534, whose eight profiles have only 3--11 distinct values.
+Its original Apple raster/sweep ratio is .417, and its fresh Linux ratio .661.
+Repeated scanning is competitive when there are very few queries.
+
+Replacing grid100 by complete strict observed thresholds changes 24/73 winner
+sets, with 15 disjoint sets and 12 best-selected-model regrets at least .01.
+Maximum Apple regrets are .439/.150/.127. These are consequences within a
+reused panel of eight authored score procedures. They do not establish a
+general prevalence of harmful approximation. Complete sweep costs
+2.19/2.14/3.01 times the fastest grid100 bucket method on the original host;
+the extra fidelity is not free.
+
+Length-selected public comparisons use the three shortest cases per collection,
+all eight profiles, and a declared 60-second per-call budget. TSB-AD grid-F1
+values agree within $6.67\cdot10^{-16}$; completed TimeSeAD calls agree within
+$5.66\cdot10^{-8}$ under its float32 storage and separate $\alpha=0$ contract.
+Two public SMD187 calls are censored and are not counted as parity successes.
+All 1,168 unchanged-public binary range-F1 checks at selected cuts agree within
+$4.62\cdot10^{-16}$; this validates chosen-cut values, not independent global
+maximality. Three million-point stress cases have maximum cross-method curve
+error $2.23\cdot10^{-12}$, below the frozen $10^{-9}$ stress tolerance.
+
+\paragraph{Fresh original-panel execution.}
+A complete raw-data-to-table replay on an AMD EPYC 7763 independently
+regenerates profiles and reproduces the direction of the VUS and range results.
+Original VUS released/stream ratios are 1.886/1.580/1.340 and Klein workflow
+ratios 20.06/20.28/16.17. The combined range replay retains all generated
+arrays and curves, and its four independent reports reconstruct identically.
+All 73 score matrices differ bitwise from the Mac; differences are not
+uniformly small. The range selection counts remain 24/15/12, but two SMD
+recordings exchange flags and maximum SMD regret becomes .0797. A separate SVM
+diagnostic finds 104 versus 105 fitted support vectors despite identical raw
+and standardized inputs; it does not identify a specific instruction-level
+cause. Fresh generation is therefore not an isolated CPU intervention.
+
+\section{Weighted and native consumer results}
+\input{strengthening_results.tex}
+
+\section{Related work and novelty boundary}
+The original VUS paper and its effective/efficient extension are the closest
+database metric antecedents~\cite{paparrizos2022,boniol2025}. Our formulas
+preserve their dynamic target. Sylligardos~\cite{sylligardos2025}, Klein and
+Benchopt establish that fast exact evaluation and support cumsums are not new
+objectives. The source audit distinguishes current definitions before forming
+speed ratios. Tatbul~\cite{tatbul2018} already defines positional weights,
+cardinality penalties and closed-form per-overlap evaluation. TimeSeAD already
+enumerates observed thresholds, and TimeEval already offers weighted PR curves.
+Classical component trees maintain connected level sets and attributes;
+linear-time one-dimensional construction predates this work~\cite{najman2006,menotti2007}.
+Ranefall and W{\"a}hlby already derive per-threshold object precision/recall
+from component-size attributes~\cite{ranefall2016}. Their true-positive pixels
+are defined by a size interval and their recall denominator by the maximum
+such count, rather than fixed labeled anomaly intervals. That construction
+supplies a related threshold/attribute framework. Our additional state must
+handle label intersections, fragmentation, and moving weight normalization.
+The additional identity maintains \emph{joint label-conditioned overlap and
+fragmentation aggregates}, including moving precision weights, across a
+trajectory. It is not a new component tree or a new weighting scheme.
+
+The 2024--2026 comparison also includes distinct nearby research questions.
+PATE~\cite{ghorbani2024pateproximityawaretimeseries} introduces proximity-aware
+evaluation, while we optimize existing targets. TSB-AD~\cite{tsbad} and
+TAB~\cite{qiu2025tabunifiedbenchmarkingtime} address benchmark reliability and
+unification; ESA~\cite{esa2024} contributes telemetry benchmark conditions.
+These motivate reusable evaluation operators rather than establish our state
+representation. TSB-AutoAD~\cite{liu2025autoad} and
+RAMSAD~\cite{panourgias2026retrievaltrainingsimilaritysearchbased} study selection,
+ensembling or retrieval of detector profiles; we make no superior unlabeled
+selection claim. mTSBench~\cite{mtsbench} covers a broader multivariate workload,
+and the one-liner foundation-model analysis~\cite{zhu2026} studies detection
+pipelines rather than incremental metric state.
+
+Formal analysis and LARM/ALARM~\cite{wagner2025formallyexploringtimeseriesanomaly}
+examine metric axioms and exclude score-based VUS from their formal scope.
+Their properties do not prove this computational identity. CCE offers a
+different linear-time metric~\cite{zhong2025cceconfidenceconsistencyevaluationtime};
+its native runtime is not an equal-output baseline. A problem-oriented
+taxonomy~\cite{yang2026problemorientedtaxonomyevaluationmetrics} and adversarial
+reporting analysis~\cite{lyu2026didactuallyfixit} address suitability and
+reporting choices. Rank changes themselves are not a new discovery. Our
+bounded literature/source search supports the narrower local-state
+contribution, not universal precedence over every unpublished implementation.
+
+\section{Reproducibility and limits}
+Raw archives and members, decoded arrays, generated scores, source revisions,
+protocols and outputs are SHA-256 bound. The weighted and compiled-consumer
+control tables are produced from fresh raw data and public sources with:
+\begin{flushleft}\small\ttfamily
+python experiments/reproduce\_interval\_control.py\\
+\hspace*{1em}--output /tmp/interval-control-replica
+\end{flushleft}
+The destination must be new. Pinned core dependencies and installation steps
+are provided; full observed package versions are recorded. The command fits
+all public detector profiles, verifies actual TimeEval loaders, executes
+weighted and native studies, and reconstructs tables with separate auditors.
+The original weighted/public-consumer follow-up uses the separate driver
+\texttt{reproduce\_strengthening.py}.
+The earlier VUS/range evidence has its own completed one-command reproduction,
+\texttt{reproduce\_range\_sweep.py --include-vus}. Supplementary long-recording,
+resource and control studies retain separate frozen protocols. TeX compilation
+is distinct from numerical reproduction. Raw datasets with unconfirmed
+redistribution terms and detector-score vectors from the new panel remain
+local; acquisition instructions, identifiers, digests and numerical metric
+curves are public.
+
+Mathematical claims assume unit-cost exact metric arithmetic. Binary64
+experiments give empirical parity, not an all-input rounding certificate.
+Canonical integer moments have an explicit size bound; arbitrary polynomial
+weights are theorem-only. Native TimeEval integration covers its declared
+flat/cardinality-one contract, not every callback option. Low query counts can
+favor raster scans, dense VUS support can remove compression gains, and
+shared-label batching can increase memory. Warm stored-profile workloads do
+not measure detector training, cold compilation or storage durability. Sources
+and regenerated scores differ across recorded environments, and repeated
+recordings or timing orders are not independent domains. These limits define
+where the exact operator acceleration is supported.
+
+\paragraph{Tool assistance.}
+AI-assisted tools, including OpenAI Codex, were used for literature search,
+mathematical and software development, experiment orchestration, independent
+implementation checks, and drafting. The artifact records the validation
+procedures and source/result provenance. The sole human author is responsible
+for the work; automated audits and simulated reviews are not external peer
+review.
+
+\section{Conclusion}
+Dynamic VUS and weighted range metrics admit different local sufficient
+statistics. Complete ties and predecessor rectangles preserve a compressed
+VUS integral; coupled overlap and fragmentation updates preserve range
+trajectories through moving component boundaries. Compilation-matched controls,
+separate public-detector workloads and native consumer measurements distinguish
+algorithmic improvement from implementation overhead and application bottlenecks.
+The result is an exact evaluation operator with a measured operating range,
+not a new metric or a universal application speedup.

@@ -1,0 +1,32 @@
+\begin{table*}[t]\centering\small
+\begin{tabular}{lrlll}\toprule
+Collection & Cases & Released / stream & Matched dense / stream & Klein exact / stream\\\midrule
+NAB & 20 & 1.496 [1.428,1.566] & 3.543 [3.338,3.713] & 30.513 [27.399,33.652]\\
+SMAP & 17 & 1.271 [1.242,1.302] & 3.693 [3.196,4.191] & 25.772 [22.941,28.940]\\
+SMD & 36 & 1.207 [1.193,1.221] & 3.956 [3.736,4.125] & 25.172 [23.475,26.695]\\
+\bottomrule\end{tabular}
+\caption{Original VUS complete-call geometric ratios, Apple M1 Pro, width 30,
+eight profiles per case. Brackets are 95\% paired-case bootstrap bounds adjusted
+over three collections per comparator. They characterize the fixed panel;
+source and label dependence remain. All calls include validation, preparation
+and winner selection. This is the whole evaluator versus its released
+precursor, a matched compiled dense control, and the unchanged public exact API.}
+\label{tab:vus-main}\end{table*}
+
+\begin{table*}[t]\centering\small
+\begin{tabular}{lrrr}\toprule
+Host / collection & Grid100 raster/bucket & Distinct raster/sweep & Distinct wins/cases\\\midrule
+Apple NAB & 1.719 [1.625,1.814] & 27.80 [18.74,41.94] & 20/20\\
+Apple SMAP & 1.994 [1.817,2.252] & 21.44 [8.57,43.14] & 16/17\\
+Apple SMD & 1.969 [1.884,2.095] & 128.08 [95.09,154.61] & 36/36\\\midrule
+Linux NAB & 1.900 [1.616,2.239] & 29.35 [18.81,46.08] & 20/20\\
+Linux SMAP & 2.898 [2.624,3.260] & 27.76 [11.63,53.75] & 16/17\\
+Linux SMD & 3.574 [3.412,3.789] & 163.60 [125.92,193.02] & 36/36\\
+\bottomrule\end{tabular}
+\caption{Original flat/reciprocal range-F1 study on the same 73 recordings and
+584 profiles. Ratios compare identical query contracts against a fused compiled
+raster. Familywise 95\% intervals adjust over three collections separately per
+comparison. Linux is the selected fresh combined EPYC 7763 execution; generated
+scores differ and hosts are not pooled. The exhaustive low-cardinality loss is
+retained on both hosts.}
+\label{tab:range-main}\end{table*}

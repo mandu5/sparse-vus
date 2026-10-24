@@ -1,8 +1,75 @@
 # Sparse VUS
 
-## Exact range metrics by local event statistics (24 October 2026)
+## Weighted trajectories and native consumers (24 October 2026 follow-up)
 
-[Current combined manuscript](paper/exact_metrics_pvldb20261024.pdf) develops
+[Strengthened manuscript](paper/exact_metrics_strengthened20261024.pdf) adds a
+coupled update theorem for positional overlap, fragmentation and moving range
+weights. Four canonical biases and three cardinality factors are implemented.
+The complete trajectory is comparison-optimal for query-associated outputs
+under the stated arithmetic-cost assumptions. Component trees, sorting, prefix
+sums and offline bucketing are credited prior techniques.
+
+A separately selected panel contains **26 real WSD/Stock/MSL recordings and
+52 unchanged public FFT/COPOD profiles**. A prospective closed-form interval
+control and a remeasured raster control separate conventional per-query
+optimization from the incremental state. The complete
+[fresh Linux control replay](https://github.com/mandu5/sparse-vus/actions/runs/40081512476)
+regenerates every profile from source-bound raw inputs.
+
+The unchanged native TimeEval read-to-result-write workflow, requesting three
+metrics on all 52 profiles, improves **2.732× [2.656,2.812] on Apple** and
+**2.756× [2.742,2.773] on Linux** over the faster combined compiled raster
+control at all native observed queries. In this supplemental study, default
+sampling has no supported combined improvement over raster on either host.
+MSL id7 also loses the
+weighted exhaustive operator comparison against the faster conventional
+control on both hosts. These are exact-evaluation results, not detector gains.
+Intervals describe conditional paired-order timing uncertainty.
+
+The separate [original Linux public-reference replay](https://github.com/mandu5/sparse-vus/actions/runs/40079636938)
+also completed and gives a smaller combined exhaustive raster/bucket ratio:
+**1.932× [1.907,1.946]**. Across the original and supplemental study executions
+on both hosts, observed ratios span **1.93–2.76×**. Within-run intervals do not
+cover this between-run variation. The original and supplemental Linux inputs
+have identical saved score hashes, but these remain separate timing runs.
+The original Linux default ratio is a small 1.014× [1.007,1.027]; the other
+three default combined-workflow intervals cross one. Default gains are thus
+not consistently reproduced. Original Linux MSL also has an exhaustive
+whole-workflow interval crossing one, with its slower trial retained.
+
+The research API returns precision, recall and F1 for each strict
+`score > threshold` query, retaining complete ties:
+
+```python
+import numpy as np
+from sparse_vus.weighted_range import weighted_range_metrics
+
+labels = np.array([1, 1, 0, 0, 1, 1])
+scores = np.array([.1, .9, .8, .7, .6, .5])
+curve = weighted_range_metrics(
+    "sweep", labels, scores, np.unique(scores),
+    precision_bias="middle", recall_bias="middle", cardinality="reciprocal",
+)
+# curve[:, 0], curve[:, 1], curve[:, 2]: precision, recall, F1
+```
+
+Use `bucket` for a supplied query grid or `raster` for the recomputing control.
+Install the repository's `.[accelerate]` extra for these research APIs.
+The native TimeEval adapter has a narrower, separately pinned contract; its
+default threshold sampling and AUC endpoints are preserved by the driver.
+
+```sh
+python experiments/reproduce_interval_control.py --output /tmp/interval-control-replica
+```
+
+[Dependencies, original public-consumer replay and archive-only audits](docs/REPRODUCE_STRENGTHENING_20261024.md) ·
+[Two-host result data and figure](artifacts/pvldb-research-20261024/strengthening/figures/interval-control-two-host-v1/) ·
+[Mac conventional-control audit](docs/reviews/20261024/weighted-control-mac-v1-independent-review.md) ·
+[Linux conventional-control audit](docs/reviews/20261024/weighted-control-linux-v1-independent-review.md).
+
+## Earlier flat/reciprocal range study (24 October 2026)
+
+[Earlier combined manuscript](paper/exact_metrics_pvldb20261024.pdf) develops
 two exact metric operators: support events for dynamic VUS and local overlap /
 fragmentation updates for range precision and recall. The range contribution
 preserves flat reciprocal-cardinality semantics through interval merges.

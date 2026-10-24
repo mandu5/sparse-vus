@@ -1,0 +1,222 @@
+\section{Incremental weighted range precision and recall}
+\label{sec:weighted-range}
+Tatbul range metrics score intervals using positional overlap and
+fragmentation~\cite{tatbul2018}. TimeSeAD already evaluates every observed
+score threshold~\cite{wagner2023timesead,timeseadclassic}, and TimeEval exposes
+weighted range PR curves~\cite{timeevalrangecurve2026}. We address their
+repeated recomputation by maintaining both sides of the metric as predicted
+intervals appear, extend, and merge.
+
+\paragraph{Target.}
+Let $T_j=[a_j,b_j]$, $j=1,\ldots,K$, be the maximal positive intervals of
+fixed binary labels $y$. Predictions use $p_i(t)=\ind\{s_i>t\}$, distinct from
+the VUS convention. Let $C$ range over current maximal predicted intervals.
+For $X\in\{P,R\}$, weights $w_X(i;a,b)\geq0$ depend on the scored interval's
+endpoints, with $Z_X(a,b)=\sum_{i=a}^b w_X(i;a,b)>0$. Define
+\[
+ W_j=\sum_{i\in T_j}p_iw_R(i;a_j,b_j),\qquad
+ N(C)=\sum_{i\in C}y_iw_P(i;a,b).
+\]
+Write $c_j$ for the number of predicted intervals intersecting $T_j$ and
+$h(C)$ for the number of true intervals intersecting $C$. For $\alpha\in[0,1]$,
+\begin{align}
+ r_j&=\alpha\ind\{c_j>0\}
+ +(1-\alpha)g_R(c_j,|T_j|)\frac{W_j}{Z_R(a_j,b_j)},\\
+ \psi(C)&=g_P(h(C),|C|)\frac{N(C)}{Z_P(a,b)},\\
+ R&=\frac1K\sum_jr_j,\qquad
+ P_\rho=\frac{\sum_C\rho(C)\psi(C)}{\sum_C\rho(C)}.
+\end{align}
+Zero-overlap terms and empty averages are zero; factors are never evaluated
+at count zero. Effective cardinality factors $g_P,g_R\in[0,1]$ are pure
+functions of count, interval length, and fixed configuration. Let
+$C_\gamma(n)\geq1$ bound either factor's arithmetic/comparison evaluation cost
+for $1\leq c\leq L\leq n$, using $O(1)$ auxiliary arithmetic words.
+Canonical factors satisfy $g(1,L)=1$. The positive, endpoint-local aggregation
+weight $\rho$ costs constant time: $\rho=1$ gives macro precision and $\rho=|C|$
+gives length-weighted precision over \emph{all} predicted intervals.
+
+\paragraph{Weight family.}
+For every $[a,b]$, suppose each weight partitions the interval into at most
+$q\geq1$ contiguous integer pieces $I_r(a,b)$, on which
+\[
+ w_X(i;a,b)=\sum_{k=0}^{d-1}\theta_{Xrk}(a,b)\phi_k(i),\qquad d\geq1.
+\]
+Features are endpoint-independent and their values and prefixes require
+$O(dn)$ preprocessing. Piece endpoints and coefficients require $O(qd)$
+work per scored interval. These are explicit arithmetic-cost assumptions,
+not permission for arbitrary root finding or mask-dependent callbacks.
+Piecewise polynomials of degree at most $d-1$ use $\phi_k(i)=i^k$.
+Fixed-label prefixes of $y_i\phi_k(i)$ and $\phi_k(i)$ recover $N(C)$ and
+$Z_P(C)$ by summing $qd$ coefficient-weighted prefix differences. Recall
+weights have fixed endpoints and can be precomputed once.
+
+\begin{theorem}[Joint weighted range trajectory]
+Under these assumptions, $H$ arbitrary threshold queries on $n$ points take
+\[
+ O\bigl(n\log(n+1)+H\log(H+1)+n(qd+C_\gamma(n))+H\bigr)
+\]
+time and $O(dn+n+H+qd)$ words in a unit-cost model of exact arithmetic and
+comparisons. Constant-cost factors recover
+$O(n\log(n+1)+\allowbreak H\log(H+1)+\allowbreak qdn+H)$.
+The stated coefficient and cardinality evaluation costs are assumptions;
+the bound counts arithmetic operations, not exact-rational bit complexity.
+\end{theorem}
+\begin{proof}
+Maintain the active mask, every $(W_j,c_j)$, and the sums defining $R$ and
+$P_\rho$. Precompute in $O(n)$ time an owner array mapping each labeled point
+to its true interval. For each active component $[a,b]$, store its left boundary at $b$
+and its right boundary at $a$; interior entries may be stale. Initially all
+statistics are zero.
+
+Inserting $i\in T_j$ adds its fixed weight to $W_j$ and changes
+\[
+ c_j\leftarrow c_j+1
+ -\ind\{i-1\text{ active in }T_j\}
+ -\ind\{i+1\text{ active in }T_j\}.
+\]
+Replace only $r_j$. Restricted to a contiguous true interval, active runs
+correspond exactly to intersecting predicted components. An insertion outside
+all true intervals cannot connect two fragments inside one such interval,
+because their unique path lies inside it. Existence uses $c_j>0$, even when
+a detected point has zero weight.
+
+For precision, remove the zero, one, or two adjacent component contributions
+and add their replacement interval. An active neighbor of an inactive point
+must be an endpoint, so the stored boundaries identify both components in
+constant time; stale interior entries are never queried. Update the new
+outer endpoints and both precision sums. With $\sigma_i$ indicating a true
+interval start and $D(t)=\sum_{i<t}\sigma_i$,
+\[
+ h([a,b])=D(b+1)-D(a)+y_a-\sigma_a.
+\]
+Thus each insertion evaluates at most three precision and two recall terms
+in $O(qd+C_\gamma(n))$ work
+and preserves every invariant. Fixed-weight preprocessing costs at most
+$O(qdn)$ using one coefficient list as scratch. Sort scores and queries
+descending, activate all points strictly above each query, and emit only
+after complete ties. Each point activates once; output restoration costs
+$O(H)$. The prefix tables, maintained state, scratch, and outputs give the
+space bound.
+\end{proof}
+
+\begin{corollary}[Comparison cost of the complete trajectory]
+For constant $q,d$, $C_\gamma(n)=O(\log(n+1))$ and $H=n$, the trajectory takes
+$O(n\log(n+1))$ operations. This is worst-case comparison-optimal for
+arbitrary distinct real scores and query-associated exact outputs, already
+with flat weights and cardinality one.
+\end{corollary}
+\begin{proof}
+Use $n-1$ consecutive positive labels with arbitrary distinct positive scores,
+followed by one negative label of score zero; take flat weights, cardinality
+one and $\alpha=0$. Request $t_i=s_i$ in input order and write $J$ for the
+positive positions. For $i\in J$,
+$R(t_i)=|\{j\in J:s_j>s_i\}|/(n-1)$ reveals its rank. A comparison-based
+algorithm distinguishes $(n-1)!$ orders and needs $\Omega(n\log n)$ comparisons.
+This is the standard sorting reduction. An anonymous multiset of recalls
+would not identify ranks. The result concerns full query-associated curves,
+not just their maximum, unrestricted algebraic operations, or fixed-width
+radix algorithms.
+\end{proof}
+
+\paragraph{Constructive relation to a component tree.}
+A one-mask Tatbul evaluator can traverse ordered true and predicted intervals
+in linear time and compute each positional overlap in closed form; it need
+not enumerate every pair of intervals~\cite{tatbul2018}. Our fused raster
+avoids all-pairs overlap enumeration but still evaluates point weights. The
+separate conventional interval control uses closed-form overlap and fixed-label
+prefixes at each query, without cross-threshold state. A classical
+threshold component tree additionally supplies births, extensions, merges,
+endpoints and component sizes across thresholds~\cite{najman2006,menotti2007}.
+Size-based precision/recall through such a tree also predates this
+work~\cite{ranefall2016}. These quantities alone do not specify the Tatbul
+trajectory: identical scores with different labels give the same tree but
+different overlap and fragmentation statistics.
+
+The required augmentation is explicit. Precision uses the true-start prefix
+$D$, label-weight prefixes, and the two global sums
+$\sum_C\rho(C)\psi(C)$ and $\sum_C\rho(C)$. Recall additionally needs one
+$(W_j,c_j)$ pair per true interval and $\sum_j r_j$. At each activation:
+\begin{quote}\small
+Remove the precision terms of adjacent active components.\\
+If $i\in T_j$, replace $r_j$ using the updated $W_j,c_j$.\\
+Join the adjacent components through $i$; update the outer endpoints.\\
+Compute the replacement component's $h,N,Z,\rho$ from the prefixes and
+add its precision term.\\
+After the complete eligible tie or query bucket, emit the two global averages.
+\end{quote}
+An explicit component tree augmented with these identities is an alternative
+implementation of the same algorithmic class. The endpoint representation
+avoids materializing a hierarchy that these queries do not consume; we claim
+no asymptotic superiority over that augmented tree. The metric-specific
+contribution is the coupled sufficient state and its local identities.
+
+Moving weights require more than a single component count and moment. On
+positions $0,1,2,3$, label patterns $1001$ and $0110$ both have count two and
+first moment three, yet middle-weight masses two and four. Prefix queries on
+the two sides of the current midpoint recover this distinction after every
+merge without revisiting the component's points.
+
+An off-label bridge can change precision even though every recall contribution
+is unchanged. With $y=(1,1,0,0,1,1)$ and $p=(0,1,1,0,1,1)$, reciprocal
+cardinality and middle precision bias give macro precision
+$(1/2+1)/2=3/4$. Activating zero-based index 3 joins $[1,2]$ and $[4,5]$ into
+$[1,5]$: its weight mass is 4 of 9 and it intersects two true intervals, so
+precision becomes $(1/2)(4/9)=2/9$. The fixed true intervals retain their
+overlap and fragmentation. This is why off-label activations and moving
+normalizers must both participate in the precision update.
+
+\paragraph{Finite query grids and consumers.}
+Full score sorting is unnecessary for a known grid. Binary-search each
+score's first strictly eligible query among descending thresholds, then
+counting-bucket its activation. Processing complete buckets preserves the
+queried masks regardless of internal order, giving
+\[
+ O\bigl(n\log(H+1)+H\log(H+1)+n(qd+C_\gamma(n))+H\bigr).
+\]
+Already ordered queries omit their sorting cost. A consumer that subsequently
+sorts by recall, such as TimeEval, adds $O(H\log(H+1))$; its endpoints and
+integration convention remain part of its contract. Range recall need not
+be monotone. Strict observed-score queries exclude the all-active state
+below the minimum; include a lower sentinel when required.
+
+\paragraph{Implemented family.}
+For $u=i-a+1$ and $L=b-a+1$, the canonical choices are
+\[
+\begin{array}{c|c|c}
+\text{bias}&w(u,L)&Z(L)\\\hline
+\text{flat}&1&L\\
+\text{front}&L+1-u&L(L+1)/2\\
+\text{back}&u&L(L+1)/2\\
+\text{middle}&\min(u,L+1-u)&\lfloor(L+1)^2/4\rfloor
+\end{array}
+\]
+They need at most two pieces and first moments. Middle precision queries
+both sides of the moving midpoint; an unsplit count and moment are
+insufficient. Precision and recall biases are independently selectable.
+Implemented cardinalities are $1$, $1/c$, and TimeSeAD's
+$((L-1)/L)^{c-1}$, with value one at $c=1$~\cite{wagner2023timesead}.
+The first two require $O(1)$ exact arithmetic operations; repeated squaring
+evaluates the third in $O(\log(n+1))$ operations with $O(1)$ arithmetic registers.
+Thus all three retain the complete-trajectory bound, whereas the grid's
+linear update term requires constant-cost factors or fixed-format evaluation.
+One shared cardinality choice and macro or length-weighted precision are
+implemented. Separate generic callbacks, polynomial weights, and the broader
+finite-feature interface are theorem-only generalizations.
+
+\paragraph{Numerical scope and antecedents.}
+Integer counts and first moments avoid cancellation from subtracting rounded
+floating prefixes. For the canonical family, $n\leq2^{31}-1$ bounds all
+intermediate products within signed int64; this restriction does not certify
+higher-degree polynomials. The improved factor uses a count-one branch and
+$\exp((c-1)\operatorname{log1p}(-1/L))$. Division and accumulated differences
+still round: real-arithmetic equality is neither bitwise agreement nor a
+length-independent floating-point certificate. Scores are finite binary64;
+query infinities provide sentinels, and ties are complete.
+
+Tatbul already gives closed-form overlap evaluation~\cite{tatbul2018}.
+Component trees and attribute maintenance are classical~\cite{najman2006};
+Menotti et al. give linear-time 1D construction with height, surface, and
+volume attributes~\cite{menotti2007}. We claim neither new positional biases
+nor a new component tree. The contribution is the coupled, label-conditioned
+overlap and fragmentation state across thresholds; ordering and bucketing
+are standard offline techniques.

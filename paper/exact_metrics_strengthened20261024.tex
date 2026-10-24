@@ -1,0 +1,31 @@
+% Unified manuscript; submission and editorial status are recorded separately.
+% Existing frozen manuscripts, methods, and result fragments remain unchanged.
+\documentclass[sigconf,nonacm]{acmart}
+\usepackage{pvldb}
+\usepackage{xurl}
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{https://github.com/mandu5/sparse-vus/tree/3a2ab2dcb6a9cbe1a83b0ce090f45d4abc4305c9}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\TPR}{\mathrm{TPR}}
+\newcommand{\FPR}{\mathrm{FPR}}
+\emergencystretch=2em
+\begin{document}
+\title{Exact Evaluation of Time-Series Anomaly Metrics by Local Event Statistics}
+\author{Youngmin Ko}
+\email{rhdudals0505@naver.com}
+\affiliation{\institution{Independent Researcher}\country{Republic of Korea}}
+\begin{abstract}
+Time-series anomaly evaluation repeatedly scans stored detector profiles at many thresholds. We derive local event statistics for two existing operators, preserving their numerical targets. For dynamic VUS, inactive precision--recall events vanish while ROC needs a predecessor correction, yielding a support-sensitive exact representation. For range precision and recall, coupled overlap and fragmentation updates maintain the entire trajectory as predicted intervals merge. A finite-feature weight theorem accounts explicitly for cardinality evaluation; the canonical complete trajectory takes $O(n\log n)$ arithmetic operations and is comparison-optimal for query-associated outputs. We separate classical sorting, component trees and caching from these metric-specific identities, and compare against same-compiler raster, closed-form interval and conventional support controls. The original 73-series study is extended with 26 separately selected series and unmodified public detectors. Exhaustive weighted curves improve over both compiled controls at the aggregate level in three collections on two hosts. A native TimeEval integration, including reading scores, all three requested metrics and writing results, improves by $1.93$--$2.76$ times over compiled raster at all native observed queries across four Apple/Linux study executions. An additional interval control retains the gain. Low-cardinality losses, small selection effects on the separate panel, negligible default-consumer gains and a $1.031$-fold VUS-only nine-metric consumer gain delimit the practical benefit.
+\end{abstract}
+\maketitle
+\vldbtopmatter
+\input{exact_metrics_strengthened20261024_body.tex}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{exact_metrics_strengthened20261024_references}
+\end{document}

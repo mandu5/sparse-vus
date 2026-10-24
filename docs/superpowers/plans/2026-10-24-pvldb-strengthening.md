@@ -29,8 +29,8 @@
 ### Task1: Feasibility and frozen design
 
 - [x] Dispatch independent theory/prior-code, external-workload and consumer investigations.
-- [ ] Incorporate their counterexamples and choose executable routes with source citations.
-- [ ] Freeze each study before results, including loss/censoring policy and intervals.
+- [x] Incorporate their counterexamples and choose executable routes with source citations.
+- [x] Freeze each study before results, including loss/censoring policy and intervals.
 
 ### Task2: Weighted range operator
 
@@ -40,10 +40,10 @@ precision_bias='flat', recall_bias='flat', cardinality='reciprocal') -> H x3`.
 Methods: same-compiler recomputed raster and endpoint sweep/bucket. Published
 cardinality alternatives are finalized from the independent feasibility result.
 
-- [ ] Write independent set-and-positional-weight oracle and literal merge fixtures; observe failure.
-- [ ] Implement fixed-domain local updates, weighted component queries and validation.
-- [ ] Verify exhaustive short/tied, odd/even middle, no/all-positive, off-label-merge, large-offset and invalid-domain cases; compare pinned public API.
-- [ ] Independently review proof and implementation before performance claims.
+- [x] Write independent set-and-positional-weight oracle and literal merge fixtures; observe failure.
+- [x] Implement fixed-domain local updates, weighted component queries and validation.
+- [x] Verify exhaustive short/tied, odd/even middle, no/all-positive, off-label-merge, large-offset and invalid-domain cases; compare pinned public API.
+- [x] Independently review proof and implementation before performance claims.
 
 ### Task3: Separate real workload and consumer
 
@@ -52,16 +52,16 @@ Files: new `experiments/strengthen_exact_metrics.py`, separate artifacts under
 contracts require it. Exact sources/cohort/interfaces are set in their frozen
 protocols, not guessed in this planning document.
 
-- [ ] Retain three candidate workload routes and objective feasibility findings.
-- [ ] Execute selected separate real panel with the strongest eligible baseline, confidence intervals, failures and numerical curves.
-- [ ] Measure unchanged public consumer versus range-only/combined substitutions, with all-output parity and stage attribution.
-- [ ] Reconstruct each summary independently and reproduce principal new evidence on a second host where it bears on conclusions.
+- [x] Retain three candidate workload routes and objective feasibility findings.
+- [x] Execute selected separate real panel with the strongest eligible baseline, confidence intervals, failures and numerical curves.
+- [x] Measure unchanged public consumer versus range-only/combined substitutions, with all-output parity and stage attribution.
+- [x] Reconstruct each summary independently and reproduce principal new evidence on a second host where it bears on conclusions. Both the complete compiled-control replay and the original public-reference Linux replay have successful receipts and independent archive reconstructions.
 
 ### Task4: Final judgment and submission
 
-- [ ] Assemble revised paper with theory, result, negative findings and bounded scope.
+- [x] Assemble revised paper with theory, result, negative findings and bounded scope, including all original public-reference Linux outcomes.
 - [ ] Three independent calibrated reviews; preserve dissent without score bargaining.
-- [ ] Render every PDF page, verify content limit, artifact/source identities and CI.
+- [x] Render every PDF page, verify content limit, artifact/source identities and CI. The final review snapshot has 13 total pages with references starting on page 12; all non-reference content fits the 12-page limit.
 - [ ] Inspect logged-in CMT, complete factual submission fields and preserve actual abstract/full-paper receipts when submission requirements are satisfied.
 
 ## Execution ledger
@@ -70,3 +70,67 @@ protocols, not guessed in this planning document.
 User explicitly authorized continued work; no redundant design approval required.
 Theory, external-workload and consumer investigations are independent read-only
 tasks. Root implements and coordinates; timed jobs will remain serial.
+
+08:27 UTC: weighted canonical-family v2 Mac study completed and independently
+reconstructed: 26 recordings, 52 public FFT/COPOD profiles, maximum curve error
+2.4980018054066022e-15. Preserve the MSL recording loss and only one tiny
+selection nonoverlap (maximum regret .001412). Version1 was aborted before its
+timing summary because paired-order uncertainty and explicit auditor binding
+were added; its history is preserved and its partial timings are not used.
+
+Native TimeEval Mac study began08:07 UTC and is running under the frozen600s
+per-workflow censor policy. No other local numerical work runs concurrently.
+Fresh Linux replay40078063128 starts fromf67c27e, downloads all inputs and
+sources, regenerates scores, validates six focused test files and independent
+input audit before timing, then reconstructs weighted and native outputs.
+
+New separately named manuscript draft integrates the finite-feature theorem,
+canonical implementation, separate-cohort selection, native workflow contract,
+and old negative controls. Its results section and abstract remain explicitly
+marked as working content until completed independent audits and final reviews.
+
+09:10 UTC: independent reviewer B identified a stronger conventional weighted
+baseline (Tatbul closed-form ordered intervals versus the original raster's
+per-point weights). Add a separately frozen supplemental ablation on the same
+26 cases/all 12 semantics: raster/interval/incremental, six permutations,
+grid100 and distinct queries. Preserve all old source/protocol/results. Also
+compare raster/interval/bucket inside the native consumer without re-running
+the public timeout controls. New files keep the original running experiments
+immutable. A separate post-hoc archive reconstruction will retain worst-tied
+winner regret; the original weighted primary statistic was best-tie regret.
+
+09:10 UTC: the complete-trajectory theorem now includes a standard sorting
+reduction giving a matching comparison lower bound for H=n and constant q,d.
+It does not apply to maximum-only queries, unrestricted algebraic computation,
+or fixed-width radix sorting. Two independent static readers found no core
+recurrence counterexample; final overall decisions await complete evidence.
+
+10:12 UTC: the separately frozen conventional-interval study is complete on
+Mac and in fresh Linux run40081512476. Independent saved-output reconstructions
+verify all coverage, curve agreement and timing summaries. Combined exhaustive
+native workflows improve over the faster raster control by2.732/2.756 times;
+default intervals cross one on both hosts. The post-hoc query-regime figure
+retains the low-query MSL loss. The generalized theorem now explicitly includes
+cardinality-evaluation cost and the query-associated comparison lower bound.
+The current unified PDF compiles within the content limit. Full local regression
+passes with the optional native dependencies supplied through an isolated test
+overlay. The original public-reference replay40079636938 is still running; its
+censors and outcomes must be retained before the final three reviews.
+
+CMT is authenticated and the confirmed Independent Researcher affiliation was
+verified on the actual form. A single required fact question about additional
+five-year institutional/collaboration or personal conflicts remains pending.
+No absence of such conflicts, submission ID or editorial outcome is inferred.
+
+10:21 UTC: original fresh Linux run40079636938 completed. Its weighted and
+native saved outputs were independently reconstructed. The combined native
+exhaustive ratio is1.932, below the supplemental2.756; the abstract and results
+now retain the full1.93--2.76 range across all four executions. All original
+MSL losses, censored public outputs and between-run variability remain visible.
+
+Final preparation: the author confirmed no additional conflicts beyond PSU and
+KRAFTON. Saved domain conflicts are psu.edu and krafton.com; KRAFTON is the
+current employer conflict, while the paper affiliation remains Independent
+Researcher. CMT currently disables individual-conflict editing; no additional
+individual conflicts were reported. The final same-snapshot reviews can now
+proceed without a pending author-metadata question.

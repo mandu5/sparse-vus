@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-24T10:42:48.151252+00:00",
+  "status": "IMMUTABLE_PRE_FINAL_REVIEW_PDF",
+  "pdf": "paper/exact_metrics_strengthened20261024.pdf",
+  "pdf_sha256": "38ad66e21f7a21ab9d58f80f9b8d8499f92e55014e714c064cd467bd1cc05e54",
+  "pdf_bytes": 197108,
+  "pages_total": 13,
+  "references_start_page": 12,
+  "content_limit_pages": 12,
+  "all_pages_rendered_and_visually_checked": true,
+  "undefined_references": 0,
+  "overfull_horizontal_boxes": 0,
+  "retained_layout_note": "TeX reports a 1.166pt vertical-box warning at the reference flow. Visual inspection finds no clipped or overlapping content. Official class/style bytes unchanged.",
+  "evidence_commit": "3a2ab2dcb6a9cbe1a83b0ce090f45d4abc4305c9",
+  "sources": [
+    {
+      "path": "paper/exact_metrics_strengthened20261024.tex",
+      "sha256": "2a4a48fda18a785e767e148440a5b580cd449586f068398e0c5086185abd3a54"
+    },
+    {
+      "path": "paper/exact_metrics_strengthened20261024_body.tex",
+      "sha256": "e087a0f1a02e2ff69f8292dc061c5a50ad65b5e2e5620436658ea1a2b6fe939b"
+    },
+    {
+      "path": "paper/exact_metrics_strengthened20261024_references.bib",
+      "sha256": "80bc6d49482c5e48df72af406dd3715ba271251fb0db9164c777320f76bc420d"
+    },
+    {
+      "path": "paper/support_events_method.tex",
+      "sha256": "da1af4f10626aba096232017ecd7291f706b2492ececa9d16fec740e4d4656c7"
+    },
+    {
+      "path": "paper/weighted_range_method.tex",
+      "sha256": "413dc65ab6737e040667f0e669c1042b91f0a17957569c9bcd8adbbf8f1989bf"
+    },
+    {
+      "path": "paper/strengthened_legacy_tables.tex",
+      "sha256": "5c17c965dfe1984fe313eb64e4fcf90d19f9f13a192c5facd6c3d20b2e4a4966"
+    },
+    {
+      "path": "paper/strengthening_results.tex",
+      "sha256": "29dd95eb34f2f2cd0f9ea7ca833e0698f40a578ff7648bc6dfcee042d55397d1"
+    },
+    {
+      "path": "paper/strengthened_native_control_table.tex",
+      "sha256": "56b915ea57a619e5c5b2d21d855644be44f80400974116b9048f9bce0f8f013c"
+    }
+  ],
+  "post_whitespace_normalization_layout_text_identical": true
+}
