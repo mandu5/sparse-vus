@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-10-24T10:49:00.446404+00:00",
+  "headSha": "ca8761cc40d493141511cad4bc3c184c48a681dc",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/mandu5/sparse-vus/actions/runs/40087091952",
+  "jobs": [
+    {
+      "name": "parity (3.11)",
+      "status": "completed",
+      "conclusion": "success",
+      "completedAt": "2026-10-24T10:47:40Z"
+    },
+    {
+      "name": "installed-wheel",
+      "status": "completed",
+      "conclusion": "success",
+      "completedAt": "2026-10-24T10:45:01Z"
+    },
+    {
+      "name": "parity (3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "completedAt": "2026-10-24T10:47:32Z"
+    },
+    {
+      "name": "sampling-report-portability",
+      "status": "completed",
+      "conclusion": "success",
+      "completedAt": "2026-10-24T10:44:36Z"
+    }
+  ]
+}
