@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 import hashlib
 import io
 import json
+import math
 import os
 from pathlib import Path
 import random
@@ -27,6 +28,8 @@ ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT = ROOT / "artifacts/pvldb-research-20261024/strengthening"
 MODELS = ("FFT", "COPOD")
 SEED = 20261024
+DECODE_CONTRACT = ARTIFACT / 'provenance/float-decoding-contract.json'
+DECODE_CONTRACT_SHA = '514614e9711e87d12ab978a60316f40532324d6bf15f7a64ba7eed7d86ad08d8'
 THREAD_ENV = {
     name: "1" for name in (
         "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
@@ -90,6 +93,37 @@ def verify_files(root, entries):
             raise ValueError("Changed pinned file: " + entry["path"])
 
 
+def restore_frozen_decoding(raw, observations, entries):
+    """Restore explicitly recorded legacy parser bits; never repair scores."""
+    matches = [e for e in entries if e['raw_member_sha256'] == sha_bytes(raw)]
+    if not matches:
+        return observations
+    if len(matches) != 1:
+        raise ValueError('Ambiguous frozen decoding source')
+    entry = matches[0]
+    index = entry['row_index_zero_based']
+    rows = list(csv.DictReader(io.StringIO(raw.decode('utf-8'))))
+    if not 0 <= index < len(rows) or rows[index][entry['column']] != entry['literal']:
+        raise ValueError('Frozen decoding literal/index mismatch')
+    old = float.fromhex(entry['original_frozen_binary64_hex'])
+    rounded = float.fromhex(entry['correctly_rounded_binary64_hex'])
+    if float(entry['literal']).hex() != rounded.hex() or math.nextafter(old, math.inf) != rounded:
+        raise ValueError('Frozen decoding is not the declared adjacent binary64 pair')
+    current = array_sha(observations[:, 0])
+    original_sha = entry['original_frozen_observation_sha256']
+    if current == original_sha:
+        if observations[index, 0].hex() != old.hex():
+            raise ValueError('Frozen original point differs')
+        return observations
+    if current != entry['correctly_rounded_observation_sha256'] or observations[index, 0].hex() != rounded.hex():
+        raise ValueError('Unexpected parsed observation vector; no decoding waiver')
+    restored = observations.copy()
+    restored[index, 0] = old
+    if array_sha(restored[:, 0]) != original_sha:
+        raise ValueError('Restored frozen observation identity differs')
+    return restored
+
+
 def parse_raw(raw):
     frame = pd.read_csv(io.BytesIO(raw))
     if "Label" not in frame or frame.shape[1] != 2:
@@ -101,6 +135,10 @@ def parse_raw(raw):
     labels = labels.astype(np.int8)
     if not 0 < labels.sum() < len(labels):
         raise ValueError("Both label classes are required")
+    if file_sha(DECODE_CONTRACT) != DECODE_CONTRACT_SHA:
+        raise ValueError('Frozen decoding contract identity differs')
+    contract = json.loads(DECODE_CONTRACT.read_text())
+    x = restore_frozen_decoding(raw, x, contract['entries'])
     return np.ascontiguousarray(x), np.ascontiguousarray(labels)
 
 
@@ -282,7 +320,7 @@ def prepare(args):
     datasets_csv = output / "datasets/datasets.csv"
     write_csv(datasets_csv, ["collection_name", "dataset_name", "test_path", "train_path"], dataset_rows)
     pinned = list(source_manifest["files"])
-    for path in [Path(__file__).resolve(), source_manifest_path, discovery_path]:
+    for path in [Path(__file__).resolve(), source_manifest_path, discovery_path, DECODE_CONTRACT]:
         pinned.append({"path": str(path.relative_to(ROOT)), "sha256": file_sha(path)})
     protocol = {
         "status": "FROZEN_BEFORE_FIRST_DETECTOR_FIT", "frozen_utc": now(),
@@ -298,6 +336,9 @@ def prepare(args):
                             "max_sign_change_distance": 10, "normalize": True},
                             "COPOD": {"n_jobs": 1, "contamination": 0.1, "normalize": True}},
         "raw_contract": "Original CSV order; X(n,1)float64; labels int8; no crop, row dropping or extra normalization.",
+        "decoding_replay": {"contract_path": str(DECODE_CONTRACT.relative_to(ROOT)),
+                            "contract_sha256": DECODE_CONTRACT_SHA,
+                            "purpose": "legacy Mac binary64 decoding compatibility; not canonical decimal rounding"},
         "score_contract": "Unchanged public API and upstream zscore including native nan_to_num. No adapter repair, rounding or jitter. Preserve native dtype in npy, %.17g native text with bit-preserving float64 read-back.",
         "failure_policy": "One attempt per selected case/model. Retain every error or120s subprocess timeout. No replacement, dropping, retries, or imputation. All-tied and zero outputs are valid. Invalid raw/source identity aborts before any fit.",
         "time_scope": "detector_fit_wall_seconds_not_metric_time excludes imports and serialization; subprocess wall time separately labeled. No metric evaluation or benchmarking.",

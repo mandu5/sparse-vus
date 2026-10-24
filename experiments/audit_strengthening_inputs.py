@@ -13,6 +13,7 @@ import importlib
 import inspect
 import io
 import json
+import math
 from pathlib import Path
 import sys
 import zipfile
@@ -25,6 +26,9 @@ REVISION = "7c3622757b1a3afa9a84cbc97ce132d9e379f715"
 PROVENANCE = Path("artifacts/pvldb-research-20261024/strengthening/provenance")
 PRODUCER = "scripts/prepare_strengthening_workload.py"
 MODELS = ["FFT", "COPOD"]
+DECODING_CONTRACT = PROVENANCE / "float-decoding-contract.json"
+DECODING_CONTRACT_SHA256 = "514614e9711e87d12ab978a60316f40532324d6bf15f7a64ba7eed7d86ad08d8"
+DECODING_REPLAY_PURPOSE = "legacy Mac binary64 decoding compatibility; not canonical decimal rounding"
 SOURCE_ANCHORS = {
     "timeeval/metrics/__init__.py": "3d79e78d897e4b027f5b6c070a36a77e148bc2e08c429f929d14859df2513ced",
     "timeeval/metrics/metric.py": "2333740807f8573784210b0796da16cae8d7b0aa81f391a0e43af0f3daf1f320",
@@ -122,6 +126,88 @@ def unique_index(rows, fields):
     return indexed
 
 
+def load_decoding_replay(protocol, selected, root=ROOT):
+    """Permit only the diagnosed, source-pinned original-input replay contract."""
+    if "decoding_replay" not in protocol:
+        return None, {}
+    declaration = protocol["decoding_replay"]
+    require(isinstance(declaration, dict), "decoding declaration is invalid")
+    require(declaration.get("contract_path") == str(DECODING_CONTRACT)
+            and declaration.get("contract_sha256") == DECODING_CONTRACT_SHA256
+            and declaration.get("purpose") == DECODING_REPLAY_PURPOSE,
+            "decoding contract identity or purpose differs")
+    pinned = [entry for entry in protocol["pinned_files"]
+              if entry["path"] == str(DECODING_CONTRACT)]
+    require(len(pinned) == 1 and pinned[0]["sha256"] == DECODING_CONTRACT_SHA256,
+            "decoding contract is not uniquely pinned before fitting")
+    path = Path(root) / DECODING_CONTRACT
+    contract = json.loads(read_verified(path, DECODING_CONTRACT_SHA256))
+    require(contract["schema"] == "frozen-observation-binary64-replay-v1",
+            "decoding contract schema differs")
+    entries = {}
+    for entry in contract["entries"]:
+        identifier = entry["case_id"]
+        require(identifier not in entries and (identifier,) in selected,
+                "decoding entry is repeated or outside the frozen selection")
+        case = selected[(identifier,)]
+        require(entry["raw_member_sha256"] == case["raw_sha256"]
+                and entry["original_frozen_observation_sha256"] == case["observation_hashes"][0],
+                "decoding entry altered an original source identity")
+        index = entry["row_index_zero_based"]
+        require(type(index) is int and 0 <= index < case["n"], "decoding row index is invalid")
+        entries[identifier] = entry
+    require(len(entries) == 1, "decoding contract must contain exactly the one diagnosed observation")
+    return {**declaration, "contract_resolved_path": str(path), "entries_verified": []}, entries
+
+
+def replay_observation_decode(observations, raw_bytes, raw_case, entry):
+    """Independently rehydrate one original binary64 value, with whole-vector guards."""
+    require(entry["case_id"] == raw_case["id"]
+            and hashlib.sha256(raw_bytes).hexdigest() == raw_case["raw_sha256"] == entry["raw_member_sha256"]
+            and entry["original_frozen_observation_sha256"] == raw_case["observation_hashes"][0],
+            "decoding source identity differs")
+    index = entry["row_index_zero_based"]
+    require(type(index) is int and 0 <= index < raw_case["n"], "decoding row index is invalid")
+    reader = csv.DictReader(io.StringIO(raw_bytes.decode("utf-8"), newline=""))
+    require(reader.fieldnames is not None and len(reader.fieldnames) == 2
+            and reader.fieldnames.count("Label") == 1 and entry["column"] != "Label"
+            and reader.fieldnames.count(entry["column"]) == 1, "decoding raw column differs")
+    rows = list(reader)
+    require(len(rows) == raw_case["n"] and rows[index][entry["column"]] == entry["literal"],
+            "decoding raw literal or row differs")
+    correct = float.fromhex(entry["correctly_rounded_binary64_hex"])
+    original = float.fromhex(entry["original_frozen_binary64_hex"])
+    require(math.isfinite(correct) and math.isfinite(original)
+            and correct.hex() == entry["correctly_rounded_binary64_hex"]
+            and original.hex() == entry["original_frozen_binary64_hex"]
+            and float(entry["literal"]).hex() == correct.hex(),
+            "decoding decimal-to-binary64 declaration differs")
+    require(correct != original and math.nextafter(correct, original) == original,
+            "decoding values are not one-ULP neighbors")
+    require(observations.dtype == np.float64 and observations.shape == (raw_case["n"], 1)
+            and np.isfinite(observations).all(), "decoding input shape or dtype differs")
+    before = array_digest(observations[:, 0])
+    require(before in (entry["correctly_rounded_observation_sha256"],
+                       entry["original_frozen_observation_sha256"]),
+            "decoding observed vector is neither diagnosed original nor correctly rounded input")
+    needs_replay = before != entry["original_frozen_observation_sha256"]
+    expected_value = correct if needs_replay else original
+    require(float(observations[index, 0]).hex() == expected_value.hex(),
+            "decoding observed value differs from its vector identity")
+    reconstructed = observations.copy()
+    reconstructed[index, 0] = original
+    after = array_digest(reconstructed[:, 0])
+    require(after == entry["original_frozen_observation_sha256"],
+            "decoding replay failed the full original observation hash")
+    return reconstructed, {
+        "case_id": raw_case["id"], "raw_member_sha256": entry["raw_member_sha256"],
+        "row_index_zero_based": index, "column": entry["column"], "literal": entry["literal"],
+        "correctly_rounded_binary64_hex": correct.hex(), "original_frozen_binary64_hex": original.hex(),
+        "one_ulp_adjacency_verified": True, "compatibility_value_applied": needs_replay,
+        "observed_before_sha256": before, "verified_original_observation_sha256": after,
+    }
+
+
 def csv_rows(path):
     with Path(path).open(newline="") as stream:
         return list(csv.DictReader(stream))
@@ -185,6 +271,7 @@ def audit(generation_path, timeeval_source, root=ROOT):
     cases = unique_index(generation["cases"], ("id",))
     raw_cases = unique_index(protocol["cases"], ("id",))
     selected = unique_index(discovery["selection"]["cases"], ("id",))
+    decoding_receipt, decoding_entries = load_decoding_replay(protocol, selected, root)
     profiles = unique_index(generation["profiles"], ("case_id", "model"))
     require(set(cases) == set(raw_cases) == set(selected) and len(cases) == 26, "case identity coverage differs")
     require(set(profiles) == {(c[0], model) for c in cases for model in MODELS}, "profile identity coverage differs")
@@ -223,6 +310,10 @@ def audit(generation_path, timeeval_source, root=ROOT):
             require(observations.shape == (case["n"], 1) and np.isfinite(observations).all(), "raw observations invalid")
             require(0 < int(labels.sum()) < case["n"], "raw label classes missing")
             require(array_digest(labels) == raw_case["label_hash"], "raw label array identity mismatch")
+            if case["id"] in decoding_entries:
+                observations, decoded = replay_observation_decode(
+                    observations, raw_bytes, raw_case, decoding_entries[case["id"]])
+                decoding_receipt["entries_verified"].append(decoded)
             vector = observations[:, 0]
             scale = float(np.std(vector))
             normalized = (vector - float(np.mean(vector))) / scale if scale else np.zeros_like(vector)
@@ -276,6 +367,9 @@ def audit(generation_path, timeeval_source, root=ROOT):
             for path in (raw_npz, npz_path, native_test):
                 input_files[str(path)] = digest(path)
             total_rows += case["n"]
+    if decoding_receipt is not None:
+        require(len(decoding_receipt["entries_verified"]) == len(decoding_entries),
+                "decoding entry audit coverage differs")
     return {
         "status": "NATIVE_INPUTS_VERIFIED_WITHOUT_METRIC_EVALUATION",
         "verified_utc": datetime.now(timezone.utc).isoformat(),
@@ -294,6 +388,7 @@ def audit(generation_path, timeeval_source, root=ROOT):
         "frozen_sources": frozen_sources, "input_sha256": input_files,
         "raw_archive": {"path": str(archive_path), "sha256": protocol["raw_archive"]["sha256"]},
         "timeeval_source": timeeval_receipt,
+        "decoding_replay": decoding_receipt,
         "provenance_mode": "historical Mac packaging recovery" if generation.get("post_generation_packaging_recovery") else "clean current producer",
     }
 

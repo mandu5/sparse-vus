@@ -80,3 +80,43 @@ def test_shared_cache_symlink_keeps_portable_logical_path(tmp_path):
     (worktree / ".cache").symlink_to(shared_cache, target_is_directory=True)
     target = shared_cache / "workload/arrays/example.npz"
     assert module.relative_cache_path(target, worktree) == ".cache/workload/arrays/example.npz"
+
+
+def decoding_fixture(module):
+    raw=b'Data,Label\n1,0\n2.9364790299813794,1\n4,0\n'
+    rounded=float.fromhex('0x1.77de8b7b94754p+1')
+    old=float.fromhex('0x1.77de8b7b94753p+1')
+    x=np.array([[1.], [rounded], [4.]])
+    restored=x.copy();restored[1,0]=old
+    entry={'raw_member_sha256':hashlib.sha256(raw).hexdigest(),
+           'row_index_zero_based':1,'column':'Data','literal':'2.9364790299813794',
+           'original_frozen_binary64_hex':old.hex(),
+           'correctly_rounded_binary64_hex':rounded.hex(),
+           'original_frozen_observation_sha256':module.array_sha(restored[:,0]),
+           'correctly_rounded_observation_sha256':module.array_sha(x[:,0])}
+    return raw,x,restored,entry
+
+
+def test_declared_decoding_restores_exact_frozen_bits_and_is_idempotent():
+    module=preparer();raw,x,want,entry=decoding_fixture(module)
+    actual=module.restore_frozen_decoding(raw,x,[entry])
+    assert actual.tobytes()==want.tobytes()
+    assert module.restore_frozen_decoding(raw,actual,[entry]).tobytes()==want.tobytes()
+    assert x.tobytes()!=want.tobytes(), 'caller input must not be overwritten'
+
+
+def test_decoding_contract_does_not_waive_other_observation_changes():
+    module=preparer();raw,x,_,entry=decoding_fixture(module)
+    x[0,0]=2.
+    with pytest.raises(ValueError,match='no decoding waiver'):
+        module.restore_frozen_decoding(raw,x,[entry])
+
+
+@pytest.mark.parametrize('field,value',[
+    ('literal','wrong literal'),('row_index_zero_based',999),
+    ('original_frozen_binary64_hex','0x1.77de8b7b94752p+1')])
+def test_decoding_requires_exact_literal_index_and_adjacent_value(field,value):
+    module=preparer();raw,x,_,entry=decoding_fixture(module)
+    entry[field]=value
+    with pytest.raises(ValueError):
+        module.restore_frozen_decoding(raw,x,[entry])

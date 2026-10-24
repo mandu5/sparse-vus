@@ -74,7 +74,8 @@ def run(args):
     out=dest/REL;out.mkdir(parents=True)
     for directory in ('src','experiments','scripts','tests'):
         shutil.copytree(ROOT/directory,dest/directory,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
-    for rel in ('source-discovery.json','provenance/source-manifest.json'):
+    for rel in ('source-discovery.json','provenance/source-manifest.json',
+                'provenance/float-decoding-contract.json'):
         target=out/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/REL/rel,target)
     original=Path('artifacts/pvldb-research-20261024/full-precision/protocol.json')
     (dest/original).parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/original,dest/original)
