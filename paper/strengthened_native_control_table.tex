@@ -1,10 +1,20 @@
 \begin{table*}[t]\centering\small
 \begin{tabular}{llrrrrr}\toprule
-Host & Queries & Raster s & Interval s & Bucket s & Raster/bucket & Interval/bucket\\\midrule
-Apple & Nominal 50 & 1.0686 & 1.0991 & 1.0429 & 1.026 [0.998,1.049] & 1.043 [1.016,1.067]\\
-Apple & All observed & 2.9474 & 3.2754 & 1.0726 & 2.732 [2.656,2.812] & 3.034 [2.990,3.075]\\
-Linux & Nominal 50 & 1.4617 & 1.4880 & 1.4381 & 1.016 [0.997,1.033] & 1.034 [1.015,1.047]\\
-Linux & All observed & 4.1126 & 4.7551 & 1.4990 & 2.756 [2.742,2.773] & 3.190 [3.166,3.224]\\
+Execution & Queries & Raster s & Interval s & Bucket s & Raster/bucket & Interval/bucket\\\midrule
+Apple O & Nominal 50 & 1.0848 & --- & 1.0783 & 1.017 [.998,1.039] & ---\\
+Apple O & All observed & 2.9461 & --- & 1.0807 & 2.728 [2.649,2.801] & ---\\
+Linux O & Nominal 50 & 1.5841 & --- & 1.5679 & 1.014 [1.007,1.027] & ---\\
+Linux O & All observed & 3.0422 & --- & 1.5659 & 1.932 [1.907,1.946] & ---\\
+Apple C & Nominal 50 & 1.0686 & 1.0991 & 1.0429 & 1.026 [.998,1.049] & 1.043 [1.016,1.067]\\
+Apple C & All observed & 2.9474 & 3.2754 & 1.0726 & 2.732 [2.656,2.812] & 3.034 [2.990,3.075]\\
+Linux C & Nominal 50 & 1.4617 & 1.4880 & 1.4381 & 1.016 [.997,1.033] & 1.034 [1.015,1.047]\\
+Linux C & All observed & 4.1126 & 4.7551 & 1.4990 & 2.756 [2.742,2.773] & 3.190 [3.166,3.224]\\
 \bottomrule\end{tabular}
-\caption{Combined native TimeEval workflows in the separately frozen conventional-control study. Each row evaluates all 52 profiles and all three metrics from CSV read to result write/close. Absolute times are medians of six runs; paired ratios and conditional intervals are independently reconstructed from matched orders. These compiled-only runs supply no additional public-reference coverage.}\label{tab:native-control}
+\caption{All four combined native TimeEval executions: O denotes the original
+public-reference study and C the supplemental conventional-control study.
+Each row evaluates all 52 profiles and all three metrics from CSV read to
+result write/close; range PR-AUC uses flat weights and cardinality one.
+Absolute times are medians of six runs; paired ratios and conditional intervals
+are reconstructed from matched orders within each execution. No runs are
+pooled. C adds no public-reference coverage.}\label{tab:native-control}
 \end{table*}

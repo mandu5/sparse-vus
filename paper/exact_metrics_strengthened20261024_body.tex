@@ -104,6 +104,15 @@ inputs, orders and censoring rule before its measurements; it is not a
 retrospective enlargement of the original protocol. All exact comparisons
 hold the metric definition and query set fixed. Comparing sampled and complete
 queries is instead an accuracy--cost analysis.
+The study-to-output map is: dynamic VUS returns integrated ROC/PR values
+(primary VUS-PR comparison in Table~\ref{tab:vus-main}); flat and weighted range
+studies return strict-query precision/recall/F1 trajectories and maximum F1
+(Tables~\ref{tab:range-main},~\ref{tab:weighted-new},~\ref{tab:interval-control});
+native TimeEval returns three integrated metrics, with inclusive range queries
+and synthetic endpoints (Tables~\ref{tab:native-mac},~\ref{tab:native-linux}
+and~\ref{tab:native-control}; process-session follow-up in
+Table~\ref{tab:affinity-blocks}).
+These contracts are compared internally, not treated as interchangeable outputs.
 An initial weighted Mac run was stopped after 12 WSD cases and one Stock
 query contract. Before a complete rerun, we separated paired-order timing
 uncertainty from recording sensitivity and bound the independent auditor in
@@ -238,8 +247,10 @@ recording-reweighting bootstrap shows workload sensitivity, especially for
 two-recording MSL. Aggregate intervals adjust over three collections; individual
 semantics intervals adjust over 36 collection/semantics cells per comparison.
 The extreme adjusted quantiles of 10,000 draws are approximate. No host pooling
-or favorable-host selection is used. Native consumer intervals resample its
-six paired complete-workflow trials only when all six are observed.
+or favorable-host selection is used. The original and supplemental native
+consumer intervals resample six paired complete-workflow trials only when all
+six are observed. The separate five-process follow-up instead resamples
+process-level mean log ratios, as specified in Table~\ref{tab:affinity-blocks}.
 
 \paragraph{Correctness and selection.}
 Complete canonical range curves are archived, including precision, recall and
@@ -371,11 +382,14 @@ cardinality penalties and closed-form per-overlap evaluation. TimeSeAD already
 enumerates observed thresholds, and TimeEval already offers weighted PR curves.
 Classical component trees maintain connected level sets and attributes;
 linear-time one-dimensional construction predates this work~\cite{najman2006,menotti2007}.
+Naegel and Passat~\cite{naegel2014} also incrementally compute component
+attributes relative to a fixed binary segmentation target. Label conditioning
+itself is therefore established.
 Ranefall and W{\"a}hlby already derive per-threshold object precision/recall
 from component-size attributes~\cite{ranefall2016}. Their true-positive pixels
 are defined by a size interval and their recall denominator by the maximum
-such count, rather than fixed labeled anomaly intervals. That construction
-supplies a related threshold/attribute framework. Our additional state must
+such count, rather than fixed labeled anomaly intervals. These constructions
+supply related threshold/attribute frameworks. Our additional state must
 handle label intersections, fragmentation, and moving weight normalization.
 The additional identity maintains \emph{joint label-conditioned overlap and
 fragmentation aggregates}, including moving precision weights, across a
@@ -407,25 +421,24 @@ contribution, not universal precedence over every unpublished implementation.
 
 \section{Reproducibility and limits}
 Raw archives and members, decoded arrays, generated scores, source revisions,
-protocols and outputs are SHA-256 bound. The weighted and compiled-consumer
-control tables are produced from fresh raw data and public sources with:
+protocols and outputs are SHA-256 bound. The primary interval-control and
+compiled-consumer results are produced from fresh raw data and public sources with:
 \begin{flushleft}\small\ttfamily
 python experiments/reproduce\_interval\_control.py\\
 \hspace*{1em}--output /tmp/interval-control-replica
 \end{flushleft}
-The destination must be new. Pinned core dependencies and installation steps
-are provided; full observed package versions are recorded. The command fits
-all public detector profiles, verifies actual TimeEval loaders, executes
-weighted and native studies, and reconstructs tables with separate auditors.
-The original weighted/public-consumer follow-up uses the separate driver
-\texttt{reproduce\_strengthening.py}.
-The earlier VUS/range evidence has its own completed one-command reproduction,
-\texttt{reproduce\_range\_sweep.py --include-vus}. Supplementary long-recording,
-resource and control studies retain separate frozen protocols. TeX compilation
-is distinct from numerical reproduction. Raw datasets with unconfirmed
-redistribution terms and detector-score vectors from the new panel remain
-local; acquisition instructions, identifiers, digests and numerical metric
-curves are public.
+The destination must be new; dependencies and observed versions are supplied.
+This command fits public profiles, verifies TimeEval loaders, executes both
+studies and reconstructs primary tables. The guide supplies separate saved-record
+commands for exploratory raster intervals. Original weighted/public-consumer,
+five-process and earlier VUS/range reproductions respectively use
+\texttt{reproduce\_strengthening.py},
+\texttt{reproduce\_affinity\_blocks\_v2.py --run}, and
+\texttt{reproduce\_range\_sweep.py --include-vus}, each with a new destination.
+Supplementary studies retain separate protocols; TeX compilation is distinct
+from numerical reproduction. New raw datasets and score vectors remain local
+because redistribution terms are unconfirmed. Acquisition instructions,
+identifiers, digests, metric curves and result CSVs are public.
 
 Mathematical claims assume unit-cost exact metric arithmetic. Binary64
 experiments give empirical parity, not an all-input rounding certificate.
@@ -449,10 +462,8 @@ review.
 
 \section{Conclusion}
 Dynamic VUS and weighted range metrics admit different local sufficient
-statistics. Complete ties and predecessor rectangles preserve a compressed
-VUS integral; coupled overlap and fragmentation updates preserve range
-trajectories through moving component boundaries. Compilation-matched controls,
-separate public-detector workloads and native consumer measurements distinguish
-algorithmic improvement from implementation overhead and application bottlenecks.
-The result is an exact evaluation operator with a measured operating range,
-not a new metric or a universal application speedup.
+statistics. Complete ties and predecessor rectangles preserve VUS integrals;
+coupled overlap and fragmentation updates preserve weighted range trajectories.
+Compilation-matched controls, separate public-detector workloads and native
+consumers establish the exact operators' measured operating range and expose
+their low-query limits.

@@ -149,37 +149,41 @@ raster/interval aggregate ratios are below one in five of six Mac comparisons
 and all six Linux comparisons. Both controls remain visible.
 
 \begin{table*}[t]\centering\small
-\begin{tabular}{llrrr}\toprule
-Host & Collection & Grid100 interval/bucket & Distinct interval/sweep & Distinct recording sensitivity\\\midrule
-Apple & WSD & 1.665 [1.658,1.671] & 7.323 [7.277,7.342] & [4.290,11.919]\\
-Apple & Stock & 2.051 [2.040,2.059] & 26.339 [26.244,26.387] & [19.472,35.575]\\
-Apple & MSL & 1.753 [1.725,1.759] & 1.706 [1.679,1.728] & [.775,3.759]\\
-Linux & WSD & 2.308 [2.293,2.315] & 12.945 [12.396,12.991] & [7.566,21.139]\\
-Linux & Stock & 2.289 [2.282,2.296] & 36.149 [35.977,36.224] & [27.994,46.863]\\
-Linux & MSL & 2.331 [2.306,2.348] & 2.381 [2.347,2.418] & [1.024,5.536]\\
+\begin{tabular}{llrrrr}\toprule
+& & \multicolumn{2}{c}{Grid100: control/bucket} & \multicolumn{2}{c}{Distinct: control/sweep}\\
+Host & Collection & Raster$^{\dagger}$ & Interval & Raster$^{\dagger}$ & Interval\\\midrule
+Apple & WSD & 1.526 [1.518,1.531] & 1.665 [1.658,1.671] & 8.608 [8.549,8.639] & 7.323 [7.277,7.342]\\
+Apple & Stock & 1.611 [1.602,1.618] & 2.051 [2.040,2.059] & 21.991 [21.908,22.050] & 26.339 [26.244,26.387]\\
+Apple & MSL & 1.571 [1.552,1.584] & 1.753 [1.725,1.759] & 1.421 [1.403,1.461] & 1.706 [1.679,1.728]\\
+Linux & WSD & 1.672 [1.661,1.680] & 2.308 [2.293,2.315] & 11.621 [11.111,11.668] & 12.945 [12.396,12.991]\\
+Linux & Stock & 1.548 [1.543,1.555] & 2.289 [2.282,2.296] & 26.717 [26.579,26.786] & 36.149 [35.977,36.224]\\
+Linux & MSL & 1.665 [1.654,1.690] & 2.331 [2.306,2.348] & 1.726 [1.695,1.776] & 2.381 [2.347,2.418]\\
 \bottomrule\end{tabular}
-\caption{Prospectively frozen conventional-interval ablation. Both controls
-and the incremental method share compiler and output semantics. Interval
-recomputation uses closed-form overlap at each query and no cross-query metric
-state. The paired-order and recording-sensitivity intervals have the same
-interpretation as Table~\ref{tab:weighted-new}; they are not pooled across hosts.
-Remeasured raster results and all 12 individual semantic contracts are retained
-in the artifact.}\label{tab:interval-control}
+\caption{Both conventional controls in the supplemental weighted study.
+All methods share compiler and output semantics. Interval uses closed-form
+overlap at each query, with no cross-query metric state. Brackets quantify
+conditional paired-order timing uncertainty, not workload generalization.
+Interval contrasts were prospectively frozen and adjust over three collections
+per query contract. $^{\dagger}$Raster contrasts are exploratory post-hoc
+reconstructions adjusted over six collection/query contrasts per host; this
+does not correct post-hoc comparator selection. No hosts are pooled. All
+semantic results and recording-reweighting intervals remain in the artifact.}
+\label{tab:interval-control}
 \end{table*}
 
 On Mac, all 72 collection/semantic/query intervals against interval control
 lie above one, but MSL id7 loses every exhaustive semantic setting
 (aggregate .775), while id3 improves 3.759 times. On Linux, id7 improves only
 1.024 times over interval; the faster raster still limits the benefit.
+The exhaustive interval/sweep recording-sensitivity intervals are
+[4.290,11.919], [19.472,35.575] and [.775,3.759] on Mac, and
+[7.566,21.139], [27.994,46.863] and [1.024,5.536] on Linux, in WSD/Stock/MSL order.
 The conditional aggregate intervals therefore do not establish uniformly
 positive performance on new recordings.
 
 A separate exploratory post-hoc contrast directly reconstructs raster over
 incremental from the same supplemental trials, with paired-order tails adjusted
-over all six collection/query contrasts per host. Exhaustive ratios are
-8.608 [8.549,8.639], 21.991 [21.908,22.050] and 1.421 [1.403,1.461] on Mac,
-and 11.621 [11.111,11.668], 26.717 [26.579,26.786] and
-1.726 [1.695,1.776] on Linux, in WSD/Stock/MSL order.
+over all six collection/query contrasts per host (Table~\ref{tab:interval-control}).
 These exploratory intervals do not correct post-hoc comparator selection.
 The fixed-raster contrast retains MSL id7's loss on both hosts;
 Figure~\ref{fig:query-regime} also displays the faster of the two conventional
@@ -198,7 +202,9 @@ query counts sum the two public detector profiles.}
 \end{figure*}
 
 The native conventional-control ablation retains complete three-metric
-read-to-write semantics. At all observed queries, combined interval/bucket
+read-to-write semantics with flat weights and cardinality one for range PR-AUC;
+the broader weighted family is evaluated by the operator study.
+At all observed queries, combined interval/bucket
 ratios are 3.034 [2.990,3.075] on Mac and 3.190 [3.166,3.224] on Linux.
 The faster combined raster control gives 2.732 [2.656,2.812] and
 2.756 [2.742,2.773], respectively. At default sampling, raster/bucket is only
@@ -218,7 +224,27 @@ descriptive differences do not identify a causal CPU or load effect. The
 narrow paired-order intervals are conditional within each run and do not
 cover this between-run variability.
 
-The same tables give a descriptive cost--fidelity observation, rather than a
+\paragraph{Five process-session follow-up.}
+A strict prior-score replication attempt stopped before any metric or warm-up:
+25 COPOD profiles differed in score hashes and one changed its distinct-score
+count. We preserved that failed v1 and prospectively froze a separate v2 using
+the same recordings and exactly one new 52-profile generation attempt, with
+strict raw/label/template identity and prior score/query differences retained
+as diagnostics. V2's first generation happened to match all prior Linux score
+and query-plan hashes; matching was not a selection criterion. Five new
+processes shared that frozen realization and one permitted logical CPU,
+with fixed full-workflow warm-ups and balanced method orders.
+Table~\ref{tab:affinity-blocks} retains every session estimate. All 180 timed
+workflows complete; saved scalar discrepancy across methods, warm-ups and
+sessions is at most $3.33\cdot10^{-16}$. The exhaustive raster/bucket ratio
+is 1.919, with session estimates 1.905--1.933; interval/bucket is 2.216.
+The nominal-default raster gain is only 1.017. Native query totals remain
+2,776/71,750. This supports fixed-input process repeatability; it does not
+explain the earlier run difference, establish new-host generalization, or
+add public-reference coverage. No earlier result is replaced or pooled.
+\input{strengthened_affinity_table.tex}
+
+Table~\ref{tab:native-control} gives a descriptive cost--fidelity observation, rather than a
 same-output speed ratio. Moving from the native nominal default to all observed
 queries increases query count from 2,776 to 71,749/71,750 on Mac/Linux, while
 the incremental combined workflow's median changes from 1.043 to 1.073 seconds

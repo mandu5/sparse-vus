@@ -1,0 +1,72 @@
+{
+  "utc": "2026-10-24T12:20:03.298352+00:00",
+  "status": "IMMUTABLE_PRE_FINAL_V2_REVIEW_PDF",
+  "pdf": "paper/exact_metrics_strengthened20261024.pdf",
+  "pdf_sha256": "68b0576bf38f3defba59427bebf563576942277daebd8043a7053f82dcf400e5",
+  "pdf_bytes": 201275,
+  "pages_total": 13,
+  "references_start_page": 12,
+  "content_limit_pages": 12,
+  "all_pages_rendered_and_visually_checked": true,
+  "undefined_references": 0,
+  "overfull_horizontal_boxes": 0,
+  "overfull_vertical_boxes": 0,
+  "evidence_commit": "448ad1b714a5daa13feeba617b10e02efef674fe",
+  "finite_study_source_commit": "d8494c25a8c6fe44616a34bdded375dc3993d048",
+  "finite_study_workflow_run": 40091476529,
+  "previous_snapshot": "manuscript-review-snapshot-v1.json",
+  "previous_pdf_sha256": "38ad66e21f7a21ab9d58f80f9b8d8499f92e55014e714c064cd467bd1cc05e54",
+  "review_scope": "New final PDF includes failed v1 preparation and the single completed prospective v2 study, separate descriptive five-process intervals, direct Naegel/Passat attribution and explicit post-hoc comparator labeling. Historical v1 reviews remain unchanged; final v2 A/C/D verdicts are separate documents.",
+  "sources": [
+    {
+      "path": "paper/exact_metrics_strengthened20261024.tex",
+      "sha256": "b2111fe5cabc9164dca77bd2fa9be000c4f4599bd972860839bbe0321d52a272"
+    },
+    {
+      "path": "paper/exact_metrics_strengthened20261024_body.tex",
+      "sha256": "225c50b8532f26d7c4d3598e4c0b1a691e68d6002b0d845c9dd52817401bfb4c"
+    },
+    {
+      "path": "paper/exact_metrics_strengthened20261024_references.bib",
+      "sha256": "4e17affc3c1a988b5c9b7d0a6c4ba83e6f6d043b14208c63e5e9a35ed847b79d"
+    },
+    {
+      "path": "paper/support_events_method.tex",
+      "sha256": "da1af4f10626aba096232017ecd7291f706b2492ececa9d16fec740e4d4656c7"
+    },
+    {
+      "path": "paper/weighted_range_method.tex",
+      "sha256": "413dc65ab6737e040667f0e669c1042b91f0a17957569c9bcd8adbbf8f1989bf"
+    },
+    {
+      "path": "paper/strengthened_legacy_tables.tex",
+      "sha256": "5c17c965dfe1984fe313eb64e4fcf90d19f9f13a192c5facd6c3d20b2e4a4966"
+    },
+    {
+      "path": "paper/strengthening_results.tex",
+      "sha256": "fe49363d55ea5c824a26459936af3487fa594dcc0f2762d5baf47d4aad18fd8c"
+    },
+    {
+      "path": "paper/strengthened_native_control_table.tex",
+      "sha256": "436707926d51ad6d340e09b4acf7edd7f22895902c3c8efdfbc3b7c288e22d34"
+    },
+    {
+      "path": "paper/strengthened_affinity_table.tex",
+      "sha256": "68765a3556a3193ed4cd4ac3103b723a063f367a0dc3bbb975381896816df7c7"
+    }
+  ],
+  "official_style_files_unchanged": [
+    {
+      "path": "paper/acmart.cls",
+      "sha256": "2f949e6e3f2a79f2cdc218b9dcdbaa7dd451adb4ee0be1af6dc7ebe00b318ea7"
+    },
+    {
+      "path": "paper/pvldb.sty",
+      "sha256": "52ad3948f3231b31d2ac90f470c1759e7f96add7b577ec4e267dfbdc87fc4eb2"
+    },
+    {
+      "path": "paper/ACM-Reference-Format.bst",
+      "sha256": "0590db3b8d255a3af91982ab710f3ace5fcaa52434020c9af8a4f141b00b68f3"
+    }
+  ]
+}
