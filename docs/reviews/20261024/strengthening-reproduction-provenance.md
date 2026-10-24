@@ -1,6 +1,6 @@
 # Strengthening reproduction provenance — 2026-10-24
 
-Static review of the fresh replay chain at `f7c900b0c1a22f965eacd859f83da2f58efd8b40` found no blocking source-identity or overwrite defect. Two earlier Linux attempts failed before any **workload detector fit or measured workload metric trial**. The second attempt did run focused unit tests. The fresh attempt remains in progress at the 09:00:36 UTC status check; this document does not claim a completed Linux input audit or replicated performance result.
+Static review of the fresh replay chain at `f7c900b0c1a22f965eacd859f83da2f58efd8b40` found no blocking source-identity or overwrite defect. Two earlier Linux attempts failed before any **workload detector fit or measured workload metric trial**. The second attempt did run focused unit tests. The third attempt completed at 10:21:11 UTC; the final completion and independently reconstructed results below supersede the earlier 09:00:36 in-progress status without removing that history.
 
 This ledger preserves failures rather than replacing them with the later recovery. GitHub run metadata and failure logs were read directly. The diagnostic JSON files and both earlier producer versions remain in the repository. Only static inspection, metadata reads and documentation edits were performed during the protected Mac timing period.
 
@@ -27,7 +27,39 @@ The original Mac packaging failure is a separate event: all 52 fits and native s
 
 One superseded entry point was found: [workload-replay-descriptor.json](../../../artifacts/pvldb-research-20261024/strengthening/workload-replay-descriptor.json) still asserts the packaging-fixed hash at the current producer path. That assertion intentionally fails against the new producer. Its bytes are preserved as the historical packaging-only descriptor; v2 supplies the current route. The fresh CI driver never consumed the old descriptor. Historical artifacts remain in the pinned source checkout; the fresh output bundle does not copy the complete historical provenance directory.
 
-Remaining audit gate: obtain the third run's generation/native-input/weighted/native-output receipts and independently reconstruct its saved records. A successful acquisition or unit-test stage alone is insufficient. Raw observations and detector score vectors are excluded from the uploaded research artifact; WSD/Stock raw-data licensing remains unresolved. Array identity checks do not establish independent physical sources or population generality, especially for the two-recording MSL subset.
+The earlier remaining audit gate was to obtain the third run's generation/native-input/weighted/native-output receipts and independently reconstruct its saved records. The completed audit below closes that gate. Raw observations and detector score vectors are excluded from the uploaded research artifact; WSD/Stock raw-data redistribution licensing remains unresolved. Array identity checks do not establish independent physical sources or population generality, especially for the two-recording MSL subset.
+
+## Completed original Linux execution and independent archive checks
+
+Run [40079636938](https://github.com/mandu5/sparse-vus/actions/runs/40079636938)
+completed successfully from the unchanged `f7c900b0c1a22f965eacd859f83da2f58efd8b40`
+source. Its completion receipt is timestamped 10:21:11.206582 UTC. The full
+run metadata is retained in `strengthening/linux-original-run-receipt.json`;
+the downloaded bundle is `strengthening/linux-original-replay/`. All five
+receipt digests in `reproduction-complete.json` match their actual files.
+
+- Generation regenerates all 52 public detector profiles; the fresh native
+  input audit verifies all 26 labels and 52 score vectors on the Linux host.
+- The independent weighted reconstruction covers all 11,232 records and 156
+  curves, with maximum error 2.4980018054066022e-15 and no winner disagreement.
+  The original Linux MSL id7 loss and all ten MSL grid sweep/bucket semantic
+  intervals containing one remain in the report.
+- The standalone native archive auditor reconstructs 120 completed workflows,
+  four public censors and 20 prescribed skips. Public outputs cover 28/52
+  profiles per contract; Stock public outputs remain unverified. Maximum
+  completed scalar discrepancy is 3.3306690738754696e-16.
+- The original combined exhaustive raster/bucket ratio is 1.9318177236
+  [1.9066147296,1.9459591033], below the separate supplemental Linux value.
+  The two runs are not pooled. Their score hashes agree but their recorded
+  OpenBLAS dispatch labels differ; no causal hardware explanation is inferred.
+
+The original fresh receipts verify source and input bytes in CI. Subsequent
+archive-only reconstructions verify saved curves, results, timing records and
+bound receipts, explicitly recording `local_input_bytes_verified=false` and,
+for native archives, `local_source_bytes_verified=false`. They do not silently
+reuse originating-host absolute paths. See the
+[weighted reconstruction](weighted-linux-v2-independent-review.md) and
+[native reconstruction](timeeval-linux-v1-independent-output-review.md).
 
 ## Initial partial weighted run and analysis revision
 

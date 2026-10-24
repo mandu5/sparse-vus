@@ -1,0 +1,7 @@
+{
+  "status": "RUNNING",
+  "utc": "2026-10-24T08:52:12.306869+00:00",
+  "source_script_sha256": "9fc030f5c9bd303a9fbc5ae98e41bb2ee8650eb83558edf8d71b09d9de99c369",
+  "scope": "Fresh 26-case/52-profile generation and weighted/native consumer studies; no reused scores. Raw data are not redistributed.",
+  "source_commit": "f7c900b0c1a22f965eacd859f83da2f58efd8b40"
+}

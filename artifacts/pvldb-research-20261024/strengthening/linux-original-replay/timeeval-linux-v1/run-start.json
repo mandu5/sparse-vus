@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-24T08:57:13.587855+00:00",
+  "global_protocol_sha256": "094f74d974a70a28acc95ab1e6b68f7ff1092278dc50092a4e03cd7988ec1595",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "python": "3.11.9 (main, Jul 15 2024, 21:50:42) [GCC 13.2.0]",
+  "dependencies": {
+    "timeeval": "1.5.0",
+    "prts": "1.0.0.3",
+    "numpy": "1.26.4",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2",
+    "pandas": "2.2.3",
+    "numba": "0.59.1",
+    "llvmlite": "0.42.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "dask": "2022.12.1",
+    "distributed": "2022.12.1",
+    "multiprocessing_logging": "0.4.0",
+    "tqdm": "4.70.1"
+  },
+  "warmup_completed": true
+}

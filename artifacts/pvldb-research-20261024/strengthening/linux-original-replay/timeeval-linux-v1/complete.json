@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE_WITH_CENSORING",
+  "planned_trials": 144,
+  "recorded_trials": 144,
+  "timed_attempts": 124,
+  "censored_keys": 4,
+  "global_protocol_sha256": "094f74d974a70a28acc95ab1e6b68f7ff1092278dc50092a4e03cd7988ec1595",
+  "trials_sha256": "20b56c145f87a6b9f1952c5f5b7c0f1677193630530ba4a91713ae326e7fc6ca",
+  "metrics_sha256": "2285bd8f1cf9edb4b7a05095d3cba4d48f6793e586768a3181dced4249c9f586",
+  "summary_sha256": "d48843845673e0ec758fac51f7f3429b069abd555d893216563bfadca46e43c5"
+}

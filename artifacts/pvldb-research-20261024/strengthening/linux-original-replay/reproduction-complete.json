@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-24T10:21:11.206582+00:00",
+  "weighted_report_sha256": "94e8e89f59b8ad02ce0b4ac8ba9ed13e8d69fdbd5bd85df581eed4a700967599",
+  "native_complete_sha256": "9c31f42e3322433f034551fb0519d654176629d8bb51b8bc20e2551b294bf2ca",
+  "generation_sha256": "df1907ed44c4c603265d0cb4bf4e1b2d56c90f2486c5814e7ee847fc049ed7dc",
+  "native_input_audit_sha256": "1b16527438e86cd79b650576e4fa7b0663ffef281878481f7e4837a69f3e0790",
+  "native_output_audit_sha256": "a0dd58f78deb27be4b870f59504cdaaac135655a224c77be4410d53bfcf2e147",
+  "scope": "Fresh source/data execution with per-host source bindings and same prespecified design. Host-dependent generated scores may differ; timings are not pooled."
+}

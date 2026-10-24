@@ -1,0 +1,459 @@
+{
+  "comparisons": {
+    "native_default50": {
+      "combined": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 383.7460438676962
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              1.0097533777125316,
+              1.0465870427373474,
+              1.0070836405386605,
+              1.006160355255895,
+              1.0099535921115073,
+              1.00787885042061
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              1.0073271665617407,
+              1.0274286355951994
+            ],
+            "geometric_speedup": 1.0144691861101682
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 380.0393762851522
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 12,
+          "TIMEOUT": 1,
+          "notrun_due_to_prespecified_censor": 5
+        }
+      },
+      "family-0-MSL": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              5.856348311629486,
+              6.974101845454302,
+              5.712020127739252,
+              5.779637422858837,
+              5.7287465608264165,
+              6.308692343064546
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              5.755494923186384,
+              6.442200425986651
+            ],
+            "geometric_speedup": 6.043670022169929
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              1.009664453779744,
+              0.9829550678589569,
+              0.9845467975853999,
+              0.9909667973565999,
+              0.9913027970145376,
+              0.9939775079067359
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              0.9862058685468134,
+              0.9996942729975741
+            ],
+            "geometric_speedup": 0.9921976212698285
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              5.800291660963074,
+              7.095036256992988,
+              5.801674579357707,
+              5.832321969087156,
+              5.779007764408036,
+              6.346916598093169
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              5.798738346033181,
+              6.5123650828134005
+            ],
+            "geometric_speedup": 6.0911958390256515
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 18,
+          "TIMEOUT": 0,
+          "notrun_due_to_prespecified_censor": 0
+        }
+      },
+      "family-1-Stock": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 847.8298304016892
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              1.0031398501678102,
+              1.0061561241533394,
+              1.0014983946709695,
+              1.0224682640949403,
+              1.0035909754503956,
+              1.084351738458752
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              1.003169379326354,
+              1.0464351324626096
+            ],
+            "geometric_speedup": 1.0197858462381018
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 845.1761040694975
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 12,
+          "TIMEOUT": 1,
+          "notrun_due_to_prespecified_censor": 5
+        }
+      },
+      "family-2-WSD": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              17.58388786159419,
+              17.542984051618575,
+              17.560877917623976,
+              17.568978366579586,
+              17.66480488171279,
+              17.601204938593163
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              17.5600925161687,
+              17.620853654499925
+            ],
+            "geometric_speedup": 17.587079430010416
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              1.017377781083993,
+              1.0164980227841096,
+              1.0149700032327338,
+              1.0145248801566713,
+              1.0167295622027617,
+              1.0849714341809646
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              1.0153691591363199,
+              1.050104782703175
+            ],
+            "geometric_speedup": 1.027199364132196
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              17.28353831637541,
+              17.258256935482958,
+              17.301868884490816,
+              17.31744455972971,
+              17.37414307442944,
+              16.22273581044109
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              16.750209159464035,
+              17.33066165414422
+            ],
+            "geometric_speedup": 17.12138854843278
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 18,
+          "TIMEOUT": 0,
+          "notrun_due_to_prespecified_censor": 0
+        }
+      }
+    },
+    "all_observed": {
+      "combined": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 382.8032744012115
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              1.9491966755893686,
+              1.9440997475169386,
+              1.9396961222800946,
+              1.870942767813054,
+              1.9451088678538264,
+              1.9430525994107783
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              1.906614729626066,
+              1.9459591033462842
+            ],
+            "geometric_speedup": 1.9318177235585936
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 196.39027666895916
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 12,
+          "TIMEOUT": 1,
+          "notrun_due_to_prespecified_censor": 5
+        }
+      },
+      "family-0-MSL": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              44.39653081191213,
+              42.95112340605643,
+              43.217594826839125,
+              44.396314750519615,
+              20.49945901357038,
+              44.19578545432953
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              29.89848745267512,
+              44.16438908764743
+            ],
+            "geometric_speedup": 38.613786333685994
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              1.0879515239850668,
+              1.0581922618177595,
+              1.0587771453154764,
+              1.0748842885988135,
+              0.5001480615498843,
+              1.0602987298196953
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              0.7296368937259712,
+              1.0758702903207806
+            ],
+            "geometric_speedup": 0.9411189935529252
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              40.8074531200542,
+              40.589149019361685,
+              40.81840547659525,
+              41.30334327278455,
+              40.98678089453273,
+              41.6823902654727
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              40.7661582881242,
+              41.345989526216066
+            ],
+            "geometric_speedup": 41.02965363382021
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 18,
+          "TIMEOUT": 0,
+          "notrun_due_to_prespecified_censor": 0
+        }
+      },
+      "family-1-Stock": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 846.0430670101248
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              2.3695299501473635,
+              2.1920151436938022,
+              2.382764356139788,
+              2.372507147183944,
+              2.370626150080287,
+              2.3713933666668905
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              2.279873340570324,
+              2.3766352621604363
+            ],
+            "geometric_speedup": 2.342125565833329
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 0,
+            "paired_speedups": [],
+            "censored_bounds": [
+              {
+                "round": 0,
+                "strict_speedup_lower_bound": 357.05101214589354
+              }
+            ],
+            "approximate_paired_order_ci95": null,
+            "interval_unavailable_reason": "six complete paired orders required; censored/not-run attempts are not fabricated observations"
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 12,
+          "TIMEOUT": 1,
+          "notrun_due_to_prespecified_censor": 5
+        }
+      },
+      "family-2-WSD": {
+        "comparisons": {
+          "public_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              486.6999718974408,
+              486.82157735192794,
+              474.2762628669855,
+              474.86399325797714,
+              471.35288459747983,
+              488.7380528609458
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              474.9721651728576,
+              485.64079946135956
+            ],
+            "geometric_speedup": 480.40665561227013
+          },
+          "raster_over_bucket": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              1.5991930354404569,
+              1.596010038056963,
+              1.5566333227856033,
+              1.5770024611388727,
+              1.5408084063228586,
+              1.5935992606151532
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              1.5585355217664767,
+              1.5933552749724693
+            ],
+            "geometric_speedup": 1.5770561639881049
+          },
+          "public_over_raster": {
+            "completed_paired_rounds": 6,
+            "paired_speedups": [
+              304.3409776752759,
+              305.02413252024473,
+              304.680785079344,
+              301.1181053674716,
+              305.91271611917284,
+              306.68817747335396
+            ],
+            "censored_bounds": [],
+            "approximate_paired_order_ci95": [
+              303.04161547413287,
+              305.87425304178305
+            ],
+            "geometric_speedup": 304.62241395221133
+          }
+        },
+        "status_counts": {
+          "COMPLETE": 18,
+          "TIMEOUT": 0,
+          "notrun_due_to_prespecified_censor": 0
+        }
+      }
+    }
+  },
+  "public_parity_available": {
+    "native_default50/combined": false,
+    "native_default50/family-0-MSL": true,
+    "native_default50/family-1-Stock": false,
+    "native_default50/family-2-WSD": true,
+    "all_observed/combined": false,
+    "all_observed/family-0-MSL": true,
+    "all_observed/family-1-Stock": false,
+    "all_observed/family-2-WSD": true
+  },
+  "uncertainty_scope": "Six paired orders of fixed workloads; approximate paired-order bootstrap intervals describe execution variability and order sensitivity, not recording or deployment populations. No cross-contract speed ratios. No interval without all six completed matched pairs."
+}

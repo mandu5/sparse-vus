@@ -1,0 +1,929 @@
+{
+  "status": "ARCHIVED_NATIVE_OUTPUT_RECONSTRUCTION_PASSED",
+  "study_kind": "original_public_comparison",
+  "local_input_bytes_verified": false,
+  "local_source_bytes_verified": false,
+  "metric_outputs_recomputed": false,
+  "detector_fitting_repeated": false,
+  "runner_or_candidate_imported": false,
+  "completed_result_csv_bytes_verified": true,
+  "verification_scope": "Saved protocol/manifest/run/record bindings, declared query metadata, complete result CSVs, identities, parity, censors and matched summaries only. No raw data, label, detector-score or source byte verification; censored CSV metric values are never used.",
+  "protocol_sha256": "094f74d974a70a28acc95ab1e6b68f7ff1092278dc50092a4e03cd7988ec1595",
+  "manifest_sha256": "b2e69a8c948ce10e2807e062fbe65f11757cdea266000e0c4bab026325227bc8",
+  "standalone_manifest_matches_embedded_payload": true,
+  "manifest_sha256_recorded_in_global_protocol": false,
+  "archived_workload_receipts": {
+    "generation": {
+      "saved_receipt_bytes_verified": true,
+      "sha256": "df1907ed44c4c603265d0cb4bf4e1b2d56c90f2486c5814e7ee847fc049ed7dc"
+    },
+    "native_input_audit": {
+      "saved_receipt_bytes_verified": true,
+      "sha256": "1b16527438e86cd79b650576e4fa7b0663ffef281878481f7e4837a69f3e0790"
+    }
+  },
+  "planned_trials": 144,
+  "status_counts": {
+    "COMPLETE": 120,
+    "TIMEOUT": 4,
+    "notrun_due_to_prespecified_censor": 20
+  },
+  "max_absolute_scalar_error": 3.3306690738754696e-16,
+  "public_reference_evaluated": true,
+  "public_parity_available": {
+    "native_default50/combined": false,
+    "native_default50/family-0-MSL": true,
+    "native_default50/family-1-Stock": false,
+    "native_default50/family-2-WSD": true,
+    "all_observed/combined": false,
+    "all_observed/family-0-MSL": true,
+    "all_observed/family-1-Stock": false,
+    "all_observed/family-2-WSD": true
+  },
+  "per_profile_public_reference_coverage": {
+    "native_default50": {
+      "available": 28,
+      "total": 52,
+      "complete": false,
+      "missing_row_ids": [
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ]
+      ],
+      "scope": "Saved completed public outputs at the same contract only; no input re-evaluation or recovered censored timing."
+    },
+    "all_observed": {
+      "available": 28,
+      "total": 52,
+      "complete": false,
+      "missing_row_ids": [
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "150_Stock_id_2_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "153_Stock_id_5_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "157_Stock_id_9_Finance_tr_500_1st_19",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "161_Stock_id_13_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "163_Stock_id_15_Finance_tr_500_1st_3",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "167_Stock_id_19_Finance_tr_500_1st_7",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "168_Stock_id_20_Finance_tr_500_1st_1",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "152_Stock_id_4_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "154_Stock_id_6_Finance_tr_500_1st_38",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "158_Stock_id_10_Finance_tr_500_1st_2",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "159_Stock_id_11_Finance_tr_500_1st_5",
+          "1"
+        ],
+        [
+          "FFT",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ],
+        [
+          "COPOD",
+          "public-default",
+          "Stock",
+          "164_Stock_id_16_Finance_tr_500_1st_8",
+          "1"
+        ]
+      ],
+      "scope": "Saved completed public outputs at the same contract only; no input re-evaluation or recovered censored timing."
+    }
+  },
+  "per_profile_compiled_output_coverage": {
+    "native_default50": {
+      "raster": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "bucket": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      }
+    },
+    "all_observed": {
+      "raster": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      },
+      "bucket": {
+        "available": 52,
+        "total": 52,
+        "complete": true,
+        "missing_row_ids": []
+      }
+    }
+  },
+  "absolute_workflow_times": {
+    "native_default50": {
+      "combined": {
+        "public": {
+          "completed_orders": 0,
+          "median_seconds": null
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 1.5840834745
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 1.5679196720000002
+        }
+      },
+      "family-0-MSL": {
+        "public": {
+          "completed_orders": 6,
+          "median_seconds": 0.2596877865
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.0444154365
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.0448544155
+        }
+      },
+      "family-1-Stock": {
+        "public": {
+          "completed_orders": 0,
+          "median_seconds": null
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.7102273715
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.7078234265000001
+        }
+      },
+      "family-2-WSD": {
+        "public": {
+          "completed_orders": 6,
+          "median_seconds": 14.441954813
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.8354318775
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.8216264550000001
+        }
+      }
+    },
+    "all_observed": {
+      "combined": {
+        "public": {
+          "completed_orders": 0,
+          "median_seconds": null
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 3.0421717425
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 1.5659371275
+        }
+      },
+      "family-0-MSL": {
+        "public": {
+          "completed_orders": 6,
+          "median_seconds": 1.9425139050000002
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 0.0473689405
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.0444490915
+        }
+      },
+      "family-1-Stock": {
+        "public": {
+          "completed_orders": 0,
+          "median_seconds": null
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 1.6829360765
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.7090699
+        }
+      },
+      "family-2-WSD": {
+        "public": {
+          "completed_orders": 6,
+          "median_seconds": 406.2409892845001
+        },
+        "raster": {
+          "completed_orders": 6,
+          "median_seconds": 1.332258157
+        },
+        "bucket": {
+          "completed_orders": 6,
+          "median_seconds": 0.8457827215
+        }
+      }
+    }
+  },
+  "reconstructed_comparisons": {
+    "native_default50": {
+      "combined": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 383.7460438676962
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.0097533777125316,
+            1.0465870427373474,
+            1.0070836405386605,
+            1.006160355255895,
+            1.0099535921115073,
+            1.00787885042061
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.0073271665617407,
+            1.0274286355951994
+          ],
+          "geometric_speedup": 1.0144691861101682
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 380.0393762851522
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        }
+      },
+      "family-0-MSL": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            5.856348311629486,
+            6.974101845454302,
+            5.712020127739252,
+            5.779637422858837,
+            5.7287465608264165,
+            6.308692343064546
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            5.755494923186384,
+            6.442200425986652
+          ],
+          "geometric_speedup": 6.043670022169929
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.009664453779744,
+            0.9829550678589569,
+            0.9845467975853999,
+            0.9909667973565999,
+            0.9913027970145376,
+            0.9939775079067359
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.9862058685468132,
+            0.999694272997574
+          ],
+          "geometric_speedup": 0.9921976212698285
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            5.800291660963074,
+            7.095036256992988,
+            5.801674579357707,
+            5.832321969087156,
+            5.779007764408036,
+            6.346916598093169
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            5.798738346033181,
+            6.5123650828134005
+          ],
+          "geometric_speedup": 6.091195839025651
+        }
+      },
+      "family-1-Stock": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 847.8298304016892
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.0031398501678102,
+            1.0061561241533394,
+            1.0014983946709695,
+            1.0224682640949403,
+            1.0035909754503956,
+            1.084351738458752
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.003169379326354,
+            1.0464351324626098
+          ],
+          "geometric_speedup": 1.0197858462381015
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 845.1761040694975
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        }
+      },
+      "family-2-WSD": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            17.58388786159419,
+            17.542984051618575,
+            17.560877917623976,
+            17.568978366579586,
+            17.66480488171279,
+            17.601204938593163
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            17.56009251616871,
+            17.620853654499925
+          ],
+          "geometric_speedup": 17.587079430010416
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.017377781083993,
+            1.0164980227841096,
+            1.0149700032327338,
+            1.0145248801566713,
+            1.0167295622027617,
+            1.0849714341809646
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.0153691591363199,
+            1.050104782703175
+          ],
+          "geometric_speedup": 1.027199364132196
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            17.28353831637541,
+            17.258256935482958,
+            17.301868884490816,
+            17.31744455972971,
+            17.37414307442944,
+            16.22273581044109
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            16.750209159464042,
+            17.33066165414423
+          ],
+          "geometric_speedup": 17.121388548432794
+        }
+      }
+    },
+    "all_observed": {
+      "combined": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 382.8032744012115
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.9491966755893686,
+            1.9440997475169386,
+            1.9396961222800946,
+            1.870942767813054,
+            1.9451088678538264,
+            1.9430525994107783
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.9066147296260658,
+            1.9459591033462842
+          ],
+          "geometric_speedup": 1.9318177235585934
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 196.39027666895916
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        }
+      },
+      "family-0-MSL": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            44.39653081191213,
+            42.95112340605643,
+            43.217594826839125,
+            44.396314750519615,
+            20.49945901357038,
+            44.19578545432953
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            29.89848745267512,
+            44.16438908764743
+          ],
+          "geometric_speedup": 38.613786333685994
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.0879515239850668,
+            1.0581922618177595,
+            1.0587771453154764,
+            1.0748842885988135,
+            0.5001480615498843,
+            1.0602987298196953
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            0.7296368937259711,
+            1.0758702903207806
+          ],
+          "geometric_speedup": 0.9411189935529252
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            40.8074531200542,
+            40.589149019361685,
+            40.81840547659525,
+            41.30334327278455,
+            40.98678089453273,
+            41.6823902654727
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            40.76615828812424,
+            41.3459895262161
+          ],
+          "geometric_speedup": 41.02965363382022
+        }
+      },
+      "family-1-Stock": {
+        "public_over_bucket": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 846.0430670101248
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            2.3695299501473635,
+            2.1920151436938022,
+            2.382764356139788,
+            2.372507147183944,
+            2.370626150080287,
+            2.3713933666668905
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            2.279873340570324,
+            2.3766352621604367
+          ],
+          "geometric_speedup": 2.3421255658333293
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 0,
+          "paired_speedups": [],
+          "censored_bounds": [
+            {
+              "round": 0,
+              "strict_speedup_lower_bound": 357.05101214589354
+            }
+          ],
+          "approximate_paired_order_ci95": null
+        }
+      },
+      "family-2-WSD": {
+        "public_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            486.6999718974408,
+            486.82157735192794,
+            474.2762628669855,
+            474.86399325797714,
+            471.35288459747983,
+            488.7380528609458
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            474.9721651728577,
+            485.64079946135956
+          ],
+          "geometric_speedup": 480.4066556122705
+        },
+        "raster_over_bucket": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            1.5991930354404569,
+            1.596010038056963,
+            1.5566333227856033,
+            1.5770024611388727,
+            1.5408084063228586,
+            1.5935992606151532
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            1.5585355217664767,
+            1.5933552749724695
+          ],
+          "geometric_speedup": 1.577056163988105
+        },
+        "public_over_raster": {
+          "completed_paired_orders": 6,
+          "paired_speedups": [
+            304.3409776752759,
+            305.02413252024473,
+            304.680785079344,
+            301.1181053674716,
+            305.91271611917284,
+            306.68817747335396
+          ],
+          "censored_bounds": [],
+          "approximate_paired_order_ci95": [
+            303.04161547413287,
+            305.87425304178305
+          ],
+          "geometric_speedup": 304.62241395221133
+        }
+      }
+    }
+  },
+  "complete_sha256": "9c31f42e3322433f034551fb0519d654176629d8bb51b8bc20e2551b294bf2ca",
+  "auditor_sha256": "b8a79cb122d9e6cd2bd9bd3af41cc8caa1ce9b31b03a6130dc870c266016c5db"
+}

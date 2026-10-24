@@ -1,0 +1,561 @@
+{
+  "status": "FROZEN_BEFORE_WEIGHTED_METRIC_TIMINGS",
+  "utc": "2026-10-24T08:54:28.341338+00:00",
+  "sources": {
+    "src/sparse_vus/weighted_range.py": "95ef1ba243ad5ca34ba50ab027237a465a63544f12ce13c07a8513e56b29c338",
+    "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+    "experiments/weighted_range_study.py": "93ad71d1c9b7cbd18bf485807c76a3578d0c7b1403a669c96f1c6307bc01dc5d",
+    "experiments/audit_weighted_range_study.py": "2285fbb8b79aab3a9d365ac0cf7097b9b33098abc1fa78424a3ceaf138724923"
+  },
+  "inputs_path": "artifacts/pvldb-research-20261024/strengthening/workload-generation.json",
+  "inputs_sha256": "df1907ed44c4c603265d0cb4bf4e1b2d56c90f2486c5814e7ee847fc049ed7dc",
+  "model_order": [
+    "FFT",
+    "COPOD"
+  ],
+  "cases": [
+    {
+      "id": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+      "family": "WSD",
+      "n": 10744,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/096_WSD_id_68_WebService_tr_1341_1st_1441.npz",
+      "npz_sha256": "595d32990abb0f5f77b748eed995f5d00e03c122ae005b03a973dbc4cf4bba90",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/096_WSD_id_68_WebService_tr_1341_1st_1441.npz",
+      "labels_sha256": "2536fc389720ca3d0215a876842c5da44a2609c29ceb5c299c60e07be91badc6",
+      "scores_sha256": "5090de634f518d1db09c770218711bf73e9fd5c10541b3ec4b26f6f1a945be31"
+    },
+    {
+      "id": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+      "family": "WSD",
+      "n": 15285,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/076_WSD_id_48_WebService_tr_3821_1st_7083.npz",
+      "npz_sha256": "ba67c0872891ee67d2184b6b113725b4b87725c607ba895d2aadfb7a5f1b10d0",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/076_WSD_id_48_WebService_tr_3821_1st_7083.npz",
+      "labels_sha256": "bb8b029e1163cadd7bcf2872aea1c669ca56e1feced8b9a0a6ca8121efb75d19",
+      "scores_sha256": "f19ddbeb60c033af124b611491c3519acb021e68a6478068d7a978f4564b4a87"
+    },
+    {
+      "id": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+      "family": "WSD",
+      "n": 17438,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/120_WSD_id_92_WebService_tr_2329_1st_2429.npz",
+      "npz_sha256": "aa3a2c1947543f12e22438a0b453d37e716538926b597065a64ce4e24d6b1ed7",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/120_WSD_id_92_WebService_tr_2329_1st_2429.npz",
+      "labels_sha256": "6fd0c7f983eb7e0a83367d919ae649c5e09da3898e5c3a62580717b4597747a3",
+      "scores_sha256": "18f9f3031b8e9f984a4f45e52b88a6f752b30a538d05afb003e80003f718c85a"
+    },
+    {
+      "id": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+      "family": "WSD",
+      "n": 18084,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/038_WSD_id_10_WebService_tr_4042_1st_4142.npz",
+      "npz_sha256": "816e9a19a8a6686237f3a9b6bafcbccb8273524dc0aff7a8550cef72eea7916b",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/038_WSD_id_10_WebService_tr_4042_1st_4142.npz",
+      "labels_sha256": "60ec25d5496a28fab84a8c59ea63b44c9fedad1e03d23610acb587d962f52ecf",
+      "scores_sha256": "8e77aed5f7143cc6275e1a366c18d22a1c857a280501f7715850c3bd376a9f5f"
+    },
+    {
+      "id": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+      "family": "WSD",
+      "n": 18214,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/115_WSD_id_87_WebService_tr_2252_1st_2352.npz",
+      "npz_sha256": "8f14c2150b81f606b55a73b11eefa811cd6a21fda0cae15e2af058d8d4f7150c",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/115_WSD_id_87_WebService_tr_2252_1st_2352.npz",
+      "labels_sha256": "27f24245aa706cf5af9b891888a7fdc9ceac68e15c7c09b0a880bbc8afcdca5f",
+      "scores_sha256": "2b5034d5f538963d78543d65757f34f0ccc7ea84bcefbf0a49b58d5bf445cad1"
+    },
+    {
+      "id": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/034_WSD_id_6_WebService_tr_4559_1st_8461.npz",
+      "npz_sha256": "2eb8715557dc00453a99407d757eac19b055d8224a08727f080540bf29cfb1bf",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/034_WSD_id_6_WebService_tr_4559_1st_8461.npz",
+      "labels_sha256": "e6ff2cbe5b6f456887d88f4ea787ec7dd2e45d913e98c743a9e389a731be6f85",
+      "scores_sha256": "b6e05a1d31f4f276c2ed10e37a67aeb6ad9ba115b07eb317a7ca287a82f4d105"
+    },
+    {
+      "id": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/057_WSD_id_29_WebService_tr_2229_1st_2329.npz",
+      "npz_sha256": "7a15cc973b72cec096e952ccfd11ba19f0a5df0a599c6804fddaf8098d2bace7",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/057_WSD_id_29_WebService_tr_2229_1st_2329.npz",
+      "labels_sha256": "864e99c4d515db7839cfd4808148d5950c3c4e8b1fad424851089588ef456723",
+      "scores_sha256": "c0d96a3f88e1c9ae47d4d772eebe199069c6b4e73a63b5b295f57dadde493e23"
+    },
+    {
+      "id": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/071_WSD_id_43_WebService_tr_3387_1st_3487.npz",
+      "npz_sha256": "51b1d0e4b236adc8365ad3aba368e0abf4adaa3a9e8bd9b0c72a8b2f70f05e26",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/071_WSD_id_43_WebService_tr_3387_1st_3487.npz",
+      "labels_sha256": "a2ce01880e7409ed54bcfbc6a27e7e6ba38a7539a05dc616168a160b8e7c5bb8",
+      "scores_sha256": "eae2d0737bb97e27fe296c50508c559213d5771057202d7c3a9ee625a2d929b3"
+    },
+    {
+      "id": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/101_WSD_id_73_WebService_tr_1513_1st_1613.npz",
+      "npz_sha256": "f96a181015573f8b05af42e4ec7c18f85afa45757d1f4b60abcac4dcb07aa7c6",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/101_WSD_id_73_WebService_tr_1513_1st_1613.npz",
+      "labels_sha256": "6042d417d2a6845e504a0ddbea34112573814f6506287bf4ea22e54cde57a9fd",
+      "scores_sha256": "f06ec4984fd07a835bb9378a99a3c8732d367a00e536ad8f277dd174a054f071"
+    },
+    {
+      "id": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+      "family": "WSD",
+      "n": 18236,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/124_WSD_id_96_WebService_tr_4559_1st_14350.npz",
+      "npz_sha256": "c513ec4dfbad6a6c821f22cde41deb4c0f5cc4e72596dcf3da27c324eeaa1e69",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/124_WSD_id_96_WebService_tr_4559_1st_14350.npz",
+      "labels_sha256": "75b4cc408330e21913d223d280618441170e8bb16361dd18c66ece736cc383a1",
+      "scores_sha256": "eb34e643cd04fa33d24f86708ca7b9c55770f0e6a9361a4646c87a110a5c5aa0"
+    },
+    {
+      "id": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+      "family": "WSD",
+      "n": 18302,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/066_WSD_id_38_WebService_tr_3320_1st_3420.npz",
+      "npz_sha256": "b60c18b90961be32e765358ce6b015f4373b6f2c5f4b58dd7bf3d353d4542c48",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/066_WSD_id_38_WebService_tr_3320_1st_3420.npz",
+      "labels_sha256": "cae9d75dc2acb1f0552b5c8acf28153a3a7545edbc79884004d96a2db496d00d",
+      "scores_sha256": "26380fbe70d6a72c25126baa843f53a861eecd3ed8c2add4555dbb8cc918250e"
+    },
+    {
+      "id": "126_WSD_id_98_WebService_tr_657_1st_757",
+      "family": "WSD",
+      "n": 18883,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/126_WSD_id_98_WebService_tr_657_1st_757.npz",
+      "npz_sha256": "e5e4b79697f997d1dd093c5e0b3e9c23155b5550c759e9a2abe34c5f0bfaf40f",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/126_WSD_id_98_WebService_tr_657_1st_757.npz",
+      "labels_sha256": "ee013cedef8f39bf1b0cee3d675b6c1e81b7d60f94901eb1b0b14c60d27dd814",
+      "scores_sha256": "b907264bf1f742ac42cd3f87f85094702d4ae173ece98a59689f2b8f2df946e5"
+    },
+    {
+      "id": "150_Stock_id_2_Finance_tr_500_1st_7",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/150_Stock_id_2_Finance_tr_500_1st_7.npz",
+      "npz_sha256": "737ec662f20d9c0cd39e758b5fbb82c0402cb8770f7a32648e1be93e08736d68",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/150_Stock_id_2_Finance_tr_500_1st_7.npz",
+      "labels_sha256": "aac9e21d753ea9d3b04e604624c4ab90e06a786e78c8e7a595b86f92a3d66221",
+      "scores_sha256": "549738396e962910fd8ee6c187b2e80bcf697945d8948cba3f9c346aa9dca889"
+    },
+    {
+      "id": "153_Stock_id_5_Finance_tr_500_1st_1",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/153_Stock_id_5_Finance_tr_500_1st_1.npz",
+      "npz_sha256": "cc68917ba2024589fe23e7b9ed2e94f4606b2b705afa5488263886220f9fdd05",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/153_Stock_id_5_Finance_tr_500_1st_1.npz",
+      "labels_sha256": "a4f194008c72ed65e78cbe8151817c43f02f73b9fddd7c989a64f65ee7b2accf",
+      "scores_sha256": "c833cb4f137264ba9127e0a5769a14a1b0f9d04450262e0b2c59e09444ef9a7d"
+    },
+    {
+      "id": "157_Stock_id_9_Finance_tr_500_1st_19",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/157_Stock_id_9_Finance_tr_500_1st_19.npz",
+      "npz_sha256": "192636c5634af7daedf48d206fdbb3a9e2c61533aa0636e02325863b1226d52f",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/157_Stock_id_9_Finance_tr_500_1st_19.npz",
+      "labels_sha256": "cc82b4e12cd694647430660a76925029953c2fed938260f67014798a2b008423",
+      "scores_sha256": "49a027784a37292730871f641e1d8feb68600e6e87ea6cba49d68d497be8dcbf"
+    },
+    {
+      "id": "161_Stock_id_13_Finance_tr_500_1st_3",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/161_Stock_id_13_Finance_tr_500_1st_3.npz",
+      "npz_sha256": "1148f67ee0770bb41ba2f3c0da31985af59f6e133a1e482d58a7822394f9a8f3",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/161_Stock_id_13_Finance_tr_500_1st_3.npz",
+      "labels_sha256": "59fce0190e6d994d52bef94b139fe645b0dbd92231642864766f2bb4d793b2ba",
+      "scores_sha256": "9016d845386d6f34b2d159b89785496b65be76a6efec6988fb55ff651ed73cb6"
+    },
+    {
+      "id": "163_Stock_id_15_Finance_tr_500_1st_3",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/163_Stock_id_15_Finance_tr_500_1st_3.npz",
+      "npz_sha256": "a281b62d589b9c35c1b750df1ef6817453387fe180121c5130e3faef152d1779",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/163_Stock_id_15_Finance_tr_500_1st_3.npz",
+      "labels_sha256": "9d16c27476d775d17106acd099cb992d2e96c02d9b1619e31b2c43163ea0ea4b",
+      "scores_sha256": "fbb764b340435e0428b12ce07d02cdc1a5bc1cbd669013ea34c50fadd0ea9028"
+    },
+    {
+      "id": "167_Stock_id_19_Finance_tr_500_1st_7",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/167_Stock_id_19_Finance_tr_500_1st_7.npz",
+      "npz_sha256": "4018d362661ffcace96da08238a970b300f9b1bbd770cfa927cefb88e5ff69aa",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/167_Stock_id_19_Finance_tr_500_1st_7.npz",
+      "labels_sha256": "b8436381e11a20c49029fa4db7f541363558eae9dcd81ccccbea65c0b5e06675",
+      "scores_sha256": "4e819786c61a798f5260d138c0e74242f8465b8afaef768f002b2a391ba3ff5f"
+    },
+    {
+      "id": "168_Stock_id_20_Finance_tr_500_1st_1",
+      "family": "Stock",
+      "n": 10000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/168_Stock_id_20_Finance_tr_500_1st_1.npz",
+      "npz_sha256": "1d4e8a1e3d352d589978af69df10cb56d3210c8178f3d4edd7ecc2f7732cd025",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/168_Stock_id_20_Finance_tr_500_1st_1.npz",
+      "labels_sha256": "cdcc0a3739cb0bd550356c1a8d109912d1c14b40c6b5ae081e3acaac580ef813",
+      "scores_sha256": "41982b3d02c7acaca017e62ae52aa940b9cd40a1fdc06d6c727ad8282c7216a0"
+    },
+    {
+      "id": "152_Stock_id_4_Finance_tr_500_1st_2",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/152_Stock_id_4_Finance_tr_500_1st_2.npz",
+      "npz_sha256": "6a9859a2851dba08d7bf1b7ac206a235b8d3fe2fe7663b7863c90fdf8bebeee1",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/152_Stock_id_4_Finance_tr_500_1st_2.npz",
+      "labels_sha256": "9c6194171d7074258d2d39f0c9c040475926f33ec7367ad9067e92f98b7ab30b",
+      "scores_sha256": "08c8b2b8b7c4e58809edd15691d011898d9b607af9471748e7344353e6f0b80d"
+    },
+    {
+      "id": "154_Stock_id_6_Finance_tr_500_1st_38",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/154_Stock_id_6_Finance_tr_500_1st_38.npz",
+      "npz_sha256": "d98b064a59b94492914d2500db53ba3d774f69d258595d95ac568ab69d0bd211",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/154_Stock_id_6_Finance_tr_500_1st_38.npz",
+      "labels_sha256": "3f02b33bcff262889328a3b2318393752b85d07ef37341e3ac714557713434a7",
+      "scores_sha256": "99831bd74931b014ae37855cd2ea3a7eac760a5392695aea5b188aab12060cf4"
+    },
+    {
+      "id": "158_Stock_id_10_Finance_tr_500_1st_2",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/158_Stock_id_10_Finance_tr_500_1st_2.npz",
+      "npz_sha256": "eabd016163f6def453183d699e71f263aa053ca6aa1941bd2c7d3944c55544f7",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/158_Stock_id_10_Finance_tr_500_1st_2.npz",
+      "labels_sha256": "ccc5dc5927d5c6b424e4203a02737fac4c2683e84a7a3f83476a0eeb3131061d",
+      "scores_sha256": "7b3f697440688845601b8f6622cd13b0f45ebf27daddde2f316c1b1126f84c3e"
+    },
+    {
+      "id": "159_Stock_id_11_Finance_tr_500_1st_5",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/159_Stock_id_11_Finance_tr_500_1st_5.npz",
+      "npz_sha256": "e9daa1f6b07d6867700437d72701b23a42be6587b2e5880434e21d4b224fcea0",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/159_Stock_id_11_Finance_tr_500_1st_5.npz",
+      "labels_sha256": "cc2fce27c73176a66e30ce03301391094a5e4b97b1126d7bc6e4041abb72c8d8",
+      "scores_sha256": "fc292e9c80c3557edec5cf7770bfcf4495e5207250cbed28398d95866d95f44d"
+    },
+    {
+      "id": "164_Stock_id_16_Finance_tr_500_1st_8",
+      "family": "Stock",
+      "n": 20000,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/164_Stock_id_16_Finance_tr_500_1st_8.npz",
+      "npz_sha256": "cc92865ea250dc5845cc0824761fc40aba3ce0fc823eb4dcd94f811eaaea73b9",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/164_Stock_id_16_Finance_tr_500_1st_8.npz",
+      "labels_sha256": "295eb5ac11ff9c2f732032e0519f10507702bac7001e3d126f30fc207ffac6b5",
+      "scores_sha256": "e0c3bb98587d67966ccc49a6778a32f11684872af60561486fb4412b07cda31d"
+    },
+    {
+      "id": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+      "family": "MSL",
+      "n": 2217,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/146_MSL_id_7_Sensor_tr_554_1st_1172.npz",
+      "npz_sha256": "d32e8ce447457a8eeed65329665eb1e265e0b1b8d9d40bf7b516cbfeec17628b",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/146_MSL_id_7_Sensor_tr_554_1st_1172.npz",
+      "labels_sha256": "5efc2dc0cdb644b862d3fa2cc21a0f1a63a73f9d2d44a3c370c41843ff3c53dd",
+      "scores_sha256": "7d5589b0c3f8ccad29ff14b9544515eb466c967fe8972737c8feea837d5a5d51"
+    },
+    {
+      "id": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+      "family": "MSL",
+      "n": 6100,
+      "model_order": [
+        "FFT",
+        "COPOD"
+      ],
+      "model_status": {
+        "FFT": "Status.OK",
+        "COPOD": "Status.OK"
+      },
+      "npz_path": "/home/runner/work/_temp/strengthening-replica/.cache/strengthening-workload/arrays/142_MSL_id_3_Sensor_tr_1525_1st_4575.npz",
+      "npz_sha256": "b2e799129f97df5e921ea55b05a90fc6d53857a392922e815f1d6dc9c710a7ab",
+      "npz_relative_path": ".cache/strengthening-workload/arrays/142_MSL_id_3_Sensor_tr_1525_1st_4575.npz",
+      "labels_sha256": "abcf8b34d46cb5ea1e0cb73a645b894b46298c608a5f8ed32c2be4f834ed2d7d",
+      "scores_sha256": "ca2beeb79cd7aa02bca65619c0ac87848166fb1b018f5003cf3ab8cda751c574"
+    }
+  ],
+  "biases": [
+    "flat",
+    "front",
+    "back",
+    "middle"
+  ],
+  "cardinalities": [
+    "one",
+    "reciprocal",
+    "improved"
+  ],
+  "alpha": 0.2,
+  "precision_weighting": "unweighted average over all predicted windows",
+  "queries": {
+    "grid100": "np.linspace(min(score),max(score),100), strict score > threshold",
+    "distinct": "np.unique(score), strict >, all observed thresholds; excludes below-min state"
+  },
+  "orders": [
+    [
+      "raster",
+      "sweep",
+      "bucket"
+    ],
+    [
+      "raster",
+      "bucket",
+      "sweep"
+    ],
+    [
+      "sweep",
+      "raster",
+      "bucket"
+    ],
+    [
+      "sweep",
+      "bucket",
+      "raster"
+    ],
+    [
+      "bucket",
+      "raster",
+      "sweep"
+    ],
+    [
+      "bucket",
+      "sweep",
+      "raster"
+    ]
+  ],
+  "timing": "Serial one thread. Each measurement includes both detector profiles, validation, interval/prefix construction, queries, sorting/bucketing, metric computation and maximum selection. Excludes compilation, training and file IO. All 12 bias/cardinality contracts and both query contracts are retained.",
+  "parity_atol": 1e-10,
+  "winner_atol": 1e-10,
+  "bootstrap_seed": 20261024,
+  "bootstrap_resamples": 10000,
+  "uncertainty": "Point estimate: median method time per case/semantic/query, geometric ratio over fixed cases. Primary approximate paired-order resampling: resample six paired trial indices within each case, same indices for both methods and all12 semantics, recompute method medians and geometric ratio. Conditional on this panel/host; balanced orders are not independent workloads. Separately report case-log-ratio resampling as recording-reweighting sensitivity, not fixed-workload timing uncertainty or population coverage. For each prespecified comparison simultaneous95 adjustment over3 collections x12 semantics (Bonferroni36); aggregate all12 semantics equally per case with adjustment over3. MSL has2 recordings and cannot support population inference.",
+  "comparisons": [
+    [
+      "grid100",
+      "raster",
+      "bucket"
+    ],
+    [
+      "grid100",
+      "sweep",
+      "bucket"
+    ],
+    [
+      "distinct",
+      "raster",
+      "sweep"
+    ]
+  ],
+  "hypothesis": "The maintained local statistics apply to four published positional biases and three local cardinality rules, across separately selected real recordings and unchanged public FFT/COPOD APIs. Generality and costs are measured, not assumed.",
+  "failure_policy": "No replacement/exclusion. Any input/source mismatch, nonfinite curve or complete-curve error>1e-10 halts, preserves partial outputs and requires explicit new protocol/version if code changes.",
+  "data_note": "No exact/normalized array duplicate of prior panels found. Shared physical sources may remain. No raw public data are redistributed because license terms are unverified."
+}
