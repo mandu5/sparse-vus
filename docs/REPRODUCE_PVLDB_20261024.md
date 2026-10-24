@@ -1,5 +1,43 @@
 # Reproduce the 24 October PVLDB evidence
 
+## Combined exact-metric manuscript
+
+The current manuscript is `paper/exact_metrics_pvldb20261024.pdf`. To regenerate
+its VUS primary/supplement and the new range-metric main/public/validation studies
+on the same freshly generated score arrays, run:
+
+```sh
+python experiments/reproduce_range_sweep.py --include-vus --output /tmp/exact-metrics-replica
+```
+
+In addition to the pinned environment below, install `statsmodels==0.14.6` and
+CPU `torch==2.10.0` (the unchanged TimeSeAD comparator uses Torch). The exact
+installation commands are in `.github/workflows/range-sweep-reproduce.yml`.
+Omitting `--include-vus` executes only the new range studies after fresh score
+generation. Both modes refuse an existing output directory. No stored timing
+records are copied into the new results. The wrapper checks the frozen
+scientific designs, source hashes, raw archive identity and parent bindings.
+
+The range results are `range-sweep/main-study/independent-report.json`,
+`range-sweep/public-study-v2/independent-report.json`, and
+`range-sweep/validation/report.json` under the new evidence directory.
+`range-reproduction-complete.json` binds their hashes and records the CPU,
+packages and whether VUS was included. Complete numerical curves and generated
+score arrays are retained. A running receipt or a successful static wrapper
+check is not a completed execution. At this documentation checkpoint the fresh
+Linux range-only run is in progress; the combined mode is newly composed and
+will receive a separate complete run.
+
+The main range panel includes all 73 recordings and 584 score profiles. Public
+comparisons use the predeclared three shortest recordings in each collection;
+each unchanged public API call has a 60-second limit for eight profiles.
+Timeouts remain censored and are not counted as numerical parity. The observed
+strict-threshold contract excludes a threshold below the minimum score. Grid
+vs. exact model-selection changes are oracle evaluation effects, not improved
+detectors or deployable threshold selection.
+
+## Original VUS manuscript
+
 This is the complete exact-evaluator study, distinct from the narrower
 `certified_sampling` manuscript. The original recorded evidence is immutable.
 The command below generates new scores, executes the complete primary and

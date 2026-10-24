@@ -9,7 +9,7 @@ import platform
 import shutil
 import subprocess
 import sys
-from reproduce_pvldb20261024 import ROOT,EVIDENCE,ARCHIVE_SHA,prepare_workspace,same_design,sha
+from reproduce_pvldb20261024 import ROOT,EVIDENCE,ARCHIVE_SHA,prepare_workspace,same_design,same_supplement_design,sha
 
 SCRIPTS=['range_sweep_study.py','audit_range_sweep_study.py','range_sweep_public.py',
          'audit_range_sweep_public.py','range_sweep_validation.py','pvldb_consumer.py']
@@ -46,9 +46,20 @@ def run(args):
              'platform':platform.platform(),'machine':platform.machine(),'processor':processor,'logical_cpus':os.cpu_count(),
              'packages':{k:importlib.metadata.version(k) for k in ('numpy','numba','scipy','pandas','scikit-learn','torch')},
              'host_note':'One serial numerical process; public hosted-runner background load is not controlled.',
-             'scope':'Fresh raw download, 73-case score generation, range main/public/validation and numerical JSON audits; source/semantic design matches, host-dependent scores/timings may differ.'}
+             'include_vus':args.include_vus,
+             'scope':'Fresh raw download, 73-case score generation, range main/public/validation and numerical JSON audits; optional original VUS primary/supplement; source/semantic design matches, host-dependent scores/timings may differ.'}
     (dest/EVIDENCE/'range-reproduction-start.json').write_text(json.dumps(receipt,indent=2)+'\n')
     call('pvldb_full_precision.py','generate')
+    if args.include_vus:
+        call('pvldb_full_precision.py','run')
+        call('audit_pvldb20261024.py','--root',dest,'--output',dest/EVIDENCE/'full-precision/independent-audit.json')
+        call('pvldb_supplement.py','freeze')
+        olds=json.loads((ROOT/EVIDENCE/'supplement/protocol.json').read_text())
+        news=json.loads((dest/EVIDENCE/'supplement/protocol.json').read_text())
+        same_supplement_design(olds,news)
+        if news['primary_protocol_sha256']!=sha(dest/EVIDENCE/'full-precision/protocol.json') or news['inputs_sha256']!=sha(dest/EVIDENCE/'full-precision/inputs.json'):raise ValueError('supplement parent binding')
+        call('pvldb_supplement.py','run')
+        call('audit_pvldb_supplement.py','--root',dest,'--output',dest/EVIDENCE/'supplement/independent-report.json')
     call('range_sweep_study.py','freeze')
     original=json.loads((ROOT/EVIDENCE/'range-sweep/main-study/protocol.json').read_text())
     fresh=json.loads((dest/EVIDENCE/'range-sweep/main-study/protocol.json').read_text())
@@ -71,12 +82,15 @@ def run(args):
     if {k:v for k,v in oldv.items() if k not in ignore}!={k:v for k,v in newv.items() if k not in ignore}:raise ValueError('validation design drift')
     if newv['records_sha256']!=sha(dest/EVIDENCE/'range-sweep/main-study/records.jsonl') or newv['inputs_sha256']!=sha(dest/EVIDENCE/'full-precision/inputs.json'):raise ValueError('validation parent binding')
     call('range_sweep_validation.py','run')
+    reports=['range-sweep/main-study/independent-report.json','range-sweep/public-study-v2/independent-report.json','range-sweep/validation/report.json']
+    if args.include_vus:reports+=['full-precision/independent-audit.json','supplement/independent-report.json']
     receipt.update(status='COMPLETE',completed_utc=datetime.now(timezone.utc).isoformat(),
-        reports={p:sha(dest/EVIDENCE/p) for p in ('range-sweep/main-study/independent-report.json','range-sweep/public-study-v2/independent-report.json','range-sweep/validation/report.json')})
+        reports={p:sha(dest/EVIDENCE/p) for p in reports})
     (dest/EVIDENCE/'range-reproduction-complete.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(json.dumps(receipt,indent=2))
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True);parser.add_argument('--archive',type=Path)
+    parser.add_argument('--include-vus',action='store_true',help='Also reproduce original VUS primary and supplement on the same fresh score arrays.')
     run(parser.parse_args())
