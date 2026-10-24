@@ -1,0 +1,2156 @@
+{
+  "status": "FROZEN_BEFORE_COMPILED_INTERVAL_CONTROL_TIMINGS",
+  "utc": "2026-10-24T09:19:26.665224+00:00",
+  "timeeval_consumer": {
+    "schema": "timeeval-consumer-study-v1",
+    "created_utc": "2026-10-24T09:19:03.367970+00:00",
+    "source_repository": "https://github.com/TimeEval/TimeEval",
+    "source_revision": "7c3622757b1a3afa9a84cbc97ce132d9e379f715",
+    "source_directory": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-timeeval-full",
+    "workload_directory": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload",
+    "source_sha256": {
+      ".codecov.yml": "d45aeabf0fbcd151874d7920b83aa65aafbb1d5a68fa748a01c19095b206ef24",
+      ".flake8": "9f4f4813c9eca04404646c9ddf4aca7f47c0f33117ece7cb0f4cfce010882661",
+      ".github/dependabot.yml": "770cd9351d9d39dfa64cbfcc16ea7bbb9d721ee2a1c965a1d3e1915d6a4fe533",
+      ".github/workflows/build.yml": "982bcb1be96aed271c8beeb497101cfbb44271f52e64f2cb53337fff0a3a0698",
+      ".github/workflows/generate-stubs.yml": "bfba6ffa958d464e9776134edb79ad6455ee30550509cd9d067cabc1897b00e4",
+      ".github/workflows/pre-commit.yml": "eedd16f99e39079253b6724aed208041773b9ed74136c490202992245db923ff",
+      ".github/workflows/test-pr.yml": "60d12cb9d6cdb707ef6cf213632d6edf46f7853a409551cbbcc647ef32ef697f",
+      ".gitignore": "e52d07a9efd3929f2a7e33424cca3f5db640fad3a1537caa570340ca6e8ff2d1",
+      ".pre-commit-config.yaml": "420316ac0dae4fa28c12ab9102ac7393ab0b071643bf7dba209ef5d2b1a20b63",
+      ".readthedocs.yaml": "f908bd01d0d22981767fa78946eb13079fbca8b78e263061ca36b5f3c0bae2da",
+      "CITATION.cff": "2c6dc599dda5f42cb31ec6bc5d4a66dfcc9621a565c066264649262083fd5cf6",
+      "LICENSE": "f047d8cf14baad94ec3d585efc35ec17ec9cecd4f95d2d95721d9bfcb91cf453",
+      "MANIFEST.in": "61e73fce9055bd97df3cd13d66d1d67dbfd32cd94535b7f0d847cb4ec6343419",
+      "README.md": "711256c236789de80d72272f6aaf4f5dce37e36013b0b5441d5ce986479507b0",
+      "conftest.py": "7077150038f241ce66ab9127c9be9dbb31deb11518516d086d41de3ae023514e",
+      "docs/.gitignore": "fde6e46547307ef7e718427de6b7e3d65c6804d77a104f59bed39cec5b1b7c51",
+      "docs/Makefile": "083da11499bae6c180e8f805316d2a0213debc81971d61c5446b09b6bcb69c2f",
+      "docs/_static/css/custom.css": "fd3e1ac73ea81d7a8c6d7d301244b02e5257ddcd05a1075043bf2b71a3bb9f1b",
+      "docs/api/index.rst": "bc93479d5080d9eb1e11d65c419d68e6dff9259f8c75ca29deb31560c450e325",
+      "docs/api/integration/index.rst": "7187595628d6cb4fa6b9525c3e78bfffedf28a397a5303ccc22e6573c5cf7fd6",
+      "docs/api/integration/optuna.rst": "050739166e43754f446f23baee1031f8eb700f123b2f01b758e001b1ad4c9d00",
+      "docs/api/timeeval._core.rst": "cb814511f2b1d6034fbe2401fac416879a13fbb07600661ac8c9cb2c2536a491",
+      "docs/api/timeeval.adapters.rst": "b9e50334cf67a3aba0e2cdee360111dbd213b15dd8ccbc86f593a6831f6db3c0",
+      "docs/api/timeeval.algorithms.rst": "89f9b457fff40b8a386b8fb834ec0cefbbc5388fa39e4f8990f6d1a2640c211c",
+      "docs/api/timeeval.datasets.rst": "ef4a13b94b549645f141abb7dd29fae9be01674f04317d543078220f7e797057",
+      "docs/api/timeeval.heuristics.rst": "385a935d119371c18e963aeebba30d2da57a6314511595a0298f36161defabb8",
+      "docs/api/timeeval.metrics.rst": "5e1685df8671d20c8ffca59c1ad986b537f148c318f0ffbf1e5629471bbb70ad",
+      "docs/api/timeeval.metrics.thresholding.rst": "be74f5d93df599ac3e372e16be1ad41ead9227a0db3c71d0ac426af76d34dd08",
+      "docs/api/timeeval.params.rst": "2fc88fa99673091338905861cf556cd12e45cad0c55061cab804ce748abf32b1",
+      "docs/api/timeeval.rst": "98819e51f744b5350e79a569c326c121a1cb05cca1b7ca216ebfd1ed244bc060",
+      "docs/api/timeeval.utils.rst": "fdf030088a49df16c52b26375fc49c314790bddd5359b2871b235f74057a60d5",
+      "docs/concepts/algorithms.md": "666993d8cabc7821d6ab021c7f4105604c40a7b4a5a16d28a34f3295bac8c347",
+      "docs/concepts/configuration.md": "b5dc96f7cb085df43c4ed5b9deec0fef2f62ba8d938011941ec71d27f6e1559c",
+      "docs/concepts/datasets.md": "f30801a6bf0ee5f3d9ea9e759fcb1f9cc5cb8ab779bda776bd8007b65804646d",
+      "docs/concepts/distributed.md": "264fce531df854e8e6e7e8ad6315b38b3e00428236a06265c76debf34026478e",
+      "docs/concepts/index.md": "884e4206b30cddc24d9e49478b6b45ca4aaa97d281c23be01397ae9cc8a69f80",
+      "docs/concepts/metrics.md": "338e56765957398960b367fcb9bc10876759efaca4fd8801d7fa518510e795cd",
+      "docs/concepts/params.md": "aa854d3d7774826927923f39c088e205b3a6334dd238c0b04059373e808fe91e",
+      "docs/concepts/results.md": "35e0150867da8460c3e34ffba9fff3bb10d1c9e28a644ba8a105da081ecae1f4",
+      "docs/conf.py": "2f32c7341e58e967f6261aeb6a388a0108cc2e30cd2d1eb2325a8421cd6661d6",
+      "docs/dev/index.md": "bc893c1ba4a8fbf3f825421ff6530ada716636f7433bf38896cc4c37b76e018c",
+      "docs/index.rst": "8a7f09554671690c4432966a0f448df36ecbfd2a02d9278058d7ce2a156d200a",
+      "docs/requirements.txt": "4e1847dc732d5b28d55b44f2073f3c72ec20cc9ce0e5a82be535cbde8aaaa47b",
+      "docs/user/custom-metrics.md": "0b528ed25ecc94eaad8f47b356e2f0f68823089c3be8c98804f5375fb876b450",
+      "docs/user/heuristics.md": "df0c7ec24e04befda2837f15f35818237f0ae8fe7a9aa0939ee320daf52b3f99",
+      "docs/user/index.md": "bdf5281168451a1ea2b24e9de435d2391473a2ca091f169dec29af40bde9af9a",
+      "docs/user/integrate-algorithm.md": "961534ae25a41d2f246108ed2864aadd2a96a4ba32ce58404a6d11aac4479f78",
+      "docs/user/integrate-dataset.md": "d17b37d63743f3ec606c4b964d3e76f2e0e82e79ac02911960b590edf179bf9b",
+      "docs/user/runtime.md": "65485bcf0b2f576e56b3e114abdae0a7fa936ed413c9845567aedcb10671f19f",
+      "docs/user/usage-distributed-timeeval.md": "4fe262db4b35ce81fa67f66b66549db3d2750cc457bb257d6c56d46cc94b0ebd",
+      "docs/user/usage-timeeval.md": "8ffdb7c23cc5fd2e95312ac00770dd25d09329a085532f0afa8a161bca33c4b2",
+      "easy-example-experiment.py": "d08895b0588a5fb6f76352052fa259be030d367cbf1dd84352d9f5f0e2943c07",
+      "example-experiment.py": "7887b0e0ddbdc76857d30bf0db4ad74c7cd8c557e2177b1c11c85be3ab575416",
+      "notebooks/Check run.ipynb": "479cba2bd3a565229bb7efbd73574a2940171276f0e1f855b293f4cb1b97c89f",
+      "notebooks/Datasets.ipynb": "dfb8413862cc8ac2edfc0f6f57e93ef7c4c4e4a133697071b3580d386e9f6c3d",
+      "notebooks/Deviating Baselines.ipynb": "b2f23e444423f5c873cf41da31e56dc13d94b5612856447b521ee9ee80028d17",
+      "notebooks/Paper plots (GutenTAG&Benchmark).ipynb": "b307ad550da2e85020a0b28ca54ff9d604f38f964a2d9500b45c087b2d19ccd6",
+      "notebooks/TimeEval Bechmark Retry1 result analysis.ipynb": "0de3a857cd278e0baa4d8f994e77c44d3b47e34c79921b6bb549d7ed166dbf0b",
+      "notebooks/TimeEval Bechmark result analysis.ipynb": "36921705c3f2e678e2f3931b18891c45c0f4024314c5c92e067ee3f426451919",
+      "notebooks/TimeEval Correlation result analysis.ipynb": "cdc1b07d5adeeea83a6888a792e7ba238e23b380dd8b006e6e90aa57c52f11f2",
+      "notebooks/TimeEval GutenTAG result analysis.ipynb": "783d640bd03873fbfa6d49bb609f39534ab22b9fb0fe2a17b35e1b48ec58e8b4",
+      "notebooks/TimeEval default-optim result comparison.ipynb": "79ce2161377e3eda5b64aeb6cbdf92f529484ef0b224db14cb1b304e73850f5e",
+      "notebooks/TimeEval parameter optimization analysis 1.ipynb": "4f6477dcb648f2d66859060dd44ff22441e9fc1798ed4478105f8ec5a028eaa0",
+      "notebooks/TimeEval parameter optimization analysis 2.ipynb": "b102368a47fcb09db910c5ce10b2a98c74e3726de8218277cf2779635dfc41bd",
+      "notebooks/TimeEval parameter optimization analysis 3.ipynb": "c64fdd46af8eaa274ed5a58e66ce04a7636ca7ab04b034e199305315cf33fc89",
+      "notebooks/TimeEval parameter optimization analysis 4.ipynb": "eab2074ee61f0a9cdbe3f87fac2794c377679287afe4e7c229278e88e4604e27",
+      "notebooks/TimeEval parameter optimization analysis 5.ipynb": "be36dd607ef67ca1e6ac19a52e7cc987f3020df78a0be91cb7c1a58d90a1a3d0",
+      "notebooks/TimeEval parameter optimization analysis 6.ipynb": "b5baf5f22a11dfd6657582206844e43aa556721c8a117f1a29102ade05a703f3",
+      "notebooks/TimeEval parameter optimization analysis extra.ipynb": "ba6d03972b8842e23f6c726209e5731f06e662ef7d5bbc5a2147baa154f0267d",
+      "notebooks/TimeEval parameter optimization analysis extra2.ipynb": "5afb18697e8d8ccdc3de39d7a14dda91dded83d6c8122caf0b7fb86a0a5c7352",
+      "notebooks/TimeEval result analysis.ipynb": "d5bb2c98606a046d36d3880caf5536847d86cd81a710766fd63bdfc38c47d051",
+      "notebooks/TimeEval shared param optimization analysis 2.ipynb": "dd6f0b86a1382cbb0824d874f13b441836b5b617e8be3d7c17c0e4fc604ccce2",
+      "notebooks/TimeEval shared param optimization analysis.ipynb": "7f9eb7c0e3a9d13b5df71ce5f84d0eabefebeb7e27015193609957119346eca6",
+      "notebooks/bad performing algorithms.ipynb": "d019c47ccf070af80071fe2b8c8254780c51485bbdaa6d01fe3fa51b4abdf081",
+      "notebooks/data-prep/ATLAS Higgs Boson Challenge.ipynb": "57f9fa9313a3cdf729d4670413d984789af4f684770d9f3ae235a281a5692bd6",
+      "notebooks/data-prep/CATS.ipynb": "c9a15b160b1ae123159ff8de5bad8d231b2c02498eee32b9c0b65b5b6d11a870",
+      "notebooks/data-prep/Dataset Metadata Analysis.ipynb": "041ba941415228e5b59453667bd079a293abc44b7916f7ac482b8821732b340a",
+      "notebooks/data-prep/Dataset Period Size Estimation.ipynb": "7e123805b50bd4bbec38a213cc4c5a97e4b319fbdde45a6da31b65d6ad247470",
+      "notebooks/data-prep/Exathlon.ipynb": "58a475382b2bfb20d4ba12c9c5b097b6ab185802fbb15daebcb7487c56ff71e0",
+      "notebooks/data-prep/GHL.ipynb": "828a17036efd3981a5cd3f5b1ab85527841f46b4ef2f58b14f5193fa86bcd144",
+      "notebooks/data-prep/Genesis Demonstrator.ipynb": "2ad4b38ab5e0079edd4e66a6838f3aba3b69f0f62fdcbd1444eaab8d9f517075",
+      "notebooks/data-prep/IOPS AI Challenge.ipynb": "4d01c5850d9674bb977e1e77d680d5dff9cf16a278b39c706ef4f6cfb1eb83a5",
+      "notebooks/data-prep/KDD-TSAD (obsolete).ipynb": "22f20ea418a2cce2ec804d2b9e37891b881f968c9188a5c9d8fe3ceeebef26cb",
+      "notebooks/data-prep/Keogh.ipynb": "f9c05c92a2a94f241d4aae41d143c986ddb761818b20197bb63e71c25c05a9c3",
+      "notebooks/data-prep/MGAB.ipynb": "f244635c7f83ce821bfc158db26c8e8c78c9ca9f3d3e2e4eb201126996eaead1",
+      "notebooks/data-prep/MIT-BIH Arrhythmia Database.ipynb": "d0dc98e713875f0c93e9ed67d071bed89d5580b7b592468dc0710e2a6242729f",
+      "notebooks/data-prep/MIT-BIH Long-Term ECG Database.ipynb": "5c4c58f0bb6bcf7f2f2a307b2504ad2d92f0355769578db76178d8a4aa92ffb6",
+      "notebooks/data-prep/MIT-BIH Supraventricular Arrhythmia DB.ipynb": "9497b40860f26ade56b0769e171b1ad9e9d61b57b7f1301580795f8f7c4a82db",
+      "notebooks/data-prep/NAB.ipynb": "618f42db087679a012be45f31e70c7cd4486b706ec3abcc3d7873b0ac648a885",
+      "notebooks/data-prep/NASA Spacecraft Telemtry.ipynb": "4a2ece8c8e4f06b2ab9b40a720d162b3fa2ad68c2b07f70e8f9ce394d1f6aa49",
+      "notebooks/data-prep/NormA.ipynb": "f7ccbbe97d60dfe4484ba74e0cf4582f28ab02e60b430bd05f500ac8343e5a48",
+      "notebooks/data-prep/Overview.md": "52e21cbfe8d043ac02eb6d4e2bff24aceb65844954519e155f0853fa97bb90e4",
+      "notebooks/data-prep/SIGKDD21 TSAD Competition.ipynb": "471774d5194f783a00db1c37ce9f566a8df8a7f47bb90257f73ea7bd008c0c2f",
+      "notebooks/data-prep/SSA.ipynb": "5db99e5b757bb93e0a107f2df226400ef51f6e0e5759704267eb8a8a4bd79d76",
+      "notebooks/data-prep/SWaT.ipynb": "7239e3d35af7c32a40f4a8ac9f88ea6035af401bf4524ab5624b72fd871e0e49",
+      "notebooks/data-prep/Server Machine Dataset.ipynb": "ead92ba16deb05c4659e9fd1f2fc121ba69b3ac98d09de523f71fe522da90e1e",
+      "notebooks/data-prep/TODS-synthetic.ipynb": "67f5b70703c27ab6179b8afaf196fd620544cfd67519fe9bf5e972c3c4cb8134",
+      "notebooks/data-prep/TSB-UAD.ipynb": "e408c64da1290324a010f159424231bfae0d1dc7af06da95f999f7dae8f4dc52",
+      "notebooks/data-prep/UCI-3W.ipynb": "ba9c423e218f0a09bbc5f38abdeaef5e6d1088e006c8151d614ae293a7c31674",
+      "notebooks/data-prep/UCI-CalIt2.ipynb": "f472d61d86a3ed8f4ca6ca77ec34fd21f418424a5eecd4ad1147e9ebacae325f",
+      "notebooks/data-prep/UCI-Condition Monitoring.ipynb": "2d05f6501a6c6606210c8b6ec15983274660c27d0cb1f6f0b2eef14fad506064",
+      "notebooks/data-prep/UCI-Daphnet.ipynb": "a5f6a62b491b98a0ee9bb90cac23c1d08c88bf3b97d2eed63a9f58ab38b643b8",
+      "notebooks/data-prep/UCI-Dodgers.ipynb": "43e5f5e32b12d148aa1da958305990184a398fb2eaf36a5b0cbfd4b4e7b43b77",
+      "notebooks/data-prep/UCI-Kitsune.ipynb": "6135bac59beb1f6ee4bbfe9dbc1becd7bde2318165fde3781e575368ff36c5c8",
+      "notebooks/data-prep/UCI-Metro.ipynb": "c31ace65c5c51fc5721ce65cbccf6a920ec37719e29beb7a5c123928fc2a3286",
+      "notebooks/data-prep/UCI-Occupancy.ipynb": "0c94a94a5f49f6d74ad9ee8633623550604c1ad640b4adc6c0b3fc6b11c0cde5",
+      "notebooks/data-prep/UCI-Opportunity.ipynb": "c9467d18db6c96ac6c8a03d6011aae5ac39f3c54b4a3b68092252a4cc0d0157f",
+      "notebooks/data-prep/WADI.ipynb": "04c897ca951fa27eeec137e540cfa655577d385e98baf5bdecb81af4b0dec4b4",
+      "notebooks/data-prep/YahooWebscopeS5.ipynb": "b6b14c3d8320ac4d7d1f475084d9d8207c8582d8708659aa77a0ef03043bba1d",
+      "notebooks/data-prep/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "notebooks/data-prep/config.py": "7851241f6f08b3683c57f647a8574c4014ea825602d8d5e846aacaeac4c3327b",
+      "notebooks/errors.ipynb": "ab8c4ea91296f1d1552b0e036622d6fc34f5808a09ab5cb6c69c79358f2d29bf",
+      "notebooks/extract_parameter_matrix.py": "de3a992b4e7e013bbb376fa34923f4d4279677ce4b4c2ad1fde2cadcacbf6346",
+      "pyproject.toml": "07ccf4ff8bb49b852f5451673d44239178c0efaa4a8c29e43872b92cce9f3c1a",
+      "scripts/analyze-datasets.py": "8a5ce86a91e1edb1bda14f1ea487275b5213838dd683fb954ab06a9f7d294397",
+      "scripts/calculate_metric.py": "c116892b1fbfb425fda490ec5e45aec0b50d5a27be36900ffb70c6e2852b2cb2",
+      "scripts/concat_dataset.py": "d97560691562c2afa8a8af8209c125e0840d8fac7f587f4fa860e48f25473c23",
+      "scripts/convert2bin.py": "3c81d584bb129d1d516db01933448112a296f13f563a868e5e9ca5e460b77eee",
+      "scripts/create_summary.py": "193f0faa7ad9c502957abb6e508aa246806585038f84bc889d07d0298e9f6be3",
+      "scripts/fill.py": "1dc4baff257b84d58dc06a5a2ae11948724def4ed4f39c5b3b9a7660b216e8ee",
+      "scripts/merge_results.py": "8fb53e67f884580e79dc0f321ccd632568e227e9fb7fdcbdd2b4fe5d0a39196c",
+      "scripts/plot.py": "f407b8517f7e9aa09f7e0dacc43aa061324fba2aefd935f5c47b757434fa7f4c",
+      "scripts/preprocess_dataset.py": "efa7601b6a37dcf6ac7d81919b02a94ba60696f63b126809138a12e4e12a1c75",
+      "scripts/recalculate_metrics.py": "f374fed35411a0b54afef844b9ff60139e607e88034c7768c3396fbae35564e5",
+      "scripts/reevaluate.py": "410e98ef0bcc2e468ccf33af2aff13d37c5f5f131b5ae22d8d24ee6ecadbaaec",
+      "scripts/test_preprocess_dataset.py": "c8ceca15e9b465fb38b71ed56b6948bfdf79ba35156e577492edae6480ba8026",
+      "setup.py": "72c71b834ec9b27eff8d3391c45aff7c15edb391ab9461b464842a939aa3aa7b",
+      "tests/__init__.py": "e26ed0c778edb9b39117301f6df6bef462a3791b22147ad4c9eece76d3d01fa4",
+      "tests/adapters/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/adapters/test_adapter.py": "8a6408bdfaebafbe05b96c0ae31e52ffe5bf545a8de4d148c16659d36b14de71",
+      "tests/adapters/test_distributed.py": "510b5efe19f5f815365582de6ac8d89d23317510f5514830f8ede005d54408b5",
+      "tests/adapters/test_docker_adapter.py": "dcc0241efeac1c577c436629f43deaa1276beb53c5523090d39bc60476fdae8b",
+      "tests/adapters/test_function.py": "874cbdc0d6c997c9bb5492c988188199848f2faea4217659eb044f1c8bab94f7",
+      "tests/adapters/test_jar.py": "f93b533f07c95cc9a97f4362def66be0985338b4a1c3d7a7fb9a2ddee7c5ab31",
+      "tests/adapters/test_multivar.py": "0cfd377e8ecf97ab9f5240c252ac835586ebe64c4f916a91354d0f16637133c8",
+      "tests/datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/datasets/test_analyzer.py": "1e4fe8d1d3887d2f34f166752beb581a07634e2741d66172a58de8c44fc31872",
+      "tests/datasets/test_custom.py": "747fb243fc86bd97198b1a78a5760e9934a51644e61717fefd38a408fb61fa86",
+      "tests/datasets/test_dataset_manager.py": "d7b09e026ab029b339bf146ab5e561f3ef2e3e0bc0188e88ab2f7f7bb60e9465",
+      "tests/datasets/test_datasets.py": "8961d77ab8399a8624aaac42fcc6925a536de8c2ad0f4bb89508663c30b395a7",
+      "tests/datasets/test_metadata.py": "3e1868b98da0dae2b0ae138b6e2d45e6100332eb0d09806d5e4c9be9dd349ffc",
+      "tests/datasets/test_multi_dataset_manager.py": "cdf7498b2c32f767b79477cf87228a65e7ce76c627acc506650f2b03ebd45388",
+      "tests/datasets/test_noop.py": "19fcb03f75c441b534cd5c5e49e4e51fae850a4b06393e578a595cc90ba30b7f",
+      "tests/example_data/data.txt": "b32d74486c87eafa6ecaaced7ffb39252bae060a680e1451b0388835a7d6faa8",
+      "tests/example_data/dataset.multi.csv": "1674da4861ec388711959314aff6565ec17c2c800b0772677c59fe80010648a7",
+      "tests/example_data/dataset.test.csv": "c22e7278e700caf762444ae973114d3a45a3ac25845334d8fccc279e4d06ea5c",
+      "tests/example_data/dataset.train.csv": "27db29bc374ace1d7c2fab862b5a2f69cb2a1a2448d7708be7d4d87883e1b1c1",
+      "tests/example_data/datasets.csv": "4f6ae783ccdab760d4814eca02ff8b9e70f2668c8efa70711cf08f5f47ef5f1e",
+      "tests/example_data/datasets.json": "afb3998b864afae0c557aaff2d7ce77d805f9b615f6f3b179a4c81b99dce0026",
+      "tests/example_data/labels.indices.txt": "95ca1057cb42743958a07c9ac4ae3baa56e6bd65e2f000139ca0d97b2a0058bf",
+      "tests/example_data/labels.txt": "4370aee44244ccd9c47b7a4dfb80faa04fa3ee4a3e51192e7dd89635b8658bbc",
+      "tests/example_data/results.csv": "2808970176cfa74ee4c0adf2ffbf02ccb5606313fd9b3da61166cba3e10c0da6",
+      "tests/example_data/results.json": "482afa4bcf058d0b173d603680611eb4ebe741d1d4c2ddca1ccadf3e4ecd55d7",
+      "tests/example_data/results_multi.csv": "54ac2778e6b645f796826ba4227727718cb1d55d344d0edb94e858a0bc8fabe3",
+      "tests/example_data/results_multi.json": "e030c52889a6277ee0951e96f9b1c4e5273861696c6b422e8edafc62cd620fbf",
+      "tests/example_data/timeeval-algorithms/.ci/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/example_data/timeeval-algorithms/README.md": "4ce15d576ded83a34dd77583fbd8291e4dcb867755061b93a74eaca493950504",
+      "tests/example_data/timeeval-algorithms/data/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/example_data/timeeval-algorithms/results/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/example_data/timeeval-algorithms/timeeval_test_algorithm/README.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/example_data/timeeval-algorithms/timeeval_test_algorithm/manifest.json": "3556d3e4714c616bfbc379e1308de10265fd0aae7503054c95e58e1cea6deeac",
+      "tests/example_data/timeeval-algorithms/timeeval_test_algorithm_post/README.md": "295346d79c34a4f865652c0bce2b20a166232a9adb84f5ee2c40c4b27a4cf5c9",
+      "tests/example_data/timeeval-algorithms/timeeval_test_algorithm_post/manifest.json": "33354e785755d9b917e792ff1aedfbbbf1cd96ca44d2e1f85d5eb1b1c387903a",
+      "tests/fixtures/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/fixtures/algorithms.py": "c3d31be621124ec7ffb0c2a802000f731ccf2af03dfebdd479c67ad98680489e",
+      "tests/fixtures/call_mocks.py": "b5b5e981af40a5dd92a45002dfaef1ef1be7f2a92af7ce0ac11408df32546791",
+      "tests/fixtures/dask_mocks.py": "d29e933bda71c0e1bc39fdfa03bea82d44c7d1c289a01989f2fe20afe79315a3",
+      "tests/fixtures/dataset_fixtures.py": "b3a0a57052be8cc043980dac0dc4fbc8446ac5ad4a2fb223048adaaad7d1cf43",
+      "tests/fixtures/docker_mocks.py": "1851b1ba82b366e43d4c083fee23c0909ea07f70314b4300011aa5241674e0e5",
+      "tests/fixtures/heuristics_fixtures.py": "f65da622c1dc37a239cbb5677bab32b04092d429eabb77bdf96fa8e29025ff52",
+      "tests/generator/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/generator/test_algorithm_parsing.py": "7a000cdb320855b01b968fa7a42247ff1431e34bfeb2eda4b0e48d33d70defff",
+      "tests/generator/test_codegen.py": "ef7be2cf0e88cc6c7ce0f7887254cecc432d70311bd201c3e3d7f8da5154ab3a",
+      "tests/heuristics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/heuristics/test_anomaly_length_heuristic.py": "3c6f496c2d1681212fcda4c7153d460842f4e97a7a49b7000d1a10452c62b44e",
+      "tests/heuristics/test_base_heuristic.py": "b04269fa65f4dbbb3428a673a4efe5c96888ca1c34c6c68ce97adfb659dbc655",
+      "tests/heuristics/test_clean_start_sequence_heuristic.py": "c3a47ec6c80bd2df14693083a9fd1297b02d1600557be6f6ceea8fbd3bf784eb",
+      "tests/heuristics/test_contamination_heuristic.py": "11b3dab0dfcf7c9f98af47a226f9d0bdfe79e77448a3d2a19b435263c8ac7ea2",
+      "tests/heuristics/test_dataset_id_heuristic.py": "4d579c3e904ee8eddba28d668c645ff9967f88153df5d94d2cf4a4e73a84d7d3",
+      "tests/heuristics/test_default_exponential_factor_heuristic.py": "1129f8e23c081e3f2f4c50c6c0590a457c50e56c9af0211bb668dd428c7567e2",
+      "tests/heuristics/test_default_factor_heuristic.py": "0991769983160e637018a871ed0fbccafecf744b5b0ffdfdea8d18d2e789a303",
+      "tests/heuristics/test_embed_dim_range_heuristic.py": "576a832431a6cada065cd1f269ea0f26135392ee9fbbaa3a794bf68434d98c04",
+      "tests/heuristics/test_injection.py": "c6db5863465d1f10623d311e6a3539a94cea43581fe5bdf627833b1c35d204d2",
+      "tests/heuristics/test_parameter_dependence_heuristic.py": "d1efb6bf7ef6038388323787a9fa4d3cb55bcb0574fa12c672477cd2d229a5a1",
+      "tests/heuristics/test_period_size_heuristic.py": "afa86261344951596ab4bfd4137c3307cb24b64a002222fd28d000b11f15ae0e",
+      "tests/heuristics/test_relative_dataset_size_heuristic.py": "fd0cad852fa2edffce584f84846d0e87619ded398bc8e3aab610e7554a60281b",
+      "tests/integration/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/integration/test_optuna_integration.py": "5032a473c50c51a36f41b3809a7b2f75788b260223979c9103735913a949894d",
+      "tests/metrics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/metrics/test_metrics.py": "bf8cb08fb408a0c60ae2df27ef6d18d2e41f23d92ba68d4ddea8a9faafef1523",
+      "tests/metrics/test_thresholding.py": "869128bf3fe5e55970a1935f80c1bc883824bb18b71573f19aa1035d69c864fb",
+      "tests/params/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/params/test_bayesian.py": "4659a6adbcb7aca99f2534e9f88817d7ff5188cbbd4942dd6d0d7b0a2bbf93be",
+      "tests/params/test_fixed.py": "d71eee162ae1ba9e9de01cf26814fc5eb5295f85525e0561e41bdc3c37aeaac0",
+      "tests/params/test_grid_search.py": "d03bff54ffdb4984a6b9aac515d8f60591b46fc805d5ed7e655124519472307e",
+      "tests/test_algorithm.py": "66ad510eb3ded5ef4914d4a44db82cadbf5197c68deb7ba03b1d4c94d43fe92c",
+      "tests/test_algorithm_timer.py": "58e7ca8d98b571a5463e51e72cb3c484376df821bd4781d40d3adcaa6351993d",
+      "tests/test_dataset_and_algorithm_match.py": "74c2e478686cb8ed968d01c0ba58a7d9048591264be7de9e7eff105ac0e0a445",
+      "tests/test_distributed_timeeval.py": "790c6522b46a3eac66e6b4504701a99fd25c806e841f117448d026a3d1a14c8d",
+      "tests/test_experiment_combinations_file.py": "a18517065499c0eeae040271ed3135576e14cb63bb8a02dabf7796cf2c0a6b1c",
+      "tests/test_experiments.py": "8bf0813dbcfb869829ef7356d3b7eb432f7f628e57dc80c4d631caa7a1f963e3",
+      "tests/test_import_data.py": "1f8aeb2001328dcb5cd026dc0db7b0d0710f42ff77830325287505a78b280d26",
+      "tests/test_output_data.py": "c276357f174d5d02aa43710347e5a0dd2458db2f80a06b4624e9ffae021a1204",
+      "tests/test_remote.py": "afd2efabafbb0dcf4c8539da9d1493166454fcde59633c1293877695a381aa2e",
+      "tests/test_repetitions.py": "8333157eb6528c671c4c365b87a79731a40627f2065113d59640f4193b145e3a",
+      "tests/test_resource_constraints.py": "3bdae81ba906d8bcc39bfb8a3466440dd451f193198edd147e4822046ca8e8ea",
+      "tests/test_timeeval_exceptions.py": "67a5dd7193738bcbadceed66e90704fece4e66c8faf65fb9d4e9ca9b3447b0ed",
+      "tests/test_tqdm_joblib.py": "5aafd238dae6989f21653227e417048aad0adac5dcf68e8f8369014cc1aaa22a",
+      "tests/test_window_utils.py": "1b9769aa5de7ef2ec7350e74a3c22b15743e5c77698380368721a70eb0852520",
+      "timeeval/__init__.py": "0cc7aad04343ee88a26f5bdccdff2afbbb78e249e9896be9d32d2e8398e2785b",
+      "timeeval/_core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeeval/_core/experiments.py": "ee07c7f8a1b6181eeec223269d5b07cc53ac07e829ec423488808da2624e3348",
+      "timeeval/_core/remote.py": "7ea007ebf90c92970181b8b91229d7bcc93a46b533bb6438f729c0612e675acf",
+      "timeeval/_core/times.py": "4702d27f75603feb77b9475899bdc2ce629c2b2b8d1a4f664262c47e03b1971b",
+      "timeeval/_version.py": "f8da09bdbb98dd4d2913530caf66089d533a1179639c69df7152e2192e8bc8c8",
+      "timeeval/adapters/__init__.py": "f82b6b93124dee8e61fc5c282dc35aee04e8f4610acd9fa7e53ae78bb7aeaf8a",
+      "timeeval/adapters/base.py": "2e0c864c45bf10d6b0f442604894b4086afd96dcd8e98974155a79998ec075e2",
+      "timeeval/adapters/distributed.py": "24b4d3cace7a3bd3dc5ac3cb25d23c408b8d39b3dec1ebb0bddf9ed08f6e81f3",
+      "timeeval/adapters/docker.py": "ebcdcb42b7f33bddcb6f9e88bf44daf8ac49295fa55dfdc0fb0a5786a36838af",
+      "timeeval/adapters/function.py": "dccb7f83b1af8412b2b60e7f16d6e4c6f4327a4b2a2e042cd362b8ffc8e69553",
+      "timeeval/adapters/jar.py": "d8579fd2a8a3f20a5f2d7d728a6d992884a7b2e68c28c0285f93067132279c05",
+      "timeeval/adapters/multivar.py": "c13f43e3403aae4a83b84e22c9ca4b8cc2cdc87b5ffe59866992d01cae681c72",
+      "timeeval/algorithm.py": "0461ba1a53165aba0b5ec49309d57e2ebded505ae4d03c6d9948efdc8964ceef",
+      "timeeval/algorithms/__init__.py": "8fd354bb62748a6a79f109e9d994de677d537250719f2aa77e90b8e251a5deae",
+      "timeeval/algorithms/arima.py": "e74f6c7751e1d93cf54003fb8b1be253ce9687a3188ea510912ff1b22795c480",
+      "timeeval/algorithms/autoencoder.py": "02820c6a16afa7df9dcb5a18303e20721c9f39d392eda7672facf535154293ee",
+      "timeeval/algorithms/bagel.py": "3e2b03e6dc812b150f165b28395ed89861178e5af75f9cfa06c5c52ae89d160c",
+      "timeeval/algorithms/baseline_increasing.py": "013cfd7725c8cb7cc763f81e39bbb58578296ed333b79c380ed33d84e7d16030",
+      "timeeval/algorithms/baseline_normal.py": "645215560bfde66a40d63e442370baa01ec9bdb8f8b66118abe35a4010334d5a",
+      "timeeval/algorithms/baseline_random.py": "3593aadb2f9d63844ba762ab27458d8313f61a1539a48521c76131fa7532114d",
+      "timeeval/algorithms/cblof.py": "8985e7f654efaadcfe88a3c973223bd3925e6c32017dcbaa363fdf2cf78b68fa",
+      "timeeval/algorithms/cof.py": "f653caa7b36e48369aa8b43ac13edc3b7ca041411f7b6cde0ea2a8eebe216d5f",
+      "timeeval/algorithms/copod.py": "b4c651e6aba10ee4e79751504f57ff1b5a525ab342657c48f50464c9148d3e52",
+      "timeeval/algorithms/dae.py": "87f77e4ba861602ed73e1d0f22e4759107d0d6fa8585b1357b3baa24574f1a56",
+      "timeeval/algorithms/damp.py": "f7ad255fcf2a668e1862d6bf96af6e7ec98acbb55ef55f7c51e7401f83bba072",
+      "timeeval/algorithms/dbstream.py": "8bb88d51dd18ea3d2f8e4dfbd538b432b5a4655f4021c43b342ad258158f7eb3",
+      "timeeval/algorithms/deepant.py": "1c98bbabf986d1180dc22193bf38fa5d5499d85a392bc66fd39fa65f1db388b3",
+      "timeeval/algorithms/deepnap.py": "6a332657928bba4b0f6ba18a7c5d99a1defe1f944c1a1fab9876fd05aa94a0ff",
+      "timeeval/algorithms/donut.py": "4b85a0d385d6a36f683eff4bff70fd9d1ed0f80e9476ff36ddd7b27fb23c24c8",
+      "timeeval/algorithms/dspot.py": "b642edb2deadd37fa360174a721ab623ed3f17fc3f1a42497c64754eb6ede362",
+      "timeeval/algorithms/dwt_mlead.py": "9920ae6f6cb6d43cff5cbe985cafcf40ea4677db4d4b2902ddccb6ef59acc508",
+      "timeeval/algorithms/eif.py": "d360ac82b18769446cd362faac2977ac92c34bc76378cdbefdad0a3c85aead04",
+      "timeeval/algorithms/encdec_ad.py": "1dfd0584531658c6c444ca81fde42be7f129f27f9266f5c8dc530929cdc9ed1a",
+      "timeeval/algorithms/ensemble_gi.py": "9fe693b01e46755b1f91d6b4b93c20efa072a0f09e332b9cb1e31b510616cfe0",
+      "timeeval/algorithms/fast_mcd.py": "c002d9e6ca5e357a5e5bca7e5c45cb6659ee356b097c19e6f655593e376726fa",
+      "timeeval/algorithms/fft.py": "9437e5e051af670be248de8cd6cd7930342871dfb142938a3928b66a842df6f2",
+      "timeeval/algorithms/generic_rf.py": "6f804ad9bc8d3fb7a16a746d5a7fd71416559e6d9c613030d31e63caf41b3e60",
+      "timeeval/algorithms/generic_xgb.py": "6ddc7b408eb19624134b4da97485482a1a81c4e853797a01707470c3b8a0a952",
+      "timeeval/algorithms/grammarviz3.py": "52e1c0ba4fcae4cd94bb0bd50e3fd87a276e7293b61015c6d968187d93e1c48f",
+      "timeeval/algorithms/grammarviz3_multi.py": "6cb1d7e92ff0d00e22a336402839f4ef4e8b49b3335a7f09c5bf291d88c1d00b",
+      "timeeval/algorithms/hbos.py": "d48f061c415e92f7a46a896faee835440f8959bb9d5669949a33e57c3c5470c0",
+      "timeeval/algorithms/health_esn.py": "d8afe8ad6de292dbcdf4abe4af8515cc1ebfe94bc6b2b2cf9bac176c704fe900",
+      "timeeval/algorithms/hif.py": "f1bcc61243a65cac484f4ba0f913b131d08b0248a5477b7063a2802edb1af144",
+      "timeeval/algorithms/hotsax.py": "93a7dfd3b0ecb9764b9054018dd0314d67670590c7c0d6207b5d528447f23397",
+      "timeeval/algorithms/hybrid_knn.py": "dcdac1ee807b3521ccdede9861cf7ae9b4947d4c37f5b16ed2d739c51a705bb5",
+      "timeeval/algorithms/if_lof.py": "cb8c2488edf65792f5bcac34622b94be1374e493e8b93eecdc5937f3be98b384",
+      "timeeval/algorithms/iforest.py": "840781cd9c3d0f7b32a683329f32390056d28776e78d825ba6842fe1e97000a0",
+      "timeeval/algorithms/img_embedding_cae.py": "efdd86ae1cbd924c661a2936d0aed7500a3c99ba7c756ef396b7d11b9d22138b",
+      "timeeval/algorithms/kmeans.py": "f970f69a34982ed4f71c9e1639904ad345e2935afe6154881de3ce4660d36ce4",
+      "timeeval/algorithms/knn.py": "fc8e63723e0961c9ebe972a333189578fa224d0bbfd35e5d63fa2f1c750cc894",
+      "timeeval/algorithms/laser_dbn.py": "afd6e2911a44878e523bdbdb58d8998e6610bbf8b94d73cab84c8b7e53e76e6f",
+      "timeeval/algorithms/left_stampi.py": "83d1b181561eabb26015de4b45b6193b87e98da4bc3d2e51a2093adb554d77d4",
+      "timeeval/algorithms/lof.py": "b29afcb815732e31f6baa782de012a5e2bf96083eedc5c7097afa2e7754b9f24",
+      "timeeval/algorithms/lstm_ad.py": "986261ab71a2652fc92fea07536c05c9b97f5e0e98d6edb9889e0734e55db311",
+      "timeeval/algorithms/lstm_vae.py": "771ef1ed44663d9d5f72fea7c132ca24f867dbc1fe679361e49b073aa2410091",
+      "timeeval/algorithms/median_method.py": "1a41e827d52e8ad7b9384c7fefaede92a37a7e91294cc970651b65a3404a69f6",
+      "timeeval/algorithms/mscred.py": "9b4cd60e3d2354257f1c28ab6cb9b655a940f5c0b4d6a95ca932c300b5626e8e",
+      "timeeval/algorithms/mstamp.py": "fc07b57d5df4571cebddd27c1c99b77c89f93c7b14dfdc3bdd1b14030c9d3025",
+      "timeeval/algorithms/mtad_gat.py": "8504bc376357222093a2521592a3bf2873c4f01cc2361a645f6ecb810df77e3e",
+      "timeeval/algorithms/multi_hmm.py": "79fe3de77670ab29b9848b8dfc0945b0257661898ce90d20101e05fb4968124a",
+      "timeeval/algorithms/multi_norma.py": "e1b054e3171d2036da6629d2a0b194ce0ac2404e32bce7981b2195ebbcf8dd33",
+      "timeeval/algorithms/multi_subsequence_lof.py": "c3e778ab4e87e5bb032e5a37261fa10ab8a88703bf967273ed6865b9190c3055",
+      "timeeval/algorithms/mvalmod.py": "74e745ee28aee9a1972220c22b92ba6106b62d99df6ee16f34a2a52691ad2d68",
+      "timeeval/algorithms/norma.py": "6adcc6b9d38242382ce8ede57cef79dd19a80436c35b76645efb5ba20a2e74a1",
+      "timeeval/algorithms/normalizing_flows.py": "a057133864913414a72a15db3399c2deae34acd3263c1ac9b87308d38d42057a",
+      "timeeval/algorithms/novelty_svr.py": "166c45c3bcbb0af7058c67b0648bcec8f80e2adcbb188f5b0532a8cc00cf4f2c",
+      "timeeval/algorithms/numenta_htm.py": "93ea53e43b147fee09988d3be915adee0d4f077daca46ed3f45b6fb76171e4cb",
+      "timeeval/algorithms/ocean_wnn.py": "f5fd4bc3288a3a6e08e633695c2c1f4407f7125a269ad71e26a2be9f92b3ffaf",
+      "timeeval/algorithms/omnianomaly.py": "956e129cdaec599463b68158afd4783caa532609844749ce938821582cf463b9",
+      "timeeval/algorithms/pcc.py": "47063850de8664fd86df0bfead839c78106a676cb61658d02eb71bacd4a615b6",
+      "timeeval/algorithms/pci.py": "9ee89c7b3e5048550ee576490c06645ffe2fb5ce9f908957472c03323095e9fc",
+      "timeeval/algorithms/phasespace_svm.py": "22e39466c33c2ef763525afea88867978f2180167b6676435ff8afb352f88edd",
+      "timeeval/algorithms/pst.py": "1d36f74a5ba44bd4f3dd3a8c7d379c877bea756a6e6e9527ebcee295dc9e9b5d",
+      "timeeval/algorithms/random_black_forest.py": "f3030dc18c216cf030e3d34b60c3024c278b9e4914f67dd4fca8507154b86ead",
+      "timeeval/algorithms/robust_pca.py": "17832e5b1d002df36d3e4a4bffef3ae4774fd1dd951dd6b20437fe10b1561ae7",
+      "timeeval/algorithms/s_h_esd.py": "4a8e0da15ce148718445b40f2a37acd2cf44acf971596c9e7e17104354560ca6",
+      "timeeval/algorithms/sand.py": "1e88b66e5864cb061f870f08748d917056b5b710facac0fc5f1e8bec8c79dbaa",
+      "timeeval/algorithms/sarima.py": "c7f99a84b7b6ae4f120d4c21d96221788c52cb8aa0b3f7aaebe0b484d95409d1",
+      "timeeval/algorithms/series2graph.py": "ea00b3357760f28b30cfac59da859a1299fe9a6117b8e4e84669f9979e32ff81",
+      "timeeval/algorithms/sr.py": "befd490cad0cb2990d1e0f14af6ab6da43ac542a9d01e7b5b7feb45918cc9460",
+      "timeeval/algorithms/sr_cnn.py": "209e2480f988052f371a63cfc0531cb2cf2aa844be1871cd49f161d28bd08b0b",
+      "timeeval/algorithms/ssa.py": "3ddfe50e2ea7ff7d49143c5fcbccb8324ce40f602d33a51f1432a2b67d740e72",
+      "timeeval/algorithms/stamp.py": "dcebf944fefad7cea32c3e057b93041e8cb27e2a23809b9179fd92c36a63a734",
+      "timeeval/algorithms/stomp.py": "34fee64a63aff937ca6a7b066fa2c55a8f4c020c4cead45ff03edf56fdfc5e6f",
+      "timeeval/algorithms/subsequence_fast_mcd.py": "8b5b7dc02004122d258f034c2982e2083af053ddc873723080bfb09af991663d",
+      "timeeval/algorithms/subsequence_if.py": "79a2eb399ce72326e4a776550512a1a02defcf9a98fa6cc64034949afd94608a",
+      "timeeval/algorithms/subsequence_knn.py": "6fa05a98a3b1ce0107c2e154ba005d4a959e8653aba2a75ea7d4df370654e1fe",
+      "timeeval/algorithms/subsequence_lof.py": "821c78900b914881157ded94565b67f2fbddd49b2ccb6ef4c9e7821ade55c39a",
+      "timeeval/algorithms/subsequence_lof_multi_sum.py": "05074e221bf326f7fc12aea053a035e02aab2b1f0d728c2209c562b98e55f231",
+      "timeeval/algorithms/tanogan.py": "50b969a0f4a2da6fb34f9022e29db6e466772b247c3dc35fb25dc2d40759a855",
+      "timeeval/algorithms/tarzan.py": "3a62cc788196711b73ebaf6ce169f1c4354ec26950c8c0cc08a579ae34e908dd",
+      "timeeval/algorithms/telemanom.py": "a172c21a68e88c43d25c7adb0deb39b25670daf023f1b28fefe834e7ca203a1a",
+      "timeeval/algorithms/torsk.py": "3b87d74ba5316e1c94f11aabbc874abb427cca966c95f9aa037510850cb6f932",
+      "timeeval/algorithms/triple_es.py": "bbdea140de3f407cec454fc55efc0b15b4e52c6c803510dc5263ad5f7e8ef421",
+      "timeeval/algorithms/ts_bitmap.py": "f4e8e99ca2e3aaa3990f9d37b82ec022987898b4352fb9ce4eb6a7319c1575d6",
+      "timeeval/algorithms/valmod.py": "7b9590fe8d4b3953bb0257e0a1d5ec6b89095b23c830b7699b174a53928eb9b3",
+      "timeeval/constants.py": "1050d9e366a841bb5b4b17833ea9b85d33ec8fb73ef35676aff83db4e0f43355",
+      "timeeval/data_types.py": "514f495e19a3bc4df9afc397e873f13017a5cc03ad77fdfaffaf08e181259443",
+      "timeeval/datasets/__init__.py": "692ce7ae441914f95952f7047ca1421821a03ce006eed06d63e86a6e60e52b1b",
+      "timeeval/datasets/analyzer.py": "8865eef53160e2fab49be9a359a6e510d8be3783b84382b9040aeaceaa2e302e",
+      "timeeval/datasets/custom.py": "b99b1b116249bc55a38484a85a0dea8394cfb1cc4e59798019689302927f80da",
+      "timeeval/datasets/custom_base.py": "af1b6943ec2312023a7939c63fed8d337c4b488c0ad8fd8f8c0213c28e7bf3ed",
+      "timeeval/datasets/custom_noop.py": "ca8928ce4d7b22daef71740345c4d6472551f0c0c589e0bc026e6b059c620bdb",
+      "timeeval/datasets/dataset.py": "64130d9eada0e2d07949e5635dde59b8464dcf83858bb900d355e1a2a708f380",
+      "timeeval/datasets/dataset_manager.py": "c693279995e8aaba9544e1ec9ee3e31c23a61ff32c5a5c9f3e285d0a644a9d29",
+      "timeeval/datasets/datasets.py": "a38965f2ca2d787bcc1db6d14b5a11ed5720d19132e8289337a5a9aa3328dd98",
+      "timeeval/datasets/metadata.py": "515531dea3f1cc8fe743e4d0fa2fa0e7f5e4cbaac3aff8b61da09a9c921d5c4c",
+      "timeeval/datasets/multi_dataset_manager.py": "a8bb571d99e658d4c00e007881ba5d422cd20161e81d9e96d34d5d67e25ff581",
+      "timeeval/heuristics/AnomalyLengthHeuristic.py": "e59d4c6699ac01f93d6b74314cba37b86436b885d53a6d3312aa1c75b4b76179",
+      "timeeval/heuristics/CleanStartSequenceSizeHeuristic.py": "6006b551ae335587de81c5248ebbc84a90b974daa334cf877677726c2a242cb2",
+      "timeeval/heuristics/ContaminationHeuristic.py": "394fe73ccd9aab20f4d8d99b6766b618c02002b183d6410216eddd0f7d10bde6",
+      "timeeval/heuristics/DatasetIdHeuristic.py": "a4213ac886a8ddf98db5af69c8d13159a475a2b7102c48660630b7b8d2651b70",
+      "timeeval/heuristics/DefaultExponentialFactorHeuristic.py": "5399843a203e7379426e71fa14b48f8aec43be0f74fc83fc5c1bca06b24dfbb1",
+      "timeeval/heuristics/DefaultFactorHeuristic.py": "7057110e888e33eec91b643f8e984f100201a55fc699d3367aa00f5deca654e3",
+      "timeeval/heuristics/EmbedDimRangeHeuristic.py": "7c488bb55fd7a7970852cc27be9581187dae8dd27d808eb0b20febd9256c4107",
+      "timeeval/heuristics/ParameterDependenceHeuristic.py": "a8c08071ca89c79505631f12ccaf0b54bcc6d014461f6dd7d936380f93fb026a",
+      "timeeval/heuristics/PeriodSizeHeuristic.py": "3cc4f0ce8284fe6653f6824e5de82c8544d1d98497ed47a4cb23c267febc3ba9",
+      "timeeval/heuristics/RelativeDatasetSizeHeuristic.py": "cb04e473b7fb52e05c34c73772acf3d60c79613bcedc85b75e6d08cf5912eea0",
+      "timeeval/heuristics/__init__.py": "ba8ac738e57f36d2c0dc0d8a757a647e0db03a3c55dff33246fc4985e8bf3b91",
+      "timeeval/heuristics/base.py": "7fa04de349ea768799d26ad8f35b50c40e84bd83e995961da483c9e484a9f611",
+      "timeeval/integration/__init__.py": "dca321e5b75b8d2fb3a38d504f3ba5b9cf700b1a0868adf5b5851f950f9691bd",
+      "timeeval/integration/optuna/__init__.py": "6142b12d500e5c3d7082eb49dd718b86e4b455e5d1c6832f2845c5a537c86d9f",
+      "timeeval/integration/optuna/config.py": "40e361c7e0cb619107b5789c833c526a054af943f6b91b8360808026b107383e",
+      "timeeval/integration/optuna/module.py": "5aec08414201fe9015a607533c0fda311bfe36d3969093f9752b598b441c97c1",
+      "timeeval/integration/optuna/params.py": "a6ea7c2bdae347131361c33c7f698e8099e5eb347870a18e6f9e86c388c69d7b",
+      "timeeval/metrics/__init__.py": "3d79e78d897e4b027f5b6c070a36a77e148bc2e08c429f929d14859df2513ced",
+      "timeeval/metrics/auc_metrics.py": "dcf1c0cfe11cfed7b7b6acb1fc32e5d1041145da0bfb361768fc1d3b291b0feb",
+      "timeeval/metrics/classification_metrics.py": "db274710d25db32f88c78b9fc91001ad8bda639abb09a780dfa8267ea82a40f6",
+      "timeeval/metrics/metric.py": "2333740807f8573784210b0796da16cae8d7b0aa81f391a0e43af0f3daf1f320",
+      "timeeval/metrics/other_metrics.py": "1978f603961ca674ff5c1aeed76f0c9f6bcc6fba39c8e226d0725b5760f236b3",
+      "timeeval/metrics/range_metrics.py": "ba45a0cd3994c075de1026bbbe086ba7a03d0c7a86ca894d1d0cfe854521f5c4",
+      "timeeval/metrics/thresholding.py": "fbd56d6bc35f8a70f5884cb0e34aed7d23dcb7873bf2a2b92ace55287667a311",
+      "timeeval/metrics/vus_metrics.py": "609142dbcf7d537e98b130390abaa015cadbbffeee39b416c43f63fa224b4a08",
+      "timeeval/params/__init__.py": "99570a19bb8da1690171455e667749850cb1fbbfa8ee152f501940a9d84e533a",
+      "timeeval/params/base.py": "85534f932c82e0f6a9b9a4d6fd602922630718d260f20874243bdd0c80fd2aa1",
+      "timeeval/params/bayesian.py": "4ff60daf1e8d31ab0de610addd559656c62d626e6abeb2364382fc989f893b1f",
+      "timeeval/params/grid_search.py": "586f42e47feaeb1d30d3433d3186e3c4973535399d03000e14ddc615b2e9fb9d",
+      "timeeval/params/params.py": "7a13bb1991802a8f4382e989466aca731c997ded58be8ccb2041d691b932f5fa",
+      "timeeval/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeeval/remote_configuration.py": "a0c22c87472b8735fafcee282666a48941a75c271364ac4911fcf740981ff66d",
+      "timeeval/resource_constraints.py": "88788ff6fada44ce1ace722744258b92c560b433477fa75b57e5c060ab195cbb",
+      "timeeval/timeeval.py": "7ebc85d381497f27da76027ce2c0e00efbb3b0a81dda9a69889c3a5f6582ceb2",
+      "timeeval/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeeval/utils/datasets.py": "e47bb6acf4d6631d965957440c152a921a11cd41a5c6e0064915fef298ad09a1",
+      "timeeval/utils/encode_params.py": "636f2f734254593979f8034cbf3f6578a1a846a2d3f15235277024f7d91b2dec",
+      "timeeval/utils/exceptions.py": "dc7d99e74a61aee48e98ab0c1851666846e4b6c4344e180dfc31197f96c30b3e",
+      "timeeval/utils/hash_dict.py": "71f55b5197cfb4b61f259d233244d96c3439b151fecf94435b6d05a1862bf2da",
+      "timeeval/utils/label_formatting.py": "1411e20388b014364a9b5da5a3fc47592bd7acf6adcf283b5d7ef16dc04619fc",
+      "timeeval/utils/results_path.py": "c774a088bf56597047c6b5857cb746c7f306d23c7b85e3a67f28b860e00aa5ff",
+      "timeeval/utils/tqdm_joblib.py": "c624be2275803576b7e1092f6860a8117e91b87fd7281228715eed6bccbe5ff5",
+      "timeeval/utils/window.py": "874bdd14d36d0fc0215be64d2fe98525e014d8eab304dc38799b6a8949d1bbae",
+      "timeeval-icon.png": "37b42f7bfe511a11759996e06e2aab0168e5ad2b57b4e14d8f5bee8249251d74",
+      "timeeval.png": "ff471c3c26f8816741c8ee896b43cc9ffbf355f512d540d27bb0bce06a99a730",
+      "timeeval_experiments/.gitignore": "f370ad043ec0c98a166fd98646c3b94280ed78bc996223b6cca2ba936f7c6781",
+      "timeeval_experiments/2021-02-11-demo.py": "9b4218637cac6c4027388361ca9ff5dcb85cf05be4d77a07bbcd5ceb0ecd7236",
+      "timeeval_experiments/2021-03-01-demo.py": "dc57cf58929c1de1e2c30a5b02138e6a5cd1f46888a3dd7ab3ccdb64a9cc4c27",
+      "timeeval_experiments/2021-03-10-RR.py": "31253a68a3ed0fad5f6d3f73266469317841d41941c43131579ce6af8d9b95b0",
+      "timeeval_experiments/2021-06-15-timing-test.py": "5d57081fa5a265e245adcca88e25ceb0e6353a7cebcb46c51be24b45a9ca36ab",
+      "timeeval_experiments/2021-07-02-default-params.py": "100ff6f2b4d61f50dc97358c6ef91431f4aad26bdc5fea153c957d2b0d9cb99e",
+      "timeeval_experiments/2021-07-15-default-params.py": "ab3b8627d99110d6f2bcebedc69b85efe68ccba54964dcc8a40d834e6048c9a9",
+      "timeeval_experiments/2021-07-21-default-params.py": "4c651018ba1e3892893afcdac7e9425a5711b8097b5b43a440a838bee1a7680b",
+      "timeeval_experiments/2021-07-23-shared-optim.py": "2a909700da2e73d629906b86629838c618d2c3300b08e3e5c20b2f6aad149b5c",
+      "timeeval_experiments/2021-10-01-shared-optim-2.py": "8bb1be47d3f49cae861bfcac9a0e3369a3933c01ed4c44cea5bc4eb0d0a276f8",
+      "timeeval_experiments/2021-10-06-optimization.py": "9af50bcf30ba94116b20ae4a3456595eb7db6135f5393ddad3e7823aa3519e33",
+      "timeeval_experiments/2021-10-14_optimization_slow_algorithms.py": "8ab03124e6b28f4686da70aef510a14ea40de7f14eb22c9f559af423a0b239a1",
+      "timeeval_experiments/2021-10-18-runtime-gutentag.py": "571e39158fb0860ec15cc808d901fbe1b11851ad4530718cb750370f8a4e10a7",
+      "timeeval_experiments/2021-10-20-runtime-benchmark.py": "cda9eff6d8134a65468773bd0061a10d7251f1a80ea13583f3acbb7ced4d8139",
+      "timeeval_experiments/2021-10-27-runtime-retries.py": "43b28e2fdad627232344a2841e53d011fdb76923f6e01cb08e1f5a4fd1621f5c",
+      "timeeval_experiments/2021-11-02-debug-nondeterminism.py": "5537517dedaa567044b5e362b6154a5a454f09abf7333b552f860600b12dc52c",
+      "timeeval_experiments/2021-11-12_debug-dask.py": "be112e2c394b3854b35de1837d60d3fecb507041a9f640c6837d41f728a35bec",
+      "timeeval_experiments/2021-11-16-rerun-benchmark-errors.py": "cc7ad855427172b99886fa61ab49e3fa32c7baf75a5c07fd3454af68e3c4951a",
+      "timeeval_experiments/2021-11-17-rerun-benchmark-normal-docker-baseline.py": "9f3a188e01550496bdb3da1057da179c2595749bdb771503f42cd8d72047ca77",
+      "timeeval_experiments/2021-11-22-runtime-benchmark-nasa.py": "5aedfd1d2aefdebf63cbdbe898deed63b7eeeea0b4ee6dde6d5872a9b63df603",
+      "timeeval_experiments/2021-11-22-runtime-benchmark-smd.py": "8f43facdab507f6ca4f3ce883f9744f411caf2889a5dd2a683c718400c688218",
+      "timeeval_experiments/2021-11-23-runtime-benchmark-daphnet.py": "1214fe425c2a9a9b30c1a6de9b9530499301ed68f04b888b083aad43016c01d5",
+      "timeeval_experiments/2021-11-23-runtime-benchmark-mitdb.py": "568e4afdf801ba2a2a52c34b63a1cf9879faa739115562cfd34d19c8d83a1eb1",
+      "timeeval_experiments/2021-11-23-runtime-benchmark-ssa.py": "d152358c05cabc087fd77345c0f8c40d57ec8a0a62f928fee4b8dd1925c9e0fd",
+      "timeeval_experiments/2021-11-23-runtime-benchmark-webscope.py": "99d50df2a69cae98aa7a096212058b38b0f9228e550107f40aba73dca5112e1c",
+      "timeeval_experiments/2021-11-26-runtime-benchmark-2.py": "e47c6f8ef3e52371ea1e7a6769ba31a8c0bf35e60cfa4ec0bff25ec470030a2a",
+      "timeeval_experiments/2021-11-30-runtime-gutentag-2.py": "b672ba3956888979224a2353c8b88cb36bbb415476add809c77378361a90b898",
+      "timeeval_experiments/2021-12-02-rerun-deepant.py": "15cffb2d94c437d35a1577e4a9d6a2fb1088f01730ce92e0fa6cd72007550316",
+      "timeeval_experiments/2021-12-06-runtime-correlation.py": "080eb97c725bb5997e86b52534c348dc505064d9420af5c6be87619eb88f65b3",
+      "timeeval_experiments/2021-12-08_multi-subsequence-lof.py": "33c47258923c4cdb0ea2c08016981bd857260206c8b167820b052eb218ebd0c2",
+      "timeeval_experiments/2022-01-18_deviating-baselines.py": "65a7e5df6587d67ce180c002dad91337fe8a483649db27519563c6a06d7d68fc",
+      "timeeval_experiments/2022-01-18_swat_and_wadi.py": "05e74a8949b9f7966f386a49a4e86f4b3500cca4e55eae3d75eefccc2015607c",
+      "timeeval_experiments/2022-02-01_multivariate-algorithms.py": "d2201174df7a4c33730c9493de792424bffcb34608393cb1fe0cb7e54b87dd8f",
+      "timeeval_experiments/2022-02-21-runtime-benchmark-revision.py": "e73a61340c7bf27541f6476bf6595b4c088eea16960225236296693b50ecbbde",
+      "timeeval_experiments/2022-02-25-runtime-difflen-revision.py": "135a61147223889052806547531fa94e011fbdee8521035ba97e9a6d5c83f00c",
+      "timeeval_experiments/2022-03-01-multivariate-algorithms-2.py": "d022a311285e76c2606276250560e9bdaa731b209203c7bd8829cdafca31762d",
+      "timeeval_experiments/2022-03-03-multinorma.py": "243243a5d4765c286362cfa99f8ebd0ebeea3727911b86dbaa607651582b6957",
+      "timeeval_experiments/2022-03-08-telemanom-improved.py": "5f01b4f6af00559825c2bc88a15e284a5a07839d55b3df4edbef12b8ed71c3b7",
+      "timeeval_experiments/2022-05-31-multi-exps.py": "dcbe31f1c32837b56d1ba78ee2b8a09221c290a19507bfc48d7c9c9f8281e1ee",
+      "timeeval_experiments/2022-06-15-sub-knn-univariate.py": "26b7397642ae67b95932954a00c32a88fbdb7d418777a75d670ce47a3f7bc13d",
+      "timeeval_experiments/2023-01-30-BO-baselines.py": "dc57e89f3505a3aaaa6a01a54a57dc178191453d4ec48d0e43fce52f8a6afab9",
+      "timeeval_experiments/2023-11-28-uni-on-multi-bench.py": "9c9c534a636d899c39473788a2f05afb6982488baf57313badffaa7de70cca2f",
+      "timeeval_experiments/2023-12-22-multi-on-multi-bench.py": "b9dd7bbb7c1db6a7b3969d62186954c5c454795ddc35f7760d33afaed2420652",
+      "timeeval_experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeeval_experiments/algorithm_configurator.py": "648a8a401ef7bf65c88f6da017bc967975fe69d978f1f9b7b05e897d00689e9a",
+      "timeeval_experiments/baselines.py": "8e9e6632d521af4b5b238b674722c45df20850dbd1d1385b2c7bbf4377313ed8",
+      "timeeval_experiments/generator/README.md": "f32f914515532a0df2bea1b394496e0860afbe0a55b929e06ca9f038ad7b8a97",
+      "timeeval_experiments/generator/__init__.py": "fd74c7155711502a2bd0ca65239095f6e97bc3676aba505e7b64b606357f25a9",
+      "timeeval_experiments/generator/__main__.py": "7cf03486597adbf2377409e9bd92b5b991e7d33e63ebeeb0e2c7a3e79aa66159",
+      "timeeval_experiments/generator/algorithm_parsing.py": "9ea2b79936114b95aa886e1f4d464ac4515bb09180d1d80c05a58b8269cd2492",
+      "timeeval_experiments/generator/codegen.py": "8707514ef9d3004479dc3bf0cbac67257f837db139b4a22a322410737e487d3c",
+      "timeeval_experiments/generator/exceptions.py": "77616b8a6865021d8b6c9f85593e6d5812ed181bcfecedb9b88d1434f7735956",
+      "timeeval_experiments/generator/param_config_gen.py": "2645e5469268a899e9505d66f015e898782967fc190d9ee712b80099cc269da0",
+      "timeeval_experiments/generator/parameter_matrix_parsing.py": "6dae3266b7f960271c76f6bd8ca4bd21405b517bf18cb332d02fb335b4c0ef60",
+      "timeeval_experiments/generator/templates/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeeval_experiments/generator/templates/__init__.py.jinja": "a83ab014bf09b4f4a4c63d58c064cd362cddb9215e0fabc5791cd11d39a66e8e",
+      "timeeval_experiments/generator/templates/docker-algorithm.py.jinja": "dabbf935b56f8c8f6777311927d5fabc506329e34b673a1795e6860559db0a3c",
+      "timeeval_experiments/generator/templates/timeeval.algorithms.rst.jinja": "11919221877ebfff11ae53404da69d606e903336f73b66fc7178e3fbd1e5aba0",
+      "timeeval_experiments/param-config.example.json": "4158aa3f3d5821fcc1e5dc3d713463830f29d8cfc0347fcc36dd35f9a7f1a3b0",
+      "timeeval_experiments/param-config.json": "12031c51a7e642dbcd68b454c837c67ae757e192ecc90e51d520639ab3772bcb",
+      "timeeval_experiments/parameter-matrix.csv": "ce63bdb48438c98628972bf0ab306bf8c360e43457802f901041310823352a33",
+      "timeeval_experiments/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "input_sha256": {
+      "datasets/MSL/142_MSL_id_3_Sensor_tr_1525_1st_4575.test.csv": "27e5fab530ac902f546912daa791eb2ff25a73aed87f090abf6249a8d87d551f",
+      "datasets/MSL/146_MSL_id_7_Sensor_tr_554_1st_1172.test.csv": "6679cac39a8807ea214cc93b350c93be66bc93ff135c7f5414c329c9af1df8a4",
+      "datasets/Stock/150_Stock_id_2_Finance_tr_500_1st_7.test.csv": "c3b8140cfb789efada12e9063466eae2a8403676b59c66b4a05fcd84331a018f",
+      "datasets/Stock/152_Stock_id_4_Finance_tr_500_1st_2.test.csv": "de5e1dde8eaf3d81df3918b0f7ba3fb46c3fc5e63d9750f56dda37c8be082425",
+      "datasets/Stock/153_Stock_id_5_Finance_tr_500_1st_1.test.csv": "4ff6403fc8b9f01bac41bfba7b1057843d966ff18fee03dd745dea434be6aec5",
+      "datasets/Stock/154_Stock_id_6_Finance_tr_500_1st_38.test.csv": "b7d10950e840f9e57097abad54159dcd53c0d402c9d0c34dfccfb45f81c61b19",
+      "datasets/Stock/157_Stock_id_9_Finance_tr_500_1st_19.test.csv": "5ccbe97d6ea35766bc7518c160f7107b6e674b68c4fcfb2b09af23b02b0b5033",
+      "datasets/Stock/158_Stock_id_10_Finance_tr_500_1st_2.test.csv": "1b0c95f2c18570bae8f53e3880aad872176d5df98568239c7bf1cc50727d133f",
+      "datasets/Stock/159_Stock_id_11_Finance_tr_500_1st_5.test.csv": "42600fce931f767559cd1e5e34e7a053391c864105672c7d27fab4b2c4b1685c",
+      "datasets/Stock/161_Stock_id_13_Finance_tr_500_1st_3.test.csv": "897837ca604aa805ed034031f089ed20611f6bc45c48b5a51a95a4c3d1fa8c58",
+      "datasets/Stock/163_Stock_id_15_Finance_tr_500_1st_3.test.csv": "fea2b60ff0a060c2bad471c4f2f566ab7e9be2b1d6f5161716aedac6da24703c",
+      "datasets/Stock/164_Stock_id_16_Finance_tr_500_1st_8.test.csv": "963308c81755d991cfeb4c68bf5f43b9752dbd2170667297eb7675f0ae6dd3af",
+      "datasets/Stock/167_Stock_id_19_Finance_tr_500_1st_7.test.csv": "a25f5e26c42c69328c12364d26af6b6da5b8956eb2d322e9dbb37175647f4b2d",
+      "datasets/Stock/168_Stock_id_20_Finance_tr_500_1st_1.test.csv": "e6a03cd98afcb2813b5f09068fc869391d5d04dd7fe26a5ed58eb36101ad8cbb",
+      "datasets/WSD/034_WSD_id_6_WebService_tr_4559_1st_8461.test.csv": "c8e5c17c6a5071c3d1eeb46ba5ccd71a0b84e7c5b1e1eac475fb3ebed6a61b87",
+      "datasets/WSD/038_WSD_id_10_WebService_tr_4042_1st_4142.test.csv": "39ae2e4ca58416e06cca8b2e35fb5d95cda0a4098ebb6790747448b7ff941148",
+      "datasets/WSD/057_WSD_id_29_WebService_tr_2229_1st_2329.test.csv": "ab087e82cd8ff2bd89c575a1df1feecee915a1145389f7512d6320b45f9be5fd",
+      "datasets/WSD/066_WSD_id_38_WebService_tr_3320_1st_3420.test.csv": "972a35046f5dbdc4516c44094c75b6a86478408f6d46f2b840e7437a06910ffc",
+      "datasets/WSD/071_WSD_id_43_WebService_tr_3387_1st_3487.test.csv": "5262f38df40456aeb4d935aab705db34873fc5cf3e9d2362ff4eea6fcf468f3e",
+      "datasets/WSD/076_WSD_id_48_WebService_tr_3821_1st_7083.test.csv": "046af21da9dafe802b150046c508010630323e6c55ec9ac06eee3355a91ffa13",
+      "datasets/WSD/096_WSD_id_68_WebService_tr_1341_1st_1441.test.csv": "ec966f014b06f2ae28aa34f878f707fb4523b6cea25f64cf507be77f7dcea9c3",
+      "datasets/WSD/101_WSD_id_73_WebService_tr_1513_1st_1613.test.csv": "ea85eff8dd0cdf3e89d9dd8b5efa7bc83c52ff63d48018ad4e9425e7a42eeda9",
+      "datasets/WSD/115_WSD_id_87_WebService_tr_2252_1st_2352.test.csv": "44631f207e7638bd0c3f3b8d9c0618a289ecc5c89ab4128922b365c665de8254",
+      "datasets/WSD/120_WSD_id_92_WebService_tr_2329_1st_2429.test.csv": "c2d62a257bb17786728dc1b2fa321bb2ad35638bd2a7ac9537d78fc93b467d7c",
+      "datasets/WSD/124_WSD_id_96_WebService_tr_4559_1st_14350.test.csv": "18730f975ee3867d82bd7884c613a27289e594fd5f53443a737719c42d324380",
+      "datasets/WSD/126_WSD_id_98_WebService_tr_657_1st_757.test.csv": "ec24e879447257c1c793319569cc40bb2858ae976e96c2ee69142f92ad89efcd",
+      "datasets/datasets.csv": "fa167954eaef6afceb5c9390a7e2835c0d55cca11cc3b7bfcbbc571c3b7a14c7",
+      "results/COPOD/public-default/MSL/142_MSL_id_3_Sensor_tr_1525_1st_4575/1/anomaly_scores.ts": "dfafe20f8def04f460b8240b9cff770c754a98fbd9a33ef96fe931f84291b0da",
+      "results/COPOD/public-default/MSL/146_MSL_id_7_Sensor_tr_554_1st_1172/1/anomaly_scores.ts": "c617cb72f1c23e39f2acbd704d4dd88fedcb21a630764007802476230c62275c",
+      "results/COPOD/public-default/Stock/150_Stock_id_2_Finance_tr_500_1st_7/1/anomaly_scores.ts": "1d7f5c7027fb0cbe2a32e1e8a0be0d634774228334173f4300e8e2623bd04b29",
+      "results/COPOD/public-default/Stock/152_Stock_id_4_Finance_tr_500_1st_2/1/anomaly_scores.ts": "3072379edb032ad004f4fa44f4e7c76c19f93a98c21dc05e6914f5ddc992a058",
+      "results/COPOD/public-default/Stock/153_Stock_id_5_Finance_tr_500_1st_1/1/anomaly_scores.ts": "396d9ff2b4c61fa36f794f65db0f989eabc2dc8fa92574edf37ea5b241a338eb",
+      "results/COPOD/public-default/Stock/154_Stock_id_6_Finance_tr_500_1st_38/1/anomaly_scores.ts": "a9d249811386f469e9e0dcb9c920781ceac79f22acf216adb16cb5e56048562f",
+      "results/COPOD/public-default/Stock/157_Stock_id_9_Finance_tr_500_1st_19/1/anomaly_scores.ts": "ad0c602b038397e32df8a01fff57d88b28198e0879fc014c1ed0eb3d798bc003",
+      "results/COPOD/public-default/Stock/158_Stock_id_10_Finance_tr_500_1st_2/1/anomaly_scores.ts": "e94eca113aafa249c3f3fb59030be196718de7597af25d868e1a30c8a505792e",
+      "results/COPOD/public-default/Stock/159_Stock_id_11_Finance_tr_500_1st_5/1/anomaly_scores.ts": "80a0420b7c316e928eb3c268906d05a6096641fe47114702ad22121afba2fcc9",
+      "results/COPOD/public-default/Stock/161_Stock_id_13_Finance_tr_500_1st_3/1/anomaly_scores.ts": "bee790bef386b68e0e37e7c7d68ab5bd922e378f03205ded9814ddc91cc274e9",
+      "results/COPOD/public-default/Stock/163_Stock_id_15_Finance_tr_500_1st_3/1/anomaly_scores.ts": "7ba4d71a288f8b7d682572274db19d9826551e5462ffb0a425a8e641c01f8594",
+      "results/COPOD/public-default/Stock/164_Stock_id_16_Finance_tr_500_1st_8/1/anomaly_scores.ts": "a7914ba0c3794b9245033094eac81d0b24914e3a388584105facd58fa3926a17",
+      "results/COPOD/public-default/Stock/167_Stock_id_19_Finance_tr_500_1st_7/1/anomaly_scores.ts": "453adc943475e57d707072405037c27942470e2ea91211619033f01658d24ed2",
+      "results/COPOD/public-default/Stock/168_Stock_id_20_Finance_tr_500_1st_1/1/anomaly_scores.ts": "61414e01a32355675fb263e9a1016a647ffaec215214000fa756bf477a54e7a4",
+      "results/COPOD/public-default/WSD/034_WSD_id_6_WebService_tr_4559_1st_8461/1/anomaly_scores.ts": "a12f8a67f3bc76b649c056437e90f395032e7b7ddbbdd59120112afd6f6471f5",
+      "results/COPOD/public-default/WSD/038_WSD_id_10_WebService_tr_4042_1st_4142/1/anomaly_scores.ts": "28c8a76b523f592d41a62da47eb4a495ff45a504dde575f549c44ab04a2d052b",
+      "results/COPOD/public-default/WSD/057_WSD_id_29_WebService_tr_2229_1st_2329/1/anomaly_scores.ts": "b688d0daebe0d6a2721e2de48fb9cffc78fe5dc3ba721f58e44bc90e634656a6",
+      "results/COPOD/public-default/WSD/066_WSD_id_38_WebService_tr_3320_1st_3420/1/anomaly_scores.ts": "3aadd6d2c5f877c1ffa7bcecc4e790f6ccfdc91a6a6918d0e9e1b6e01a242d64",
+      "results/COPOD/public-default/WSD/071_WSD_id_43_WebService_tr_3387_1st_3487/1/anomaly_scores.ts": "39f3b9593d0bba7e5de4a846c2d0f4f241ee8653351880f7d2e9ec538947e784",
+      "results/COPOD/public-default/WSD/076_WSD_id_48_WebService_tr_3821_1st_7083/1/anomaly_scores.ts": "1e93fcb67fee64f35b3338f47d63f6ff46bcb81a2ae5ccc0e3af7bdbda5d156a",
+      "results/COPOD/public-default/WSD/096_WSD_id_68_WebService_tr_1341_1st_1441/1/anomaly_scores.ts": "d5b9777847c8d17d42a93833b966019242c87a697bc37541d134a6854f520a8e",
+      "results/COPOD/public-default/WSD/101_WSD_id_73_WebService_tr_1513_1st_1613/1/anomaly_scores.ts": "f4a4fbabe8fdb515d7682b143bb76398678d31225c570ee2fdc2210ae0f48a6c",
+      "results/COPOD/public-default/WSD/115_WSD_id_87_WebService_tr_2252_1st_2352/1/anomaly_scores.ts": "1985da5fd03b9d17702426041eadf29161755041f8d2be9beabd768a6b596486",
+      "results/COPOD/public-default/WSD/120_WSD_id_92_WebService_tr_2329_1st_2429/1/anomaly_scores.ts": "30e67a9b07366d220d0626249e2e5432eae7dee98e1add961dca6a490679d4d0",
+      "results/COPOD/public-default/WSD/124_WSD_id_96_WebService_tr_4559_1st_14350/1/anomaly_scores.ts": "6c73df82f2a159c83f0d6c48045a1ef116b58676dce9252b8f3031896f28bffd",
+      "results/COPOD/public-default/WSD/126_WSD_id_98_WebService_tr_657_1st_757/1/anomaly_scores.ts": "77fd761eb82d8b9f0a7150053ce37046eb04d6f49c71a5a9f4a028adb207207e",
+      "results/FFT/public-default/MSL/142_MSL_id_3_Sensor_tr_1525_1st_4575/1/anomaly_scores.ts": "5fbb28b50d2d1e4faa878eae8553d92485e3e7a7def25fdf6b7e21d5a4fc25b5",
+      "results/FFT/public-default/MSL/146_MSL_id_7_Sensor_tr_554_1st_1172/1/anomaly_scores.ts": "a392d60471a21a89cfab21290b1d6af774f04dd4eeba96749889d187d88e20cc",
+      "results/FFT/public-default/Stock/150_Stock_id_2_Finance_tr_500_1st_7/1/anomaly_scores.ts": "e723db124a707ebdefa4854f4da42c747aad035e78ce4ab0d0676eb9701d04b1",
+      "results/FFT/public-default/Stock/152_Stock_id_4_Finance_tr_500_1st_2/1/anomaly_scores.ts": "b6ec5fc91b4f25fcb1e78678542b8773f30bc3fd89164b67614be38beb9160f4",
+      "results/FFT/public-default/Stock/153_Stock_id_5_Finance_tr_500_1st_1/1/anomaly_scores.ts": "3ad26d9099e00edf6c4e4ab7fa6494ad138d7798fffbdf691a8381586765bb7a",
+      "results/FFT/public-default/Stock/154_Stock_id_6_Finance_tr_500_1st_38/1/anomaly_scores.ts": "e418ed3173344b838a999a1fa76d87a6952381c7e023411fc816136aee42e17d",
+      "results/FFT/public-default/Stock/157_Stock_id_9_Finance_tr_500_1st_19/1/anomaly_scores.ts": "d47b8269beea0418fb3ad704bdf88596280deec3d7a6c38eabf5963c2062f4b2",
+      "results/FFT/public-default/Stock/158_Stock_id_10_Finance_tr_500_1st_2/1/anomaly_scores.ts": "261c18480aeef71740fa1c5794ad2941a5d4afe178f8bd0f920fca5d406b75e1",
+      "results/FFT/public-default/Stock/159_Stock_id_11_Finance_tr_500_1st_5/1/anomaly_scores.ts": "2b21ca367c82fc97cf5d50660341e294dc9061084a20bb44b05eb9e9c75d78e8",
+      "results/FFT/public-default/Stock/161_Stock_id_13_Finance_tr_500_1st_3/1/anomaly_scores.ts": "feca861f0b9bd4c090a152277bd3c68534155af77119cd168857d5ef944c7796",
+      "results/FFT/public-default/Stock/163_Stock_id_15_Finance_tr_500_1st_3/1/anomaly_scores.ts": "becc20342a1ed129bbadb5fc26771f83c6d60bb81d5d2d35f14d3a02e4137bae",
+      "results/FFT/public-default/Stock/164_Stock_id_16_Finance_tr_500_1st_8/1/anomaly_scores.ts": "cf83aff59262aa3763be241e83064ef3b523396a12ec8e408f193b7d840bdaf9",
+      "results/FFT/public-default/Stock/167_Stock_id_19_Finance_tr_500_1st_7/1/anomaly_scores.ts": "a6209e1d0ba2727bacac259e5f096ba6d854cdf6de47b58c318af76cff923e6e",
+      "results/FFT/public-default/Stock/168_Stock_id_20_Finance_tr_500_1st_1/1/anomaly_scores.ts": "9ec11d39cdd87e65b85924f873d66613991e1090c30467e75226131856f49614",
+      "results/FFT/public-default/WSD/034_WSD_id_6_WebService_tr_4559_1st_8461/1/anomaly_scores.ts": "e9fe0cb88fc69d73c00c70c6de29a50d2c5a187ddce5c05103fbbeeeff0b6abe",
+      "results/FFT/public-default/WSD/038_WSD_id_10_WebService_tr_4042_1st_4142/1/anomaly_scores.ts": "ccc9788fd053c5c246ddd4bb0df8861003060c3a5b1820128f65f4d45b61f15b",
+      "results/FFT/public-default/WSD/057_WSD_id_29_WebService_tr_2229_1st_2329/1/anomaly_scores.ts": "d3f249b4473af3f2bc43c9eab9e2630f81457f216f7fb0337d8433b4749ca4cf",
+      "results/FFT/public-default/WSD/066_WSD_id_38_WebService_tr_3320_1st_3420/1/anomaly_scores.ts": "4313863b39b449fbb0fde8e01c2c9ae8e6eda307230dd5c8c1436bd4a00c96e4",
+      "results/FFT/public-default/WSD/071_WSD_id_43_WebService_tr_3387_1st_3487/1/anomaly_scores.ts": "77bf77a4867a1c9ba41d243119d043e979efb295a97d3d05469f0b89a6ac7db3",
+      "results/FFT/public-default/WSD/076_WSD_id_48_WebService_tr_3821_1st_7083/1/anomaly_scores.ts": "c458ce8a798121c90319195d8ce0ee591bf1021432b8049acec2f728b4584169",
+      "results/FFT/public-default/WSD/096_WSD_id_68_WebService_tr_1341_1st_1441/1/anomaly_scores.ts": "07137022f2e7b6c56d55abe6365589a6edffd4001395339dc2e786b8101f439e",
+      "results/FFT/public-default/WSD/101_WSD_id_73_WebService_tr_1513_1st_1613/1/anomaly_scores.ts": "842b89b3282183d9e3892515ca16cca41b9c6ea1ee236528f51bb8dde192905b",
+      "results/FFT/public-default/WSD/115_WSD_id_87_WebService_tr_2252_1st_2352/1/anomaly_scores.ts": "3167f258f9bc4ccb0ca363eeac53285bd616d6b5b174cec45e8c48762a851b40",
+      "results/FFT/public-default/WSD/120_WSD_id_92_WebService_tr_2329_1st_2429/1/anomaly_scores.ts": "06e29ad537f9da9d5cf499af9e291a65235eca6b14a36df193182dc6ff35f502",
+      "results/FFT/public-default/WSD/124_WSD_id_96_WebService_tr_4559_1st_14350/1/anomaly_scores.ts": "84b666869c8c15bc1070aba1ba6831bc5e0b6a5f29f674186ea687fa93e78cce",
+      "results/FFT/public-default/WSD/126_WSD_id_98_WebService_tr_657_1st_757/1/anomaly_scores.ts": "a93dbe7cead8abe9f75230a4afd7585dcd5d35f3f4e4aa46d395aed9ba5f921c",
+      "results/results.csv": "dac3a2a0bff5b5fa00ffe288444b1650fb10041c7da3d4a61ce5320dc5c72b58"
+    },
+    "workload_receipts": {
+      "generation": {
+        "path": "/Users/gosmain/Documents/GitHub/sparse-vus-saturation/artifacts/pvldb-research-20261024/strengthening/workload-generation.json",
+        "sha256": "4177f82b6bfe404f82439d75b749adb16b21a416321425326da2611115f02568"
+      },
+      "native_input_audit": {
+        "path": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-workload/native-input-audit.json",
+        "sha256": "f906252900d53e74b3479a04fd600f0475a7061dda07c3f366bb64ff273069c6"
+      }
+    },
+    "project_sha256": {
+      "scripts/run_timeeval_strengthening.py": "577b710f3df7fe499e3f361e4580eb08c6525ff422a05048ed779595117b5fa6",
+      "src/sparse_vus/timeeval_adapter.py": "85fb5bca5d5c98a36f08e0f9c29cf96dfa16f02f322576cb792aecc1228a0df1",
+      "src/sparse_vus/weighted_range.py": "95ef1ba243ad5ca34ba50ab027237a465a63544f12ce13c07a8513e56b29c338",
+      "src/sparse_vus/range_sweep.py": "2e75e1afd2b86d4450afc43aaba3a892fd998f4fd5cfe7edda2b155bba479ccb",
+      "src/sparse_vus/__init__.py": "59eebc3b776cce8eb1d67b846964e50389515a6b95dcf3054664dbeee06c61d1",
+      "src/sparse_vus/core.py": "f7e227f3bfea58c72da8feba0c7daa36460695db8ab10106706f845d45374e2b",
+      "scripts/run_timeeval_interval_control.py": "5c737d9a4408758b8b86a2a8ed5de01fcd732ea358f7ee1c87233e0966e74635",
+      "src/sparse_vus/weighted_range_control.py": "4a00a5f9a5ae6ec78307f988e8d98c14c7019164be8291aa6cd0d883d963bf41",
+      "src/sparse_vus/timeeval_interval_adapter.py": "4c70bdc0fa41895c9c4c572fff55cb36bdd5589d608463b5c264f0f8ae73c92f",
+      "experiments/audit_timeeval_strengthening.py": "71541c663d62052bb781d84825ce3002ea9e9d9214c81a3cf764eb5419a31f78",
+      "experiments/audit_timeeval_interval_control.py": "d551bbdde42558e428d306c684710bc52b195c530bf3dbbaa9e34015778fc0e8"
+    },
+    "prts_directory": "/Users/gosmain/Documents/GitHub/sparse-vus/.cache/strengthening-env/lib/python3.11/site-packages/prts",
+    "prts_sha256": {
+      "__init__.py": "97b2d1c0dde851f875171fd304923e7914ff64c9be2c4af3d7752bc5ece914ed",
+      "base/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base/time_series_metrics.py": "9e029a3fff08c2603a1b30e5198484df6c833688fbc2637dae007e11e2b0bc6d",
+      "time_series_metrics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "time_series_metrics/fscore.py": "727cd48337c66eb08895c2788bed4a64b76ad974a97e6f420a531a8e6db04612",
+      "time_series_metrics/precision.py": "95b774bc8d79c8a9076a8be15c9f697eb0e1524343d3678ee60d2ab9559aff12",
+      "time_series_metrics/precision_recall.py": "3a15094a6fc8ed567f817fd24a0f00614ab7fcd5bdacc232ee5015b27385c384",
+      "time_series_metrics/recall.py": "0f9864a1c24ab1567453be0e09dec263797a1b8b98aff2c6881cc1a95061da26"
+    },
+    "python_version": "3.11.9",
+    "dependencies": {
+      "timeeval": "1.5.0",
+      "prts": "1.0.0.3",
+      "numpy": "1.26.4",
+      "scipy": "1.14.1",
+      "scikit-learn": "1.5.2",
+      "pandas": "2.2.3",
+      "numba": "0.59.1",
+      "llvmlite": "0.42.0",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.7.0",
+      "dask": "2022.12.1",
+      "distributed": "2022.12.1",
+      "multiprocessing_logging": "0.4.0",
+      "tqdm": "4.70.1"
+    },
+    "batches": [
+      {
+        "name": "combined",
+        "families": [
+          "MSL",
+          "Stock",
+          "WSD"
+        ],
+        "row_count": 52,
+        "query_counts": {
+          "native_default50": {
+            "total": 2776,
+            "minimum": 2,
+            "maximum": 90
+          },
+          "all_observed": {
+            "total": 71749,
+            "minimum": 2,
+            "maximum": 5819
+          }
+        }
+      },
+      {
+        "name": "family-0-MSL",
+        "families": [
+          "MSL"
+        ],
+        "row_count": 4,
+        "query_counts": {
+          "native_default50": {
+            "total": 97,
+            "minimum": 2,
+            "maximum": 52
+          },
+          "all_observed": {
+            "total": 655,
+            "minimum": 2,
+            "maximum": 610
+          }
+        }
+      },
+      {
+        "name": "family-1-Stock",
+        "families": [
+          "Stock"
+        ],
+        "row_count": 24,
+        "query_counts": {
+          "native_default50": {
+            "total": 1282,
+            "minimum": 50,
+            "maximum": 66
+          },
+          "all_observed": {
+            "total": 44059,
+            "minimum": 194,
+            "maximum": 5094
+          }
+        }
+      },
+      {
+        "name": "family-2-WSD",
+        "families": [
+          "WSD"
+        ],
+        "row_count": 24,
+        "query_counts": {
+          "native_default50": {
+            "total": 1397,
+            "minimum": 51,
+            "maximum": 90
+          },
+          "all_observed": {
+            "total": 27035,
+            "minimum": 63,
+            "maximum": 5819
+          }
+        }
+      }
+    ],
+    "query_plan": [
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "repetition": "1",
+        "n": 10744,
+        "distinct_scores": 91,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 90,
+            "thresholds_binary64_le_sha256": "a314bca0c96adfd191f80de2efcb474811953c1a2a99d847ab1bb843c67fa566"
+          },
+          "all_observed": {
+            "emitted_queries": 90,
+            "thresholds_binary64_le_sha256": "a314bca0c96adfd191f80de2efcb474811953c1a2a99d847ab1bb843c67fa566"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "repetition": "1",
+        "n": 10744,
+        "distinct_scores": 2337,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "e72d613ece2d720d6ab337f0ffc699ee64256759cc8de6e85a9caac77495581a"
+          },
+          "all_observed": {
+            "emitted_queries": 2336,
+            "thresholds_binary64_le_sha256": "8cfbabbfa101896534b9f6d0a0c0f4cafc45fdadbfe9ccd3b932bd77cb8e851a"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "repetition": "1",
+        "n": 15285,
+        "distinct_scores": 219,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 56,
+            "thresholds_binary64_le_sha256": "0c0bd5ac2e9054fb3f10f5013a6746e85738a57985fe4500ce52d72e9dc99587"
+          },
+          "all_observed": {
+            "emitted_queries": 218,
+            "thresholds_binary64_le_sha256": "110664e39d362eebe35ac1452cfda39a100fa60701245b19e81bd665c9e0ebe0"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "repetition": "1",
+        "n": 15285,
+        "distinct_scores": 134,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 67,
+            "thresholds_binary64_le_sha256": "3cf35723481b0ec9aac6149cd651fddef05b9a414730d70613da1a3805317829"
+          },
+          "all_observed": {
+            "emitted_queries": 133,
+            "thresholds_binary64_le_sha256": "8aace4c3c2c0eb6ffaec3328e94cbe57d3a7db0e5a6ee0970ee756533746df7d"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "repetition": "1",
+        "n": 17438,
+        "distinct_scores": 224,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 57,
+            "thresholds_binary64_le_sha256": "22944ce77bb189b52ef66ff17ddbc2810750cebb91e9704e85a1fd7482da4874"
+          },
+          "all_observed": {
+            "emitted_queries": 223,
+            "thresholds_binary64_le_sha256": "ee5a63ec5a84f507afe6cd30fbc2747b4145c6062ac8faf621a6b5919142619a"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "repetition": "1",
+        "n": 17438,
+        "distinct_scores": 2785,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "d6a06061291589cd4f6078cbc646bf14fe8ba443215284ab32ba07f04a7afd91"
+          },
+          "all_observed": {
+            "emitted_queries": 2784,
+            "thresholds_binary64_le_sha256": "e2e1279ba24bf7b3154e3d05abdd7777857585806bcba8c85f0cb025f53cf25a"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "repetition": "1",
+        "n": 18084,
+        "distinct_scores": 287,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 58,
+            "thresholds_binary64_le_sha256": "c9486651080a81e218f345284b093e1100d1fa6caf0d255b41ae1c3b501b4120"
+          },
+          "all_observed": {
+            "emitted_queries": 286,
+            "thresholds_binary64_le_sha256": "7127916acf76c5782fa25aa208419c3a18c516627ea04e489a369716187204e4"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "repetition": "1",
+        "n": 18084,
+        "distinct_scores": 1660,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 52,
+            "thresholds_binary64_le_sha256": "bb0f884d6dd6f364cbf4e0defe512346afe3bb63908fb9e1a3a91ff47ccb2801"
+          },
+          "all_observed": {
+            "emitted_queries": 1659,
+            "thresholds_binary64_le_sha256": "c9e03fc420330f478488a7bd7e2a6cf34abf4e09cf758ee688923705636171d1"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "repetition": "1",
+        "n": 18214,
+        "distinct_scores": 258,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 53,
+            "thresholds_binary64_le_sha256": "c82a7c072753782b27fbda1bed6b4d040c60fa46b6d79c0303b031702c98a79a"
+          },
+          "all_observed": {
+            "emitted_queries": 257,
+            "thresholds_binary64_le_sha256": "bb5d24de3b8fb6833f579b8fdda68eda1d3bc41e1d1e0bf99d51170ee6571f8c"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "repetition": "1",
+        "n": 18214,
+        "distinct_scores": 1907,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 52,
+            "thresholds_binary64_le_sha256": "d63fa298f022d6220d75f1469c34a26c0d5969ce7b4ecb6841ecabfe49610581"
+          },
+          "all_observed": {
+            "emitted_queries": 1906,
+            "thresholds_binary64_le_sha256": "bac11f716f1091be1c3876b68b06dbfb799354d86da385c60b293bf588e4870a"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 338,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 57,
+            "thresholds_binary64_le_sha256": "c962833a5b59930faea5e9fe1d75e5810f8aa97f75a3b0b0025046f6f50c2888"
+          },
+          "all_observed": {
+            "emitted_queries": 337,
+            "thresholds_binary64_le_sha256": "51c9c374e20aac667f129b97eb13c97022622907f3296e76df9179868a809b7a"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 1686,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "9bee1aa4fdc6bb2932c11fd135c5d441de8418172278656f8191547cbda7bf78"
+          },
+          "all_observed": {
+            "emitted_queries": 1685,
+            "thresholds_binary64_le_sha256": "a8bd5a5da4dd94ea13ca05efe39d190dbd78840ba6c501106e03218c295023a0"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 380,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 55,
+            "thresholds_binary64_le_sha256": "afd5f741dbbff1e9cd663c881b8d807baae6fdaa4d683df87eab83d96d300f40"
+          },
+          "all_observed": {
+            "emitted_queries": 379,
+            "thresholds_binary64_le_sha256": "fad62d4659ecffb6b88eba0c2951d56e4ed845c0a024d4773cefca51cd4f7c86"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 266,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 54,
+            "thresholds_binary64_le_sha256": "d33812b0adc522a8fd7059970b161979bd046218ade03886e81004e33e9b6685"
+          },
+          "all_observed": {
+            "emitted_queries": 265,
+            "thresholds_binary64_le_sha256": "7073a3768627c6821e4793914e89b66af04605c31db37abb23bdedaf034c5fb4"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 75,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 74,
+            "thresholds_binary64_le_sha256": "8e4428904c504e5711bc685360b742c57e2294d5c63d14b94ce19b0b912e9a62"
+          },
+          "all_observed": {
+            "emitted_queries": 74,
+            "thresholds_binary64_le_sha256": "8e4428904c504e5711bc685360b742c57e2294d5c63d14b94ce19b0b912e9a62"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 5820,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "56be7330dd94ae554fbffbbe24bf396916ff59de6b78d1e0935b3e30c914b1dc"
+          },
+          "all_observed": {
+            "emitted_queries": 5819,
+            "thresholds_binary64_le_sha256": "9bba3b8452a8f85109e643931f688334e361969e741611a3ec56e9e9f5151187"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 77,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 76,
+            "thresholds_binary64_le_sha256": "69d28f75f5162d7cc53c079f907a5897b4cba346a85a17f27d46c5a203200198"
+          },
+          "all_observed": {
+            "emitted_queries": 76,
+            "thresholds_binary64_le_sha256": "69d28f75f5162d7cc53c079f907a5897b4cba346a85a17f27d46c5a203200198"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 4995,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "1aa1992c1fe917b424bd3673af996666f14518cd8aeaae399382f1f8ed8c86d5"
+          },
+          "all_observed": {
+            "emitted_queries": 4994,
+            "thresholds_binary64_le_sha256": "23a22381945f58e82a731eae77674021d93fd2aed97c453ea549c9133732a310"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 184,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 62,
+            "thresholds_binary64_le_sha256": "b67ef2757bc272f53df0ea4029876f522b7fcc537412e08a31b92512a6b16165"
+          },
+          "all_observed": {
+            "emitted_queries": 183,
+            "thresholds_binary64_le_sha256": "cd12bf1d954c934b6197f9ac4e0cb3c781a55ed91663d224ee3cc2b26c869ea9"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "repetition": "1",
+        "n": 18236,
+        "distinct_scores": 576,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 54,
+            "thresholds_binary64_le_sha256": "1ba488f94d6a887bfb69813d93e40d9a23f717af61caf2250ad6955fc9b89d7f"
+          },
+          "all_observed": {
+            "emitted_queries": 575,
+            "thresholds_binary64_le_sha256": "2a00117bfaba7e958f23aafa132cd46de1de54899eb702c4fc2a7895037d4571"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "repetition": "1",
+        "n": 18302,
+        "distinct_scores": 290,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 59,
+            "thresholds_binary64_le_sha256": "9273eb0942b08444770ef51f11248b155bb5f0f7d61090b58db450227f503fff"
+          },
+          "all_observed": {
+            "emitted_queries": 289,
+            "thresholds_binary64_le_sha256": "3f5bf6ede44ef4ea22c40761769bef0f2918d9841d77e5aa5c03e91404c5baf9"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "repetition": "1",
+        "n": 18302,
+        "distinct_scores": 2104,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 52,
+            "thresholds_binary64_le_sha256": "e7c69872dd845e2a4057a5cfbf903f5fca02084251eaa410c48957b2364f9acc"
+          },
+          "all_observed": {
+            "emitted_queries": 2103,
+            "thresholds_binary64_le_sha256": "391dc55e1576320ecbaa074dbc07ff9db607468d646549f7029672adf1ca6715"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "126_WSD_id_98_WebService_tr_657_1st_757",
+        "repetition": "1",
+        "n": 18883,
+        "distinct_scores": 64,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 63,
+            "thresholds_binary64_le_sha256": "50d624d2bb838b6ed9a90e5ec17297e38a887419a28bfdfb12f56528dbffd7ea"
+          },
+          "all_observed": {
+            "emitted_queries": 63,
+            "thresholds_binary64_le_sha256": "50d624d2bb838b6ed9a90e5ec17297e38a887419a28bfdfb12f56528dbffd7ea"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "WSD",
+        "dataset": "126_WSD_id_98_WebService_tr_657_1st_757",
+        "repetition": "1",
+        "n": 18883,
+        "distinct_scores": 302,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "003a6bcde1f5c99fabd041ac5c7a13642feddad3614663972d20883303caf0da"
+          },
+          "all_observed": {
+            "emitted_queries": 301,
+            "thresholds_binary64_le_sha256": "7b6c3e6efc2dcb29c5143b7d2a2049e039ec8e4f096c7f05e7b7a3cb4ace1d03"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "150_Stock_id_2_Finance_tr_500_1st_7",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 230,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 58,
+            "thresholds_binary64_le_sha256": "278efc7c92e3ebd4ee0c00c775c0c95aea66ca00149ecc26a149a40370d86e89"
+          },
+          "all_observed": {
+            "emitted_queries": 229,
+            "thresholds_binary64_le_sha256": "7bf906b1b8ecaa8127f1022a0d67792121936e02f599920504e69f15c20e7868"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "150_Stock_id_2_Finance_tr_500_1st_7",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 3074,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "9b7381d46b19419744ad2b447be05481607b658e1e464a3a2f6b9580bebe1935"
+          },
+          "all_observed": {
+            "emitted_queries": 3073,
+            "thresholds_binary64_le_sha256": "efce8455ab72e09c2b2c6ecd451cbeae88b60a131ad8c2dd3384bde0f0e2a8c8"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "153_Stock_id_5_Finance_tr_500_1st_1",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 214,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 54,
+            "thresholds_binary64_le_sha256": "d224b189514f0d6e48e27f8387d9c6676169f5239509425f78281ecc5762fb4a"
+          },
+          "all_observed": {
+            "emitted_queries": 213,
+            "thresholds_binary64_le_sha256": "b0e15ffd929232f2ddbd643932e7ece615db7e5ab706a9c300fac7b0099982d5"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "153_Stock_id_5_Finance_tr_500_1st_1",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 2184,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "f81b2ed3c676784bfd3088783b49f5134b3e524dd84d180bb4c17c69000e87a5"
+          },
+          "all_observed": {
+            "emitted_queries": 2183,
+            "thresholds_binary64_le_sha256": "e80c7c1c36f90e84f94404b85d8d8fce4358bc1cb3f0b950fc7ec14bcc3cc92b"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "157_Stock_id_9_Finance_tr_500_1st_19",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 239,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 61,
+            "thresholds_binary64_le_sha256": "d5a35f30b90b91fc9f8bf06cc362a3520fc932947b06933e81f1928e5ceb4c4e"
+          },
+          "all_observed": {
+            "emitted_queries": 238,
+            "thresholds_binary64_le_sha256": "ca0fa4abf00849521c9c7dde94ca579648c6fbc2fe33bd5b98b176baafb0bb16"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "157_Stock_id_9_Finance_tr_500_1st_19",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 3038,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "f0f2599d076abcb93ea37ec2c2c64d8837b4b5fafd97adc84b3128338e116312"
+          },
+          "all_observed": {
+            "emitted_queries": 3037,
+            "thresholds_binary64_le_sha256": "95210fc0af3f39702aecec10dcea144298de90102454cd9346b9dcc9dc2b48ce"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "161_Stock_id_13_Finance_tr_500_1st_3",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 195,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 66,
+            "thresholds_binary64_le_sha256": "ca330443570283cc3be4c9628618b46a4ada14b959bed9f03c6f951012a8159f"
+          },
+          "all_observed": {
+            "emitted_queries": 194,
+            "thresholds_binary64_le_sha256": "a742ae2a09554a77b26afc597ce209623fb69afdfeac613737f583ac6fb21774"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "161_Stock_id_13_Finance_tr_500_1st_3",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 2197,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "5a7f049e7ea78a01913f65db84ea3e6314bda0dbf8cf9dd8a6023f88b9284ec8"
+          },
+          "all_observed": {
+            "emitted_queries": 2196,
+            "thresholds_binary64_le_sha256": "05174f673f21e23441959ffb7525f76a5f7499f1f8c4f33b3d46fb4539abeccc"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "163_Stock_id_15_Finance_tr_500_1st_3",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 247,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 50,
+            "thresholds_binary64_le_sha256": "2403fa3740062edb8cf51724c6e90d789b2320c3c97f9a2aa4aace6e45735266"
+          },
+          "all_observed": {
+            "emitted_queries": 246,
+            "thresholds_binary64_le_sha256": "1a124b09fcd18ee0890adfc477db8b033e132ce88c789980e2016e21e91b0993"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "163_Stock_id_15_Finance_tr_500_1st_3",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 3052,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "00a67b94b75a70c0ed07bfb72f1ab4308b74bbc06b11de21f9dca724d39ad2bf"
+          },
+          "all_observed": {
+            "emitted_queries": 3051,
+            "thresholds_binary64_le_sha256": "dc33fc5185d2d5df2a45a0f92ee9f4af129e07331d7ee516930a1731a3a6f65b"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "167_Stock_id_19_Finance_tr_500_1st_7",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 205,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 52,
+            "thresholds_binary64_le_sha256": "df6d5b5ef8b1c2cd63499c47b5881deaf9daa0585a8ed21c18066ad6b251b395"
+          },
+          "all_observed": {
+            "emitted_queries": 204,
+            "thresholds_binary64_le_sha256": "b31b6cf8c3c8f2554b95b3864382719f2874757e5d123e28a5ec2fe8e277a46d"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "167_Stock_id_19_Finance_tr_500_1st_7",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 2187,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "f5abc40c12d45c1e3067302456f947dbfd88a2111eafd11a3e8480c9c94e76b2"
+          },
+          "all_observed": {
+            "emitted_queries": 2186,
+            "thresholds_binary64_le_sha256": "2290048efd5ba1206358691d2f1345187f21dff1636aec19bb7523d19b2af324"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "168_Stock_id_20_Finance_tr_500_1st_1",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 227,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 58,
+            "thresholds_binary64_le_sha256": "5428cc2ec6ab15d367ce5be69295e99a6c04bf994f4351a868987eeab5e3b1dc"
+          },
+          "all_observed": {
+            "emitted_queries": 226,
+            "thresholds_binary64_le_sha256": "69de3c47aa6ed6774447a24e2370ec11834cda4a32f4841a2b6eb436d088b564"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "168_Stock_id_20_Finance_tr_500_1st_1",
+        "repetition": "1",
+        "n": 10000,
+        "distinct_scores": 3044,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "ffe20580f431de0344b757e053863dd220c8600830e18233af8050970641323d"
+          },
+          "all_observed": {
+            "emitted_queries": 3043,
+            "thresholds_binary64_le_sha256": "58d1e386de3128c7ad41bc66406160ac20ca4c4425309564c250432b04276808"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "152_Stock_id_4_Finance_tr_500_1st_2",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 451,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "82e95220fc926e965eb07837b2cebe941ffadd50b657578986dcce82eaecc108"
+          },
+          "all_observed": {
+            "emitted_queries": 450,
+            "thresholds_binary64_le_sha256": "6de4d552984e5a45d166b5bbcc5d150f080aeb3982cde0cfd4257b7a8e0e908f"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "152_Stock_id_4_Finance_tr_500_1st_2",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 5095,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "b3b9909114ea7fe88c4a13049482506814dbb20e668c58299f3646dd4567c8aa"
+          },
+          "all_observed": {
+            "emitted_queries": 5094,
+            "thresholds_binary64_le_sha256": "7db526bcd90aab14c2c501b5b6b022164689f793fe4c5d82d927dcae87fc5fc2"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "154_Stock_id_6_Finance_tr_500_1st_38",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 245,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 62,
+            "thresholds_binary64_le_sha256": "723f7a24a5d87f6b642667321d9204e336c49f892f5a5c9c36e1dca888fc6237"
+          },
+          "all_observed": {
+            "emitted_queries": 244,
+            "thresholds_binary64_le_sha256": "c9812db0350b56b42b32cb9870c5f040e50d2094413d83c6f407b6f45076ec5d"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "154_Stock_id_6_Finance_tr_500_1st_38",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 3318,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "0017d03788f245e53176b3c9baa3facd03d39f5352ff0ff0f6ad0bf33c084b71"
+          },
+          "all_observed": {
+            "emitted_queries": 3317,
+            "thresholds_binary64_le_sha256": "e2d563d73635c49de1a2a1f3892d85103c29ac9262b99547636ab4351cb7b8bd"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "158_Stock_id_10_Finance_tr_500_1st_2",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 250,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "485c9f4b10308ddd99b20f700e9b3703154accacf9501bb0f661b3aab5fe3d0f"
+          },
+          "all_observed": {
+            "emitted_queries": 249,
+            "thresholds_binary64_le_sha256": "bb43cad7c9170a035ceaf202aa5ca92a317c325b49459eb4ee5c733e658a78b7"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "158_Stock_id_10_Finance_tr_500_1st_2",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 3318,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "00b8a2c507222c3484eb4905e49bcbac641a975bd2b3804bc43df116f61d587e"
+          },
+          "all_observed": {
+            "emitted_queries": 3317,
+            "thresholds_binary64_le_sha256": "57f961fb87e25e3d8d09d04182917dcf492af3479fa3a1b2bc2dbcde233e69d2"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "159_Stock_id_11_Finance_tr_500_1st_5",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 465,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 53,
+            "thresholds_binary64_le_sha256": "a8c8ce0e171c3fefda46099f71ceeabafa9a45f758fc8d9c8150ed46920a6c8b"
+          },
+          "all_observed": {
+            "emitted_queries": 464,
+            "thresholds_binary64_le_sha256": "8b13c8489a6d9383f86f14102ef7737c94ed0a0af3ae48e7081fe9cf524c7850"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "159_Stock_id_11_Finance_tr_500_1st_5",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 5084,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "7f1603469f8be2a9b0f0c9eeb7e20cf972a394aa56244032caf4d90506472c8e"
+          },
+          "all_observed": {
+            "emitted_queries": 5083,
+            "thresholds_binary64_le_sha256": "b65bd14a2cd5f4d90bc57ffca32e99c200f362911f241297ef53e3625090c0a2"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "164_Stock_id_16_Finance_tr_500_1st_8",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 473,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 54,
+            "thresholds_binary64_le_sha256": "27cad3e64e2b3c2d325da413fb88bdde86ce642cf1813455827dc9bb0e74748d"
+          },
+          "all_observed": {
+            "emitted_queries": 472,
+            "thresholds_binary64_le_sha256": "269cf156109041520e3e391dfe16cd8c6d76417581ee7dd2630cc4efb18b8754"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "Stock",
+        "dataset": "164_Stock_id_16_Finance_tr_500_1st_8",
+        "repetition": "1",
+        "n": 20000,
+        "distinct_scores": 5051,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 51,
+            "thresholds_binary64_le_sha256": "88618959f21bcffedc04c0b9b43e96c0ff9764c65628108ccccdd6b6eae52d5d"
+          },
+          "all_observed": {
+            "emitted_queries": 5050,
+            "thresholds_binary64_le_sha256": "bfca7a1d7e0823f08412604a1c445c6bcde7212ede45dbe40b5dcb251de80d5f"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "MSL",
+        "dataset": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+        "repetition": "1",
+        "n": 2217,
+        "distinct_scores": 39,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 38,
+            "thresholds_binary64_le_sha256": "448513f7e7937192ac4168193deb0d0586822dcd80ddd9313f033d5d71a4612a"
+          },
+          "all_observed": {
+            "emitted_queries": 38,
+            "thresholds_binary64_le_sha256": "448513f7e7937192ac4168193deb0d0586822dcd80ddd9313f033d5d71a4612a"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "MSL",
+        "dataset": "146_MSL_id_7_Sensor_tr_554_1st_1172",
+        "repetition": "1",
+        "n": 2217,
+        "distinct_scores": 3,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 2,
+            "thresholds_binary64_le_sha256": "784bdf01f89260d80b12ceb36bbeb1baa3e4dd8e350fdab6554d0393fe0703fc"
+          },
+          "all_observed": {
+            "emitted_queries": 2,
+            "thresholds_binary64_le_sha256": "784bdf01f89260d80b12ceb36bbeb1baa3e4dd8e350fdab6554d0393fe0703fc"
+          }
+        }
+      },
+      {
+        "algorithm": "FFT",
+        "hyper_params_id": "public-default",
+        "collection": "MSL",
+        "dataset": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "repetition": "1",
+        "n": 6100,
+        "distinct_scores": 6,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 5,
+            "thresholds_binary64_le_sha256": "18c046f5d0ece508e494c491b2d0c63936106db474ddb403a97926caef27f120"
+          },
+          "all_observed": {
+            "emitted_queries": 5,
+            "thresholds_binary64_le_sha256": "18c046f5d0ece508e494c491b2d0c63936106db474ddb403a97926caef27f120"
+          }
+        }
+      },
+      {
+        "algorithm": "COPOD",
+        "hyper_params_id": "public-default",
+        "collection": "MSL",
+        "dataset": "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "repetition": "1",
+        "n": 6100,
+        "distinct_scores": 611,
+        "constant_score_shortcut": false,
+        "contracts": {
+          "native_default50": {
+            "emitted_queries": 52,
+            "thresholds_binary64_le_sha256": "6fbea1993910a9771cef2710fee225e10acd8d3bea07232cbace8ed9ace43873"
+          },
+          "all_observed": {
+            "emitted_queries": 610,
+            "thresholds_binary64_le_sha256": "da1b50322b5fac664585c23cc90752a7da1e34ab58157ec2c49805fc47a7dd8a"
+          }
+        }
+      }
+    ],
+    "design": {
+      "metrics": [
+        "ROC_AUC",
+        "PR_AUC",
+        "RANGE_PR_AUC"
+      ],
+      "methods": [
+        "raster",
+        "interval",
+        "bucket"
+      ],
+      "contracts": {
+        "native_default50": {
+          "max_samples": 50,
+          "r_alpha": 0,
+          "p_alpha": 0,
+          "cardinality": "one",
+          "bias": "flat"
+        },
+        "all_observed": {
+          "max_samples": "positive_infinity",
+          "r_alpha": 0,
+          "p_alpha": 0,
+          "cardinality": "one",
+          "bias": "flat"
+        }
+      },
+      "orders": [
+        [
+          "raster",
+          "interval",
+          "bucket"
+        ],
+        [
+          "raster",
+          "bucket",
+          "interval"
+        ],
+        [
+          "interval",
+          "raster",
+          "bucket"
+        ],
+        [
+          "interval",
+          "bucket",
+          "raster"
+        ],
+        [
+          "bucket",
+          "raster",
+          "interval"
+        ],
+        [
+          "bucket",
+          "interval",
+          "raster"
+        ]
+      ],
+      "n_jobs": 1,
+      "numerical_threads": 1,
+      "atol": 1e-10,
+      "rtol": 0,
+      "workflow_timeout_seconds": 600,
+      "censor_rule": "After first timeout for a method/contract/batch, mark all remaining attempts for that key notrun_due_to_prespecified_censor; do not replace inputs. Other keys continue.",
+      "timed": "Native MetricComputor constructor plus recompute(True), including dataset/results/score/optional-metrics CSV reads, default three metrics, final results.csv write/close, and one wall-clock deadline arming call. Deadline-handler setup and cleanup are outside the interval.",
+      "excluded": "Imports, source/input hash audits, environment/log setup, metric-object creation, tiny JIT warmup, trial-template copying/filtering, post-run parity audit and summaries. No cold-disk/fsync/training claim.",
+      "all_observed_semantics": "Native unique-score queries except the minimum, native synthetic first/last points, >= eligibility, lexsort and trapezoidal integration; only max_samples is configured to infinity.",
+      "query_accounting": "Read-only native score distinct counts and exact source-sampler query counts are frozen per profile/contract. max_samples=50 is nominal, not a hard cap. Constant-score profiles would use the native zero shortcut without curve evaluation.",
+      "uncertainty": "Six paired orders of fixed workloads; approximate paired-order bootstrap intervals describe execution variability and order sensitivity, not recording or deployment populations. No cross-contract speed ratios. No interval without all six completed matched pairs.",
+      "bootstrap": {
+        "samples": 10000,
+        "seed": 20261024
+      },
+      "order_of_work": "contracts in declared order, combined batch then sorted families, six method permutations per batch",
+      "study_kind": "compiled_interval_control",
+      "comparison_pairs": [
+        [
+          "interval",
+          "bucket"
+        ],
+        [
+          "raster",
+          "bucket"
+        ],
+        [
+          "raster",
+          "interval"
+        ]
+      ],
+      "public_reference_evaluated": false,
+      "comparison_scope": "Supplemental comparison of three compiled implementations on the same native default-three-metric recalculation. The interval method rebuilds predicted runs and traverses ordered interval overlaps with closed-form positional masses for every query. Raster and bucket are the frozen compiled controls. The public range method is not executed or relabeled; native ROC_AUC and PR_AUC remain unchanged.",
+      "output_parity_scope": "All completed compiled outputs are compared within the same contract and batch at absolute tolerance 1e-10. Public-reference flags retained by the original orchestration are always false. This supplemental study alone supplies no public-implementation parity evidence."
+    },
+    "row_ids": [
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "096_WSD_id_68_WebService_tr_1341_1st_1441",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "076_WSD_id_48_WebService_tr_3821_1st_7083",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "120_WSD_id_92_WebService_tr_2329_1st_2429",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "038_WSD_id_10_WebService_tr_4042_1st_4142",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "115_WSD_id_87_WebService_tr_2252_1st_2352",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "034_WSD_id_6_WebService_tr_4559_1st_8461",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "057_WSD_id_29_WebService_tr_2229_1st_2329",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "071_WSD_id_43_WebService_tr_3387_1st_3487",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "101_WSD_id_73_WebService_tr_1513_1st_1613",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "124_WSD_id_96_WebService_tr_4559_1st_14350",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "066_WSD_id_38_WebService_tr_3320_1st_3420",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "WSD",
+        "126_WSD_id_98_WebService_tr_657_1st_757",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "WSD",
+        "126_WSD_id_98_WebService_tr_657_1st_757",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "150_Stock_id_2_Finance_tr_500_1st_7",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "150_Stock_id_2_Finance_tr_500_1st_7",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "153_Stock_id_5_Finance_tr_500_1st_1",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "153_Stock_id_5_Finance_tr_500_1st_1",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "157_Stock_id_9_Finance_tr_500_1st_19",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "157_Stock_id_9_Finance_tr_500_1st_19",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "161_Stock_id_13_Finance_tr_500_1st_3",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "161_Stock_id_13_Finance_tr_500_1st_3",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "163_Stock_id_15_Finance_tr_500_1st_3",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "163_Stock_id_15_Finance_tr_500_1st_3",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "167_Stock_id_19_Finance_tr_500_1st_7",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "167_Stock_id_19_Finance_tr_500_1st_7",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "168_Stock_id_20_Finance_tr_500_1st_1",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "168_Stock_id_20_Finance_tr_500_1st_1",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "152_Stock_id_4_Finance_tr_500_1st_2",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "152_Stock_id_4_Finance_tr_500_1st_2",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "154_Stock_id_6_Finance_tr_500_1st_38",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "154_Stock_id_6_Finance_tr_500_1st_38",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "158_Stock_id_10_Finance_tr_500_1st_2",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "158_Stock_id_10_Finance_tr_500_1st_2",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "159_Stock_id_11_Finance_tr_500_1st_5",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "159_Stock_id_11_Finance_tr_500_1st_5",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "Stock",
+        "164_Stock_id_16_Finance_tr_500_1st_8",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "Stock",
+        "164_Stock_id_16_Finance_tr_500_1st_8",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "MSL",
+        "146_MSL_id_7_Sensor_tr_554_1st_1172",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "MSL",
+        "146_MSL_id_7_Sensor_tr_554_1st_1172",
+        "1"
+      ],
+      [
+        "FFT",
+        "public-default",
+        "MSL",
+        "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "1"
+      ],
+      [
+        "COPOD",
+        "public-default",
+        "MSL",
+        "142_MSL_id_3_Sensor_tr_1525_1st_4575",
+        "1"
+      ]
+    ],
+    "records": 52,
+    "timing_or_metric_outcomes_consumed": false
+  }
+}
