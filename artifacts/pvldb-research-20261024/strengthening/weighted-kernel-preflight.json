@@ -1,0 +1,14 @@
+{
+  "status": "KERNEL_PREFLIGHT_PASSED",
+  "utc": "2026-10-24T07:52:35.643400+00:00",
+  "kernel_sha256": "95ef1ba243ad5ca34ba50ab027237a465a63544f12ce13c07a8513e56b29c338",
+  "command": "PYTHONPATH=.cache/pvldb-consumer-deps:src /opt/anaconda3/bin/python -m pytest tests/test_weighted_range.py -q",
+  "result": "57 passed in4.81s",
+  "independent_oracles": [
+    "Fraction finite-set oracle",
+    "Pinned unchanged TimeSeAD nonempty-label public API",
+    "80-digit Decimal improved cardinality"
+  ],
+  "red_to_green": "Long-window improved cardinality error8.72e-12 reproduced in a failing test; exp/log1p correction passes tolerance2e-16.",
+  "scope": "Correctness preflight, no research-performance claim; full current suite later required after consumer integration."
+}
